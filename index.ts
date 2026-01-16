@@ -1,6 +1,6 @@
-import { Build42Mod, Translations } from "@pz/console";
+import { Mod, Translations } from "@pz/console";
 
-export default new (class extends Build42Mod {
+export default new (class extends Mod {
   public override async compile(): Promise<void> {
     // const options = new SandboxOptions.File([
     //   new SandboxOptions.Option("VerboseLogging", {
@@ -13,7 +13,7 @@ export default new (class extends Build42Mod {
 
     const igui = new Translations.IGUI();
 
-    let translations = {
+    const translations = {
       ClothingHands: "Clothing - Hands",
       ClothingFeet: "Clothing - Feet",
       ClothingHead: "Clothing - Head",
@@ -122,7 +122,8 @@ export default new (class extends Build42Mod {
       const [, type] = /^Food(\w+)$/.exec(key) ?? [];
 
       if (type && type !== "Perishable" && SOMETIMES_PERISHABLE.includes(type)) {
-        translations[key + "Perishable"] = value + " / Perishable";
+        // @ts-expect-error todo
+        translations[`${key}Perishable`] = value + " / Perishable";
       }
     });
 
