@@ -13,18 +13,24 @@ export default new (class extends Mod {
 
     const igui = new Translations.IGUI();
 
+    const SOMETIMES_PERISHABLE = ["NoExplicit", "Spice"];
+
     const translations = {
-      ClothingHands: "Clothing - Hands",
-      ClothingFeet: "Clothing - Feet",
-      ClothingHead: "Clothing - Head",
-      ClothingLegs: "Clothing - Legs",
-      ClothingBody: "Clothing - Body",
       ClothingAccessory: "Clothing - Accessory",
-      ClothingBackpack: "Clothing - Backpack",
-      ClothingJewelry: "Clothing - Jewelry",
-      ClothingMisc: "Clothing - Misc",
-      ClothingUnderwear: "Clothing - Underwear",
       ClothingArmor: "Clothing - Armor",
+      ClothingBackpack: "Clothing - Backpack",
+      ClothingBody: "Clothing - Body",
+      ClothingBottom: "Clothing - Bottom",
+      ClothingFeet: "Clothing - Feet",
+      ClothingHands: "Clothing - Hands",
+      ClothingHead: "Clothing - Head",
+      ClothingJewelry: "Clothing - Jewelry",
+      ClothingLegs: "Clothing - Legs",
+      ClothingMisc: "Clothing - Misc",
+      ClothingTop: "Clothing - Top",
+      ClothingUnderwear: "Clothing - Underwear",
+
+      SkillMagazine: "Skill Magazine",
 
       LiteratureConsumable: "Literature - Consumable",
       LiteratureNewspaper: "Literature - Newspaper",
@@ -32,7 +38,6 @@ export default new (class extends Mod {
       LiteratureFancyBook: "Literature - Fancy Book",
       LiteratureSoftcover: "Literature - Softcover",
       LiteratureHardcover: "Literature - Hardcover",
-      SkillMagazine: "Skill Magazine",
       LiteratureMagazine: "Literature - Magazine",
 
       LiteratureBrochure: "Literature - Brochure",
@@ -99,9 +104,8 @@ export default new (class extends Mod {
       FoodNoExplicit: "Food - Condiment",
 
       FoodCanned: "Food - Canned",
-      FoodBoxed: "Food - Boxed",
       FoodCrafted: "Food - Crafted",
-      FoodServing: "Food - Serving",
+      FoodPortion: "Food - Portion",
 
       BeverageAlcohol: "Beverage - Alcohol",
       BeverageBeer: "Beverage - Beer",
@@ -114,9 +118,24 @@ export default new (class extends Mod {
       BeverageWine: "Beverage - Wine",
 
       ContainerLiquid: "Container - Liquid",
-    };
 
-    const SOMETIMES_PERISHABLE = ["NoExplicit", "Spice"];
+      AmmoMagazine: "Ammo - Magazine",
+      AmmoBox: "Ammo - Box",
+      AmmoCarton: "Ammo - Carton",
+
+      ElectronicsBox: "Electronics - Box",
+      FirstAidBox: "First Aid - Box",
+      FoodBox: "Food - Box",
+      JunkBox: "Junk - Box",
+      LightSourceBox: "Light Source - Box",
+      MaterialBox: "Material - Box",
+      MaterialBundled: "Material - Bundled",
+      MaterialCarton: "Material - Carton",
+      SkillBookBox: "Skill Book - Box",
+
+      // slash categories
+      LightSourceOrElectronics: "Light Source / Electronics",
+    };
 
     Object.entries(translations).forEach(([key, value]) => {
       const [, type] = /^Food(\w+)$/.exec(key) ?? [];
