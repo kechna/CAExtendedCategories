@@ -39,13 +39,21 @@ function CAEC_Client.CategorizePlayerInventory(player)
   CAEC_Client.CategorizeDynamicItems(inventory, "CAEC_Client.CategorizePlayerInventory")
 end
 
----@param containerItem nil|InventoryItem
+---@param containerItem nil|any
 function CAEC_Client.OnContainerUpdate(containerItem)
   Debug.log("client:OnContainerUpdate", "DYNAMIC")
   if not containerItem then return end
 
   ---@type ItemContainer|nil
-  local container = containerItem:getContainer()
+  local container = nil
+
+  if instanceof(containerItem, "InventoryItem") then
+    ---@cast containerItem InventoryItem
+    container = containerItem:getContainer()
+  elseif instanceof(containerItem, "ItemContainer") then
+    ---@cast containerItem ItemContainer
+    container = containerItem
+  end
 
   if container then
     CAEC_Client.CategorizeDynamicItems(container, "DYNAMIC:OnContainerUpdate")
