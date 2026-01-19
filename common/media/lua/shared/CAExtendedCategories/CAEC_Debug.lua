@@ -1,19 +1,28 @@
-local Data = require("CAExtendedCategories/CAEC_Data")
-
-
 local Debug = {}
 
-function safeCall(object, methodName, ...)
+---@type boolean
+Debug.VerboseLogging = false
+
+---@param message string
+---@param suffix string?
+function Debug.log(message, suffix)
+  if not Debug.VerboseLogging then return end
+
+  local prefix = suffix ~= nil and ('[CAEC:' .. suffix .. '] ') or '[CAEC] '
+  print(prefix, message);
+end
+
+local function safeCall(object, methodName, ...)
   if object and type(object[methodName]) == 'function' then
     return object[methodName](object, ...)
   else
-    Debug.log('Method "' .. methodName .. '" does not exist on the given object.')
+    Debug.log('Method "' .. methodName .. '" does not exist on the given object.', "safeCall")
     return nil
   end
 end
 
 ---@param item Item
-function reportItem(item)
+local function reportItem(item)
   local properties = {
     "getDisplayCategory",
     "getDoubleClickRecipe",
@@ -43,7 +52,7 @@ function reportItem(item)
     local value = safeCall(item, prop)
 
     if value ~= nil and value ~= '' then
-      print('        ', prop, " = ", tostring(value))
+      Debug.log( prop .. " = " .. tostring(value), "report")
     end
   end
 
@@ -60,7 +69,7 @@ function reportItem(item)
         learnedRecipesString = learnedRecipesString .. ", "
       end
     end
-    print('        ', 'Learned Recipes: ', learnedRecipesString)
+    Debug.log("Learned Recipes: " .. learnedRecipesString, 'report')
   end
 
   local tags = item:getTags()
@@ -76,12 +85,12 @@ function reportItem(item)
   end
 
   if tagsString ~= "" then
-    print('        ', 'Tags: ', tagsString)
+    Debug.log("Tags: " .. tagsString, "report")
   end
 end
 
 ---@param instance InventoryItem
-function reportInstanceItem(instance)
+local function reportInstanceItem(instance)
   local properties = {
     "IsDrainable",
     "IsFood",
@@ -90,26 +99,54 @@ function reportInstanceItem(instance)
     "IsClothing",
     "isFluidContainer",
     "isEmptyOfFluid",
+    "getAmmoType",
+    "getAnimalFeedType",
+    "getAttachedSlotType",
+    "getAttachmentType",
+    "getBloodClothingType",
+    "getCoverType",
+    "getDigType",
+    "getEatType",
+    "getFabricType",
+    "getGameEntityType",
+    "getGunType",
+    "getJobType",
+    "getLootType",
+    "getMakeUpType",
+    "getMechanicType",
+    "getMediaType",
+    "getPourType",
+    "getReplaceOnUseFullType",
+    "getShoutType",
+    "getStringItemType",
   }
 
+  if instanceof(instance, "Literature") then
+    ---@cast instance Literature
+    Debug.log("--- Instance is Literature ---", "report:instance")
+    properties[#properties + 1] = "containsBuildRecipe"
+    properties[#properties + 1] = "containsCraftOrBuildRecipe"
+    properties[#properties + 1] = "containsCraftRecipe"
+    properties[#properties + 1] = "containsGrowingSeason"
+    properties[#properties + 1] = "containsMiscRecipe"
+    properties[#properties + 1] = "getCategory"
+    end
+
+
   if instanceof(instance, "Food") then
+    ---@cast instance Food
+    Debug.log("--- Instance is Food ---", "report:instance")
+    properties[#properties + 1] = "getFoodType"
+    properties[#properties + 1] = "getHerbalistType"
+    properties[#properties + 1] = "getMilkType"
     properties[#properties + 1] = "canAge"
     properties[#properties + 1] = "canBeFrozen"
     properties[#properties + 1] = "getCategory"
-    properties[#properties + 1] = "getChef"
-    properties[#properties + 1] = "getFoodType"
-    properties[#properties + 1] = "getHerbalistType"
-    properties[#properties + 1] = "getMaxUses"
     properties[#properties + 1] = "getMilkQty"
-    properties[#properties + 1] = "getMilkType"
     properties[#properties + 1] = "getOnCooked"
     properties[#properties + 1] = "getOnEat"
     properties[#properties + 1] = "getPainReduction"
-    properties[#properties + 1] = "getPoisonDetectionLevel"
-    properties[#properties + 1] = "getPoisonLevelForRecipe"
-    properties[#properties + 1] = "getPoisonPower"
     properties[#properties + 1] = "getSpices"
-    properties[#properties + 1] = "getUseForPoison"
     properties[#properties + 1] = "getUseOnConsume"
     properties[#properties + 1] = "hasAnimalParts"
     properties[#properties + 1] = "isAnimalSkeleton"
@@ -125,31 +162,26 @@ function reportInstanceItem(instance)
     properties[#properties + 1] = "isSpice"
     properties[#properties + 1] = "isWholeFoodItem"
   end
-
   for _, prop in ipairs(properties) do
     local value = safeCall(instance, prop)
 
     if value ~= nil and value then
-      print('        ', "instance:", prop, " = ", value)
+      Debug.log( prop .. " = " .. tostring(value), "report:instance")
     end
   end
 end
 
----@param message string
-function Debug.log(message)
-  if not Data.VerboseLogging then return end
-
-  print('[CAEC] ' .. message);
-end
-
+---@param itemName string
+---@param item Item
+---@param instance InventoryItem|nil
 function Debug.report(itemName, item, instance)
-  if not Data.VerboseLogging then return end
+  if not Debug.VerboseLogging then return end
 
-  Debug.log("----------------------")
-  Debug.log("--- " .. itemName .. " ---")
+  Debug.log("----------------------", "report")
+  Debug.log("--- " .. itemName .. " ---", "report")
 
   reportItem(item)
-  reportInstanceItem(instance)
+  reportInstanceItem(instance or instanceItem(item:getFullName()))
 end
 
 return Debug

@@ -26,4 +26,24 @@ function Utils.CreateInstanceIfNeeded(item, instance)
   return temporaryInstance, function() temporaryInstance:Remove() end
 end
 
+---@param tag string
+---@param categorizeFn fun(item: Item, instance: InventoryItem?): string|nil
+---@param validateFn fun(item: Item, instance: InventoryItem?): boolean
+---@return fun(item: Item, instance: InventoryItem?): string|nil
+function Utils.CreateCategorizer(tag, categorizeFn, validateFn)
+  ---@param item Item
+  ---@param instance InventoryItem?
+  ---@return string|nil
+  return function(item, instance)
+    if not validateFn(item, instance) then
+      return nil
+    end
+
+    local category = categorizeFn(item, instance)
+
+    if not category then
+      Debug.log("---> no category found for item: " .. item:getName(), tag)
+    end
+  end
+end
 return Utils

@@ -1,25 +1,24 @@
+local Debug = require("CAExtendedCategories/CAEC_Debug")
 local CAEC = require("CAExtendedCategories/CAEC")
 
 ---@param _roomType string
 ---@param _containerType string
 ---@param container ItemContainer
 function OnFillContainer(_roomType, _containerType, container)
-  CAEC.CategorizeInventoryItems(container:getItems(), "shared:OnFillContainer")
+  CAEC.UpdateInstanceItems(container:getItems(), "shared:OnFillContainer")
 end
 
-Events.OnGameBoot.Add(function()
-  CAEC.CategorizeAllItems("shared:OnGameBoot")
-end)
+--Events.OnGameBoot.Add(function()
+--  CAEC.Initialize("shared:OnGameBoot")
+--end)
 
---Events.OnResetLua.Add(CAEC.CategorizeAllItems)
 Events.OnInitWorld.Add(function()
-  CAEC.CategorizeAllItems("shared:OnInitWorld")
+  CAEC.Initialize("shared:OnInitWorld")
 end)
 
 Events.OnGameStart.Add(function()
-  CAEC.CategorizeAllItems("shared:OnGameStart")
+  Debug.log("shared:OnGameStart", "CAEC_Events")
+  --CAEC.Initialize("shared:OnGameStart")
 
   Events.OnFillContainer.Add(OnFillContainer)
 end)
-
-print("CAExtendedCategories: shared events registered.")

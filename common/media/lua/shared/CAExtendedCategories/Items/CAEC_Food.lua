@@ -1,4 +1,9 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
+local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
+local Categorizer = CAEC_ItemCategorizer:derive("Food")
+
+
+
 
 local Food = {}
 
@@ -28,7 +33,6 @@ local function fromTags(item)
   return category
 end
 
-
 ---@param item Item
 ---@return string|nil
 local function fromEatType(item)
@@ -37,9 +41,10 @@ local function fromEatType(item)
   if eatType == "2handbowl"
       or eatType == "Bowl"
       or eatType == "Plate"
-      or eatType == "Pot"
   then
     return "FoodPortion";
+  elseif eatType == "Pot" then
+    return "FoodCrafted"
   end
 
   return nil
@@ -47,25 +52,25 @@ end
 
 ---@param item Item
 ---@param instance Food
----@return string|nil
+---@return string|nil, boolean
 local function fromFoodType(item, instance)
   if item:hasTag(ItemTag.DRIED_FOOD) then
-    return "FoodDried";
+    return "FoodDried", false;
   end
 
   ---@type string|nil
   local foodType = instance:getFoodType()
 
   if not foodType then
-    return nil
+    return nil, false
   end
 
-  return "Food" .. foodType
+  return "Food" .. foodType, false
 end
 
 ---@param item Item
 ---@param instance Food
----@return string|nil
+---@return string|nil, boolean
 function Food.FromInstance(item, instance)
   local category = nil
 
@@ -77,7 +82,8 @@ function Food.FromInstance(item, instance)
       category = "Food" .. foodType
 
       -- these types are not always perishable
-      if foodType == "NoExplicit" or foodType == "Spice" then
+      if "NoExplicit" == foodType
+          or "Spice" == foodType then
         category = category .. "Perishable"
       end
     else
@@ -89,30 +95,48 @@ function Food.FromInstance(item, instance)
     if foodType then
       category = "Food" .. foodType
     elseif eatType == "GlugFood" or eatType == "Candrink" then
-      category = "FoodCondiment"
+      print("  ---> no food type for spice item: " .. item:getName() .. ", defaulting to FoodNoExplicit")
+      category = "FoodNoExplicit";
     else
+      print("  ---> no food type for spice item: " .. item:getName() .. ", defaulting to FoodSpice")
       category = "FoodSpice";
     end
-  elseif instance:getLootType() == "CannedFood" and item:hasTag(ItemTag.HAS_METAL) then
-    category = "FoodCanned";
+  elseif instance:getLootType() == "CannedFood"
+      and item:hasTag(ItemTag.HAS_METAL) then
+    category = "FoodCanned", false;
   end
 
-  return category or fromFoodType(item, instance)
+  return category or fromFoodType(item, instance), false
 end
 
 ---@param item Item
 ---@param instance InventoryItem|nil
 ---@return string|nil, boolean
 function Food.Categorize(item, instance)
+  if not item:isItemType(ItemType.FOOD) then
+    return nil, false
+  end
+
   local category = fromTags(item) or fromEatType(item)
 
-  if category then return category, false end
+  if category then
+    return category, false
+  end
 
+  --local instanceSpecific = false
   local resolved, cleanup = Utils.CreateInstanceIfNeeded(item, instance)
   category = Food.FromInstance(item, resolved)
   cleanup()
 
-  return category, true
+  return category, false
 end
 
-return Food
+function Categorizer:validate(item, _instance)
+  return item:isItemType(ItemType.FOOD)
+end
+
+function Categorizer:categorize(item, instance)
+  return Food.Categorize(item, instance)
+end
+
+return Categorizer
