@@ -1,11 +1,7 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
+
 local Categorizer = CAEC_ItemCategorizer:derive("Food")
-
-
-
-
-local Food = {}
 
 ---@param item Item
 ---@return string|nil
@@ -52,26 +48,22 @@ end
 
 ---@param item Item
 ---@param instance Food
----@return string|nil, boolean
+---@return string|nil
 local function fromFoodType(item, instance)
-  if item:hasTag(ItemTag.DRIED_FOOD) then
-    return "FoodDried", false;
-  end
-
   ---@type string|nil
   local foodType = instance:getFoodType()
 
   if not foodType then
-    return nil, false
+    return nil
   end
 
-  return "Food" .. foodType, false
+  return "Food" .. foodType
 end
 
 ---@param item Item
 ---@param instance Food
 ---@return string|nil, boolean
-function Food.FromInstance(item, instance)
+local function fromInstance(item, instance)
   local category = nil
 
   ---@type string|nil
@@ -82,8 +74,8 @@ function Food.FromInstance(item, instance)
       category = "Food" .. foodType
 
       -- these types are not always perishable
-      if "NoExplicit" == foodType
-          or "Spice" == foodType then
+      if "NoExplicit" == foodType or "Spice" == foodType
+      then
         category = category .. "Perishable"
       end
     else
@@ -109,10 +101,12 @@ function Food.FromInstance(item, instance)
   return category or fromFoodType(item, instance), false
 end
 
----@param item Item
----@param instance InventoryItem|nil
----@return string|nil, boolean
-function Food.Categorize(item, instance)
+function Categorizer:validate(item, _instance)
+  return item:isItemType(ItemType.FOOD)
+      and not item:hasTag(ItemTag.ANIMAL_HEAD)
+end
+
+function Categorizer:categorize(item, instance)
   if not item:isItemType(ItemType.FOOD) then
     return nil, false
   end
@@ -123,20 +117,20 @@ function Food.Categorize(item, instance)
     return category, false
   end
 
-  --local instanceSpecific = false
   local resolved, cleanup = Utils.CreateInstanceIfNeeded(item, instance)
-  category = Food.FromInstance(item, resolved)
+  category = fromInstance(item, resolved)
+
+  if category == "FoodVegetable" then
+    category = "FoodVegetables"
+  end
+
+  if category and item:hasTag(ItemTag.DRIED_FOOD) then
+    category = category .. "Dried"
+  end
+
   cleanup()
 
   return category, false
-end
-
-function Categorizer:validate(item, _instance)
-  return item:isItemType(ItemType.FOOD)
-end
-
-function Categorizer:categorize(item, instance)
-  return Food.Categorize(item, instance)
 end
 
 return Categorizer

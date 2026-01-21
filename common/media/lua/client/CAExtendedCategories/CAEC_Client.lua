@@ -6,18 +6,14 @@ local CAEC_Client = {}
 ---@param instance InventoryItem
 ---@return boolean
 local predicateDynamicItem = function(instance)
+  if instance:isFluidContainer() then
+    return true
+  end
+
   local name = instance:getScriptItem():getName()
-  local fluidContainer = instance:getFluidContainer()
 
-  local tweaks = CAEC.ItemTweaks
-  local instances = CAEC.InstanceSpecific
-
-  local notTweaked = tweaks[name] == nil
-  local instanceSpecific = instances[name] ~= nil
-
-  return (fluidContainer ~= nil) or notTweaked or instanceSpecific
+  return CAEC.InstanceSpecific[name] == true or CAEC.ItemTweaks[name] == nil
 end
-
 ---@param inventory ItemContainer
 ---@param trigger string
 function CAEC_Client.CategorizeDynamicItems(inventory, trigger)
@@ -77,4 +73,4 @@ end
 return CAEC_Client
 
 -- require("CAExtendedCategories/CAEC").Reload()
--- require("CAExtendedCategories/CAEC_Client").CategorizeFullPlayerInventory(getPlayer())
+-- require("CAExtendedCategories/CAEC_Client").CategorizePlayerInventory(getPlayer())

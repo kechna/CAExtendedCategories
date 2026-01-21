@@ -19,7 +19,6 @@ CAEC.StaticCategories = {
 ---@type boolean
 CAEC.Initialized = false;
 
-
 ---@type ArrayList<fun(item:Item, instance:InventoryItem?): string?, boolean?>>
 CAEC.ScriptCategorizers = ArrayList.new();
 
@@ -157,7 +156,7 @@ local function DoCategorize(categorizers, item, instance)
     index = index + 1
   end
 
-  return category, instanceSpecific or false
+  return category, (instanceSpecific or false)
 end
 
 ---@param item Item
@@ -210,7 +209,7 @@ function CAEC.CategorizeItem(item, instance, additionalLogging)
   if category then
     CAEC.AddedCategories[category] = true
   elseif additionalLogging then
-    Debug.Report(itemName, item, instance)
+    Debug.report(itemName, item, instance)
   end
 
   return category, instanceSpecific
@@ -237,10 +236,11 @@ function CAEC.UpdateInstanceItems(items, trigger)
     local category = cachedCategory
     local instanceSpecific = false
 
+    Debug.log("> Categorizing: " .. instanceName .. " (" .. item:getName() .. ")", "UpdateInstanceItems")
     if nil == cachedCategory then
       category, instanceSpecific = CAEC.CategorizeItem(item, instance, true)
     else
-      Debug.log("> Using cached category for " .. instanceName .. " -> " .. (cachedCategory), "CACHED")
+      Debug.log("> Using cached category for " .. instanceName .. " -> " .. (cachedCategory), "UpdateInstanceItems")
     end
 
     if category and category ~= NONE then

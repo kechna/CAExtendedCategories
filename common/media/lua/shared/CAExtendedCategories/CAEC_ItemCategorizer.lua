@@ -25,13 +25,15 @@ function CAEC_ItemCategorizer:execute(item, instance)
     return nil, false
   end
 
-  local category =  self:categorize(item, instance)
+  local category, instanceSpecific = self:categorize(item, instance)
 
   if not category then
-    Debug.log("---> no category found for item: " .. item:getName(), self.Type)
+    Debug.log(
+      "---> item not categorized: " .. item:getName() .. ". " .. (instanceSpecific and "(instance specific)" or ""),
+      "CAEC_ItemCategorizer")
   end
 
-  return category
+  return category, instanceSpecific
 end
 
 function CAEC_ItemCategorizer:new()
