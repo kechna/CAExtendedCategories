@@ -1,0 +1,35 @@
+--- @enum CAEC_FoodType
+local FoodType = {
+  SKIP = "_SKIP_",
+  BAKING = "Baking",
+  BREAD = "Bread",
+  CANDY = "Candy",
+  CANNED = "Canned",
+  CHEESE = "Cheese",
+  COFFEE = "Coffee",
+  CRAFTED = "Crafted",
+  EGG = "Egg",
+  FRUIT = "Fruit",
+  HERB = "Herb",
+  HOT_PEPPER = "HotPepper",
+  INSECT = "Insect",
+  LIVESTOCK = "Livestock",
+  MEAT = "Meat",
+  MUSHROOM = "Mushroom",
+  NO_EXPLICIT = "NoExplicit",
+  NUTS = "Nuts",
+  PET_FOOD = "PetFood",
+  PORTION = "Portion",
+  PRESERVED = "Preserved",
+  SEAFOOD = "Seafood",
+  SEED = "Seed",
+  SNACK = "Snack",
+  SPICE = "Spice",
+  STAPLE = "Staple",
+  STOCK = "Stock",
+  SUGAR = "Sugar",
+  TEA = "Tea",
+  VEGETABLES = "Vegetables"
+}
+
+return FoodType
