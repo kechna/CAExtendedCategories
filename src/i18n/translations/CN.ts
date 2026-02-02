@@ -8,8 +8,6 @@ export const CN: ExternalTranslations = {
   Accessory: "配饰",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   Arms: "手臂",
-  /** containers that can be on the body, such as backpacks and satchels */
-  Bag: "袋子",
   /** lower body clothing, pants, shorts, skirts */
   Bottom: "下身",
   /** top-level clothing category, such as shirts, pants, dresses */
@@ -47,7 +45,7 @@ export const CN: ExternalTranslations = {
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   Carton: "箱",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  Firearm: undefined,
+  Firearm: "枪械",
   /** pistols and handguns */
   Handgun: "手枪",
   /** Firearm magazines */
@@ -55,7 +53,7 @@ export const CN: ExternalTranslations = {
   /** rifles, big firearms */
   Rifle: "步枪",
   /** shotguns, rifles that shoot shells */
-  Shotgun: undefined,
+  Shotgun: "霰弹枪",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   Baking: "烘焙",
   /** baked bread products */
@@ -66,6 +64,8 @@ export const CN: ExternalTranslations = {
   Canned: "罐头",
   /** dairy cheese products */
   Cheese: "奶酪",
+  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  Dish: "料理",
   /** fresh fruit, including berries and citrus */
   Fruit: "水果",
   /** culinary or medicinal plants/herbs */
@@ -78,8 +78,6 @@ export const CN: ExternalTranslations = {
   Livestock: "牲畜",
   /** any non-fish meat */
   Meat: "肉",
-  /** dairy milk */
-  Milk: "牛奶",
   /** mushrooms/fungi */
   Mushroom: "蘑菇",
   /** nuts such as walnuts, almonds, peanuts */
@@ -92,18 +90,16 @@ export const CN: ExternalTranslations = {
   Portion: "分装",
   /** preserved food, such as jarred food */
   Preserved: "包装食品",
-  /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  Staple: "主食",
   /** fish and other seafood */
   Seafood: "海鲜",
   /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
   Seed: "种子",
   /** snack foods (e.g. chips, cookies) */
   Snack: "零食",
-  /** carbonated soft drinks */
-  Soda: "汽水",
   /** spices and seasonings, salt, pepper, etc. */
   Spice: "香料",
+  /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
+  Staple: "主食",
   /** cooking stock or broth such as bouillon cubes */
   Stock: "高汤",
   /** sugar and sweeteners */
@@ -120,8 +116,12 @@ export const CN: ExternalTranslations = {
   Cocktail: "鸡尾酒",
   /** fruit juice */
   Juice: "果汁",
-  /** top-level category for non-drinkable liquids */
+  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   Liquid: "液体",
+  /** dairy milk */
+  Milk: "牛奶",
+  /** carbonated soft drinks */
+  Soda: "汽水",
   /** drinking water */
   Water: "水",
   /** alcoholic wine beverages */
@@ -156,14 +156,16 @@ export const CN: ExternalTranslations = {
   SkillBook: "技能书",
   /** softcover books */
   Softcover: "平装书",
-  /** handmade, artisan items. used for player-made weapons or food */
-  Crafted: "料理",
+  /** handmade, artisan items. used for player-made weapons (not food) */
+  Crafted: "手工",
   /** ring or bundle of keys */
   KeyRing: "钥匙环",
   /** photos */
   Photo: "照片",
   /** smoking items such as cigarettes, cigars, pipes */
-  Smoking: undefined,
+  Smoking: "吸烟",
+  /** used for containers that can be worn on the body, such as backpacks and satchels */
+  Wearable: undefined,
   /** axe weapon skill */
   Axe: "斧头",
   /** long blunt weapon skill */
