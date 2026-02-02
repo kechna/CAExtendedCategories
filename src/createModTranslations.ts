@@ -13,8 +13,9 @@ export const createModTranslations = (async (context: FullModContext) => {
 
       SUPPORTED_LANGUAGES.forEach((lang) => {
         const parts = prefix ? [prefix, suffix] : [suffix];
-        const translated = parts.map((part) => t(searchKeys ?? [], part, lang) ?? `<${part}>`);
+        const translated = parts.map((part) => t(searchKeys ?? [], part, lang)?.[0]?.translation ?? `<${part}>`);
         const fullKey = parts.join("");
+
         const text = translated.filter(Boolean).join(` ${separator ?? "-"} `);
 
         save(lang, fullKey, text);

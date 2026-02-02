@@ -273,7 +273,8 @@ function Apparel:initialise()
 end
 
 function Apparel:validate(item, _instance)
-  return item:getBodyLocation() ~= nil
+  return not item:isItemType(ItemType.CONTAINER)
+      and item:getBodyLocation() ~= nil
       and not item:isBodyLocation(ItemBodyLocation.WOUND)
       and not item:isBodyLocation(ItemBodyLocation.ZED_DMG)
       and not item:isBodyLocation(ItemBodyLocation.BANDAGE)
@@ -321,27 +322,6 @@ end
 function Apparel:categorize(item, instance)
   ---@type string|nil
   local category = nil
-
-  --if item:isItemType(ItemType.CONTAINER) then
-  --  --self:log("Overriding category " .. tostring(category) .. " for container item: " .. item:getName())
-  --
-  --  if item:isBodyLocation(ItemBodyLocation.BACK) then
-  --    category = "AccessoryBackpack"
-  --  elseif item:isBodyLocation(ItemBodyLocation.SATCHEL) then
-  --    category = "AccessorySatchel"
-  --  elseif item:isBodyLocation(ItemBodyLocation.WEBBING) then
-  --    category = "AccessoryWebbing"
-  --  elseif item:isBodyLocation(ItemBodyLocation.FANNY_PACK_FRONT)
-  --      or item:isBodyLocation(ItemBodyLocation.FANNY_PACK_BACK)
-  --  then
-  --    category = "AccessoryWaistPack"
-  --  elseif item:isBodyLocation(ItemBodyLocation.AMMO_STRAP) then
-  --    category = "AccessoryAmmoStrap"
-  --  else
-  --    self:log("Container body location: " .. item:getBodyLocation():toString())
-  --    category = "AccessoryContainer"
-  --  end
-  --end
 
   if Utils.HasAnyTag(item, JewelryTags) then
     category = self.Category.ACCESSORY_JEWELRY

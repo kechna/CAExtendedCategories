@@ -30,7 +30,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: "Accessory",
-    categories: ["Legs", "Top", "Arms", "Hands", "Head", "Face", "Bag", "Jewelry", "Neck"],
+    categories: ["Legs", "Top", "Arms", "Hands", "Head", "Face", "Jewelry", "Neck"],
     searchKeys: [
       "UI_ClothingType_%s",
       "IGUI_health_%s",
@@ -69,24 +69,24 @@ export const searchers: Searcher[] = [
   {
     prefix: BaseGameCategory.Food,
     categories: [...foodTypes, "Perishable"],
-    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_FoodType_%s", "IGUI_AnimalMeat_%s", "ItemName_Base.%s"],
+    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s"],
   },
 
   {
     prefix: "FoodPerishable",
     categories: foodTypes,
-    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_FoodType_%s", "IGUI_AnimalMeat_%s", "ItemName_Base.%s"],
+    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s"],
   },
 
   {
     prefix: "Beverage",
-    categories: ["Alcohol", "Beer", "Cocktail", "Coffee", "Juice", "Milk", "Soda", "Tea", "Water", "Wine"],
+    categories: ["Alcohol", "Beer", "Cocktail", "Coffee", "Juice", "Milk", "SoftDrink", "Tea", "Water", "Wine"],
     searchKeys: [
       "Fluid_Name_%s",
       "Fluid_Category_%s",
+      "ContextMenu_FoodType_%s",
       "ItemName_Base.%s",
       "ItemName_Base.%s2",
-      "ContextMenu_FoodType_%s",
       "ContextMenu_EvolvedRecipe_%s",
       "ContextMenu_EvolvedRecipe_%s2",
       "ContextMenu_EvolvedRecipe_%s3",
@@ -121,7 +121,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: "Container",
-    categories: ["Liquid"],
+    categories: ["Liquid", "Wearable"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 

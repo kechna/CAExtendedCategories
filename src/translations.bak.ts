@@ -1017,7 +1017,7 @@ import { Language } from "@pz/console";
 //     [Language.RU]: "Заправка",
 //     [Language.PTBR]: "Molho",
 //   },
-//   CA_Fallback_Fruit: {
+//   CA_Fallback_Fruits: {
 //     __group: "food",
 //     __description: "fresh fruit",
 //     [Language.EN]: "Fruit",

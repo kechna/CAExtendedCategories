@@ -1,4 +1,4 @@
-import { Ts, Language, type FullModContext, type FileBuilderInterface, Text, isOfType, isString } from "@pz/console";
+import { Ts, Language, type FullModContext, type FileBuilderInterface, Text } from "@pz/console";
 import { searchers } from "./searchers.ts";
 import { useTranslations } from "./i18n/useTranslations.ts";
 import {
@@ -8,10 +8,11 @@ import {
   MACHINE_LANGUAGE_COMMENTS,
 } from "./constants.ts";
 import { getTranslationDefinitions } from "./i18n/getTranslationDefinitions.ts";
+import { resolveKey } from "./i18n/resolveKey.ts";
 
-const resolveKeys = (key: string): string[] => {
+const resolveSearchKeys = (key: string): string[] => {
   const filteredKeys = searchers
-    .filter((k) => k.prefix === key || k.categories.map((c) => (typeof c === "string" ? c : c.replace)).includes(key))
+    .filter((k) => k.prefix === key || k.categories.includes(key))
     .flatMap((k) => k.searchKeys ?? []);
 
   return [...new Set(filteredKeys)];
@@ -31,6 +32,22 @@ const toHeader = (columns: (string | number)[]): string =>
     columns.map((_, i) => i),
   );
 
+const expl = [
+  "Keys can be either CAEC_Override_X or CAEC_Fallback_X.",
+  "",
+  `"CAEC_Fallback_X" means it will prefer the game's translation.`,
+  "",
+  `Keys will be translated in this order, for example: "Hands" (subcategory of Clothing):`,
+  `  1. CAEC_Override_Hands`,
+  `  2. UI_ClothingType_Hands`,
+  `  3. IGUI_health_Hands`,
+  `  4. CAEC_Fallback_Hands`,
+  "",
+  `If CAEC_Override_Hands exists, it will always be used. If not, it will try to find key 2 and 3 in the game's translations.`,
+  `If they don't exist either, it will use CAEC_Fallback_Hands.`,
+  "Which translations from the game are searched for differs for each individual key.",
+];
+
 export const createTranslationsTemplate = async (context: FullModContext): Promise<FileBuilderInterface[]> => {
   const { t } = await useTranslations(context, SUPPORTED_LANGUAGES);
 
@@ -39,6 +56,7 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
 
   const files: FileBuilderInterface[] = [template, types];
 
+  template.add(`/**\n * ${expl.join("\n * ")}\n */`);
   template.add("export const TRANSLATIONS = {");
 
   let prev: string | undefined = undefined;
@@ -47,28 +65,81 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
   const keysType = new Ts.Type("TranslationKeys").export();
 
   SUPPORTED_LANGUAGES.forEach((language) => {
-    const langFile = new Ts.File(`i18n/${language}`);
+    const langFile = new Ts.File(`i18n/${language}_T`);
 
-    langFile.add(new Ts.NamedImport("ExternalTranslations", "../types", true));
+    langFile.add(new Ts.NamedImport("ExternalTranslations", "../types", true)).newline();
+
+    langFile.add(`/**\n * ${LANGUAGE_NAMES[language] ?? language}\n  * ${expl.join("\n  * ")}\n */`);
+
     const obj = new Ts.Object(language.toUpperCase()).export().withType("ExternalTranslations");
 
-    definitions.forEach(([group, , key, description]) => {
-      const translated = t(resolveKeys(key), key, language);
+    definitions.forEach(([group, key, description, priority]) => {
+      const searchKeys = resolveSearchKeys(key);
+      const translated = t(searchKeys, key, language);
 
-      obj.set(key, translated, description);
+      let resolvedKey = resolveKey(priority, key);
 
-      if (language !== Language.EN) {
+      // if (language == Language.CN) {
+      //   console.log("Debug CN", translated);
+      // }
+
+      if (translated.length) {
+        const ca = translated.find(({ searchKey }) => searchKey.startsWith("CAEC_"));
+        const other = translated.filter(({ searchKey }) => !searchKey.startsWith("CAEC_"));
+
+        if (ca) {
+          resolvedKey = ca.searchKey;
+        } else if (other.length) {
+          resolvedKey = resolveKey("override", key);
+        }
+
+        // if (language == Language.CN) {
+        //   console.log(">", resolvedKey?.padEnd(40), ca?.searchKey);
+        // }
+
+        let desc = description;
+
+        if (other.length) {
+          const othersDesc = other
+            .map((o) => `${o.searchKey.replace("%s", key)} = "${o.translation.replace(/"/g, '\\"')}"`)
+            .join("\n   *   ");
+
+          desc = `\n   * ${description}\n   *\n   * found in-game:\n   *   ${othersDesc}\n  `;
+        }
+
+        const isMatch = other[0]?.translation === ca?.translation;
+
+        if (ca && !isMatch) {
+          obj.set(resolvedKey, ca.translation, desc);
+        } else {
+          if (isMatch && !ca) {
+            resolvedKey = resolveKey("fallback", key);
+          }
+
+          obj.set(resolvedKey, ca?.translation, desc);
+        }
+      } else {
+        obj.set(resolvedKey, undefined, description);
+      }
+
+      if (Language.EN !== language) {
         return;
       }
+
+      resolvedKey = resolveKey(priority, key);
 
       if (group !== prev) {
         template.add(` `);
       }
 
-      template.add(`  /* ${description} */`);
-      template.add(`  ${key}: ${translated ? `"${translated.replace(/"/g, '\\"')}"` : '""'},`);
+      // description += "\n   * search keys: " + searchKeys.slice(0, 3).join(", ");
 
-      keysType.add(`"${key}"`);
+      template.add(`  /* ${description} */`);
+      template.add(
+        `  ${resolvedKey}: ${translated[0] ? `"${translated[0].translation.replace(/"/g, '\\"')}"` : '""'},`,
+      );
+
+      keysType.add(`CAEC_Override_$\{${key}\} | CAEC_Fallback_$\{${key}\}`);
 
       prev = group;
     });
@@ -81,7 +152,7 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
 
   types.add(keysType);
   types.add(" ");
-  types.add("export type ExternalTranslations = Record<TranslationKeys, string>;");
+  types.add("export type ExternalTranslations = Record<TranslationKeys, string | undefined>;");
 
   const report = new Text.File("TRANSLATIONS_REPORT").setBasePath(context.baseDir);
   const languageOrder = Object.keys(HUMAN_LANGUAGE_COMMENTS);
@@ -104,8 +175,10 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
   let prevHuman = true;
 
   SUPPORTED_LANGUAGES.map((language) => {
-    const translatedCount = definitions.reduce((count, [, , key]) => {
-      return t(resolveKeys(key), key, language) ? count + 1 : count;
+    const translatedCount = definitions.reduce((count, [, key]) => {
+      const res = t(resolveSearchKeys(key), key, language);
+
+      return res.length ? count + 1 : count;
     }, 0);
 
     return { language, translatedCount };

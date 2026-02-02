@@ -1,243 +1,258 @@
+/**
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ *
+ * "CAEC_Fallback_X" means it will prefer the game's translation.
+ *
+ * Keys will be translated in this order, for example: "Hands" (subcategory of Clothing):
+ *   1. CAEC_Override_Hands
+ *   2. UI_ClothingType_Hands
+ *   3. IGUI_health_Hands
+ *   4. CAEC_Fallback_Hands
+ *
+ * If CAEC_Override_Hands exists, it will always be used. If not, it will try to find key 2 and 3 in the game's translations.
+ * If they don't exist either, it will use CAEC_Fallback_Hands.
+ * Which translations from the game are searched for differs for each individual key.
+ */
 export const TRANSLATIONS = {
- 
+
   /* top-level accessories category, such as watches, necklaces, belts, gloves */
-  Accessory: "Accessory",
+  CAEC_Fallback_Accessory: "Accessory",
   /* items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  Arms: "Arms",
+  CAEC_Override_Arms: "Arms",
   /* lower body clothing, pants, shorts, skirts */
-  Bottom: "Bottom",
+  CAEC_Override_Bottom: "Bottom",
   /* top-level clothing category, such as shirts, pants, dresses */
-  Clothing: "Clothing",
+  CAEC_Fallback_Clothing: "Clothing",
   /* facewear such as masks, glasses, goggles */
-  Face: "Face",
+  CAEC_Override_Face: "Face",
   /* shoes, boots, heels, etc. (but not socks) */
-  Footwear: "Footwear",
+  CAEC_Override_Footwear: "Footwear",
   /* full-body items such as jumpsuits, dresses, overalls */
-  FullBody: "Full Body",
+  CAEC_Override_FullBody: "Full Body",
   /* for gloves or other accessories worn on the hands */
-  Hands: "Hands",
+  CAEC_Override_Hands: "Hands",
   /* for items worn on the head such as hats, helmets (but not masks) */
-  Head: "Head",
+  CAEC_Override_Head: "Head",
   /* jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  Jewelry: "Jewelry",
+  CAEC_Override_Jewelry: "Jewelry",
   /* for lower body accessories/protective gear, such as knee pads, leg guards */
-  Legs: "Legs",
+  CAEC_Override_Legs: "Legs",
   /* neckwear such as scarves, necklaces */
-  Neck: "Neck",
+  CAEC_Override_Neck: "Neck",
   /* upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  Outerwear: "Outerwear",
+  CAEC_Override_Outerwear: "Outerwear",
   /* top-level protective equipment category, such as body armor, helmets, knee pads */
-  ProtectiveGear: "Protective Gear",
+  CAEC_Fallback_ProtectiveGear: "Protective Gear",
   /* hosiery and socks */
-  Socks: "Socks",
+  CAEC_Override_Socks: "Socks",
   /* upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  Top: "Top",
+  CAEC_Override_Top: "Top",
   /* undergarments such as underwear, bras, boxers */
-  Underwear: "Underwear",
- 
+  CAEC_Override_Underwear: "Underwear",
+
   /* things in a (small) box, such as boxes of ammo */
-  Box: "Box",
+  CAEC_Override_Box: "Box",
   /* things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  Bundled: "Bundled",
+  CAEC_Override_Bundled: "Bundled",
   /* things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  Carton: "Carton",
- 
+  CAEC_Override_Carton: "Carton",
+
   /* firearm category, pistols, rifles, shotguns, etc. */
-  Firearm: "Firearm",
+  CAEC_Override_Firearm: "Firearm",
   /* pistols and handguns */
-  Handgun: "Handgun",
-  /* Firearm magazines */
-  Mag: "Magazine",
+  CAEC_Fallback_Handgun: "Handgun",
+  /* firearm magazines */
+  CAEC_Fallback_Mag: "Magazine",
   /* rifles, big firearms */
-  Rifle: "Rifle",
+  CAEC_Fallback_Rifle: "Rifle",
   /* shotguns, rifles that shoot shells */
-  Shotgun: "Shotgun",
- 
+  CAEC_Fallback_Shotgun: "Shotgun",
+
   /* items used in baking, e.g. lard, butter, oil, flour, yeast */
-  Baking: "Baking",
+  CAEC_Override_Baking: "Baking",
   /* baked bread products */
-  Bread: "Bread",
+  CAEC_Fallback_Bread: "Bread",
   /* sweets and candies */
-  Candy: "Candy",
+  CAEC_Override_Candy: "Candy",
   /* canned food items */
-  Canned: "Canned",
+  CAEC_Override_Canned: "Canned",
   /* dairy cheese products */
-  Cheese: "Cheese",
+  CAEC_Fallback_Cheese: "Cheese",
   /* prepared dishes, ready-to-eat meals made from multiple ingredients */
-  Dish: "",
+  CAEC_Override_Dish: "Dish",
   /* fresh fruit, including berries and citrus */
-  Fruit: "Fruit",
+  CAEC_Fallback_Fruits: "Fruits",
   /* culinary or medicinal plants/herbs */
-  Herb: "Herbs",
+  CAEC_Fallback_Herb: "Herbs",
   /* spicy hot peppers */
-  HotPepper: "Hot Peppers",
+  CAEC_Fallback_HotPepper: "Hot Peppers",
   /* edible insects */
-  Insect: "Insect",
-  /* feed for cows, pigs, chickens, etc. */
-  Livestock: "Livestock",
+  CAEC_Fallback_Insect: "Insect",
+  /* feed for farm animals or cattle, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_Livestock: "Livestock",
   /* any non-fish meat */
-  Meat: "Meat",
+  CAEC_Fallback_Meat: "Meat",
   /* mushrooms/fungi */
-  Mushroom: "Mushroom",
+  CAEC_Fallback_Mushroom: "Mushroom",
   /* nuts such as walnuts, almonds, peanuts */
-  Nuts: "Nuts",
+  CAEC_Fallback_Nut: "Nuts",
   /* food items that can spoil */
-  Perishable: "Perishable",
+  CAEC_Override_Perishable: "Perishable",
   /* food for pets */
-  PetFood: "Pets",
+  CAEC_Fallback_PetFood: "Pets",
   /* single serving portion of food */
-  Portion: "Portion",
+  CAEC_Override_Portion: "Portion",
   /* preserved food, such as jarred food */
-  Preserved: "Preserved",
+  CAEC_Override_Preserved: "Preserved",
   /* fish and other seafood */
-  Seafood: "Seafood",
+  CAEC_Fallback_Seafood: "Seafood",
   /* seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
-  Seed: "Seed",
+  CAEC_Fallback_Seed: "Seed",
   /* snack foods (e.g. chips, cookies) */
-  Snack: "Snack",
+  CAEC_Override_Snack: "Snack",
   /* spices and seasonings, salt, pepper, etc. */
-  Spice: "Spice",
+  CAEC_Fallback_Spice: "Spice",
   /* basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  Staple: "Staple",
-  /* cooking stock or broth such as bouillon cubes */
-  Stock: "Stock",
+  CAEC_Fallback_Staple: "Staple",
+  /* items used to make cooking stock or broth, such as bouillon cubes */
+  CAEC_Fallback_Stock: "Stock",
   /* sugar and sweeteners */
-  Sugar: "Sugar",
+  CAEC_Fallback_Sugar: "Sugar",
   /* vegetables, including leafy greens */
-  Vegetables: "Vegetables",
- 
+  CAEC_Override_Vegetables: "Vegetables",
+
   /* general alcoholic beverages */
-  Alcohol: "Alcohol",
+  CAEC_Fallback_Alcohol: "Alcohol",
   /* alcoholic beer beverages */
-  Beer: "Beer",
+  CAEC_Fallback_Beer: "Beer",
   /* top-level category for drinkable liquids */
-  Beverage: "Beverage",
+  CAEC_Override_Beverage: "Beverage",
   /* mixed alcoholic drinks */
-  Cocktail: "Cocktail",
+  CAEC_Override_Cocktail: "Cocktail",
   /* fruit juice */
-  Juice: "Juice",
+  CAEC_Fallback_Juice: "Juice",
   /* top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  Liquid: "Liquid",
+  CAEC_Override_Liquid: "Liquid",
   /* dairy milk */
-  Milk: "Milk Carton",
+  CAEC_Fallback_Milk: "Milk",
   /* carbonated soft drinks */
-  Soda: "Soda",
+  CAEC_Override_SoftDrink: "Soft Drink",
   /* drinking water */
-  Water: "Water",
+  CAEC_Fallback_Water: "Water",
   /* alcoholic wine beverages */
-  Wine: "Wine",
- 
+  CAEC_Override_Wine: "Wine",
+
   /* adult-oriented content (hottiez magazines) */
-  Adult: "Adult",
+  CAEC_Override_Adult: "Adult",
   /* informational brochures */
-  Brochure: "Brochure",
+  CAEC_Fallback_Brochure: "Brochure",
   /* comic books */
-  Comic: "Comic",
+  CAEC_Fallback_Comic: "Comic",
   /* consumable reading materials such as crossword and wordsearch magazines */
-  Consumable: "Consumable",
+  CAEC_Fallback_Consumable: "Consumable",
   /* decorative or luxury books */
-  FancyBook: "Fancy Book",
+  CAEC_Fallback_FancyBook: "Fancy Book",
   /* flyers and handouts */
-  Flier: "Flier",
+  CAEC_Fallback_Flier: "Flier",
   /* hardcover books */
-  Hardcover: "Hardcover",
+  CAEC_Fallback_Hardcover: "Hardcover",
   /* books and printed reading material */
-  Literature: "Literature",
+  CAEC_Fallback_Literature: "Literature",
   /* literature magazines */
-  Magazine: "Magazine",
+  CAEC_Fallback_Magazine: "Magazine",
   /* newspapers */
-  Newspaper: "Old Newspaper",
+  CAEC_Fallback_Newspaper: "Newspaper",
   /* picture books */
-  PictureBook: "Picture Book",
+  CAEC_Fallback_PictureBook: "Picture Book",
   /* recipes, readable items that teach you something */
-  Recipe: "Recipe",
+  CAEC_Fallback_Recipe: "Recipe",
   /* tabletop RPG manuals */
-  RpgManual: "RPG Manual",
+  CAEC_Fallback_RpgManual: "RPG Manual",
   /* skill books */
-  SkillBook: "Skill Book",
+  CAEC_Fallback_SkillBook: "Skill Book",
   /* softcover books */
-  Softcover: "Softcover",
- 
+  CAEC_Fallback_Softcover: "Softcover",
+
   /* handmade, artisan items. used for player-made weapons (not food) */
-  Crafted: "Crafted",
+  CAEC_Override_Crafted: "Crafted",
   /* ring or bundle of keys */
-  KeyRing: "Key Ring",
+  CAEC_Override_KeyRing: "Key Ring",
   /* photos */
-  Photo: "Photograph",
+  CAEC_Fallback_Photo: "Photograph",
   /* smoking items such as cigarettes, cigars, pipes */
-  Smoking: "Smoking",
+  CAEC_Override_Smoking: "Smoking",
   /* used for containers that can be worn on the body, such as backpacks and satchels */
-  Wearable: "",
- 
+  CAEC_Override_Wearable: "Wearable",
+
   /* axe weapon skill */
-  Axe: "Axe",
+  CAEC_Fallback_Axe: "Axe",
   /* long blunt weapon skill */
-  Blunt: "Long Blunt",
+  CAEC_Fallback_Blunt: "Long Blunt",
   /* long blade weapon skill */
-  LongBlade: "Long Blade",
+  CAEC_Fallback_LongBlade: "Long Blade",
   /* short blade weapon skill */
-  SmallBlade: "Short Blade",
+  CAEC_Fallback_SmallBlade: "Short Blade",
   /* short blunt weapon skill */
-  SmallBlunt: "Short Blunt",
+  CAEC_Fallback_SmallBlunt: "Short Blunt",
   /* spear weapon skill */
-  Spear: "Spear",
- 
+  CAEC_Fallback_Spear: "Spear",
+
   /* firearm ammunition */
-  Ammo: "Ammo",
+  CAEC_Fallback_Ammo: "Ammo",
   /* animals */
-  Animal: "Animal",
+  CAEC_Fallback_Animal: "Animal",
   /* animal parts, bones, sinew, hides */
-  AnimalPart: "Animal Part",
+  CAEC_Fallback_AnimalPart: "Animal Part",
   /* character appearance items such as makeup */
-  Appearance: "Appearance",
+  CAEC_Fallback_Appearance: "Appearance",
   /* camping supplies */
-  Camping: "Camping",
+  CAEC_Fallback_Camping: "Camping",
   /* maps of locations */
-  Cartography: "Cartography",
+  CAEC_Fallback_Cartography: "Cartography",
   /* communication devices such as walkie talkies, radios */
-  Communications: "Communications",
+  CAEC_Fallback_Communications: "Communications",
   /* items that can hold other items, such as boxes, bags, and crates */
-  Container: "Container",
+  CAEC_Fallback_Container: "Container",
   /* cooking items such as pots, pans, utensils */
-  Cooking: "Cooking",
+  CAEC_Fallback_Cooking: "Cooking",
   /* electronic items */
-  Electronics: "Electronics",
+  CAEC_Fallback_Electronics: "Electronics",
   /* entertainment items */
-  Entertainment: "Entertainment",
+  CAEC_Fallback_Entertainment: "Entertainment",
   /* sources of fire */
-  FireSource: "Fire Source",
+  CAEC_Fallback_FireSource: "Fire Source",
   /* first aid and medical supplies, bandages, painkillers, antiseptics */
-  FirstAid: "First Aid",
+  CAEC_Fallback_FirstAid: "First Aid",
   /* fishing gear */
-  Fishing: "Fishing",
+  CAEC_Fallback_Fishing: "Fishing",
   /* any food item */
-  Food: "Food",
+  CAEC_Fallback_Food: "Food",
   /* furniture items */
-  Furniture: "Furniture",
+  CAEC_Fallback_Furniture: "Furniture",
   /* gardening items */
-  Gardening: "Gardening",
+  CAEC_Fallback_Gardening: "Gardening",
   /* household items */
-  Household: "Household",
+  CAEC_Fallback_Household: "Household",
   /* instruments */
-  Instrument: "Musical Instrument",
+  CAEC_Fallback_Instrument: "Musical Instrument",
   /* miscellaneous junk items, worthless items */
-  Junk: "Junk",
+  CAEC_Fallback_Junk: "Junk",
   /* items that provide light such as flashlights, lanterns */
-  LightSource: "Light Source",
+  CAEC_Fallback_LightSource: "Light Source",
   /* crafting materials and building supplies */
-  Material: "Material",
+  CAEC_Fallback_Material: "Material",
   /* keepsakes and souvenirs */
-  Memento: "Memento",
+  CAEC_Fallback_Memento: "Memento",
   /* paint items */
-  Paint: "Paint",
+  CAEC_Fallback_Paint: "Paint",
   /* sports items */
-  Sports: "Sports",
+  CAEC_Fallback_Sports: "Sports",
   /* tools, such as hammers, wrenches, screwdrivers */
-  Tool: "Tool",
+  CAEC_Fallback_Tool: "Tool",
   /* trapping items */
-  Trapping: "Trapping",
+  CAEC_Fallback_Trapping: "Trapping",
   /* vehicle maintenance items */
-  VehicleMaintenance: "Vehicle Maintenance",
+  CAEC_Fallback_VehicleMaintenance: "Vehicle Maintenance",
   /* weapons in general */
-  Weapon: "Weapon",
+  CAEC_Fallback_Weapon: "Weapon",
 };

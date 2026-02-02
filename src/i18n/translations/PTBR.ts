@@ -1,4 +1,4 @@
-import type { ExternalTranslations } from "../types.ts";
+import type { ExternalTranslations } from "../types";
 
 /**
  * Portuguese (Brazil)
@@ -8,8 +8,6 @@ export const PTBR: ExternalTranslations = {
   Accessory: "Acessório",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   Arms: "Braços",
-  /** containers that can be on the body, such as backpacks and satchels */
-  Bag: "Bolsa",
   /** lower body clothing, pants, shorts, skirts */
   Bottom: "Parte de Baixo",
   /** top-level clothing category, such as shirts, pants, dresses */
@@ -66,8 +64,10 @@ export const PTBR: ExternalTranslations = {
   Canned: "Enlatados",
   /** dairy cheese products */
   Cheese: "Queijo",
+  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  Dish: undefined,
   /** fresh fruit, including berries and citrus */
-  Fruit: "Fruta",
+  Fruits: "Fruta",
   /** culinary or medicinal plants/herbs */
   Herb: "Erva",
   /** spicy hot peppers */
@@ -78,12 +78,10 @@ export const PTBR: ExternalTranslations = {
   Livestock: "Gado",
   /** any non-fish meat */
   Meat: "Carne",
-  /** dairy milk */
-  Milk: "Leite",
   /** mushrooms/fungi */
   Mushroom: "Cogumelo",
   /** nuts such as walnuts, almonds, peanuts */
-  Nuts: "Castanhas",
+  Nut: "Castanhas",
   /** food items that can spoil */
   Perishable: "Perecível",
   /** food for pets */
@@ -92,18 +90,16 @@ export const PTBR: ExternalTranslations = {
   Portion: "Porção",
   /** preserved food, such as jarred food */
   Preserved: "Conservado",
-  /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  Staple: "Alimento básico",
   /** fish and other seafood */
   Seafood: "Frutos do Mar",
   /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
   Seed: "Semente",
   /** snack foods (e.g. chips, cookies) */
   Snack: "Lanche",
-  /** carbonated soft drinks */
-  Soda: "Refrigerante",
   /** spices and seasonings, salt, pepper, etc. */
   Spice: "Especiarias",
+  /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
+  Staple: "Alimento básico",
   /** cooking stock or broth such as bouillon cubes */
   Stock: "Caldo",
   /** sugar and sweeteners */
@@ -120,8 +116,12 @@ export const PTBR: ExternalTranslations = {
   Cocktail: "Coquetel",
   /** fruit juice */
   Juice: "Suco",
-  /** top-level category for non-drinkable liquids */
+  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   Liquid: "Líquido",
+  /** dairy milk */
+  Milk: "Leite",
+  /** carbonated soft drinks */
+  SoftDrink: "Refrigerante",
   /** drinking water */
   Water: "Água",
   /** alcoholic wine beverages */
@@ -156,7 +156,7 @@ export const PTBR: ExternalTranslations = {
   SkillBook: "Livro de Habilidades",
   /** softcover books */
   Softcover: "Brochura",
-  /** handmade, artisan items. used for player-made weapons or food */
+  /** handmade, artisan items. used for player-made weapons (not food) */
   Crafted: "Caseira",
   /** ring or bundle of keys */
   KeyRing: "Chaveiro",
@@ -164,6 +164,8 @@ export const PTBR: ExternalTranslations = {
   Photo: "Foto",
   /** smoking items such as cigarettes, cigars, pipes */
   Smoking: "Fumar",
+  /** used for containers that can be worn on the body, such as backpacks and satchels */
+  Wearable: undefined,
   /** axe weapon skill */
   Axe: "Machados",
   /** long blunt weapon skill */

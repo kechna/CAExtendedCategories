@@ -10,7 +10,7 @@ export type LanguageObj = {
 
 export type CAECTranslations = Record<string, string | undefined>;
 
-export type TranslationsDict = Record<`CA_Override_${string}` | `CA_Fallback_${string}`, LanguageObj>;
+export type TranslationsDict = Record<`CAEC_Override_${string}` | `CAEC_Fallback_${string}`, LanguageObj>;
 
 type SubCategorySearcher = {
   prefix?: string;

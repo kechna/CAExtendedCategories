@@ -26,10 +26,17 @@ function Food:new()
   o.foodTypeMap = {
     BakingFat = FoodType.BAKING,
     Oil = FoodType.BAKING,
+
     Chocolate = FoodType.CANDY,
-    Berry = FoodType.FRUIT,
-    Citrus = FoodType.FRUIT,
-    Fruits = FoodType.FRUIT,
+
+    Berry = FoodType.FRUITS,
+    Citrus = FoodType.FRUITS,
+    Fruits = FoodType.FRUITS,
+
+    Herbal = FoodType.HERB,
+
+    AnimalFeed = FoodType.LIVESTOCK,
+
     Bacon = FoodType.MEAT,
     Beef = FoodType.MEAT,
     Game = FoodType.MEAT,
@@ -37,18 +44,36 @@ function Food:new()
     Poultry = FoodType.MEAT,
     Sausage = FoodType.MEAT,
     Venison = FoodType.MEAT,
+    Poulty = FoodType.MEAT,
+
     Cocoa = FoodType.NO_EXPLICIT,
-    Nut = FoodType.NUTS,
+    Dressing = FoodType.NO_EXPLICIT,
+    Garnish = FoodType.NO_EXPLICIT,
+    Sauce = FoodType.NO_EXPLICIT,
+    Spread = FoodType.NO_EXPLICIT,
+
     CatFood = FoodType.PET_FOOD,
     DogFood = FoodType.PET_FOOD,
+
     Fish = FoodType.SEAFOOD,
     Roe = FoodType.SEAFOOD,
+
+    Pepper = FoodType.SPICE,
+
     Bean = FoodType.STAPLE,
+    Pasta = FoodType.STAPLE,
+    Rice = FoodType.STAPLE,
+
     Greens = FoodType.VEGETABLES,
     Vegetable = FoodType.VEGETABLES,
 
+    Beer = FoodType.SKIP,
+    Champagne = FoodType.SKIP,
     Juice = FoodType.SKIP,
+    Liquor = FoodType.SKIP,
     Milk = FoodType.SKIP,
+    SoftDrink = FoodType.SKIP,
+    Wine = FoodType.SKIP,
 
     -- Vanilla Foods Expanded (VFX)
     Beans = FoodType.STAPLE,
@@ -60,7 +85,6 @@ function Food:new()
     Ice = FoodType.NO_EXPLICIT,
     Sake = FoodType.SKIP,
     Gin = FoodType.SKIP,
-    Wine = FoodType.SKIP,
   }
 
   return o
@@ -70,16 +94,17 @@ function Food:getFoodType(item, instance)
   ---@type string|nil
   local foodType = nil
   local instanceSpecific = false
+  ---@type string|nil
   local eatType = item:getEatType()
 
-  if eatType and ("2handbowl" == eatType or "Bowl" == eatType or "Plate" == eatType or "2hand" == eatType) then
+  if eatType then eatType = eatType:lower() end
+
+  if eatType and ("2handbowl" == eatType or "bowl" == eatType or "plate" == eatType or "2hand" == eatType) then
     foodType = FoodType.PORTION
     instanceSpecific = true
-  elseif eatType == "Pot" or item:hasTag(ItemTag.CAN_BE_DIVIDED_IN_BOWLS) then
-    foodType = FoodType.CRAFTED
+  elseif eatType == "pot" or item:hasTag(ItemTag.CAN_BE_DIVIDED_IN_BOWLS) then
+    foodType = FoodType.DISH
     instanceSpecific = true
-  elseif item:hasTag(ItemTag.PRESERVED_FOOD) then
-    foodType = FoodType.PRESERVED
   elseif item:hasTag(ItemTag.FISH_MEAT) then
     foodType = FoodType.SEAFOOD
   elseif item:hasTag(ItemTag.CHEESE) then
@@ -92,9 +117,11 @@ function Food:getFoodType(item, instance)
 
   foodType = foodType or instance:getFoodType()
 
-  -- Some chocolate items are tagged as condiments
-  if foodType == FoodType.NO_EXPLICIT and item:getName():lower():contains("chocolate") then
-    foodType = FoodType.CANDY;
+  if not foodType and item:hasTag(ItemTag.PRESERVED_FOOD) then
+    foodType = FoodType.PRESERVED
+  elseif foodType == FoodType.NO_EXPLICIT and item:getName():lower():contains("chocolate") then
+    -- Some chocolate items are tagged as condiments
+    foodType = FoodType.CANDY
   end
 
   ---@type string|nil

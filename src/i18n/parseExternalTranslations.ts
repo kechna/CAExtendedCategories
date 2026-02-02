@@ -1,6 +1,7 @@
 import type { Language, FullModContext } from "@pz/console";
 import type { TranslationsDict } from "../types.ts";
 import { TRANSLATIONS_ARR } from "../translations.ts";
+import { resolveKey } from "./resolveKey.ts";
 
 export const parseExternalTranslations = (
   context: FullModContext,
@@ -11,17 +12,19 @@ export const parseExternalTranslations = (
   const parsed: TranslationsDict = {};
 
   Object.entries(obj).forEach(([searchKey, value]) => {
-    const match = TRANSLATIONS_ARR.find(([, , key]) => key === searchKey);
+    const resolvedSearchKey = searchKey.replace(/^CAEC_(?:Override|Fallback)_(.+)$/, "$1");
+
+    const match = TRANSLATIONS_ARR.find(([, key]) => key === resolvedSearchKey);
 
     if (!match) {
-      logger.warn(`No definition found for key "${searchKey}" in language "${language}"`);
+      logger.warn(`No definition found for key "${resolvedSearchKey}" in language "${language}"`);
 
       return;
     }
 
-    const [, priority, key] = match;
+    const [, key, , priority] = match;
+    const resolvedKey = searchKey === resolvedSearchKey ? resolveKey(priority, key) : searchKey;
 
-    const resolvedKey = priority === "override" ? `CA_Override_${key}` : `CA_Fallback_${key}`;
     // @ts-expect-error todo
     parsed[resolvedKey] ??= {};
     // @ts-expect-error todo

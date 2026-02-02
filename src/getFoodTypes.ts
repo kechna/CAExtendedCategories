@@ -4,8 +4,7 @@ import { BaseFoodType } from "./zomboid/foodTypes.ts";
 const TO_DELETE = [
   /** Replaced by Beans */
   BaseFoodType.Bean,
-  /** Replaced by Fruit */
-  BaseFoodType.Fruits,
+  /** Replaced by Fruits */
   BaseFoodType.Berry,
   BaseFoodType.Citrus,
   /** Replaced by Vegetables */
@@ -19,28 +18,41 @@ const TO_DELETE = [
   BaseFoodType.Beef,
   BaseFoodType.Game,
   BaseFoodType.Poultry,
+  BaseFoodType.Poulty,
   BaseFoodType.Sausage,
   BaseFoodType.Venison,
+  /** Replaced by Livestock */
+  BaseFoodType.AnimalFeed,
   /** Replaced by Staple */
   BaseFoodType.Bean,
-  BaseFoodType.Rice,
   BaseFoodType.Pasta,
+  BaseFoodType.Rice,
   /** Replaced by seafood */
   BaseFoodType.Fish,
   BaseFoodType.Roe,
   /** Replaced by Baking */
   BaseFoodType.Oil,
   BaseFoodType.Thickener,
-  /** Replaced by Nuts */
-  BaseFoodType.Nut,
   /** Replaced by Candy */
   BaseFoodType.Chocolate,
   /** Replaced by Condiment */
   BaseFoodType.Cocoa,
   BaseFoodType.Dressing,
+  BaseFoodType.Garnish,
+  BaseFoodType.Sauce,
+  BaseFoodType.Spread,
+  /** Replaced by Spice */
+  BaseFoodType.Pepper,
+  /** Replaced by Herb */
+  BaseFoodType.Herbal,
   /** not handled as food */
+  BaseFoodType.Beer,
+  BaseFoodType.Champagne,
   BaseFoodType.Juice,
+  BaseFoodType.Liquor,
   BaseFoodType.Milk,
+  BaseFoodType.SoftDrink,
+  BaseFoodType.Wine,
 ] as const;
 
 export const getFoodTypes = (): string[] => {

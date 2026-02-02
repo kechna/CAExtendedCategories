@@ -8,7 +8,7 @@ local Smoking = CAEC_ItemCategorizer:derive("Smoking")
 --- @param _instance InventoryItem
 --- @return boolean
 function Smoking:validate(item, _instance)
-  local isSmoking = Utils.HasAnyTag(item, { ItemTag.SMOKABLE, ItemTag.ROLLING_PAPER })
+  local isSmoking = Utils.HasAnyTag(item, { ItemTag.SMOKABLE, ItemTag.ROLLING_PAPER, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO })
       or item:getDoubleClickRecipe() == "UnpackCigaretteCarton"
 
   if isSmoking then

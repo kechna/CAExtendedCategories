@@ -76,7 +76,7 @@ function FluidContainer:categorize(item, instance)
   elseif fluidType:equals(FluidType.Soda)
       or fluidTypeString:contains("Soda")
   then
-    category = "BeverageSoda";
+    category = "BeverageSoftDrink";
   elseif fluidType:equals(FluidType.SpiffoJuice)
       or fluidTypeString:contains("Juice")
   then

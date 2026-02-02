@@ -2,13 +2,10 @@ import { Language } from "@pz/console";
 
 export enum CustomFoodType {
   Baking = "Baking",
-  // Beans = "Beans",
   Candy = "Candy",
   Canned = "Canned",
-  Crafted = "Crafted",
-  Fruit = "Fruit",
+  Dish = "Dish",
   Livestock = "Livestock",
-  Nuts = "Nuts",
   PetFood = "PetFood",
   Portion = "Portion",
   Preserved = "Preserved",
