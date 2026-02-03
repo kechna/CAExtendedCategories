@@ -1,8 +1,9 @@
-import type { ModDefinition, FullModContext } from "@pz/console";
+import type { ModDefinition, FullModContext, Language } from "@pz/console";
 import { SUPPORTED_LANGUAGES, MELEE_WEAPON_CATEGORIES } from "./constants.ts";
 import { searchers } from "./searchers.ts";
-import { WeaponCategory, BaseGameCategory } from "./zomboid/categories.ts";
+import { PzCategory, WEAPON_CATEGORIES } from "./zomboid/categories.ts";
 import { useTranslations } from "./i18n/useTranslations.ts";
+import { ALL_TRANSLATIONS } from "./i18n/translations";
 
 export const createModTranslations = (async (context: FullModContext) => {
   const { save, t, addOr, created } = await useTranslations(context, SUPPORTED_LANGUAGES);
@@ -13,29 +14,56 @@ export const createModTranslations = (async (context: FullModContext) => {
 
       SUPPORTED_LANGUAGES.forEach((lang) => {
         const parts = prefix ? [prefix, suffix] : [suffix];
-        const translated = parts.map((part) => t(searchKeys ?? [], part, lang)?.[0]?.translation ?? `<${part}>`);
         const fullKey = parts.join("");
+        let override = false;
+        const results: string[] = [];
 
-        const text = translated.filter(Boolean).join(` ${separator ?? "-"} `);
+        parts.forEach((part) => {
+          const translated = t(searchKeys ?? [], part, lang);
 
-        save(lang, fullKey, text);
+          results.push(translated[0]?.translation ?? `<${part}>`);
+          if (translated.length === 0) {
+            // logger.warn(chalk.cyan(`${lang}.${part}`), `Translation not found`);
+          } else if (translated[0]?.searchKey.startsWith("CAEC_Override")) {
+            override = true;
+          }
+        });
+        // const translated = found.map((t) => t?.[0]?.translation ?? `<${part}>`);
+
+        const text = results.join(` ${separator ?? "-"} `);
+
+        save(lang, fullKey, text, override);
       });
     });
   });
 
-  const WEAPON_ADDON = Object.values(WeaponCategory)
-    .filter((category) => category !== WeaponCategory.Weapon)
-    .map((category) => category.replace(WeaponCategory.Weapon, ""));
+  const WEAPON_ADDON = WEAPON_CATEGORIES.filter((category) => category !== PzCategory.Weapon).map((category) =>
+    category.replace(PzCategory.Weapon, ""),
+  );
 
   SUPPORTED_LANGUAGES.forEach((language) => {
-    addOr(BaseGameCategory.Literature, BaseGameCategory.Junk, language);
-    addOr("AccessoryTop", BaseGameCategory.Container, language);
-    addOr("AccessoryTop", BaseGameCategory.Gardening, language);
+    addOr(PzCategory.Literature, PzCategory.Junk, language);
 
-    WEAPON_ADDON.filter((category) => !category.includes(WeaponCategory.Weapon)).forEach((category) => {
+    addOr(PzCategory.Appearance, "Liquid", language);
+    addOr(PzCategory.Cooking, "Liquid", language);
+    addOr(PzCategory.FirstAid, "Liquid", language);
+    addOr(PzCategory.Household, "Liquid", language);
+
+    addOr(PzCategory.Accessory + "Top", PzCategory.Container, language);
+    addOr(PzCategory.Accessory + "Top", PzCategory.Gardening, language);
+
+    WEAPON_ADDON.filter((category) => !category.includes(PzCategory.Weapon)).forEach((category) => {
       MELEE_WEAPON_CATEGORIES.forEach((skill) => {
-        addOr(category, `${WeaponCategory.Weapon}${skill}`, language);
+        addOr(category, `${PzCategory.Weapon}${skill}`, language);
       });
+    });
+  });
+
+  Object.entries(ALL_TRANSLATIONS).forEach(([lang, translations]) => {
+    Object.entries(translations).forEach(([key, value]) => {
+      if (key.startsWith("CAEC_")) return;
+      context.logger.debug(`[${lang}] Adding extra translation key: ${key}`);
+      save(lang as Language, key, value, false);
     });
   });
 

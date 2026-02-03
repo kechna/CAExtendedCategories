@@ -68,6 +68,7 @@ local function initializeCategorizers()
   CAEC.InstanceCategorizers:add(Categorizers.Food)
   CAEC.InstanceCategorizers:add(Categorizers.FluidContainer)
 
+
   Debug.log(string.format("Categorizers initialized. Script: %d, Instance: %d",
     CAEC.ScriptCategorizers:size(),
     CAEC.InstanceCategorizers:size()
@@ -80,6 +81,7 @@ end
 ---@return boolean
 local function isDynamicItem(instance)
   if instance:isFluidContainer() then
+    Debug.log(string.format("isDynamicItem(%s): is fluid container", instance:getName()), "isDynamicItem")
     return true
   end
 
@@ -89,7 +91,16 @@ local function isDynamicItem(instance)
 
   local name = instance:getScriptItem():getName()
 
-  return CAEC.InstanceSpecific[name] == true or CAEC.ItemTweaks[name] == nil
+  local instanceSpecific = CAEC.InstanceSpecific[name] == true
+  local tweaked = CAEC.ItemTweaks[name] ~= nil
+
+  Debug.log(string.format("isDynamicItem(%s): instanceSpecific=%s, tweaked=%s",
+    name,
+    tostring(instanceSpecific),
+    tostring(tweaked)
+  ), "isDynamicItem")
+
+  return instanceSpecific or not tweaked
 end
 
 ---@param trigger string?

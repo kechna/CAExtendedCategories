@@ -1,6 +1,7 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 local FoodType = require("CAExtendedCategories/Data/CAEC_FoodType")
+local BoxesAndStacks = require("CAExtendedCategories/Categorizers/CAEC_BoxesAndStacks")
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 
 local FoodTypes = {}
@@ -256,6 +257,13 @@ function Food:categorize(item, instance)
     Debug.report(" > item not categorized further: " .. item:getName(), item, instance)
   end
 
+  if category then
+    local add = BoxesAndStacks.addToCategory(category, item)
+    if add then
+      self:log(item:getFullName() .. " -> " .. add, Debug.Level.Info)
+    end
+    category = add or category
+  end
   return category, instanceSpecific
 end
 

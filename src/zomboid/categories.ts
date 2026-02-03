@@ -1,71 +1,4 @@
-export enum ToyCategory {
-  Badger = "Badger",
-  Bear = "Bear",
-  Beaver = "Beaver",
-  Bug = "Bug",
-  Bunny = "Bunny",
-  Dog = "Dog",
-  Duck = "Duck",
-  Eye = "Eye",
-  Fox = "Fox",
-  Frog = "Frog",
-  Goblin = "Goblin",
-  Hedgehog = "Hedgehog",
-  Mole = "Mole",
-  Raccoon = "Raccoon",
-  Spider = "Spider",
-  Squirrel = "Squirrel",
-  Teddy = "Teddy",
-}
-
-export enum OtherCategory {
-  Corpse = "Corpse",
-  // clothing item
-  Ears = "Ears",
-  // butt clothing item
-  Tail = "Tail",
-  MaleBody = "MaleBody",
-  Wound = "Wound",
-  ZedDmg = "ZedDmg",
-
-  Generic = "Generic",
-  Hidden = "Hidden",
-  Bandage = "Bandage",
-
-  // keys, renamed to KeyRing
-  Security = "Security",
-
-  // handled by liquids
-  Water = "Water",
-  WaterContainer = "WaterContainer",
-}
-
-export enum WeaponCategory {
-  AnimalPartWeapon = "AnimalPartWeapon",
-  CookingWeapon = "CookingWeapon",
-  FirstAidWeapon = "FirstAidWeapon",
-  FishingWeapon = "FishingWeapon",
-  GardeningWeapon = "GardeningWeapon",
-  HouseholdWeapon = "HouseholdWeapon",
-  InstrumentWeapon = "InstrumentWeapon",
-  JunkWeapon = "JunkWeapon",
-  MaterialWeapon = "MaterialWeapon",
-  SportsWeapon = "SportsWeapon",
-  ToolWeapon = "ToolWeapon",
-  VehicleMaintenanceWeapon = "VehicleMaintenanceWeapon",
-
-  Weapon = "Weapon",
-}
-
-export enum WeaponAdjacentCategory {
-  BrokenWeapon = "BrokenWeapon",
-  Explosives = "Explosives",
-  WeaponCrafted = "WeaponCrafted",
-  WeaponImprovised = "WeaponImprovised",
-  WeaponPart = "WeaponPart",
-}
-
-export enum BaseGameCategory {
+export enum PzCategory {
   Accessory = "Accessory",
   Ammo = "Ammo",
   Animal = "Animal",
@@ -102,22 +35,152 @@ export enum BaseGameCategory {
   Tool = "Tool",
   Trapping = "Trapping",
   VehicleMaintenance = "VehicleMaintenance",
+
+  Weapon = "Weapon",
+  Explosives = "Explosives",
+
+  AnimalPartWeapon = "AnimalPartWeapon",
+  CookingWeapon = "CookingWeapon",
+  FirstAidWeapon = "FirstAidWeapon",
+  FishingWeapon = "FishingWeapon",
+  GardeningWeapon = "GardeningWeapon",
+  HouseholdWeapon = "HouseholdWeapon",
+  InstrumentWeapon = "InstrumentWeapon",
+  JunkWeapon = "JunkWeapon",
+  MaterialWeapon = "MaterialWeapon",
+  SportsWeapon = "SportsWeapon",
+  ToolWeapon = "ToolWeapon",
+  VehicleMaintenanceWeapon = "VehicleMaintenanceWeapon",
+
+  BrokenWeapon = "BrokenWeapon",
+  WeaponCrafted = "WeaponCrafted",
+  WeaponImprovised = "WeaponImprovised",
+  WeaponPart = "WeaponPart",
+
+  Corpse = "Corpse",
+  // clothing item
+  Ears = "Ears",
+  // butt clothing item
+  Tail = "Tail",
+  MaleBody = "MaleBody",
+  Wound = "Wound",
+  ZedDmg = "ZedDmg",
+
+  Generic = "Generic",
+  Hidden = "Hidden",
+  Bandage = "Bandage",
+
+  // keys, renamed to KeyRing
+  Security = "Security",
+
+  // handled by liquids
+  Water = "Water",
+  WaterContainer = "WaterContainer",
+
+  Badger = "Badger",
+  Bear = "Bear",
+  Beaver = "Beaver",
+  Bug = "Bug",
+  Bunny = "Bunny",
+  Dog = "Dog",
+  Duck = "Duck",
+  Eye = "Eye",
+  Fox = "Fox",
+  Frog = "Frog",
+  Goblin = "Goblin",
+  Hedgehog = "Hedgehog",
+  Mole = "Mole",
+  Raccoon = "Raccoon",
+  Spider = "Spider",
+  Squirrel = "Squirrel",
+  Teddy = "Teddy",
 }
 
+export const USED_CATEGORIES = [
+  PzCategory.Accessory,
+  PzCategory.Ammo,
+  PzCategory.Animal,
+  PzCategory.AnimalPart,
+  PzCategory.Appearance,
+  PzCategory.Camping,
+  PzCategory.Cartography,
+  PzCategory.Clothing,
+  PzCategory.Communications,
+  PzCategory.Container,
+  PzCategory.Cooking,
+  PzCategory.Electronics,
+  PzCategory.Entertainment,
+  PzCategory.FireSource,
+  PzCategory.FirstAid,
+  PzCategory.Fishing,
+  PzCategory.Food,
+  PzCategory.Furniture,
+  PzCategory.Gardening,
+  PzCategory.Household,
+  PzCategory.Instrument,
+  PzCategory.Junk,
+  PzCategory.LightSource,
+  PzCategory.Literature,
+  PzCategory.Material,
+  PzCategory.Memento,
+  PzCategory.Paint,
+  PzCategory.ProtectiveGear,
+  PzCategory.SkillBook,
+  PzCategory.Sports,
+  PzCategory.Tool,
+  PzCategory.Trapping,
+  PzCategory.VehicleMaintenance,
+  PzCategory.Weapon,
+] as const;
+
+export const WEAPON_CATEGORIES = [
+  PzCategory.AnimalPartWeapon,
+  PzCategory.CookingWeapon,
+  PzCategory.FirstAidWeapon,
+  PzCategory.FishingWeapon,
+  PzCategory.GardeningWeapon,
+  PzCategory.HouseholdWeapon,
+  PzCategory.InstrumentWeapon,
+  PzCategory.JunkWeapon,
+  PzCategory.MaterialWeapon,
+  PzCategory.SportsWeapon,
+  PzCategory.ToolWeapon,
+  PzCategory.VehicleMaintenanceWeapon,
+  PzCategory.Weapon,
+] as const;
+
 export const BOXABLE_CATEGORIES = [
-  BaseGameCategory.Ammo,
-  BaseGameCategory.AnimalPart,
-  BaseGameCategory.Cooking,
-  BaseGameCategory.Electronics,
-  BaseGameCategory.FirstAid,
-  BaseGameCategory.Fishing,
-  BaseGameCategory.Food,
-  BaseGameCategory.Junk,
-  BaseGameCategory.LightSource,
-  BaseGameCategory.Literature,
-  BaseGameCategory.Material,
-  BaseGameCategory.Memento,
-  BaseGameCategory.SkillBook,
+  PzCategory.Ammo,
+  PzCategory.AnimalPart,
+  PzCategory.Cooking,
+  PzCategory.Electronics,
+  PzCategory.FirstAid,
+  PzCategory.Fishing,
+  PzCategory.Food,
+  PzCategory.Junk,
+  PzCategory.LightSource,
+  PzCategory.Literature,
+  PzCategory.Material,
+  PzCategory.Memento,
+  PzCategory.SkillBook,
 ];
 
-export type AnyCategory = BaseGameCategory | WeaponCategory | ToyCategory | OtherCategory;
+export const TOY_CATEGORIES = [
+  PzCategory.Badger,
+  PzCategory.Bear,
+  PzCategory.Beaver,
+  PzCategory.Bug,
+  PzCategory.Bunny,
+  PzCategory.Dog,
+  PzCategory.Duck,
+  PzCategory.Eye,
+  PzCategory.Fox,
+  PzCategory.Frog,
+  PzCategory.Goblin,
+  PzCategory.Hedgehog,
+  PzCategory.Mole,
+  PzCategory.Raccoon,
+  PzCategory.Spider,
+  PzCategory.Squirrel,
+  PzCategory.Teddy,
+] as const;

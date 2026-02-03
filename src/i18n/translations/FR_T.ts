@@ -18,23 +18,270 @@ import type { ExternalTranslations } from "../types";
  */
 export const FR: ExternalTranslations = {
   /**
-   * top-level accessories category, such as watches, necklaces, belts, gloves
+   * accessories such as watches, necklaces, belts, gloves
    *
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Accessoire"
    */
   CAEC_Fallback_Accessory: "Accessoire",
-  /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: "Bras",
-  /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: "Bas",
   /**
-   * top-level clothing category, such as shirts, pants, dresses
+   * firearm ammunition
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Ammo = "Munitions"
+   */
+  CAEC_Fallback_Ammo: "Munitions",
+  /** animals */
+  CAEC_Fallback_Animal: "Animal",
+  /** animal parts, bones, sinew, hides */
+  CAEC_Fallback_AnimalPart: "Partie d'animal",
+  /**
+   * character appearance items such as makeup
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Appearance = "Apparence"
+   */
+  CAEC_Fallback_Appearance: "Apparence",
+  /**
+   * camping supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Camping = "Camping"
+   */
+  CAEC_Fallback_Camping: "Camping",
+  /**
+   * maps of locations
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cartography = "Cartographie"
+   */
+  CAEC_Fallback_Cartography: "Cartographie",
+  /**
+   * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Vêtement"
    */
   CAEC_Fallback_Clothing: "Vêtement",
+  /**
+   * communication devices such as walkie talkies, radios
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Communications = "Communications"
+   */
+  CAEC_Fallback_Communications: "Communications",
+  /**
+   * items that can hold other items, such as boxes, bags, and crates
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Container = "Sac"
+   *   ContextMenu_Container = "Conteneur"
+   */
+  CAEC_Fallback_Container: "Sac",
+  /**
+   * cooking items such as pots, pans, utensils
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cooking = "Cuisine"
+   *   IGUI_perks_Cooking = "Cuisine"
+   */
+  CAEC_Fallback_Cooking: "Cuisine",
+  /**
+   * electronic items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Electronics = "Électronique"
+   */
+  CAEC_Fallback_Electronics: "Électronique",
+  /**
+   * entertainment items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Entertainment = "Entraînement"
+   */
+  CAEC_Fallback_Entertainment: "Entraînement",
+  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_FireSource: "Source de feu",
+  /**
+   * first aid and medical supplies, bandages, painkillers, antiseptics
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FirstAid = "Premiers soins"
+   *   IGUI_perks_Doctor = "Premiers secours"
+   */
+  CAEC_Fallback_FirstAid: "Premiers soins",
+  /**
+   * fishing gear
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pêche"
+   *   IGUI_perks_Fishing = "Pêche"
+   *   ContextMenu_Fishing = "Pêche"
+   */
+  CAEC_Fallback_Fishing: "Pêche",
+  /**
+   * food items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Food = "Nourriture"
+   */
+  CAEC_Fallback_Food: "Nourriture",
+  /**
+   * furniture items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Furniture = "Meuble"
+   */
+  CAEC_Fallback_Furniture: "Meuble",
+  /**
+   * gardening items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Jardinage"
+   */
+  CAEC_Fallback_Gardening: "Jardinage",
+  /**
+   * household items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Household = "Ménage"
+   */
+  CAEC_Fallback_Household: "Ménage",
+  /**
+   * instruments
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Instrument = "Instrument"
+   */
+  CAEC_Fallback_Instrument: "Instrument",
+  /**
+   * miscellaneous junk items, worthless items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Junk = "Déchet"
+   */
+  CAEC_Fallback_Junk: "Déchet",
+  /**
+   * items that provide light such as flashlights, lanterns
+   *
+   * found in-game:
+   *   IGUI_ItemCat_LightSource = "Source de lumière"
+   */
+  CAEC_Fallback_LightSource: "Source de lumière",
+  /**
+   * books and printed reading material
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Literature = "Livre"
+   */
+  CAEC_Fallback_Literature: "Livre",
+  /**
+   * crafting materials and building supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Material = "Matériel"
+   */
+  CAEC_Fallback_Material: "Matériel",
+  /** keepsakes and souvenirs */
+  CAEC_Fallback_Memento: "Souvenir",
+  /**
+   * paint items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Paint = "Peinture"
+   */
+  CAEC_Fallback_Paint: "Peinture",
+  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_ProtectiveGear: "Équipement de protection",
+  /**
+   * skill books
+   *
+   * found in-game:
+   *   IGUI_ItemCat_SkillBook = "Livre d'apprentissage"
+   */
+  CAEC_Fallback_SkillBook: "Livre d'apprentissage",
+  /**
+   * sports items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Sports = "Sport"
+   */
+  CAEC_Fallback_Sports: "Sport",
+  /**
+   * tools, such as hammers, wrenches, screwdrivers
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Tool = "Outil"
+   */
+  CAEC_Fallback_Tool: "Outil",
+  /**
+   * trapping items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Piégeage"
+   *   IGUI_perks_Trapping = "Piégeage"
+   */
+  CAEC_Fallback_Trapping: "Piégeage",
+  /**
+   * vehicle maintenance items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_VehicleMaintenance = "Maintenance véhicule"
+   */
+  CAEC_Fallback_VehicleMaintenance: "Maintenance véhicule",
+  /**
+   * weapons in general
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Weapon = "Arme"
+   */
+  CAEC_Fallback_Weapon: "Arme",
+  /**
+   * axe weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Axe = "Hache"
+   */
+  CAEC_Fallback_Axe: "Hache",
+  /**
+   * long blunt weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blunt = "Armes contondantes longues"
+   */
+  CAEC_Fallback_Blunt: "Armes contondantes longues",
+  /**
+   * long blade weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_LongBlade = "Armes tranchantes longues"
+   */
+  CAEC_Fallback_LongBlade: "Armes tranchantes longues",
+  /**
+   * short blade weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_SmallBlade = "Armes tranchantes courtes"
+   */
+  CAEC_Fallback_SmallBlade: "Armes tranchantes courtes",
+  /**
+   * short blunt weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_SmallBlunt = "Armes contondantes courtes"
+   */
+  CAEC_Fallback_SmallBlunt: "Armes contondantes courtes",
+  /**
+   * spear weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Spear = "Lance"
+   */
+  CAEC_Fallback_Spear: "Lance",
+  /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
+  CAEC_Override_Arms: "Bras",
+  /** lower body clothing, pants, shorts, skirts */
+  CAEC_Override_Bottom: "Bas",
   /** facewear such as masks, glasses, goggles */
   CAEC_Override_Face: "Visage",
   /** shoes, boots, heels, etc. (but not socks) */
@@ -63,30 +310,12 @@ export const FR: ExternalTranslations = {
   CAEC_Fallback_Neck: "Cou",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Vêtements d'extérieur",
-  /** top-level protective equipment category, such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: "Équipement de protection",
   /** hosiery and socks */
   CAEC_Override_Socks: "Chaussettes",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
   CAEC_Override_Top: "Haut du corps",
   /** undergarments such as underwear, bras, boxers */
   CAEC_Override_Underwear: "Sous-vêtements",
-  /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: "Boîte",
-  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: "Ensemble",
-  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: "Carton",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Arme à feu",
-  /** pistols and handguns */
-  CAEC_Fallback_Handgun: "Pistolet",
-  /** firearm magazines */
-  CAEC_Fallback_Mag: "Chargeur",
-  /** rifles, big firearms */
-  CAEC_Fallback_Rifle: "Fusil",
-  /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: "Fusil à pompe",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Cuisson au four",
   /**
@@ -94,6 +323,7 @@ export const FR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Pain"
+   *   ItemName_Base.Bread = "Pain"
    */
   CAEC_Fallback_Bread: "Pain",
   /**
@@ -110,6 +340,7 @@ export const FR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Fromage"
+   *   ItemName_Base.Cheese = "Fromage"
    */
   CAEC_Fallback_Cheese: "Fromage",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -200,6 +431,7 @@ export const FR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Sucre"
+   *   ItemName_Base.Sugar = "Sucre"
    */
   CAEC_Fallback_Sugar: "Sucre",
   /**
@@ -209,6 +441,52 @@ export const FR: ExternalTranslations = {
    *   ContextMenu_FoodType_Vegetables = "Légume"
    */
   CAEC_Override_Vegetables: "Légumes",
+  /** adult-oriented content (hottiez magazines) */
+  CAEC_Override_Adult: "Adulte",
+  /** informational brochures */
+  CAEC_Fallback_Brochure: "Brochure",
+  /** comic books */
+  CAEC_Fallback_Comic: "Bande dessinée",
+  /** consumable reading materials such as crossword and wordsearch magazines */
+  CAEC_Fallback_Consumable: "Consommable",
+  /** decorative or luxury books */
+  CAEC_Fallback_FancyBook: "Livre de luxe",
+  /** flyers and handouts */
+  CAEC_Fallback_Flier: "Tract",
+  /** hardcover books */
+  CAEC_Fallback_Hardcover: "Couverture rigide",
+  /**
+   * literature magazines
+   *
+   * found in-game:
+   *   ItemName_Base.Magazine = "Magazine"
+   */
+  CAEC_Fallback_Magazine: "Magazine",
+  /**
+   * newspapers
+   *
+   * found in-game:
+   *   ItemName_Base.Newspaper = "Journal"
+   */
+  CAEC_Fallback_Newspaper: "Journal",
+  /** picture books */
+  CAEC_Fallback_PictureBook: "Livre d'images",
+  /** recipes, readable items that teach you something */
+  CAEC_Fallback_Recipe: "Recette",
+  /** tabletop RPG manuals */
+  CAEC_Fallback_RpgManual: "Manuel de JDR",
+  /** softcover books */
+  CAEC_Fallback_Softcover: "Couverture souple",
+  /** firearm category, pistols, rifles, shotguns, etc. */
+  CAEC_Override_Firearm: "Arme à feu",
+  /** pistols and handguns */
+  CAEC_Fallback_Handgun: "Pistolet",
+  /** firearm magazines */
+  CAEC_Fallback_Mag: "Chargeur",
+  /** rifles, big firearms */
+  CAEC_Fallback_Rifle: "Fusil",
+  /** shotguns, rifles that shoot shells */
+  CAEC_Fallback_Shotgun: "Fusil à pompe",
   /** general alcoholic beverages */
   CAEC_Fallback_Alcohol: "Alcool",
   /**
@@ -218,8 +496,6 @@ export const FR: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Bière"
    *   ItemName_Base.Beer = "dans un verre"
    *   ItemName_Base.Beer2 = "dans un gobelet"
-   *   ContextMenu_EvolvedRecipe_Beer = "boisson dans un gobelet"
-   *   ContextMenu_EvolvedRecipe_Beer2 = "boisson dans une tasse"
    */
   CAEC_Override_Beer: "dans un verre",
   /**
@@ -228,12 +504,21 @@ export const FR: ExternalTranslations = {
    * found in-game:
    *   ItemName_Base.Beverage = "Boisson"
    *   ItemName_Base.Beverage2 = "Boisson"
-   *   ContextMenu_EvolvedRecipe_Beverage = "Boisson"
-   *   ContextMenu_EvolvedRecipe_Beverage2 = "Boisson"
    */
   CAEC_Fallback_Beverage: "Boisson",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
+  /**
+   * coffee beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Coffee = "Café"
+   *   ItemName_Base.Coffee = "Café"
+   *   ItemName_Base.Coffee2 = "Café"
+   */
+  CAEC_Override_Coffee: undefined,
+  /** energy drinks or otherwise highly caffeinated soft drinks */
+  CAEC_Override_EnergyDrink: "Boisson énergisante",
   /**
    * fruit juice
    *
@@ -258,7 +543,19 @@ export const FR: ExternalTranslations = {
    *   ContextMenu_FoodType_SoftDrink = "Boisson sans alcool"
    */
   CAEC_Override_SoftDrink: "Soda",
-  /** drinking water */
+  /**
+   * tea beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Tea = "Thé"
+   */
+  CAEC_Override_Tea: undefined,
+  /**
+   * drinking water
+   *
+   * found in-game:
+   *   ContextMenu_Water = "Arroser"
+   */
   CAEC_Fallback_Water: "Eau",
   /**
    * alcoholic wine beverages
@@ -269,56 +566,12 @@ export const FR: ExternalTranslations = {
    *   ItemName_Base.Wine2 = "Vin rouge"
    */
   CAEC_Fallback_Wine: "Vin",
-  /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: "Adulte",
-  /** informational brochures */
-  CAEC_Fallback_Brochure: "Brochure",
-  /** comic books */
-  CAEC_Fallback_Comic: "Bande dessinée",
-  /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: "Consommable",
-  /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: "Livre de luxe",
-  /** flyers and handouts */
-  CAEC_Fallback_Flier: "Tract",
-  /** hardcover books */
-  CAEC_Fallback_Hardcover: "Couverture rigide",
-  /**
-   * books and printed reading material
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Literature = "Livre"
-   */
-  CAEC_Fallback_Literature: "Livre",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Magazine"
-   */
-  CAEC_Fallback_Magazine: "Magazine",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Journal"
-   */
-  CAEC_Fallback_Newspaper: "Journal",
-  /** picture books */
-  CAEC_Fallback_PictureBook: "Livre d'images",
-  /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: "Recette",
-  /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: "Manuel de JDR",
-  /**
-   * skill books
-   *
-   * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Livre d'apprentissage"
-   */
-  CAEC_Fallback_SkillBook: "Livre d'apprentissage",
-  /** softcover books */
-  CAEC_Fallback_Softcover: "Couverture souple",
+  /** things in a (small) box, such as boxes of ammo */
+  CAEC_Override_Box: "Boîte",
+  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
+  CAEC_Override_Bundled: "Ensemble",
+  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
+  CAEC_Override_Carton: "Carton",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artisanal",
   /**
@@ -334,231 +587,4 @@ export const FR: ExternalTranslations = {
   CAEC_Override_Smoking: "Fumer",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Portable",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Hache"
-   */
-  CAEC_Fallback_Axe: "Hache",
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Armes contondantes longues"
-   */
-  CAEC_Fallback_Blunt: "Armes contondantes longues",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Armes tranchantes longues"
-   */
-  CAEC_Fallback_LongBlade: "Armes tranchantes longues",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Armes tranchantes courtes"
-   */
-  CAEC_Fallback_SmallBlade: "Armes tranchantes courtes",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Armes contondantes courtes"
-   */
-  CAEC_Fallback_SmallBlunt: "Armes contondantes courtes",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Lance"
-   */
-  CAEC_Fallback_Spear: "Lance",
-  /**
-   * firearm ammunition
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Ammo = "Munitions"
-   */
-  CAEC_Fallback_Ammo: "Munitions",
-  /** animals */
-  CAEC_Fallback_Animal: "Animal",
-  /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: "Partie d'animal",
-  /**
-   * character appearance items such as makeup
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Appearance = "Apparence"
-   */
-  CAEC_Fallback_Appearance: "Apparence",
-  /**
-   * camping supplies
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Camping = "Camping"
-   */
-  CAEC_Fallback_Camping: "Camping",
-  /**
-   * maps of locations
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Cartography = "Cartographie"
-   */
-  CAEC_Fallback_Cartography: "Cartographie",
-  /**
-   * communication devices such as walkie talkies, radios
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Communications = "Communications"
-   */
-  CAEC_Fallback_Communications: "Communications",
-  /**
-   * items that can hold other items, such as boxes, bags, and crates
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Container = "Sac"
-   *   ContextMenu_Container = "Conteneur"
-   */
-  CAEC_Fallback_Container: "Sac",
-  /**
-   * cooking items such as pots, pans, utensils
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Cooking = "Cuisine"
-   */
-  CAEC_Fallback_Cooking: "Cuisine",
-  /**
-   * electronic items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Electronics = "Électronique"
-   */
-  CAEC_Fallback_Electronics: "Électronique",
-  /**
-   * entertainment items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Entertainment = "Entraînement"
-   */
-  CAEC_Fallback_Entertainment: "Entraînement",
-  /** sources of fire */
-  CAEC_Fallback_FireSource: "Source de feu",
-  /**
-   * first aid and medical supplies, bandages, painkillers, antiseptics
-   *
-   * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Premiers soins"
-   */
-  CAEC_Fallback_FirstAid: "Premiers soins",
-  /**
-   * fishing gear
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Pêche"
-   *   ContextMenu_Fishing = "Pêche"
-   */
-  CAEC_Fallback_Fishing: "Pêche",
-  /**
-   * any food item
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Food = "Nourriture"
-   */
-  CAEC_Fallback_Food: "Nourriture",
-  /**
-   * furniture items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Furniture = "Meuble"
-   */
-  CAEC_Fallback_Furniture: "Meuble",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Jardinage"
-   */
-  CAEC_Fallback_Gardening: "Jardinage",
-  /**
-   * household items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Household = "Ménage"
-   */
-  CAEC_Fallback_Household: "Ménage",
-  /**
-   * instruments
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Instrument = "Instrument"
-   */
-  CAEC_Fallback_Instrument: "Instrument",
-  /**
-   * miscellaneous junk items, worthless items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Junk = "Déchet"
-   */
-  CAEC_Fallback_Junk: "Déchet",
-  /**
-   * items that provide light such as flashlights, lanterns
-   *
-   * found in-game:
-   *   IGUI_ItemCat_LightSource = "Source de lumière"
-   */
-  CAEC_Fallback_LightSource: "Source de lumière",
-  /**
-   * crafting materials and building supplies
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Material = "Matériel"
-   */
-  CAEC_Fallback_Material: "Matériel",
-  /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: "Souvenir",
-  /**
-   * paint items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Paint = "Peinture"
-   */
-  CAEC_Fallback_Paint: "Peinture",
-  /**
-   * sports items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Sports = "Sport"
-   */
-  CAEC_Fallback_Sports: "Sport",
-  /**
-   * tools, such as hammers, wrenches, screwdrivers
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Tool = "Outil"
-   */
-  CAEC_Fallback_Tool: "Outil",
-  /**
-   * trapping items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Piégeage"
-   */
-  CAEC_Fallback_Trapping: "Piégeage",
-  /**
-   * vehicle maintenance items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Maintenance véhicule"
-   */
-  CAEC_Fallback_VehicleMaintenance: "Maintenance véhicule",
-  /**
-   * weapons in general
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Weapon = "Arme"
-   */
-  CAEC_Fallback_Weapon: "Arme",
 };

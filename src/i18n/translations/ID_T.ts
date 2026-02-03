@@ -18,23 +18,265 @@ import type { ExternalTranslations } from "../types";
  */
 export const ID: ExternalTranslations = {
   /**
-   * top-level accessories category, such as watches, necklaces, belts, gloves
+   * accessories such as watches, necklaces, belts, gloves
    *
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Aksesoris"
    */
   CAEC_Override_Accessory: undefined,
-  /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
-  /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
   /**
-   * top-level clothing category, such as shirts, pants, dresses
+   * firearm ammunition
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Ammo = "Amunisi"
+   */
+  CAEC_Override_Ammo: undefined,
+  /** animals */
+  CAEC_Fallback_Animal: undefined,
+  /** animal parts, bones, sinew, hides */
+  CAEC_Fallback_AnimalPart: undefined,
+  /**
+   * character appearance items such as makeup
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Appearance = "Penampilan"
+   */
+  CAEC_Override_Appearance: undefined,
+  /**
+   * camping supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Camping = "Perkemahan"
+   */
+  CAEC_Override_Camping: undefined,
+  /**
+   * maps of locations
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cartography = "Pemetaan"
+   */
+  CAEC_Override_Cartography: undefined,
+  /**
+   * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Pakaian"
    */
   CAEC_Override_Clothing: undefined,
+  /**
+   * communication devices such as walkie talkies, radios
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Communications = "Sistem Komunikasi"
+   */
+  CAEC_Override_Communications: undefined,
+  /**
+   * items that can hold other items, such as boxes, bags, and crates
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Container = "Penyimpanan"
+   *   ContextMenu_Container = "Penyimpanan"
+   */
+  CAEC_Override_Container: undefined,
+  /**
+   * cooking items such as pots, pans, utensils
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cooking = "Memasak"
+   *   IGUI_perks_Cooking = "Memasak"
+   */
+  CAEC_Override_Cooking: undefined,
+  /**
+   * electronic items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Electronics = "Elektronik"
+   */
+  CAEC_Override_Electronics: undefined,
+  /** entertainment items */
+  CAEC_Fallback_Entertainment: undefined,
+  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_FireSource: undefined,
+  /**
+   * first aid and medical supplies, bandages, painkillers, antiseptics
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FirstAid = "Peralatan Medis"
+   *   IGUI_perks_Doctor = "Pertolongan pertama"
+   */
+  CAEC_Override_FirstAid: undefined,
+  /**
+   * fishing gear
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Memancing"
+   *   IGUI_perks_Fishing = "Memancing"
+   *   ContextMenu_Fishing = "Memancing"
+   */
+  CAEC_Override_Fishing: undefined,
+  /**
+   * food items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Food = "Makanan"
+   */
+  CAEC_Override_Food: undefined,
+  /**
+   * furniture items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Furniture = "Perabotan"
+   */
+  CAEC_Override_Furniture: undefined,
+  /**
+   * gardening items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Gardening"
+   */
+  CAEC_Override_Gardening: undefined,
+  /**
+   * household items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Household = "Barang Rumahan"
+   */
+  CAEC_Override_Household: undefined,
+  /**
+   * instruments
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Instrument = "Instrumen"
+   */
+  CAEC_Override_Instrument: undefined,
+  /**
+   * miscellaneous junk items, worthless items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Junk = "Sampah"
+   */
+  CAEC_Override_Junk: undefined,
+  /**
+   * items that provide light such as flashlights, lanterns
+   *
+   * found in-game:
+   *   IGUI_ItemCat_LightSource = "Sumber Cahaya"
+   */
+  CAEC_Override_LightSource: undefined,
+  /**
+   * books and printed reading material
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Literature = "Literatur"
+   */
+  CAEC_Override_Literature: undefined,
+  /**
+   * crafting materials and building supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Material = "Material"
+   */
+  CAEC_Override_Material: undefined,
+  /** keepsakes and souvenirs */
+  CAEC_Fallback_Memento: undefined,
+  /**
+   * paint items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Paint = "Cat"
+   */
+  CAEC_Override_Paint: undefined,
+  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_ProtectiveGear: undefined,
+  /**
+   * skill books
+   *
+   * found in-game:
+   *   IGUI_ItemCat_SkillBook = "Buku Keahlian"
+   */
+  CAEC_Override_SkillBook: undefined,
+  /**
+   * sports items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Sports = "Olah-raga"
+   */
+  CAEC_Override_Sports: undefined,
+  /**
+   * tools, such as hammers, wrenches, screwdrivers
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Tool = "Peralatan"
+   */
+  CAEC_Override_Tool: undefined,
+  /**
+   * trapping items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Jebakan"
+   *   IGUI_perks_Trapping = "Menjebak"
+   */
+  CAEC_Override_Trapping: undefined,
+  /**
+   * vehicle maintenance items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_VehicleMaintenance = "Perawatan Kendaraan"
+   */
+  CAEC_Override_VehicleMaintenance: undefined,
+  /**
+   * weapons in general
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Weapon = "Senjata"
+   */
+  CAEC_Override_Weapon: undefined,
+  /**
+   * axe weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Axe = "Kapak"
+   */
+  CAEC_Override_Axe: undefined,
+  /**
+   * long blunt weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blunt = "Tumpul Panjang"
+   */
+  CAEC_Override_Blunt: undefined,
+  /**
+   * long blade weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_LongBlade = "Bilah Panjang"
+   */
+  CAEC_Override_LongBlade: undefined,
+  /**
+   * short blade weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_SmallBlade = "Bilah Pendek"
+   */
+  CAEC_Override_SmallBlade: undefined,
+  /**
+   * short blunt weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_SmallBlunt = "Tumpul Pendek"
+   */
+  CAEC_Override_SmallBlunt: undefined,
+  /**
+   * spear weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Spear = "Tombak"
+   */
+  CAEC_Override_Spear: undefined,
+  /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
+  CAEC_Override_Arms: undefined,
+  /** lower body clothing, pants, shorts, skirts */
+  CAEC_Override_Bottom: undefined,
   /** facewear such as masks, glasses, goggles */
   CAEC_Override_Face: undefined,
   /** shoes, boots, heels, etc. (but not socks) */
@@ -63,30 +305,12 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Neck: undefined,
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: undefined,
-  /** top-level protective equipment category, such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
   /** hosiery and socks */
   CAEC_Override_Socks: undefined,
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
   CAEC_Override_Top: undefined,
   /** undergarments such as underwear, bras, boxers */
   CAEC_Override_Underwear: undefined,
-  /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
-  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
-  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
-  /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
-  /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
-  /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
-  /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: undefined,
   /**
@@ -94,6 +318,7 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Roti"
+   *   ItemName_Base.Bread = "Roti"
    */
   CAEC_Override_Bread: undefined,
   /**
@@ -110,6 +335,7 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Keju"
+   *   ItemName_Base.Cheese = "Keju"
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -195,10 +421,57 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Gula"
+   *   ItemName_Base.Sugar = "Gula"
    */
   CAEC_Override_Sugar: undefined,
   /** vegetables, including leafy greens */
   CAEC_Override_Vegetables: undefined,
+  /** adult-oriented content (hottiez magazines) */
+  CAEC_Override_Adult: undefined,
+  /** informational brochures */
+  CAEC_Fallback_Brochure: undefined,
+  /** comic books */
+  CAEC_Fallback_Comic: undefined,
+  /** consumable reading materials such as crossword and wordsearch magazines */
+  CAEC_Fallback_Consumable: undefined,
+  /** decorative or luxury books */
+  CAEC_Fallback_FancyBook: undefined,
+  /** flyers and handouts */
+  CAEC_Fallback_Flier: undefined,
+  /** hardcover books */
+  CAEC_Fallback_Hardcover: undefined,
+  /**
+   * literature magazines
+   *
+   * found in-game:
+   *   ItemName_Base.Magazine = "Majalah"
+   */
+  CAEC_Override_Magazine: undefined,
+  /**
+   * newspapers
+   *
+   * found in-game:
+   *   ItemName_Base.Newspaper = "Koran"
+   */
+  CAEC_Override_Newspaper: undefined,
+  /** picture books */
+  CAEC_Fallback_PictureBook: undefined,
+  /** recipes, readable items that teach you something */
+  CAEC_Fallback_Recipe: undefined,
+  /** tabletop RPG manuals */
+  CAEC_Fallback_RpgManual: undefined,
+  /** softcover books */
+  CAEC_Fallback_Softcover: undefined,
+  /** firearm category, pistols, rifles, shotguns, etc. */
+  CAEC_Override_Firearm: undefined,
+  /** pistols and handguns */
+  CAEC_Fallback_Handgun: undefined,
+  /** firearm magazines */
+  CAEC_Fallback_Mag: undefined,
+  /** rifles, big firearms */
+  CAEC_Fallback_Rifle: undefined,
+  /** shotguns, rifles that shoot shells */
+  CAEC_Fallback_Shotgun: undefined,
   /** general alcoholic beverages */
   CAEC_Fallback_Alcohol: undefined,
   /**
@@ -212,6 +485,17 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Beverage: undefined,
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: undefined,
+  /**
+   * coffee beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Coffee = "Kopi"
+   *   ItemName_Base.Coffee = "Kopi"
+   *   ItemName_Base.Coffee2 = "Kopi"
+   */
+  CAEC_Override_Coffee: undefined,
+  /** energy drinks or otherwise highly caffeinated soft drinks */
+  CAEC_Override_EnergyDrink: undefined,
   /**
    * fruit juice
    *
@@ -236,8 +520,20 @@ export const ID: ExternalTranslations = {
    *   ContextMenu_FoodType_SoftDrink = "Minuman Bersoda"
    */
   CAEC_Override_SoftDrink: undefined,
-  /** drinking water */
-  CAEC_Fallback_Water: undefined,
+  /**
+   * tea beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Tea = "Teh"
+   */
+  CAEC_Override_Tea: undefined,
+  /**
+   * drinking water
+   *
+   * found in-game:
+   *   ContextMenu_Water = "Air"
+   */
+  CAEC_Override_Water: undefined,
   /**
    * alcoholic wine beverages
    *
@@ -247,56 +543,12 @@ export const ID: ExternalTranslations = {
    *   ItemName_Base.Wine2 = "Anggur Merah"
    */
   CAEC_Override_Wine: undefined,
-  /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
-  /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
-  /** comic books */
-  CAEC_Fallback_Comic: undefined,
-  /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
-  /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
-  /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
-  /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
-  /**
-   * books and printed reading material
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Literature = "Literatur"
-   */
-  CAEC_Override_Literature: undefined,
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Majalah"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Koran"
-   */
-  CAEC_Override_Newspaper: undefined,
-  /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
-  /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
-  /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
-  /**
-   * skill books
-   *
-   * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Buku Keahlian"
-   */
-  CAEC_Override_SkillBook: undefined,
-  /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  /** things in a (small) box, such as boxes of ammo */
+  CAEC_Override_Box: undefined,
+  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
+  CAEC_Override_Bundled: undefined,
+  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
+  CAEC_Override_Carton: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: undefined,
   /**
@@ -312,226 +564,4 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Smoking: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: undefined,
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Kapak"
-   */
-  CAEC_Override_Axe: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Tumpul Panjang"
-   */
-  CAEC_Override_Blunt: undefined,
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Bilah Panjang"
-   */
-  CAEC_Override_LongBlade: undefined,
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Bilah Pendek"
-   */
-  CAEC_Override_SmallBlade: undefined,
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Tumpul Pendek"
-   */
-  CAEC_Override_SmallBlunt: undefined,
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Tombak"
-   */
-  CAEC_Override_Spear: undefined,
-  /**
-   * firearm ammunition
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Ammo = "Amunisi"
-   */
-  CAEC_Override_Ammo: undefined,
-  /** animals */
-  CAEC_Fallback_Animal: undefined,
-  /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
-  /**
-   * character appearance items such as makeup
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Appearance = "Penampilan"
-   */
-  CAEC_Override_Appearance: undefined,
-  /**
-   * camping supplies
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Camping = "Perkemahan"
-   */
-  CAEC_Override_Camping: undefined,
-  /**
-   * maps of locations
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Cartography = "Pemetaan"
-   */
-  CAEC_Override_Cartography: undefined,
-  /**
-   * communication devices such as walkie talkies, radios
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Communications = "Sistem Komunikasi"
-   */
-  CAEC_Override_Communications: undefined,
-  /**
-   * items that can hold other items, such as boxes, bags, and crates
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Container = "Penyimpanan"
-   *   ContextMenu_Container = "Penyimpanan"
-   */
-  CAEC_Override_Container: undefined,
-  /**
-   * cooking items such as pots, pans, utensils
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Cooking = "Memasak"
-   */
-  CAEC_Override_Cooking: undefined,
-  /**
-   * electronic items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Electronics = "Elektronik"
-   */
-  CAEC_Override_Electronics: undefined,
-  /** entertainment items */
-  CAEC_Fallback_Entertainment: undefined,
-  /** sources of fire */
-  CAEC_Fallback_FireSource: undefined,
-  /**
-   * first aid and medical supplies, bandages, painkillers, antiseptics
-   *
-   * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Peralatan Medis"
-   */
-  CAEC_Override_FirstAid: undefined,
-  /**
-   * fishing gear
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Memancing"
-   *   ContextMenu_Fishing = "Memancing"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
-   * any food item
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Food = "Makanan"
-   */
-  CAEC_Override_Food: undefined,
-  /**
-   * furniture items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Furniture = "Perabotan"
-   */
-  CAEC_Override_Furniture: undefined,
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Gardening"
-   */
-  CAEC_Override_Gardening: undefined,
-  /**
-   * household items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Household = "Barang Rumahan"
-   */
-  CAEC_Override_Household: undefined,
-  /**
-   * instruments
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Instrument = "Instrumen"
-   */
-  CAEC_Override_Instrument: undefined,
-  /**
-   * miscellaneous junk items, worthless items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Junk = "Sampah"
-   */
-  CAEC_Override_Junk: undefined,
-  /**
-   * items that provide light such as flashlights, lanterns
-   *
-   * found in-game:
-   *   IGUI_ItemCat_LightSource = "Sumber Cahaya"
-   */
-  CAEC_Override_LightSource: undefined,
-  /**
-   * crafting materials and building supplies
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Material = "Material"
-   */
-  CAEC_Override_Material: undefined,
-  /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
-  /**
-   * paint items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Paint = "Cat"
-   */
-  CAEC_Override_Paint: undefined,
-  /**
-   * sports items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Sports = "Olah-raga"
-   */
-  CAEC_Override_Sports: undefined,
-  /**
-   * tools, such as hammers, wrenches, screwdrivers
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Tool = "Peralatan"
-   */
-  CAEC_Override_Tool: undefined,
-  /**
-   * trapping items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Jebakan"
-   */
-  CAEC_Override_Trapping: undefined,
-  /**
-   * vehicle maintenance items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Perawatan Kendaraan"
-   */
-  CAEC_Override_VehicleMaintenance: undefined,
-  /**
-   * weapons in general
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Weapon = "Senjata"
-   */
-  CAEC_Override_Weapon: undefined,
 };

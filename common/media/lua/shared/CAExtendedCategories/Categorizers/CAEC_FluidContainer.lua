@@ -35,7 +35,7 @@ function FluidContainer:validate(item, instance)
     return true
   end
 
-  self:log("checking tags")
+  self:log("checking tags", Debug.Level.Info)
   return Utils.HasAnyTag(item, self.searchTags)
 end
 
@@ -44,57 +44,86 @@ function FluidContainer:categorize(item, instance)
     return nil, true
   end
 
+  self.verbosity = Debug.Level.Debug
+
   local fluidContainer = instance:getFluidContainer()
 
   if fluidContainer:isEmpty() then
     return "ContainerLiquid", true
   end
 
+  ---@type string|nil
   local category = nil
-  local primaryFluid = fluidContainer:getPrimaryFluid()
-  local fluidType = primaryFluid:getFluidType()
-  local fluidTypeString = primaryFluid:getFluidTypeString()
 
-  if not primaryFluid:isCategory(FluidCategory.Beverage) then
-    return nil, true
+  local fluid = fluidContainer:getPrimaryFluid()
+  local fluidType = fluid:getFluidType()
+  local fluidTypeString = fluid:getFluidTypeString():lower()
+
+  self:log(string.format("-->   %s (%s)", instance:getName(), item:getFullName()), Debug.Level.Info)
+  self:log(string.format("        Fluid: %s", fluid:toString()), Debug.Level.Info)
+  self:log(string.format("        Fluid Type: %s", fluidTypeString), Debug.Level.Info)
+
+  if fluid:isCategory(FluidCategory.Dyes) then
+    return "LiquidDye"
+  elseif fluid:isCategory(FluidCategory.HairDyes) then
+    return "AppearanceOrLiquid"
+  elseif fluid:isCategory(FluidCategory.Fuel) then
+    return "LiquidFuel"
+  elseif fluid:isCategory(FluidCategory.Industrial) then
+    return "LiquidIndustrial"
+  elseif fluid:isCategory(FluidCategory.Poisons) then
+    return "LiquidPoison"
+  elseif fluid:isCategory(FluidCategory.Medical) then
+    return "FirstAidOrLiquid"
+  elseif fluidTypeString == "cookingoil" then
+    return "CookingOrLiquid"
+  elseif fluidTypeString == "cleaningliquid"
+    or fluidTypeString == "bleach" then
+    return "HouseholdOrLiquid"
   end
 
-  if primaryFluid:isCategory(FluidCategory.Water) then
-    category = "BeverageWater";
-  elseif primaryFluid:isCategory(FluidCategory.Alcoholic) then
-    category = "BeverageAlcohol";
+  if fluid:isCategory(FluidCategory.Water) then
+    category = "BeverageWater"
   elseif fluidType:equals(FluidType.CowMilk)
       or fluidType:equals(FluidType.SheepMilk)
       or fluidType:equals(FluidType.AnimalMilk)
+      or fluidTypeString:contains("milk")
   then
-    category = "BeverageMilk";
+    category = "BeverageMilk"
   elseif fluidType:equals(FluidType.Coffee) then
-    category = "BeverageCoffee";
+    category = "BeverageCoffee"
   elseif fluidType:equals(FluidType.Tea)
       or item:hasTag(ItemTag.HERBAL_TEA) then
-    category = "BeverageTea";
-  elseif fluidType:equals(FluidType.Soda)
-      or fluidTypeString:contains("Soda")
+    category = "BeverageTea"
+  elseif fluidType:equals(FluidType.SodaPop)
+      or fluidTypeString:contains("soda")
+      or fluidTypeString:contains("cola")
+      or fluidTypeString:contains("gingerale")
   then
-    category = "BeverageSoftDrink";
+    category = "BeverageSoftDrink"
   elseif fluidType:equals(FluidType.SpiffoJuice)
-      or fluidTypeString:contains("Juice")
+      or fluidTypeString:contains("juice")
   then
-    category = "BeverageJuice";
+    category = "BeverageJuice"
   elseif fluidType:equals(FluidType.Beer) then
-    category = "BeverageBeer";
+    category = "BeverageBeer"
   elseif fluidType:equals(FluidType.Wine) then
-    category = "BeverageWine";
+    category = "BeverageWine"
+  elseif fluid:isCategory(FluidCategory.Alcoholic) then
+    category = "BeverageAlcohol"
+  elseif fluidTypeString:contains( --[[Sapph's Cooking]] "energydrink") then
+    category = "BeverageEnergyDrink"
   else
-    category = "Beverage";
+    category = "Beverage"
   end
 
   if category
       and fluidContainer:isMixture()
       and fluidContainer:isCategory(FluidCategory.Alcoholic) then
-    category = "BeverageCocktail";
+    category = "BeverageCocktail"
   end
 
   return category, true
 end
+
 return FluidContainer

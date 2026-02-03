@@ -69,7 +69,7 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
 
     langFile.add(new Ts.NamedImport("ExternalTranslations", "../types", true)).newline();
 
-    langFile.add(`/**\n * ${LANGUAGE_NAMES[language] ?? language}\n  * ${expl.join("\n  * ")}\n */`);
+    langFile.add(`/**\n * ${LANGUAGE_NAMES[language] ?? language}\n  * ${expl.join("\n * ")}\n */`);
 
     const obj = new Ts.Object(language.toUpperCase()).export().withType("ExternalTranslations");
 
@@ -129,6 +129,8 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
       resolvedKey = resolveKey(priority, key);
 
       if (group !== prev) {
+        template.add(` `);
+        template.add(`  /* ===== ${group} ===== */`);
         template.add(` `);
       }
 

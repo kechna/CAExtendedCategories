@@ -1,5 +1,5 @@
 import type { SUPPORTED_LANGUAGES } from "./constants.ts";
-import type { Language, RequireOnly } from "@pz/console";
+import type { Language, RequireOnly, MaybeReadonly } from "@pz/console";
 
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
@@ -14,7 +14,7 @@ export type TranslationsDict = Record<`CAEC_Override_${string}` | `CAEC_Fallback
 
 type SubCategorySearcher = {
   prefix?: string;
-  categories: string[];
+  categories: MaybeReadonly<string[]>;
   searchKeys?: string[];
   separator?: string;
 };

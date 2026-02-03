@@ -1,4 +1,4 @@
-import { type FullModContext, Language } from "@pz/console";
+import type { FullModContext, Language } from "@pz/console";
 import type { CAECTranslations } from "../types.ts";
 import { getGameTranslations } from "./getGameTranslations.ts";
 import { mergeAllTranslations } from "./mergeAllTranslations.ts";
@@ -15,10 +15,14 @@ export const useTranslations = async (context: FullModContext, languages: readon
     {} as Record<Language, CAECTranslations>,
   );
 
-  const save = (language: Language, key: string, value: string): void => {
+  const save = (language: Language, key: string, value: string, override = false): void => {
     const fullKey = `IGUI_ItemCat_${key}`;
 
     if (existingTranslations[fullKey]?.[language]) {
+      if (override) {
+        context.logger.debug(`[${language}] Overriding existing translation: ${fullKey}`);
+      }
+
       return;
     }
 
@@ -26,14 +30,8 @@ export const useTranslations = async (context: FullModContext, languages: readon
   };
 
   const t = (searchKeys: string[], key: string, language: Language): TranslationDef[] => {
-    /**
-     * Polish and Czech game translations' encoding is messed up
-     */
-    const allSearchKeys = [Language.PL, Language.CS].includes(language)
-      ? ["CAEC_Override_%s", "CAEC_Fallback_%s", ...searchKeys]
-      : ["CAEC_Override_%s", ...searchKeys, "CAEC_Fallback_%s"];
-
     const found: TranslationDef[] = [];
+    const allSearchKeys = ["CAEC_Override_%s", ...searchKeys, "CAEC_Fallback_%s"];
 
     for (const searchKey of [...new Set(allSearchKeys)]) {
       const k = searchKey.replace("%s", key);

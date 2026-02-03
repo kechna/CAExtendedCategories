@@ -17,19 +17,130 @@ import type { ExternalTranslations } from "../types";
  * Which translations from the game are searched for differs for each individual key.
  */
 export const PT: ExternalTranslations = {
-  /** top-level accessories category, such as watches, necklaces, belts, gloves */
+  /** accessories such as watches, necklaces, belts, gloves */
   CAEC_Fallback_Accessory: undefined,
-  /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
-  /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  /** firearm ammunition */
+  CAEC_Fallback_Ammo: undefined,
+  /** animals */
+  CAEC_Fallback_Animal: undefined,
+  /** animal parts, bones, sinew, hides */
+  CAEC_Fallback_AnimalPart: undefined,
+  /** character appearance items such as makeup */
+  CAEC_Fallback_Appearance: undefined,
+  /** camping supplies */
+  CAEC_Fallback_Camping: undefined,
+  /** maps of locations */
+  CAEC_Fallback_Cartography: undefined,
   /**
-   * top-level clothing category, such as shirts, pants, dresses
+   * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Roupa"
    */
   CAEC_Override_Clothing: undefined,
+  /** communication devices such as walkie talkies, radios */
+  CAEC_Fallback_Communications: undefined,
+  /**
+   * items that can hold other items, such as boxes, bags, and crates
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Container = "Contentor"
+   */
+  CAEC_Override_Container: undefined,
+  /**
+   * cooking items such as pots, pans, utensils
+   *
+   * found in-game:
+   *   IGUI_perks_Cooking = "Culinária"
+   */
+  CAEC_Override_Cooking: undefined,
+  /** electronic items */
+  CAEC_Fallback_Electronics: undefined,
+  /** entertainment items */
+  CAEC_Fallback_Entertainment: undefined,
+  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_FireSource: undefined,
+  /** first aid and medical supplies, bandages, painkillers, antiseptics */
+  CAEC_Fallback_FirstAid: undefined,
+  /**
+   * fishing gear
+   *
+   * found in-game:
+   *   IGUI_perks_Fishing = "Pesca"
+   */
+  CAEC_Override_Fishing: undefined,
+  /**
+   * food items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Food = "Comida"
+   */
+  CAEC_Override_Food: undefined,
+  /** furniture items */
+  CAEC_Fallback_Furniture: undefined,
+  /** gardening items */
+  CAEC_Fallback_Gardening: undefined,
+  /** household items */
+  CAEC_Fallback_Household: undefined,
+  /** instruments */
+  CAEC_Fallback_Instrument: undefined,
+  /** miscellaneous junk items, worthless items */
+  CAEC_Fallback_Junk: undefined,
+  /** items that provide light such as flashlights, lanterns */
+  CAEC_Fallback_LightSource: undefined,
+  /**
+   * books and printed reading material
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Literature = "Literatura"
+   */
+  CAEC_Override_Literature: undefined,
+  /** crafting materials and building supplies */
+  CAEC_Fallback_Material: undefined,
+  /** keepsakes and souvenirs */
+  CAEC_Fallback_Memento: undefined,
+  /** paint items */
+  CAEC_Fallback_Paint: undefined,
+  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_ProtectiveGear: undefined,
+  /** skill books */
+  CAEC_Fallback_SkillBook: undefined,
+  /** sports items */
+  CAEC_Fallback_Sports: undefined,
+  /** tools, such as hammers, wrenches, screwdrivers */
+  CAEC_Fallback_Tool: undefined,
+  /** trapping items */
+  CAEC_Fallback_Trapping: undefined,
+  /** vehicle maintenance items */
+  CAEC_Fallback_VehicleMaintenance: undefined,
+  /**
+   * weapons in general
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Weapon = "Arma"
+   */
+  CAEC_Override_Weapon: undefined,
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: undefined,
+  /**
+   * long blunt weapon skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blunt = "Armas contundentes"
+   */
+  CAEC_Override_Blunt: undefined,
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: undefined,
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: undefined,
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: undefined,
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: undefined,
+  /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
+  CAEC_Override_Arms: undefined,
+  /** lower body clothing, pants, shorts, skirts */
+  CAEC_Override_Bottom: undefined,
   /** facewear such as masks, glasses, goggles */
   CAEC_Override_Face: undefined,
   /** shoes, boots, heels, etc. (but not socks) */
@@ -58,40 +169,32 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Neck: undefined,
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: undefined,
-  /** top-level protective equipment category, such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
   /** hosiery and socks */
   CAEC_Override_Socks: undefined,
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
   CAEC_Override_Top: undefined,
   /** undergarments such as underwear, bras, boxers */
   CAEC_Override_Underwear: undefined,
-  /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
-  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
-  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
-  /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
-  /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
-  /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
-  /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: undefined,
-  /** baked bread products */
-  CAEC_Fallback_Bread: undefined,
+  /**
+   * baked bread products
+   *
+   * found in-game:
+   *   ItemName_Base.Bread = "Pão"
+   */
+  CAEC_Override_Bread: undefined,
   /** sweets and candies */
   CAEC_Override_Candy: undefined,
   /** canned food items */
   CAEC_Override_Canned: undefined,
-  /** dairy cheese products */
-  CAEC_Fallback_Cheese: undefined,
+  /**
+   * dairy cheese products
+   *
+   * found in-game:
+   *   ItemName_Base.Cheese = "Queijo"
+   */
+  CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: undefined,
   /** fresh fruit, including berries and citrus */
@@ -130,35 +233,15 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Staple: undefined,
   /** items used to make cooking stock or broth, such as bouillon cubes */
   CAEC_Fallback_Stock: undefined,
-  /** sugar and sweeteners */
-  CAEC_Fallback_Sugar: undefined,
-  /** vegetables, including leafy greens */
-  CAEC_Override_Vegetables: undefined,
-  /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
-  /** alcoholic beer beverages */
-  CAEC_Fallback_Beer: undefined,
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
-  /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
-  /** fruit juice */
-  CAEC_Fallback_Juice: undefined,
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
   /**
-   * dairy milk
+   * sugar and sweeteners
    *
    * found in-game:
-   *   ItemName_Base.Milk = "Leite"
+   *   ItemName_Base.Sugar = "Açúcar"
    */
-  CAEC_Override_Milk: undefined,
-  /** carbonated soft drinks */
-  CAEC_Override_SoftDrink: undefined,
-  /** drinking water */
-  CAEC_Fallback_Water: undefined,
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: undefined,
+  CAEC_Override_Sugar: undefined,
+  /** vegetables, including leafy greens */
+  CAEC_Override_Vegetables: undefined,
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: undefined,
   /** informational brochures */
@@ -173,13 +256,6 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Flier: undefined,
   /** hardcover books */
   CAEC_Fallback_Hardcover: undefined,
-  /**
-   * books and printed reading material
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Literature = "Literatura"
-   */
-  CAEC_Override_Literature: undefined,
   /**
    * literature magazines
    *
@@ -200,10 +276,66 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Recipe: undefined,
   /** tabletop RPG manuals */
   CAEC_Fallback_RpgManual: undefined,
-  /** skill books */
-  CAEC_Fallback_SkillBook: undefined,
   /** softcover books */
   CAEC_Fallback_Softcover: undefined,
+  /** firearm category, pistols, rifles, shotguns, etc. */
+  CAEC_Override_Firearm: undefined,
+  /** pistols and handguns */
+  CAEC_Fallback_Handgun: undefined,
+  /** firearm magazines */
+  CAEC_Fallback_Mag: undefined,
+  /** rifles, big firearms */
+  CAEC_Fallback_Rifle: undefined,
+  /** shotguns, rifles that shoot shells */
+  CAEC_Fallback_Shotgun: undefined,
+  /** general alcoholic beverages */
+  CAEC_Fallback_Alcohol: undefined,
+  /** alcoholic beer beverages */
+  CAEC_Fallback_Beer: undefined,
+  /** top-level category for drinkable liquids */
+  CAEC_Override_Beverage: undefined,
+  /** mixed alcoholic drinks */
+  CAEC_Override_Cocktail: undefined,
+  /**
+   * coffee beverage
+   *
+   * found in-game:
+   *   ItemName_Base.Coffee = "Café em pó"
+   *   ItemName_Base.Coffee2 = "Café em pó"
+   */
+  CAEC_Override_Coffee: undefined,
+  /** energy drinks or otherwise highly caffeinated soft drinks */
+  CAEC_Override_EnergyDrink: undefined,
+  /** fruit juice */
+  CAEC_Fallback_Juice: undefined,
+  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
+  CAEC_Override_Liquid: undefined,
+  /**
+   * dairy milk
+   *
+   * found in-game:
+   *   ItemName_Base.Milk = "Leite"
+   */
+  CAEC_Override_Milk: undefined,
+  /** carbonated soft drinks */
+  CAEC_Override_SoftDrink: undefined,
+  /** tea beverage */
+  CAEC_Override_Tea: undefined,
+  /**
+   * drinking water
+   *
+   * found in-game:
+   *   ContextMenu_Water = "Água"
+   */
+  CAEC_Override_Water: undefined,
+  /** alcoholic wine beverages */
+  CAEC_Override_Wine: undefined,
+  /** things in a (small) box, such as boxes of ammo */
+  CAEC_Override_Box: undefined,
+  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
+  CAEC_Override_Bundled: undefined,
+  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
+  CAEC_Override_Carton: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: undefined,
   /** ring or bundle of keys */
@@ -214,94 +346,4 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Smoking: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: undefined,
-  /** axe weapon skill */
-  CAEC_Fallback_Axe: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Armas contundentes"
-   */
-  CAEC_Override_Blunt: undefined,
-  /** long blade weapon skill */
-  CAEC_Fallback_LongBlade: undefined,
-  /** short blade weapon skill */
-  CAEC_Fallback_SmallBlade: undefined,
-  /** short blunt weapon skill */
-  CAEC_Fallback_SmallBlunt: undefined,
-  /** spear weapon skill */
-  CAEC_Fallback_Spear: undefined,
-  /** firearm ammunition */
-  CAEC_Fallback_Ammo: undefined,
-  /** animals */
-  CAEC_Fallback_Animal: undefined,
-  /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
-  /** character appearance items such as makeup */
-  CAEC_Fallback_Appearance: undefined,
-  /** camping supplies */
-  CAEC_Fallback_Camping: undefined,
-  /** maps of locations */
-  CAEC_Fallback_Cartography: undefined,
-  /** communication devices such as walkie talkies, radios */
-  CAEC_Fallback_Communications: undefined,
-  /**
-   * items that can hold other items, such as boxes, bags, and crates
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Container = "Contentor"
-   */
-  CAEC_Override_Container: undefined,
-  /** cooking items such as pots, pans, utensils */
-  CAEC_Fallback_Cooking: undefined,
-  /** electronic items */
-  CAEC_Fallback_Electronics: undefined,
-  /** entertainment items */
-  CAEC_Fallback_Entertainment: undefined,
-  /** sources of fire */
-  CAEC_Fallback_FireSource: undefined,
-  /** first aid and medical supplies, bandages, painkillers, antiseptics */
-  CAEC_Fallback_FirstAid: undefined,
-  /** fishing gear */
-  CAEC_Fallback_Fishing: undefined,
-  /**
-   * any food item
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Food = "Comida"
-   */
-  CAEC_Override_Food: undefined,
-  /** furniture items */
-  CAEC_Fallback_Furniture: undefined,
-  /** gardening items */
-  CAEC_Fallback_Gardening: undefined,
-  /** household items */
-  CAEC_Fallback_Household: undefined,
-  /** instruments */
-  CAEC_Fallback_Instrument: undefined,
-  /** miscellaneous junk items, worthless items */
-  CAEC_Fallback_Junk: undefined,
-  /** items that provide light such as flashlights, lanterns */
-  CAEC_Fallback_LightSource: undefined,
-  /** crafting materials and building supplies */
-  CAEC_Fallback_Material: undefined,
-  /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
-  /** paint items */
-  CAEC_Fallback_Paint: undefined,
-  /** sports items */
-  CAEC_Fallback_Sports: undefined,
-  /** tools, such as hammers, wrenches, screwdrivers */
-  CAEC_Fallback_Tool: undefined,
-  /** trapping items */
-  CAEC_Fallback_Trapping: undefined,
-  /** vehicle maintenance items */
-  CAEC_Fallback_VehicleMaintenance: undefined,
-  /**
-   * weapons in general
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Weapon = "Arma"
-   */
-  CAEC_Override_Weapon: undefined,
 };

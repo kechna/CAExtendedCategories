@@ -25,6 +25,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Cheese}
   | CAEC_Fallback_${Clothing}
   | CAEC_Fallback_${Cocktail}
+  | CAEC_Fallback_${Coffee}
   | CAEC_Fallback_${Comic}
   | CAEC_Fallback_${Communications}
   | CAEC_Fallback_${Consumable}
@@ -33,6 +34,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Crafted}
   | CAEC_Fallback_${Dish}
   | CAEC_Fallback_${Electronics}
+  | CAEC_Fallback_${EnergyDrink}
   | CAEC_Fallback_${Entertainment}
   | CAEC_Fallback_${Face}
   | CAEC_Fallback_${FancyBook}
@@ -105,6 +107,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Staple}
   | CAEC_Fallback_${Stock}
   | CAEC_Fallback_${Sugar}
+  | CAEC_Fallback_${Tea}
   | CAEC_Fallback_${Tool}
   | CAEC_Fallback_${Top}
   | CAEC_Fallback_${Trapping}
@@ -141,6 +144,7 @@ export type TranslationKeys =
   | CAEC_Override_${Cheese}
   | CAEC_Override_${Clothing}
   | CAEC_Override_${Cocktail}
+  | CAEC_Override_${Coffee}
   | CAEC_Override_${Comic}
   | CAEC_Override_${Communications}
   | CAEC_Override_${Consumable}
@@ -149,6 +153,7 @@ export type TranslationKeys =
   | CAEC_Override_${Crafted}
   | CAEC_Override_${Dish}
   | CAEC_Override_${Electronics}
+  | CAEC_Override_${EnergyDrink}
   | CAEC_Override_${Entertainment}
   | CAEC_Override_${Face}
   | CAEC_Override_${FancyBook}
@@ -221,6 +226,7 @@ export type TranslationKeys =
   | CAEC_Override_${Staple}
   | CAEC_Override_${Stock}
   | CAEC_Override_${Sugar}
+  | CAEC_Override_${Tea}
   | CAEC_Override_${Tool}
   | CAEC_Override_${Top}
   | CAEC_Override_${Trapping}

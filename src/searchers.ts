@@ -1,5 +1,5 @@
 import type { Searcher } from "./types.ts";
-import { BaseGameCategory, BOXABLE_CATEGORIES } from "./zomboid/categories.ts";
+import { PzCategory, BOXABLE_CATEGORIES, USED_CATEGORIES } from "./zomboid/categories.ts";
 import { getFoodTypes } from "./getFoodTypes.ts";
 
 const foodTypes = getFoodTypes();
@@ -8,16 +8,19 @@ export const searchers: Searcher[] = [
   { categories: ["Smoking"] },
 
   {
-    categories: Object.values(BaseGameCategory),
-    searchKeys: ["IGUI_ItemCat_%s"],
+    categories: USED_CATEGORIES,
+    searchKeys: ["IGUI_ItemCat_%s", "IGUI_perks_%s", "ItemName_Base.%s"],
   },
+
+  { categories: ["FirstAid"], searchKeys: ["IGUI_perks_Doctor"] },
+
   {
     categories: ["KeyRing"],
     searchKeys: ["ItemName_Base.%s"],
   },
 
   {
-    prefix: BaseGameCategory.Clothing,
+    prefix: PzCategory.Clothing,
     categories: ["FullBody", "Top", "Bottom", "Footwear", "Socks", "Head", "Hands", "Underwear", "Outerwear"],
     searchKeys: [
       "UI_ClothingType_%s",
@@ -25,6 +28,7 @@ export const searchers: Searcher[] = [
       "IGUI_ItemCat_%s",
       "UI_ClothingType_%s1",
       "UI_ClothingType_%s2",
+      "DisplayName_%s",
     ],
   },
 
@@ -41,7 +45,7 @@ export const searchers: Searcher[] = [
   },
 
   {
-    prefix: BaseGameCategory.ProtectiveGear,
+    prefix: PzCategory.ProtectiveGear,
     categories: [
       "FullBody",
       "Top",
@@ -67,31 +71,39 @@ export const searchers: Searcher[] = [
   },
 
   {
-    prefix: BaseGameCategory.Food,
+    prefix: PzCategory.Food,
     categories: [...foodTypes, "Perishable"],
-    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s"],
+    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"],
   },
 
   {
     prefix: "FoodPerishable",
-    categories: foodTypes,
-    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s"],
+    categories: [...foodTypes, "Box", "Carton"],
+    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"],
   },
 
   {
     prefix: "Beverage",
-    categories: ["Alcohol", "Beer", "Cocktail", "Coffee", "Juice", "Milk", "SoftDrink", "Tea", "Water", "Wine"],
+    categories: [
+      "Alcohol",
+      "Beer",
+      "Cocktail",
+      "Coffee",
+      "EnergyDrink",
+      "Juice",
+      "Milk",
+      "SoftDrink",
+      "Tea",
+      "Water",
+      "Wine",
+    ],
     searchKeys: [
       "Fluid_Name_%s",
       "Fluid_Category_%s",
       "ContextMenu_FoodType_%s",
+      "ContextMenu_%s",
       "ItemName_Base.%s",
       "ItemName_Base.%s2",
-      "ContextMenu_EvolvedRecipe_%s",
-      "ContextMenu_EvolvedRecipe_%s2",
-      "ContextMenu_EvolvedRecipe_%s3",
-      "ContextMenu_EvolvedRecipe_%s4",
-      "ContextMenu_%s4",
     ],
   },
   {
@@ -100,7 +112,7 @@ export const searchers: Searcher[] = [
   },
 
   {
-    prefix: BaseGameCategory.Ammo,
+    prefix: PzCategory.Ammo,
     categories: ["Box", "Carton", "Mag"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
@@ -114,7 +126,7 @@ export const searchers: Searcher[] = [
   }),
 
   {
-    prefix: BaseGameCategory.Material,
+    prefix: PzCategory.Material,
     categories: ["Bundled"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },

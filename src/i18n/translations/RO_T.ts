@@ -17,14 +17,100 @@ import type { ExternalTranslations } from "../types";
  * Which translations from the game are searched for differs for each individual key.
  */
 export const RO: ExternalTranslations = {
-  /** top-level accessories category, such as watches, necklaces, belts, gloves */
+  /** accessories such as watches, necklaces, belts, gloves */
   CAEC_Fallback_Accessory: "Accesoriu",
+  /** firearm ammunition */
+  CAEC_Fallback_Ammo: "Muniție",
+  /** animals */
+  CAEC_Fallback_Animal: "Animal",
+  /** animal parts, bones, sinew, hides */
+  CAEC_Fallback_AnimalPart: "Parte de animal",
+  /** character appearance items such as makeup */
+  CAEC_Fallback_Appearance: "Aspect",
+  /** camping supplies */
+  CAEC_Fallback_Camping: "Camping",
+  /** maps of locations */
+  CAEC_Fallback_Cartography: "Cartografie",
+  /** clothing such as shirts, pants, dresses */
+  CAEC_Fallback_Clothing: "Îmbrăcăminte",
+  /** communication devices such as walkie talkies, radios */
+  CAEC_Fallback_Communications: "Comunicații",
+  /**
+   * items that can hold other items, such as boxes, bags, and crates
+   *
+   * found in-game:
+   *   ContextMenu_Container = "Containere"
+   */
+  CAEC_Fallback_Container: "Containere",
+  /** cooking items such as pots, pans, utensils */
+  CAEC_Fallback_Cooking: "Gătit",
+  /** electronic items */
+  CAEC_Fallback_Electronics: "Electronice",
+  /** entertainment items */
+  CAEC_Fallback_Entertainment: "Divertisment",
+  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_FireSource: "Sursă de foc",
+  /** first aid and medical supplies, bandages, painkillers, antiseptics */
+  CAEC_Fallback_FirstAid: "Primul ajutor",
+  /**
+   * fishing gear
+   *
+   * found in-game:
+   *   ContextMenu_Fishing = "Pescuit"
+   */
+  CAEC_Fallback_Fishing: "Pescuit",
+  /** food items */
+  CAEC_Fallback_Food: "Mâncare",
+  /** furniture items */
+  CAEC_Fallback_Furniture: "Mobilier",
+  /** gardening items */
+  CAEC_Fallback_Gardening: "Grădinărit",
+  /** household items */
+  CAEC_Fallback_Household: "Gospodărie",
+  /** instruments */
+  CAEC_Fallback_Instrument: "Instrument",
+  /** miscellaneous junk items, worthless items */
+  CAEC_Fallback_Junk: "Deșeuri",
+  /** items that provide light such as flashlights, lanterns */
+  CAEC_Fallback_LightSource: "Sursă de lumină",
+  /** books and printed reading material */
+  CAEC_Fallback_Literature: "Literatură",
+  /** crafting materials and building supplies */
+  CAEC_Fallback_Material: "Materiale",
+  /** keepsakes and souvenirs */
+  CAEC_Fallback_Memento: "Suvenir",
+  /** paint items */
+  CAEC_Fallback_Paint: "Vopsea",
+  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_ProtectiveGear: "Echipament de protecție",
+  /** skill books */
+  CAEC_Fallback_SkillBook: "Carte de abilități",
+  /** sports items */
+  CAEC_Fallback_Sports: "Sport",
+  /** tools, such as hammers, wrenches, screwdrivers */
+  CAEC_Fallback_Tool: "Unealtă",
+  /** trapping items */
+  CAEC_Fallback_Trapping: "Capcane",
+  /** vehicle maintenance items */
+  CAEC_Fallback_VehicleMaintenance: "Întreținere vehicule",
+  /** weapons in general */
+  CAEC_Fallback_Weapon: "Armă",
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: "Topor",
+  /** long blunt weapon skill */
+  CAEC_Fallback_Blunt: "Contondent",
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: "Lamă lungă",
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: "Lamă scurtă",
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: "Contondent scurt",
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: "Suliță",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Brațe",
   /** lower body clothing, pants, shorts, skirts */
   CAEC_Override_Bottom: "Partea de jos",
-  /** top-level clothing category, such as shirts, pants, dresses */
-  CAEC_Fallback_Clothing: "Îmbrăcăminte",
   /** facewear such as masks, glasses, goggles */
   CAEC_Override_Face: "Față",
   /** shoes, boots, heels, etc. (but not socks) */
@@ -43,30 +129,12 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Neck: "Gât",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Îmbrăcăminte de exterior",
-  /** top-level protective equipment category, such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: "Echipament de protecție",
   /** hosiery and socks */
   CAEC_Override_Socks: "Șosete",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
   CAEC_Override_Top: "Partea superioară",
   /** undergarments such as underwear, bras, boxers */
   CAEC_Override_Underwear: "Lenjerie",
-  /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: "Cutie",
-  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: "Legat",
-  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: "Carton",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Armă de foc",
-  /** pistols and handguns */
-  CAEC_Fallback_Handgun: "Pistol",
-  /** firearm magazines */
-  CAEC_Fallback_Mag: "Încărcător",
-  /** rifles, big firearms */
-  CAEC_Fallback_Rifle: "Pușcă",
-  /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: "Pușcă de vânătoare",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Coacere",
   /** baked bread products */
@@ -129,26 +197,6 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Sugar: "Zahăr",
   /** vegetables, including leafy greens */
   CAEC_Override_Vegetables: "Legume",
-  /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: "Alcool",
-  /** alcoholic beer beverages */
-  CAEC_Fallback_Beer: "Bere",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Băutură",
-  /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: "Cocktail",
-  /** fruit juice */
-  CAEC_Fallback_Juice: "Suc",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Lichid",
-  /** dairy milk */
-  CAEC_Fallback_Milk: "Lapte",
-  /** carbonated soft drinks */
-  CAEC_Override_SoftDrink: "Băutură carbogazoasă",
-  /** drinking water */
-  CAEC_Fallback_Water: "Apă",
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: "Vin",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adult",
   /** informational brochures */
@@ -163,8 +211,6 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Flier: "Fluturaș",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Copertă tare",
-  /** books and printed reading material */
-  CAEC_Fallback_Literature: "Literatură",
   /** literature magazines */
   CAEC_Fallback_Magazine: "Revistă",
   /** newspapers */
@@ -175,10 +221,65 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Recipe: "Rețetă",
   /** tabletop RPG manuals */
   CAEC_Fallback_RpgManual: "Manual de RPG",
-  /** skill books */
-  CAEC_Fallback_SkillBook: "Carte de abilități",
   /** softcover books */
   CAEC_Fallback_Softcover: "Copertă moale",
+  /** firearm category, pistols, rifles, shotguns, etc. */
+  CAEC_Override_Firearm: "Armă de foc",
+  /** pistols and handguns */
+  CAEC_Fallback_Handgun: "Pistol",
+  /** firearm magazines */
+  CAEC_Fallback_Mag: "Încărcător",
+  /** rifles, big firearms */
+  CAEC_Fallback_Rifle: "Pușcă",
+  /** shotguns, rifles that shoot shells */
+  CAEC_Fallback_Shotgun: "Pușcă de vânătoare",
+  /** general alcoholic beverages */
+  CAEC_Fallback_Alcohol: "Alcool",
+  /** alcoholic beer beverages */
+  CAEC_Fallback_Beer: "Bere",
+  /** top-level category for drinkable liquids */
+  CAEC_Override_Beverage: "Băutură",
+  /** mixed alcoholic drinks */
+  CAEC_Override_Cocktail: "Cocktail",
+  /**
+   * coffee beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Coffee = "Cafea"
+   */
+  CAEC_Override_Coffee: undefined,
+  /** energy drinks or otherwise highly caffeinated soft drinks */
+  CAEC_Override_EnergyDrink: "Energizant",
+  /** fruit juice */
+  CAEC_Fallback_Juice: "Suc",
+  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
+  CAEC_Override_Liquid: "Lichid",
+  /** dairy milk */
+  CAEC_Fallback_Milk: "Lapte",
+  /** carbonated soft drinks */
+  CAEC_Override_SoftDrink: "Băutură carbogazoasă",
+  /**
+   * tea beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Tea = "Ceai"
+   */
+  CAEC_Override_Tea: undefined,
+  /**
+   * drinking water
+   *
+   * found in-game:
+   *   ContextMenu_Water = "Apă"
+   */
+  CAEC_Fallback_Water: "Apă",
+  /** alcoholic wine beverages */
+  CAEC_Override_Wine: "Vin",
+  /** things in a (small) box, such as boxes of ammo */
+  CAEC_Override_Box: "Cutie",
+  /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
+  CAEC_Override_Bundled: "Legat",
+  /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
+  CAEC_Override_Carton: "Carton",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artizanal",
   /** ring or bundle of keys */
@@ -189,84 +290,4 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Smoking: "Fumat",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Rucsacuri",
-  /** axe weapon skill */
-  CAEC_Fallback_Axe: "Topor",
-  /** long blunt weapon skill */
-  CAEC_Fallback_Blunt: "Contondent",
-  /** long blade weapon skill */
-  CAEC_Fallback_LongBlade: "Lamă lungă",
-  /** short blade weapon skill */
-  CAEC_Fallback_SmallBlade: "Lamă scurtă",
-  /** short blunt weapon skill */
-  CAEC_Fallback_SmallBlunt: "Contondent scurt",
-  /** spear weapon skill */
-  CAEC_Fallback_Spear: "Suliță",
-  /** firearm ammunition */
-  CAEC_Fallback_Ammo: "Muniție",
-  /** animals */
-  CAEC_Fallback_Animal: "Animal",
-  /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: "Parte de animal",
-  /** character appearance items such as makeup */
-  CAEC_Fallback_Appearance: "Aspect",
-  /** camping supplies */
-  CAEC_Fallback_Camping: "Camping",
-  /** maps of locations */
-  CAEC_Fallback_Cartography: "Cartografie",
-  /** communication devices such as walkie talkies, radios */
-  CAEC_Fallback_Communications: "Comunicații",
-  /**
-   * items that can hold other items, such as boxes, bags, and crates
-   *
-   * found in-game:
-   *   ContextMenu_Container = "Containere"
-   */
-  CAEC_Fallback_Container: "Containere",
-  /** cooking items such as pots, pans, utensils */
-  CAEC_Fallback_Cooking: "Gătit",
-  /** electronic items */
-  CAEC_Fallback_Electronics: "Electronice",
-  /** entertainment items */
-  CAEC_Fallback_Entertainment: "Divertisment",
-  /** sources of fire */
-  CAEC_Fallback_FireSource: "Sursă de foc",
-  /** first aid and medical supplies, bandages, painkillers, antiseptics */
-  CAEC_Fallback_FirstAid: "Primul ajutor",
-  /**
-   * fishing gear
-   *
-   * found in-game:
-   *   ContextMenu_Fishing = "Pescuit"
-   */
-  CAEC_Fallback_Fishing: "Pescuit",
-  /** any food item */
-  CAEC_Fallback_Food: "Mâncare",
-  /** furniture items */
-  CAEC_Fallback_Furniture: "Mobilier",
-  /** gardening items */
-  CAEC_Fallback_Gardening: "Grădinărit",
-  /** household items */
-  CAEC_Fallback_Household: "Gospodărie",
-  /** instruments */
-  CAEC_Fallback_Instrument: "Instrument",
-  /** miscellaneous junk items, worthless items */
-  CAEC_Fallback_Junk: "Deșeuri",
-  /** items that provide light such as flashlights, lanterns */
-  CAEC_Fallback_LightSource: "Sursă de lumină",
-  /** crafting materials and building supplies */
-  CAEC_Fallback_Material: "Materiale",
-  /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: "Suvenir",
-  /** paint items */
-  CAEC_Fallback_Paint: "Vopsea",
-  /** sports items */
-  CAEC_Fallback_Sports: "Sport",
-  /** tools, such as hammers, wrenches, screwdrivers */
-  CAEC_Fallback_Tool: "Unealtă",
-  /** trapping items */
-  CAEC_Fallback_Trapping: "Capcane",
-  /** vehicle maintenance items */
-  CAEC_Fallback_VehicleMaintenance: "Întreținere vehicule",
-  /** weapons in general */
-  CAEC_Fallback_Weapon: "Armă",
 };

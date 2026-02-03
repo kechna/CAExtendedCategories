@@ -1,3 +1,5 @@
+import { PzCategory, type USED_CATEGORIES } from "./zomboid/categories.ts";
+
 const A = "override";
 const Z = "fallback";
 
@@ -11,10 +13,56 @@ const LITERATURE = "literature";
 const MISC = "misc";
 const SKILLS = "skills";
 
-export const TRANSLATIONS_ARR: readonly [string, string, string, "override" | "fallback"][] = [
-  [APPAREL, "Accessory", "top-level accessories category, such as watches, necklaces, belts, gloves", Z],
-  [APPAREL, "Clothing", "top-level clothing category, such as shirts, pants, dresses", Z],
-  [APPAREL, "ProtectiveGear", "top-level protective equipment category, such as body armor, helmets, knee pads", Z],
+const BASE_CATEGORIES: Record<(typeof USED_CATEGORIES)[number], string> = {
+  [PzCategory.Accessory]: "accessories such as watches, necklaces, belts, gloves",
+  [PzCategory.Ammo]: "firearm ammunition",
+  [PzCategory.AnimalPart]: "animal parts, bones, sinew, hides",
+  [PzCategory.Animal]: "animals",
+  [PzCategory.Appearance]: "character appearance items such as makeup",
+  [PzCategory.Camping]: "camping supplies",
+  [PzCategory.Cartography]: "maps of locations",
+  [PzCategory.Clothing]: "clothing such as shirts, pants, dresses",
+  [PzCategory.Communications]: "communication devices such as walkie talkies, radios",
+  [PzCategory.Container]: "items that can hold other items, such as boxes, bags, and crates",
+  [PzCategory.Cooking]: "cooking items such as pots, pans, utensils",
+  [PzCategory.Electronics]: "electronic items",
+  [PzCategory.Entertainment]: "entertainment items",
+  [PzCategory.FireSource]: "sources of fire such as matches and lighters",
+  [PzCategory.FirstAid]: "first aid and medical supplies, bandages, painkillers, antiseptics",
+  [PzCategory.Fishing]: "fishing gear",
+  [PzCategory.Food]: "food items",
+  [PzCategory.Furniture]: "furniture items",
+  [PzCategory.Gardening]: "gardening items",
+  [PzCategory.Household]: "household items",
+  [PzCategory.Instrument]: "instruments",
+  [PzCategory.Junk]: "miscellaneous junk items, worthless items",
+  [PzCategory.LightSource]: "items that provide light such as flashlights, lanterns",
+  [PzCategory.Literature]: "books and printed reading material",
+  [PzCategory.Material]: "crafting materials and building supplies",
+  [PzCategory.Memento]: "keepsakes and souvenirs",
+  [PzCategory.Paint]: "paint items",
+  [PzCategory.ProtectiveGear]: "protective equipment such as body armor, helmets, knee pads",
+  [PzCategory.SkillBook]: "skill books",
+  [PzCategory.Sports]: "sports items",
+  [PzCategory.Tool]: "tools, such as hammers, wrenches, screwdrivers",
+  [PzCategory.Trapping]: "trapping items",
+  [PzCategory.VehicleMaintenance]: "vehicle maintenance items",
+  [PzCategory.Weapon]: "weapons in general",
+};
+
+type entry = [string, string, string, "override" | "fallback"];
+
+export const TRANSLATIONS_ARR: readonly entry[] = [
+  ...Object.entries(BASE_CATEGORIES).map(([key, description]) => {
+    return [CATEGORIES, key, description, Z] as entry;
+  }),
+
+  [SKILLS, "Axe", "axe weapon skill", Z],
+  [SKILLS, "Blunt", "long blunt weapon skill", Z],
+  [SKILLS, "LongBlade", "long blade weapon skill", Z],
+  [SKILLS, "SmallBlade", "short blade weapon skill", Z],
+  [SKILLS, "SmallBlunt", "short blunt weapon skill", Z],
+  [SKILLS, "Spear", "spear weapon skill", Z],
 
   // [APPAREL, "Bag", "containers that can be on the body, such as backpacks and satchels", A],
   [APPAREL, "Arms", "items worn on the arms (but not hands), like watches, shoulder pads or arm guards", A],
@@ -31,40 +79,6 @@ export const TRANSLATIONS_ARR: readonly [string, string, string, "override" | "f
   [APPAREL, "Socks", "hosiery and socks", A],
   [APPAREL, "Top", "upper body apparel that is not outerwear, such as shirts, sweaters, tank tops", A],
   [APPAREL, "Underwear", "undergarments such as underwear, bras, boxers", A],
-
-  [COMBINED, "Box", "things in a (small) box, such as boxes of ammo", A],
-  [COMBINED, "Bundled", "things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope", A],
-  [COMBINED, "Carton", "things in a bigger box, such as cartons of ammo (which contain boxes of ammo)", A],
-
-  [CATEGORIES, "Ammo", "firearm ammunition", Z],
-  [CATEGORIES, "Animal", "animals", Z],
-  [CATEGORIES, "AnimalPart", "animal parts, bones, sinew, hides", Z],
-  [CATEGORIES, "Appearance", "character appearance items such as makeup", Z],
-  [CATEGORIES, "Camping", "camping supplies", Z],
-  [CATEGORIES, "Cartography", "maps of locations", Z],
-  [CATEGORIES, "Communications", "communication devices such as walkie talkies, radios", Z],
-  [CATEGORIES, "Container", "items that can hold other items, such as boxes, bags, and crates", Z],
-  [CATEGORIES, "Cooking", "cooking items such as pots, pans, utensils", Z],
-  [CATEGORIES, "Electronics", "electronic items", Z],
-  [CATEGORIES, "Entertainment", "entertainment items", Z],
-  [CATEGORIES, "FireSource", "sources of fire", Z],
-  [CATEGORIES, "FirstAid", "first aid and medical supplies, bandages, painkillers, antiseptics", Z],
-  [CATEGORIES, "Fishing", "fishing gear", Z],
-  [CATEGORIES, "Food", "any food item", Z],
-  [CATEGORIES, "Furniture", "furniture items", Z],
-  [CATEGORIES, "Gardening", "gardening items", Z],
-  [CATEGORIES, "Household", "household items", Z],
-  [CATEGORIES, "Instrument", "instruments", Z],
-  [CATEGORIES, "Junk", "miscellaneous junk items, worthless items", Z],
-  [CATEGORIES, "LightSource", "items that provide light such as flashlights, lanterns", Z],
-  [CATEGORIES, "Material", "crafting materials and building supplies", Z],
-  [CATEGORIES, "Memento", "keepsakes and souvenirs", Z],
-  [CATEGORIES, "Paint", "paint items", Z],
-  [CATEGORIES, "Sports", "sports items", Z],
-  [CATEGORIES, "Tool", "tools, such as hammers, wrenches, screwdrivers", Z],
-  [CATEGORIES, "Trapping", "trapping items", Z],
-  [CATEGORIES, "VehicleMaintenance", "vehicle maintenance items", Z],
-  [CATEGORIES, "Weapon", "weapons in general", Z],
 
   // [FOOD,  "Beans", "beans, lentils, legumes", Z,],
   // [FOOD,  "Dressing", "salad dressings and similar", Z,],
@@ -98,24 +112,6 @@ export const TRANSLATIONS_ARR: readonly [string, string, string, "override" | "f
   [FOOD, "Vegetables", "vegetables, including leafy greens", A],
   // [FOOD,  "Thickener", "food thickening agents, e.g. cornstarch, flour", Z,],
 
-  [FIREARMS, "Firearm", "firearm category, pistols, rifles, shotguns, etc.", A],
-  [FIREARMS, "Handgun", "pistols and handguns", Z],
-  [FIREARMS, "Rifle", "rifles, big firearms", Z],
-  [FIREARMS, "Shotgun", "shotguns, rifles that shoot shells", Z],
-  [FIREARMS, "Mag", "firearm magazines", Z],
-
-  [LIQUIDS, "Beverage", "top-level category for drinkable liquids", A],
-  [LIQUIDS, "Liquid", "top-level category for non-drinkable liquids, and used in 'Container - Liquid'", A],
-  [LIQUIDS, "Alcohol", "general alcoholic beverages", Z],
-  [LIQUIDS, "Beer", "alcoholic beer beverages", Z],
-  [LIQUIDS, "Cocktail", "mixed alcoholic drinks", A],
-  [LIQUIDS, "Juice", "fruit juice", Z],
-  [LIQUIDS, "Milk", "dairy milk", Z],
-  [LIQUIDS, "SoftDrink", "carbonated soft drinks", A],
-  [LIQUIDS, "Water", "drinking water", Z],
-  [LIQUIDS, "Wine", "alcoholic wine beverages", A],
-
-  [LITERATURE, "Literature", "books and printed reading material", Z],
   [LITERATURE, "Adult", "adult-oriented content (hottiez magazines)", A],
   [LITERATURE, "Brochure", "informational brochures", Z],
   [LITERATURE, "Comic", "comic books", Z],
@@ -128,19 +124,35 @@ export const TRANSLATIONS_ARR: readonly [string, string, string, "override" | "f
   [LITERATURE, "PictureBook", "picture books", Z],
   [LITERATURE, "Recipe", "recipes, readable items that teach you something", Z],
   [LITERATURE, "RpgManual", "tabletop RPG manuals", Z],
-  [LITERATURE, "SkillBook", "skill books", Z],
   [LITERATURE, "Softcover", "softcover books", Z],
+
+  [FIREARMS, "Firearm", "firearm category, pistols, rifles, shotguns, etc.", A],
+  [FIREARMS, "Handgun", "pistols and handguns", Z],
+  [FIREARMS, "Rifle", "rifles, big firearms", Z],
+  [FIREARMS, "Shotgun", "shotguns, rifles that shoot shells", Z],
+  [FIREARMS, "Mag", "firearm magazines", Z],
+
+  [LIQUIDS, "Beverage", "top-level category for drinkable liquids", A],
+  [LIQUIDS, "Liquid", "top-level category for non-drinkable liquids, and used in 'Container - Liquid'", A],
+  [LIQUIDS, "Alcohol", "general alcoholic beverages", Z],
+  [LIQUIDS, "Beer", "alcoholic beer beverages", Z],
+  [LIQUIDS, "Cocktail", "mixed alcoholic drinks", A],
+  [LIQUIDS, "Coffee", "coffee beverage", A],
+  [LIQUIDS, "EnergyDrink", "energy drinks or otherwise highly caffeinated soft drinks", A],
+  [LIQUIDS, "Juice", "fruit juice", Z],
+  [LIQUIDS, "Milk", "dairy milk", Z],
+  [LIQUIDS, "SoftDrink", "carbonated soft drinks", A],
+  [LIQUIDS, "Tea", "tea beverage", A],
+  [LIQUIDS, "Water", "drinking water", Z],
+  [LIQUIDS, "Wine", "alcoholic wine beverages", A],
+
+  [COMBINED, "Box", "things in a (small) box, such as boxes of ammo", A],
+  [COMBINED, "Bundled", "things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope", A],
+  [COMBINED, "Carton", "things in a bigger box, such as cartons of ammo (which contain boxes of ammo)", A],
 
   [MISC, "Crafted", "handmade, artisan items. used for player-made weapons (not food)", A],
   [MISC, "KeyRing", "ring or bundle of keys", A],
   [MISC, "Photo", "photos", Z],
   [MISC, "Smoking", "smoking items such as cigarettes, cigars, pipes", A],
   [MISC, "Wearable", "used for containers that can be worn on the body, such as backpacks and satchels", A],
-
-  [SKILLS, "Axe", "axe weapon skill", Z],
-  [SKILLS, "Blunt", "long blunt weapon skill", Z],
-  [SKILLS, "LongBlade", "long blade weapon skill", Z],
-  [SKILLS, "SmallBlade", "short blade weapon skill", Z],
-  [SKILLS, "SmallBlunt", "short blunt weapon skill", Z],
-  [SKILLS, "Spear", "spear weapon skill", Z],
 ] as const;
