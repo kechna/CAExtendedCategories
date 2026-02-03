@@ -72,7 +72,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Food,
-    categories: [...foodTypes, "Perishable"],
+    categories: [...foodTypes, "Box", "Carton", "Perishable"],
     searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"],
   },
 
@@ -109,6 +109,12 @@ export const searchers: Searcher[] = [
   {
     categories: ["Beverage"],
     searchKeys: [],
+  },
+
+  {
+    prefix: "Liquid",
+    categories: ["Fuel", "Dye"],
+    searchKeys: ["Fluid_Name_%s", "Fluid_Category_%s", "ContextMenu_%s", "ItemName_Base.%s", "ItemName_Base.%s2"],
   },
 
   {
@@ -167,5 +173,10 @@ export const searchers: Searcher[] = [
   {
     prefix: "Firearm",
     categories: ["Handgun", "Rifle", "Shotgun"],
+  },
+
+  {
+    prefix: PzCategory.Cooking,
+    categories: ["Cutlery", "Utensil"],
   },
 ];

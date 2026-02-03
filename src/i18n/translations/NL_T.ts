@@ -362,8 +362,12 @@ export const NL: ExternalTranslations = {
    *   ItemName_Base.Coffee2 = "Koffie"
    */
   CAEC_Override_Coffee: "Koffie",
+  /** liquids used for dyeing or coloring */
+  CAEC_Override_Dye: "Verf",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Energy Drink",
+  /** liquid fuels such as gasoline, diesel, kerosene */
+  CAEC_Override_Fuel: "Brandstof",
   /** fruit juice */
   CAEC_Fallback_Juice: "Sap",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
@@ -407,6 +411,8 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Carton: "Kartonnen doos",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Gemaakt",
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
+  CAEC_Override_Cutlery: "Bestek",
   /**
    * ring or bundle of keys
    *
@@ -418,6 +424,8 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Photo: "Foto",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Roken",
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
+  CAEC_Override_Utensil: "Keukengerei",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Draagbaar",
 };

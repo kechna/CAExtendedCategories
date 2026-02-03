@@ -517,8 +517,12 @@ export const FR: ExternalTranslations = {
    *   ItemName_Base.Coffee2 = "Café"
    */
   CAEC_Override_Coffee: undefined,
+  /** liquids used for dyeing or coloring */
+  CAEC_Override_Dye: "Teinture",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Boisson énergisante",
+  /** liquid fuels such as gasoline, diesel, kerosene */
+  CAEC_Override_Fuel: "Carburant",
   /**
    * fruit juice
    *
@@ -574,6 +578,8 @@ export const FR: ExternalTranslations = {
   CAEC_Override_Carton: "Carton",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artisanal",
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
+  CAEC_Override_Cutlery: "Couvert",
   /**
    * ring or bundle of keys
    *
@@ -585,6 +591,8 @@ export const FR: ExternalTranslations = {
   CAEC_Fallback_Photo: "Photo",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumer",
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
+  CAEC_Override_Utensil: "Ustensile",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Portable",
 };

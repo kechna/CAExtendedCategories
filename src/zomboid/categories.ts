@@ -157,12 +157,14 @@ export const BOXABLE_CATEGORIES = [
   PzCategory.FirstAid,
   PzCategory.Fishing,
   PzCategory.Food,
+  PzCategory.Gardening,
   PzCategory.Junk,
   PzCategory.LightSource,
   PzCategory.Literature,
   PzCategory.Material,
   PzCategory.Memento,
   PzCategory.SkillBook,
+  "Beverage",
 ];
 
 export const TOY_CATEGORIES = [

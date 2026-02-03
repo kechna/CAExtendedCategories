@@ -44,6 +44,8 @@ export const createModTranslations = (async (context: FullModContext) => {
   SUPPORTED_LANGUAGES.forEach((language) => {
     addOr(PzCategory.Literature, PzCategory.Junk, language);
 
+    addOr(PzCategory.Cooking, "ContainerLiquid", language);
+
     addOr(PzCategory.Appearance, "Liquid", language);
     addOr(PzCategory.Cooking, "Liquid", language);
     addOr(PzCategory.FirstAid, "Liquid", language);

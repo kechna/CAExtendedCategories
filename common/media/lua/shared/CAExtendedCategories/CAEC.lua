@@ -32,6 +32,9 @@ CAEC.StaticCategories = {
   -- :(
   SmokingPipe = "Smoking",
   CanPipe = "Smoking",
+
+  BeerPack = "BeverageBox",
+  BeerCanPack = "BeverageBox",
 }
 
 ---@type ArrayList<fun(item:Item, instance:InventoryItem?): string?, boolean?>>
@@ -55,6 +58,7 @@ local function initializeCategorizers()
   end
 
   CAEC.ScriptCategorizers:add(Categorizers.Smoking)
+  CAEC.ScriptCategorizers:add(Categorizers.Cooking)
   CAEC.ScriptCategorizers:add(Categorizers.Material)
   CAEC.ScriptCategorizers:add(Categorizers.Ammo)
   CAEC.ScriptCategorizers:add(Categorizers.Apparel)

@@ -21,6 +21,7 @@ local Categorizers = {
   Apparel = create("Apparel"),
   BoxesAndStacks = create("BoxesAndStacks"),
   Container = create("Container"),
+  Cooking = create("Cooking"),
   FluidContainer = create("FluidContainer"),
   Food = create("Food"),
   Literature = create("Literature"),

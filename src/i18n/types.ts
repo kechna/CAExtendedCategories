@@ -32,7 +32,9 @@ export type TranslationKeys =
   | CAEC_Fallback_${Container}
   | CAEC_Fallback_${Cooking}
   | CAEC_Fallback_${Crafted}
+  | CAEC_Fallback_${Cutlery}
   | CAEC_Fallback_${Dish}
+  | CAEC_Fallback_${Dye}
   | CAEC_Fallback_${Electronics}
   | CAEC_Fallback_${EnergyDrink}
   | CAEC_Fallback_${Entertainment}
@@ -46,6 +48,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Food}
   | CAEC_Fallback_${Footwear}
   | CAEC_Fallback_${Fruits}
+  | CAEC_Fallback_${Fuel}
   | CAEC_Fallback_${FullBody}
   | CAEC_Fallback_${Furniture}
   | CAEC_Fallback_${Gardening}
@@ -112,6 +115,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Top}
   | CAEC_Fallback_${Trapping}
   | CAEC_Fallback_${Underwear}
+  | CAEC_Fallback_${Utensil}
   | CAEC_Fallback_${Vegetables}
   | CAEC_Fallback_${VehicleMaintenance}
   | CAEC_Fallback_${Water}
@@ -151,7 +155,9 @@ export type TranslationKeys =
   | CAEC_Override_${Container}
   | CAEC_Override_${Cooking}
   | CAEC_Override_${Crafted}
+  | CAEC_Override_${Cutlery}
   | CAEC_Override_${Dish}
+  | CAEC_Override_${Dye}
   | CAEC_Override_${Electronics}
   | CAEC_Override_${EnergyDrink}
   | CAEC_Override_${Entertainment}
@@ -165,6 +171,7 @@ export type TranslationKeys =
   | CAEC_Override_${Food}
   | CAEC_Override_${Footwear}
   | CAEC_Override_${Fruits}
+  | CAEC_Override_${Fuel}
   | CAEC_Override_${FullBody}
   | CAEC_Override_${Furniture}
   | CAEC_Override_${Gardening}
@@ -231,6 +238,7 @@ export type TranslationKeys =
   | CAEC_Override_${Top}
   | CAEC_Override_${Trapping}
   | CAEC_Override_${Underwear}
+  | CAEC_Override_${Utensil}
   | CAEC_Override_${Vegetables}
   | CAEC_Override_${VehicleMaintenance}
   | CAEC_Override_${Water}

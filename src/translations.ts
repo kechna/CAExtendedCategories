@@ -138,7 +138,9 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [LIQUIDS, "Beer", "alcoholic beer beverages", Z],
   [LIQUIDS, "Cocktail", "mixed alcoholic drinks", A],
   [LIQUIDS, "Coffee", "coffee beverage", A],
+  [LIQUIDS, "Dye", "liquids used for dyeing or coloring", A],
   [LIQUIDS, "EnergyDrink", "energy drinks or otherwise highly caffeinated soft drinks", A],
+  [LIQUIDS, "Fuel", "liquid fuels such as gasoline, diesel, kerosene", A],
   [LIQUIDS, "Juice", "fruit juice", Z],
   [LIQUIDS, "Milk", "dairy milk", Z],
   [LIQUIDS, "SoftDrink", "carbonated soft drinks", A],
@@ -155,4 +157,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [MISC, "Photo", "photos", Z],
   [MISC, "Smoking", "smoking items such as cigarettes, cigars, pipes", A],
   [MISC, "Wearable", "used for containers that can be worn on the body, such as backpacks and satchels", A],
+
+  [MISC, "Cutlery", "cutlery such as knives, forks, spoons or chopsticks to eat a meal with", A],
+  [MISC, "Utensil", "kitchen utensils such as spatulas, ladles, tongs, whisks, etc.", A],
 ] as const;

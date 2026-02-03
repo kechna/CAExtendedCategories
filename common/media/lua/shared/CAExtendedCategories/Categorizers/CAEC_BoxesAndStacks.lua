@@ -29,18 +29,25 @@ local function byRecipe(item)
   end
 
   recipe = recipe:lower()
+  local suffix = nil
 
-  if recipe:contains("box") then
-    return "Box"
-  elseif recipe:contains("carton") then
-    return "Carton"
-  elseif recipe:contains("stack") then
-    return "Stack"
+  if recipe == "unstack_items" then
+    suffix = "Bundled";
+  elseif recipe:contains("carton")
+      and (Utils.StartsWith("Open", recipe)
+        or Utils.StartsWith("Unpack", recipe)) then
+    suffix = "Carton";
+  elseif Utils.StartsWith("takea", recipe) or
+      (recipe:contains("box") and (
+        Utils.StartsWith("unpack", recipe)
+        or Utils.StartsWith("open", recipe))
+      )
+  then
+    suffix = "Box";
   end
 
-  return nil
+  return suffix
 end
-
 function BoxesAndStacks.addToCategory(existingCategory, item)
   ---@type string|nil
   local category = nil

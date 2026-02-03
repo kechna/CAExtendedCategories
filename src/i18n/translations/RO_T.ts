@@ -248,8 +248,12 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_FoodType_Coffee = "Cafea"
    */
   CAEC_Override_Coffee: undefined,
+  /** liquids used for dyeing or coloring */
+  CAEC_Override_Dye: undefined,
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Energizant",
+  /** liquid fuels such as gasoline, diesel, kerosene */
+  CAEC_Override_Fuel: undefined,
   /** fruit juice */
   CAEC_Fallback_Juice: "Suc",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
@@ -282,12 +286,16 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Carton: "Carton",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artizanal",
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
+  CAEC_Override_Cutlery: undefined,
   /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Mănunchi de chei",
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumat",
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
+  CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Rucsacuri",
 };

@@ -456,8 +456,12 @@ export const FI: ExternalTranslations = {
    *   ItemName_Base.Coffee2 = "Kahvi"
    */
   CAEC_Override_Coffee: undefined,
+  /** liquids used for dyeing or coloring */
+  CAEC_Override_Dye: undefined,
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: undefined,
+  /** liquid fuels such as gasoline, diesel, kerosene */
+  CAEC_Override_Fuel: undefined,
   /** fruit juice */
   CAEC_Fallback_Juice: undefined,
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
@@ -501,6 +505,8 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Carton: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: undefined,
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
+  CAEC_Override_Cutlery: undefined,
   /**
    * ring or bundle of keys
    *
@@ -512,6 +518,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Photo: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: undefined,
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
+  CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: undefined,
 };

@@ -241,8 +241,12 @@ export const TRANSLATIONS = {
   CAEC_Override_Cocktail: "Cocktail",
   /* coffee beverage */
   CAEC_Override_Coffee: "Coffee",
+  /* liquids used for dyeing or coloring */
+  CAEC_Override_Dye: "Dye",
   /* energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Energy Drink",
+  /* liquid fuels such as gasoline, diesel, kerosene */
+  CAEC_Override_Fuel: "Fuel",
   /* fruit juice */
   CAEC_Fallback_Juice: "Juice",
   /* top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
@@ -271,12 +275,16 @@ export const TRANSLATIONS = {
 
   /* handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Crafted",
+  /* cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
+  CAEC_Override_Cutlery: "Cutlery",
   /* ring or bundle of keys */
   CAEC_Override_KeyRing: "Key Ring",
   /* photos */
   CAEC_Fallback_Photo: "Photograph",
   /* smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
+  /* kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
+  CAEC_Override_Utensil: "Utensil",
   /* used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Wearable",
 };

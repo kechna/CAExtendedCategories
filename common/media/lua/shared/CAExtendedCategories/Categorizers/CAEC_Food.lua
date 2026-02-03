@@ -203,9 +203,11 @@ function Food:fromInstance(item, instance)
   end
 
   if not foodType then
-    if item:isCantEat() and item:isFarmingLoot() then
+    local edible = item:isCantEat() == false
+
+    if not edible and item:isFarmingLoot() then
       foodType = FoodType.LIVESTOCK
-    else
+    elseif edible then
       foodType = self:guessFoodOrSnack(item, instance)
     end
   end
@@ -216,6 +218,13 @@ function Food:fromInstance(item, instance)
 
   if foodType then
     category = category .. foodType
+  else
+    local boxed = BoxesAndStacks.addToCategory(category, item)
+
+    if boxed then
+      self:log("BOX: " .. item:getFullName(), Debug.Level.Info)
+      category = boxed
+    end
   end
 
   return category, instanceSpecific
@@ -257,13 +266,6 @@ function Food:categorize(item, instance)
     Debug.report(" > item not categorized further: " .. item:getName(), item, instance)
   end
 
-  if category then
-    local add = BoxesAndStacks.addToCategory(category, item)
-    if add then
-      self:log(item:getFullName() .. " -> " .. add, Debug.Level.Info)
-    end
-    category = add or category
-  end
   return category, instanceSpecific
 end
 

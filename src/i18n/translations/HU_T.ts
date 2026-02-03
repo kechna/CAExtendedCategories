@@ -517,8 +517,12 @@ export const HU: ExternalTranslations = {
    *   ItemName_Base.Coffee2 = "Kávé"
    */
   CAEC_Override_Coffee: undefined,
+  /** liquids used for dyeing or coloring */
+  CAEC_Override_Dye: "Festék",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Energiaital",
+  /** liquid fuels such as gasoline, diesel, kerosene */
+  CAEC_Override_Fuel: "Üzemanyag",
   /**
    * fruit juice
    *
@@ -574,6 +578,8 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Carton: "Kartondoboz",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Kézműves",
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
+  CAEC_Override_Cutlery: "Evőeszköz",
   /**
    * ring or bundle of keys
    *
@@ -585,6 +591,8 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Photo: "Fénykép",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Dohányzás",
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
+  CAEC_Override_Utensil: "Eszköz",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Viselhető",
 };

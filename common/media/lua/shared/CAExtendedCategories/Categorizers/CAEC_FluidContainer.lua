@@ -59,9 +59,9 @@ function FluidContainer:categorize(item, instance)
   local fluidType = fluid:getFluidType()
   local fluidTypeString = fluid:getFluidTypeString():lower()
 
-  self:log(string.format("-->   %s (%s)", instance:getName(), item:getFullName()), Debug.Level.Info)
-  self:log(string.format("        Fluid: %s", fluid:toString()), Debug.Level.Info)
-  self:log(string.format("        Fluid Type: %s", fluidTypeString), Debug.Level.Info)
+  --self:log(string.format("-->   %s (%s)", instance:getName(), item:getFullName()), Debug.Level.Info)
+  --self:log(string.format("        Fluid: %s", fluid:toString()), Debug.Level.Info)
+  --self:log(string.format("        Fluid Type: %s", fluidTypeString), Debug.Level.Info)
 
   if fluid:isCategory(FluidCategory.Dyes) then
     return "LiquidDye"
