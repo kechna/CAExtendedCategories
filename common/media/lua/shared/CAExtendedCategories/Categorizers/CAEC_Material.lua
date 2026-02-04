@@ -14,8 +14,6 @@ function Material:categorize(item, _instance)
   ---@type string|nil
   local category = nil
 
-  --Debug.report(self.Type .. ": " .. item:getName(), item)
-
   return category
 
 end

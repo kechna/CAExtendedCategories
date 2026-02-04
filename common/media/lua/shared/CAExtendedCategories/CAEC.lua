@@ -85,7 +85,7 @@ end
 ---@return boolean
 local function isDynamicItem(instance)
   if instance:isFluidContainer() then
-    Debug.log(string.format("isDynamicItem(%s): is fluid container", instance:getName()), "isDynamicItem")
+    --Debug.log(string.format("isDynamicItem(%s): is fluid container", instance:getName()), "isDynamicItem")
     return true
   end
 
@@ -98,11 +98,11 @@ local function isDynamicItem(instance)
   local instanceSpecific = CAEC.InstanceSpecific[name] == true
   local tweaked = CAEC.ItemTweaks[name] ~= nil
 
-  Debug.log(string.format("isDynamicItem(%s): instanceSpecific=%s, tweaked=%s",
-    name,
-    tostring(instanceSpecific),
-    tostring(tweaked)
-  ), "isDynamicItem")
+  --Debug.log(string.format("isDynamicItem(%s): instanceSpecific=%s, tweaked=%s",
+  --  name,
+  --  tostring(instanceSpecific),
+  --  tostring(tweaked)
+  --), "isDynamicItem")
 
   return instanceSpecific or not tweaked
 end

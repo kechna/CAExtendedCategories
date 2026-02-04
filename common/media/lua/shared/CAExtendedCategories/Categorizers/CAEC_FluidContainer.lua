@@ -46,16 +46,33 @@ function FluidContainer:categorize(item, instance)
 
   self.verbosity = Debug.Level.Debug
 
-  local fluidContainer = instance:getFluidContainer()
-
-  if fluidContainer:isEmpty() then
-    return "ContainerLiquid", true
-  end
-
   ---@type string|nil
   local category = nil
 
-  local fluid = fluidContainer:getPrimaryFluid()
+  local container = instance:getFluidContainer()
+  local containerName = container:getContainerName():lower()
+
+  if container:isEmpty() then
+    if containerName == "pot"
+        or containerName == "pan"
+        or containerName == "saucepan"
+    then
+      --category = "CookingPan"
+    elseif containerName == "mug"
+        or containerName == "glass"
+        or containerName == "cup"
+    then
+      category = "CookingCup"
+    else
+      category = "CookingOrContainerLiquid"
+    end
+
+    --self:log(string.format("FLUID   %s (%s) - %s", instance:getName(), item:getFullName(), containerName), Debug.Level.Info)
+
+    return category or "ContainerLiquid"
+  end
+
+  local fluid = container:getPrimaryFluid()
   local fluidType = fluid:getFluidType()
   local fluidTypeString = fluid:getFluidTypeString():lower()
 
@@ -118,8 +135,8 @@ function FluidContainer:categorize(item, instance)
   end
 
   if category
-      and fluidContainer:isMixture()
-      and fluidContainer:isCategory(FluidCategory.Alcoholic) then
+      and container:isMixture()
+      and container:isCategory(FluidCategory.Alcoholic) then
     category = "BeverageCocktail"
   end
 

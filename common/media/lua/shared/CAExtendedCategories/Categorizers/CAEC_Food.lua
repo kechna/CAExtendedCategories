@@ -27,6 +27,7 @@ function Food:new()
   o.foodTypeMap = {
     BakingFat = FoodType.BAKING,
     Oil = FoodType.BAKING,
+    Thickener = FoodType.BAKING,
 
     Chocolate = FoodType.CANDY,
 
@@ -261,10 +262,6 @@ function Food:categorize(item, instance)
 
   local resolved = Utils.CreateInstanceIfNeeded(item, instance, self.Type)
   category, instanceSpecific = self:fromInstance(item, resolved)
-
-  if BASE_CATEGORY == category then
-    Debug.report(" > item not categorized further: " .. item:getName(), item, instance)
-  end
 
   return category, instanceSpecific
 end

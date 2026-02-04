@@ -578,6 +578,8 @@ export const DE: ExternalTranslations = {
   CAEC_Override_Carton: "Karton",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Gewerkelt",
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Besteck",
   /**
@@ -587,6 +589,8 @@ export const DE: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "Schlüsselbund"
    */
   CAEC_Fallback_KeyRing: "Schlüsselbund",
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Foto",
   /** smoking items such as cigarettes, cigars, pipes */

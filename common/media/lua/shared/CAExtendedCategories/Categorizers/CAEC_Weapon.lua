@@ -1,5 +1,6 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
+local Debug = require("CAExtendedCategories/CAEC_Debug")
 
 --- @class CAEC_WeaponCategorizer: CAEC_ItemCategorizer
 --- @field public asMeleeWeapon fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string|nil
@@ -92,7 +93,9 @@ function Weapon:asFirearm(item, instance)
   local resolved = Utils.CreateInstanceIfNeeded(item, instance, self.Type)
 
   if resolved:isTwoHandWeapon() then
-    if resolved:getAmmoType():toString() == AmmoType.SHOTGUN_SHELLS:toString() then
+    local ammoType = tostring(resolved:getAmmoType())
+
+    if ammoType:contains("shell") or ammoType:contains("slug") then
       category = "FirearmShotgun"
     else
       category = "FirearmRifle"
@@ -105,9 +108,14 @@ function Weapon:asFirearm(item, instance)
 end
 
 function Weapon:categorize(item, instance)
-  if item:hasTag(ItemTag.NO_MAINTENANCE_XP)
-      or item:getDisplayCategory() == "BrokenWeapon" then
-    return item:getDisplayCategory()
+  local category = item:getDisplayCategory()
+
+  if category == "BrokenWeapon" then
+    return category
+  end
+
+  if item:hasTag(ItemTag.NO_MAINTENANCE_XP) then
+    return nil
   end
 
   if item:hasTag(ItemTag.FIREARM) then

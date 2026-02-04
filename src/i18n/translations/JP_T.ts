@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Japanese
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -578,6 +578,8 @@ export const JP: ExternalTranslations = {
   CAEC_Override_Carton: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: undefined,
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: undefined,
   /**
@@ -587,6 +589,8 @@ export const JP: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "キーリング"
    */
   CAEC_Override_KeyRing: undefined,
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
@@ -594,5 +598,5 @@ export const JP: ExternalTranslations = {
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
-};
+  CAEC_Override_Wearable: undefined
+}

@@ -158,6 +158,8 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [MISC, "Smoking", "smoking items such as cigarettes, cigars, pipes", A],
   [MISC, "Wearable", "used for containers that can be worn on the body, such as backpacks and satchels", A],
 
+  [MISC, "Cup", "items such as cups, mugs, glasses", A],
+  [MISC, "Pan", "items such as pans/pots to cook in", A],
   [MISC, "Cutlery", "cutlery such as knives, forks, spoons or chopsticks to eat a meal with", A],
   [MISC, "Utensil", "kitchen utensils such as spatulas, ladles, tongs, whisks, etc.", A],
 ] as const;

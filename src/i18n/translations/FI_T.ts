@@ -32,9 +32,9 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Ammo: undefined,
   /** animals */
-  CAEC_Fallback_Animal: undefined,
+  CAEC_Fallback_Animal: "Eläin",
   /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
+  CAEC_Fallback_AnimalPart: "Eläimen osa",
   /**
    * character appearance items such as makeup
    *
@@ -94,9 +94,9 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Electronics: undefined,
   /** entertainment items */
-  CAEC_Fallback_Entertainment: undefined,
+  CAEC_Fallback_Entertainment: "Viihde",
   /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: undefined,
+  CAEC_Fallback_FireSource: "Tulilähde",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -178,7 +178,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Material: undefined,
   /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
+  CAEC_Fallback_Memento: "Muisto",
   /**
    * paint items
    *
@@ -187,7 +187,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Paint: undefined,
   /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
+  CAEC_Fallback_ProtectiveGear: "Suojavarusteet",
   /**
    * skill books
    *
@@ -274,17 +274,17 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Spear: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
+  CAEC_Override_Arms: "Käsivarret",
   /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  CAEC_Override_Bottom: "Alaosa",
   /** facewear such as masks, glasses, goggles */
-  CAEC_Override_Face: undefined,
+  CAEC_Override_Face: "Kasvot",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: undefined,
+  CAEC_Override_Footwear: "Jalkineet",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: undefined,
+  CAEC_Override_FullBody: "Kokovartalo",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: undefined,
+  CAEC_Override_Hands: "Kädet",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
@@ -293,9 +293,9 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Head: undefined,
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  CAEC_Override_Jewelry: undefined,
+  CAEC_Override_Jewelry: "Korut",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
-  CAEC_Override_Legs: undefined,
+  CAEC_Override_Legs: "Jalat",
   /**
    * neckwear such as scarves, necklaces
    *
@@ -304,15 +304,15 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Neck: undefined,
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: undefined,
+  CAEC_Override_Outerwear: "Päällysvaatteet",
   /** hosiery and socks */
-  CAEC_Override_Socks: undefined,
+  CAEC_Override_Socks: "Sukat",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: undefined,
+  CAEC_Override_Top: "Yläosa",
   /** undergarments such as underwear, bras, boxers */
-  CAEC_Override_Underwear: undefined,
+  CAEC_Override_Underwear: "Alusvaatteet",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
-  CAEC_Override_Baking: undefined,
+  CAEC_Override_Baking: "Leivonta",
   /**
    * baked bread products
    *
@@ -321,9 +321,9 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Bread: undefined,
   /** sweets and candies */
-  CAEC_Override_Candy: undefined,
+  CAEC_Override_Candy: "Makeiset",
   /** canned food items */
-  CAEC_Override_Canned: undefined,
+  CAEC_Override_Canned: "Säilykkeet",
   /**
    * dairy cheese products
    *
@@ -332,7 +332,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: undefined,
+  CAEC_Override_Dish: "Valmisruoka",
   /**
    * fresh fruit, including berries and citrus
    *
@@ -341,13 +341,13 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Fruits: undefined,
   /** culinary or medicinal plants/herbs */
-  CAEC_Fallback_Herb: undefined,
+  CAEC_Fallback_Herb: "Yrtti",
   /** spicy hot peppers */
-  CAEC_Fallback_HotPepper: undefined,
+  CAEC_Fallback_HotPepper: "Tulipaprika",
   /** edible insects */
-  CAEC_Fallback_Insect: undefined,
+  CAEC_Fallback_Insect: "Hyönteinen",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: undefined,
+  CAEC_Fallback_Livestock: "Karjanrehu",
   /**
    * any non-fish meat
    *
@@ -356,29 +356,29 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Meat: undefined,
   /** mushrooms/fungi */
-  CAEC_Fallback_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "Sieni",
   /** nuts such as walnuts, almonds, peanuts */
-  CAEC_Fallback_Nut: undefined,
+  CAEC_Fallback_Nut: "Pähkinät",
   /** food items that can spoil */
-  CAEC_Override_Perishable: undefined,
+  CAEC_Override_Perishable: "Pilaantuva",
   /** food for pets */
-  CAEC_Fallback_PetFood: undefined,
+  CAEC_Fallback_PetFood: "Lemmikit",
   /** single serving portion of food */
-  CAEC_Override_Portion: undefined,
+  CAEC_Override_Portion: "Annos",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: undefined,
+  CAEC_Override_Preserved: "Säilötty",
   /** fish and other seafood */
-  CAEC_Fallback_Seafood: undefined,
+  CAEC_Fallback_Seafood: "Merenelävät",
   /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
-  CAEC_Fallback_Seed: undefined,
+  CAEC_Fallback_Seed: "Siemen",
   /** snack foods (e.g. chips, cookies) */
-  CAEC_Override_Snack: undefined,
+  CAEC_Override_Snack: "Välipala",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: undefined,
+  CAEC_Fallback_Spice: "Mauste",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: undefined,
+  CAEC_Fallback_Staple: "Peruselintarvike",
   /** items used to make cooking stock or broth, such as bouillon cubes */
-  CAEC_Fallback_Stock: undefined,
+  CAEC_Fallback_Stock: "Liemi",
   /**
    * sugar and sweeteners
    *
@@ -394,26 +394,26 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Vegetables: undefined,
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
+  CAEC_Override_Adult: "Aikuinen",
   /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
+  CAEC_Fallback_Brochure: "Esite",
   /** comic books */
-  CAEC_Fallback_Comic: undefined,
+  CAEC_Fallback_Comic: "Sarjakuva",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
+  CAEC_Fallback_Consumable: "Kulutettava",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
+  CAEC_Fallback_FancyBook: "Koristekirja",
   /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
+  CAEC_Fallback_Flier: "Lentolehtinen",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
+  CAEC_Fallback_Hardcover: "Kovakantinen",
   /**
    * literature magazines
    *
    * found in-game:
    *   ItemName_Base.Magazine = "Ajolehti"
    */
-  CAEC_Override_Magazine: undefined,
+  CAEC_Override_Magazine: "Aikakauslehti",
   /**
    * newspapers
    *
@@ -422,31 +422,31 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Newspaper: undefined,
   /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
+  CAEC_Fallback_PictureBook: "Kuvakirja",
   /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
+  CAEC_Fallback_Recipe: "Resepti",
   /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
+  CAEC_Fallback_RpgManual: "Roolipelikäsikirja",
   /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  CAEC_Fallback_Softcover: "Pehmeäkantinen",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
+  CAEC_Override_Firearm: "Ampuma-ase",
   /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
+  CAEC_Fallback_Handgun: "Pistooli",
   /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
+  CAEC_Fallback_Mag: "Lipas",
   /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
+  CAEC_Fallback_Rifle: "Kivääri",
   /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
+  CAEC_Fallback_Shotgun: "Haulikko",
   /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
+  CAEC_Fallback_Alcohol: "Alkoholi",
   /** alcoholic beer beverages */
-  CAEC_Fallback_Beer: undefined,
+  CAEC_Fallback_Beer: "Olut",
   /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
+  CAEC_Override_Beverage: "Juoma",
   /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
+  CAEC_Override_Cocktail: "Cocktail",
   /**
    * coffee beverage
    *
@@ -457,15 +457,15 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Väriaine",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
+  CAEC_Override_EnergyDrink: "Energiajuoma",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "Polttoaine",
   /** fruit juice */
-  CAEC_Fallback_Juice: undefined,
+  CAEC_Fallback_Juice: "Mehu",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
+  CAEC_Override_Liquid: "Neste",
   /**
    * dairy milk
    *
@@ -474,7 +474,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Milk: undefined,
   /** carbonated soft drinks */
-  CAEC_Override_SoftDrink: undefined,
+  CAEC_Override_SoftDrink: "Virvoitusjuoma",
   /**
    * tea beverage
    *
@@ -488,7 +488,7 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_Water = "Kastele"
    */
-  CAEC_Override_Water: undefined,
+  CAEC_Override_Water: "Vesi",
   /**
    * alcoholic wine beverages
    *
@@ -498,15 +498,17 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
+  CAEC_Override_Box: "Laatikko",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
+  CAEC_Override_Bundled: "Nippu",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
+  CAEC_Override_Carton: "Kartonki",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: undefined,
+  CAEC_Override_Crafted: "Käsintehty",
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Aterimet",
   /**
    * ring or bundle of keys
    *
@@ -514,12 +516,14 @@ export const FI: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "Avainrengas"
    */
   CAEC_Override_KeyRing: undefined,
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
-  CAEC_Fallback_Photo: undefined,
+  CAEC_Fallback_Photo: "Valokuva",
   /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: undefined,
+  CAEC_Override_Smoking: "Tupakointi",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Keittiöväline",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
+  CAEC_Override_Wearable: "Puettava",
 };

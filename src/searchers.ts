@@ -113,7 +113,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: "Liquid",
-    categories: ["Fuel", "Dye"],
+    categories: ["Fuel", "Dye", "Industrial"],
     searchKeys: ["Fluid_Name_%s", "Fluid_Category_%s", "ContextMenu_%s", "ItemName_Base.%s", "ItemName_Base.%s2"],
   },
 
@@ -177,6 +177,6 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Cooking,
-    categories: ["Cutlery", "Utensil"],
+    categories: ["Cutlery", "Utensil", "Cup", "Pan"],
   },
 ];

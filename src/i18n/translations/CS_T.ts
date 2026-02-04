@@ -23,7 +23,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Vzhled"
    */
-  CAEC_Override_Accessory: undefined,
+  CAEC_Override_Accessory: "Doplňky",
   /**
    * firearm ammunition
    *
@@ -32,9 +32,9 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Ammo: undefined,
   /** animals */
-  CAEC_Fallback_Animal: undefined,
+  CAEC_Fallback_Animal: "Zvířata",
   /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
+  CAEC_Fallback_AnimalPart: "Zvířecí části",
   /**
    * character appearance items such as makeup
    *
@@ -101,7 +101,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Entertainment: "Zábava",
   /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: undefined,
+  CAEC_Fallback_FireSource: "Zdroj ohně",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -183,7 +183,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Material: "Materiál",
   /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
+  CAEC_Fallback_Memento: "Památka",
   /**
    * paint items
    *
@@ -192,7 +192,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Paint: undefined,
   /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
+  CAEC_Fallback_ProtectiveGear: "Ochranné vybavení",
   /**
    * skill books
    *
@@ -279,17 +279,17 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Spear: "Oštěp",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
+  CAEC_Override_Arms: "Paže",
   /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  CAEC_Override_Bottom: "Spodní díl",
   /** facewear such as masks, glasses, goggles */
-  CAEC_Override_Face: undefined,
+  CAEC_Override_Face: "Obličej",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: undefined,
+  CAEC_Override_Footwear: "Obuv",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: undefined,
+  CAEC_Override_FullBody: "Celotělové",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: undefined,
+  CAEC_Override_Hands: "Ruce",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
@@ -298,9 +298,9 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Head: undefined,
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  CAEC_Override_Jewelry: undefined,
+  CAEC_Override_Jewelry: "Šperky",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
-  CAEC_Override_Legs: undefined,
+  CAEC_Override_Legs: "Nohy",
   /**
    * neckwear such as scarves, necklaces
    *
@@ -309,15 +309,15 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Neck: undefined,
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: undefined,
+  CAEC_Override_Outerwear: "Svrchní oblečení",
   /** hosiery and socks */
-  CAEC_Override_Socks: undefined,
+  CAEC_Override_Socks: "Ponožky",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: undefined,
+  CAEC_Override_Top: "Horní díl",
   /** undergarments such as underwear, bras, boxers */
-  CAEC_Override_Underwear: undefined,
+  CAEC_Override_Underwear: "Spodní prádlo",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
-  CAEC_Override_Baking: undefined,
+  CAEC_Override_Baking: "Pečení",
   /**
    * baked bread products
    *
@@ -334,7 +334,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Candy: "Bonbón",
   /** canned food items */
-  CAEC_Override_Canned: undefined,
+  CAEC_Override_Canned: "Konzervy",
   /**
    * dairy cheese products
    *
@@ -344,7 +344,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Cheese: "Sýr",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: undefined,
+  CAEC_Override_Dish: "Hotová jídla",
   /**
    * fresh fruit, including berries and citrus
    *
@@ -367,9 +367,9 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_HotPepper: "Pálivé papriky",
   /** edible insects */
-  CAEC_Fallback_Insect: undefined,
+  CAEC_Fallback_Insect: "Hmyz",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: undefined,
+  CAEC_Fallback_Livestock: "Hospodářská krmiva",
   /**
    * any non-fish meat
    *
@@ -390,15 +390,15 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Nut = "Nut"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Override_Nut: "Ořechy",
   /** food items that can spoil */
-  CAEC_Override_Perishable: undefined,
+  CAEC_Override_Perishable: "Kazící se",
   /** food for pets */
-  CAEC_Fallback_PetFood: undefined,
+  CAEC_Fallback_PetFood: "Mazlíčci",
   /** single serving portion of food */
-  CAEC_Override_Portion: undefined,
+  CAEC_Override_Portion: "Porce",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: undefined,
+  CAEC_Override_Preserved: "Konzervované",
   /**
    * fish and other seafood
    *
@@ -414,18 +414,18 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Seed: "Semínko",
   /** snack foods (e.g. chips, cookies) */
-  CAEC_Override_Snack: undefined,
+  CAEC_Override_Snack: "Svačiny",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: undefined,
+  CAEC_Fallback_Spice: "Koření",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: undefined,
+  CAEC_Fallback_Staple: "Základní potraviny",
   /**
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
    *   ContextMenu_FoodType_Stock = "Stock"
    */
-  CAEC_Override_Stock: undefined,
+  CAEC_Override_Stock: "Vývar",
   /**
    * sugar and sweeteners
    *
@@ -442,19 +442,19 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Vegetables: undefined,
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
+  CAEC_Override_Adult: "Pro dospělé",
   /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
+  CAEC_Fallback_Brochure: "Brožura",
   /** comic books */
-  CAEC_Fallback_Comic: undefined,
+  CAEC_Fallback_Comic: "Komiks",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
+  CAEC_Fallback_Consumable: "Luštění",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
+  CAEC_Fallback_FancyBook: "Ozdobná kniha",
   /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
+  CAEC_Fallback_Flier: "Leták",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
+  CAEC_Fallback_Hardcover: "Vázaná",
   /**
    * literature magazines
    *
@@ -470,25 +470,25 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Newspaper: undefined,
   /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
+  CAEC_Fallback_PictureBook: "Obrázková kniha",
   /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
+  CAEC_Fallback_Recipe: "Recept",
   /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
+  CAEC_Fallback_RpgManual: "Příručka RPG",
   /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  CAEC_Fallback_Softcover: "Brožovaná",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
+  CAEC_Override_Firearm: "Střelné zbraně",
   /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
+  CAEC_Fallback_Handgun: "Pistole",
   /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
+  CAEC_Fallback_Mag: "Zásobník",
   /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
+  CAEC_Fallback_Rifle: "Puška",
   /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
+  CAEC_Fallback_Shotgun: "Brokovnice",
   /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
+  CAEC_Fallback_Alcohol: "Alkohol",
   /**
    * alcoholic beer beverages
    *
@@ -507,7 +507,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Beverage: "Nápoj",
   /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
+  CAEC_Override_Cocktail: "Koktejl",
   /**
    * coffee beverage
    *
@@ -518,11 +518,11 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Coffee: "Káva",
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Barvivo",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
+  CAEC_Override_EnergyDrink: "Energetický nápoj",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "Palivo",
   /**
    * fruit juice
    *
@@ -531,7 +531,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Juice: "Džus",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
+  CAEC_Override_Liquid: "Tekutina",
   /**
    * dairy milk
    *
@@ -571,15 +571,17 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Wine: "Víno",
   /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
+  CAEC_Override_Box: "Krabice",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
+  CAEC_Override_Bundled: "Svazek",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
+  CAEC_Override_Carton: "Karton",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: undefined,
+  CAEC_Override_Crafted: "Ručně vyrobené",
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Příbory",
   /**
    * ring or bundle of keys
    *
@@ -587,12 +589,14 @@ export const CS: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "Kl��enka"
    */
   CAEC_Override_KeyRing: "Klíčenka",
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
-  CAEC_Fallback_Photo: undefined,
+  CAEC_Fallback_Photo: "Fotografie",
   /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: undefined,
+  CAEC_Override_Smoking: "Kouření",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Kuchyňské náčiní",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
+  CAEC_Override_Wearable: "Nositelný",
 };

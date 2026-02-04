@@ -578,6 +578,8 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Carton: "Kartondoboz",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Kézműves",
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Evőeszköz",
   /**
@@ -587,6 +589,8 @@ export const HU: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "Kulcstartó"
    */
   CAEC_Override_KeyRing: "Kulcscsomó",
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Fénykép",
   /** smoking items such as cigarettes, cigars, pipes */

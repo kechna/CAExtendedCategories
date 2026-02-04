@@ -154,6 +154,7 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Gardening"
+   *   ContextMenu_Gardening = "Gardening"
    */
   CAEC_Fallback_Gardening: "Gardening",
   /**
@@ -611,6 +612,8 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Carton: "Carton",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Crafted",
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: "Cup",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Cutlery",
   /**
@@ -620,6 +623,8 @@ export const EN: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "Key Ring"
    */
   CAEC_Fallback_KeyRing: "Key Ring",
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: "Pan",
   /**
    * photos
    *

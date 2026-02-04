@@ -32,6 +32,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Container}
   | CAEC_Fallback_${Cooking}
   | CAEC_Fallback_${Crafted}
+  | CAEC_Fallback_${Cup}
   | CAEC_Fallback_${Cutlery}
   | CAEC_Fallback_${Dish}
   | CAEC_Fallback_${Dye}
@@ -83,6 +84,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Nut}
   | CAEC_Fallback_${Outerwear}
   | CAEC_Fallback_${Paint}
+  | CAEC_Fallback_${Pan}
   | CAEC_Fallback_${Perishable}
   | CAEC_Fallback_${PetFood}
   | CAEC_Fallback_${Photo}
@@ -155,6 +157,7 @@ export type TranslationKeys =
   | CAEC_Override_${Container}
   | CAEC_Override_${Cooking}
   | CAEC_Override_${Crafted}
+  | CAEC_Override_${Cup}
   | CAEC_Override_${Cutlery}
   | CAEC_Override_${Dish}
   | CAEC_Override_${Dye}
@@ -206,6 +209,7 @@ export type TranslationKeys =
   | CAEC_Override_${Nut}
   | CAEC_Override_${Outerwear}
   | CAEC_Override_${Paint}
+  | CAEC_Override_${Pan}
   | CAEC_Override_${Perishable}
   | CAEC_Override_${PetFood}
   | CAEC_Override_${Photo}

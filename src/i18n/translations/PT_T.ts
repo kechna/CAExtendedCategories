@@ -342,10 +342,14 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Carton: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: undefined,
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: undefined,
   /** ring or bundle of keys */
   CAEC_Override_KeyRing: undefined,
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: undefined,
   /** smoking items such as cigarettes, cigars, pipes */

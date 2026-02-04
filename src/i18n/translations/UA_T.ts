@@ -32,9 +32,9 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Ammo: undefined,
   /** animals */
-  CAEC_Fallback_Animal: undefined,
+  CAEC_Fallback_Animal: "Тварини",
   /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
+  CAEC_Fallback_AnimalPart: "Частини тварин",
   /**
    * character appearance items such as makeup
    *
@@ -101,7 +101,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Entertainment: undefined,
   /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: undefined,
+  CAEC_Fallback_FireSource: "Джерело вогню",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -183,7 +183,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Material: undefined,
   /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
+  CAEC_Fallback_Memento: "Сувенір",
   /**
    * paint items
    *
@@ -192,7 +192,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Paint: undefined,
   /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
+  CAEC_Fallback_ProtectiveGear: "Захисне спорядження",
   /**
    * skill books
    *
@@ -279,17 +279,17 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Spear: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
+  CAEC_Override_Arms: "Передпліччя",
   /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  CAEC_Override_Bottom: "Низ",
   /** facewear such as masks, glasses, goggles */
-  CAEC_Override_Face: undefined,
+  CAEC_Override_Face: "Обличчя",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: undefined,
+  CAEC_Override_Footwear: "Взуття",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: undefined,
+  CAEC_Override_FullBody: "Суцільний одяг",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: undefined,
+  CAEC_Override_Hands: "Руки",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
@@ -298,9 +298,9 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Head: undefined,
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  CAEC_Override_Jewelry: undefined,
+  CAEC_Override_Jewelry: "Прикраси",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
-  CAEC_Override_Legs: undefined,
+  CAEC_Override_Legs: "Ноги",
   /**
    * neckwear such as scarves, necklaces
    *
@@ -309,15 +309,15 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Neck: undefined,
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: undefined,
+  CAEC_Override_Outerwear: "Верхній одяг",
   /** hosiery and socks */
-  CAEC_Override_Socks: undefined,
+  CAEC_Override_Socks: "Шкарпетки",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: undefined,
+  CAEC_Override_Top: "Верх",
   /** undergarments such as underwear, bras, boxers */
-  CAEC_Override_Underwear: undefined,
+  CAEC_Override_Underwear: "Нижня білизна",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
-  CAEC_Override_Baking: undefined,
+  CAEC_Override_Baking: "Для випічки",
   /**
    * baked bread products
    *
@@ -334,7 +334,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Candy: undefined,
   /** canned food items */
-  CAEC_Override_Canned: undefined,
+  CAEC_Override_Canned: "Консерви",
   /**
    * dairy cheese products
    *
@@ -344,7 +344,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: undefined,
+  CAEC_Override_Dish: "Готові страви",
   /**
    * fresh fruit, including berries and citrus
    *
@@ -367,9 +367,9 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_HotPepper: undefined,
   /** edible insects */
-  CAEC_Fallback_Insect: undefined,
+  CAEC_Fallback_Insect: "Комахи",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: undefined,
+  CAEC_Fallback_Livestock: "Корм для худоби",
   /**
    * any non-fish meat
    *
@@ -392,13 +392,13 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Nut: undefined,
   /** food items that can spoil */
-  CAEC_Override_Perishable: undefined,
+  CAEC_Override_Perishable: "Швидкопсувне",
   /** food for pets */
-  CAEC_Fallback_PetFood: undefined,
+  CAEC_Fallback_PetFood: "Улюбленці",
   /** single serving portion of food */
-  CAEC_Override_Portion: undefined,
+  CAEC_Override_Portion: "Порція",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: undefined,
+  CAEC_Override_Preserved: "Консервоване",
   /**
    * fish and other seafood
    *
@@ -414,18 +414,18 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Seed: undefined,
   /** snack foods (e.g. chips, cookies) */
-  CAEC_Override_Snack: undefined,
+  CAEC_Override_Snack: "Перекуси",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: undefined,
+  CAEC_Fallback_Spice: "Спеції",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: undefined,
+  CAEC_Fallback_Staple: "Базові продукти",
   /**
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
    *   ContextMenu_FoodType_Stock = "Магазинне"
    */
-  CAEC_Override_Stock: undefined,
+  CAEC_Override_Stock: "Бульйон",
   /**
    * sugar and sweeteners
    *
@@ -442,19 +442,19 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Vegetables: undefined,
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
+  CAEC_Override_Adult: "Для дорослих",
   /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
+  CAEC_Fallback_Brochure: "Брошура",
   /** comic books */
-  CAEC_Fallback_Comic: undefined,
+  CAEC_Fallback_Comic: "Комікс",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
+  CAEC_Fallback_Consumable: "Головоломки",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
+  CAEC_Fallback_FancyBook: "Подарункова книга",
   /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
+  CAEC_Fallback_Flier: "Листівка",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
+  CAEC_Fallback_Hardcover: "Тверда обкладинка",
   /**
    * literature magazines
    *
@@ -470,25 +470,25 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Newspaper: undefined,
   /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
+  CAEC_Fallback_PictureBook: "Книжка з малюнками",
   /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
+  CAEC_Fallback_Recipe: "Рецепт",
   /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
+  CAEC_Fallback_RpgManual: "Посібник RPG",
   /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  CAEC_Fallback_Softcover: "М’яка обкладинка",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
+  CAEC_Override_Firearm: "Вогнепальна зброя",
   /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
+  CAEC_Fallback_Handgun: "Пістолет",
   /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
+  CAEC_Fallback_Mag: "Магазин",
   /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
+  CAEC_Fallback_Rifle: "Гвинтівка",
   /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
+  CAEC_Fallback_Shotgun: "Дробовик",
   /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
+  CAEC_Fallback_Alcohol: "Алкоголь",
   /**
    * alcoholic beer beverages
    *
@@ -497,9 +497,9 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Beer: undefined,
   /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
+  CAEC_Override_Beverage: "Напої",
   /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
+  CAEC_Override_Cocktail: "Коктейль",
   /**
    * coffee beverage
    *
@@ -510,11 +510,11 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Барвник",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
+  CAEC_Override_EnergyDrink: "Енергетичний напій",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "Паливо",
   /**
    * fruit juice
    *
@@ -523,7 +523,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Juice: undefined,
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
+  CAEC_Override_Liquid: "Рідина",
   /**
    * dairy milk
    *
@@ -538,7 +538,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_SoftDrink = "Напої"
    */
-  CAEC_Override_SoftDrink: undefined,
+  CAEC_Override_SoftDrink: "Безалкогольні напої",
   /**
    * tea beverage
    *
@@ -552,7 +552,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_Water = "Полити"
    */
-  CAEC_Override_Water: undefined,
+  CAEC_Override_Water: "Вода",
   /**
    * alcoholic wine beverages
    *
@@ -563,15 +563,17 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
+  CAEC_Override_Box: "Коробка",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
+  CAEC_Override_Bundled: "Пучок",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
+  CAEC_Override_Carton: "Картон",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: undefined,
+  CAEC_Override_Crafted: "Ручна робота",
+  /** items such as cups, mugs, glasses */
+  CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Столові прибори",
   /**
    * ring or bundle of keys
    *
@@ -579,12 +581,14 @@ export const UA: ExternalTranslations = {
    *   ItemName_Base.KeyRing = "Зв'язка ключів"
    */
   CAEC_Override_KeyRing: undefined,
+  /** items such as pans/pots to cook in */
+  CAEC_Override_Pan: undefined,
   /** photos */
-  CAEC_Fallback_Photo: undefined,
+  CAEC_Fallback_Photo: "Фото",
   /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: undefined,
+  CAEC_Override_Smoking: "Куріння",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Кухонне приладдя",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
+  CAEC_Override_Wearable: "Носимий",
 };
