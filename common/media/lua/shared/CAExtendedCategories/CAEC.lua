@@ -11,30 +11,32 @@ CAEC.Initialized = false;
 -- Static mapping for items that need specific categories
 ---@type table<string, string>
 CAEC.StaticCategories = {
-  TwigsBundle = "MaterialBundled",
+  ["Base.BeerPack"]         = "BeverageBox",
+  ["Base.BeerCanPack"]      = "BeverageBox",
 
-  Brochure = "LiteratureBrochure",
-  Flier = "LiteratureFlier",
-  ComicBook = "LiteratureComic",
-  ComicBook_Retail = "LiteratureComic",
-  HottieZ = "LiteratureAdult",
-  HottieZ_New = "LiteratureAdult",
-  RPGmanual = "LiteratureRpgManual",
+  ["Base.Garbagebag_box"]   = "ContainerBox",
 
-  Pepper = "FoodSpice",
-  BunsHotdog = "FoodPerishableBread",
-  BunsHamburger = "FoodPerishableBread",
-  Honey = "FoodNoExplicit",
-  Peppermint = "FoodCandy",
-  Yeast = "FoodBaking",
-  BakingSoda = "FoodBaking",
+  ["Base.Yeast"]            = "FoodBaking",
+  ["Base.BakingSoda"]       = "FoodBaking",
+  ["Base.Peppermint"]       = "FoodCandy",
+  ["Base.Honey"]            = "FoodNoExplicit",
+  ["Base.BunsHotdog"]       = "FoodPerishableBread",
+  ["Base.BunsHamburger"]    = "FoodPerishableBread",
+  ["Base.Pepper"]           = "FoodSpice",
 
-  -- :(
-  SmokingPipe = "Smoking",
-  CanPipe = "Smoking",
+  ["Base.HottieZ"]          = "LiteratureAdult",
+  ["Base.HottieZ_New"]      = "LiteratureAdult",
+  ["Base.Brochure"]         = "LiteratureBrochure",
+  ["Base.ComicBook"]        = "LiteratureComic",
+  ["Base.ComicBook_Retail"] = "LiteratureComic",
+  ["Base.Flier"]            = "LiteratureFlier",
+  ["Base.RPGmanual"]        = "LiteratureRpgManual",
 
-  BeerPack = "BeverageBox",
-  BeerCanPack = "BeverageBox",
+  ["Base.TwigsBundle"]      = "MaterialBundled",
+  ["Base.Zipties"]          = "MaterialMaintenance",
+
+  ["Base.SmokingPipe"]      = "Smoking",
+  ["Base.CanPipe"]          = "Smoking",
 }
 
 ---@type ArrayList<fun(item:Item, instance:InventoryItem?): string?, boolean?>>
@@ -64,9 +66,12 @@ local function initializeCategorizers()
   CAEC.ScriptCategorizers:add(Categorizers.Apparel)
   CAEC.ScriptCategorizers:add(Categorizers.Container)
   CAEC.ScriptCategorizers:add(Categorizers.Literature)
+  CAEC.ScriptCategorizers:add(Categorizers.Tool)
   CAEC.ScriptCategorizers:add(Categorizers.Weapon)
-  CAEC.ScriptCategorizers:add(CAEC.TryCategorizeInstanceSpecific)
+  CAEC.ScriptCategorizers:add(Categorizers.Memento)
+  CAEC.ScriptCategorizers:add(CAEC.CategorizeInstance)
   CAEC.ScriptCategorizers:add(Categorizers.BoxesAndStacks)
+  CAEC.ScriptCategorizers:add(Categorizers.CategoryOverride)
 
   -- instance
   CAEC.InstanceCategorizers:add(Categorizers.Food)
@@ -93,7 +98,7 @@ local function isDynamicItem(instance)
     CAEC.UpdateStart()
   end
 
-  local name = instance:getScriptItem():getName()
+  local name = instance:getScriptItem():getFullName()
 
   local instanceSpecific = CAEC.InstanceSpecific[name] == true
   local tweaked = CAEC.ItemTweaks[name] ~= nil
@@ -198,11 +203,8 @@ end
 ---@param item Item
 ---@param instance InventoryItem|nil
 ---@return string|nil, boolean
-function CAEC.TryCategorizeInstanceSpecific(item, instance)
-  local resolved = Utils.CreateInstanceIfNeeded(item, instance, "TryCategorizeInstanceSpecific")
-  local category, instanceSpecific = DoCategorize(CAEC.InstanceCategorizers, item, resolved)
-
-  return category, instanceSpecific
+function CAEC.CategorizeInstance(item, instance)
+  return DoCategorize(CAEC.InstanceCategorizers, item, instance)
 end
 
 ---@param categorizer fun(item:Item, instance:InventoryItem?): string?, boolean?>
@@ -216,7 +218,7 @@ end
 ---@param instance InventoryItem|nil
 ---@return string|nil, boolean
 function CAEC.CategorizeItem(item, instance)
-  local itemName = item:getName();
+  local itemName = item:getFullName();
 
   ---@type string|nil
   local category = CAEC.ItemTweaks[itemName] or CAEC.StaticCategories[itemName];
@@ -229,8 +231,8 @@ function CAEC.CategorizeItem(item, instance)
 
   if not category then
     local categorizers = instanceSpecific and CAEC.InstanceCategorizers or CAEC.ScriptCategorizers
-
-    category, instanceSpecific = DoCategorize(categorizers, item, instance)
+    local resolved = Utils.CreateInstanceIfNeeded(item, instance, "CategorizeItem")
+    category, instanceSpecific = DoCategorize(categorizers, item, resolved)
 
     if instanceSpecific then
       CAEC.InstanceSpecific[itemName] = true
@@ -256,7 +258,7 @@ function CAEC.UpdateInstanceItems(items, trigger)
   for i = 0, total - 1 do
     local instance = items:get(i)
     local item = instance:getScriptItem()
-    local itemName = item:getName()
+    local itemName = item:getFullName()
     local instanceName = instance:getName()
 
     local instanceSpecific = CAEC.InstanceSpecific[itemName] or false

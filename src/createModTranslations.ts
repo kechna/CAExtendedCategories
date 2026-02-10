@@ -4,6 +4,7 @@ import { searchers } from "./searchers.ts";
 import { PzCategory, WEAPON_CATEGORIES } from "./zomboid/categories.ts";
 import { useTranslations } from "./i18n/useTranslations.ts";
 import { ALL_TRANSLATIONS } from "./i18n/translations";
+import { TOOL_ADDON } from "./categories.ts";
 
 export const createModTranslations = (async (context: FullModContext) => {
   const { save, t, addOr, created } = await useTranslations(context, SUPPORTED_LANGUAGES);
@@ -43,6 +44,9 @@ export const createModTranslations = (async (context: FullModContext) => {
 
   SUPPORTED_LANGUAGES.forEach((language) => {
     addOr(PzCategory.Literature, PzCategory.Junk, language);
+    addOr(PzCategory.Material, PzCategory.Junk, language);
+    addOr(PzCategory.Memento, PzCategory.Container, language);
+    addOr(PzCategory.Tool, PzCategory.Junk, language);
 
     addOr(PzCategory.Cooking, "ContainerLiquid", language);
 
@@ -54,11 +58,13 @@ export const createModTranslations = (async (context: FullModContext) => {
     addOr(PzCategory.Accessory + "Top", PzCategory.Container, language);
     addOr(PzCategory.Accessory + "Top", PzCategory.Gardening, language);
 
-    WEAPON_ADDON.filter((category) => !category.includes(PzCategory.Weapon)).forEach((category) => {
-      MELEE_WEAPON_CATEGORIES.forEach((skill) => {
-        addOr(category, `${PzCategory.Weapon}${skill}`, language);
+    [...WEAPON_ADDON, ...TOOL_ADDON.map((i) => "Tool" + i)]
+      .filter((category) => !category.includes(PzCategory.Weapon))
+      .forEach((category) => {
+        MELEE_WEAPON_CATEGORIES.forEach((skill) => {
+          addOr(category, `${PzCategory.Weapon}${skill}`, language);
+        });
       });
-    });
   });
 
   Object.entries(ALL_TRANSLATIONS).forEach(([lang, translations]) => {

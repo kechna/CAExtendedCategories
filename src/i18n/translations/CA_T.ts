@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Catalan
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -106,17 +106,18 @@ export const CA: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Primers auxilis"
    *   IGUI_perks_Doctor = "Primers auxilis"
+   *   IGUI_ItemCat_FirstAid = "Primers auxilis"
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Pesca"
    *   IGUI_perks_Fishing = "Pesca"
    *   ContextMenu_Fishing = "Pesca"
+   *   IGUI_CraftCategory_Fishing = "Pesca"
    */
   CAEC_Override_Fishing: undefined,
   /**
@@ -134,7 +135,7 @@ export const CA: ExternalTranslations = {
    */
   CAEC_Override_Furniture: undefined,
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Jardineria"
@@ -215,7 +216,7 @@ export const CA: ExternalTranslations = {
    */
   CAEC_Override_Tool: undefined,
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_perks_Trapping = "Trampes"
@@ -243,12 +244,57 @@ export const CA: ExternalTranslations = {
    */
   CAEC_Override_Axe: undefined,
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Forja"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "Arma llarga contundent"
    */
   CAEC_Override_Blunt: undefined,
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Fusteria"
+   *   IGUI_perks_Carpentry = "Fusteria"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Electricitat"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Agricultura"
+   *   IGUI_perks_Farming = "Agricultura"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Exploraci�"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /**
    * long blade weapon skill
    *
@@ -256,6 +302,31 @@ export const CA: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "Fulla llarga"
    */
   CAEC_Override_LongBlade: undefined,
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "Manteniment"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mec�nica"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "Metal�listeria"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -277,6 +348,22 @@ export const CA: ExternalTranslations = {
    *   IGUI_perks_Spear = "Llan�a"
    */
   CAEC_Override_Spear: "Llança",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Costura"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Metal�listeria"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: undefined,
   /** lower body clothing, pants, shorts, skirts */
@@ -592,10 +679,12 @@ export const CA: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: undefined,
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: undefined,
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
-};
+  CAEC_Override_Wearable: undefined
+}

@@ -5,9 +5,9 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 ---@class CAEC_ItemCategorizer : ISBaseObject
 ---@field public derive fun(self: CAEC_ItemCategorizer, className: string): CAEC_ItemCategorizer
 ---@field public new fun(self: CAEC_ItemCategorizer): CAEC_ItemCategorizer
----@field public execute fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem?): (string|nil?, boolean?)
----@field public categorize fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem?): (string|nil?, boolean?)
----@field public validate fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem?): boolean
+---@field public execute fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string|nil?, boolean?)
+---@field public categorize fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string|nil?, boolean?)
+---@field public validate fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): boolean
 ---@field public getVerbosity fun(self: CAEC_ItemCategorizer): number
 ---@field public isDebug fun(self: CAEC_ItemCategorizer): boolean
 ---@field public log fun(self: CAEC_ItemCategorizer, string: string, level?: number)

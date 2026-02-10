@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Chinese (Simplified)
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -106,17 +106,18 @@ export const CN: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "急救"
    *   IGUI_perks_Doctor = "急救"
+   *   IGUI_ItemCat_FirstAid = "急救"
    */
   CAEC_Override_FirstAid: "急救",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "钓鱼"
    *   IGUI_perks_Fishing = "钓鱼"
    *   ContextMenu_Fishing = "钓鱼"
+   *   IGUI_CraftCategory_Fishing = "钓鱼"
    */
   CAEC_Override_Fishing: "钓鱼",
   /**
@@ -134,7 +135,7 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_Furniture: "家具",
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "园艺"
@@ -215,7 +216,7 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_Tool: "工具",
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "诱捕"
@@ -244,12 +245,57 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_Axe: "斧头",
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "锻造"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "长棍"
    */
   CAEC_Override_Blunt: "长棍",
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "木工"
+   *   IGUI_perks_Carpentry = "木工"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "电工"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "农务"
+   *   IGUI_perks_Farming = "耕作"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "搜寻"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /**
    * long blade weapon skill
    *
@@ -257,6 +303,31 @@ export const CN: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "长刀"
    */
   CAEC_Override_LongBlade: "长刀",
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "维护"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "技工"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "金属加工"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -278,6 +349,22 @@ export const CN: ExternalTranslations = {
    *   IGUI_perks_Spear = "长矛"
    */
   CAEC_Override_Spear: "长矛",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "缝纫"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "金工"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "手臂",
   /** lower body clothing, pants, shorts, skirts */
@@ -593,10 +680,12 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Override_Photo: "照片",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "吸烟",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "可穿戴",
-};
+  CAEC_Override_Wearable: "可穿戴"
+}

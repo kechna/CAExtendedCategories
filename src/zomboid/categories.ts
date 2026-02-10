@@ -93,7 +93,7 @@ export enum PzCategory {
   Raccoon = "Raccoon",
   Spider = "Spider",
   Squirrel = "Squirrel",
-  Teddy = "Teddy",
+  TeddyBear = "Teddy Bear",
 }
 
 export const USED_CATEGORIES = [
@@ -184,5 +184,5 @@ export const TOY_CATEGORIES = [
   PzCategory.Raccoon,
   PzCategory.Spider,
   PzCategory.Squirrel,
-  PzCategory.Teddy,
+  PzCategory.TeddyBear,
 ] as const;

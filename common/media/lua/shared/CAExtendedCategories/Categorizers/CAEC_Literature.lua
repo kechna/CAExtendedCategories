@@ -1,7 +1,7 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
-
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
-
+local CAEC = require("CAExtendedCategories.CAEC")
+---@class CAEC_Literature: CAEC_ItemCategorizer
 local Literature = CAEC_ItemCategorizer:derive("Literature")
 
 function Literature:validate(item, _instance)
@@ -20,6 +20,15 @@ end
 
 function Literature:categorize(item, instance)
   local category = nil
+
+  if instanceof(instance, "Literature") then
+    ---@cast instance Literature
+    if instance:canBeWrite() then
+      return "LiteratureOrJunk"
+    elseif instance:getLearnedRecipes() ~= nil then
+      return "LiteratureRecipe"
+    end
+  end
 
   if item:hasTag(ItemTag.UNINTERESTING) then
     category = "LiteratureOrJunk"
@@ -47,15 +56,7 @@ function Literature:categorize(item, instance)
   elseif item:getReadType() == "Photo" then
     category = "LiteraturePhoto"
   else
-    ---@type Literature
-    local resolved = Utils.CreateInstanceIfNeeded(item, instance, self.Type)
-
-    -- cover the cases where the item doesn't have recipes until it's instanced, e.g. RecipeClipping and SewingPattern
-    if instanceof(resolved, "Literature") and resolved:getLearnedRecipes() ~= nil then
-      category = "LiteratureRecipe"
-    else
-      category = "LiteratureOrJunk"
-    end
+    category = "LiteratureOrJunk"
   end
 
   return category

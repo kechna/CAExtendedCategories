@@ -11,8 +11,8 @@ end
 
 ---@class CAEC_FoodCategorizer: CAEC_ItemCategorizer
 ---@field public foodTypeMap table<string, CAEC_FoodType>
+---@field public categorize fun(self: CAEC_ItemCategorizer, item: Item, instance: Food): (string|nil?, boolean?)
 ---@field public getFoodType fun(self: CAEC_FoodCategorizer, item: Item, instance: Food): string|nil, boolean
----@field public fromInstance fun(self: CAEC_FoodCategorizer, item: Item, instance: Food): string|nil, boolean
 ---@field public guessFoodOrSnack fun(self: CAEC_FoodCategorizer, item: Item, instance: Food): string|nil
 local Food = CAEC_ItemCategorizer:derive("Food")
 
@@ -23,7 +23,6 @@ function Food:new()
   --- @type CAEC_FoodCategorizer
   local o = CAEC_ItemCategorizer.new(self)
 
-  o.verbosity = Debug.Level.Debug
   o.foodTypeMap = {
     BakingFat = FoodType.BAKING,
     Oil = FoodType.BAKING,
@@ -149,10 +148,31 @@ function Food:guessFoodOrSnack(item, instance)
 
   local unhappiness = instance:getUnhappyChangeUnmodified()
 
+  if unhappiness > 0 then
+    --self:log("probably not meant for eating: " .. item:getFullName() .. " (unhappiness: " .. tostring(unhappiness) .. ")", Debug.Level.Info)
+    return nil
+  end
+
   local calories = round(instance:getCalories() / weight, 1)
   --local carbs = round(instance:getCarbohydrates() / weight, 1)
   --local lipids = round(instance:getLipids() / weight, 1)
   local proteins = round(instance:getProteins() / weight, 1)
+  --local hunger = round(instance:getHungerChange() / weight, 1)
+  local thirst = round(instance:getThirstChange() / weight, 1)
+
+  --print(string.format(
+  --  "guessFoodOrSnack: %s (calories: %s, hunger: %s, thirst: %s, unhappiness: %s)",
+  --  item:getFullName(),
+  --  tostring(calories),
+  --  tostring(hunger),
+  --  tostring(thirst),
+  --  tostring(unhappiness)
+  --))
+
+  if thirst > 1 then
+    --self:log("probably not meant for eating: " .. item:getFullName() .. " (thirst: " .. tostring(thirst) .. ")", Debug.Level.Info)
+    return nil
+  end
 
   if calories >= 300 and unhappiness <= 0 then
     --self:log(string.format(
@@ -176,7 +196,28 @@ function Food:guessFoodOrSnack(item, instance)
   return nil
 end
 
-function Food:fromInstance(item, instance)
+---@param item Item
+---@param instance InventoryItem?
+---@return boolean
+function Food:validate(item, instance)
+  if instance and instance:isFluidContainer() then
+    return false
+  end
+
+  return item:isItemType(ItemType.FOOD)
+      and instanceof(instance, "Food")
+      and not item:hasTag(ItemTag.ANIMAL_HEAD)
+      and not item:hasTag(ItemTag.SMOKABLE)
+end
+
+function Food:categorize(item, instance)
+  local eatType = item:getEatType()
+  local pourType = item:getPourType()
+
+  if pourType == "Mug" or eatType == "bottle" then
+    return nil, true
+  end
+
   local foodType, instanceSpecific = self:getFoodType(item, instance)
 
   if FoodType.SKIP == foodType then
@@ -187,8 +228,6 @@ function Food:fromInstance(item, instance)
   local category = BASE_CATEGORY
 
   if instance:isSpice() then
-    local eatType = item:getEatType()
-
     if FoodType.NO_EXPLICIT == foodType and (
           eatType ~= "GlugFood"
           and eatType ~= "Candrink"
@@ -201,6 +240,9 @@ function Food:fromInstance(item, instance)
     end
   elseif instance:getLootType() == "CannedFood" and item:hasTag(ItemTag.HAS_METAL) then
     foodType = FoodType.CANNED
+  elseif item:hasTag(ItemTag.VERMIN)
+      or instance:getCustomEatSound() == "EatingDeadAnimal" then
+    foodType = FoodType.MEAT
   end
 
   if not foodType then
@@ -220,48 +262,13 @@ function Food:fromInstance(item, instance)
   if foodType then
     category = category .. foodType
   else
-    local boxed = BoxesAndStacks.addToCategory(category, item)
+    local boxed = BoxesAndStacks.addToCategory(category, item, instance)
 
     if boxed then
       self:log("BOX: " .. item:getFullName(), Debug.Level.Info)
       category = boxed
     end
   end
-
-  return category, instanceSpecific
-end
-
----@param item Item
----@param instance InventoryItem?
----@return boolean
-function Food:validate(item, instance)
-  if instance and instance:isFluidContainer() then
-    return false
-  end
-
-  local originalCategory = item:getDisplayCategory()
-
-  return item:isItemType(ItemType.FOOD)
-      and (not originalCategory or originalCategory:contains(BASE_CATEGORY))
-      and not item:hasTag(ItemTag.ANIMAL_HEAD)
-      and not item:hasTag(ItemTag.SMOKABLE)
-      and item:getPourType() ~= "Mug"
-end
-
----@param item Item
----@param instance InventoryItem?
-function Food:categorize(item, instance)
-  ---@type string|nil
-  local category = nil
-  local instanceSpecific = false
-  local lootType = item:getLootType()
-
-  if lootType == "Other" then
-    self:log("-> item with 'Other' loot type: " .. item:getName(), Debug.Level.Info)
-  end
-
-  local resolved = Utils.CreateInstanceIfNeeded(item, instance, self.Type)
-  category, instanceSpecific = self:fromInstance(item, resolved)
 
   return category, instanceSpecific
 end

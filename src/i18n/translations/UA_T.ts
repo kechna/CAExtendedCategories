@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Ukrainian
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -106,17 +106,18 @@ export const UA: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Перша допомога"
    *   IGUI_perks_Doctor = "Перша допомога"
+   *   IGUI_ItemCat_FirstAid = "Перша допомога"
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Риболовля"
    *   IGUI_perks_Fishing = "Рибальство"
    *   ContextMenu_Fishing = "Рибальство"
+   *   IGUI_CraftCategory_Fishing = "Рибальство"
    */
   CAEC_Override_Fishing: undefined,
   /**
@@ -134,7 +135,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Furniture: undefined,
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Садівництво"
@@ -215,7 +216,7 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Tool: undefined,
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "Пастка"
@@ -244,12 +245,57 @@ export const UA: ExternalTranslations = {
    */
   CAEC_Override_Axe: undefined,
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Коваль"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "Довг. дробяще"
    */
   CAEC_Override_Blunt: undefined,
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Будівництво"
+   *   IGUI_perks_Carpentry = "Будівництво"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Електроніка"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Фермерство"
+   *   IGUI_perks_Farming = "Фермерство"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Збиральництво"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /**
    * long blade weapon skill
    *
@@ -257,6 +303,31 @@ export const UA: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "Довг. ріжуче"
    */
   CAEC_Override_LongBlade: undefined,
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "Міцність"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Автомеханіка"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "Газозварка"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -278,6 +349,22 @@ export const UA: ExternalTranslations = {
    *   IGUI_perks_Spear = "Списи"
    */
   CAEC_Override_Spear: undefined,
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Шиття"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Газозварка"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Передпліччя",
   /** lower body clothing, pants, shorts, skirts */
@@ -585,10 +672,12 @@ export const UA: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Фото",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Куріння",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Кухонне приладдя",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Носимий",
-};
+  CAEC_Override_Wearable: "Носимий"
+}

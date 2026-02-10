@@ -20,13 +20,16 @@ local Categorizers = {
   Ammo = create("Ammo"),
   Apparel = create("Apparel"),
   BoxesAndStacks = create("BoxesAndStacks"),
+  CategoryOverride = create("CategoryOverride"),
   Container = create("Container"),
   Cooking = create("Cooking"),
   FluidContainer = create("FluidContainer"),
   Food = create("Food"),
   Literature = create("Literature"),
   Material = create("Material"),
+  Memento = create("Memento"),
   Smoking = create("Smoking"),
+  Tool = create("Tool"),
   Weapon = create("Weapon"),
 }
 

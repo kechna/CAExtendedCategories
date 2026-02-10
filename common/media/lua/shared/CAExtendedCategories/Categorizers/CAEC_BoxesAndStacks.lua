@@ -1,25 +1,41 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
+local Debug = require("CAExtendedCategories/CAEC_Debug")
 
 --- @class CAEC_BoxesAndStacksCategorizer: CAEC_ItemCategorizer
 local BoxesAndStacks = CAEC_ItemCategorizer:derive("BoxesAndStacks")
 
-function BoxesAndStacks:validate(item, _instance)
-  return item:getDoubleClickRecipe() ~= nil
+function BoxesAndStacks:validate(_item, _instance)
+  return true
 end
 
-local function byName(item)
+--- @param item Item
+--- @param instance InventoryItem
+--- @return string|nil, string|nil
+local function byName(item, instance)
+  local iconTexture = instance:getIcon()
+  local icon = iconTexture and iconTexture:getName() or nil
+
+  if icon and not icon:contains("Parcel") then
+    return nil, nil
+  end
+
+  ---@type string|nil
+  local suffix = nil
+  local category = (icon and icon:contains("Food")) and "Food" or nil
   local name = item:getName():lower()
 
   if name:contains("box") then
-    return "Box"
+    suffix = "Box"
   elseif name:contains("carton") then
-    return "Carton"
+    suffix = "Carton"
   end
 
-  return nil
+  return suffix, category
 end
 
+--- @param  item Item
+--- @return string|nil
 local function byRecipe(item)
   ---@type string|nil
   local recipe = item:getDoubleClickRecipe()
@@ -48,22 +64,35 @@ local function byRecipe(item)
 
   return suffix
 end
-function BoxesAndStacks.addToCategory(existingCategory, item)
+
+--- @param existingCategory string|nil
+--- @param item Item
+--- @param instance InventoryItem
+--- @return string|nil
+function BoxesAndStacks.addToCategory(existingCategory, item, instance)
   ---@type string|nil
   local category = nil
-  local suffix = byRecipe(item) or byName(item)
+  local suffix = byRecipe(item)
 
-  if suffix and not Utils.EndsWith(suffix, existingCategory)then
+  if not suffix then
+    suffix, category = byName(item, instance)
+
+    if suffix and not existingCategory and category then
+      existingCategory = category
+    end
+  end
+
+
+  if suffix and existingCategory and not Utils.EndsWith(suffix, existingCategory) then
     category = existingCategory .. suffix
   end
 
   return category
 end
-
-function BoxesAndStacks:categorize(item, _instance)
+function BoxesAndStacks:categorize(item, instance)
   local existingCategory = item:getDisplayCategory()
 
-  return self.addToCategory(existingCategory, item)
+  return self.addToCategory(existingCategory, item, instance)
 end
 
 return BoxesAndStacks

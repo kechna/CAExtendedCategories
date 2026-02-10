@@ -5,11 +5,11 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 ---@class CAEC_FluidContainer : CAEC_ItemCategorizer
 ---@field searchTags ItemTag[]
 local FluidContainer = CAEC_ItemCategorizer:derive("FluidContainer")
+
 function FluidContainer:new()
   ---@type CAEC_FluidContainer
   local o = CAEC_ItemCategorizer.new(self)
 
-  o.verbosity = Debug.Level.Debug
   o.searchTags = {
     ItemTag.GLASS_BOTTLE,
     ItemTag.GLASS_BOTTLE_SMALL,
@@ -44,8 +44,6 @@ function FluidContainer:categorize(item, instance)
     return nil, true
   end
 
-  self.verbosity = Debug.Level.Debug
-
   ---@type string|nil
   local category = nil
 
@@ -57,10 +55,10 @@ function FluidContainer:categorize(item, instance)
         or containerName == "pan"
         or containerName == "saucepan"
     then
-      --category = "CookingPan"
-    elseif containerName == "mug"
-        or containerName == "glass"
-        or containerName == "cup"
+      category = "CookingPan"
+    elseif containerName == "cup"
+        or containerName:contains("mug")
+        or containerName:contains("glass")
     then
       category = "CookingCup"
     else
@@ -86,10 +84,10 @@ function FluidContainer:categorize(item, instance)
     return "AppearanceOrLiquid"
   elseif fluid:isCategory(FluidCategory.Fuel) then
     return "LiquidFuel"
-  elseif fluid:isCategory(FluidCategory.Industrial) then
-    return "LiquidIndustrial"
-  elseif fluid:isCategory(FluidCategory.Poisons) then
-    return "LiquidPoison"
+  --elseif fluid:isCategory(FluidCategory.Industrial) then
+  --  return "LiquidIndustrial"
+  --elseif fluid:isCategory(FluidCategory.Poisons) then
+  --  return "LiquidPoison"
   elseif fluid:isCategory(FluidCategory.Medical) then
     return "FirstAidOrLiquid"
   elseif fluidTypeString == "cookingoil" then

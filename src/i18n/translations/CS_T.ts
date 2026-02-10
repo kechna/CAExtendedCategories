@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Czech
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -106,17 +106,18 @@ export const CS: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Prvn� pomoc"
    *   IGUI_perks_Doctor = "Prvn� pomoc"
+   *   IGUI_ItemCat_FirstAid = "Prvn� pomoc"
    */
   CAEC_Override_FirstAid: "První pomoc",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Ryba�en�"
    *   IGUI_perks_Fishing = "Ryba�en�"
    *   ContextMenu_Fishing = "Ryba�en�"
+   *   IGUI_CraftCategory_Fishing = "Ryba�en�"
    */
   CAEC_Override_Fishing: "Rybaření",
   /**
@@ -134,7 +135,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Furniture: "Nábytek",
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Zahradni�en�"
@@ -215,7 +216,7 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Tool: "Nástroj",
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "Pasti"
@@ -244,12 +245,57 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Override_Axe: undefined,
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Kov��stv�"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "Dlouh� tup� zbr."
    */
   CAEC_Override_Blunt: "Tupá zbraň",
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Tesa�stv�"
+   *   IGUI_perks_Carpentry = "Tesa�stv�"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Elektrik��stv�"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Farma�en�"
+   *   IGUI_perks_Farming = "Farma�en�"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Sb�r z�sob"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /**
    * long blade weapon skill
    *
@@ -257,6 +303,31 @@ export const CS: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "Dlouh� �epel"
    */
   CAEC_Override_LongBlade: "Dlouhá čepel",
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "�dr�ba"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mechanika"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "Obr�b�n� kov�"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -278,6 +349,22 @@ export const CS: ExternalTranslations = {
    *   IGUI_perks_Spear = "O�t�p"
    */
   CAEC_Override_Spear: "Oštěp",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Krej�ovstv�"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Obr�b�n� kov�"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Paže",
   /** lower body clothing, pants, shorts, skirts */
@@ -593,10 +680,12 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Kouření",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Kuchyňské náčiní",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Nositelný",
-};
+  CAEC_Override_Wearable: "Nositelný"
+}

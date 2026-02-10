@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Romanian
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -53,7 +53,7 @@ export const RO: ExternalTranslations = {
   /** first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: "Primul ajutor",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   ContextMenu_Fishing = "Pescuit"
@@ -63,7 +63,7 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Food: "Mâncare",
   /** furniture items */
   CAEC_Fallback_Furniture: "Mobilier",
-  /** gardening items */
+  /** gardening skill */
   CAEC_Fallback_Gardening: "Grădinărit",
   /** household items */
   CAEC_Fallback_Household: "Gospodărie",
@@ -89,7 +89,7 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Sports: "Sport",
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Unealtă",
-  /** trapping items */
+  /** trapping skill */
   CAEC_Fallback_Trapping: "Capcane",
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: "Întreținere vehicule",
@@ -97,16 +97,50 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Armă",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Topor",
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: undefined,
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contondent",
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /** carpentry skill */
+  CAEC_Fallback_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /** electrical skill */
+  CAEC_Fallback_Electrical: undefined,
+  /** farming/agriculture skill */
+  CAEC_Fallback_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /** foraging skill */
+  CAEC_Fallback_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lamă lungă",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: undefined,
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Lamă scurtă",
   /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Contondent scurt",
   /** spear weapon skill */
   CAEC_Fallback_Spear: "Suliță",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /** welding skill */
+  CAEC_Fallback_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Brațe",
   /** lower body clothing, pants, shorts, skirts */
@@ -296,10 +330,12 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumat",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Rucsacuri",
-};
+  CAEC_Override_Wearable: "Rucsacuri"
+}

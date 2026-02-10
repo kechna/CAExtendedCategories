@@ -106,17 +106,18 @@ export const PTBR: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Primeiros Socorros"
    *   IGUI_perks_Doctor = "Primeiros Socorros"
+   *   IGUI_ItemCat_FirstAid = "Primeiros Socorros"
    */
   CAEC_Fallback_FirstAid: "Primeiros Socorros",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Pescaria"
    *   IGUI_perks_Fishing = "Pescaria"
    *   ContextMenu_Fishing = "Pescar"
+   *   IGUI_CraftCategory_Fishing = "Pescaria"
    */
   CAEC_Fallback_Fishing: "Pescaria",
   /**
@@ -134,7 +135,7 @@ export const PTBR: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Mobília",
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Agricultura"
@@ -215,7 +216,7 @@ export const PTBR: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Ferramenta",
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "Caça"
@@ -244,12 +245,57 @@ export const PTBR: ExternalTranslations = {
    */
   CAEC_Fallback_Axe: "Machados",
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Forja"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "Contundentes Longos"
    */
   CAEC_Fallback_Blunt: "Contundentes Longos",
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Carpintaria"
+   *   IGUI_perks_Carpentry = "Carpintaria"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Elétrica"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Agricultura"
+   *   IGUI_perks_Farming = "Agricultura"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Coleta"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /**
    * long blade weapon skill
    *
@@ -257,6 +303,31 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "Lâminas Longas"
    */
   CAEC_Fallback_LongBlade: "Lâminas Longas",
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "Manutenção"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mecânica"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "Metalurgia"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -278,6 +349,22 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_perks_Spear = "Lanças"
    */
   CAEC_Fallback_Spear: "Lanças",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Costura"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Metalurgia"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Braços",
   /** lower body clothing, pants, shorts, skirts */
@@ -593,6 +680,8 @@ export const PTBR: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Foto",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

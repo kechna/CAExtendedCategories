@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Portuguese
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -63,7 +63,7 @@ export const PT: ExternalTranslations = {
   /** first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: undefined,
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_perks_Fishing = "Pesca"
@@ -78,7 +78,7 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Food: undefined,
   /** furniture items */
   CAEC_Fallback_Furniture: undefined,
-  /** gardening items */
+  /** gardening skill */
   CAEC_Fallback_Gardening: undefined,
   /** household items */
   CAEC_Fallback_Household: undefined,
@@ -109,7 +109,7 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Sports: undefined,
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: undefined,
-  /** trapping items */
+  /** trapping skill */
   CAEC_Fallback_Trapping: undefined,
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: undefined,
@@ -122,6 +122,8 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Weapon: undefined,
   /** axe weapon skill */
   CAEC_Fallback_Axe: undefined,
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: undefined,
   /**
    * long blunt weapon skill
    *
@@ -129,14 +131,56 @@ export const PT: ExternalTranslations = {
    *   IGUI_perks_Blunt = "Armas contundentes"
    */
   CAEC_Override_Blunt: undefined,
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_perks_Carpentry = "Carpintaria"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /** electrical skill */
+  CAEC_Fallback_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_perks_Farming = "Agricultura"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /** foraging skill */
+  CAEC_Fallback_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: undefined,
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: undefined,
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: undefined,
   /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: undefined,
   /** spear weapon skill */
   CAEC_Fallback_Spear: undefined,
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /** welding skill */
+  CAEC_Fallback_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: undefined,
   /** lower body clothing, pants, shorts, skirts */
@@ -352,10 +396,12 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Pan: undefined,
   /** photos */
   CAEC_Fallback_Photo: undefined,
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: undefined,
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
-};
+  CAEC_Override_Wearable: undefined
+}

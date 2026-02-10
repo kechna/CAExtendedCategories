@@ -1,22 +1,20 @@
 import type { Searcher } from "./types.ts";
 import { PzCategory, BOXABLE_CATEGORIES, USED_CATEGORIES } from "./zomboid/categories.ts";
 import { getFoodTypes } from "./getFoodTypes.ts";
+import { TOOL_ADDON } from "./categories.ts";
 
 const foodTypes = getFoodTypes();
 
 export const searchers: Searcher[] = [
+  { categories: ["Beverage"], searchKeys: [] },
+  { categories: ["FirstAid"], searchKeys: ["IGUI_perks_Doctor"] },
+  { categories: ["KeyRing"], searchKeys: ["ItemName_Base.%s"] },
   { categories: ["Smoking"] },
+  { categories: ["Mechanics"], searchKeys: ["IGUI_perks_%s"] },
 
   {
     categories: USED_CATEGORIES,
     searchKeys: ["IGUI_ItemCat_%s", "IGUI_perks_%s", "ItemName_Base.%s"],
-  },
-
-  { categories: ["FirstAid"], searchKeys: ["IGUI_perks_Doctor"] },
-
-  {
-    categories: ["KeyRing"],
-    searchKeys: ["ItemName_Base.%s"],
   },
 
   {
@@ -106,14 +104,10 @@ export const searchers: Searcher[] = [
       "ItemName_Base.%s2",
     ],
   },
-  {
-    categories: ["Beverage"],
-    searchKeys: [],
-  },
 
   {
     prefix: "Liquid",
-    categories: ["Fuel", "Dye", "Industrial"],
+    categories: ["Fuel", "Dye", "Poison" /* "Industrial" */],
     searchKeys: ["Fluid_Name_%s", "Fluid_Category_%s", "ContextMenu_%s", "ItemName_Base.%s", "ItemName_Base.%s2"],
   },
 
@@ -133,14 +127,39 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Material,
+    categories: [
+      // "Blacksmith",
+      "Bundled",
+      "Butchering",
+      "Carpentry",
+      "Electrical",
+      "Maintenance",
+      "Pottery",
+      "Tailoring",
+      "Metalworking",
+      PzCategory.FireSource,
+      PzCategory.Tool,
+      PzCategory.Weapon,
+    ],
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
+  },
+
+  {
+    prefix: PzCategory.Camping,
     categories: ["Bundled"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 
   {
-    prefix: "Container",
-    categories: ["Liquid", "Wearable"],
+    prefix: PzCategory.Container,
+    categories: ["Liquid", "Wearable", PzCategory.Ammo, "Box"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
+  },
+
+  {
+    prefix: PzCategory.Container + "Wearable",
+    categories: [PzCategory.Ammo],
+    searchKeys: ["IGUI_ItemCat_%s"],
   },
 
   {
@@ -178,5 +197,16 @@ export const searchers: Searcher[] = [
   {
     prefix: PzCategory.Cooking,
     categories: ["Cutlery", "Utensil", "Cup", "Pan"],
+  },
+
+  {
+    prefix: PzCategory.Memento,
+    categories: ["Plushie"],
+  },
+
+  {
+    prefix: PzCategory.Tool,
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
+    categories: TOOL_ADDON,
   },
 ];

@@ -67,34 +67,10 @@ export const MACHINE_LANGUAGE_COMMENTS = {
   [Language.FI]: "machine translated by me",
   [Language.FR]: "machine translated by me",
   [Language.HU]: "machine translated by me",
+  [Language.IT]: "machine translated by me",
   [Language.NO]: "machine translated by me",
   [Language.PL]: "machine translated by me",
   [Language.RO]: "machine translated by me",
   [Language.RU]: "machine translated by me",
   [Language.UA]: "machine translated by me",
 };
-
-// export const SUPPORTED_LANGUAGES = [
-//   /* by me */
-//   Language.EN,
-//   /* by me */
-//   Language.NL,
-//   /* by me (machine) */
-//   Language.DE,
-//   /* by me (machine) */
-//   Language.ES,
-//   /* by me (machine) */
-//   Language.FR,
-//   /* by me (machine) */
-//   Language.HU,
-//   /* by me (machine) */
-//   Language.PL,
-//   /* by me (machine) */
-//   Language.RO,
-//   /* by me (machine) */
-//   Language.RU,
-//   /* by SIMBAproduz */
-//   Language.PTBR,
-//   /* by 莫名某某 */
-//   Language.CN,
-// ] as const;

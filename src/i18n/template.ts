@@ -14,7 +14,6 @@
  * Which translations from the game are searched for differs for each individual key.
  */
 export const TRANSLATIONS = {
-
   /* ===== vanilla categories ===== */
 
   /* accessories such as watches, necklaces, belts, gloves */
@@ -90,16 +89,56 @@ export const TRANSLATIONS = {
 
   /* axe weapon skill */
   CAEC_Fallback_Axe: "Axe",
+  /* blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Blacksmithing",
   /* long blunt weapon skill */
   CAEC_Fallback_Blunt: "Long Blunt",
+  /* butchering skill */
+  CAEC_Fallback_Butchering: "Butchering",
+  /* carpentry skill */
+  CAEC_Fallback_Carpentry: "Carpentry",
+  /* carving skill */
+  CAEC_Fallback_Carving: "Carving",
+  /* electrical skill */
+  CAEC_Fallback_Electrical: "Electrical",
+  /* farming/agriculture skill */
+  CAEC_Fallback_Farming: "Agriculture",
+  /* fishing skill */
+  CAEC_Fallback_Fishing: "Fishing",
+  /* knapping skill */
+  CAEC_Fallback_FlintKnapping: "Knapping",
+  /* foraging skill */
+  CAEC_Fallback_Foraging: "Foraging",
+  /* gardening skill */
+  CAEC_Fallback_Gardening: "Gardening",
+  /* glassmaking skill */
+  CAEC_Fallback_Glassmaking: "Glassmaking",
   /* long blade weapon skill */
   CAEC_Fallback_LongBlade: "Long Blade",
+  /* maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Maintenance",
+  /* masonry skill */
+  CAEC_Fallback_Masonry: "Masonry",
+  /* mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mechanics",
+  /* metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Metalworking",
+  /* pottery skill */
+  CAEC_Fallback_Pottery: "Pottery",
   /* short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Short Blade",
   /* short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Short Blunt",
   /* spear weapon skill */
   CAEC_Fallback_Spear: "Spear",
+  /* tailoring skill */
+  CAEC_Fallback_Tailoring: "Tailoring",
+  /* tracking skill */
+  CAEC_Fallback_Tracking: "Tracking",
+  /* trapping skill */
+  CAEC_Fallback_Trapping: "Trapping",
+  /* welding skill */
+  CAEC_Fallback_Welding: "Welding",
 
   /* ===== apparel ===== */
 
@@ -285,6 +324,8 @@ export const TRANSLATIONS = {
   CAEC_Override_Pan: "Pan",
   /* photos */
   CAEC_Fallback_Photo: "Photograph",
+  /* for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: "Plushie",
   /* smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
   /* kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

@@ -74,11 +74,12 @@ export const NL: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "Eerste hulp",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_perks_Fishing = "Vissen"
    *   ContextMenu_Fishing = "Vissen"
+   *   IGUI_CraftCategory_Fishing = "Vissen"
    */
   CAEC_Fallback_Fishing: "Vissen",
   /**
@@ -90,7 +91,7 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Food: "Voedsel",
   /** furniture items */
   CAEC_Fallback_Furniture: "Meubels",
-  /** gardening items */
+  /** gardening skill */
   CAEC_Fallback_Gardening: "Tuinieren",
   /** household items */
   CAEC_Fallback_Household: "Huishouden",
@@ -122,7 +123,7 @@ export const NL: ExternalTranslations = {
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Gereedschap",
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_perks_Trapping = "Vallen zetten"
@@ -145,12 +146,57 @@ export const NL: ExternalTranslations = {
    */
   CAEC_Fallback_Axe: "Bijl",
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Smeden"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "Bot"
    */
   CAEC_Override_Blunt: undefined,
+  /** butchering skill */
+  CAEC_Fallback_Butchering: "Slachten",
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Timmerwerk"
+   *   IGUI_perks_Carpentry = "Timmerwerk"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: "Houtsnijden",
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Elektrisch"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Landbouw"
+   *   IGUI_perks_Farming = "Landbouw"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: "Vuursteen bewerken",
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Voedsel zoeken"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: "Glas maken",
   /**
    * long blade weapon skill
    *
@@ -158,6 +204,31 @@ export const NL: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "Lang Mes"
    */
   CAEC_Override_LongBlade: undefined,
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "Onderhoud"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: "Metselen",
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mechanica"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "Metaalbewerking"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: "Keramiek",
   /**
    * short blade weapon skill
    *
@@ -179,6 +250,22 @@ export const NL: ExternalTranslations = {
    *   IGUI_perks_Spear = "Speer"
    */
   CAEC_Fallback_Spear: "Speer",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Kleermakerswerk"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: "Sporen zoeken",
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Metaal bewerking"
+   */
+  CAEC_Override_Welding: "Lassen",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Armen",
   /** lower body clothing, pants, shorts, skirts */
@@ -426,6 +513,8 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Pan: "Pan",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: "Knuffel",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Roken",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

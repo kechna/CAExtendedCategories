@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Polish
- * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -106,17 +106,18 @@ export const PL: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Pierwsza pomoc"
    *   IGUI_perks_Doctor = "Pierwsza pomoc"
+   *   IGUI_ItemCat_FirstAid = "Pierwsza pomoc"
    */
   CAEC_Fallback_FirstAid: "Pierwsza pomoc",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "WĂŞdkarstwo"
    *   IGUI_perks_Fishing = "WĂŞdkarstwo"
    *   ContextMenu_Fishing = "Łów ryby"
+   *   IGUI_CraftCategory_Fishing = "WĂŞdkarstwo"
    */
   CAEC_Fallback_Fishing: "Wędkarstwo",
   /**
@@ -134,7 +135,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Meble",
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Ogrodnictwo"
@@ -215,7 +216,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Narzędzie",
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "PuÂłapki"
@@ -244,12 +245,57 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Axe: "Topór",
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Kowalstwo"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "DÂługie obuchy"
    */
   CAEC_Fallback_Blunt: "Tępa",
+  /** butchering skill */
+  CAEC_Fallback_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Stolarstwo"
+   *   IGUI_perks_Carpentry = "Stolarstwo"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /** carving skill */
+  CAEC_Fallback_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Elektryka"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Uprawa roĹ“lin"
+   *   IGUI_perks_Farming = "Uprawa roĹ“lin"
+   */
+  CAEC_Override_Farming: undefined,
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Zbieractwo"
+   */
+  CAEC_Override_Foraging: undefined,
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: undefined,
   /**
    * long blade weapon skill
    *
@@ -257,6 +303,31 @@ export const PL: ExternalTranslations = {
    *   IGUI_perks_LongBlade = "DÂługie ostrza"
    */
   CAEC_Fallback_LongBlade: "Długie ostrze",
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "Konserwacja"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /** masonry skill */
+  CAEC_Fallback_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Naprawa pojazdĂłw"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /**
+   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   *
+   * found in-game:
+   *   IGUI_perks_Metalworking = "Spawanie"
+   */
+  CAEC_Override_Metalworking: undefined,
+  /** pottery skill */
+  CAEC_Fallback_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -278,6 +349,22 @@ export const PL: ExternalTranslations = {
    *   IGUI_perks_Spear = "WÂłĂłcznie"
    */
   CAEC_Fallback_Spear: "Włócznia",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Krawiectwo"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /** tracking skill */
+  CAEC_Fallback_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Spawanie"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Ramiona",
   /** lower body clothing, pants, shorts, skirts */
@@ -579,9 +666,9 @@ export const PL: ExternalTranslations = {
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ręcznie robiony",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Kubek",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Przybory kuchenne",
   /**
    * ring or bundle of keys
    *
@@ -590,13 +677,15 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_KeyRing: "Pęk kluczy",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Naczynie",
   /** photos */
   CAEC_Fallback_Photo: "Zdjęcie",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: "Peluche",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Palenie",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Do noszenia",
-};
+  CAEC_Override_Wearable: "Do noszenia"
+}

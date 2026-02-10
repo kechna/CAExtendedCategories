@@ -122,17 +122,18 @@ export const EN: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "First Aid"
    *   IGUI_perks_Doctor = "First Aid"
+   *   IGUI_ItemCat_FirstAid = "First Aid"
    */
   CAEC_Fallback_FirstAid: "First Aid",
   /**
-   * fishing gear
+   * fishing skill
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Fishing"
    *   IGUI_perks_Fishing = "Fishing"
    *   ContextMenu_Fishing = "Fishing"
+   *   IGUI_CraftCategory_Fishing = "Fishing"
    */
   CAEC_Fallback_Fishing: "Fishing",
   /**
@@ -150,7 +151,7 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Furniture",
   /**
-   * gardening items
+   * gardening skill
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Gardening"
@@ -242,7 +243,7 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Tool",
   /**
-   * trapping items
+   * trapping skill
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "Trapping"
@@ -271,6 +272,13 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Axe: "Axe",
   /**
+   * blacksmithing skill
+   *
+   * found in-game:
+   *   IGUI_perks_Blacksmith = "Blacksmithing"
+   */
+  CAEC_Override_Blacksmith: undefined,
+  /**
    * long blunt weapon skill
    *
    * found in-game:
@@ -278,12 +286,100 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Blunt: "Long Blunt",
   /**
+   * butchering skill
+   *
+   * found in-game:
+   *   IGUI_perks_Butchering = "Butchering"
+   */
+  CAEC_Override_Butchering: undefined,
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Carpentry"
+   *   IGUI_perks_Carpentry = "Carpentry"
+   */
+  CAEC_Override_Carpentry: undefined,
+  /**
+   * carving skill
+   *
+   * found in-game:
+   *   IGUI_perks_Carving = "Carving"
+   */
+  CAEC_Override_Carving: undefined,
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Electrical"
+   */
+  CAEC_Override_Electrical: undefined,
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Agriculture"
+   *   IGUI_perks_Farming = "Agriculture"
+   */
+  CAEC_Override_Farming: undefined,
+  /**
+   * knapping skill
+   *
+   * found in-game:
+   *   IGUI_perks_FlintKnapping = "Knapping"
+   */
+  CAEC_Override_FlintKnapping: undefined,
+  /**
+   * foraging skill
+   *
+   * found in-game:
+   *   IGUI_perks_Foraging = "Foraging"
+   */
+  CAEC_Override_Foraging: undefined,
+  /**
+   * glassmaking skill
+   *
+   * found in-game:
+   *   IGUI_perks_Glassmaking = "Glassmaking"
+   */
+  CAEC_Override_Glassmaking: undefined,
+  /**
    * long blade weapon skill
    *
    * found in-game:
    *   IGUI_perks_LongBlade = "Long Blade"
    */
   CAEC_Fallback_LongBlade: "Long Blade",
+  /**
+   * maintenance skill for maintaining and repairing tools and weapons
+   *
+   * found in-game:
+   *   IGUI_perks_Maintenance = "Maintenance"
+   */
+  CAEC_Override_Maintenance: undefined,
+  /**
+   * masonry skill
+   *
+   * found in-game:
+   *   IGUI_perks_Masonry = "Masonry"
+   */
+  CAEC_Override_Masonry: undefined,
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mechanics"
+   */
+  CAEC_Override_Mechanics: undefined,
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Metalworking",
+  /**
+   * pottery skill
+   *
+   * found in-game:
+   *   IGUI_perks_Pottery = "Pottery"
+   */
+  CAEC_Override_Pottery: undefined,
   /**
    * short blade weapon skill
    *
@@ -305,6 +401,27 @@ export const EN: ExternalTranslations = {
    *   IGUI_perks_Spear = "Spear"
    */
   CAEC_Fallback_Spear: "Spear",
+  /**
+   * tailoring skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tailoring = "Tailoring"
+   */
+  CAEC_Override_Tailoring: undefined,
+  /**
+   * tracking skill
+   *
+   * found in-game:
+   *   IGUI_perks_Tracking = "Tracking"
+   */
+  CAEC_Override_Tracking: undefined,
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Welding"
+   */
+  CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Arms",
   /** lower body clothing, pants, shorts, skirts */
@@ -632,6 +749,8 @@ export const EN: ExternalTranslations = {
    *   ItemName_Base.Photo = "Photograph"
    */
   CAEC_Fallback_Photo: "Photograph",
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
+  CAEC_Override_Plushie: "Plushie",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

@@ -52,8 +52,6 @@ function Utils.CreateInstanceIfNeeded(item, instance, source)
 
   if not instanceCache[fullName] then
     instanceCache[fullName] = temporaryInstance
-  else
-    Debug.log("---> reusing cached instance for item: " .. fullName, "Utils:" .. source)
   end
 
   return temporaryInstance

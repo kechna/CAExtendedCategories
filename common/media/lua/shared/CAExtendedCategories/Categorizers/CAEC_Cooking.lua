@@ -16,8 +16,6 @@ function Cooking:validate(item, _instance)
 end
 
 function Cooking:categorize(item, instance)
-  self.verbosity = Debug.Level.Debug
-
   ---@type string|nil
   local category = nil
 
@@ -36,6 +34,24 @@ function Cooking:categorize(item, instance)
       or (item:hasTag(ItemTag.CRUDE_TONGS) and item:hasTag(ItemTag.BREAK_ON_SMITHING))
   then
     category = "CookingUtensil"
+  elseif item:isItemType(ItemType.WEAPON) then
+    if item:hasTag(ItemTag.HAS_METAL)
+        and (instance:isCookable() or item:getName():lower():contains("pan"))
+    then
+      category = "CookingPan"
+    elseif not item:getWeaponCategories():isEmpty() and not item:containsWeaponCategory(WeaponCategory.IMPROVISED) then
+      category = "CookingUtensil"
+    else
+      --Debug.report("Cooking: " .. item:getName() .. " weapon but NOT pan  ", item, instance)
+
+      local it = item:getWeaponCategories():iterator()
+
+      while it:hasNext() do
+        local cat = it:next()
+
+        self:log(" - " .. tostring(cat))
+      end
+    end
   end
 
   if not category then
@@ -45,7 +61,6 @@ function Cooking:categorize(item, instance)
       category = "CookingCup"
     end
   end
-
 
   return category
 end

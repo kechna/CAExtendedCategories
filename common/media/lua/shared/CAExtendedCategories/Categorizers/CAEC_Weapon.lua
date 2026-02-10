@@ -5,8 +5,6 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 --- @class CAEC_WeaponCategorizer: CAEC_ItemCategorizer
 --- @field public asMeleeWeapon fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string|nil
 --- @field public asFirearm fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string|nil
-
---- @type CAEC_WeaponCategorizer
 local Weapon = CAEC_ItemCategorizer:derive("Weapon")
 
 local WeaponComboCategories = {
@@ -20,12 +18,24 @@ local WeaponComboCategories = {
   Junk = true,
   Material = true,
   Sports = true,
-  Tool = true,
   VehicleMaintenance = true,
-}
 
+  Tool = true,
+  ToolBlacksmith = true,
+  ToolButchering = true,
+  ToolCarpentry = true,
+  ToolFlintKnapping = true,
+  ToolGardening = true,
+  ToolMaintenance = true,
+  ToolMasonry = true,
+  ToolMechanics = true,
+  ToolPottery = true,
+  ToolTailoring = true,
+  ToolWelding = true,
+}
 function Weapon:validate(item, _instance)
   return item:isItemType(ItemType.WEAPON)
+      and not item:hasTag(ItemTag.NO_MAINTENANCE_XP)
 end
 
 --- @param item Item
@@ -112,10 +122,6 @@ function Weapon:categorize(item, instance)
 
   if category == "BrokenWeapon" then
     return category
-  end
-
-  if item:hasTag(ItemTag.NO_MAINTENANCE_XP) then
-    return nil
   end
 
   if item:hasTag(ItemTag.FIREARM) then

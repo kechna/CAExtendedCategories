@@ -11,17 +11,21 @@ export type TranslationKeys =
   | CAEC_Fallback_${Baking}
   | CAEC_Fallback_${Beer}
   | CAEC_Fallback_${Beverage}
+  | CAEC_Fallback_${Blacksmith}
   | CAEC_Fallback_${Blunt}
   | CAEC_Fallback_${Bottom}
   | CAEC_Fallback_${Box}
   | CAEC_Fallback_${Bread}
   | CAEC_Fallback_${Brochure}
   | CAEC_Fallback_${Bundled}
+  | CAEC_Fallback_${Butchering}
   | CAEC_Fallback_${Camping}
   | CAEC_Fallback_${Candy}
   | CAEC_Fallback_${Canned}
+  | CAEC_Fallback_${Carpentry}
   | CAEC_Fallback_${Cartography}
   | CAEC_Fallback_${Carton}
+  | CAEC_Fallback_${Carving}
   | CAEC_Fallback_${Cheese}
   | CAEC_Fallback_${Clothing}
   | CAEC_Fallback_${Cocktail}
@@ -36,23 +40,28 @@ export type TranslationKeys =
   | CAEC_Fallback_${Cutlery}
   | CAEC_Fallback_${Dish}
   | CAEC_Fallback_${Dye}
+  | CAEC_Fallback_${Electrical}
   | CAEC_Fallback_${Electronics}
   | CAEC_Fallback_${EnergyDrink}
   | CAEC_Fallback_${Entertainment}
   | CAEC_Fallback_${Face}
   | CAEC_Fallback_${FancyBook}
+  | CAEC_Fallback_${Farming}
   | CAEC_Fallback_${Firearm}
   | CAEC_Fallback_${FireSource}
   | CAEC_Fallback_${FirstAid}
   | CAEC_Fallback_${Fishing}
   | CAEC_Fallback_${Flier}
+  | CAEC_Fallback_${FlintKnapping}
   | CAEC_Fallback_${Food}
   | CAEC_Fallback_${Footwear}
+  | CAEC_Fallback_${Foraging}
   | CAEC_Fallback_${Fruits}
   | CAEC_Fallback_${Fuel}
   | CAEC_Fallback_${FullBody}
   | CAEC_Fallback_${Furniture}
   | CAEC_Fallback_${Gardening}
+  | CAEC_Fallback_${Glassmaking}
   | CAEC_Fallback_${Handgun}
   | CAEC_Fallback_${Hands}
   | CAEC_Fallback_${Hardcover}
@@ -74,9 +83,13 @@ export type TranslationKeys =
   | CAEC_Fallback_${LongBlade}
   | CAEC_Fallback_${Mag}
   | CAEC_Fallback_${Magazine}
+  | CAEC_Fallback_${Maintenance}
+  | CAEC_Fallback_${Masonry}
   | CAEC_Fallback_${Material}
   | CAEC_Fallback_${Meat}
+  | CAEC_Fallback_${Mechanics}
   | CAEC_Fallback_${Memento}
+  | CAEC_Fallback_${Metalworking}
   | CAEC_Fallback_${Milk}
   | CAEC_Fallback_${Mushroom}
   | CAEC_Fallback_${Neck}
@@ -89,7 +102,9 @@ export type TranslationKeys =
   | CAEC_Fallback_${PetFood}
   | CAEC_Fallback_${Photo}
   | CAEC_Fallback_${PictureBook}
+  | CAEC_Fallback_${Plushie}
   | CAEC_Fallback_${Portion}
+  | CAEC_Fallback_${Pottery}
   | CAEC_Fallback_${Preserved}
   | CAEC_Fallback_${ProtectiveGear}
   | CAEC_Fallback_${Recipe}
@@ -112,9 +127,11 @@ export type TranslationKeys =
   | CAEC_Fallback_${Staple}
   | CAEC_Fallback_${Stock}
   | CAEC_Fallback_${Sugar}
+  | CAEC_Fallback_${Tailoring}
   | CAEC_Fallback_${Tea}
   | CAEC_Fallback_${Tool}
   | CAEC_Fallback_${Top}
+  | CAEC_Fallback_${Tracking}
   | CAEC_Fallback_${Trapping}
   | CAEC_Fallback_${Underwear}
   | CAEC_Fallback_${Utensil}
@@ -123,6 +140,7 @@ export type TranslationKeys =
   | CAEC_Fallback_${Water}
   | CAEC_Fallback_${Weapon}
   | CAEC_Fallback_${Wearable}
+  | CAEC_Fallback_${Welding}
   | CAEC_Fallback_${Wine}
   | CAEC_Override_${Accessory}
   | CAEC_Override_${Adult}
@@ -136,17 +154,21 @@ export type TranslationKeys =
   | CAEC_Override_${Baking}
   | CAEC_Override_${Beer}
   | CAEC_Override_${Beverage}
+  | CAEC_Override_${Blacksmith}
   | CAEC_Override_${Blunt}
   | CAEC_Override_${Bottom}
   | CAEC_Override_${Box}
   | CAEC_Override_${Bread}
   | CAEC_Override_${Brochure}
   | CAEC_Override_${Bundled}
+  | CAEC_Override_${Butchering}
   | CAEC_Override_${Camping}
   | CAEC_Override_${Candy}
   | CAEC_Override_${Canned}
+  | CAEC_Override_${Carpentry}
   | CAEC_Override_${Cartography}
   | CAEC_Override_${Carton}
+  | CAEC_Override_${Carving}
   | CAEC_Override_${Cheese}
   | CAEC_Override_${Clothing}
   | CAEC_Override_${Cocktail}
@@ -161,23 +183,28 @@ export type TranslationKeys =
   | CAEC_Override_${Cutlery}
   | CAEC_Override_${Dish}
   | CAEC_Override_${Dye}
+  | CAEC_Override_${Electrical}
   | CAEC_Override_${Electronics}
   | CAEC_Override_${EnergyDrink}
   | CAEC_Override_${Entertainment}
   | CAEC_Override_${Face}
   | CAEC_Override_${FancyBook}
+  | CAEC_Override_${Farming}
   | CAEC_Override_${Firearm}
   | CAEC_Override_${FireSource}
   | CAEC_Override_${FirstAid}
   | CAEC_Override_${Fishing}
   | CAEC_Override_${Flier}
+  | CAEC_Override_${FlintKnapping}
   | CAEC_Override_${Food}
   | CAEC_Override_${Footwear}
+  | CAEC_Override_${Foraging}
   | CAEC_Override_${Fruits}
   | CAEC_Override_${Fuel}
   | CAEC_Override_${FullBody}
   | CAEC_Override_${Furniture}
   | CAEC_Override_${Gardening}
+  | CAEC_Override_${Glassmaking}
   | CAEC_Override_${Handgun}
   | CAEC_Override_${Hands}
   | CAEC_Override_${Hardcover}
@@ -199,9 +226,13 @@ export type TranslationKeys =
   | CAEC_Override_${LongBlade}
   | CAEC_Override_${Mag}
   | CAEC_Override_${Magazine}
+  | CAEC_Override_${Maintenance}
+  | CAEC_Override_${Masonry}
   | CAEC_Override_${Material}
   | CAEC_Override_${Meat}
+  | CAEC_Override_${Mechanics}
   | CAEC_Override_${Memento}
+  | CAEC_Override_${Metalworking}
   | CAEC_Override_${Milk}
   | CAEC_Override_${Mushroom}
   | CAEC_Override_${Neck}
@@ -214,7 +245,9 @@ export type TranslationKeys =
   | CAEC_Override_${PetFood}
   | CAEC_Override_${Photo}
   | CAEC_Override_${PictureBook}
+  | CAEC_Override_${Plushie}
   | CAEC_Override_${Portion}
+  | CAEC_Override_${Pottery}
   | CAEC_Override_${Preserved}
   | CAEC_Override_${ProtectiveGear}
   | CAEC_Override_${Recipe}
@@ -237,9 +270,11 @@ export type TranslationKeys =
   | CAEC_Override_${Staple}
   | CAEC_Override_${Stock}
   | CAEC_Override_${Sugar}
+  | CAEC_Override_${Tailoring}
   | CAEC_Override_${Tea}
   | CAEC_Override_${Tool}
   | CAEC_Override_${Top}
+  | CAEC_Override_${Tracking}
   | CAEC_Override_${Trapping}
   | CAEC_Override_${Underwear}
   | CAEC_Override_${Utensil}
@@ -248,6 +283,7 @@ export type TranslationKeys =
   | CAEC_Override_${Water}
   | CAEC_Override_${Weapon}
   | CAEC_Override_${Wearable}
+  | CAEC_Override_${Welding}
   | CAEC_Override_${Wine};
 
 export type ExternalTranslations = Record<TranslationKeys, string | undefined>;
