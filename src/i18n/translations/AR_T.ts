@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Spanish (Argentina)
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -91,7 +91,7 @@ export const AR: ExternalTranslations = {
   CAEC_Override_Food: undefined,
   /** furniture items */
   CAEC_Fallback_Furniture: undefined,
-  /** gardening skill */
+  /** gardening items */
   CAEC_Fallback_Gardening: undefined,
   /** household items */
   CAEC_Fallback_Household: undefined,
@@ -395,7 +395,7 @@ export const AR: ExternalTranslations = {
    */
   CAEC_Override_Seafood: undefined,
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Semilla"
@@ -564,6 +564,8 @@ export const AR: ExternalTranslations = {
   CAEC_Override_Bundled: undefined,
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: undefined,
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: undefined,
   /** items such as cups, mugs, glasses */
@@ -583,10 +585,12 @@ export const AR: ExternalTranslations = {
   CAEC_Fallback_Photo: undefined,
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: undefined,
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: undefined,
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined
-}
+  CAEC_Override_Wearable: undefined,
+};

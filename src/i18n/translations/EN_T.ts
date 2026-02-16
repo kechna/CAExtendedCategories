@@ -151,7 +151,7 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Furniture",
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Gardening"
@@ -556,7 +556,7 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Seafood: "Seafood",
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Seed"
@@ -727,6 +727,8 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Bundled: "Bundled",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Carton",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Compostable",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Crafted",
   /** items such as cups, mugs, glasses */
@@ -748,9 +750,11 @@ export const EN: ExternalTranslations = {
    * found in-game:
    *   ItemName_Base.Photo = "Photograph"
    */
-  CAEC_Fallback_Photo: "Photograph",
+  CAEC_Fallback_Photo: "Photo",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plushie",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Seed Packet",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

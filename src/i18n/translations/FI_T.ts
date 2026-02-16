@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Finnish
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -130,7 +130,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Furniture: undefined,
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Puutarhanhoito"
@@ -254,7 +254,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Blunt: undefined,
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Teurastus",
   /**
    * carpentry skill
    *
@@ -264,7 +264,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Veistäminen",
   /**
    * electrical skill
    *
@@ -281,7 +281,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Piikiventyöstö",
   /**
    * foraging skill
    *
@@ -290,7 +290,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Foraging: undefined,
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Lasinvalmistus",
   /**
    * long blade weapon skill
    *
@@ -306,7 +306,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Maintenance: undefined,
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Muuraus",
   /**
    * mechanics skill, vehicle maintenance
    *
@@ -322,7 +322,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Metalworking: undefined,
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Keramiikka",
   /**
    * short blade weapon skill
    *
@@ -352,7 +352,7 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Jäljitys",
   /**
    * welding skill
    *
@@ -456,7 +456,7 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Preserved: "Säilötty",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Merenelävät",
-  /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
+  /** loose plantable seeds for gardening/farming */
   CAEC_Fallback_Seed: "Siemen",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Välipala",
@@ -590,10 +590,12 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Bundled: "Nippu",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Kartonki",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Kompostoitava",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Käsintehty",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Kuppi",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Aterimet",
   /**
@@ -604,15 +606,17 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_KeyRing: undefined,
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Pannu",
   /** photos */
   CAEC_Fallback_Photo: "Valokuva",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Pehmolelu",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Siemenpussi",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tupakointi",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Keittiöväline",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Puettava"
-}
+  CAEC_Override_Wearable: "Puettava",
+};

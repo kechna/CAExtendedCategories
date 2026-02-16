@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * German
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -135,7 +135,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Möbel",
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Gartenbau"
@@ -259,7 +259,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Fallback_Blunt: "Stumpfwaffe",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Schlachten",
   /**
    * carpentry skill
    *
@@ -269,7 +269,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Schnitzen",
   /**
    * electrical skill
    *
@@ -286,7 +286,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Feuersteinbearbeitung",
   /**
    * foraging skill
    *
@@ -295,7 +295,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Override_Foraging: undefined,
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Glasherstellung",
   /**
    * long blade weapon skill
    *
@@ -311,7 +311,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Override_Maintenance: undefined,
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Maurerhandwerk",
   /**
    * mechanics skill, vehicle maintenance
    *
@@ -327,7 +327,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Override_Metalworking: undefined,
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Töpferei",
   /**
    * short blade weapon skill
    *
@@ -357,7 +357,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Spurensuche",
   /**
    * welding skill
    *
@@ -494,7 +494,7 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Fallback_Seafood: "Meeresfrüchte",
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Samen"
@@ -663,10 +663,12 @@ export const DE: ExternalTranslations = {
   CAEC_Override_Bundled: "Gebündelt",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Kompostierbar",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Gewerkelt",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Becher",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Besteck",
   /**
@@ -677,15 +679,17 @@ export const DE: ExternalTranslations = {
    */
   CAEC_Fallback_KeyRing: "Schlüsselbund",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Pfanne",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Kuscheltier",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Samentütchen",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rauchen",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Küchenutensil",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Tragbar"
-}
+  CAEC_Override_Wearable: "Tragbar",
+};

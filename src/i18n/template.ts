@@ -14,6 +14,7 @@
  * Which translations from the game are searched for differs for each individual key.
  */
 export const TRANSLATIONS = {
+
   /* ===== vanilla categories ===== */
 
   /* accessories such as watches, necklaces, belts, gloves */
@@ -46,14 +47,10 @@ export const TRANSLATIONS = {
   CAEC_Fallback_FireSource: "Fire Source",
   /* first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: "First Aid",
-  /* fishing gear */
-  CAEC_Fallback_Fishing: "Fishing",
   /* food items */
   CAEC_Fallback_Food: "Food",
   /* furniture items */
   CAEC_Fallback_Furniture: "Furniture",
-  /* gardening items */
-  CAEC_Fallback_Gardening: "Gardening",
   /* household items */
   CAEC_Fallback_Household: "Household",
   /* instruments */
@@ -78,8 +75,6 @@ export const TRANSLATIONS = {
   CAEC_Fallback_Sports: "Sports",
   /* tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Tool",
-  /* trapping items */
-  CAEC_Fallback_Trapping: "Trapping",
   /* vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: "Vehicle Maintenance",
   /* weapons in general */
@@ -103,13 +98,13 @@ export const TRANSLATIONS = {
   CAEC_Fallback_Electrical: "Electrical",
   /* farming/agriculture skill */
   CAEC_Fallback_Farming: "Agriculture",
-  /* fishing skill */
+  /* fishing skill and items */
   CAEC_Fallback_Fishing: "Fishing",
   /* knapping skill */
   CAEC_Fallback_FlintKnapping: "Knapping",
   /* foraging skill */
   CAEC_Fallback_Foraging: "Foraging",
-  /* gardening skill */
+  /* gardening skill and items */
   CAEC_Fallback_Gardening: "Gardening",
   /* glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glassmaking",
@@ -135,7 +130,7 @@ export const TRANSLATIONS = {
   CAEC_Fallback_Tailoring: "Tailoring",
   /* tracking skill */
   CAEC_Fallback_Tracking: "Tracking",
-  /* trapping skill */
+  /* trapping skill and items */
   CAEC_Fallback_Trapping: "Trapping",
   /* welding skill */
   CAEC_Fallback_Welding: "Welding",
@@ -312,6 +307,8 @@ export const TRANSLATIONS = {
 
   /* ===== misc ===== */
 
+  /* compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Compostable",
   /* handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Crafted",
   /* items such as cups, mugs, glasses */
@@ -326,6 +323,10 @@ export const TRANSLATIONS = {
   CAEC_Fallback_Photo: "Photograph",
   /* for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plushie",
+  /* loose plantable seeds for gardening/farming */
+  CAEC_Override_Seed: "Seed",
+  /* packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Seed Packet",
   /* smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
   /* kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

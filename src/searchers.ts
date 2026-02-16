@@ -209,4 +209,10 @@ export const searchers: Searcher[] = [
     searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
     categories: TOOL_ADDON,
   },
+
+  {
+    prefix: PzCategory.Gardening,
+    categories: ["Seed", "SeedPacket", "Compostable"],
+    searchKeys: ["Farming_%s", "ContextMenu_FoodType_%s"],
+  },
 ];

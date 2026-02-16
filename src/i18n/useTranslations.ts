@@ -3,8 +3,39 @@ import type { CAECTranslations } from "../types.ts";
 import { getGameTranslations } from "./getGameTranslations.ts";
 import { mergeAllTranslations } from "./mergeAllTranslations.ts";
 import { translate } from "./translate.ts";
+import chalk from "chalk";
 
 export type TranslationDef = { translation: string; searchKey: string };
+
+const CRAFT_CAT = "IGUI_CraftCategory_%s";
+const PERK = "IGUI_perks_%s";
+
+const KEYS_MAP: Record<string, string[]> = Object.freeze({
+  Axe: [PERK],
+  Blacksmith: [PERK],
+  Blunt: [PERK],
+  Butchering: [PERK],
+  Carpentry: [CRAFT_CAT, PERK],
+  Carving: [PERK],
+  Electrical: [CRAFT_CAT],
+  Farming: [CRAFT_CAT, PERK],
+  Fishing: [CRAFT_CAT, PERK],
+  FlintKnapping: [PERK],
+  Foraging: [PERK],
+  Glassmaking: [PERK],
+  LongBlade: [PERK],
+  Maintenance: [PERK],
+  Masonry: [PERK],
+  Mechanics: [PERK],
+  Metalworking: [PERK],
+  Pottery: [PERK],
+  SmallBlade: [PERK],
+  SmallBlunt: [PERK],
+  Spear: [PERK],
+  Tailoring: [PERK],
+  Tracking: [PERK],
+  Welding: [CRAFT_CAT, PERK],
+});
 
 export const useTranslations = async (context: FullModContext, languages: readonly Language[]) => {
   const existingTranslations = await getGameTranslations();
@@ -15,18 +46,38 @@ export const useTranslations = async (context: FullModContext, languages: readon
     {} as Record<Language, CAECTranslations>,
   );
 
-  const save = (language: Language, key: string, value: string, override = false): void => {
-    const fullKey = `IGUI_ItemCat_${key}`;
+  // const allExistingKeys = new Set(Object.keys(allTranslations));
 
-    if (existingTranslations[fullKey]?.[language]) {
-      if (override) {
-        context.logger.debug(`[${language}] Overriding existing translation: ${fullKey}`);
-      }
-
+  const doSave = (language: Language, key: string, fullKey: string, value: string, override = false): void => {
+    if (!value) {
       return;
     }
 
-    createdTranslations[language][key] = value;
+    const existing = existingTranslations[fullKey]?.[language];
+
+    // if (!fullKey.startsWith("IGUI_ItemCat_")) {
+    //   context.logger.warn(`[${language}] Saving translation for ${chalk.white(fullKey)} = ${chalk.green(value)}`);
+    // }
+
+    if (existing) {
+      if (existing !== value) {
+        context.logger.info(
+          `[${language}] Overriding ${chalk.white(fullKey)} = ${chalk.red(existing)} -> ${chalk.green(value)}`,
+        );
+      } else {
+        return;
+      }
+      // } else if (allExistingKeys.has(fullKey)) {
+      //   context.logger.debug(`[${language}] Adding ${chalk.white(fullKey)} = ${chalk.green(value)}`);
+    }
+
+    createdTranslations[language][fullKey] = value;
+  };
+
+  const save = (language: Language, key: string, value: string, override = false): void => {
+    [`IGUI_ItemCat_${key}`, ...(KEYS_MAP[key] ?? [])].forEach((k) => {
+      doSave(language, key, k.replace("%s", key), value, override);
+    });
   };
 
   const t = (searchKeys: string[], key: string, language: Language): TranslationDef[] => {
@@ -35,7 +86,7 @@ export const useTranslations = async (context: FullModContext, languages: readon
 
     for (const searchKey of [...new Set(allSearchKeys)]) {
       const k = searchKey.replace("%s", key);
-      const translation = createdTranslations[language][key] ?? translate(allTranslations, k, language);
+      const translation = createdTranslations[language][k] ?? translate(allTranslations, k, language);
 
       if (translation) {
         found.push({ translation, searchKey: k });
@@ -68,7 +119,7 @@ export const useTranslations = async (context: FullModContext, languages: readon
     const [a] = t(allKeys, keyA, language);
     const [b] = t(allKeys, keyB, language);
 
-    const translation = `${a?.translation ?? `<${keyA}>`} / ${b?.translation ?? `<${keyB}>`}`;
+    const translation = `${a?.translation ?? keyA} / ${b?.translation ?? keyB}`;
 
     save(language, key, translation);
   };

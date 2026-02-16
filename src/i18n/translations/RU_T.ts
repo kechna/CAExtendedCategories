@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Russian
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -135,7 +135,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Мебель",
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Садоводство"
@@ -259,7 +259,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Blunt: "Длин. дробящее",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Разделка",
   /**
    * carpentry skill
    *
@@ -269,7 +269,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Резьба",
   /**
    * electrical skill
    *
@@ -286,7 +286,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Обработка кремня",
   /**
    * foraging skill
    *
@@ -295,7 +295,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Override_Foraging: undefined,
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Стеклоделие",
   /**
    * long blade weapon skill
    *
@@ -311,7 +311,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Override_Maintenance: undefined,
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Каменная кладка",
   /**
    * mechanics skill, vehicle maintenance
    *
@@ -327,7 +327,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Override_Metalworking: undefined,
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Гончарное дело",
   /**
    * short blade weapon skill
    *
@@ -357,7 +357,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Выслеживание",
   /**
    * welding skill
    *
@@ -494,7 +494,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Seafood: "Морепродукты",
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Семена"
@@ -663,10 +663,12 @@ export const RU: ExternalTranslations = {
   CAEC_Override_Bundled: "Связанный",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Картонная коробка",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Компостируемое",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ручной работы",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Кружка",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Столовые приборы",
   /**
@@ -677,15 +679,17 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_KeyRing: "Связка ключей",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Сковорода",
   /** photos */
   CAEC_Fallback_Photo: "Фото",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Плюшевая игрушка",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Пакетик семян",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Курение",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Кухонные принадлежности",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Носимый"
-}
+  CAEC_Override_Wearable: "Носимый",
+};

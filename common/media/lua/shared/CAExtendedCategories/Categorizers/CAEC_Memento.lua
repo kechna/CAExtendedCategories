@@ -42,8 +42,6 @@ function Memento:categorize(item, instance)
   if existingCategory then
     for _, cat in ipairs(MementoCategories) do
       if existingCategory == cat then
-        self:log("overriding existing category " .. existingCategory, Debug.Level.Info)
-
         if item:hasTag(ItemTag.IS_FIRE_TINDER) then
           category = "MementoPlushie"
         else

@@ -46,7 +46,6 @@ function Weapon:asMeleeWeapon(item, _instance)
   local categories = item:getWeaponCategories()
 
   if not categories then
-    self:log("No weapon categories for " .. item:getName())
     return nil
   end
 

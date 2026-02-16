@@ -15,8 +15,8 @@ function ISEatFoodAction:complete()
 
   if inventory:contains(self.item) then
     CAEC.UpdateInstanceItem(self.item, Categorizers.Food, "ISEatFoodAction:complete")
-  else
-    Debug.log("> Item fully consumed after eating: " .. self.item:getName(), "ISEatFoodAction:complete")
+  --else
+  --  Debug.log("> Item fully consumed after eating: " .. self.item:getName(), "ISEatFoodAction:complete")
   end
 
   return result

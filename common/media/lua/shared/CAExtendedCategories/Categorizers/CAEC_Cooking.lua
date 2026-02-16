@@ -41,16 +41,14 @@ function Cooking:categorize(item, instance)
       category = "CookingPan"
     elseif not item:getWeaponCategories():isEmpty() and not item:containsWeaponCategory(WeaponCategory.IMPROVISED) then
       category = "CookingUtensil"
-    else
-      --Debug.report("Cooking: " .. item:getName() .. " weapon but NOT pan  ", item, instance)
-
-      local it = item:getWeaponCategories():iterator()
-
-      while it:hasNext() do
-        local cat = it:next()
-
-        self:log(" - " .. tostring(cat))
-      end
+    --else
+    --  local it = item:getWeaponCategories():iterator()
+    --
+    --  while it:hasNext() do
+    --    local cat = it:next()
+    --
+    --    self:log(" - " .. tostring(cat))
+    --  end
     end
   end
 

@@ -10,24 +10,41 @@ export const createModTranslations = (async (context: FullModContext) => {
   const { save, t, addOr, created } = await useTranslations(context, SUPPORTED_LANGUAGES);
 
   searchers.forEach(({ categories, prefix, searchKeys, separator }) => {
+    const allKeys: { fullKey: string; parts: string[] }[] = [];
+
+    if (prefix) {
+      allKeys.push({ fullKey: prefix, parts: [] });
+    }
+
     categories.forEach((category) => {
       const suffix = category;
 
+      const parts = prefix ? [prefix, suffix] : [suffix];
+      const fullKey = parts.join("");
+
+      allKeys.push({ fullKey: category, parts: [] });
+      allKeys.push({ fullKey, parts });
+    });
+
+    allKeys.forEach(({ fullKey, parts }) => {
       SUPPORTED_LANGUAGES.forEach((lang) => {
-        const parts = prefix ? [prefix, suffix] : [suffix];
-        const fullKey = parts.join("");
         let override = false;
         const results: string[] = [];
+
+        if (!parts.length) {
+          parts = [fullKey];
+        }
 
         parts.forEach((part) => {
           const translated = t(searchKeys ?? [], part, lang);
 
-          results.push(translated[0]?.translation ?? `<${part}>`);
-          if (translated.length === 0) {
-            // logger.warn(chalk.cyan(`${lang}.${part}`), `Translation not found`);
-          } else if (translated[0]?.searchKey.startsWith("CAEC_Override")) {
-            override = true;
+          if (translated.length) {
+            override = translated[0]?.searchKey.startsWith("CAEC_Override") ?? false;
+          } else if (parts.length === 1) {
+            return;
           }
+
+          results.push(translated[0]?.translation ?? part);
         });
         // const translated = found.map((t) => t?.[0]?.translation ?? `<${part}>`);
 

@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Danish
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -58,7 +58,7 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Food: "Mad",
   /** furniture items */
   CAEC_Fallback_Furniture: "Møbler",
-  /** gardening skill */
+  /** gardening items */
   CAEC_Fallback_Gardening: "Havearbejde",
   /** household items */
   CAEC_Fallback_Household: "Husholdning",
@@ -93,7 +93,7 @@ export const DA: ExternalTranslations = {
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Økse",
   /** blacksmithing skill */
-  CAEC_Fallback_Blacksmith: undefined,
+  CAEC_Fallback_Blacksmith: "Smedning",
   /**
    * long blunt weapon skill
    *
@@ -102,7 +102,7 @@ export const DA: ExternalTranslations = {
    */
   CAEC_Override_Blunt: undefined,
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Slagtning",
   /**
    * carpentry skill
    *
@@ -111,9 +111,9 @@ export const DA: ExternalTranslations = {
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Udskæring",
   /** electrical skill */
-  CAEC_Fallback_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elektricitet",
   /**
    * farming/agriculture skill
    *
@@ -122,23 +122,23 @@ export const DA: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Flinthugning",
   /** foraging skill */
-  CAEC_Fallback_Foraging: undefined,
+  CAEC_Fallback_Foraging: "Sankning",
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Glasfremstilling",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lang klinge",
   /** maintenance skill for maintaining and repairing tools and weapons */
-  CAEC_Fallback_Maintenance: undefined,
+  CAEC_Fallback_Maintenance: "Vedligeholdelse",
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Murerarbejde",
   /** mechanics skill, vehicle maintenance */
-  CAEC_Fallback_Mechanics: undefined,
+  CAEC_Fallback_Mechanics: "Mekanik",
   /** metalworking skill (for items that are relevant in both welding and blacksmithing */
-  CAEC_Fallback_Metalworking: undefined,
+  CAEC_Fallback_Metalworking: "Metalbearbejdning",
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Keramik",
   /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Kort klinge",
   /** short blunt weapon skill */
@@ -146,11 +146,11 @@ export const DA: ExternalTranslations = {
   /** spear weapon skill */
   CAEC_Fallback_Spear: "Spyd",
   /** tailoring skill */
-  CAEC_Fallback_Tailoring: undefined,
+  CAEC_Fallback_Tailoring: "Skrædderi",
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Sporing",
   /** welding skill */
-  CAEC_Fallback_Welding: undefined,
+  CAEC_Fallback_Welding: "Svejsning",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Arme",
   /** lower body clothing, pants, shorts, skirts */
@@ -227,7 +227,7 @@ export const DA: ExternalTranslations = {
   CAEC_Override_Preserved: "Konserveret",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Skaldyr",
-  /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
+  /** loose plantable seeds for gardening/farming */
   CAEC_Fallback_Seed: "Frø",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Snack",
@@ -344,24 +344,28 @@ export const DA: ExternalTranslations = {
   CAEC_Override_Bundled: "Bundt",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Komposterbart",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Håndlavet",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Kop",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Bestik",
   /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Nøglering",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Pande",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Bamse",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Frøpose",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rygning",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Køkkenredskab",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Bærbar"
-}
+  CAEC_Override_Wearable: "Bærbar",
+};

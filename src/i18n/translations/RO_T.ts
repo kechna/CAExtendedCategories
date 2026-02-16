@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Romanian
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -63,7 +63,7 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Food: "Mâncare",
   /** furniture items */
   CAEC_Fallback_Furniture: "Mobilier",
-  /** gardening skill */
+  /** gardening items */
   CAEC_Fallback_Gardening: "Grădinărit",
   /** household items */
   CAEC_Fallback_Household: "Gospodărie",
@@ -98,37 +98,37 @@ export const RO: ExternalTranslations = {
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Topor",
   /** blacksmithing skill */
-  CAEC_Fallback_Blacksmith: undefined,
+  CAEC_Fallback_Blacksmith: "Fierărie",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contondent",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Măcelărie",
   /** carpentry skill */
-  CAEC_Fallback_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Tâmplărie",
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Cioplire",
   /** electrical skill */
-  CAEC_Fallback_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Electricitate",
   /** farming/agriculture skill */
-  CAEC_Fallback_Farming: undefined,
+  CAEC_Fallback_Farming: "Agricultură",
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Cioplirea silexului",
   /** foraging skill */
-  CAEC_Fallback_Foraging: undefined,
+  CAEC_Fallback_Foraging: "Cules",
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Sticlărie",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lamă lungă",
   /** maintenance skill for maintaining and repairing tools and weapons */
-  CAEC_Fallback_Maintenance: undefined,
+  CAEC_Fallback_Maintenance: "Întreținere",
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Zidărie",
   /** mechanics skill, vehicle maintenance */
-  CAEC_Fallback_Mechanics: undefined,
+  CAEC_Fallback_Mechanics: "Mecanică",
   /** metalworking skill (for items that are relevant in both welding and blacksmithing */
-  CAEC_Fallback_Metalworking: undefined,
+  CAEC_Fallback_Metalworking: "Prelucrarea metalelor",
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Olărit",
   /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Lamă scurtă",
   /** short blunt weapon skill */
@@ -136,11 +136,11 @@ export const RO: ExternalTranslations = {
   /** spear weapon skill */
   CAEC_Fallback_Spear: "Suliță",
   /** tailoring skill */
-  CAEC_Fallback_Tailoring: undefined,
+  CAEC_Fallback_Tailoring: "Croitorie",
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Urmărire",
   /** welding skill */
-  CAEC_Fallback_Welding: undefined,
+  CAEC_Fallback_Welding: "Sudură",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Brațe",
   /** lower body clothing, pants, shorts, skirts */
@@ -217,7 +217,7 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Preserved: "Conservat",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Fructe de mare",
-  /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
+  /** loose plantable seeds for gardening/farming */
   CAEC_Fallback_Seed: "Semințe",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Gustare",
@@ -283,11 +283,11 @@ export const RO: ExternalTranslations = {
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Colorant",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Energizant",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "Combustibil",
   /** fruit juice */
   CAEC_Fallback_Juice: "Suc",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
@@ -318,24 +318,28 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Bundled: "Legat",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Carton",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Compostabil",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artizanal",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Ceașcă",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Tacâmuri",
   /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Mănunchi de chei",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Tigaie",
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Jucărie de pluș",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Plic de semințe",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumat",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Ustensil",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Rucsacuri"
-}
+  CAEC_Override_Wearable: "Rucsacuri",
+};

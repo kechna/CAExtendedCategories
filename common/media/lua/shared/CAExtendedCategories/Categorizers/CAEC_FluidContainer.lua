@@ -35,7 +35,6 @@ function FluidContainer:validate(item, instance)
     return true
   end
 
-  self:log("checking tags", Debug.Level.Info)
   return Utils.HasAnyTag(item, self.searchTags)
 end
 
@@ -61,8 +60,6 @@ function FluidContainer:categorize(item, instance)
         or containerName:contains("glass")
     then
       category = "CookingCup"
-    else
-      category = "CookingOrContainerLiquid"
     end
 
     --self:log(string.format("FLUID   %s (%s) - %s", instance:getName(), item:getFullName(), containerName), Debug.Level.Info)

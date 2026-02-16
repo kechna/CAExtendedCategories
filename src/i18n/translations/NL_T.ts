@@ -91,7 +91,7 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Food: "Voedsel",
   /** furniture items */
   CAEC_Fallback_Furniture: "Meubels",
-  /** gardening skill */
+  /** gardening items */
   CAEC_Fallback_Gardening: "Tuinieren",
   /** household items */
   CAEC_Fallback_Household: "Huishouden",
@@ -158,7 +158,7 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_Blunt = "Bot"
    */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Override_Blunt: "Lang Bot",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Slachten",
   /**
@@ -203,7 +203,7 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_LongBlade = "Lang Mes"
    */
-  CAEC_Override_LongBlade: undefined,
+  CAEC_Override_LongBlade: "Lang Mes",
   /**
    * maintenance skill for maintaining and repairing tools and weapons
    *
@@ -235,21 +235,21 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_SmallBlade = "Kort Mes"
    */
-  CAEC_Override_SmallBlade: undefined,
+  CAEC_Override_SmallBlade: "Kort Mes",
   /**
    * short blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_SmallBlunt = "Kort Blunt"
    */
-  CAEC_Override_SmallBlunt: undefined,
+  CAEC_Override_SmallBlunt: "Kort Bot",
   /**
    * spear weapon skill
    *
    * found in-game:
    *   IGUI_perks_Spear = "Speer"
    */
-  CAEC_Fallback_Spear: "Speer",
+  CAEC_Fallback_Spear: "Speren",
   /**
    * tailoring skill
    *
@@ -362,7 +362,7 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Preserved: "Geconserveerd",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Zeevruchten",
-  /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
+  /** loose plantable seeds for gardening/farming */
   CAEC_Fallback_Seed: "Zaden",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Snack",
@@ -496,8 +496,10 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Bundled: "Gebundeld",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Kartonnen doos",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Composteerbaar",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: "Gemaakt",
+  CAEC_Override_Crafted: "Handgemaakt",
   /** items such as cups, mugs, glasses */
   CAEC_Override_Cup: "Beker",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
@@ -515,6 +517,8 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Photo: "Foto",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Knuffel",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Zadenpakket",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Roken",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

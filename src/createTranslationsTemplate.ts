@@ -62,6 +62,7 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
   let prev: string | undefined = undefined;
 
   const definitions = getTranslationDefinitions();
+  const namesType = new Ts.Type("TranslationNames").export();
   const keysType = new Ts.Type("TranslationKeys").export();
 
   SUPPORTED_LANGUAGES.forEach((language) => {
@@ -141,7 +142,7 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
         `  ${resolvedKey}: ${translated[0] ? `"${translated[0].translation.replace(/"/g, '\\"')}"` : '""'},`,
       );
 
-      keysType.add(`CAEC_Override_$\{${key}\} | CAEC_Fallback_$\{${key}\}`);
+      namesType.add(`"${key}"`);
 
       prev = group;
     });
@@ -152,6 +153,9 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
 
   template.add("};");
 
+  keysType.add(`\`CAEC_Override_$\{${namesType.getName()}\}\` | \`CAEC_Fallback_$\{${namesType.getName()}\}\``);
+
+  types.add(namesType);
   types.add(keysType);
   types.add(" ");
   types.add("export type ExternalTranslations = Record<TranslationKeys, string | undefined>;");

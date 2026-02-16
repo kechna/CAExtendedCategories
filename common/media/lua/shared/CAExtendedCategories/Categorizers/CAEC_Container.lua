@@ -23,13 +23,11 @@ function Container:categorize(item, _instance)
 
   ---@type string|nil
   local category = "Container"
-  local existingCategory = item:getDisplayCategory()
 
   local bloodClothingType = item:getBloodClothingType()
 
   ---@diagnostic disable-next-line: unnecessary-if
   if item:getBodyLocation() ~= nil
-      or existingCategory == "Bag"
       or (bloodClothingType and bloodClothingType:contains(BloodClothingType.Bag))
   then
     if Utils.HasAnyTag(item, ItemTagsAmmo) then

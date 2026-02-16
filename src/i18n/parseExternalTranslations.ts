@@ -8,7 +8,6 @@ export const parseExternalTranslations = (
   language: Language,
   obj: Record<string, string>,
 ): TranslationsDict => {
-  const { logger } = context;
   const parsed: TranslationsDict = {};
 
   Object.entries(obj).forEach(([searchKey, value]) => {
@@ -17,7 +16,10 @@ export const parseExternalTranslations = (
     const match = TRANSLATIONS_ARR.find(([, key]) => key === resolvedSearchKey);
 
     if (!match) {
-      logger.warn(`No definition found for key "${resolvedSearchKey}" in language "${language}"`);
+      // @ts-expect-error todo
+      parsed[searchKey] ??= {};
+      // @ts-expect-error todo
+      parsed[searchKey][language] = value;
 
       return;
     }

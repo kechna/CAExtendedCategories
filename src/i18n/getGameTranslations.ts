@@ -7,5 +7,6 @@ export const getGameTranslations = async (): Promise<Record<string, Record<Langu
     ...(translations.get("IG_UI") ?? {}),
     ...(translations.get("ContextMenu") ?? {}),
     ...(translations.get("ItemName") ?? {}),
+    ...(translations.get("Farming") ?? {}),
   };
 };

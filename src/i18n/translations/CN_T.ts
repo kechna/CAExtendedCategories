@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Chinese (Simplified)
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -135,7 +135,7 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_Furniture: "家具",
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "园艺"
@@ -494,7 +494,7 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_Seafood: "海鲜",
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "种子"
@@ -663,6 +663,8 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Bundled: "捆",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "箱",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: undefined,
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "自制",
   /** items such as cups, mugs, glasses */
@@ -682,10 +684,12 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Photo: "照片",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: undefined,
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: undefined,
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "吸烟",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: undefined,
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "可穿戴"
-}
+  CAEC_Override_Wearable: "可穿戴",
+};

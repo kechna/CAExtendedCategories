@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Polish
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -135,7 +135,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Meble",
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Ogrodnictwo"
@@ -259,7 +259,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Blunt: "Tępa",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Rzeźnictwo",
   /**
    * carpentry skill
    *
@@ -269,7 +269,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Rzeźbienie",
   /**
    * electrical skill
    *
@@ -286,7 +286,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Obróbka krzemienia",
   /**
    * foraging skill
    *
@@ -295,7 +295,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Foraging: undefined,
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Szklarstwo",
   /**
    * long blade weapon skill
    *
@@ -311,7 +311,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Maintenance: undefined,
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Murarstwo",
   /**
    * mechanics skill, vehicle maintenance
    *
@@ -327,7 +327,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Metalworking: undefined,
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Garncarstwo",
   /**
    * short blade weapon skill
    *
@@ -357,7 +357,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Tropienie",
   /**
    * welding skill
    *
@@ -494,7 +494,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Seafood: "Owoce morza",
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Ziarno"
@@ -605,11 +605,11 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Barwnik",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Napój energetyczny",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "Paliwo",
   /**
    * fruit juice
    *
@@ -663,6 +663,8 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Bundled: "Związany",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Kompostowalne",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ręcznie robiony",
   /** items such as cups, mugs, glasses */
@@ -682,10 +684,12 @@ export const PL: ExternalTranslations = {
   CAEC_Fallback_Photo: "Zdjęcie",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Peluche",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Torebka nasion",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Palenie",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Przybór kuchenny",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Do noszenia"
-}
+  CAEC_Override_Wearable: "Do noszenia",
+};

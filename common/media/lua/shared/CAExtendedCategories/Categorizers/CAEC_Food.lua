@@ -207,6 +207,9 @@ function Food:validate(item, instance)
   return item:isItemType(ItemType.FOOD)
       and instanceof(instance, "Food")
       and not item:hasTag(ItemTag.ANIMAL_HEAD)
+      and not item:hasTag(ItemTag.FEATHER)
+      -- animal dung
+      and not item:hasTag(ItemTag.IS_COMPOSTABLE)
       and not item:hasTag(ItemTag.SMOKABLE)
 end
 
@@ -221,7 +224,7 @@ function Food:categorize(item, instance)
   local foodType, instanceSpecific = self:getFoodType(item, instance)
 
   if FoodType.SKIP == foodType then
-    self:log("skipping: " .. item:getFullName(), Debug.Level.Info)
+    --self:log("skipping: " .. item:getFullName(), Debug.Level.Info)
     return nil, true
   end
 
@@ -265,7 +268,6 @@ function Food:categorize(item, instance)
     local boxed = BoxesAndStacks.addToCategory(category, item, instance)
 
     if boxed then
-      self:log("BOX: " .. item:getFullName(), Debug.Level.Info)
       category = boxed
     end
   end

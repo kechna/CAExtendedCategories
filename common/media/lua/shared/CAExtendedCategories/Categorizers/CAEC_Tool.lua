@@ -34,8 +34,6 @@ local TagsMap = table.newarray({
   { category = "",              tag = ItemTag.SCREWDRIVER },
   { category = "",              tag = ItemTag.SLEDGEHAMMER },
 
-  --{ category = "Blacksmith",    tag = ItemTag.BALL_PEEN_HAMMER },
-  --{ category = "Carpentry",     tag = ItemTag.HAMMER },
   { category = "Blacksmith",    tag = ItemTag.CRUDE_TONGS },
   { category = "Blacksmith",    tag = ItemTag.DRILL_METAL },
   { category = "Blacksmith",    tag = ItemTag.FILE },
@@ -99,54 +97,48 @@ local Tool = CAEC_ItemCategorizer:derive("Tool")
 function Tool:validate(item, instance)
   local category = item:getDisplayCategory()
 
-  return category
-      and (
-        category:contains("Tool")
-        or (
-          category:contains("VehicleMaintenance")
-          -- ignore car parts and other non-tool items
-          and instance:getMechanicType() == 0
-          and not Utils.HasAnyTag(item, MechanicsIgnoreTags)
+  return (
+        category and (
+          category:contains("Tool")
+          or (
+            category:contains("VehicleMaintenance")
+            -- ignore car parts and other non-tool items
+            and instance:getMechanicType() == 0
+            and not Utils.HasAnyTag(item, MechanicsIgnoreTags)
+          )
         )
       )
+      or (item:isItemType(ItemType.WEAPON) and not item:hasTag(ItemTag.FIREARM))
+      or item:hasTag(ItemTag.SHARPENABLE)
 end
 
 function Tool:categorize(item, instance)
   --- @type string|nil
-  local category = nil
-
-  for i = 1, #TagsMap do
-    local entry = TagsMap[i]
-
-    if item:hasTag(entry.tag) then
-      category = "Tool" .. entry.category
-      break
-    end
-  end
+  local category = CategoryOverrides[item:getFullName()]
 
   if not category then
-    category = CategoryOverrides[item:getFullName()]
+    for i = 1, #TagsMap do
+      local entry = TagsMap[i]
+
+      if item:hasTag(entry.tag) then
+        category = "Tool" .. entry.category
+        break
+      end
+    end
   end
 
   if category and not item:hasTag(ItemTag.NO_MAINTENANCE_XP) then
     item:DoParam("DisplayCategory", category)
     local withWeapon = CAEC_Categorizers.Weapon(item, instance)
 
-    --self:log(item:getFullName() .. " categorized as " .. (withWeapon or category) .. (withWeapon and " with weapon tag" or ""))
     return withWeapon or category
   end
 
   local existing = item:getDisplayCategory()
 
   if not category and existing and existing:contains("VehicleMaintenance") then
-    --Debug.report("mechanics item: " .. item:getFullName() .. " type: " .. tostring(instance:getMechanicType()), item,
-    --  instance)
     category = "ToolMechanics"
   end
-
-  --if category then
-  --  self:log(item:getFullName() .. " categorized as " .. (category or "Tool") .. " (default)")
-  --end
 
   return category
 end

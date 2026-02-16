@@ -2,7 +2,7 @@ import type { ExternalTranslations } from "../types";
 
 /**
  * Spanish
-  * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
+ * Keys can be either CAEC_Override_X or CAEC_Fallback_X.
  *
  * "CAEC_Fallback_X" means it will prefer the game's translation.
  *
@@ -135,7 +135,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Mobiliario",
   /**
-   * gardening skill
+   * gardening items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Jardinería"
@@ -259,7 +259,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Fallback_Blunt: "Arma larga contundente",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Despiece",
   /**
    * carpentry skill
    *
@@ -269,7 +269,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Tallado",
   /**
    * electrical skill
    *
@@ -286,7 +286,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Percusión lítica",
   /**
    * foraging skill
    *
@@ -295,7 +295,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Override_Foraging: undefined,
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Vidriería",
   /**
    * long blade weapon skill
    *
@@ -311,7 +311,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Override_Maintenance: undefined,
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Albañilería",
   /**
    * mechanics skill, vehicle maintenance
    *
@@ -327,7 +327,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Override_Metalworking: undefined,
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Alfarería",
   /**
    * short blade weapon skill
    *
@@ -357,7 +357,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "Rastreo",
   /**
    * welding skill
    *
@@ -494,7 +494,7 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Fallback_Seafood: "Marisco",
   /**
-   * seeds for consumption, e.g. sunflower seeds, pumpkin seeds
+   * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Semilla"
@@ -663,10 +663,12 @@ export const ES: ExternalTranslations = {
   CAEC_Override_Bundled: "Enlazado",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Cartón",
+  /** compostable items such as animal dung, to be put in a composter */
+  CAEC_Override_Compostable: "Compostable",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Elaborado",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Copa",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Cubiertos",
   /**
@@ -677,15 +679,17 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Fallback_KeyRing: "Llavero",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Sartén",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Peluches",
+  /** packet of plantable seeds for gardening/farming */
+  CAEC_Override_SeedPacket: "Semillas",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Utensilio",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Portátil"
-}
+  CAEC_Override_Wearable: "Portátil",
+};
