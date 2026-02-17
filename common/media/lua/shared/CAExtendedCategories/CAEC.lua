@@ -250,7 +250,6 @@ end
 function CAEC.UpdateInstanceItems(items, trigger)
   CAEC.UpdateStart()
   Debug.log("trigger: " .. (trigger or "N/A"), "UpdateInstanceItems")
-  local cache = {}
   local total = items:size()
 
   local categorizedInstance = 0
@@ -262,12 +261,17 @@ function CAEC.UpdateInstanceItems(items, trigger)
     local itemName = item:getFullName()
     local instanceName = instance:getName()
 
-    local instanceSpecific = CAEC.InstanceSpecific[itemName] or false
-
-    local cachedCategory = cache[instanceName]
-
     --- @type string|nil
     local category = CAEC.ItemTweaks[itemName] or CAEC.StaticCategories[itemName];
+    local instanceSpecific = CAEC.InstanceSpecific[itemName] or false
+
+    Debug.log(
+    string.format("Processing instance: %s (item: %s) - instanceSpecific: %s, staticCategory: %s",
+      instanceName,
+      itemName,
+      tostring(instanceSpecific),
+      tostring(category)
+    ), "UpdateInstanceItems")
 
     if nil == category or instanceSpecific then
       category, instanceSpecific = CAEC.CategorizeItem(item, instance)
@@ -282,10 +286,6 @@ function CAEC.UpdateInstanceItems(items, trigger)
           categorizedStatic = categorizedStatic + 1
         end
       end
-
-      if not cachedCategory and not instanceSpecific then
-        cache[instanceName] = category or NONE
-      end
     end
   end
 end
@@ -299,7 +299,7 @@ function CAEC.UpdateInstanceItem(instance, categorizer, trigger)
   end
 
   ---@cast instance InventoryItem
-  Debug.log("Trigger: " .. trigger, "UpdateInstanceItem")
+  Debug.log("Trigger: " .. trigger, "UpdateInstanceItem", Debug.Level.Error)
 
   local category = categorizer(instance:getScriptItem(), instance)
 
@@ -339,8 +339,6 @@ function CAEC.OnContainerUpdate(containerItem)
   if container then
     CAEC.CategorizeItemContainer(container, "OnContainerUpdate")
     CAEC.UpdateEnd()
-  else
-    print("OnContainerUpdate: could not determine container type")
   end
 end
 

@@ -50,6 +50,8 @@ function FluidContainer:categorize(item, instance)
   local containerName = container:getContainerName():lower()
 
   if container:isEmpty() then
+    category = "ContainerLiquid"
+
     if containerName == "pot"
         or containerName == "pan"
         or containerName == "saucepan"
@@ -62,36 +64,30 @@ function FluidContainer:categorize(item, instance)
       category = "CookingCup"
     end
 
-    --self:log(string.format("FLUID   %s (%s) - %s", instance:getName(), item:getFullName(), containerName), Debug.Level.Info)
-
-    return category or "ContainerLiquid"
+    return category, true
   end
 
   local fluid = container:getPrimaryFluid()
   local fluidType = fluid:getFluidType()
   local fluidTypeString = fluid:getFluidTypeString():lower()
 
-  --self:log(string.format("-->   %s (%s)", instance:getName(), item:getFullName()), Debug.Level.Info)
-  --self:log(string.format("        Fluid: %s", fluid:toString()), Debug.Level.Info)
-  --self:log(string.format("        Fluid Type: %s", fluidTypeString), Debug.Level.Info)
-
   if fluid:isCategory(FluidCategory.Dyes) then
-    return "LiquidDye"
+    category = "LiquidDye"
   elseif fluid:isCategory(FluidCategory.HairDyes) then
-    return "AppearanceOrLiquid"
+    category = "AppearanceOrLiquid"
   elseif fluid:isCategory(FluidCategory.Fuel) then
-    return "LiquidFuel"
-  --elseif fluid:isCategory(FluidCategory.Industrial) then
-  --  return "LiquidIndustrial"
-  --elseif fluid:isCategory(FluidCategory.Poisons) then
-  --  return "LiquidPoison"
+    category = "LiquidFuel"
   elseif fluid:isCategory(FluidCategory.Medical) then
-    return "FirstAidOrLiquid"
+    category = "FirstAidOrLiquid"
   elseif fluidTypeString == "cookingoil" then
-    return "CookingOrLiquid"
+    category = "CookingOrLiquid"
   elseif fluidTypeString == "cleaningliquid"
     or fluidTypeString == "bleach" then
-    return "HouseholdOrLiquid"
+    category = "HouseholdOrLiquid"
+  end
+
+  if category then
+    return category, true
   end
 
   if fluid:isCategory(FluidCategory.Water) then
