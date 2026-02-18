@@ -40,15 +40,25 @@ end
 
 ---@param item Item
 ---@param instance InventoryItem|nil
----@param source string|nil
----@return InventoryItem
-function Utils.CreateInstanceIfNeeded(item, instance, source)
+---@return InventoryItem|nil
+function Utils.CreateInstanceIfNeeded(item, instance)
   if instance then
     return instance
   end
 
   local fullName = item:getFullName()
-  local temporaryInstance = instanceCache[fullName] or instanceItem(fullName)
+  local temporaryInstance = instanceCache[fullName]
+
+  if not temporaryInstance then
+    local result = instanceItem(item)
+
+    if not result then
+      Debug.log(string.format("Failed to create instance for item: %s", fullName), "Utils", Debug.Level.Error)
+      return nil
+    end
+
+    temporaryInstance = result
+  end
 
   if not instanceCache[fullName] then
     instanceCache[fullName] = temporaryInstance

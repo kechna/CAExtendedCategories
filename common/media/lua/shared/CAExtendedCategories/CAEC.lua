@@ -8,6 +8,11 @@ local CAEC = {}
 ---@type boolean
 CAEC.Initialized = false;
 
+CAEC.ErrorCount = 0;
+
+---@type table<string, Item>
+CAEC.ErrorItems = {};
+
 -- Static mapping for items that need specific categories
 ---@type table<string, string>
 CAEC.StaticCategories = {
@@ -128,6 +133,8 @@ function CAEC.UpdateStart()
 
   local saved = CAEC_Global or {}
 
+  CAEC.ErrorCount = getLuaDebuggerErrorCount()
+
   CAEC.Initialized = saved.Initialized or false
   CAEC.InstanceCategorizers = saved.InstanceCategorizers or ArrayList.new()
   CAEC.InstanceSpecific = saved.InstanceSpecific or {}
@@ -150,6 +157,31 @@ function CAEC.UpdateEnd()
   Utils.RemoveTemporaryInstances()
 
   CAEC_Global = ToSave
+
+  if getLuaDebuggerErrorCount() > CAEC.ErrorCount then
+    local errorItems = CAEC.ErrorItems
+
+    Events.OnGameStart.Add(function()
+      local itemList = ""
+
+      for itemName, item in pairs(errorItems) do
+        local mod = item:getModID()
+        itemList = itemList .. string.format(" - %s: %s\n", mod, itemName)
+      end
+
+      CAEC.ErrorItems = {}
+
+      local suffix = itemList == ""
+          and "Check the logs to see which mods cause this message to show up. "
+          or string.format("The following items trigger an error when created:\n\n%s\n", itemList)
+
+      error(
+        string.format(
+          "\n--- [CAExtendedCategories]---\nIf you're seeing this error, one or more items failed to be instantiated. This is NOT an issue with my mod (Extended Categories). These errors can safely be ignored, unfortunately there is no way to suppress them.\n\n%sPlease report these issues to the mod authors.\n",
+          suffix)
+      )
+    end)
+  end
 end
 
 ---@param trigger string
@@ -232,7 +264,13 @@ function CAEC.CategorizeItem(item, instance)
 
   if not category then
     local categorizers = instanceSpecific and CAEC.InstanceCategorizers or CAEC.ScriptCategorizers
-    local resolved = Utils.CreateInstanceIfNeeded(item, instance, "CategorizeItem")
+    local resolved = Utils.CreateInstanceIfNeeded(item, instance)
+
+    if not resolved then
+      CAEC.ErrorItems[itemName] = item
+      return nil, false
+    end
+
     category, instanceSpecific = DoCategorize(categorizers, item, resolved)
 
     if instanceSpecific then
@@ -252,8 +290,6 @@ function CAEC.UpdateInstanceItems(items, trigger)
   Debug.log("trigger: " .. (trigger or "N/A"), "UpdateInstanceItems")
   local total = items:size()
 
-  local categorizedInstance = 0
-  local categorizedStatic = 0
 
   for i = 0, total - 1 do
     local instance = items:get(i)
@@ -274,17 +310,11 @@ function CAEC.UpdateInstanceItems(items, trigger)
     ), "UpdateInstanceItems")
 
     if nil == category or instanceSpecific then
-      category, instanceSpecific = CAEC.CategorizeItem(item, instance)
+      category = CAEC.CategorizeItem(item, instance)
 
       if category and category ~= NONE then
-        Debug.log("> Setting category for " .. instanceName .. " -> " .. category, "UpdateInstanceItems")
+        Debug.log(string.format("Setting category for %s -> %s", instanceName, category), "UpdateInstanceItems")
         instance:setDisplayCategory(category)
-
-        if instanceSpecific then
-          categorizedInstance = categorizedInstance + 1
-        else
-          categorizedStatic = categorizedStatic + 1
-        end
       end
     end
   end

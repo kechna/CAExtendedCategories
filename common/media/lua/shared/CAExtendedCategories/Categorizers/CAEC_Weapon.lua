@@ -99,7 +99,7 @@ function Weapon:asFirearm(item, instance)
   --- @type string|nil
   local category = nil
 
-  local resolved = Utils.CreateInstanceIfNeeded(item, instance, self.Type)
+  local resolved = Utils.CreateInstanceIfNeeded(item, instance)
 
   if resolved:isTwoHandWeapon() then
     local ammoType = tostring(resolved:getAmmoType())
