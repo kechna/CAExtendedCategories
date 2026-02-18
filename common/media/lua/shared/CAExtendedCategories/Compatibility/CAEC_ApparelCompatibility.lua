@@ -7,6 +7,41 @@ function Apparel:initialise()
   local Category = self.Category
   local modCompatibility = {
     {
+      id = "Authentic Z - Current",
+      name = "Authentic Z",
+      mapping = {
+        ["az:HeadExtra"] = Category.ACCESSORY_HEAD,
+        ["az:HeadExtraHair"] = Category.ACCESSORY_HEAD,
+        ["az:HeadExtraPlus"] = Category.ACCESSORY_HEAD,
+        ["az:NeckExtra"] = Category.ACCESSORY_NECK,
+        ["az:LegsExtra"] = Category.ACCESSORY_LEGS,
+        ["az:TorsoRigPlus2"] = Category.CLOTHING_OUTERWEAR,
+        ["az:TorsoExtraPlus1"] = Category.CLOTHING_OUTERWEAR,
+      }
+    },
+    {
+      id = "AuthenticZLite",
+      name = "Authentic Z - Lite",
+      mapping = {
+        ["az:HeadExtra"] = Category.ACCESSORY_HEAD,
+        ["az:HeadExtraHair"] = Category.ACCESSORY_HEAD,
+        ["az:HeadExtraPlus"] = Category.ACCESSORY_HEAD,
+        ["az:NeckExtra"] = Category.ACCESSORY_NECK,
+        ["az:LegsExtra"] = Category.ACCESSORY_LEGS,
+        ["az:TorsoRigPlus2"] = Category.ACCESSORY_TOP,
+        ["az:TorsoExtraPlus1"] = Category.ACCESSORY_TOP,
+      }
+    },
+    {
+      id = "AuthenticZBackpacks+",
+      name = "Authentic Z - Backpacks+",
+      mapping = {
+        ["az:TorsoRigPlus2"] = Category.ACCESSORY_TOP,
+        ["az:TorsoExtraPlus1"] = Category.ACCESSORY_TOP,
+      }
+    },
+
+    {
       id = "GanydeBielovzki's Frockin Splendor! Vol.2",
       name = "Frockin Splendor",
       mapping = {
