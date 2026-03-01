@@ -20,15 +20,19 @@ function Gardening:validate(item, _instance)
   ) and not item:isItemType(ItemType.MOVEABLE)
 end
 
-function Gardening:categorize(item, _instance)
+function Gardening:categorize(item, instance)
   ---@type string|nil
   local category = nil
+  local isFood = item:isItemType(ItemType.FOOD)
 
-  if item:hasTag(ItemTag.IS_SEED) then
+  if not isFood
+      and item:hasTag(ItemTag.IS_SEED)
+      and not item:hasTag(ItemTag.IS_CUTTING)
+  then
     category = "GardeningSeed"
   elseif item:hasTag(ItemTag.IS_COMPOSTABLE) then
     category = "GardeningCompostable"
-  else
+  elseif not isFood then
     local recipe = item:getDoubleClickRecipe()
 
     if recipe == "OpenPacketOfSeeds"

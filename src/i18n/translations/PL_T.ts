@@ -23,7 +23,7 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Akcesoria"
    */
-  CAEC_Fallback_Accessory: "Akcesorium",
+  CAEC_Fallback_Accessory: "Dodatek",
   /**
    * firearm ammunition
    *
@@ -34,21 +34,21 @@ export const PL: ExternalTranslations = {
   /** animals */
   CAEC_Fallback_Animal: "Zwierzę",
   /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: "Część zwierzęcia",
+  CAEC_Fallback_AnimalPart: "Część zwierzęca",
   /**
    * character appearance items such as makeup
    *
    * found in-game:
    *   IGUI_ItemCat_Appearance = "WyglÂąd"
    */
-  CAEC_Fallback_Appearance: "Wygląd",
+  CAEC_Override_Appearance: "Wygląd",
   /**
    * camping supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Camping = "Kemping"
    */
-  CAEC_Fallback_Camping: "Kemping",
+  CAEC_Fallback_Camping: "Obozowanie",
   /**
    * maps of locations
    *
@@ -62,7 +62,7 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Clothing = "OdzieÂż"
    */
-  CAEC_Fallback_Clothing: "Odzież",
+  CAEC_Override_Clothing: "Odzież",
   /**
    * communication devices such as walkie talkies, radios
    *
@@ -101,7 +101,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Entertainment: "Rozrywka",
   /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: "Źródło ognia",
+  CAEC_Fallback_FireSource: "Ogień",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -111,22 +111,12 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "Pierwsza pomoc",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "WĂŞdkarstwo"
-   *   IGUI_perks_Fishing = "WĂŞdkarstwo"
-   *   ContextMenu_Fishing = "Łów ryby"
-   *   IGUI_CraftCategory_Fishing = "WĂŞdkarstwo"
-   */
-  CAEC_Fallback_Fishing: "Wędkarstwo",
-  /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "ÂŻywnoĹ“Ă¦"
    */
-  CAEC_Fallback_Food: "Żywność",
+  CAEC_Override_Food: "Jedzenie",
   /**
    * furniture items
    *
@@ -135,19 +125,12 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Meble",
   /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Ogrodnictwo"
-   */
-  CAEC_Fallback_Gardening: "Ogrodnictwo",
-  /**
    * household items
    *
    * found in-game:
    *   IGUI_ItemCat_Household = "Domowe"
    */
-  CAEC_Fallback_Household: "Gospodarstwo domowe",
+  CAEC_Fallback_Household: "Domowe",
   /**
    * instruments
    *
@@ -161,28 +144,28 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Junk = "Rupiecie"
    */
-  CAEC_Fallback_Junk: "Śmieci",
+  CAEC_Override_Junk: "Śmieci",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
    *   IGUI_ItemCat_LightSource = "?rĂłdÂło Ĺ“wiatÂła"
    */
-  CAEC_Fallback_LightSource: "Źródło światła",
+  CAEC_Override_LightSource: "Źródło światła",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Literatura"
    */
-  CAEC_Fallback_Literature: "Literatura",
+  CAEC_Fallback_Literature: "Książka",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "MateriaÂły"
    */
-  CAEC_Fallback_Material: "Materiały",
+  CAEC_Override_Material: "Materiał",
   /** keepsakes and souvenirs */
   CAEC_Fallback_Memento: "Pamiątka",
   /**
@@ -193,14 +176,14 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Paint: "Farba",
   /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: "Sprzęt ochronny",
+  CAEC_Fallback_ProtectiveGear: "Ochrona",
   /**
    * skill books
    *
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "PodrĂŞczniki"
    */
-  CAEC_Fallback_SkillBook: "Książka umiejętności",
+  CAEC_Override_SkillBook: "Poradnik",
   /**
    * sports items
    *
@@ -214,52 +197,44 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Tool = "NarzĂŞdzia"
    */
-  CAEC_Fallback_Tool: "Narzędzie",
-  /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "PuÂłapki"
-   *   IGUI_perks_Trapping = "Stawianie puÂłapek"
-   */
-  CAEC_Fallback_Trapping: "Pułapki",
+  CAEC_Override_Tool: "Narzędzie",
   /**
    * vehicle maintenance items
    *
    * found in-game:
    *   IGUI_ItemCat_VehicleMaintenance = "ObsÂługa pojazdĂłw"
    */
-  CAEC_Fallback_VehicleMaintenance: "Konserwacja pojazdu",
+  CAEC_Override_VehicleMaintenance: "Obsluga pojazdów",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "BroĂ±"
    */
-  CAEC_Fallback_Weapon: "Broń",
+  CAEC_Override_Weapon: "Broń",
   /**
    * axe weapon skill
    *
    * found in-game:
    *   IGUI_perks_Axe = "Siekiery"
    */
-  CAEC_Fallback_Axe: "Topór",
+  CAEC_Fallback_Axe: "Siekiera",
   /**
    * blacksmithing skill
    *
    * found in-game:
    *   IGUI_perks_Blacksmith = "Kowalstwo"
    */
-  CAEC_Override_Blacksmith: undefined,
+  CAEC_Fallback_Blacksmith: "Kowalstwo",
   /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "DÂługie obuchy"
    */
-  CAEC_Fallback_Blunt: "Tępa",
+  CAEC_Override_Blunt: "Długie obuchy",
   /** butchering skill */
-  CAEC_Fallback_Butchering: "Rzeźnictwo",
+  CAEC_Fallback_Butchering: "Oprawianie",
   /**
    * carpentry skill
    *
@@ -267,16 +242,16 @@ export const PL: ExternalTranslations = {
    *   IGUI_CraftCategory_Carpentry = "Stolarstwo"
    *   IGUI_perks_Carpentry = "Stolarstwo"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Stolarstwo",
   /** carving skill */
-  CAEC_Fallback_Carving: "Rzeźbienie",
+  CAEC_Fallback_Carving: "Rzeźbiarstwo",
   /**
    * electrical skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Elektryka"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elektryka",
   /**
    * farming/agriculture skill
    *
@@ -284,48 +259,65 @@ export const PL: ExternalTranslations = {
    *   IGUI_CraftCategory_Farming = "Uprawa roĹ“lin"
    *   IGUI_perks_Farming = "Uprawa roĹ“lin"
    */
-  CAEC_Override_Farming: undefined,
+  CAEC_Override_Farming: "Uprawa roślin",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "WĂŞdkarstwo"
+   *   IGUI_perks_Fishing = "WĂŞdkarstwo"
+   *   ContextMenu_Fishing = "Łów ryby"
+   *   IGUI_CraftCategory_Fishing = "WĂŞdkarstwo"
+   */
+  CAEC_Override_Fishing: "Wędkarstwo",
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: "Obróbka krzemienia",
+  CAEC_Fallback_FlintKnapping: "Łupanie",
   /**
    * foraging skill
    *
    * found in-game:
    *   IGUI_perks_Foraging = "Zbieractwo"
    */
-  CAEC_Override_Foraging: undefined,
+  CAEC_Fallback_Foraging: "Zbieractwo",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Ogrodnictwo"
+   */
+  CAEC_Fallback_Gardening: "Ogrodnictwo",
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: "Szklarstwo",
+  CAEC_Fallback_Glassmaking: "Szkło",
   /**
    * long blade weapon skill
    *
    * found in-game:
    *   IGUI_perks_LongBlade = "DÂługie ostrza"
    */
-  CAEC_Fallback_LongBlade: "Długie ostrze",
+  CAEC_Override_LongBlade: "Długie ostrze",
   /**
    * maintenance skill for maintaining and repairing tools and weapons
    *
    * found in-game:
    *   IGUI_perks_Maintenance = "Konserwacja"
    */
-  CAEC_Override_Maintenance: undefined,
+  CAEC_Fallback_Maintenance: "Konserwacja",
   /** masonry skill */
-  CAEC_Fallback_Masonry: "Murarstwo",
+  CAEC_Fallback_Masonry: "Murarka",
   /**
    * mechanics skill, vehicle maintenance
    *
    * found in-game:
    *   IGUI_perks_Mechanics = "Naprawa pojazdĂłw"
    */
-  CAEC_Override_Mechanics: undefined,
+  CAEC_Override_Mechanics: "Naprawa pojazdów",
   /**
    * metalworking skill (for items that are relevant in both welding and blacksmithing
    *
    * found in-game:
    *   IGUI_perks_Metalworking = "Spawanie"
    */
-  CAEC_Override_Metalworking: undefined,
+  CAEC_Fallback_Metalworking: "Metalurgia",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Garncarstwo",
   /**
@@ -334,49 +326,57 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_SmallBlade = "KrĂłtkie ostrza"
    */
-  CAEC_Override_SmallBlade: "Krótkie ostrze",
+  CAEC_Override_SmallBlade: "Krótki ostrze",
   /**
    * short blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_SmallBlunt = "KrĂłtkie obuchy"
    */
-  CAEC_Fallback_SmallBlunt: "Krótka tępa",
+  CAEC_Override_SmallBlunt: "Krótkie obuchy",
   /**
    * spear weapon skill
    *
    * found in-game:
    *   IGUI_perks_Spear = "WÂłĂłcznie"
    */
-  CAEC_Fallback_Spear: "Włócznia",
+  CAEC_Override_Spear: "Włócznia",
   /**
    * tailoring skill
    *
    * found in-game:
    *   IGUI_perks_Tailoring = "Krawiectwo"
    */
-  CAEC_Override_Tailoring: undefined,
+  CAEC_Fallback_Tailoring: "Krawiectwo",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Tropienie",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "PuÂłapki"
+   *   IGUI_perks_Trapping = "Stawianie puÂłapek"
+   */
+  CAEC_Override_Trapping: "Pułapki",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Spawanie"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Spawanie",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: "Ramiona",
+  CAEC_Override_Arms: "Ręce",
   /** lower body clothing, pants, shorts, skirts */
   CAEC_Override_Bottom: "Dół",
   /** facewear such as masks, glasses, goggles */
   CAEC_Override_Face: "Twarz",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: "Obuwie",
+  CAEC_Override_Footwear: "Buty",
   /** full-body items such as jumpsuits, dresses, overalls */
   CAEC_Override_FullBody: "Całe ciało",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: "Dłonie",
+  CAEC_Override_Hands: "Rękawiczki",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
@@ -396,7 +396,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Neck: "Szyja",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: "Odzież wierzchnia",
+  CAEC_Override_Outerwear: "Wierzchnie",
   /** hosiery and socks */
   CAEC_Override_Socks: "Skarpety",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
@@ -412,7 +412,7 @@ export const PL: ExternalTranslations = {
    *   ContextMenu_FoodType_Bread = "Chleb"
    *   ItemName_Base.Bread = "Chleb"
    */
-  CAEC_Fallback_Bread: "Pieczywo",
+  CAEC_Fallback_Bread: "Chleb",
   /**
    * sweets and candies
    *
@@ -421,7 +421,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Candy: "Słodycze",
   /** canned food items */
-  CAEC_Override_Canned: "Konserwowy",
+  CAEC_Override_Canned: "Konserwa",
   /**
    * dairy cheese products
    *
@@ -431,14 +431,14 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Cheese: "Ser",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: "Gotowe danie",
+  CAEC_Override_Dish: "Danie",
   /**
    * fresh fruit, including berries and citrus
    *
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "z owocami"
    */
-  CAEC_Fallback_Fruits: "Owoce",
+  CAEC_Override_Fruits: "Owoce",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -454,16 +454,16 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_HotPepper: "Ostre papryczki",
   /** edible insects */
-  CAEC_Fallback_Insect: "Owady",
+  CAEC_Fallback_Insect: "Robaki",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Bydło",
+  CAEC_Fallback_Livestock: "Pasza",
   /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "z mięsem"
    */
-  CAEC_Fallback_Meat: "Mięso",
+  CAEC_Override_Meat: "Mięso",
   /**
    * mushrooms/fungi
    *
@@ -479,13 +479,13 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Nut: "Orzechy",
   /** food items that can spoil */
-  CAEC_Override_Perishable: "Łatwo psujące się",
+  CAEC_Override_Perishable: "Psujące się",
   /** food for pets */
-  CAEC_Fallback_PetFood: "Zwierzęta domowe",
+  CAEC_Fallback_PetFood: "Karma",
   /** single serving portion of food */
   CAEC_Override_Portion: "Porcja",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: "Konserwowany",
+  CAEC_Override_Preserved: "Zakonserwowane",
   /**
    * fish and other seafood
    *
@@ -499,13 +499,13 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Ziarno"
    */
-  CAEC_Fallback_Seed: "Nasiona",
+  CAEC_Override_Seed: "Nasiona",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Przekąska",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: "Przyprawy",
+  CAEC_Fallback_Spice: "Przyprawa",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: "Podstawowe produkty",
+  CAEC_Fallback_Staple: "Podstawa",
   /**
    * items used to make cooking stock or broth, such as bouillon cubes
    *
@@ -529,19 +529,19 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Override_Vegetables: "Warzywa",
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: "Dorosły",
+  CAEC_Override_Adult: "Dla dorosłych",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Broszura",
   /** comic books */
   CAEC_Fallback_Comic: "Komiks",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: "Przedmiot zużywalny",
+  CAEC_Fallback_Consumable: "Rozrywkowy",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: "Książka luksusowa",
+  CAEC_Fallback_FancyBook: "Książka",
   /** flyers and handouts */
   CAEC_Fallback_Flier: "Ulotka",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: "Twarda oprawa",
+  CAEC_Fallback_Hardcover: "Twarda okładka",
   /**
    * literature magazines
    *
@@ -557,13 +557,13 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Newspaper: "Gazeta",
   /** picture books */
-  CAEC_Fallback_PictureBook: "Książka obrazkowa",
+  CAEC_Fallback_PictureBook: "Książka z obrazkami",
   /** recipes, readable items that teach you something */
   CAEC_Fallback_Recipe: "Przepis",
   /** tabletop RPG manuals */
   CAEC_Fallback_RpgManual: "Podręcznik RPG",
   /** softcover books */
-  CAEC_Fallback_Softcover: "Miękka oprawa",
+  CAEC_Fallback_Softcover: "Miękka okładka",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Broń palna",
   /** pistols and handguns */
@@ -592,7 +592,7 @@ export const PL: ExternalTranslations = {
    *   ItemName_Base.Beverage = "Napój"
    *   ItemName_Base.Beverage2 = "Napój"
    */
-  CAEC_Override_Beverage: "Napoje",
+  CAEC_Override_Beverage: "Napój",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktajl",
   /**
@@ -603,11 +603,11 @@ export const PL: ExternalTranslations = {
    *   ItemName_Base.Coffee = "Kawa"
    *   ItemName_Base.Coffee2 = "Kawa"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Override_Coffee: "Kawa",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Barwnik",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: "Napój energetyczny",
+  CAEC_Override_EnergyDrink: "Energetyk",
   /** liquid fuels such as gasoline, diesel, kerosene */
   CAEC_Override_Fuel: "Paliwo",
   /**
@@ -618,7 +618,7 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Juice: "Sok",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Płyn",
+  CAEC_Override_Liquid: "Ciecz",
   /**
    * dairy milk
    *
@@ -640,7 +640,7 @@ export const PL: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Herbata"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Override_Tea: "Herbata",
   /**
    * drinking water
    *
@@ -660,36 +660,36 @@ export const PL: ExternalTranslations = {
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Pudełko",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: "Związany",
+  CAEC_Override_Bundled: "Związane",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostowalne",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: "Ręcznie robiony",
+  CAEC_Override_Crafted: "Wytworzone",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: "Kubek",
+  CAEC_Override_Cup: "Naczynie",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: "Przybory kuchenne",
+  CAEC_Override_Cutlery: "Sztućce",
   /**
    * ring or bundle of keys
    *
    * found in-game:
    *   ItemName_Base.KeyRing = "Kółko z kluczami"
    */
-  CAEC_Override_KeyRing: "Pęk kluczy",
+  CAEC_Override_KeyRing: "Kółko z kluczami",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: "Naczynie",
+  CAEC_Override_Pan: "Naczynie kuchenne",
   /** photos */
   CAEC_Fallback_Photo: "Zdjęcie",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: "Peluche",
+  CAEC_Override_Plushie: "Pluszak",
   /** packet of plantable seeds for gardening/farming */
-  CAEC_Override_SeedPacket: "Torebka nasion",
+  CAEC_Override_SeedPacket: "Opakowanie nasion",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Palenie",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: "Przybór kuchenny",
+  CAEC_Override_Utensil: "Przyrząd kuchenny",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Do noszenia",
+  CAEC_Override_Wearable: "Plecak",
 };

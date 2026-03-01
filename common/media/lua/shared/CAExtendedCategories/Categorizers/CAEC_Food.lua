@@ -18,6 +18,7 @@ local Food = CAEC_ItemCategorizer:derive("Food")
 
 local BASE_CATEGORY = "Food"
 local BAKING_TAGS = table.newarray(ItemTag.BAKING_FAT, ItemTag.OIL, ItemTag.FLOUR)
+local HERB_TAGS = table.newarray(ItemTag.COMFREY, ItemTag.COMMON_MALLOW, ItemTag.WILD_GARLIC)
 
 function Food:new()
   --- @type CAEC_FoodCategorizer
@@ -91,6 +92,23 @@ function Food:new()
   return o
 end
 
+---@param item Item
+---@param instance Food?
+---@return boolean
+function Food:validate(item, instance)
+  if instance and instance:isFluidContainer() then
+    return false
+  end
+
+  return item:isItemType(ItemType.FOOD)
+      and instanceof(instance, "Food")
+      and not item:hasTag(ItemTag.ANIMAL_HEAD)
+      and not item:hasTag(ItemTag.FEATHER)
+      -- animal dung
+      and not item:hasTag(ItemTag.IS_COMPOSTABLE)
+      and not item:hasTag(ItemTag.SMOKABLE)
+end
+
 function Food:getFoodType(item, instance)
   ---@type string|nil
   local foodType = nil
@@ -114,6 +132,8 @@ function Food:getFoodType(item, instance)
     foodType = FoodType.SPICE
   elseif Utils.HasAnyTag(item, BAKING_TAGS) then
     foodType = FoodType.BAKING
+  elseif Utils.HasAnyTag(item, HERB_TAGS) then
+    foodType = FoodType.HERB
   end
 
   foodType = foodType or instance:getFoodType()
@@ -196,23 +216,6 @@ function Food:guessFoodOrSnack(item, instance)
   return nil
 end
 
----@param item Item
----@param instance InventoryItem?
----@return boolean
-function Food:validate(item, instance)
-  if instance and instance:isFluidContainer() then
-    return false
-  end
-
-  return item:isItemType(ItemType.FOOD)
-      and instanceof(instance, "Food")
-      and not item:hasTag(ItemTag.ANIMAL_HEAD)
-      and not item:hasTag(ItemTag.FEATHER)
-      -- animal dung
-      and not item:hasTag(ItemTag.IS_COMPOSTABLE)
-      and not item:hasTag(ItemTag.SMOKABLE)
-end
-
 function Food:categorize(item, instance)
   local eatType = item:getEatType()
   local pourType = item:getPourType()
@@ -228,6 +231,7 @@ function Food:categorize(item, instance)
     return nil, true
   end
 
+  --- @type string|nil
   local category = BASE_CATEGORY
 
   if instance:isSpice() then
@@ -269,6 +273,17 @@ function Food:categorize(item, instance)
 
     if boxed then
       category = boxed
+    end
+  end
+
+  if item:isMedicalLoot() then
+    local calories = instance:getCalories()
+
+    if calories > 0 then
+      category = category .. "OrFirstAid"
+    else
+      -- is first aid, no nutritional value
+      category = nil
     end
   end
 

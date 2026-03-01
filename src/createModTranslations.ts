@@ -75,6 +75,11 @@ export const createModTranslations = (async (context: FullModContext) => {
     addOr(PzCategory.Accessory + "Top", PzCategory.Container, language);
     addOr(PzCategory.Accessory + "Top", PzCategory.Gardening, language);
 
+    addOr("FoodHerb", PzCategory.FirstAid, language);
+    addOr("FoodPerishableHerb", PzCategory.FirstAid, language);
+    addOr("FoodSpice", PzCategory.FirstAid, language);
+    addOr("FoodPerishableSpice", PzCategory.FirstAid, language);
+
     [...WEAPON_ADDON, ...TOOL_ADDON.map((i) => "Tool" + i)]
       .filter((category) => !category.includes(PzCategory.Weapon))
       .forEach((category) => {

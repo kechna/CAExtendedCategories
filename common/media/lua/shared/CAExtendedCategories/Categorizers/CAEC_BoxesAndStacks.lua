@@ -16,7 +16,10 @@ local function byName(item, instance)
   local iconTexture = instance:getIcon()
   local icon = iconTexture and iconTexture:getName() or nil
 
-  if icon and not icon:contains("Parcel") then
+  if icon
+      and not icon:contains("Parcel")
+      and not icon:contains("Carton")
+  then
     return nil, nil
   end
 
