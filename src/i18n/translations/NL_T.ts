@@ -74,15 +74,6 @@ export const NL: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "Eerste hulp",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Fishing = "Vissen"
-   *   ContextMenu_Fishing = "Vissen"
-   *   IGUI_CraftCategory_Fishing = "Vissen"
-   */
-  CAEC_Fallback_Fishing: "Vissen",
-  /**
    * food items
    *
    * found in-game:
@@ -91,8 +82,6 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Food: "Voedsel",
   /** furniture items */
   CAEC_Fallback_Furniture: "Meubels",
-  /** gardening items */
-  CAEC_Fallback_Gardening: "Tuinieren",
   /** household items */
   CAEC_Fallback_Household: "Huishouden",
   /** instruments */
@@ -122,13 +111,6 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Sports: "Sport",
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Gereedschap",
-  /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_perks_Trapping = "Vallen zetten"
-   */
-  CAEC_Fallback_Trapping: "Vallen zetten",
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: "Voertuigonderhoud",
   /**
@@ -186,6 +168,15 @@ export const NL: ExternalTranslations = {
    *   IGUI_perks_Farming = "Landbouw"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_perks_Fishing = "Vissen"
+   *   ContextMenu_Fishing = "Vissen"
+   *   IGUI_CraftCategory_Fishing = "Vissen"
+   */
+  CAEC_Fallback_Fishing: "Vissen",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Vuursteen bewerken",
   /**
@@ -195,6 +186,8 @@ export const NL: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Voedsel zoeken"
    */
   CAEC_Override_Foraging: undefined,
+  /** gardening skill and items */
+  CAEC_Fallback_Gardening: "Tuinieren",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glas maken",
   /**
@@ -260,6 +253,13 @@ export const NL: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Sporen zoeken",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_perks_Trapping = "Vallen zetten"
+   */
+  CAEC_Fallback_Trapping: "Vallen zetten",
+  /**
    * welding skill
    *
    * found in-game:
@@ -306,23 +306,13 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Underwear: "Ondergoed",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Bakken",
-  /**
-   * baked bread products
-   *
-   * found in-game:
-   *   ItemName_Base.Bread = "Brood"
-   */
+  /** baked bread products */
   CAEC_Fallback_Bread: "Brood",
   /** sweets and candies */
   CAEC_Override_Candy: "Snoep",
   /** canned food items */
   CAEC_Override_Canned: "Ingeblikt",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ItemName_Base.Cheese = "Kaas"
-   */
+  /** dairy cheese products */
   CAEC_Fallback_Cheese: "Kaas",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Maaltijd",
@@ -372,12 +362,7 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Staple: "Basisvoeding",
   /** items used to make cooking stock or broth, such as bouillon cubes */
   CAEC_Fallback_Stock: "Bouillon",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ItemName_Base.Sugar = "Suiker"
-   */
+  /** sugar and sweeteners */
   CAEC_Fallback_Sugar: "Suiker",
   /**
    * vegetables, including leafy greens
@@ -400,19 +385,9 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Flier: "Flyer",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Hardcover",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Tijdschrift"
-   */
+  /** literature magazines */
   CAEC_Fallback_Magazine: "Tijdschrift",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Krant"
-   */
+  /** newspapers */
   CAEC_Fallback_Newspaper: "Krant",
   /** picture books */
   CAEC_Fallback_PictureBook: "Prentenboek",
@@ -445,8 +420,6 @@ export const NL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kofie"
-   *   ItemName_Base.Coffee = "Koffie"
-   *   ItemName_Base.Coffee2 = "Koffie"
    */
   CAEC_Override_Coffee: "Koffie",
   /** liquids used for dyeing or coloring */
@@ -459,12 +432,7 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Juice: "Sap",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Vloeistof",
-  /**
-   * dairy milk
-   *
-   * found in-game:
-   *   ItemName_Base.Milk = "Melk"
-   */
+  /** dairy milk */
   CAEC_Fallback_Milk: "Melk",
   /** carbonated soft drinks */
   CAEC_Override_SoftDrink: "Frisdrank",
@@ -482,13 +450,7 @@ export const NL: ExternalTranslations = {
    *   ContextMenu_Water = "Water"
    */
   CAEC_Fallback_Water: "Water",
-  /**
-   * alcoholic wine beverages
-   *
-   * found in-game:
-   *   ItemName_Base.Wine = "Fles Chardonnay"
-   *   ItemName_Base.Wine2 = "Fles rode wijn"
-   */
+  /** alcoholic wine beverages */
   CAEC_Override_Wine: "Wijn",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Doos",
@@ -504,12 +466,7 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Cup: "Beker",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Bestek",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Sleutelhanger"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Sleutelbos",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pan",

@@ -111,16 +111,6 @@ export const PH: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Fishing"
-   *   IGUI_perks_Fishing = "Fishing"
-   *   ContextMenu_Fishing = "Pangingisda"
-   *   IGUI_CraftCategory_Fishing = "Fishing"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const PH: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Furniture"
    */
   CAEC_Override_Furniture: undefined,
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Gardening"
-   */
-  CAEC_Override_Gardening: undefined,
   /**
    * household items
    *
@@ -216,14 +199,6 @@ export const PH: ExternalTranslations = {
    */
   CAEC_Override_Tool: undefined,
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Trapping"
-   *   IGUI_perks_Trapping = "Trapping"
-   */
-  CAEC_Override_Trapping: undefined,
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -285,6 +260,16 @@ export const PH: ExternalTranslations = {
    *   IGUI_perks_Farming = "Farming"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Fishing"
+   *   IGUI_perks_Fishing = "Fishing"
+   *   ContextMenu_Fishing = "Pangingisda"
+   *   IGUI_CraftCategory_Fishing = "Fishing"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: undefined,
   /**
@@ -294,6 +279,13 @@ export const PH: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Foraging"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Gardening"
+   */
+  CAEC_Override_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: undefined,
   /**
@@ -358,6 +350,14 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
   CAEC_Fallback_Tracking: undefined,
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Trapping"
+   *   IGUI_perks_Trapping = "Trapping"
+   */
+  CAEC_Override_Trapping: undefined,
   /**
    * welding skill
    *

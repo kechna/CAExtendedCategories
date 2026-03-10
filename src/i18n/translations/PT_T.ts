@@ -63,13 +63,6 @@ export const PT: ExternalTranslations = {
   /** first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Fishing = "Pesca"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -78,8 +71,6 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Food: undefined,
   /** furniture items */
   CAEC_Fallback_Furniture: undefined,
-  /** gardening items */
-  CAEC_Fallback_Gardening: undefined,
   /** household items */
   CAEC_Fallback_Household: undefined,
   /** instruments */
@@ -109,8 +100,6 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Sports: undefined,
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: undefined,
-  /** trapping skill */
-  CAEC_Fallback_Trapping: undefined,
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: undefined,
   /**
@@ -151,10 +140,19 @@ export const PT: ExternalTranslations = {
    *   IGUI_perks_Farming = "Agricultura"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_perks_Fishing = "Pesca"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: undefined,
   /** foraging skill */
   CAEC_Fallback_Foraging: undefined,
+  /** gardening skill and items */
+  CAEC_Fallback_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: undefined,
   /** long blade weapon skill */
@@ -179,6 +177,8 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Tailoring: undefined,
   /** tracking skill */
   CAEC_Fallback_Tracking: undefined,
+  /** trapping skill and items */
+  CAEC_Fallback_Trapping: undefined,
   /** welding skill */
   CAEC_Fallback_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
@@ -221,24 +221,14 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Underwear: undefined,
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: undefined,
-  /**
-   * baked bread products
-   *
-   * found in-game:
-   *   ItemName_Base.Bread = "Pão"
-   */
-  CAEC_Override_Bread: undefined,
+  /** baked bread products */
+  CAEC_Fallback_Bread: undefined,
   /** sweets and candies */
   CAEC_Override_Candy: undefined,
   /** canned food items */
   CAEC_Override_Canned: undefined,
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ItemName_Base.Cheese = "Queijo"
-   */
-  CAEC_Override_Cheese: undefined,
+  /** dairy cheese products */
+  CAEC_Fallback_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: undefined,
   /** fresh fruit, including berries and citrus */
@@ -277,13 +267,8 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Staple: undefined,
   /** items used to make cooking stock or broth, such as bouillon cubes */
   CAEC_Fallback_Stock: undefined,
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ItemName_Base.Sugar = "Açúcar"
-   */
-  CAEC_Override_Sugar: undefined,
+  /** sugar and sweeteners */
+  CAEC_Fallback_Sugar: undefined,
   /** vegetables, including leafy greens */
   CAEC_Override_Vegetables: undefined,
   /** adult-oriented content (hottiez magazines) */
@@ -300,20 +285,10 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Flier: undefined,
   /** hardcover books */
   CAEC_Fallback_Hardcover: undefined,
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Revista"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Jornal"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** literature magazines */
+  CAEC_Fallback_Magazine: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: undefined,
   /** recipes, readable items that teach you something */
@@ -340,13 +315,7 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Beverage: undefined,
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: undefined,
-  /**
-   * coffee beverage
-   *
-   * found in-game:
-   *   ItemName_Base.Coffee = "Café em pó"
-   *   ItemName_Base.Coffee2 = "Café em pó"
-   */
+  /** coffee beverage */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: undefined,
@@ -358,13 +327,8 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Juice: undefined,
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: undefined,
-  /**
-   * dairy milk
-   *
-   * found in-game:
-   *   ItemName_Base.Milk = "Leite"
-   */
-  CAEC_Override_Milk: undefined,
+  /** dairy milk */
+  CAEC_Fallback_Milk: undefined,
   /** carbonated soft drinks */
   CAEC_Override_SoftDrink: undefined,
   /** tea beverage */

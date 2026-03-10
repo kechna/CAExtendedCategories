@@ -106,16 +106,6 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Kalastus"
-   *   IGUI_perks_Fishing = "Kalastus"
-   *   ContextMenu_Fishing = "Kalastus"
-   *   IGUI_CraftCategory_Fishing = "Kalastus"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -129,13 +119,6 @@ export const FI: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Huonekalut"
    */
   CAEC_Override_Furniture: undefined,
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Puutarhanhoito"
-   */
-  CAEC_Override_Gardening: undefined,
   /**
    * household items
    *
@@ -211,14 +194,6 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Override_Tool: undefined,
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Ansaintin"
-   *   IGUI_perks_Trapping = "Ansainti"
-   */
-  CAEC_Override_Trapping: undefined,
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -280,6 +255,16 @@ export const FI: ExternalTranslations = {
    *   IGUI_perks_Farming = "Maanviljely"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Kalastus"
+   *   IGUI_perks_Fishing = "Kalastus"
+   *   ContextMenu_Fishing = "Kalastus"
+   *   IGUI_CraftCategory_Fishing = "Kalastus"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Piikiventyöstö",
   /**
@@ -289,6 +274,13 @@ export const FI: ExternalTranslations = {
    *   IGUI_perks_Foraging = "rehustaa"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Puutarhanhoito"
+   */
+  CAEC_Override_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Lasinvalmistus",
   /**
@@ -354,6 +346,14 @@ export const FI: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Jäljitys",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Ansaintin"
+   *   IGUI_perks_Trapping = "Ansainti"
+   */
+  CAEC_Override_Trapping: undefined,
+  /**
    * welding skill
    *
    * found in-game:
@@ -400,24 +400,14 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Underwear: "Alusvaatteet",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Leivonta",
-  /**
-   * baked bread products
-   *
-   * found in-game:
-   *   ItemName_Base.Bread = "Leipä"
-   */
-  CAEC_Override_Bread: undefined,
+  /** baked bread products */
+  CAEC_Fallback_Bread: undefined,
   /** sweets and candies */
   CAEC_Override_Candy: "Makeiset",
   /** canned food items */
   CAEC_Override_Canned: "Säilykkeet",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ItemName_Base.Cheese = "Juusto"
-   */
-  CAEC_Override_Cheese: undefined,
+  /** dairy cheese products */
+  CAEC_Fallback_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Valmisruoka",
   /**
@@ -466,13 +456,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Staple: "Peruselintarvike",
   /** items used to make cooking stock or broth, such as bouillon cubes */
   CAEC_Fallback_Stock: "Liemi",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ItemName_Base.Sugar = "Sokeri"
-   */
-  CAEC_Override_Sugar: undefined,
+  /** sugar and sweeteners */
+  CAEC_Fallback_Sugar: undefined,
   /**
    * vegetables, including leafy greens
    *
@@ -494,20 +479,10 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Flier: "Lentolehtinen",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Kovakantinen",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Ajolehti"
-   */
+  /** literature magazines */
   CAEC_Override_Magazine: "Aikakauslehti",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Sanomalehti"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: "Kuvakirja",
   /** recipes, readable items that teach you something */
@@ -539,8 +514,6 @@ export const FI: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kahvi"
-   *   ItemName_Base.Coffee = "Kahvi"
-   *   ItemName_Base.Coffee2 = "Kahvi"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -553,13 +526,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Juice: "Mehu",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Neste",
-  /**
-   * dairy milk
-   *
-   * found in-game:
-   *   ItemName_Base.Milk = "Maito"
-   */
-  CAEC_Override_Milk: undefined,
+  /** dairy milk */
+  CAEC_Fallback_Milk: undefined,
   /** carbonated soft drinks */
   CAEC_Override_SoftDrink: "Virvoitusjuoma",
   /**
@@ -576,13 +544,7 @@ export const FI: ExternalTranslations = {
    *   ContextMenu_Water = "Kastele"
    */
   CAEC_Override_Water: "Vesi",
-  /**
-   * alcoholic wine beverages
-   *
-   * found in-game:
-   *   ItemName_Base.Wine = "Valkoviini"
-   *   ItemName_Base.Wine2 = "Punaviini"
-   */
+  /** alcoholic wine beverages */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Laatikko",
@@ -598,12 +560,7 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Cup: "Kuppi",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Aterimet",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Avainrengas"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: undefined,
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pannu",

@@ -52,19 +52,10 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_FireSource: "Sursă de foc",
   /** first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: "Primul ajutor",
-  /**
-   * fishing skill
-   *
-   * found in-game:
-   *   ContextMenu_Fishing = "Pescuit"
-   */
-  CAEC_Fallback_Fishing: "Pescuit",
   /** food items */
   CAEC_Fallback_Food: "Mâncare",
   /** furniture items */
   CAEC_Fallback_Furniture: "Mobilier",
-  /** gardening items */
-  CAEC_Fallback_Gardening: "Grădinărit",
   /** household items */
   CAEC_Fallback_Household: "Gospodărie",
   /** instruments */
@@ -89,8 +80,6 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Sports: "Sport",
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Unealtă",
-  /** trapping skill */
-  CAEC_Fallback_Trapping: "Capcane",
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: "Întreținere vehicule",
   /** weapons in general */
@@ -111,10 +100,19 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Electrical: "Electricitate",
   /** farming/agriculture skill */
   CAEC_Fallback_Farming: "Agricultură",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   ContextMenu_Fishing = "Pescuit"
+   */
+  CAEC_Fallback_Fishing: "Pescuit",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Cioplirea silexului",
   /** foraging skill */
   CAEC_Fallback_Foraging: "Cules",
+  /** gardening skill and items */
+  CAEC_Fallback_Gardening: "Grădinărit",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Sticlărie",
   /** long blade weapon skill */
@@ -139,6 +137,8 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Tailoring: "Croitorie",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Urmărire",
+  /** trapping skill and items */
+  CAEC_Fallback_Trapping: "Capcane",
   /** welding skill */
   CAEC_Fallback_Welding: "Sudură",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */

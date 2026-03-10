@@ -111,16 +111,6 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "Primeros auxilios",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Pesca"
-   *   IGUI_perks_Fishing = "Pesca"
-   *   ContextMenu_Fishing = "Pescar"
-   *   IGUI_CraftCategory_Fishing = "Pesca"
-   */
-  CAEC_Fallback_Fishing: "Pesca",
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const ES: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Mobiliario"
    */
   CAEC_Fallback_Furniture: "Mobiliario",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Jardinería"
-   */
-  CAEC_Fallback_Gardening: "Jardinería",
   /**
    * household items
    *
@@ -216,14 +199,6 @@ export const ES: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Herramienta",
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Trampas"
-   *   IGUI_perks_Trapping = "Trampas"
-   */
-  CAEC_Fallback_Trapping: "Trampas",
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -285,6 +260,16 @@ export const ES: ExternalTranslations = {
    *   IGUI_perks_Farming = "Agricultura"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pesca"
+   *   IGUI_perks_Fishing = "Pesca"
+   *   ContextMenu_Fishing = "Pescar"
+   *   IGUI_CraftCategory_Fishing = "Pesca"
+   */
+  CAEC_Fallback_Fishing: "Pesca",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Percusión lítica",
   /**
@@ -294,6 +279,13 @@ export const ES: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Rebuscar"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Jardinería"
+   */
+  CAEC_Fallback_Gardening: "Jardinería",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Vidriería",
   /**
@@ -359,6 +351,14 @@ export const ES: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Rastreo",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Trampas"
+   *   IGUI_perks_Trapping = "Trampas"
+   */
+  CAEC_Fallback_Trapping: "Trampas",
+  /**
    * welding skill
    *
    * found in-game:
@@ -410,7 +410,6 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Pan"
-   *   ItemName_Base.Bread = "Pan"
    */
   CAEC_Fallback_Bread: "Pan",
   /**
@@ -427,7 +426,6 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Queso"
-   *   ItemName_Base.Cheese = "Queso"
    */
   CAEC_Fallback_Cheese: "Queso",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Azúcar"
-   *   ItemName_Base.Sugar = "Azúcar"
    */
   CAEC_Fallback_Sugar: "Azúcar",
   /**
@@ -542,19 +539,9 @@ export const ES: ExternalTranslations = {
   CAEC_Fallback_Flier: "Volante",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Tapa dura",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Revista"
-   */
+  /** literature magazines */
   CAEC_Fallback_Magazine: "Revista",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Periódico"
-   */
+  /** newspapers */
   CAEC_Fallback_Newspaper: "Periódico",
   /** picture books */
   CAEC_Fallback_PictureBook: "Libro ilustrado",
@@ -581,17 +568,9 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Cerveza"
-   *   ItemName_Base.Beer = "Servido en un vaso"
-   *   ItemName_Base.Beer2 = "Servido en un vaso de plástico"
    */
   CAEC_Override_Beer: "Servido en un vaso",
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Bebida"
-   *   ItemName_Base.Beverage2 = "Bebida"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Bebida",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cóctel",
@@ -600,8 +579,6 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Café"
-   *   ItemName_Base.Coffee = "Café"
-   *   ItemName_Base.Coffee2 = "Café"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Leche"
-   *   ItemName_Base.Milk = "Leche"
    */
   CAEC_Fallback_Milk: "Leche",
   /**
@@ -653,8 +629,6 @@ export const ES: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Vino"
-   *   ItemName_Base.Wine = "Vino blanco"
-   *   ItemName_Base.Wine2 = "Vino tinto"
    */
   CAEC_Fallback_Wine: "Vino",
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const ES: ExternalTranslations = {
   CAEC_Override_Cup: "Copa",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Cubiertos",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Llavero"
-   */
+  /** ring or bundle of keys */
   CAEC_Fallback_KeyRing: "Llavero",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Sartén",

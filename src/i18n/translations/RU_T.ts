@@ -111,16 +111,6 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "Первая помощь",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Рыболовство"
-   *   IGUI_perks_Fishing = "Рыболовство"
-   *   ContextMenu_Fishing = "Рыбачить"
-   *   IGUI_CraftCategory_Fishing = "Рыболовство"
-   */
-  CAEC_Fallback_Fishing: "Рыболовство",
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const RU: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Мебель"
    */
   CAEC_Fallback_Furniture: "Мебель",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Садоводство"
-   */
-  CAEC_Fallback_Gardening: "Садоводство",
   /**
    * household items
    *
@@ -216,14 +199,6 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Инструмент",
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Ловушка"
-   *   IGUI_perks_Trapping = "Звероловство"
-   */
-  CAEC_Fallback_Trapping: "Ловушка",
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -285,6 +260,16 @@ export const RU: ExternalTranslations = {
    *   IGUI_perks_Farming = "Фермерство"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Рыболовство"
+   *   IGUI_perks_Fishing = "Рыболовство"
+   *   ContextMenu_Fishing = "Рыбачить"
+   *   IGUI_CraftCategory_Fishing = "Рыболовство"
+   */
+  CAEC_Fallback_Fishing: "Рыболовство",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Обработка кремня",
   /**
@@ -294,6 +279,13 @@ export const RU: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Собирательство"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Садоводство"
+   */
+  CAEC_Fallback_Gardening: "Садоводство",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Стеклоделие",
   /**
@@ -359,6 +351,14 @@ export const RU: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Выслеживание",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Ловушка"
+   *   IGUI_perks_Trapping = "Звероловство"
+   */
+  CAEC_Fallback_Trapping: "Ловушка",
+  /**
    * welding skill
    *
    * found in-game:
@@ -410,7 +410,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Хлеб"
-   *   ItemName_Base.Bread = "Хлеб"
    */
   CAEC_Fallback_Bread: "Хлеб",
   /**
@@ -427,7 +426,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Сыр"
-   *   ItemName_Base.Cheese = "Сыр"
    */
   CAEC_Fallback_Cheese: "Сыр",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Сахар"
-   *   ItemName_Base.Sugar = "Сахар"
    */
   CAEC_Fallback_Sugar: "Сахар",
   /**
@@ -542,19 +539,9 @@ export const RU: ExternalTranslations = {
   CAEC_Fallback_Flier: "Листовка",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Твёрдый переплёт",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Журнал"
-   */
+  /** literature magazines */
   CAEC_Fallback_Magazine: "Журнал",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Газета"
-   */
+  /** newspapers */
   CAEC_Fallback_Newspaper: "Газета",
   /** picture books */
   CAEC_Fallback_PictureBook: "Книжка с картинками",
@@ -581,17 +568,9 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Пиво"
-   *   ItemName_Base.Beer = "Пиво в стакане"
-   *   ItemName_Base.Beer2 = "Пиво в стаканчике"
    */
   CAEC_Override_Beer: "Пиво в стакане",
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Напиток"
-   *   ItemName_Base.Beverage2 = "Напиток"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Напиток",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Коктейль",
@@ -600,8 +579,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Кофе"
-   *   ItemName_Base.Coffee = "Кофе"
-   *   ItemName_Base.Coffee2 = "Кофе"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Молочный продукт"
-   *   ItemName_Base.Milk = "Молоко"
    */
   CAEC_Override_Milk: "Молоко",
   /**
@@ -653,8 +629,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Вино"
-   *   ItemName_Base.Wine = "Белое вино"
-   *   ItemName_Base.Wine2 = "Красное вино"
    */
   CAEC_Fallback_Wine: "Вино",
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const RU: ExternalTranslations = {
   CAEC_Override_Cup: "Кружка",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Столовые приборы",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Связка ключей"
-   */
+  /** ring or bundle of keys */
   CAEC_Fallback_KeyRing: "Связка ключей",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Сковорода",

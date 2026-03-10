@@ -111,16 +111,6 @@ export const NO: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Fiske"
-   *   IGUI_perks_Fishing = "Fiske"
-   *   ContextMenu_Fishing = "Fisking"
-   *   IGUI_CraftCategory_Fishing = "Fiske"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const NO: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Møbler"
    */
   CAEC_Override_Furniture: undefined,
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Hagearbeid"
-   */
-  CAEC_Override_Gardening: undefined,
   /**
    * household items
    *
@@ -216,14 +199,6 @@ export const NO: ExternalTranslations = {
    */
   CAEC_Override_Tool: undefined,
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Lage feller"
-   *   IGUI_perks_Trapping = "Felleekspert"
-   */
-  CAEC_Override_Trapping: undefined,
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -285,6 +260,16 @@ export const NO: ExternalTranslations = {
    *   IGUI_perks_Farming = "Landbruk"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Fiske"
+   *   IGUI_perks_Fishing = "Fiske"
+   *   ContextMenu_Fishing = "Fisking"
+   *   IGUI_CraftCategory_Fishing = "Fiske"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Flintknapping",
   /**
@@ -294,6 +279,13 @@ export const NO: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Sanking"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Hagearbeid"
+   */
+  CAEC_Override_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glassblåsing",
   /**
@@ -359,6 +351,14 @@ export const NO: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Sporing",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Lage feller"
+   *   IGUI_perks_Trapping = "Felleekspert"
+   */
+  CAEC_Override_Trapping: undefined,
+  /**
    * welding skill
    *
    * found in-game:
@@ -410,7 +410,6 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Brød"
-   *   ItemName_Base.Bread = "Brød"
    */
   CAEC_Override_Bread: undefined,
   /**
@@ -427,7 +426,6 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Ost"
-   *   ItemName_Base.Cheese = "Ost"
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Sukker"
-   *   ItemName_Base.Sugar = "Sukker"
    */
   CAEC_Override_Sugar: undefined,
   /**
@@ -542,20 +539,10 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Flier: "Flygeblad",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Innbundet",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Magasin"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Avis"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** literature magazines */
+  CAEC_Fallback_Magazine: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: "Bildebok",
   /** recipes, readable items that teach you something */
@@ -581,17 +568,9 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Øl"
-   *   ItemName_Base.Beer = "Helt i et glass"
-   *   ItemName_Base.Beer2 = "Helt i en kopp"
    */
   CAEC_Override_Beer: undefined,
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Drikke"
-   *   ItemName_Base.Beverage2 = "Drikke"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: undefined,
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
@@ -600,8 +579,6 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kaffe"
-   *   ItemName_Base.Coffee = "Kaffe"
-   *   ItemName_Base.Coffee2 = "Kaffe"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Melk"
-   *   ItemName_Base.Milk = "Melk"
    */
   CAEC_Override_Milk: undefined,
   /**
@@ -653,8 +629,6 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Vin"
-   *   ItemName_Base.Wine = "Hvitvin"
-   *   ItemName_Base.Wine2 = "Rødvin"
    */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const NO: ExternalTranslations = {
   CAEC_Override_Cup: "Kopp",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Bestikk",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Nøkkelring"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: undefined,
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Panne",

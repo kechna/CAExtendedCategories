@@ -60,6 +60,7 @@ export const HUMAN_LANGUAGE_COMMENTS = {
 };
 
 export const MACHINE_LANGUAGE_COMMENTS = {
+  [Language.PL]: `machine translated by me and ${profileUrl("Piotrek0909", "76561198138484118")}`,
   [Language.CS]: "machine translated by me",
   [Language.DA]: "machine translated by me",
   [Language.DE]: "machine translated by me",
@@ -69,7 +70,6 @@ export const MACHINE_LANGUAGE_COMMENTS = {
   [Language.HU]: "machine translated by me",
   [Language.IT]: "machine translated by me",
   [Language.NO]: "machine translated by me",
-  [Language.PL]: "machine translated by me",
   [Language.RO]: "machine translated by me",
   [Language.RU]: "machine translated by me",
   [Language.UA]: "machine translated by me",

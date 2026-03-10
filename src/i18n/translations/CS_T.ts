@@ -46,7 +46,7 @@ export const CS: ExternalTranslations = {
    * camping supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Camping = "Stanov�n�"
+   *   IGUI_ItemCat_Camping = "Stanování"
    */
   CAEC_Override_Camping: "Stanování",
   /**
@@ -60,7 +60,7 @@ export const CS: ExternalTranslations = {
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
-   *   IGUI_ItemCat_Clothing = "Oble�en�"
+   *   IGUI_ItemCat_Clothing = "Oblečení"
    */
   CAEC_Override_Clothing: "Oblečení",
   /**
@@ -74,16 +74,16 @@ export const CS: ExternalTranslations = {
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
-   *   IGUI_ItemCat_Container = "�lo�i�t�"
-   *   ContextMenu_Container = "�lo�i�t�"
+   *   IGUI_ItemCat_Container = "Úložiště"
+   *   ContextMenu_Container = "Úložiště"
    */
   CAEC_Override_Container: "Úložiště",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
-   *   IGUI_ItemCat_Cooking = "Va�en�"
-   *   IGUI_perks_Cooking = "Va�en�"
+   *   IGUI_ItemCat_Cooking = "Vaření"
+   *   IGUI_perks_Cooking = "Vaření"
    */
   CAEC_Override_Cooking: "Vaření",
   /**
@@ -97,7 +97,7 @@ export const CS: ExternalTranslations = {
    * entertainment items
    *
    * found in-game:
-   *   IGUI_ItemCat_Entertainment = "Z�bava"
+   *   IGUI_ItemCat_Entertainment = "Zábava"
    */
   CAEC_Override_Entertainment: "Zábava",
   /** sources of fire such as matches and lighters */
@@ -106,67 +106,50 @@ export const CS: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Prvn� pomoc"
-   *   IGUI_ItemCat_FirstAid = "Prvn� pomoc"
+   *   IGUI_perks_Doctor = "První pomoc"
+   *   IGUI_ItemCat_FirstAid = "První pomoc"
    */
   CAEC_Override_FirstAid: "První pomoc",
-  /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Ryba�en�"
-   *   IGUI_perks_Fishing = "Ryba�en�"
-   *   ContextMenu_Fishing = "Ryba�en�"
-   *   IGUI_CraftCategory_Fishing = "Ryba�en�"
-   */
-  CAEC_Override_Fishing: "Rybaření",
   /**
    * food items
    *
    * found in-game:
-   *   IGUI_ItemCat_Food = "J�dlo"
+   *   IGUI_ItemCat_Food = "Jídlo"
    */
   CAEC_Override_Food: "Jídlo",
   /**
    * furniture items
    *
    * found in-game:
-   *   IGUI_ItemCat_Furniture = "N�bytek"
+   *   IGUI_ItemCat_Furniture = "Nábytek"
    */
   CAEC_Override_Furniture: "Nábytek",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Zahradni�en�"
-   */
-  CAEC_Override_Gardening: "Zahradničení",
   /**
    * household items
    *
    * found in-game:
-   *   IGUI_ItemCat_Household = "Dom�cnost"
+   *   IGUI_ItemCat_Household = "Domácnost"
    */
   CAEC_Override_Household: "Domácnost",
   /**
    * instruments
    *
    * found in-game:
-   *   IGUI_ItemCat_Instrument = "Hudebn� n�stroj"
+   *   IGUI_ItemCat_Instrument = "Hudební nástroj"
    */
   CAEC_Override_Instrument: "Hudební nástroj",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "Vete�"
+   *   IGUI_ItemCat_Junk = "Veteš"
    */
   CAEC_Override_Junk: "Veteš",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
-   *   IGUI_ItemCat_LightSource = "Zdroj sv�tla"
+   *   IGUI_ItemCat_LightSource = "Zdroj světla"
    */
   CAEC_Override_LightSource: "Zdroj světla",
   /**
@@ -180,7 +163,7 @@ export const CS: ExternalTranslations = {
    * crafting materials and building supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Material = "Materi�l"
+   *   IGUI_ItemCat_Material = "Materiál"
    */
   CAEC_Override_Material: "Materiál",
   /** keepsakes and souvenirs */
@@ -198,7 +181,7 @@ export const CS: ExternalTranslations = {
    * skill books
    *
    * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Kniha dovednost�"
+   *   IGUI_ItemCat_SkillBook = "Kniha dovedností"
    */
   CAEC_Override_SkillBook: "Kniha dovedností",
   /**
@@ -212,29 +195,21 @@ export const CS: ExternalTranslations = {
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
-   *   IGUI_ItemCat_Tool = "N�stroj"
+   *   IGUI_ItemCat_Tool = "Nástroj"
    */
   CAEC_Override_Tool: "Nástroj",
-  /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Pasti"
-   *   IGUI_perks_Trapping = "Odchyt zv��e"
-   */
-  CAEC_Override_Trapping: "Pasti",
   /**
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "�dr�ba vozidel"
+   *   IGUI_ItemCat_VehicleMaintenance = "Údržba vozidel"
    */
   CAEC_Override_VehicleMaintenance: "Údržba vozidel",
   /**
    * weapons in general
    *
    * found in-game:
-   *   IGUI_ItemCat_Weapon = "Zbra�"
+   *   IGUI_ItemCat_Weapon = "Zbraň"
    */
   CAEC_Override_Weapon: "Zbraň",
   /**
@@ -248,14 +223,14 @@ export const CS: ExternalTranslations = {
    * blacksmithing skill
    *
    * found in-game:
-   *   IGUI_perks_Blacksmith = "Kov��stv�"
+   *   IGUI_perks_Blacksmith = "Kovářství"
    */
   CAEC_Override_Blacksmith: undefined,
   /**
    * long blunt weapon skill
    *
    * found in-game:
-   *   IGUI_perks_Blunt = "Dlouh� tup� zbr."
+   *   IGUI_perks_Blunt = "Dlouhá tupá zbr."
    */
   CAEC_Override_Blunt: "Tupá zbraň",
   /** butchering skill */
@@ -264,8 +239,8 @@ export const CS: ExternalTranslations = {
    * carpentry skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Carpentry = "Tesa�stv�"
-   *   IGUI_perks_Carpentry = "Tesa�stv�"
+   *   IGUI_CraftCategory_Carpentry = "Tesařství"
+   *   IGUI_perks_Carpentry = "Tesařství"
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
@@ -274,40 +249,57 @@ export const CS: ExternalTranslations = {
    * electrical skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Electrical = "Elektrik��stv�"
+   *   IGUI_CraftCategory_Electrical = "Elektrikářství"
    */
   CAEC_Override_Electrical: undefined,
   /**
    * farming/agriculture skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Farming = "Farma�en�"
-   *   IGUI_perks_Farming = "Farma�en�"
+   *   IGUI_CraftCategory_Farming = "Farmaření"
+   *   IGUI_perks_Farming = "Farmaření"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Rybaření"
+   *   IGUI_perks_Fishing = "Rybaření"
+   *   ContextMenu_Fishing = "Rybaření"
+   *   IGUI_CraftCategory_Fishing = "Rybaření"
+   */
+  CAEC_Override_Fishing: "Rybaření",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Pazourkářství",
   /**
    * foraging skill
    *
    * found in-game:
-   *   IGUI_perks_Foraging = "Sb�r z�sob"
+   *   IGUI_perks_Foraging = "Sběr zásob"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Zahradničení"
+   */
+  CAEC_Override_Gardening: "Zahradničení",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Sklenářství",
   /**
    * long blade weapon skill
    *
    * found in-game:
-   *   IGUI_perks_LongBlade = "Dlouh� �epel"
+   *   IGUI_perks_LongBlade = "Dlouhá čepel"
    */
   CAEC_Override_LongBlade: "Dlouhá čepel",
   /**
    * maintenance skill for maintaining and repairing tools and weapons
    *
    * found in-game:
-   *   IGUI_perks_Maintenance = "�dr�ba"
+   *   IGUI_perks_Maintenance = "Údržba"
    */
   CAEC_Override_Maintenance: undefined,
   /** masonry skill */
@@ -323,7 +315,7 @@ export const CS: ExternalTranslations = {
    * metalworking skill (for items that are relevant in both welding and blacksmithing
    *
    * found in-game:
-   *   IGUI_perks_Metalworking = "Obr�b�n� kov�"
+   *   IGUI_perks_Metalworking = "Obrábění kovů"
    */
   CAEC_Override_Metalworking: undefined,
   /** pottery skill */
@@ -332,37 +324,45 @@ export const CS: ExternalTranslations = {
    * short blade weapon skill
    *
    * found in-game:
-   *   IGUI_perks_SmallBlade = "Kr�tk� �epel"
+   *   IGUI_perks_SmallBlade = "Krátká čepel"
    */
   CAEC_Override_SmallBlade: "Krátká čepel",
   /**
    * short blunt weapon skill
    *
    * found in-game:
-   *   IGUI_perks_SmallBlunt = "Kr�tk� tup� zbr."
+   *   IGUI_perks_SmallBlunt = "Krátká tupá zbr."
    */
   CAEC_Override_SmallBlunt: "Krátká tupá zbraň",
   /**
    * spear weapon skill
    *
    * found in-game:
-   *   IGUI_perks_Spear = "O�t�p"
+   *   IGUI_perks_Spear = "Oštěp"
    */
   CAEC_Override_Spear: "Oštěp",
   /**
    * tailoring skill
    *
    * found in-game:
-   *   IGUI_perks_Tailoring = "Krej�ovstv�"
+   *   IGUI_perks_Tailoring = "Krejčovství"
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
   CAEC_Fallback_Tracking: "Stopování",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Pasti"
+   *   IGUI_perks_Trapping = "Odchyt zvěře"
+   */
+  CAEC_Override_Trapping: "Pasti",
+  /**
    * welding skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Welding = "Obr�b�n� kov�"
+   *   IGUI_CraftCategory_Welding = "Obrábění kovů"
    */
   CAEC_Override_Welding: undefined,
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
@@ -409,15 +409,14 @@ export const CS: ExternalTranslations = {
    * baked bread products
    *
    * found in-game:
-   *   ContextMenu_FoodType_Bread = "Chl�b"
-   *   ItemName_Base.Bread = "Chleba"
+   *   ContextMenu_FoodType_Bread = "Chléb"
    */
   CAEC_Override_Bread: "Chléb",
   /**
    * sweets and candies
    *
    * found in-game:
-   *   ContextMenu_FoodType_Candy = "Bonb�n"
+   *   ContextMenu_FoodType_Candy = "Bonbón"
    */
   CAEC_Override_Candy: "Bonbón",
   /** canned food items */
@@ -426,8 +425,7 @@ export const CS: ExternalTranslations = {
    * dairy cheese products
    *
    * found in-game:
-   *   ContextMenu_FoodType_Cheese = "S�r"
-   *   ItemName_Base.Cheese = "S�r"
+   *   ContextMenu_FoodType_Cheese = "Sýr"
    */
   CAEC_Override_Cheese: "Sýr",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -450,7 +448,7 @@ export const CS: ExternalTranslations = {
    * spicy hot peppers
    *
    * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "P�liv� papriky"
+   *   ContextMenu_FoodType_HotPepper = "Pálivé papriky"
    */
   CAEC_Override_HotPepper: "Pálivé papriky",
   /** edible insects */
@@ -490,14 +488,14 @@ export const CS: ExternalTranslations = {
    * fish and other seafood
    *
    * found in-game:
-   *   ContextMenu_FoodType_Seafood = "Plody mo�e"
+   *   ContextMenu_FoodType_Seafood = "Plody moře"
    */
   CAEC_Override_Seafood: "Plody moře",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
-   *   ContextMenu_FoodType_Seed = "Sem�nko"
+   *   ContextMenu_FoodType_Seed = "Semínko"
    */
   CAEC_Override_Seed: "Semínko",
   /** snack foods (e.g. chips, cookies) */
@@ -518,7 +516,6 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Cukr"
-   *   ItemName_Base.Sugar = "Cukr"
    */
   CAEC_Override_Sugar: undefined,
   /**
@@ -542,20 +539,10 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Flier: "Leták",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Vázaná",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "�asopis"
-   */
+  /** literature magazines */
   CAEC_Override_Magazine: "Časopis",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Noviny"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: "Obrázková kniha",
   /** recipes, readable items that teach you something */
@@ -581,17 +568,9 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Pivo"
-   *   ItemName_Base.Beer = "Nalit do sklenice"
-   *   ItemName_Base.Beer2 = "Nalit do ��lku"
    */
   CAEC_Override_Beer: "Pivo",
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "N�poj"
-   *   ItemName_Base.Beverage2 = "N�poj"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Nápoj",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktejl",
@@ -599,9 +578,7 @@ export const CS: ExternalTranslations = {
    * coffee beverage
    *
    * found in-game:
-   *   ContextMenu_FoodType_Coffee = "K�va"
-   *   ItemName_Base.Coffee = "K�va"
-   *   ItemName_Base.Coffee2 = "K�va"
+   *   ContextMenu_FoodType_Coffee = "Káva"
    */
   CAEC_Override_Coffee: "Káva",
   /** liquids used for dyeing or coloring */
@@ -614,7 +591,7 @@ export const CS: ExternalTranslations = {
    * fruit juice
    *
    * found in-game:
-   *   ContextMenu_FoodType_Juice = "D�us"
+   *   ContextMenu_FoodType_Juice = "Džus"
    */
   CAEC_Override_Juice: "Džus",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
@@ -623,22 +600,21 @@ export const CS: ExternalTranslations = {
    * dairy milk
    *
    * found in-game:
-   *   ContextMenu_FoodType_Milk = "Ml�ko"
-   *   ItemName_Base.Milk = "Ml�ko"
+   *   ContextMenu_FoodType_Milk = "Mléko"
    */
   CAEC_Override_Milk: "Mléko",
   /**
    * carbonated soft drinks
    *
    * found in-game:
-   *   ContextMenu_FoodType_SoftDrink = "Jemn� n�poj"
+   *   ContextMenu_FoodType_SoftDrink = "Jemný nápoj"
    */
   CAEC_Override_SoftDrink: "Limonáda",
   /**
    * tea beverage
    *
    * found in-game:
-   *   ContextMenu_FoodType_Tea = "�aj"
+   *   ContextMenu_FoodType_Tea = "Čaj"
    */
   CAEC_Override_Tea: "Čaj",
   /**
@@ -648,14 +624,7 @@ export const CS: ExternalTranslations = {
    *   ContextMenu_Water = "Voda"
    */
   CAEC_Override_Water: undefined,
-  /**
-   * alcoholic wine beverages
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Wine = "V�no"
-   *   ItemName_Base.Wine = "B�l� v�no"
-   *   ItemName_Base.Wine2 = "�erven� v�no"
-   */
+  /** alcoholic wine beverages */
   CAEC_Override_Wine: "Víno",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Krabice",
@@ -671,12 +640,7 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Cup: "Hrnek",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Příbory",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Kl��enka"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Klíčenka",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pánev",

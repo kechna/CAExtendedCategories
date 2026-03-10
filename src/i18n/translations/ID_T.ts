@@ -106,16 +106,6 @@ export const ID: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Memancing"
-   *   IGUI_perks_Fishing = "Memancing"
-   *   ContextMenu_Fishing = "Memancing"
-   *   IGUI_CraftCategory_Fishing = "Memancing"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -129,13 +119,6 @@ export const ID: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Perabotan"
    */
   CAEC_Override_Furniture: undefined,
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Gardening"
-   */
-  CAEC_Override_Gardening: undefined,
   /**
    * household items
    *
@@ -211,14 +194,6 @@ export const ID: ExternalTranslations = {
    */
   CAEC_Override_Tool: undefined,
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Jebakan"
-   *   IGUI_perks_Trapping = "Menjebak"
-   */
-  CAEC_Override_Trapping: undefined,
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -280,6 +255,16 @@ export const ID: ExternalTranslations = {
    *   IGUI_perks_Farming = "Bertani"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Memancing"
+   *   IGUI_perks_Fishing = "Memancing"
+   *   ContextMenu_Fishing = "Memancing"
+   *   IGUI_CraftCategory_Fishing = "Memancing"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: undefined,
   /**
@@ -289,6 +274,13 @@ export const ID: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Mencari-cari"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Gardening"
+   */
+  CAEC_Override_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: undefined,
   /**
@@ -354,6 +346,14 @@ export const ID: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: undefined,
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Jebakan"
+   *   IGUI_perks_Trapping = "Menjebak"
+   */
+  CAEC_Override_Trapping: undefined,
+  /**
    * welding skill
    *
    * found in-game:
@@ -405,7 +405,6 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Roti"
-   *   ItemName_Base.Bread = "Roti"
    */
   CAEC_Override_Bread: undefined,
   /**
@@ -422,7 +421,6 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Keju"
-   *   ItemName_Base.Cheese = "Keju"
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -508,7 +506,6 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Gula"
-   *   ItemName_Base.Sugar = "Gula"
    */
   CAEC_Override_Sugar: undefined,
   /** vegetables, including leafy greens */
@@ -527,20 +524,10 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Flier: undefined,
   /** hardcover books */
   CAEC_Fallback_Hardcover: undefined,
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Majalah"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Koran"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** literature magazines */
+  CAEC_Fallback_Magazine: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: undefined,
   /** recipes, readable items that teach you something */
@@ -577,8 +564,6 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kopi"
-   *   ItemName_Base.Coffee = "Kopi"
-   *   ItemName_Base.Coffee2 = "Kopi"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -601,7 +586,6 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Susu"
-   *   ItemName_Base.Milk = "Susu"
    */
   CAEC_Override_Milk: undefined,
   /**
@@ -630,8 +614,6 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Wine"
-   *   ItemName_Base.Wine = "Anggur Putih"
-   *   ItemName_Base.Wine2 = "Anggur Merah"
    */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
@@ -648,12 +630,7 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: undefined,
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Gantungan Kunci"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: undefined,
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: undefined,

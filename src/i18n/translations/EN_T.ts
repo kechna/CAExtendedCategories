@@ -36,7 +36,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Animal = "Animal"
-   *   ItemName_Base.Animal = "Animal"
    */
   CAEC_Fallback_Animal: "Animal",
   /**
@@ -127,16 +126,6 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "First Aid",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Fishing"
-   *   IGUI_perks_Fishing = "Fishing"
-   *   ContextMenu_Fishing = "Fishing"
-   *   IGUI_CraftCategory_Fishing = "Fishing"
-   */
-  CAEC_Fallback_Fishing: "Fishing",
-  /**
    * food items
    *
    * found in-game:
@@ -150,14 +139,6 @@ export const EN: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Furniture"
    */
   CAEC_Fallback_Furniture: "Furniture",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Gardening"
-   *   ContextMenu_Gardening = "Gardening"
-   */
-  CAEC_Fallback_Gardening: "Gardening",
   /**
    * household items
    *
@@ -243,14 +224,6 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Tool",
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Trapping"
-   *   IGUI_perks_Trapping = "Trapping"
-   */
-  CAEC_Fallback_Trapping: "Trapping",
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -323,6 +296,16 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Override_Farming: undefined,
   /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Fishing"
+   *   IGUI_perks_Fishing = "Fishing"
+   *   ContextMenu_Fishing = "Fishing"
+   *   IGUI_CraftCategory_Fishing = "Fishing"
+   */
+  CAEC_Fallback_Fishing: "Fishing",
+  /**
    * knapping skill
    *
    * found in-game:
@@ -336,6 +319,14 @@ export const EN: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Foraging"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Gardening"
+   *   ContextMenu_Gardening = "Gardening"
+   */
+  CAEC_Fallback_Gardening: "Gardening",
   /**
    * glassmaking skill
    *
@@ -416,6 +407,14 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Override_Tracking: undefined,
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Trapping"
+   *   IGUI_perks_Trapping = "Trapping"
+   */
+  CAEC_Fallback_Trapping: "Trapping",
+  /**
    * welding skill
    *
    * found in-game:
@@ -467,7 +466,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Bread"
-   *   ItemName_Base.Bread = "Bread"
    */
   CAEC_Fallback_Bread: "Bread",
   /**
@@ -484,7 +482,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Cheese"
-   *   ItemName_Base.Cheese = "Cheese"
    */
   CAEC_Fallback_Cheese: "Cheese",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -580,7 +577,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Sugar"
-   *   ItemName_Base.Sugar = "White Sugar"
    */
   CAEC_Fallback_Sugar: "Sugar",
   /**
@@ -592,12 +588,7 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Vegetables: "Vegetables",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adult",
-  /**
-   * informational brochures
-   *
-   * found in-game:
-   *   ItemName_Base.Brochure = "Brochure"
-   */
+  /** informational brochures */
   CAEC_Fallback_Brochure: "Brochure",
   /** comic books */
   CAEC_Fallback_Comic: "Comic",
@@ -605,28 +596,13 @@ export const EN: ExternalTranslations = {
   CAEC_Fallback_Consumable: "Consumable",
   /** decorative or luxury books */
   CAEC_Fallback_FancyBook: "Fancy Book",
-  /**
-   * flyers and handouts
-   *
-   * found in-game:
-   *   ItemName_Base.Flier = "Flier"
-   */
+  /** flyers and handouts */
   CAEC_Fallback_Flier: "Flier",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Hardcover",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Magazine"
-   */
+  /** literature magazines */
   CAEC_Fallback_Magazine: "Magazine",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Old Newspaper"
-   */
+  /** newspapers */
   CAEC_Override_Newspaper: "Newspaper",
   /** picture books */
   CAEC_Fallback_PictureBook: "Picture Book",
@@ -664,7 +640,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Coffee"
-   *   ItemName_Base.Coffee2 = "Coffee"
    */
   CAEC_Fallback_Coffee: "Coffee",
   /** liquids used for dyeing or coloring */
@@ -688,7 +663,6 @@ export const EN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Milk"
    *   ContextMenu_Milk = "Milk"
-   *   ItemName_Base.Milk = "Milk Carton"
    */
   CAEC_Fallback_Milk: "Milk",
   /**
@@ -717,8 +691,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Wine"
-   *   ItemName_Base.Wine = "White Wine"
-   *   ItemName_Base.Wine2 = "Red Wine"
    */
   CAEC_Fallback_Wine: "Wine",
   /** things in a (small) box, such as boxes of ammo */
@@ -735,21 +707,11 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Cup: "Cup",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Cutlery",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Key Ring"
-   */
+  /** ring or bundle of keys */
   CAEC_Fallback_KeyRing: "Key Ring",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pan",
-  /**
-   * photos
-   *
-   * found in-game:
-   *   ItemName_Base.Photo = "Photograph"
-   */
+  /** photos */
   CAEC_Fallback_Photo: "Photo",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plushie",

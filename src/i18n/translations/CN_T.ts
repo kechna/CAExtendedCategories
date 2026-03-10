@@ -111,16 +111,6 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: "急救",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "钓鱼"
-   *   IGUI_perks_Fishing = "钓鱼"
-   *   ContextMenu_Fishing = "钓鱼"
-   *   IGUI_CraftCategory_Fishing = "钓鱼"
-   */
-  CAEC_Override_Fishing: "钓鱼",
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const CN: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "家具"
    */
   CAEC_Override_Furniture: "家具",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "园艺"
-   */
-  CAEC_Override_Gardening: "园艺",
   /**
    * household items
    *
@@ -216,14 +199,6 @@ export const CN: ExternalTranslations = {
    */
   CAEC_Override_Tool: "工具",
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "诱捕"
-   *   IGUI_perks_Trapping = "诱捕"
-   */
-  CAEC_Override_Trapping: "诱捕",
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -285,6 +260,16 @@ export const CN: ExternalTranslations = {
    *   IGUI_perks_Farming = "耕作"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "钓鱼"
+   *   IGUI_perks_Fishing = "钓鱼"
+   *   ContextMenu_Fishing = "钓鱼"
+   *   IGUI_CraftCategory_Fishing = "钓鱼"
+   */
+  CAEC_Override_Fishing: "钓鱼",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: undefined,
   /**
@@ -294,6 +279,13 @@ export const CN: ExternalTranslations = {
    *   IGUI_perks_Foraging = "搜寻"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "园艺"
+   */
+  CAEC_Override_Gardening: "园艺",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: undefined,
   /**
@@ -359,6 +351,14 @@ export const CN: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: undefined,
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "诱捕"
+   *   IGUI_perks_Trapping = "诱捕"
+   */
+  CAEC_Override_Trapping: "诱捕",
+  /**
    * welding skill
    *
    * found in-game:
@@ -410,7 +410,6 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "面包"
-   *   ItemName_Base.Bread = "面包"
    */
   CAEC_Override_Bread: "面包",
   /**
@@ -427,7 +426,6 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "奶酪"
-   *   ItemName_Base.Cheese = "奶酪"
    */
   CAEC_Override_Cheese: "奶酪",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "糖"
-   *   ItemName_Base.Sugar = "糖"
    */
   CAEC_Override_Sugar: "糖",
   /**
@@ -542,19 +539,9 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Flier: "传单",
   /** hardcover books */
   CAEC_Override_Hardcover: "精装书",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "杂志"
-   */
+  /** literature magazines */
   CAEC_Override_Magazine: "杂志",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "报纸"
-   */
+  /** newspapers */
   CAEC_Override_Newspaper: "报纸",
   /** picture books */
   CAEC_Override_PictureBook: "绘本",
@@ -581,17 +568,9 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "啤酒"
-   *   ItemName_Base.Beer = "玻璃杯(啤酒)"
-   *   ItemName_Base.Beer2 = "塑料杯(啤酒)"
    */
   CAEC_Override_Beer: "啤酒",
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "玻璃杯(饮料)"
-   *   ItemName_Base.Beverage2 = "塑料杯(饮料)"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "饮品",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "鸡尾酒",
@@ -600,8 +579,6 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "咖啡"
-   *   ItemName_Base.Coffee = "咖啡"
-   *   ItemName_Base.Coffee2 = "咖啡"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "牛奶"
-   *   ItemName_Base.Milk = "牛奶"
    */
   CAEC_Override_Milk: "牛奶",
   /**
@@ -653,8 +629,6 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "葡萄酒"
-   *   ItemName_Base.Wine = "白葡萄酒"
-   *   ItemName_Base.Wine2 = "红葡萄酒"
    */
   CAEC_Override_Wine: "葡萄酒",
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: undefined,
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "钥匙圈"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: "钥匙环",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: undefined,

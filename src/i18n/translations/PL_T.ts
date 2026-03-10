@@ -410,7 +410,6 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Chleb"
-   *   ItemName_Base.Bread = "Chleb"
    */
   CAEC_Fallback_Bread: "Chleb",
   /**
@@ -427,7 +426,6 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Ser"
-   *   ItemName_Base.Cheese = "Ser"
    */
   CAEC_Fallback_Cheese: "Ser",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Cukier"
-   *   ItemName_Base.Sugar = "Cukier"
    */
   CAEC_Fallback_Sugar: "Cukier",
   /**
@@ -542,19 +539,9 @@ export const PL: ExternalTranslations = {
   CAEC_Fallback_Flier: "Ulotka",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Twarda okładka",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Czasopismo"
-   */
+  /** literature magazines */
   CAEC_Fallback_Magazine: "Czasopismo",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Gazeta"
-   */
+  /** newspapers */
   CAEC_Fallback_Newspaper: "Gazeta",
   /** picture books */
   CAEC_Fallback_PictureBook: "Książka z obrazkami",
@@ -581,17 +568,9 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Piwo"
-   *   ItemName_Base.Beer = "Nalane do szklanki"
-   *   ItemName_Base.Beer2 = "Nalane do kubka"
    */
   CAEC_Fallback_Beer: "Piwo",
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Napój"
-   *   ItemName_Base.Beverage2 = "Napój"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Napój",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktajl",
@@ -600,8 +579,6 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kawa"
-   *   ItemName_Base.Coffee = "Kawa"
-   *   ItemName_Base.Coffee2 = "Kawa"
    */
   CAEC_Override_Coffee: "Kawa",
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Mleko"
-   *   ItemName_Base.Milk = "Mleko"
    */
   CAEC_Fallback_Milk: "Mleko",
   /**
@@ -653,8 +629,6 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Wino"
-   *   ItemName_Base.Wine = "Białe wino"
-   *   ItemName_Base.Wine2 = "Czerwone wino"
    */
   CAEC_Override_Wine: "Wino",
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Cup: "Naczynie",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Sztućce",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Kółko z kluczami"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Kółko z kluczami",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Naczynie kuchenne",

@@ -52,14 +52,10 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_FireSource: "Ildkilde",
   /** first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: "Førstehjælp",
-  /** fishing skill */
-  CAEC_Fallback_Fishing: "Fiskeri",
   /** food items */
   CAEC_Fallback_Food: "Mad",
   /** furniture items */
   CAEC_Fallback_Furniture: "Møbler",
-  /** gardening items */
-  CAEC_Fallback_Gardening: "Havearbejde",
   /** household items */
   CAEC_Fallback_Household: "Husholdning",
   /** instruments */
@@ -84,8 +80,6 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Sports: "Sport",
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Værktøj",
-  /** trapping skill */
-  CAEC_Fallback_Trapping: "Fælder",
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: "Køretøjsvedligeholdelse",
   /** weapons in general */
@@ -121,10 +115,14 @@ export const DA: ExternalTranslations = {
    *   IGUI_perks_Farming = "Havebrug"
    */
   CAEC_Override_Farming: undefined,
+  /** fishing skill and items */
+  CAEC_Fallback_Fishing: "Fiskeri",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Flinthugning",
   /** foraging skill */
   CAEC_Fallback_Foraging: "Sankning",
+  /** gardening skill and items */
+  CAEC_Fallback_Gardening: "Havearbejde",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glasfremstilling",
   /** long blade weapon skill */
@@ -149,6 +147,8 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Tailoring: "Skrædderi",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Sporing",
+  /** trapping skill and items */
+  CAEC_Fallback_Trapping: "Fælder",
   /** welding skill */
   CAEC_Fallback_Welding: "Svejsning",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
@@ -181,24 +181,14 @@ export const DA: ExternalTranslations = {
   CAEC_Override_Underwear: "Undertøj",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Bagning",
-  /**
-   * baked bread products
-   *
-   * found in-game:
-   *   ItemName_Base.Bread = "Brød"
-   */
-  CAEC_Override_Bread: undefined,
+  /** baked bread products */
+  CAEC_Fallback_Bread: undefined,
   /** sweets and candies */
   CAEC_Override_Candy: "Slik",
   /** canned food items */
   CAEC_Override_Canned: "Konserves",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ItemName_Base.Cheese = "Ost"
-   */
-  CAEC_Override_Cheese: undefined,
+  /** dairy cheese products */
+  CAEC_Fallback_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Færdigretter",
   /** fresh fruit, including berries and citrus */
@@ -237,13 +227,8 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Staple: "Basisvarer",
   /** items used to make cooking stock or broth, such as bouillon cubes */
   CAEC_Fallback_Stock: "Bouillon",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ItemName_Base.Sugar = "Sukker"
-   */
-  CAEC_Override_Sugar: undefined,
+  /** sugar and sweeteners */
+  CAEC_Fallback_Sugar: undefined,
   /** vegetables, including leafy greens */
   CAEC_Override_Vegetables: "Grøntsager",
   /** adult-oriented content (hottiez magazines) */
@@ -260,20 +245,10 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Flier: "Løbeseddel",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Hardcover",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Magasin"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Avis"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** literature magazines */
+  CAEC_Fallback_Magazine: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: "Billedbog",
   /** recipes, readable items that teach you something */
@@ -300,13 +275,7 @@ export const DA: ExternalTranslations = {
   CAEC_Override_Beverage: "Drikkevarer",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
-  /**
-   * coffee beverage
-   *
-   * found in-game:
-   *   ItemName_Base.Coffee = "Kaffe"
-   *   ItemName_Base.Coffee2 = "Kaffe"
-   */
+  /** coffee beverage */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Farvestof",
@@ -318,13 +287,8 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Juice: "Juice",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Væske",
-  /**
-   * dairy milk
-   *
-   * found in-game:
-   *   ItemName_Base.Milk = "Mælk"
-   */
-  CAEC_Override_Milk: undefined,
+  /** dairy milk */
+  CAEC_Fallback_Milk: undefined,
   /** carbonated soft drinks */
   CAEC_Override_SoftDrink: "Sodavand",
   /** tea beverage */

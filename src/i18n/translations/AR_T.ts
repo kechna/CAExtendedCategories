@@ -23,7 +23,7 @@ export const AR: ExternalTranslations = {
    * firearm ammunition
    *
    * found in-game:
-   *   IGUI_ItemCat_Ammo = "Munici�n"
+   *   IGUI_ItemCat_Ammo = "Municiï¿½n"
    */
   CAEC_Override_Ammo: "Munición",
   /** animals */
@@ -74,15 +74,6 @@ export const AR: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Fishing = "Pesca"
-   *   ContextMenu_Fishing = "Pescar"
-   *   IGUI_CraftCategory_Fishing = "Pesca"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -91,8 +82,6 @@ export const AR: ExternalTranslations = {
   CAEC_Override_Food: undefined,
   /** furniture items */
   CAEC_Fallback_Furniture: undefined,
-  /** gardening items */
-  CAEC_Fallback_Gardening: undefined,
   /** household items */
   CAEC_Fallback_Household: undefined,
   /** instruments */
@@ -122,13 +111,6 @@ export const AR: ExternalTranslations = {
   CAEC_Fallback_Sports: undefined,
   /** tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: undefined,
-  /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_perks_Trapping = "Trampas"
-   */
-  CAEC_Override_Trapping: undefined,
   /** vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: undefined,
   /**
@@ -165,8 +147,8 @@ export const AR: ExternalTranslations = {
    * carpentry skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Carpentry = "Carpinter�a"
-   *   IGUI_perks_Carpentry = "Carpinter�a"
+   *   IGUI_CraftCategory_Carpentry = "Carpinterï¿½a"
+   *   IGUI_perks_Carpentry = "Carpinterï¿½a"
    */
   CAEC_Override_Carpentry: undefined,
   /** carving skill */
@@ -175,7 +157,7 @@ export const AR: ExternalTranslations = {
    * electrical skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Electrical = "Electr�nica"
+   *   IGUI_CraftCategory_Electrical = "Electrï¿½nica"
    */
   CAEC_Override_Electrical: undefined,
   /**
@@ -186,6 +168,15 @@ export const AR: ExternalTranslations = {
    *   IGUI_perks_Farming = "Agricultura"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_perks_Fishing = "Pesca"
+   *   ContextMenu_Fishing = "Pescar"
+   *   IGUI_CraftCategory_Fishing = "Pesca"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: undefined,
   /**
@@ -195,6 +186,8 @@ export const AR: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Rebuscar"
    */
   CAEC_Override_Foraging: undefined,
+  /** gardening skill and items */
+  CAEC_Fallback_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: undefined,
   /**
@@ -217,7 +210,7 @@ export const AR: ExternalTranslations = {
    * mechanics skill, vehicle maintenance
    *
    * found in-game:
-   *   IGUI_perks_Mechanics = "Mec�nica"
+   *   IGUI_perks_Mechanics = "Mecï¿½nica"
    */
   CAEC_Override_Mechanics: undefined,
   /**
@@ -254,11 +247,18 @@ export const AR: ExternalTranslations = {
    * tailoring skill
    *
    * found in-game:
-   *   IGUI_perks_Tailoring = "Sastrer�a"
+   *   IGUI_perks_Tailoring = "Sastrerï¿½a"
    */
   CAEC_Override_Tailoring: undefined,
   /** tracking skill */
   CAEC_Fallback_Tracking: undefined,
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_perks_Trapping = "Trampas"
+   */
+  CAEC_Override_Trapping: undefined,
   /**
    * welding skill
    *
@@ -311,7 +311,6 @@ export const AR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Pan"
-   *   ItemName_Base.Bread = "Pan"
    */
   CAEC_Override_Bread: undefined,
   /**
@@ -328,7 +327,6 @@ export const AR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Queso"
-   *   ItemName_Base.Cheese = "Queso"
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -351,7 +349,7 @@ export const AR: ExternalTranslations = {
    * spicy hot peppers
    *
    * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Aj� picante"
+   *   ContextMenu_FoodType_HotPepper = "Ají picante"
    */
   CAEC_Override_HotPepper: "Ají picante",
   /** edible insects */
@@ -418,8 +416,7 @@ export const AR: ExternalTranslations = {
    * sugar and sweeteners
    *
    * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Az�car"
-   *   ItemName_Base.Sugar = "Az�car"
+   *   ContextMenu_FoodType_Sugar = "Azúcar"
    */
   CAEC_Override_Sugar: "Azúcar",
   /**
@@ -443,20 +440,10 @@ export const AR: ExternalTranslations = {
   CAEC_Fallback_Flier: undefined,
   /** hardcover books */
   CAEC_Fallback_Hardcover: undefined,
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Revista"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Diario"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** literature magazines */
+  CAEC_Fallback_Magazine: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: undefined,
   /** recipes, readable items that teach you something */
@@ -482,17 +469,9 @@ export const AR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Cerveza"
-   *   ItemName_Base.Beer = "Servida en un vaso"
-   *   ItemName_Base.Beer2 = "Servida en un vaso"
    */
   CAEC_Override_Beer: undefined,
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Bebida"
-   *   ItemName_Base.Beverage2 = "Bebida"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: undefined,
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: undefined,
@@ -501,8 +480,6 @@ export const AR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Cafe"
-   *   ItemName_Base.Coffee = "Caf�"
-   *   ItemName_Base.Coffee2 = "Caf�"
    */
   CAEC_Override_Coffee: "Café",
   /** liquids used for dyeing or coloring */
@@ -525,7 +502,6 @@ export const AR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Leche"
-   *   ItemName_Base.Milk = "Leche"
    */
   CAEC_Override_Milk: undefined,
   /**
@@ -539,7 +515,7 @@ export const AR: ExternalTranslations = {
    * tea beverage
    *
    * found in-game:
-   *   ContextMenu_FoodType_Tea = "T�"
+   *   ContextMenu_FoodType_Tea = "Té"
    */
   CAEC_Override_Tea: "Té",
   /**
@@ -554,8 +530,6 @@ export const AR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Vino"
-   *   ItemName_Base.Wine = "Chardonnay"
-   *   ItemName_Base.Wine2 = "Vino tinto"
    */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
@@ -572,12 +546,7 @@ export const AR: ExternalTranslations = {
   CAEC_Override_Cup: undefined,
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: undefined,
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Llavero"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: undefined,
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: undefined,

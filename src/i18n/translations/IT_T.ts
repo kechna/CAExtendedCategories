@@ -111,16 +111,6 @@ export const IT: ExternalTranslations = {
    */
   CAEC_Override_FirstAid: undefined,
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Pesca"
-   *   IGUI_perks_Fishing = "Pesca"
-   *   ContextMenu_Fishing = "Pesca"
-   *   IGUI_CraftCategory_Fishing = "Pesca"
-   */
-  CAEC_Override_Fishing: undefined,
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const IT: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Mobili"
    */
   CAEC_Override_Furniture: undefined,
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Giardinaggio"
-   */
-  CAEC_Override_Gardening: undefined,
   /**
    * household items
    *
@@ -198,7 +181,7 @@ export const IT: ExternalTranslations = {
    * skill books
    *
    * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Libro delle abilitÃ"
+   *   IGUI_ItemCat_SkillBook = "Libro delle abilità"
    */
   CAEC_Override_SkillBook: "Libro delle abilità",
   /**
@@ -215,14 +198,6 @@ export const IT: ExternalTranslations = {
    *   IGUI_ItemCat_Tool = "Attrezzo"
    */
   CAEC_Override_Tool: undefined,
-  /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Trappole"
-   *   IGUI_perks_Trapping = "Costruire Trappole"
-   */
-  CAEC_Override_Trapping: undefined,
   /**
    * vehicle maintenance items
    *
@@ -285,6 +260,16 @@ export const IT: ExternalTranslations = {
    *   IGUI_perks_Farming = "Coltivazione"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pesca"
+   *   IGUI_perks_Fishing = "Pesca"
+   *   ContextMenu_Fishing = "Pesca"
+   *   IGUI_CraftCategory_Fishing = "Pesca"
+   */
+  CAEC_Override_Fishing: undefined,
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Scheggiatura della selce",
   /**
@@ -294,6 +279,13 @@ export const IT: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Cercare Cibo"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Giardinaggio"
+   */
+  CAEC_Override_Gardening: undefined,
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Lavorazione del vetro",
   /**
@@ -359,6 +351,14 @@ export const IT: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Pistaggio",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Trappole"
+   *   IGUI_perks_Trapping = "Costruire Trappole"
+   */
+  CAEC_Override_Trapping: undefined,
+  /**
    * welding skill
    *
    * found in-game:
@@ -410,7 +410,6 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Pane"
-   *   ItemName_Base.Bread = "Pane"
    */
   CAEC_Override_Bread: undefined,
   /**
@@ -427,7 +426,6 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Formaggio"
-   *   ItemName_Base.Cheese = "Formaggio"
    */
   CAEC_Override_Cheese: undefined,
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Zucchero"
-   *   ItemName_Base.Sugar = "Zucchero"
    */
   CAEC_Override_Sugar: undefined,
   /**
@@ -542,20 +539,10 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Flier: "Volantino",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Copertina rigida",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Rivista"
-   */
-  CAEC_Override_Magazine: undefined,
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Giornale"
-   */
-  CAEC_Override_Newspaper: undefined,
+  /** literature magazines */
+  CAEC_Fallback_Magazine: undefined,
+  /** newspapers */
+  CAEC_Fallback_Newspaper: undefined,
   /** picture books */
   CAEC_Fallback_PictureBook: "Libro illustrato",
   /** recipes, readable items that teach you something */
@@ -581,17 +568,9 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Birra"
-   *   ItemName_Base.Beer = "Birra in bicchiere"
-   *   ItemName_Base.Beer2 = "Birra in tazza"
    */
   CAEC_Override_Beer: undefined,
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Bevande"
-   *   ItemName_Base.Beverage2 = "Bevande"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: undefined,
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
@@ -600,8 +579,6 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Caffè"
-   *   ItemName_Base.Coffee = "Caffè"
-   *   ItemName_Base.Coffee2 = "Caffè"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Latte"
-   *   ItemName_Base.Milk = "Latte"
    */
   CAEC_Override_Milk: undefined,
   /**
@@ -653,8 +629,6 @@ export const IT: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Vino"
-   *   ItemName_Base.Wine = "Chardonnay"
-   *   ItemName_Base.Wine2 = "Vino rosso"
    */
   CAEC_Override_Wine: undefined,
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const IT: ExternalTranslations = {
   CAEC_Override_Cup: "Tazza",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Posate",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Portachiavi"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: undefined,
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Padella",

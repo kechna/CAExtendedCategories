@@ -111,16 +111,6 @@ export const HU: ExternalTranslations = {
    */
   CAEC_Fallback_FirstAid: "Gyógyítás",
   /**
-   * fishing skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Horgászás"
-   *   IGUI_perks_Fishing = "Horgászás"
-   *   ContextMenu_Fishing = "Horgászás"
-   *   IGUI_CraftCategory_Fishing = "Horgászat"
-   */
-  CAEC_Fallback_Fishing: "Horgászás",
-  /**
    * food items
    *
    * found in-game:
@@ -134,13 +124,6 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Bútor"
    */
   CAEC_Fallback_Furniture: "Bútor",
-  /**
-   * gardening items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Kertészkedés"
-   */
-  CAEC_Fallback_Gardening: "Kertészkedés",
   /**
    * household items
    *
@@ -216,14 +199,6 @@ export const HU: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Eszköz",
   /**
-   * trapping skill
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Prémvadászat"
-   *   IGUI_perks_Trapping = "Vadászat"
-   */
-  CAEC_Fallback_Trapping: "Prémvadászat",
-  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -285,6 +260,16 @@ export const HU: ExternalTranslations = {
    *   IGUI_perks_Farming = "Gazdálkodás"
    */
   CAEC_Override_Farming: undefined,
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Horgászás"
+   *   IGUI_perks_Fishing = "Horgászás"
+   *   ContextMenu_Fishing = "Horgászás"
+   *   IGUI_CraftCategory_Fishing = "Horgászat"
+   */
+  CAEC_Fallback_Fishing: "Horgászás",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Kovapattintás",
   /**
@@ -294,6 +279,13 @@ export const HU: ExternalTranslations = {
    *   IGUI_perks_Foraging = "Gyűjtögetés"
    */
   CAEC_Override_Foraging: undefined,
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Kertészkedés"
+   */
+  CAEC_Fallback_Gardening: "Kertészkedés",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Üvegkészítés",
   /**
@@ -359,6 +351,14 @@ export const HU: ExternalTranslations = {
   /** tracking skill */
   CAEC_Fallback_Tracking: "Nyomkövetés",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Prémvadászat"
+   *   IGUI_perks_Trapping = "Vadászat"
+   */
+  CAEC_Fallback_Trapping: "Prémvadászat",
+  /**
    * welding skill
    *
    * found in-game:
@@ -410,7 +410,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Kenyér"
-   *   ItemName_Base.Bread = "Kenyér"
    */
   CAEC_Fallback_Bread: "Kenyér",
   /**
@@ -427,7 +426,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Sajt"
-   *   ItemName_Base.Cheese = "Sajt"
    */
   CAEC_Fallback_Cheese: "Sajt",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
@@ -518,7 +516,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Cukor"
-   *   ItemName_Base.Sugar = "Cukor"
    */
   CAEC_Fallback_Sugar: "Cukor",
   /**
@@ -542,19 +539,9 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Flier: "Szórólap",
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Keménykötés",
-  /**
-   * literature magazines
-   *
-   * found in-game:
-   *   ItemName_Base.Magazine = "Magazin"
-   */
+  /** literature magazines */
   CAEC_Fallback_Magazine: "Magazin",
-  /**
-   * newspapers
-   *
-   * found in-game:
-   *   ItemName_Base.Newspaper = "Újság"
-   */
+  /** newspapers */
   CAEC_Fallback_Newspaper: "Újság",
   /** picture books */
   CAEC_Fallback_PictureBook: "Képeskönyv",
@@ -581,17 +568,9 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Sör"
-   *   ItemName_Base.Beer = "Üvegbe öntve"
-   *   ItemName_Base.Beer2 = "Csészébe öntve"
    */
   CAEC_Override_Beer: "Üvegbe öntve",
-  /**
-   * top-level category for drinkable liquids
-   *
-   * found in-game:
-   *   ItemName_Base.Beverage = "Ital"
-   *   ItemName_Base.Beverage2 = "Ital"
-   */
+  /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Ital",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktél",
@@ -600,8 +579,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kávé"
-   *   ItemName_Base.Coffee = "Kávé"
-   *   ItemName_Base.Coffee2 = "Kávé"
    */
   CAEC_Override_Coffee: undefined,
   /** liquids used for dyeing or coloring */
@@ -624,7 +601,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Tej"
-   *   ItemName_Base.Milk = "Tej"
    */
   CAEC_Fallback_Milk: "Tej",
   /**
@@ -653,8 +629,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Bor"
-   *   ItemName_Base.Wine = "Fehérbor"
-   *   ItemName_Base.Wine2 = "Vörösbor"
    */
   CAEC_Fallback_Wine: "Bor",
   /** things in a (small) box, such as boxes of ammo */
@@ -671,12 +645,7 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Cup: "Csésze",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Evőeszköz",
-  /**
-   * ring or bundle of keys
-   *
-   * found in-game:
-   *   ItemName_Base.KeyRing = "Kulcstartó"
-   */
+  /** ring or bundle of keys */
   CAEC_Override_KeyRing: "Kulcscsomó",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Serpenyő",

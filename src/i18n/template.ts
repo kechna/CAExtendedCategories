@@ -320,7 +320,7 @@ export const TRANSLATIONS = {
   /* items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pan",
   /* photos */
-  CAEC_Fallback_Photo: "Photograph",
+  CAEC_Fallback_Photo: "Photo",
   /* for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plushie",
   /* loose plantable seeds for gardening/farming */
