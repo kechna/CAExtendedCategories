@@ -170,6 +170,10 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
     `Please don't translate the language files from my mod, I can't use that as-is. See the explanation at the bottom if you want to know why.`,
   );
 
+  report.add(`[h2]Basic mod info[/h2]`);
+  report.add(
+    `Since B42.15, mods can provide translations for their name and description. I've machine generated them for all languages I don't speak. If you want to provide better translations, you can just post the translated name and description in a comment here, and I'll replace them.`,
+  );
   report.add(`[h2]Current translation status[/h2]`);
   report.add(`[h3]Manually translated languages[/h3]`);
   report.add("[table]");

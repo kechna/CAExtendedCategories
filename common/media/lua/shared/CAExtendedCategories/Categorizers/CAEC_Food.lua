@@ -19,6 +19,7 @@ local Food = CAEC_ItemCategorizer:derive("Food")
 local BASE_CATEGORY = "Food"
 local BAKING_TAGS = table.newarray(ItemTag.BAKING_FAT, ItemTag.OIL, ItemTag.FLOUR)
 local HERB_TAGS = table.newarray(ItemTag.COMFREY, ItemTag.COMMON_MALLOW, ItemTag.WILD_GARLIC)
+local SPICE_TAGS = table.newarray(ItemTag.SALT, ItemTag.DRIED_FOOD)
 
 function Food:new()
   --- @type CAEC_FoodCategorizer
@@ -106,6 +107,7 @@ function Food:validate(item, instance)
       and not item:hasTag(ItemTag.FEATHER)
       -- animal dung
       and not item:hasTag(ItemTag.IS_COMPOSTABLE)
+      and not item:hasTag(ItemTag.ANIMAL_BRAIN)
       and not item:hasTag(ItemTag.SMOKABLE)
 end
 
@@ -238,7 +240,7 @@ function Food:categorize(item, instance)
     if FoodType.NO_EXPLICIT == foodType and (
           eatType ~= "GlugFood"
           and eatType ~= "Candrink"
-          or Utils.HasAnyTag(item, { ItemTag.SALT, ItemTag.DRIED_FOOD })
+          or Utils.HasAnyTag(item, SPICE_TAGS)
         )
     then
       foodType = FoodType.SPICE;

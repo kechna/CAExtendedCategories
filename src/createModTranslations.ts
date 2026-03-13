@@ -11,6 +11,7 @@ import { PzCategory, WEAPON_CATEGORIES } from "./zomboid/categories.ts";
 import { useTranslations } from "./i18n/useTranslations.ts";
 import { ALL_TRANSLATIONS } from "./i18n/translations";
 import { TOOL_ADDON } from "./categories.ts";
+import { MOD_INFO_TRANSLATIONS } from "./modInfo.ts";
 
 export const createModTranslations = (async (context: FullModContext): Promise<ModTranslations> => {
   const { save, t, addOr, created } = await useTranslations(context, SUPPORTED_LANGUAGES);
@@ -104,6 +105,7 @@ export const createModTranslations = (async (context: FullModContext): Promise<M
   });
 
   return {
+    [Translations.MOD]: MOD_INFO_TRANSLATIONS,
     [Translations.IGUI]: created,
   };
 }) satisfies ModDefinition["translations"];
