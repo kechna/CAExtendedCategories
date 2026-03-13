@@ -1,4 +1,10 @@
-import type { ModDefinition, FullModContext, Language } from "@pz/console";
+import {
+  type ModDefinition,
+  type FullModContext,
+  type Language,
+  type ModTranslations,
+  Translations,
+} from "@pz/console";
 import { SUPPORTED_LANGUAGES, MELEE_WEAPON_CATEGORIES } from "./constants.ts";
 import { searchers } from "./searchers.ts";
 import { PzCategory, WEAPON_CATEGORIES } from "./zomboid/categories.ts";
@@ -6,7 +12,7 @@ import { useTranslations } from "./i18n/useTranslations.ts";
 import { ALL_TRANSLATIONS } from "./i18n/translations";
 import { TOOL_ADDON } from "./categories.ts";
 
-export const createModTranslations = (async (context: FullModContext) => {
+export const createModTranslations = (async (context: FullModContext): Promise<ModTranslations> => {
   const { save, t, addOr, created } = await useTranslations(context, SUPPORTED_LANGUAGES);
 
   searchers.forEach(({ categories, prefix, searchKeys, separator }) => {
@@ -97,5 +103,7 @@ export const createModTranslations = (async (context: FullModContext) => {
     });
   });
 
-  return created;
+  return {
+    [Translations.IGUI]: created,
+  };
 }) satisfies ModDefinition["translations"];

@@ -8,8 +8,6 @@ export type LanguageObj = {
   description: string;
 } & RequireOnly<Record<Language, string>, SupportedLanguage>;
 
-export type CAECTranslations = Record<string, string | undefined>;
-
 export type TranslationsDict = Record<`CAEC_Override_${string}` | `CAEC_Fallback_${string}`, LanguageObj>;
 
 type SubCategorySearcher = {

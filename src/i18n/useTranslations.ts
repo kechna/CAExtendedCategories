@@ -1,5 +1,4 @@
-import type { FullModContext, Language } from "@pz/console";
-import type { CAECTranslations } from "../types.ts";
+import type { FullModContext, Language, TranslationsDict } from "@pz/console";
 import { getGameTranslations } from "./getGameTranslations.ts";
 import { mergeAllTranslations } from "./mergeAllTranslations.ts";
 import { translate } from "./translate.ts";
@@ -41,9 +40,9 @@ export const useTranslations = async (context: FullModContext, languages: readon
   const existingTranslations = await getGameTranslations();
   const allTranslations = mergeAllTranslations(context, existingTranslations);
   const reported = new Set<string>();
-  const createdTranslations: Record<Language, CAECTranslations> = languages.reduce(
+  const createdTranslations: TranslationsDict = languages.reduce(
     (acc, lang) => ({ ...acc, [lang]: {} }),
-    {} as Record<Language, CAECTranslations>,
+    {} as TranslationsDict,
   );
 
   // const allExistingKeys = new Set(Object.keys(allTranslations));
