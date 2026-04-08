@@ -23,53 +23,53 @@ export const TR: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Aksesuar"
    */
-  CAEC_Override_Accessory: undefined,
+  CAEC_Fallback_Accessory: "Aksesuar",
   /**
    * firearm ammunition
    *
    * found in-game:
    *   IGUI_ItemCat_Ammo = "Cephane"
    */
-  CAEC_Override_Ammo: undefined,
+  CAEC_Fallback_Ammo: "Mühimmat",
   /** animals */
-  CAEC_Fallback_Animal: undefined,
+  CAEC_Fallback_Animal: "Hayvan",
   /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
+  CAEC_Fallback_AnimalPart: "Hayvan Parçası",
   /**
    * character appearance items such as makeup
    *
    * found in-game:
    *   IGUI_ItemCat_Appearance = "Kişisel Bakım"
    */
-  CAEC_Override_Appearance: undefined,
+  CAEC_Fallback_Appearance: "Görünüş",
   /**
    * camping supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Camping = "Kamp"
    */
-  CAEC_Override_Camping: undefined,
+  CAEC_Fallback_Camping: "Kamp",
   /**
    * maps of locations
    *
    * found in-game:
    *   IGUI_ItemCat_Cartography = "Kartografya"
    */
-  CAEC_Override_Cartography: undefined,
+  CAEC_Fallback_Cartography: "Haritacılık",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Giysi"
    */
-  CAEC_Override_Clothing: undefined,
+  CAEC_Fallback_Clothing: "Giysi",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "İletişim"
    */
-  CAEC_Override_Communications: undefined,
+  CAEC_Fallback_Communications: "İletişim",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
@@ -77,7 +77,7 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Container = "Depolama"
    *   ContextMenu_Container = "Depolama"
    */
-  CAEC_Override_Container: undefined,
+  CAEC_Fallback_Container: "Konteyner",
   /**
    * cooking items such as pots, pans, utensils
    *
@@ -85,23 +85,23 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Cooking = "Aşçılık"
    *   IGUI_perks_Cooking = "Aşçılık"
    */
-  CAEC_Override_Cooking: undefined,
+  CAEC_Fallback_Cooking: "Yemek Pişirme",
   /**
    * electronic items
    *
    * found in-game:
    *   IGUI_ItemCat_Electronics = "Elektronik"
    */
-  CAEC_Override_Electronics: undefined,
+  CAEC_Fallback_Electronics: "Elektronik",
   /**
    * entertainment items
    *
    * found in-game:
    *   IGUI_ItemCat_Entertainment = "Eğlence"
    */
-  CAEC_Override_Entertainment: undefined,
+  CAEC_Fallback_Entertainment: "Eğlence",
   /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: undefined,
+  CAEC_Fallback_FireSource: "Ateş Kaynağı",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -109,132 +109,132 @@ export const TR: ExternalTranslations = {
    *   IGUI_perks_Doctor = "İlk Yardım"
    *   IGUI_ItemCat_FirstAid = "İlk Yardım"
    */
-  CAEC_Override_FirstAid: undefined,
+  CAEC_Fallback_FirstAid: "Tıbbi Malzeme",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "Yiyecek"
    */
-  CAEC_Override_Food: undefined,
+  CAEC_Fallback_Food: "Yiyecek",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "Mobilya"
    */
-  CAEC_Override_Furniture: undefined,
+  CAEC_Fallback_Furniture: "Mobilya",
   /**
    * household items
    *
    * found in-game:
    *   IGUI_ItemCat_Household = "Günlük Ev Eşyaları"
    */
-  CAEC_Override_Household: undefined,
+  CAEC_Fallback_Household: "Ev Eşyası",
   /**
    * instruments
    *
    * found in-game:
    *   IGUI_ItemCat_Instrument = "Enstrüman"
    */
-  CAEC_Override_Instrument: undefined,
+  CAEC_Fallback_Instrument: "Müzik Aleti",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
    *   IGUI_ItemCat_Junk = "Hurda"
    */
-  CAEC_Override_Junk: undefined,
+  CAEC_Fallback_Junk: "Ivır Zıvır",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
    *   IGUI_ItemCat_LightSource = "Işık Kaynağı"
    */
-  CAEC_Override_LightSource: undefined,
+  CAEC_Fallback_LightSource: "Işık Kaynağı",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Okumalık"
    */
-  CAEC_Override_Literature: undefined,
+  CAEC_Fallback_Literature: "Literatür",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "Malzeme"
    */
-  CAEC_Override_Material: undefined,
+  CAEC_Fallback_Material: "Malzeme",
   /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
+  CAEC_Fallback_Memento: "Hatıra",
   /**
    * paint items
    *
    * found in-game:
    *   IGUI_ItemCat_Paint = "Boya"
    */
-  CAEC_Override_Paint: undefined,
+  CAEC_Fallback_Paint: "Boya",
   /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
+  CAEC_Fallback_ProtectiveGear: "Koruyucu Ekipman",
   /**
    * skill books
    *
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "Yetenek Kitabı"
    */
-  CAEC_Override_SkillBook: undefined,
+  CAEC_Fallback_SkillBook: "Beceri Kitabı",
   /**
    * sports items
    *
    * found in-game:
    *   IGUI_ItemCat_Sports = "Spor"
    */
-  CAEC_Override_Sports: undefined,
+  CAEC_Fallback_Sports: "Spor",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
    *   IGUI_ItemCat_Tool = "Alet"
    */
-  CAEC_Override_Tool: undefined,
+  CAEC_Fallback_Tool: "Alet",
   /**
    * vehicle maintenance items
    *
    * found in-game:
    *   IGUI_ItemCat_VehicleMaintenance = "Tamircilik"
    */
-  CAEC_Override_VehicleMaintenance: undefined,
+  CAEC_Fallback_VehicleMaintenance: "Araç Bakımı",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "Silah"
    */
-  CAEC_Override_Weapon: undefined,
+  CAEC_Fallback_Weapon: "Silah",
   /**
    * axe weapon skill
    *
    * found in-game:
    *   IGUI_perks_Axe = "Balta"
    */
-  CAEC_Override_Axe: undefined,
+  CAEC_Fallback_Axe: "Balta",
   /**
    * blacksmithing skill
    *
    * found in-game:
    *   IGUI_perks_Blacksmith = "Demircilik"
    */
-  CAEC_Override_Blacksmith: undefined,
+  CAEC_Fallback_Blacksmith: "Demircilik",
   /**
    * long blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_Blunt = "Yakın Dövüş Silahları"
    */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Fallback_Blunt: "Uzun Küt Silah",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Kasaplık",
   /**
    * carpentry skill
    *
@@ -242,16 +242,16 @@ export const TR: ExternalTranslations = {
    *   IGUI_CraftCategory_Carpentry = "Marangozluk"
    *   IGUI_perks_Carpentry = "Marangozluk"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Marangozluk",
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "Oymacılık",
   /**
    * electrical skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Elektriksel"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elektrik",
   /**
    * farming/agriculture skill
    *
@@ -259,7 +259,7 @@ export const TR: ExternalTranslations = {
    *   IGUI_CraftCategory_Farming = "Çiftçilik"
    *   IGUI_perks_Farming = "Çiftçilik"
    */
-  CAEC_Override_Farming: undefined,
+  CAEC_Fallback_Farming: "Tarım",
   /**
    * fishing skill and items
    *
@@ -269,87 +269,87 @@ export const TR: ExternalTranslations = {
    *   ContextMenu_Fishing = "Balık Tut"
    *   IGUI_CraftCategory_Fishing = "Balıkçılık"
    */
-  CAEC_Override_Fishing: undefined,
+  CAEC_Fallback_Fishing: "Balıkçılık",
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
+  CAEC_Fallback_FlintKnapping: "Yontma",
   /**
    * foraging skill
    *
    * found in-game:
    *   IGUI_perks_Foraging = "Araştırma"
    */
-  CAEC_Override_Foraging: undefined,
+  CAEC_Fallback_Foraging: "Toplayıcılık",
   /**
    * gardening skill and items
    *
    * found in-game:
    *   IGUI_ItemCat_Gardening = "Çiftçilik"
    */
-  CAEC_Override_Gardening: undefined,
+  CAEC_Fallback_Gardening: "Bahçıvanlık",
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
+  CAEC_Fallback_Glassmaking: "Camcılık",
   /**
    * long blade weapon skill
    *
    * found in-game:
    *   IGUI_perks_LongBlade = "Uzun Kesici"
    */
-  CAEC_Override_LongBlade: undefined,
+  CAEC_Fallback_LongBlade: "Uzun Bıçaklı Silah",
   /**
    * maintenance skill for maintaining and repairing tools and weapons
    *
    * found in-game:
    *   IGUI_perks_Maintenance = "Onarma"
    */
-  CAEC_Override_Maintenance: undefined,
+  CAEC_Fallback_Maintenance: "Bakım",
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
+  CAEC_Fallback_Masonry: "Duvarcılık",
   /**
    * mechanics skill, vehicle maintenance
    *
    * found in-game:
    *   IGUI_perks_Mechanics = "Tamircilik"
    */
-  CAEC_Override_Mechanics: undefined,
+  CAEC_Fallback_Mechanics: "Mekanik",
   /**
    * metalworking skill (for items that are relevant in both welding and blacksmithing
    *
    * found in-game:
    *   IGUI_perks_Metalworking = "Metal İşleme"
    */
-  CAEC_Override_Metalworking: undefined,
+  CAEC_Fallback_Metalworking: "Metal İşçiliği",
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
+  CAEC_Fallback_Pottery: "Çömlekçilik",
   /**
    * short blade weapon skill
    *
    * found in-game:
    *   IGUI_perks_SmallBlade = "Kısa Kesici"
    */
-  CAEC_Override_SmallBlade: undefined,
+  CAEC_Fallback_SmallBlade: "Kısa Bıçaklı Silah",
   /**
    * short blunt weapon skill
    *
    * found in-game:
    *   IGUI_perks_SmallBlunt = "Kısa Ezici"
    */
-  CAEC_Override_SmallBlunt: undefined,
+  CAEC_Fallback_SmallBlunt: "Kısa Küt Silah",
   /**
    * spear weapon skill
    *
    * found in-game:
    *   IGUI_perks_Spear = "Mızrak"
    */
-  CAEC_Override_Spear: undefined,
+  CAEC_Fallback_Spear: "Mızrak",
   /**
    * tailoring skill
    *
    * found in-game:
    *   IGUI_perks_Tailoring = "Terzilik"
    */
-  CAEC_Override_Tailoring: undefined,
+  CAEC_Fallback_Tailoring: "Terzilik",
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
+  CAEC_Fallback_Tracking: "İz Sürme",
   /**
    * trapping skill and items
    *
@@ -357,308 +357,308 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Trapping = "Avcılık"
    *   IGUI_perks_Trapping = "Avcılık"
    */
-  CAEC_Override_Trapping: undefined,
+  CAEC_Fallback_Trapping: "Tuzakçılık",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Metal İşleme"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Kaynakçılık",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
+  CAEC_Override_Arms: "Kollar",
   /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  CAEC_Override_Bottom: "Alt Giyim",
   /** facewear such as masks, glasses, goggles */
-  CAEC_Override_Face: undefined,
+  CAEC_Override_Face: "Yüz",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: undefined,
+  CAEC_Override_Footwear: "Ayakkabı",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: undefined,
+  CAEC_Override_FullBody: "Tam Vücut",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: undefined,
+  CAEC_Override_Hands: "Eller",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
    * found in-game:
    *   IGUI_health_Head = "Kafa"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Override_Head: "Baş",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  CAEC_Override_Jewelry: undefined,
+  CAEC_Override_Jewelry: "Takı",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
-  CAEC_Override_Legs: undefined,
+  CAEC_Override_Legs: "Bacaklar",
   /**
    * neckwear such as scarves, necklaces
    *
    * found in-game:
    *   IGUI_health_Neck = "Boyun"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Override_Neck: "Boyun",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: undefined,
+  CAEC_Override_Outerwear: "Dış Giyim",
   /** hosiery and socks */
-  CAEC_Override_Socks: undefined,
+  CAEC_Override_Socks: "Çoraplar",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: undefined,
+  CAEC_Override_Top: "Üst Giyim",
   /** undergarments such as underwear, bras, boxers */
-  CAEC_Override_Underwear: undefined,
+  CAEC_Override_Underwear: "İç Giyim",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
-  CAEC_Override_Baking: undefined,
+  CAEC_Override_Baking: "Hamur İşleri",
   /**
    * baked bread products
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Ekmek"
    */
-  CAEC_Override_Bread: undefined,
+  CAEC_Fallback_Bread: "Ekmek",
   /**
    * sweets and candies
    *
    * found in-game:
    *   ContextMenu_FoodType_Candy = "Şeker"
    */
-  CAEC_Override_Candy: undefined,
+  CAEC_Override_Candy: "Şekerleme",
   /** canned food items */
-  CAEC_Override_Canned: undefined,
+  CAEC_Override_Canned: "Konserve",
   /**
    * dairy cheese products
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Peynir"
    */
-  CAEC_Override_Cheese: undefined,
+  CAEC_Fallback_Cheese: "Peynir",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: undefined,
+  CAEC_Override_Dish: "Yemek",
   /**
    * fresh fruit, including berries and citrus
    *
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "Meyve"
    */
-  CAEC_Override_Fruits: undefined,
+  CAEC_Fallback_Fruits: "Meyveler",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
    *   ContextMenu_FoodType_Herb = "Ot"
    */
-  CAEC_Override_Herb: undefined,
+  CAEC_Fallback_Herb: "Bitkiler",
   /**
    * spicy hot peppers
    *
    * found in-game:
    *   ContextMenu_FoodType_HotPepper = "Acı Biber"
    */
-  CAEC_Override_HotPepper: undefined,
+  CAEC_Fallback_HotPepper: "Acı Biberler",
   /** edible insects */
-  CAEC_Fallback_Insect: undefined,
+  CAEC_Fallback_Insect: "Böcek",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: undefined,
+  CAEC_Fallback_Livestock: "Hayvan Yemi",
   /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Et"
    */
-  CAEC_Override_Meat: undefined,
+  CAEC_Fallback_Meat: "Et",
   /**
    * mushrooms/fungi
    *
    * found in-game:
    *   ContextMenu_FoodType_Mushroom = "Mantar"
    */
-  CAEC_Override_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "Mantar",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
    *   ContextMenu_FoodType_Nut = "Ceviz"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Fallback_Nut: "Kuruyemiş",
   /** food items that can spoil */
-  CAEC_Override_Perishable: undefined,
+  CAEC_Override_Perishable: "Bozulabilir",
   /** food for pets */
-  CAEC_Fallback_PetFood: undefined,
+  CAEC_Fallback_PetFood: "Evcil Hayvan Yemi",
   /** single serving portion of food */
-  CAEC_Override_Portion: undefined,
+  CAEC_Override_Portion: "Porsiyon",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: undefined,
+  CAEC_Override_Preserved: "Kavanozlanmış",
   /**
    * fish and other seafood
    *
    * found in-game:
    *   ContextMenu_FoodType_Seafood = "Deniz Ürünü"
    */
-  CAEC_Override_Seafood: undefined,
+  CAEC_Fallback_Seafood: "Deniz Ürünü",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Tohum"
    */
-  CAEC_Override_Seed: undefined,
+  CAEC_Override_Seed: "Ekilebilir Tohum",
   /** snack foods (e.g. chips, cookies) */
-  CAEC_Override_Snack: undefined,
+  CAEC_Override_Snack: "Atıştırmalık",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: undefined,
+  CAEC_Fallback_Spice: "Baharat",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: undefined,
+  CAEC_Fallback_Staple: "Kuru Gıda",
   /**
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
    *   ContextMenu_FoodType_Stock = "Besi"
    */
-  CAEC_Override_Stock: undefined,
+  CAEC_Fallback_Stock: "Et Suyu",
   /**
    * sugar and sweeteners
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Şeker"
    */
-  CAEC_Override_Sugar: undefined,
+  CAEC_Fallback_Sugar: "Şeker",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "Sebze"
    */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Override_Vegetables: "Sebzeler",
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
+  CAEC_Override_Adult: "Yetişkin",
   /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
+  CAEC_Fallback_Brochure: "Broşür",
   /** comic books */
-  CAEC_Fallback_Comic: undefined,
+  CAEC_Fallback_Comic: "Çizgi Roman",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
+  CAEC_Fallback_Consumable: "Etkinlik Dergisi",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
+  CAEC_Fallback_FancyBook: "Lüks Kitap",
   /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
+  CAEC_Fallback_Flier: "El İlanı",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
+  CAEC_Fallback_Hardcover: "Ciltli Kitap",
   /** literature magazines */
-  CAEC_Fallback_Magazine: undefined,
+  CAEC_Fallback_Magazine: "Dergi",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "Gazete",
   /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
+  CAEC_Fallback_PictureBook: "Resimli Kitap",
   /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
+  CAEC_Fallback_Recipe: "Tarif",
   /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
+  CAEC_Fallback_RpgManual: "RYO Kılavuzu",
   /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  CAEC_Fallback_Softcover: "Karton Kapaklı Kitap",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
+  CAEC_Override_Firearm: "Ateşli Silah",
   /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
+  CAEC_Fallback_Handgun: "Tabanca",
   /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
+  CAEC_Fallback_Mag: "Şarjör",
   /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
+  CAEC_Fallback_Rifle: "Tüfek",
   /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
+  CAEC_Fallback_Shotgun: "Pompalı Tüfek",
   /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
+  CAEC_Fallback_Alcohol: "Alkol",
   /**
    * alcoholic beer beverages
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Bira"
    */
-  CAEC_Override_Beer: undefined,
+  CAEC_Fallback_Beer: "Bira",
   /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
+  CAEC_Override_Beverage: "Meşrubat",
   /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
+  CAEC_Override_Cocktail: "Kokteyl",
   /**
    * coffee beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kahveli"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Override_Coffee: "Kahve",
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Renklendirici",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
+  CAEC_Override_EnergyDrink: "Enerji İçeceği",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "Yakıt",
   /**
    * fruit juice
    *
    * found in-game:
    *   ContextMenu_FoodType_Juice = "Meyve suyu"
    */
-  CAEC_Override_Juice: undefined,
+  CAEC_Fallback_Juice: "Meyve Suyu",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
+  CAEC_Override_Liquid: "Sıvı",
   /**
    * dairy milk
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Süt"
    */
-  CAEC_Override_Milk: undefined,
+  CAEC_Fallback_Milk: "Süt",
   /**
    * carbonated soft drinks
    *
    * found in-game:
    *   ContextMenu_FoodType_SoftDrink = "Meşrubat"
    */
-  CAEC_Override_SoftDrink: undefined,
+  CAEC_Override_SoftDrink: "Gazlı İçecek",
   /**
    * tea beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Çaylı"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Override_Tea: "Çay",
   /**
    * drinking water
    *
    * found in-game:
    *   ContextMenu_Water = "Su"
    */
-  CAEC_Override_Water: undefined,
+  CAEC_Fallback_Water: "Su",
   /**
    * alcoholic wine beverages
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Şarap"
    */
-  CAEC_Override_Wine: undefined,
+  CAEC_Override_Wine: "Şarap",
   /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
+  CAEC_Override_Box: "Kutu",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
+  CAEC_Override_Bundled: "Paketlenmiş",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
+  CAEC_Override_Carton: "Karton",
   /** compostable items such as animal dung, to be put in a composter */
-  CAEC_Override_Compostable: undefined,
+  CAEC_Override_Compostable: "Kompostlanabilir",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: undefined,
+  CAEC_Override_Crafted: "El Yapımı",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Bardak",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Çatal-Bıçak Takımı",
   /** ring or bundle of keys */
-  CAEC_Override_KeyRing: undefined,
+  CAEC_Override_KeyRing: "Anahtarlık",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Tava",
   /** photos */
-  CAEC_Fallback_Photo: undefined,
+  CAEC_Fallback_Photo: "Fotoğraf",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "Peluş",
   /** packet of plantable seeds for gardening/farming */
-  CAEC_Override_SeedPacket: undefined,
+  CAEC_Override_SeedPacket: "Tohum Paketi",
   /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: undefined,
+  CAEC_Override_Smoking: "Tütün",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Mutfak Gereci",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
+  CAEC_Override_Wearable: "Giyilebilir",
 };
