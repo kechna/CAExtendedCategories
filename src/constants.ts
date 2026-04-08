@@ -57,6 +57,7 @@ export const HUMAN_LANGUAGE_COMMENTS = {
 
   [Language.PTBR]: `by ${profileUrl("SIMBAproduz")}`,
   [Language.CN]: `by ${profileUrl("莫名某某", "76561199030467276")}`,
+  [Language.TR]: `by ${profileUrl("NalbarkarL", "76561198342269272")}`,
 };
 
 export const MACHINE_LANGUAGE_COMMENTS = {
