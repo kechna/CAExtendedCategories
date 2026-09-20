@@ -7,14 +7,14 @@ local instanceCache = {}
 
 local activatedMods = nil
 
----@param search string
+---@param search  string
 ---@param subject string
 ---@return boolean
 function Utils.StartsWith(search, subject)
   return subject:sub(1, search:len()) == search
 end
 
----@param search string
+---@param search  string
 ---@param subject string
 ---@return boolean
 function Utils.EndsWith(search, subject)
@@ -38,9 +38,9 @@ function Utils.HasAnyTag(item, tags)
   return false
 end
 
----@param item Item
----@param instance InventoryItem|nil
----@return InventoryItem|nil
+---@param item     Item
+---@param instance InventoryItem | nil
+---@return InventoryItem | nil
 function Utils.CreateInstanceIfNeeded(item, instance)
   if instance then
     return instance
@@ -80,15 +80,15 @@ function Utils.RemoveTemporaryInstances()
   instanceCache = {}
 end
 
----@param tag string
----@param categorizeFn fun(item: Item, instance: InventoryItem?): string|nil
----@param validateFn fun(item: Item, instance: InventoryItem?): boolean
----@return fun(item: Item, instance: InventoryItem?): string|nil
+---@param tag          string
+---@param categorizeFn fun(item: Item, instance: InventoryItem?): string | nil
+---@param validateFn   fun(item: Item, instance: InventoryItem?): boolean
+---@return fun(item: Item, instance: InventoryItem?): string | nil
 function Utils.CreateCategorizer(tag, categorizeFn, validateFn)
-  ---@param item Item
+  ---@param item     Item
   ---@param instance InventoryItem?
-  ---@return string|nil
-  return function(item, instance)
+  ---@return string | nil
+  return function (item, instance)
     if not validateFn(item, instance) then
       return nil
     end
@@ -106,7 +106,7 @@ end
 function Utils.ModIsActive(modId)
   activatedMods = activatedMods or getActivatedMods()
 
-  return activatedMods:contains("\\" .. modId)
+  return activatedMods:contains(modId) or activatedMods:contains("\\" .. modId)
 end
 
 return Utils
