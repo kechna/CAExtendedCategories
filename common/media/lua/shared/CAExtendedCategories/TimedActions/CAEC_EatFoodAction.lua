@@ -1,3 +1,5 @@
+require "TimedActions/ISEatFoodAction"
+
 local CAEC = require("CAExtendedCategories/CAEC")
 local Categorizers = require("CAExtendedCategories/CAEC_Categorizers")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
