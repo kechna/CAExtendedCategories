@@ -1,9 +1,10 @@
 import {
   type ModDefinition,
   type FullModContext,
-  type Language,
+  Language,
   type ModTranslations,
   Translations,
+  translateSandboxOptions,
 } from "@pz/console";
 import { SUPPORTED_LANGUAGES, MELEE_WEAPON_CATEGORIES } from "./constants.ts";
 import { searchers } from "./searchers.ts";
@@ -12,8 +13,11 @@ import { useTranslations } from "./i18n/useTranslations.ts";
 import { ALL_TRANSLATIONS } from "./i18n/translations";
 import { TOOL_ADDON } from "./categories.ts";
 import { MOD_INFO_TRANSLATIONS } from "./modInfo.ts";
+import type { sandboxOptions } from "../sandboxOptions.ts";
 
-export const createModTranslations = (async (context: FullModContext): Promise<ModTranslations> => {
+export const createModTranslations = (async (
+  context: FullModContext,
+): Promise<ModTranslations<keyof typeof sandboxOptions>> => {
   const { save, t, addOr, created } = await useTranslations(context, SUPPORTED_LANGUAGES);
 
   searchers.forEach(({ categories, prefix, searchKeys, separator }) => {
@@ -87,6 +91,9 @@ export const createModTranslations = (async (context: FullModContext): Promise<M
     addOr("FoodSpice", PzCategory.FirstAid, language);
     addOr("FoodPerishableSpice", PzCategory.FirstAid, language);
 
+    addOr("WeaponPart", "WeaponSmallBlade", language);
+    addOr("WeaponPart", "WeaponLongBlade", language);
+
     [...WEAPON_ADDON, ...TOOL_ADDON.map((i) => "Tool" + i)]
       .filter((category) => !category.includes(PzCategory.Weapon))
       .forEach((category) => {
@@ -107,5 +114,23 @@ export const createModTranslations = (async (context: FullModContext): Promise<M
   return {
     [Translations.MOD]: MOD_INFO_TRANSLATIONS,
     [Translations.IGUI]: created,
+    [Translations.SANDBOX]: translateSandboxOptions<typeof sandboxOptions>({
+      [Language.EN]: {
+        MOD_NAME: "Extended Categories",
+        LogVerbosity: "Logging verbosity",
+        LogVerbosity_tooltip:
+          "Controls how much information is logged to the console. Setting this to Debug is helpful if you want to report a bug or ask for compatibility with another mod.",
+        LogVerbosity_option1: "Debug",
+        LogVerbosity_option2: "Info",
+        LogVerbosity_option3: "Warning",
+        LogVerbosity_option4: "Error",
+
+        // DistinctAmmoTypes: "Categorize ammo by caliber [WIP]",
+        //     DistinctAmmoTypes_tooltip:
+        //       'If enabled, ammo will be categorized by caliber rather than just as \"Ammo\". This is disabled by default and intended for use with mods that add new guns or ammo types.',
+        //     BottomHelpText: "The game must be reloaded for these settings to be applied.",
+        //     BottomHelpText_tooltip: "This does nothing!",
+      },
+    }),
   };
 }) satisfies ModDefinition["translations"];

@@ -29,8 +29,10 @@ const BASE_CATEGORIES: Record<(typeof USED_CATEGORIES)[number], string> = {
   [PzCategory.Entertainment]: "entertainment items",
   [PzCategory.FireSource]: "sources of fire such as matches and lighters",
   [PzCategory.FirstAid]: "first aid and medical supplies, bandages, painkillers, antiseptics",
+  [PzCategory.Fishing]: "fishing items, rods, reels, lures, bait",
   [PzCategory.Food]: "food items",
   [PzCategory.Furniture]: "furniture items",
+  [PzCategory.Gardening]: "gardening items, seeds, tools, fertilizers",
   [PzCategory.Household]: "household items",
   [PzCategory.Instrument]: "instruments",
   [PzCategory.Junk]: "miscellaneous junk items, worthless items",
@@ -43,6 +45,7 @@ const BASE_CATEGORIES: Record<(typeof USED_CATEGORIES)[number], string> = {
   [PzCategory.SkillBook]: "skill books",
   [PzCategory.Sports]: "sports items",
   [PzCategory.Tool]: "tools, such as hammers, wrenches, screwdrivers",
+  [PzCategory.Trapping]: "trapping items, traps, bait, snares",
   [PzCategory.VehicleMaintenance]: "vehicle maintenance items",
   [PzCategory.Weapon]: "weapons in general",
 };
@@ -149,6 +152,8 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [FIREARMS, "Rifle", "rifles, big firearms", Z],
   [FIREARMS, "Shotgun", "shotguns, rifles that shoot shells", Z],
   [FIREARMS, "Mag", "firearm magazines", Z],
+  [FIREARMS, "Drum", "firearm drums", Z],
+  [FIREARMS, "Bow", "bows and other ranged weapons that use string tension to launch projectiles", A],
 
   [LIQUIDS, "Beverage", "top-level category for drinkable liquids", A],
   [LIQUIDS, "Liquid", "top-level category for non-drinkable liquids, and used in 'Container - Liquid'", A],

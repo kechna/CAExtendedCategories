@@ -1,10 +1,11 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
-local Debug = require("CAExtendedCategories/CAEC_Debug")
+local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
 
---- @class CAEC_WeaponCategorizer: CAEC_ItemCategorizer
---- @field public asMeleeWeapon fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string|nil
---- @field public asFirearm fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string|nil
+---@class CAEC_WeaponCategorizer: CAEC_ItemCategorizer
+---@field public asMeleeWeapon  fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string | nil
+---@field public asRangedWeapon fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string | nil
+---@field public asFirearm      fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string | nil
 local Weapon = CAEC_ItemCategorizer:derive("Weapon")
 
 local WeaponComboCategories = {
@@ -31,16 +32,15 @@ local WeaponComboCategories = {
   ToolMechanics = true,
   ToolPottery = true,
   ToolTailoring = true,
-  ToolWelding = true,
+  ToolWelding = true
 }
 function Weapon:validate(item, _instance)
-  return item:isItemType(ItemType.WEAPON)
-      and not item:hasTag(ItemTag.NO_MAINTENANCE_XP)
+  return item:isItemType(ItemType.WEAPON) and not item:hasTag(ItemTag.NO_MAINTENANCE_XP)
 end
 
---- @param item Item
---- @param _instance InventoryItem?
---- @return string|nil
+---@param item      Item
+---@param _instance InventoryItem?
+---@return string | nil
 function Weapon:asMeleeWeapon(item, _instance)
   ---@type Set<WeaponCategory>
   local categories = item:getWeaponCategories()
@@ -49,7 +49,7 @@ function Weapon:asMeleeWeapon(item, _instance)
     return nil
   end
 
-  --- @type string|nil
+  ---@type string | nil
   local category = nil
 
   if categories:contains(WeaponCategory.AXE) then
@@ -66,18 +66,18 @@ function Weapon:asMeleeWeapon(item, _instance)
     category = "WeaponSpear"
   elseif categories:contains(WeaponCategory.IMPROVISED) then
     category = "WeaponCrafted"
-  --else
-  --  local it = categories:iterator()
-  --  self:log("Unknown melee weapon category for " .. item:getName())
-  --
-  --  while it:hasNext() do
-  --    local cat = it:next()
-  --    self:log(" - " .. tostring(cat))
-  --  end
+    -- else
+    --  local it = categories:iterator()
+    --  self:log("Unknown melee weapon category for " .. item:getName())
+    --
+    --  while it:hasNext() do
+    --    local cat = it:next()
+    --    self:log(" - " .. tostring(cat))
+    --  end
   end
 
   if category then
-    --- @type string|nil
+    ---@type string | nil
     local original = item:getDisplayCategory()
 
     if original then
@@ -92,25 +92,60 @@ function Weapon:asMeleeWeapon(item, _instance)
   return category
 end
 
---- @param item Item
---- @param instance InventoryItem?
---- @return string|nil
-function Weapon:asFirearm(item, instance)
-  --- @type string|nil
-  local category = nil
+function Weapon:getAmmoGroup(item, instance)
+  local resolved = Utils.createInstanceIfNeeded(item, instance)
 
-  local resolved = Utils.CreateInstanceIfNeeded(item, instance)
+  ---@type AmmoType | nil
+  local ammoType = resolved and resolved:getAmmoType()
 
-  if resolved:isTwoHandWeapon() then
-    local ammoType = tostring(resolved:getAmmoType())
+  if ammoType then
+    local group = Ammo.getAmmoGroup(ammoType)
 
-    if ammoType:contains("shell") or ammoType:contains("slug") then
-      category = "FirearmShotgun"
+    if group then
+      return group
     else
-      category = "FirearmRifle"
+      self:log("unknown ammo type: " .. tostring(ammoType))
     end
+  end
+
+  return nil
+end
+
+---@param item     Item
+---@param instance InventoryItem?
+---@return string | nil
+function Weapon:asFirearm(item, instance)
+  ---@type string | nil
+  local category = nil
+  local baseCategory = "Firearm"
+
+  local group = self:getAmmoGroup(item, instance)
+  if not group then
+    self:log("unknown ammo group for " .. item:getFullName())
+  elseif group == Ammo.AmmoGroup.BOW then
+    category = self:asRangedWeapon(item, instance)
   else
-    category = "FirearmHandgun"
+    category = baseCategory .. group
+  end
+
+  return category
+end
+
+---@param item     Item
+---@param instance InventoryItem?
+---@return string | nil
+function Weapon:asRangedWeapon(item, instance)
+  ---@type string | nil
+  local category = nil
+  local baseCategory = "Weapon"
+  local group = self:getAmmoGroup(item, instance)
+
+  if not group then
+    self:log("unknown ammo group for " .. item:getFullName())
+  elseif group == Ammo.AmmoGroup.HANDGUN or group == Ammo.AmmoGroup.RIFLE or group == Ammo.AmmoGroup.SHOTGUN then
+    return self:asFirearm(item, instance)
+  else
+    category = baseCategory .. group
   end
 
   return category
@@ -124,10 +159,12 @@ function Weapon:categorize(item, instance)
   end
 
   if item:hasTag(ItemTag.FIREARM) then
-    return Weapon:asFirearm(item, instance)
+    return self:asFirearm(item, instance)
+  elseif item:getLootType() == "RangedWeapon" then
+    return self:asRangedWeapon(item, instance)
   end
 
-  return Weapon:asMeleeWeapon(item, instance)
+  return self:asMeleeWeapon(item, instance)
 end
 
 return Weapon

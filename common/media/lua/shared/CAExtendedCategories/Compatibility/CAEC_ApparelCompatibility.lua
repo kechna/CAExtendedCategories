@@ -98,7 +98,7 @@ function Apparel:initialise()
   }
 
   for _, mod in ipairs(modCompatibility) do
-    if Utils.ModIsActive(mod.id) then
+    if Utils.modIsActive(mod.id) then
       self:log("Registering custom body locations from mod: " .. mod.name)
 
       for itemId, category in pairs(mod.mapping) do

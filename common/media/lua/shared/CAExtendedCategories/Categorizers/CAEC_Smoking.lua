@@ -4,11 +4,13 @@ local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer"
 --- @class CAEC_SmokingCategorizer: CAEC_ItemCategorizer
 local Smoking = CAEC_ItemCategorizer:derive("Smoking")
 
+local SmokingTags = table.newarray({ ItemTag.SMOKABLE, ItemTag.ROLLING_PAPER, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO })
+
 --- @param item Item
 --- @param _instance InventoryItem
 --- @return boolean
 function Smoking:validate(item, _instance)
-  local isSmoking = Utils.HasAnyTag(item, { ItemTag.SMOKABLE, ItemTag.ROLLING_PAPER, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO })
+  local isSmoking = Utils.hasAnyTag(item, SmokingTags)
       or item:getDoubleClickRecipe() == "UnpackCigaretteCarton"
 
   if isSmoking then

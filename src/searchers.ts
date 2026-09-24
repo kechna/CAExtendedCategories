@@ -5,6 +5,10 @@ import { TOOL_ADDON } from "./categories.ts";
 
 const foodTypes = getFoodTypes();
 
+const SKILLS = ["Butchering", "Carpentry", "Electrical", "Maintenance", "Pottery", "Tailoring", "Metalworking"];
+const AMMO_TYPES = ["Rifle", "Handgun", "Shotgun", "Toy", "Bow", "Explosive"];
+const AMMO_BOX_TYPES = ["Box", "Carton", "Mag"];
+
 export const searchers: Searcher[] = [
   { categories: ["Beverage"], searchKeys: [] },
   { categories: ["FirstAid"], searchKeys: ["IGUI_perks_Doctor"] },
@@ -113,9 +117,21 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Ammo,
-    categories: ["Box", "Carton", "Mag"],
+    categories: AMMO_BOX_TYPES,
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
+
+  {
+    prefix: PzCategory.Ammo,
+    categories: AMMO_TYPES,
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
+  },
+
+  ...AMMO_TYPES.map((ammoType) => ({
+    prefix: PzCategory.Ammo + ammoType,
+    categories: AMMO_BOX_TYPES,
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
+  })),
 
   ...BOXABLE_CATEGORIES.map((category) => {
     return {
@@ -127,22 +143,21 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Material,
-    categories: [
-      // "Blacksmith",
-      "Bundled",
-      "Butchering",
-      "Carpentry",
-      "Electrical",
-      "Maintenance",
-      "Pottery",
-      "Tailoring",
-      "Metalworking",
-      PzCategory.FireSource,
-      PzCategory.Tool,
-      PzCategory.Weapon,
-    ],
+    categories: ["Bundled", PzCategory.FireSource, PzCategory.Tool, PzCategory.Weapon, PzCategory.Ammo],
     searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
+
+  {
+    prefix: PzCategory.Material,
+    categories: SKILLS,
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
+  },
+
+  ...SKILLS.map((category) => ({
+    prefix: PzCategory.Material + category,
+    categories: ["Box", "Carton", "Bundled"],
+    searchKeys: ["IGUI_ItemCat_%s"],
+  })),
 
   {
     prefix: PzCategory.Camping,

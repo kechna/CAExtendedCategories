@@ -53,13 +53,13 @@ local function byRecipe(item)
   if recipe == "unstack_items" then
     suffix = "Bundled";
   elseif recipe:contains("carton")
-      and (Utils.StartsWith("Open", recipe)
-        or Utils.StartsWith("Unpack", recipe)) then
+      and (Utils.startsWith("Open", recipe)
+        or Utils.startsWith("Unpack", recipe)) then
     suffix = "Carton";
-  elseif Utils.StartsWith("takea", recipe) or
+  elseif Utils.startsWith("takea", recipe) or
       (recipe:contains("box") and (
-        Utils.StartsWith("unpack", recipe)
-        or Utils.StartsWith("open", recipe))
+        Utils.startsWith("unpack", recipe)
+        or Utils.startsWith("open", recipe))
       )
   then
     suffix = "Box";
@@ -86,7 +86,7 @@ function BoxesAndStacks.addToCategory(existingCategory, item, instance)
   end
 
 
-  if suffix and existingCategory and not Utils.EndsWith(suffix, existingCategory) then
+  if suffix and existingCategory and not Utils.endsWith(suffix, existingCategory) then
     category = existingCategory .. suffix
   end
 

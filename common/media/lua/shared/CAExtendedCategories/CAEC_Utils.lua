@@ -10,21 +10,21 @@ local activatedMods = nil
 ---@param search  string
 ---@param subject string
 ---@return boolean
-function Utils.StartsWith(search, subject)
+function Utils.startsWith(search, subject)
   return subject:sub(1, search:len()) == search
 end
 
 ---@param search  string
 ---@param subject string
 ---@return boolean
-function Utils.EndsWith(search, subject)
+function Utils.endsWith(search, subject)
   return subject:sub(-search:len()) == search
 end
 
 ---@param item Item
 ---@param tags ItemTag[]
 ---@return boolean
-function Utils.HasAnyTag(item, tags)
+function Utils.hasAnyTag(item, tags)
   if item:getTags():size() == 0 then
     return false
   end
@@ -38,10 +38,9 @@ function Utils.HasAnyTag(item, tags)
   return false
 end
 
----@param item     Item
----@param instance InventoryItem | nil
----@return InventoryItem | nil
-function Utils.CreateInstanceIfNeeded(item, instance)
+---@overload fun(item: Item, inventoryItem?): InventoryItem | nil
+---@overload fun(item: Item, InventoryItem): InventoryItem
+function Utils.createInstanceIfNeeded(item, instance)
   if instance then
     return instance
   end
@@ -67,7 +66,7 @@ function Utils.CreateInstanceIfNeeded(item, instance)
   return temporaryInstance
 end
 
-function Utils.RemoveTemporaryInstances()
+function Utils.removeTemporaryInstances()
   local n = 0
   for _, instance in pairs(instanceCache) do
     if instanceof(instance, "InventoryItem") then
@@ -80,33 +79,47 @@ function Utils.RemoveTemporaryInstances()
   instanceCache = {}
 end
 
----@param tag          string
----@param categorizeFn fun(item: Item, instance: InventoryItem?): string | nil
----@param validateFn   fun(item: Item, instance: InventoryItem?): boolean
----@return fun(item: Item, instance: InventoryItem?): string | nil
-function Utils.CreateCategorizer(tag, categorizeFn, validateFn)
-  ---@param item     Item
-  ---@param instance InventoryItem?
-  ---@return string | nil
-  return function (item, instance)
-    if not validateFn(item, instance) then
-      return nil
-    end
-
-    local category = categorizeFn(item, instance)
-
-    if not category then
-      Debug.log("---> no category found for item: " .. item:getName(), tag)
-    end
-  end
-end
-
 ---@param modId string
 ---@return boolean
-function Utils.ModIsActive(modId)
+function Utils.modIsActive(modId)
   activatedMods = activatedMods or getActivatedMods()
 
   return activatedMods:contains(modId) or activatedMods:contains("\\" .. modId)
 end
+
+local tagCache = {}
+
+---@param string string
+---@return ItemTag
+function Utils.toTag(string)
+  local tag = tagCache[string]
+
+  if tag == nil then
+    tag = ItemTag.get(ResourceLocation.of(string)) or false
+    tagCache[string] = tag
+  end
+
+  return tag
+end
+
+---@param typeObj AmmoType|ItemType
+---@param id string
+local function resolveType(typeObj, id)
+    if not (id and typeObj and typeObj.get and ResourceLocation and ResourceLocation.of) then
+        return nil
+    end
+
+    local ok, result = pcall(function() return typeObj.get(ResourceLocation.of(id)) end)
+
+    return ok and result or nil
+end
+
+---@param id string
+---@return AmmoType|nil
+function Utils.resolveAmmoType(id)
+    return resolveType(AmmoType, id)
+end
+
+
 
 return Utils

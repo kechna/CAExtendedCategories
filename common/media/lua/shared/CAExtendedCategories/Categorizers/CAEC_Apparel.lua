@@ -244,7 +244,7 @@ local ApparelCategories = {
 --- @field Category CAEC_ApparelCategory
 --- @field apparelCategories table<CAEC_ApparelCategory, ItemBodyLocation[]>
 --- @field public setGroup fun(self: CAEC_ApparelCategorizer, bodyLocation: string|ItemBodyLocation, group: CAEC_ApparelCategory)
---- @field public resolveBodyLocation fun(self: CAEC_ApparelCategorizer, bodyLocation: string|ItemBodyLocation): ItemBodyLocation
+--- @field public resolveBodyLocation fun(self: CAEC_ApparelCategorizer, bodyLocation: string|ItemBodyLocation): ItemBodyLocation?
 local Apparel = CAEC_ItemCategorizer:derive("Apparel")
 
 function Apparel:new()
@@ -290,8 +290,6 @@ function Apparel:setGroup(bodyLocation, category)
     return
   end
 
-  self:log("Setting category " .. tostring(category) .. " for body location " .. resolved:toString())
-
   if not self.apparelCategories[category] then
     self.apparelCategories[category] = {}
   end
@@ -323,7 +321,7 @@ function Apparel:categorize(item, instance)
   ---@type string|nil
   local category = nil
 
-  if Utils.HasAnyTag(item, JewelryTags) then
+  if Utils.hasAnyTag(item, JewelryTags) then
     category = self.Category.ACCESSORY_JEWELRY
   else
     for categoryName, bodyLocations in pairs(self.apparelCategories) do

@@ -24,7 +24,7 @@ end
 
 function FluidContainer:validate(item, instance)
   if instance ~= nil then
-    return instance:isFluidContainer()
+    return instance:hasComponent(ComponentType.FluidContainer)
   end
 
   if not item:isItemType(ItemType.NORMAL) then
@@ -35,7 +35,7 @@ function FluidContainer:validate(item, instance)
     return true
   end
 
-  return Utils.HasAnyTag(item, self.searchTags)
+  return Utils.hasAnyTag(item, self.searchTags)
 end
 
 function FluidContainer:categorize(item, instance)

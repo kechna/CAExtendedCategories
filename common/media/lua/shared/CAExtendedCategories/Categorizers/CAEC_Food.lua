@@ -97,7 +97,7 @@ end
 ---@param instance Food?
 ---@return boolean
 function Food:validate(item, instance)
-  if instance and instance:isFluidContainer() then
+  if instance and instance:hasComponent(ComponentType.FluidContainer) then
     return false
   end
 
@@ -132,9 +132,9 @@ function Food:getFoodType(item, instance)
     foodType = FoodType.CHEESE
   elseif item:hasTag(ItemTag.SALT) then
     foodType = FoodType.SPICE
-  elseif Utils.HasAnyTag(item, BAKING_TAGS) then
+  elseif Utils.hasAnyTag(item, BAKING_TAGS) then
     foodType = FoodType.BAKING
-  elseif Utils.HasAnyTag(item, HERB_TAGS) then
+  elseif Utils.hasAnyTag(item, HERB_TAGS) then
     foodType = FoodType.HERB
   end
 
@@ -240,7 +240,7 @@ function Food:categorize(item, instance)
     if FoodType.NO_EXPLICIT == foodType and (
           eatType ~= "GlugFood"
           and eatType ~= "Candrink"
-          or Utils.HasAnyTag(item, SPICE_TAGS)
+          or Utils.hasAnyTag(item, SPICE_TAGS)
         )
     then
       foodType = FoodType.SPICE;

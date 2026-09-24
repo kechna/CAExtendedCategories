@@ -16,7 +16,7 @@ function Gardening:validate(item, _instance)
 
   return (
     (existingCategory and existingCategory:contains("Gardening"))
-    or Utils.HasAnyTag(item, GardeningTags)
+    or Utils.hasAnyTag(item, GardeningTags)
   ) and not item:isItemType(ItemType.MOVEABLE)
 end
 

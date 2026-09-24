@@ -47,10 +47,14 @@ export const TRANSLATIONS = {
   CAEC_Fallback_FireSource: "Fire Source",
   /* first aid and medical supplies, bandages, painkillers, antiseptics */
   CAEC_Fallback_FirstAid: "First Aid",
+  /* fishing items, rods, reels, lures, bait */
+  CAEC_Fallback_Fishing: "Fishing",
   /* food items */
   CAEC_Fallback_Food: "Food",
   /* furniture items */
   CAEC_Fallback_Furniture: "Furniture",
+  /* gardening items, seeds, tools, fertilizers */
+  CAEC_Fallback_Gardening: "Gardening",
   /* household items */
   CAEC_Fallback_Household: "Household",
   /* instruments */
@@ -75,6 +79,8 @@ export const TRANSLATIONS = {
   CAEC_Fallback_Sports: "Sports",
   /* tools, such as hammers, wrenches, screwdrivers */
   CAEC_Fallback_Tool: "Tool",
+  /* trapping items, traps, bait, snares */
+  CAEC_Fallback_Trapping: "Trapping",
   /* vehicle maintenance items */
   CAEC_Fallback_VehicleMaintenance: "Vehicle Maintenance",
   /* weapons in general */
@@ -252,6 +258,10 @@ export const TRANSLATIONS = {
 
   /* ===== firearms ===== */
 
+  /* bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "",
+  /* firearm drums */
+  CAEC_Fallback_Drum: "",
   /* firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Firearm",
   /* pistols and handguns */

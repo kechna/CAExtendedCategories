@@ -15,7 +15,7 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 local CAEC_ItemCategorizer = ISBaseObject:derive("CAEC_ItemCategorizer")
 
 function CAEC_ItemCategorizer:isDebug()
-  return Debug.isLevel(self:getVerbosity())
+  return Debug.isLevel(Debug.Level.Debug)
 end
 
 function CAEC_ItemCategorizer:getVerbosity()

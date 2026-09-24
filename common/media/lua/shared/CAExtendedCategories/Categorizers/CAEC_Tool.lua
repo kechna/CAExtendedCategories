@@ -1,7 +1,6 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
-local Debug = require("CAExtendedCategories/CAEC_Debug")
+local Processors = require("CAExtendedCategories/CAEC_Processors")
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
-local CAEC_Categorizers = require("CAExtendedCategories/CAEC_Categorizers")
 
 local CategoryOverrides = {
   ["Base.Calipers"] = "ToolBlacksmith",
@@ -104,7 +103,7 @@ function Tool:validate(item, instance)
             category:contains("VehicleMaintenance")
             -- ignore car parts and other non-tool items
             and instance:getMechanicType() == 0
-            and not Utils.HasAnyTag(item, MechanicsIgnoreTags)
+            and not Utils.hasAnyTag(item, MechanicsIgnoreTags)
           )
         )
       )
@@ -129,9 +128,8 @@ function Tool:categorize(item, instance)
 
   if category and not item:hasTag(ItemTag.NO_MAINTENANCE_XP) then
     item:DoParam("DisplayCategory", category)
-    local withWeapon = CAEC_Categorizers.Weapon(item, instance)
 
-    return withWeapon or category
+    return Processors.categorizeWith("Weapon", item, instance) or category
   end
 
   local existing = item:getDisplayCategory()

@@ -1,8 +1,6 @@
 require "TimedActions/ISEatFoodAction"
 
 local CAEC = require("CAExtendedCategories/CAEC")
-local Categorizers = require("CAExtendedCategories/CAEC_Categorizers")
-local Debug = require("CAExtendedCategories/CAEC_Debug")
 
 local defaultCallback = ISEatFoodAction.complete
 
@@ -16,9 +14,7 @@ function ISEatFoodAction:complete()
   local inventory = self.character:getInventory()
 
   if inventory:contains(self.item) then
-    CAEC.UpdateInstanceItem(self.item, Categorizers.Food, "ISEatFoodAction:complete")
-  --else
-  --  Debug.log("> Item fully consumed after eating: " .. self.item:getName(), "ISEatFoodAction:complete")
+    CAEC.updateInstanceItem(self.item, "Food", "ISEatFoodAction:complete")
   end
 
   return result

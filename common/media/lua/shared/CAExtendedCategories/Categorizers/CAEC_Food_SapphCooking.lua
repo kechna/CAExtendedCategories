@@ -5,7 +5,7 @@ local Food = require("CAExtendedCategories/Categorizers/CAEC_Food")
 local FoodType = require("CAExtendedCategories/Data/CAEC_FoodType")
 
 
-local SCTag = Utils.ModIsActive("SapphCooking_B42") and require("SapphCookingRegistries").tags or nil
+local SCTag = Utils.modIsActive("SapphCooking_B42") and require("SapphCookingRegistries").tags or nil
 
 --- @type {tag: ItemTag, type: string}[]
 local TagsMap = table.newarray()
@@ -16,7 +16,7 @@ local defaultGetFoodType = Food.getFoodType
 function Food:initialise()
   defaultInitialise(self)
 
-  if Utils.ModIsActive("SapphCooking_B42") then
+  if Utils.modIsActive("SapphCooking_B42") then
     SCTag = require("SapphCookingRegistries").tags
 
     TagsMap = table.newarray({

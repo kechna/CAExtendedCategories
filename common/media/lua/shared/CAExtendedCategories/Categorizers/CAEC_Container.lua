@@ -30,7 +30,7 @@ function Container:categorize(item, _instance)
   if item:getBodyLocation() ~= nil
       or (bloodClothingType and bloodClothingType:contains(BloodClothingType.Bag))
   then
-    if Utils.HasAnyTag(item, ItemTagsAmmo) then
+    if Utils.hasAnyTag(item, ItemTagsAmmo) then
       category = "ContainerWearableAmmo"
     else
       category = "ContainerWearable"

@@ -1,6 +1,4 @@
-local Utils = require("CAExtendedCategories/CAEC_Utils")
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
-local CAEC = require("CAExtendedCategories.CAEC")
 ---@class CAEC_Literature: CAEC_ItemCategorizer
 local Literature = CAEC_ItemCategorizer:derive("Literature")
 
