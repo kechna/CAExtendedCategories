@@ -51,6 +51,8 @@ const expl = [
 export const createTranslationsTemplate = async (context: FullModContext): Promise<FileBuilderInterface[]> => {
   const { t } = await useTranslations(context, SUPPORTED_LANGUAGES);
 
+  if (!context.isDev) return [];
+
   const template = new Ts.File("src/i18n/template").setBasePath(context.baseDir);
   const types = new Ts.File("src/i18n/types").setBasePath(context.baseDir);
 

@@ -113,10 +113,8 @@ function Core.setData(source)
   Core.ErrorCount = getLuaDebuggerErrorCount()
   Core.Settings = source.Settings or SandboxVars.CAExtendedCategories or {}
   Core.Initialized = source.Initialized or false
-  -- CAEC.InstanceCategorizers = source.InstanceCategorizers or {}
   Core.InstanceSpecific = source.InstanceSpecific or {}
   Core.ItemTweaks = source.ItemTweaks or {}
-  -- CAEC.ScriptCategorizers = source.ScriptCategorizers or {}
 
   Debug.setLevel(Debug.Verbosity or Core.Settings.LogVerbosity)
 
@@ -155,10 +153,8 @@ function Core.updateEnd(trigger)
   local ToSave = {}
 
   ToSave.Initialized = Core.Initialized
-  -- ToSave.InstanceCategorizers = CAEC.InstanceCategorizers
   ToSave.InstanceSpecific = Core.InstanceSpecific
   ToSave.ItemTweaks = Core.ItemTweaks
-  --  ToSave.ScriptCategorizers = CAEC.ScriptCategorizers
 
   Utils.removeTemporaryInstances()
 

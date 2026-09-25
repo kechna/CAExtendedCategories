@@ -5,9 +5,30 @@ import { TOOL_ADDON } from "./categories.ts";
 
 const foodTypes = getFoodTypes();
 
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponBow                                     │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoHandgunDrum                               │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponExplosive                               │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoShotgunDrum                               │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: MaterialAmmoRifleBox                          │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: ToolMetalworking                              │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: MaterialAmmoBox                               │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: VFXDistributionBox                            │
+
 const SKILLS = ["Butchering", "Carpentry", "Electrical", "Maintenance", "Pottery", "Tailoring", "Metalworking"];
 const AMMO_TYPES = ["Rifle", "Handgun", "Shotgun", "Toy", "Bow", "Explosive"];
 const AMMO_BOX_TYPES = ["Box", "Carton", "Mag"];
+
+const WEAPON_CATEGORIES = [
+  "Axe",
+  "Blunt",
+  "SmallBlunt",
+  "LongBlade",
+  "SmallBlade",
+  "Spear",
+  "Crafted",
+  "Bow",
+  "Explosive",
+];
 
 export const searchers: Searcher[] = [
   { categories: ["Beverage"], searchKeys: [] },
@@ -19,6 +40,12 @@ export const searchers: Searcher[] = [
   {
     categories: USED_CATEGORIES,
     searchKeys: ["IGUI_ItemCat_%s", "IGUI_perks_%s", "ItemName_Base.%s"],
+  },
+
+  {
+    prefix: PzCategory.Material,
+    categories: ["Bundled", PzCategory.FireSource, PzCategory.Tool, PzCategory.Weapon, PzCategory.Ammo],
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 
   {
@@ -117,7 +144,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Ammo,
-    categories: AMMO_BOX_TYPES,
+    categories: [...AMMO_BOX_TYPES, "Drum"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 
@@ -133,19 +160,29 @@ export const searchers: Searcher[] = [
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   })),
 
-  ...BOXABLE_CATEGORIES.map((category) => {
-    return {
-      prefix: category,
-      categories: ["Box", "Carton"],
-      searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
-    };
-  }),
+  ...["Rifle", "Shotgun"].map((ammoType) => ({
+    prefix: PzCategory.Ammo + ammoType,
+    categories: ["Drum"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
+  })),
 
   {
-    prefix: PzCategory.Material,
-    categories: ["Bundled", PzCategory.FireSource, PzCategory.Tool, PzCategory.Weapon, PzCategory.Ammo],
-    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
+    prefix: "Material" + PzCategory.Ammo,
+    categories: [...AMMO_TYPES, "Box", "Carton"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
+
+  ...AMMO_TYPES.map((ammoType) => ({
+    prefix: "Material" + PzCategory.Ammo + ammoType,
+    categories: AMMO_BOX_TYPES,
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
+  })),
+
+  ...BOXABLE_CATEGORIES.map((category) => ({
+    prefix: category,
+    categories: ["Box", "Carton"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
+  })),
 
   {
     prefix: PzCategory.Material,
@@ -200,13 +237,13 @@ export const searchers: Searcher[] = [
 
   {
     prefix: "Weapon",
-    categories: ["Axe", "Blunt", "SmallBlunt", "LongBlade", "SmallBlade", "Spear", "Crafted"],
+    categories: WEAPON_CATEGORIES,
     searchKeys: ["IGUI_perks_%s", "IGUI_ItemCat_%s"],
   },
 
   {
     prefix: "Firearm",
-    categories: ["Handgun", "Rifle", "Shotgun"],
+    categories: ["Handgun", "Rifle", "Shotgun", "Toy"],
   },
 
   {
