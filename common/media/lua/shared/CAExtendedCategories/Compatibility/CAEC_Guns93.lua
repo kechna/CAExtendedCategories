@@ -99,7 +99,7 @@ function Weapon:asMeleeWeapon(item, instance)
   local category = originalAsMeleeWeapon(self, item, instance)
   local modId = item:getModID()
 
-  if modId ~= "guns93" then return category end
+  if not category or modId ~= "guns93" then return category end
 
   local name = item:getName():lower()
 
@@ -125,7 +125,10 @@ function Ammo:categorize(item, instance)
 
   if modId ~= "guns93" then return category end
 
-  if item:hasTag(Gun93Registries.guns93.SpentBrass) or item:hasTag(Gun93Registries.guns93.SpentCase) then
+  local spentBrass = Gun93Registries.guns93.SpentBrass
+  local spentCase = Gun93Registries.guns93.SpentCase
+
+  if (spentBrass and item:hasTag(spentBrass)) or (spentCase and item:hasTag(spentCase)) then
     return "Material" .. (category or "Ammo")
   end
 

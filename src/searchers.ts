@@ -76,19 +76,20 @@ export const searchers: Searcher[] = [
   {
     prefix: PzCategory.ProtectiveGear,
     categories: [
-      "FullBody",
-      "Top",
-      "Bottom",
-      "Footwear",
-      "Socks",
-      "Head",
-      "Hands",
-      "Underwear",
-      "Outerwear",
-      "Legs",
+      "Accessory",
       "Arms",
+      "Bottom",
       "Face",
+      "Footwear",
+      "FullBody",
+      "Hands",
+      "Head",
+      "Legs",
       "Neck",
+      "Outerwear",
+      "Socks",
+      "Top",
+      "Underwear",
     ],
     searchKeys: [
       "UI_ClothingType_%s",
@@ -160,7 +161,7 @@ export const searchers: Searcher[] = [
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   })),
 
-  ...["Rifle", "Shotgun"].map((ammoType) => ({
+  ...["Rifle", "Shotgun", "Handgun"].map((ammoType) => ({
     prefix: PzCategory.Ammo + ammoType,
     categories: ["Drum"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],

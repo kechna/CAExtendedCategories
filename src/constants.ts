@@ -5,6 +5,7 @@ export enum CustomFoodType {
   Candy = "Candy",
   Canned = "Canned",
   Dish = "Dish",
+  Frozen = "Frozen",
   Livestock = "Livestock",
   PetFood = "PetFood",
   Portion = "Portion",
@@ -62,6 +63,9 @@ export const HUMAN_LANGUAGE_COMMENTS = {
 
 export const MACHINE_LANGUAGE_COMMENTS = {
   [Language.PL]: `machine translated by me and ${profileUrl("Piotrek0909", "76561198138484118")}`,
+  [Language.AR]: "machine translated by me",
+  [Language.CA]: "machine translated by me",
+  [Language.CH]: "machine translated by me",
   [Language.CS]: "machine translated by me",
   [Language.DA]: "machine translated by me",
   [Language.DE]: "machine translated by me",
@@ -69,9 +73,15 @@ export const MACHINE_LANGUAGE_COMMENTS = {
   [Language.FI]: "machine translated by me",
   [Language.FR]: "machine translated by me",
   [Language.HU]: "machine translated by me",
+  [Language.ID]: "machine translated by me",
   [Language.IT]: "machine translated by me",
+  [Language.JP]: "machine translated by me",
+  [Language.KO]: "machine translated by me",
   [Language.NO]: "machine translated by me",
+  [Language.PH]: "machine translated by me",
+  [Language.PT]: "machine translated by me",
   [Language.RO]: "machine translated by me",
   [Language.RU]: "machine translated by me",
+  [Language.TH]: "machine translated by me",
   [Language.UA]: "machine translated by me",
 };

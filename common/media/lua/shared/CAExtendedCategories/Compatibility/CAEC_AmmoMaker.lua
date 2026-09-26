@@ -73,13 +73,13 @@ CAEC.registerInitHook("Compat:AmmoMaker", function ()
     ["12Buck00"]   = Ammo.AmmoGroup.SHOTGUN
   }
 
-  ---@param table table | nil
-  local function register(table)
-    if not table then return end
+  ---@param map table | nil
+  local function register(map)
+    if not map then return end
 
     CAEC.debug("Mapping ammo maker types...")
 
-    for _, entry in ipairs(table) do
+    for _, entry in ipairs(map) do
       local itemType = entry.itemType
       local ammoType = entry.ammoType
       local group = AmmoGroupMapping[ammoType]

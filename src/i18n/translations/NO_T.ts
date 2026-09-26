@@ -23,17 +23,27 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Tilbehør"
    */
-  CAEC_Override_Accessory: undefined,
+  CAEC_Fallback_Accessory: "Tilbehør",
   /**
    * firearm ammunition
    *
    * found in-game:
    *   IGUI_ItemCat_Ammo = "Ammunisjon"
    */
-  CAEC_Override_Ammo: undefined,
-  /** animals */
+  CAEC_Fallback_Ammo: "Ammunisjon",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Dyr"
+   */
   CAEC_Fallback_Animal: "Dyr",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Del av dyr"
+   */
   CAEC_Fallback_AnimalPart: "Dyredeler",
   /**
    * character appearance items such as makeup
@@ -41,35 +51,35 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Appearance = "Utseende"
    */
-  CAEC_Override_Appearance: undefined,
+  CAEC_Fallback_Appearance: "Utseende",
   /**
    * camping supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Camping = "Camping"
    */
-  CAEC_Override_Camping: undefined,
+  CAEC_Fallback_Camping: "Camping",
   /**
    * maps of locations
    *
    * found in-game:
    *   IGUI_ItemCat_Cartography = "Kartografi"
    */
-  CAEC_Override_Cartography: undefined,
+  CAEC_Fallback_Cartography: "Kartografi",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Klær"
    */
-  CAEC_Override_Clothing: undefined,
+  CAEC_Fallback_Clothing: "Klær",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "Kommunikasjon"
    */
-  CAEC_Override_Communications: undefined,
+  CAEC_Fallback_Communications: "Kommunikasjon",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
@@ -77,96 +87,120 @@ export const NO: ExternalTranslations = {
    *   IGUI_ItemCat_Container = "Beholder"
    *   ContextMenu_Container = "Beholdere"
    */
-  CAEC_Override_Container: undefined,
+  CAEC_Fallback_Container: "Beholder",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Matlaging"
-   *   IGUI_perks_Cooking = "Matlaging"
    */
-  CAEC_Override_Cooking: undefined,
+  CAEC_Fallback_Cooking: "Matlaging",
   /**
    * electronic items
    *
    * found in-game:
    *   IGUI_ItemCat_Electronics = "Elektronikk"
    */
-  CAEC_Override_Electronics: undefined,
+  CAEC_Fallback_Electronics: "Elektronikk",
   /**
    * entertainment items
    *
    * found in-game:
    *   IGUI_ItemCat_Entertainment = "Underholdning"
    */
-  CAEC_Override_Entertainment: undefined,
-  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_Entertainment: "Underholdning",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Ildkilde"
+   */
   CAEC_Fallback_FireSource: "Ildkilde",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Førstehjelp"
    *   IGUI_ItemCat_FirstAid = "Førstehjelp"
    */
-  CAEC_Override_FirstAid: undefined,
+  CAEC_Fallback_FirstAid: "Førstehjelp",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Fiske"
+   *   ContextMenu_Fishing = "Fisking"
+   *   IGUI_CraftCategory_Fishing = "Fiske"
+   */
+  CAEC_Fallback_Fishing: "Fiske",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "Mat"
    */
-  CAEC_Override_Food: undefined,
+  CAEC_Fallback_Food: "Mat",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "Møbler"
    */
-  CAEC_Override_Furniture: undefined,
+  CAEC_Fallback_Furniture: "Møbler",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Hagearbeid"
+   */
+  CAEC_Fallback_Gardening: "Hagearbeid",
   /**
    * household items
    *
    * found in-game:
    *   IGUI_ItemCat_Household = "Husholdning"
    */
-  CAEC_Override_Household: undefined,
+  CAEC_Fallback_Household: "Husholdning",
   /**
    * instruments
    *
    * found in-game:
    *   IGUI_ItemCat_Instrument = "Instrument"
    */
-  CAEC_Override_Instrument: undefined,
+  CAEC_Fallback_Instrument: "Instrument",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
    *   IGUI_ItemCat_Junk = "Søppel"
    */
-  CAEC_Override_Junk: undefined,
+  CAEC_Fallback_Junk: "Søppel",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
    *   IGUI_ItemCat_LightSource = "Lyskilde"
    */
-  CAEC_Override_LightSource: undefined,
+  CAEC_Fallback_LightSource: "Lyskilde",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Litteratur"
    */
-  CAEC_Override_Literature: undefined,
+  CAEC_Fallback_Literature: "Litteratur",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "Materiale"
    */
-  CAEC_Override_Material: undefined,
-  /** keepsakes and souvenirs */
+  CAEC_Fallback_Material: "Materiale",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Memento"
+   */
   CAEC_Fallback_Memento: "Minne",
   /**
    * paint items
@@ -174,8 +208,13 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Paint = "Maling"
    */
-  CAEC_Override_Paint: undefined,
-  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_Paint: "Maling",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Verneutstyr"
+   */
   CAEC_Fallback_ProtectiveGear: "Beskyttelsesutstyr",
   /**
    * skill books
@@ -183,56 +222,48 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "Egenskapsbok"
    */
-  CAEC_Override_SkillBook: undefined,
+  CAEC_Fallback_SkillBook: "Egenskapsbok",
   /**
    * sports items
    *
    * found in-game:
    *   IGUI_ItemCat_Sports = "Sport"
    */
-  CAEC_Override_Sports: undefined,
+  CAEC_Fallback_Sports: "Sport",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
    *   IGUI_ItemCat_Tool = "Verktøy"
    */
-  CAEC_Override_Tool: undefined,
+  CAEC_Fallback_Tool: "Verktøy",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Lage feller"
+   */
+  CAEC_Fallback_Trapping: "Lage feller",
   /**
    * vehicle maintenance items
    *
    * found in-game:
    *   IGUI_ItemCat_VehicleMaintenance = "Vedlikehold av kjøretøy"
    */
-  CAEC_Override_VehicleMaintenance: undefined,
+  CAEC_Fallback_VehicleMaintenance: "Vedlikehold av kjøretøy",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "Våpen"
    */
-  CAEC_Override_Weapon: undefined,
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Øks"
-   */
-  CAEC_Override_Axe: undefined,
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Smithing"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Lange stumpe"
-   */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Fallback_Weapon: "Våpen",
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: "Øks",
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Smiing",
+  /** long blunt weapon skill */
+  CAEC_Fallback_Blunt: "Langt stumpt våpen",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Slakting",
   /**
@@ -240,9 +271,8 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Snekker"
-   *   IGUI_perks_Carpentry = "Snekker"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Snekker",
   /** carving skill */
   CAEC_Fallback_Carving: "Utskjæring",
   /**
@@ -251,120 +281,49 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Elektrisk"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elektrisk",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Landbruk"
-   *   IGUI_perks_Farming = "Landbruk"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Fiske"
-   *   IGUI_perks_Fishing = "Fiske"
-   *   ContextMenu_Fishing = "Fisking"
-   *   IGUI_CraftCategory_Fishing = "Fiske"
-   */
-  CAEC_Override_Fishing: undefined,
+  CAEC_Fallback_Farming: "Landbruk",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Flintknapping",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Sanking"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Hagearbeid"
-   */
-  CAEC_Override_Gardening: undefined,
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Sanking",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glassblåsing",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Lange blad"
-   */
-  CAEC_Override_LongBlade: undefined,
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Vedlikehold"
-   */
-  CAEC_Override_Maintenance: undefined,
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: "Langt blad",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Vedlikehold",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Murerarbeid",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Mekanikk"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Metalworking"
-   */
-  CAEC_Override_Metalworking: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mekanikk",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Metallarbeid",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Keramikk",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Korte blad"
-   */
-  CAEC_Override_SmallBlade: undefined,
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Korte stumpe"
-   */
-  CAEC_Override_SmallBlunt: undefined,
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Spyd"
-   */
-  CAEC_Override_Spear: undefined,
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Syying"
-   */
-  CAEC_Override_Tailoring: undefined,
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: "Kort blad",
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: "Kort stumpt våpen",
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: "Spyd",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Søm",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Sporing",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Lage feller"
-   *   IGUI_perks_Trapping = "Felleekspert"
-   */
-  CAEC_Override_Trapping: undefined,
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Metallbearbeiding"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Metallbearbeiding",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Armer",
   /** lower body clothing, pants, shorts, skirts */
@@ -383,7 +342,7 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Head = "Hode"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Fallback_Head: "Hode",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
   CAEC_Override_Jewelry: "Smykker",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
@@ -394,7 +353,7 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Neck = "Nakke"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Fallback_Neck: "Nakke",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Yttertøy",
   /** hosiery and socks */
@@ -411,14 +370,14 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Brød"
    */
-  CAEC_Override_Bread: undefined,
+  CAEC_Fallback_Bread: "Brød",
   /**
    * sweets and candies
    *
    * found in-game:
    *   ContextMenu_FoodType_Candy = "Godteri"
    */
-  CAEC_Override_Candy: undefined,
+  CAEC_Fallback_Candy: "Godteri",
   /** canned food items */
   CAEC_Override_Canned: "Hermetikk",
   /**
@@ -427,7 +386,7 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Ost"
    */
-  CAEC_Override_Cheese: undefined,
+  CAEC_Fallback_Cheese: "Ost",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Ferdigretter",
   /**
@@ -436,21 +395,21 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "Frukt"
    */
-  CAEC_Override_Fruits: undefined,
+  CAEC_Fallback_Fruits: "Frukt",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
    *   ContextMenu_FoodType_Herb = "Urter"
    */
-  CAEC_Override_Herb: undefined,
+  CAEC_Fallback_Herb: "Urter",
   /**
    * spicy hot peppers
    *
    * found in-game:
    *   ContextMenu_FoodType_HotPepper = "Sterk chili"
    */
-  CAEC_Override_HotPepper: undefined,
+  CAEC_Fallback_HotPepper: "Sterk chili",
   /** edible insects */
   CAEC_Fallback_Insect: "Insekter",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
@@ -461,21 +420,21 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Kjøtt"
    */
-  CAEC_Override_Meat: undefined,
+  CAEC_Fallback_Meat: "Kjøtt",
   /**
    * mushrooms/fungi
    *
    * found in-game:
    *   ContextMenu_FoodType_Mushroom = "Sopp"
    */
-  CAEC_Override_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "Sopp",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
    *   ContextMenu_FoodType_Nut = "Nøtt"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Fallback_Nut: "Nøtt",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Lett bedervelig",
   /** food for pets */
@@ -490,14 +449,14 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Seafood = "Sjømat"
    */
-  CAEC_Override_Seafood: undefined,
+  CAEC_Fallback_Seafood: "Sjømat",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Frø"
    */
-  CAEC_Override_Seed: undefined,
+  CAEC_Fallback_Seed: "Frø",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Snacks",
   /** spices and seasonings, salt, pepper, etc. */
@@ -510,21 +469,21 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Stock = "Kraft"
    */
-  CAEC_Override_Stock: undefined,
+  CAEC_Fallback_Stock: "Kraft",
   /**
    * sugar and sweeteners
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Sukker"
    */
-  CAEC_Override_Sugar: undefined,
+  CAEC_Fallback_Sugar: "Sukker",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "Grønnsaker"
    */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Fallback_Vegetables: "Grønnsaker",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Voksen",
   /** informational brochures */
@@ -540,9 +499,9 @@ export const NO: ExternalTranslations = {
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Innbundet",
   /** literature magazines */
-  CAEC_Fallback_Magazine: undefined,
+  CAEC_Fallback_Magazine: "Magasin",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "Avis",
   /** picture books */
   CAEC_Fallback_PictureBook: "Bildebok",
   /** recipes, readable items that teach you something */
@@ -551,6 +510,10 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "RPG-manual",
   /** softcover books */
   CAEC_Fallback_Softcover: "Mykperm",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Bue",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Trommelmagasin",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Skytevåpen",
   /** pistols and handguns */
@@ -569,9 +532,9 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Øl"
    */
-  CAEC_Override_Beer: undefined,
+  CAEC_Fallback_Beer: "Øl",
   /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
+  CAEC_Override_Beverage: "Drikkevarer",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /**
@@ -580,7 +543,7 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kaffe"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Kaffe",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Fargestoff",
   /** energy drinks or otherwise highly caffeinated soft drinks */
@@ -593,7 +556,7 @@ export const NO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Juice = "Jus"
    */
-  CAEC_Override_Juice: undefined,
+  CAEC_Fallback_Juice: "Jus",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Væske",
   /**
@@ -601,36 +564,37 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Melk"
+   *   ContextMenu_Milk = "Melk"
    */
-  CAEC_Override_Milk: undefined,
+  CAEC_Fallback_Milk: "Melk",
   /**
    * carbonated soft drinks
    *
    * found in-game:
    *   ContextMenu_FoodType_SoftDrink = "Brus"
    */
-  CAEC_Override_SoftDrink: undefined,
+  CAEC_Fallback_SoftDrink: "Brus",
   /**
    * tea beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Te"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Te",
   /**
    * drinking water
    *
    * found in-game:
    *   ContextMenu_Water = "Vann"
    */
-  CAEC_Override_Water: undefined,
+  CAEC_Fallback_Water: "Vann",
   /**
    * alcoholic wine beverages
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Vin"
    */
-  CAEC_Override_Wine: undefined,
+  CAEC_Fallback_Wine: "Vin",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Eske",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
@@ -646,7 +610,7 @@ export const NO: ExternalTranslations = {
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Bestikk",
   /** ring or bundle of keys */
-  CAEC_Override_KeyRing: undefined,
+  CAEC_Override_KeyRing: "Nøkkelring",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Panne",
   /** photos */

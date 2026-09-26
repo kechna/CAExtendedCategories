@@ -96,8 +96,8 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
           resolvedKey = resolveKey("override", key);
         }
 
-        // if (language == Language.CN) {
-        //   console.log(">", resolvedKey?.padEnd(40), ca?.searchKey);
+        // if (language == Language.IT) {
+        //   console.log(">", resolvedKey?.padEnd(40), other);
         // }
 
         let desc = description;
@@ -110,16 +110,17 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
           desc = `\n   * ${description}\n   *\n   * found in-game:\n   *   ${othersDesc}\n  `;
         }
 
-        const isMatch = other[0]?.translation === ca?.translation;
+        const firstOther = other[0]?.translation;
+        const isMatch = firstOther === ca?.translation;
 
         if (ca && !isMatch) {
           obj.set(resolvedKey, ca.translation, desc);
         } else {
-          if (isMatch && !ca) {
+          if (isMatch || firstOther) {
             resolvedKey = resolveKey("fallback", key);
           }
 
-          obj.set(resolvedKey, ca?.translation, desc);
+          obj.set(resolvedKey, ca?.translation ?? firstOther, desc);
         }
       } else {
         obj.set(resolvedKey, undefined, description);
@@ -255,7 +256,7 @@ export const createTranslationsTemplate = async (context: FullModContext): Promi
   report.add(`[hr][/hr]`);
   report.add(`I wrote a little program that pieces together all the possible combinations of categories from smaller parts. Most of these keys will be searched for in the game's actual translations first, such as all the base categories, e.g. "Food" -> IGUI_ItemCat_Food. Then it generates the actual translations file that's usable in the game.
       
-This is the reason my Dutch translations contain the same mistakes as the game itself, such as "Koffie" (Coffee) being misspelled as "Kofie". I don't want to get into the rabbit hole of fixing the game's own translations, as I saw TIS hired translators. This also means when the game's actual translations are updated, all of my translations that come directly from the game will update with them.
+This is the reason my Dutch translations may contain the same mistakes as the game itself, such as "Koffie" (Coffee) being misspelled as "Kofie". This also means when the game's actual translations are updated, all of my translations that come directly from the game will update with them. It is possible to override these so installing my mod will correct the game's own translations as well, if you want to do that, let me know.
 `);
   files.push(report);
 

@@ -37,43 +37,43 @@ Ammo.AmmoGroupsMap = {
 
 ---@type table<string, CAEC_AmmoGroup>
 Ammo.AmmoItemGroupsMap = {
-  ["308Bullets"] = Ammo.AmmoGroup.RIFLE,
-  ["556Bullets"] = Ammo.AmmoGroup.RIFLE,
-  ["3030Bullets"] = Ammo.AmmoGroup.RIFLE,
-  ["Bullets357"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets38"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets44"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets45"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets9mm"] = Ammo.AmmoGroup.HANDGUN,
-  ["ShotgunShells"] = Ammo.AmmoGroup.SHOTGUN,
+  ["Base.308Bullets"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.556Bullets"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.3030Bullets"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.Bullets357"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets38"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets44"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets45"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets9mm"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.ShotgunShells"] = Ammo.AmmoGroup.SHOTGUN,
 
-  ["308Box"] = Ammo.AmmoGroup.RIFLE,
-  ["308Carton"] = Ammo.AmmoGroup.RIFLE,
-  ["556Box"] = Ammo.AmmoGroup.RIFLE,
-  ["556Carton"] = Ammo.AmmoGroup.RIFLE,
-  ["3030Box"] = Ammo.AmmoGroup.RIFLE,
-  ["3030Carton"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.308Box"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.308Carton"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.556Box"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.556Carton"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.3030Box"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.3030Carton"] = Ammo.AmmoGroup.RIFLE,
 
-  ["Bullets357Box"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets357Carton"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets38Box"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets38Carton"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets44Box"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets44Carton"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets45Box"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets45Carton"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets9mmBox"] = Ammo.AmmoGroup.HANDGUN,
-  ["Bullets9mmCarton"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets357Box"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets357Carton"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets38Box"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets38Carton"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets44Box"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets44Carton"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets45Box"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets45Carton"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets9mmBox"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.Bullets9mmCarton"] = Ammo.AmmoGroup.HANDGUN,
 
-  ["ShotgunShellsBox"] = Ammo.AmmoGroup.SHOTGUN,
-  ["ShotgunShellsCarton"] = Ammo.AmmoGroup.SHOTGUN,
+  ["Base.ShotgunShellsBox"] = Ammo.AmmoGroup.SHOTGUN,
+  ["Base.ShotgunShellsCarton"] = Ammo.AmmoGroup.SHOTGUN,
 
-  ["44Clip"] = Ammo.AmmoGroup.HANDGUN,
-  ["45Clip"] = Ammo.AmmoGroup.HANDGUN,
-  ["556Clip"] = Ammo.AmmoGroup.RIFLE,
-  ["9mmClip"] = Ammo.AmmoGroup.HANDGUN,
-  ["M14Clip"] = Ammo.AmmoGroup.RIFLE,
-  ["JS14_Clip"] = Ammo.AmmoGroup.RIFLE
+  ["Base.44Clip"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.45Clip"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.556Clip"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.9mmClip"] = Ammo.AmmoGroup.HANDGUN,
+  ["Base.M14Clip"] = Ammo.AmmoGroup.RIFLE,
+  ["Base.JS14_Clip"] = Ammo.AmmoGroup.RIFLE
 }
 
 function Ammo.registerAmmoGroup(ammoType, group)
@@ -130,7 +130,8 @@ function Ammo:categorize(item, _instance)
   local category = nil
   local itemName = item:getFullName()
   local ammoGroup = self.getAmmoGroupForItem(itemName)
-  local ammoType = ammoGroup and nil or item:getAmmoType()
+  -- always resolved, the "Mag" fallback below relies on it for magazines without magazine tags
+  local ammoType = item:getAmmoType()
 
   local lowerName = itemName:lower()
 

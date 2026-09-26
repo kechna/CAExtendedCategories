@@ -23,53 +23,63 @@ export const TH: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "เครื่องประดับ"
    */
-  CAEC_Override_Accessory: undefined,
+  CAEC_Fallback_Accessory: "เครื่องประดับ",
   /**
    * firearm ammunition
    *
    * found in-game:
    *   IGUI_ItemCat_Ammo = "กระสุน"
    */
-  CAEC_Override_Ammo: undefined,
-  /** animals */
-  CAEC_Fallback_Animal: undefined,
-  /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
+  CAEC_Fallback_Ammo: "กระสุน",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "สัตว์"
+   */
+  CAEC_Fallback_Animal: "สัตว์",
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "ชิ้นส่วนสัตว์"
+   */
+  CAEC_Fallback_AnimalPart: "ชิ้นส่วนสัตว์",
   /**
    * character appearance items such as makeup
    *
    * found in-game:
-   *   IGUI_ItemCat_Appearance = "รูปร่างหน้าตา"
+   *   IGUI_ItemCat_Appearance = "รูปลักษณ์"
    */
-  CAEC_Override_Appearance: undefined,
+  CAEC_Fallback_Appearance: "รูปลักษณ์",
   /**
    * camping supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Camping = "ที่พัก"
+   *   IGUI_ItemCat_Camping = "การตั้งแคมป์"
    */
-  CAEC_Override_Camping: undefined,
+  CAEC_Fallback_Camping: "การตั้งแคมป์",
   /**
    * maps of locations
    *
    * found in-game:
    *   IGUI_ItemCat_Cartography = "แผนที่"
    */
-  CAEC_Override_Cartography: undefined,
+  CAEC_Fallback_Cartography: "แผนที่",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
-   *   IGUI_ItemCat_Clothing = "เครื่องนุ่งห่ม"
+   *   IGUI_ItemCat_Clothing = "เสื้อผ้า"
    */
-  CAEC_Override_Clothing: undefined,
+  CAEC_Fallback_Clothing: "เสื้อผ้า",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "การสื่อสาร"
    */
-  CAEC_Override_Communications: undefined,
+  CAEC_Fallback_Communications: "การสื่อสาร",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
@@ -77,588 +87,548 @@ export const TH: ExternalTranslations = {
    *   IGUI_ItemCat_Container = "บรรจุภัณฑ์"
    *   ContextMenu_Container = "ตู้/ชั้นวางของ"
    */
-  CAEC_Override_Container: undefined,
+  CAEC_Fallback_Container: "บรรจุภัณฑ์",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "เครื่องครัว"
-   *   IGUI_perks_Cooking = "การทำอาหาร"
    */
-  CAEC_Override_Cooking: undefined,
+  CAEC_Fallback_Cooking: "เครื่องครัว",
   /**
    * electronic items
    *
    * found in-game:
-   *   IGUI_ItemCat_Electronics = "วงจรอิเล็กทรอนิกส์"
+   *   IGUI_ItemCat_Electronics = "อิเล็กทรอนิกส์"
    */
-  CAEC_Override_Electronics: undefined,
+  CAEC_Fallback_Electronics: "อิเล็กทรอนิกส์",
   /**
    * entertainment items
    *
    * found in-game:
    *   IGUI_ItemCat_Entertainment = "ความบันเทิง"
    */
-  CAEC_Override_Entertainment: undefined,
-  /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: undefined,
+  CAEC_Fallback_Entertainment: "ความบันเทิง",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "เชื้อเพลิง"
+   */
+  CAEC_Override_FireSource: "แหล่งไฟ",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "การปฐมพยาบาล"
    *   IGUI_ItemCat_FirstAid = "ปฐมพยาบาล"
    */
-  CAEC_Override_FirstAid: undefined,
+  CAEC_Fallback_FirstAid: "ปฐมพยาบาล",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "การจับปลา"
+   *   ContextMenu_Fishing = "จับปลา"
+   *   IGUI_CraftCategory_Fishing = "การจับปลา"
+   */
+  CAEC_Fallback_Fishing: "การจับปลา",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "อาหาร"
    */
-  CAEC_Override_Food: undefined,
+  CAEC_Fallback_Food: "อาหาร",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "เฟอร์นิเจอร์"
    */
-  CAEC_Override_Furniture: undefined,
+  CAEC_Fallback_Furniture: "เฟอร์นิเจอร์",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "การทำสวน"
+   *   ContextMenu_Gardening = "การทำสวน"
+   */
+  CAEC_Fallback_Gardening: "การทำสวน",
   /**
    * household items
    *
    * found in-game:
-   *   IGUI_ItemCat_Household = "ครัวเรือน"
+   *   IGUI_ItemCat_Household = "ของใช้ในบ้าน"
    */
-  CAEC_Override_Household: undefined,
+  CAEC_Fallback_Household: "ของใช้ในบ้าน",
   /**
    * instruments
    *
    * found in-game:
    *   IGUI_ItemCat_Instrument = "เครื่องดนตรี"
    */
-  CAEC_Override_Instrument: undefined,
+  CAEC_Fallback_Instrument: "เครื่องดนตรี",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "เบ็ดเตล็ด"
+   *   IGUI_ItemCat_Junk = "ของเหลือใช้"
    */
-  CAEC_Override_Junk: undefined,
+  CAEC_Fallback_Junk: "ของเหลือใช้",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
-   *   IGUI_ItemCat_LightSource = "แหล่งแสงสว่าง"
+   *   IGUI_ItemCat_LightSource = "แหล่งกำเนิดแสง"
    */
-  CAEC_Override_LightSource: undefined,
+  CAEC_Fallback_LightSource: "แหล่งกำเนิดแสง",
   /**
    * books and printed reading material
    *
    * found in-game:
-   *   IGUI_ItemCat_Literature = "สื่อสิ่งพิมพ์"
+   *   IGUI_ItemCat_Literature = "สิ่งพิมพ์"
    */
-  CAEC_Override_Literature: undefined,
+  CAEC_Fallback_Literature: "สิ่งพิมพ์",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "วัสดุ"
    */
-  CAEC_Override_Material: undefined,
-  /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
+  CAEC_Fallback_Material: "วัสดุ",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "ของที่ระลึก"
+   */
+  CAEC_Fallback_Memento: "ของที่ระลึก",
   /**
    * paint items
    *
    * found in-game:
    *   IGUI_ItemCat_Paint = "สี"
    */
-  CAEC_Override_Paint: undefined,
-  /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
+  CAEC_Fallback_Paint: "สี",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "อุปกรณ์ป้องกัน"
+   */
+  CAEC_Fallback_ProtectiveGear: "อุปกรณ์ป้องกัน",
   /**
    * skill books
    *
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "หนังสือทักษะ"
    */
-  CAEC_Override_SkillBook: undefined,
+  CAEC_Fallback_SkillBook: "หนังสือทักษะ",
   /**
    * sports items
    *
    * found in-game:
    *   IGUI_ItemCat_Sports = "กีฬา"
    */
-  CAEC_Override_Sports: undefined,
+  CAEC_Fallback_Sports: "กีฬา",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
    *   IGUI_ItemCat_Tool = "เครื่องมือ"
    */
-  CAEC_Override_Tool: undefined,
+  CAEC_Fallback_Tool: "เครื่องมือ",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "การวางกับดัก"
+   */
+  CAEC_Fallback_Trapping: "การวางกับดัก",
   /**
    * vehicle maintenance items
    *
    * found in-game:
    *   IGUI_ItemCat_VehicleMaintenance = "การบำรุงรักษายานพาหนะ"
    */
-  CAEC_Override_VehicleMaintenance: undefined,
+  CAEC_Fallback_VehicleMaintenance: "การบำรุงรักษายานพาหนะ",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "อาวุธ"
    */
-  CAEC_Override_Weapon: undefined,
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "ขวาน"
-   */
-  CAEC_Override_Axe: undefined,
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "งานช่างตีเหล็ก"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "อาวุธทื่อยาว"
-   */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Fallback_Weapon: "อาวุธ",
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: "ขวาน",
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "งานตีเหล็ก",
+  /** long blunt weapon skill */
+  CAEC_Fallback_Blunt: "อาวุธทื่อยาว",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "การชำแหละ",
   /**
    * carpentry skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Carpentry = "งานช่างไม้"
-   *   IGUI_perks_Carpentry = "งานช่างไม้"
+   *   IGUI_CraftCategory_Carpentry = "งานไม้"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "งานไม้",
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carving: "การแกะสลัก",
   /**
    * electrical skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "งานไฟฟ้า"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "งานไฟฟ้า",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "การเพาะปลูก"
-   *   IGUI_perks_Farming = "การเพาะปลูก"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "ตกปลา"
-   *   IGUI_perks_Fishing = "การจับปลา"
-   *   ContextMenu_Fishing = "จับปลา"
-   *   IGUI_CraftCategory_Fishing = "การจับปลา"
-   */
-  CAEC_Override_Fishing: undefined,
+  CAEC_Fallback_Farming: "การเพาะปลูก",
   /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "การหาของ"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "การเพาะปลูก"
-   */
-  CAEC_Override_Gardening: undefined,
+  CAEC_Fallback_FlintKnapping: "การกะเทาะหิน",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "การหาของป่า",
   /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "อาวุธมีคมยาว"
-   */
-  CAEC_Override_LongBlade: undefined,
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "การดูแลรักษาอาวุธ"
-   */
-  CAEC_Override_Maintenance: undefined,
+  CAEC_Fallback_Glassmaking: "การทำแก้ว",
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: "ใบมีดยาว",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "การบำรุงรักษา",
   /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "งานช่างยนต์"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "งานเหล็ก"
-   */
-  CAEC_Override_Metalworking: undefined,
+  CAEC_Fallback_Masonry: "งานก่ออิฐ",
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "ช่างยนต์",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "งานโลหะ",
   /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "อาวุธมีคมสั้น"
-   */
-  CAEC_Override_SmallBlade: undefined,
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "อาวุธทื่อสั้น"
-   */
-  CAEC_Override_SmallBlunt: undefined,
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "หอก"
-   */
-  CAEC_Override_Spear: undefined,
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "งานตัดเย็บ"
-   */
-  CAEC_Override_Tailoring: undefined,
+  CAEC_Fallback_Pottery: "เครื่องปั้นดินเผา",
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: "ใบมีดสั้น",
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: "อาวุธทื่อสั้น",
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: "หอก",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "การตัดเย็บ",
   /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "การทำกับดัก"
-   *   IGUI_perks_Trapping = "การวางกับดัก"
-   */
-  CAEC_Override_Trapping: undefined,
+  CAEC_Fallback_Tracking: "การแกะรอย",
   /**
    * welding skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Welding = "งานเชื่อมเหล็ก"
+   *   IGUI_CraftCategory_Welding = "งานเชื่อม"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "งานเชื่อม",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
+  CAEC_Override_Arms: "แขน",
   /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  CAEC_Override_Bottom: "ท่อนล่าง",
   /** facewear such as masks, glasses, goggles */
-  CAEC_Override_Face: undefined,
+  CAEC_Override_Face: "ใบหน้า",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: undefined,
+  CAEC_Override_Footwear: "รองเท้า",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: undefined,
+  CAEC_Override_FullBody: "ทั้งตัว",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: undefined,
+  CAEC_Override_Hands: "มือ",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
    * found in-game:
    *   IGUI_health_Head = "ศีรษะ"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Fallback_Head: "ศีรษะ",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  CAEC_Override_Jewelry: undefined,
+  CAEC_Override_Jewelry: "เครื่องประดับอัญมณี",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
-  CAEC_Override_Legs: undefined,
+  CAEC_Override_Legs: "ขา",
   /**
    * neckwear such as scarves, necklaces
    *
    * found in-game:
    *   IGUI_health_Neck = "ลำคอ"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Fallback_Neck: "ลำคอ",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: undefined,
+  CAEC_Override_Outerwear: "เสื้อคลุม",
   /** hosiery and socks */
-  CAEC_Override_Socks: undefined,
+  CAEC_Override_Socks: "ถุงเท้า",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: undefined,
+  CAEC_Override_Top: "ท่อนบน",
   /** undergarments such as underwear, bras, boxers */
-  CAEC_Override_Underwear: undefined,
+  CAEC_Override_Underwear: "ชุดชั้นใน",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
-  CAEC_Override_Baking: undefined,
+  CAEC_Override_Baking: "การอบ",
   /**
    * baked bread products
    *
    * found in-game:
    *   ContextMenu_FoodType_Bread = "ขนมปัง"
    */
-  CAEC_Override_Bread: undefined,
+  CAEC_Fallback_Bread: "ขนมปัง",
   /**
    * sweets and candies
    *
    * found in-game:
    *   ContextMenu_FoodType_Candy = "ลูกกวาด"
    */
-  CAEC_Override_Candy: undefined,
+  CAEC_Fallback_Candy: "ลูกกวาด",
   /** canned food items */
-  CAEC_Override_Canned: undefined,
+  CAEC_Override_Canned: "กระป๋อง",
   /**
    * dairy cheese products
    *
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "ชีส"
    */
-  CAEC_Override_Cheese: undefined,
+  CAEC_Fallback_Cheese: "ชีส",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: undefined,
+  CAEC_Override_Dish: "อาหารจานหลัก",
   /**
    * fresh fruit, including berries and citrus
    *
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "ผลไม้"
    */
-  CAEC_Override_Fruits: undefined,
+  CAEC_Fallback_Fruits: "ผลไม้",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
    *   ContextMenu_FoodType_Herb = "สมุนไพร"
    */
-  CAEC_Override_Herb: undefined,
+  CAEC_Fallback_Herb: "สมุนไพร",
   /**
    * spicy hot peppers
    *
    * found in-game:
    *   ContextMenu_FoodType_HotPepper = "พริก"
    */
-  CAEC_Override_HotPepper: undefined,
-  /** edible insects */
-  CAEC_Fallback_Insect: undefined,
+  CAEC_Fallback_HotPepper: "พริก",
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "แมลง"
+   */
+  CAEC_Fallback_Insect: "แมลง",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: undefined,
+  CAEC_Fallback_Livestock: "ปศุสัตว์",
   /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "เนื้อ"
    */
-  CAEC_Override_Meat: undefined,
+  CAEC_Fallback_Meat: "เนื้อ",
   /**
    * mushrooms/fungi
    *
    * found in-game:
    *   ContextMenu_FoodType_Mushroom = "เห็ด"
    */
-  CAEC_Override_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "เห็ด",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
    *   ContextMenu_FoodType_Nut = "ถั่ว"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Fallback_Nut: "ถั่ว",
   /** food items that can spoil */
-  CAEC_Override_Perishable: undefined,
+  CAEC_Override_Perishable: "เน่าเสียง่าย",
   /** food for pets */
-  CAEC_Fallback_PetFood: undefined,
+  CAEC_Fallback_PetFood: "สัตว์เลี้ยง",
   /** single serving portion of food */
-  CAEC_Override_Portion: undefined,
+  CAEC_Override_Portion: "หนึ่งที่",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: undefined,
+  CAEC_Override_Preserved: "ถนอมอาหาร",
   /**
    * fish and other seafood
    *
    * found in-game:
    *   ContextMenu_FoodType_Seafood = "อาหารทะเล"
    */
-  CAEC_Override_Seafood: undefined,
+  CAEC_Fallback_Seafood: "อาหารทะเล",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "เมล็ดพืช"
    */
-  CAEC_Override_Seed: undefined,
+  CAEC_Fallback_Seed: "เมล็ดพืช",
   /** snack foods (e.g. chips, cookies) */
-  CAEC_Override_Snack: undefined,
+  CAEC_Override_Snack: "ขนมขบเคี้ยว",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: undefined,
+  CAEC_Fallback_Spice: "เครื่องเทศ",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: undefined,
+  CAEC_Fallback_Staple: "อาหารหลัก",
   /**
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
    *   ContextMenu_FoodType_Stock = "น้ำสต็อก"
    */
-  CAEC_Override_Stock: undefined,
+  CAEC_Fallback_Stock: "น้ำสต็อก",
   /**
    * sugar and sweeteners
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "น้ำตาล"
    */
-  CAEC_Override_Sugar: undefined,
+  CAEC_Fallback_Sugar: "น้ำตาล",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "ผัก"
    */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Fallback_Vegetables: "ผัก",
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
+  CAEC_Override_Adult: "ผู้ใหญ่",
   /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
+  CAEC_Fallback_Brochure: "โบรชัวร์",
   /** comic books */
-  CAEC_Fallback_Comic: undefined,
+  CAEC_Fallback_Comic: "การ์ตูน",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
+  CAEC_Fallback_Consumable: "ใช้แล้วหมดไป",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
+  CAEC_Fallback_FancyBook: "หนังสือหรู",
   /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
+  CAEC_Fallback_Flier: "ใบปลิว",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
+  CAEC_Fallback_Hardcover: "ปกแข็ง",
   /** literature magazines */
-  CAEC_Fallback_Magazine: undefined,
+  CAEC_Fallback_Magazine: "นิตยสาร",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "หนังสือพิมพ์",
   /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
+  CAEC_Fallback_PictureBook: "หนังสือภาพ",
   /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
+  CAEC_Fallback_Recipe: "สูตร",
   /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
+  CAEC_Fallback_RpgManual: "คู่มือ RPG",
   /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  CAEC_Fallback_Softcover: "ปกอ่อน",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "ธนู",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "แม็กกาซีนกลอง",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
+  CAEC_Override_Firearm: "อาวุธปืน",
   /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
+  CAEC_Fallback_Handgun: "ปืนพก",
   /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
+  CAEC_Fallback_Mag: "แม็กกาซีน",
   /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
+  CAEC_Fallback_Rifle: "ปืนไรเฟิล",
   /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
+  CAEC_Fallback_Shotgun: "ปืนลูกซอง",
   /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
+  CAEC_Fallback_Alcohol: "แอลกอฮอล์",
   /**
    * alcoholic beer beverages
    *
    * found in-game:
    *   ContextMenu_FoodType_Beer = "เบียร์"
    */
-  CAEC_Override_Beer: undefined,
+  CAEC_Fallback_Beer: "เบียร์",
   /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
+  CAEC_Override_Beverage: "เครื่องดื่ม",
   /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
+  CAEC_Override_Cocktail: "ค็อกเทล",
   /**
    * coffee beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "กาแฟ"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "กาแฟ",
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "สีย้อม",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
+  CAEC_Override_EnergyDrink: "เครื่องดื่มชูกำลัง",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Override_Fuel: "เชื้อเพลิง",
   /**
    * fruit juice
    *
    * found in-game:
    *   ContextMenu_FoodType_Juice = "น้ำผลไม้"
    */
-  CAEC_Override_Juice: undefined,
+  CAEC_Fallback_Juice: "น้ำผลไม้",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
+  CAEC_Override_Liquid: "ของเหลว",
   /**
    * dairy milk
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "นม"
+   *   ContextMenu_Milk = "รีดนม"
    */
-  CAEC_Override_Milk: undefined,
+  CAEC_Fallback_Milk: "นม",
   /**
    * carbonated soft drinks
    *
    * found in-game:
    *   ContextMenu_FoodType_SoftDrink = "น้ำอัดลม"
    */
-  CAEC_Override_SoftDrink: undefined,
+  CAEC_Fallback_SoftDrink: "น้ำอัดลม",
   /**
    * tea beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Tea = "ชา"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "ชา",
   /**
    * drinking water
    *
    * found in-game:
    *   ContextMenu_Water = "รดน้ำ"
    */
-  CAEC_Override_Water: undefined,
+  CAEC_Override_Water: "น้ำ",
   /**
    * alcoholic wine beverages
    *
    * found in-game:
    *   ContextMenu_FoodType_Wine = "ไวน์"
    */
-  CAEC_Override_Wine: undefined,
+  CAEC_Fallback_Wine: "ไวน์",
   /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
+  CAEC_Override_Box: "กล่อง",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
+  CAEC_Override_Bundled: "มัดรวม",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
+  CAEC_Override_Carton: "ลังกระดาษ",
   /** compostable items such as animal dung, to be put in a composter */
-  CAEC_Override_Compostable: undefined,
+  CAEC_Override_Compostable: "ทำปุ๋ยหมักได้",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: undefined,
+  CAEC_Override_Crafted: "ทำมือ",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "ถ้วย",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "ช้อนส้อม",
   /** ring or bundle of keys */
-  CAEC_Override_KeyRing: undefined,
+  CAEC_Override_KeyRing: "พวงกุญแจ",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "กระทะ",
   /** photos */
-  CAEC_Fallback_Photo: undefined,
+  CAEC_Fallback_Photo: "รูปถ่าย",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
+  CAEC_Override_Plushie: "ตุ๊กตาผ้า",
   /** packet of plantable seeds for gardening/farming */
-  CAEC_Override_SeedPacket: undefined,
+  CAEC_Override_SeedPacket: "ซองเมล็ดพันธุ์",
   /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: undefined,
+  CAEC_Override_Smoking: "การสูบบุหรี่",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "อุปกรณ์ครัว",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
+  CAEC_Override_Wearable: "สวมใส่ได้",
 };

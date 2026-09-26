@@ -31,9 +31,19 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Ammo = "Lőszer"
    */
   CAEC_Fallback_Ammo: "Lőszer",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Állat"
+   */
   CAEC_Fallback_Animal: "Állat",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Állati testrész"
+   */
   CAEC_Fallback_AnimalPart: "Állatrész",
   /**
    * character appearance items such as makeup
@@ -75,7 +85,7 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Container = "Tároló"
-   *   ContextMenu_Container = "Tároló"
+   *   ContextMenu_Container = "Tárolók"
    */
   CAEC_Fallback_Container: "Tároló",
   /**
@@ -83,7 +93,6 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Főzés"
-   *   IGUI_perks_Cooking = "Főzés"
    */
   CAEC_Fallback_Cooking: "Főzés",
   /**
@@ -100,16 +109,29 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Entertainment = "Szórakoztatás"
    */
   CAEC_Fallback_Entertainment: "Szórakoztatás",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Tűzforrás"
+   */
   CAEC_Fallback_FireSource: "Tűzforrás",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Gyógyítás"
    *   IGUI_ItemCat_FirstAid = "Gyógyítás"
    */
   CAEC_Fallback_FirstAid: "Gyógyítás",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Horgászás"
+   *   ContextMenu_Fishing = "Horgászás"
+   *   IGUI_CraftCategory_Fishing = "Horgászat"
+   */
+  CAEC_Fallback_Fishing: "Horgászás",
   /**
    * food items
    *
@@ -124,6 +146,13 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Bútor"
    */
   CAEC_Fallback_Furniture: "Bútor",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Kertészkedés"
+   */
+  CAEC_Fallback_Gardening: "Kertészkedés",
   /**
    * household items
    *
@@ -166,7 +195,12 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Material = "Anyag"
    */
   CAEC_Fallback_Material: "Anyag",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Emlék"
+   */
   CAEC_Fallback_Memento: "Emlék",
   /**
    * paint items
@@ -175,7 +209,12 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Paint = "Festék"
    */
   CAEC_Fallback_Paint: "Festék",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Védőfelszerelés"
+   */
   CAEC_Fallback_ProtectiveGear: "Védőfelszerelés",
   /**
    * skill books
@@ -199,6 +238,13 @@ export const HU: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Eszköz",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Prémvadászat"
+   */
+  CAEC_Fallback_Trapping: "Prémvadászat",
+  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -212,26 +258,11 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_Weapon = "Fegyver"
    */
   CAEC_Fallback_Weapon: "Fegyver",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Balta"
-   */
+  /** axe weapon skill */
   CAEC_Fallback_Axe: "Balta",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Kovács"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Ütőfegyver"
-   */
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Kovácsolás",
+  /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Ütőfegyver",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Hentesmunka",
@@ -240,9 +271,8 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Ácsmesterség"
-   *   IGUI_perks_Carpentry = "Ácsmesterség"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Ácsmesterség",
   /** carving skill */
   CAEC_Fallback_Carving: "Faragás",
   /**
@@ -251,120 +281,49 @@ export const HU: ExternalTranslations = {
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Villanyszerelés"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Villanyszerelés",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Gazdálkodás"
-   *   IGUI_perks_Farming = "Gazdálkodás"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Horgászás"
-   *   IGUI_perks_Fishing = "Horgászás"
-   *   ContextMenu_Fishing = "Horgászás"
-   *   IGUI_CraftCategory_Fishing = "Horgászat"
-   */
-  CAEC_Fallback_Fishing: "Horgászás",
+  CAEC_Fallback_Farming: "Gazdálkodás",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Kovapattintás",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Gyűjtögetés"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Kertészkedés"
-   */
-  CAEC_Fallback_Gardening: "Kertészkedés",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Gyűjtögetés",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Üvegkészítés",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Hosszú szúrófegyver"
-   */
+  /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Hosszú szúrófegyver",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Eszközkezelés"
-   */
-  CAEC_Override_Maintenance: undefined,
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Karbantartás",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Kőművesség",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Szerelés"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Lakatos"
-   */
-  CAEC_Override_Metalworking: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Szerelés",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Fémmegmunkálás",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Fazekasság",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Rövid szúrófegyver"
-   */
+  /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Rövid szúrófegyver",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Rövid ütőfegyver"
-   */
+  /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Rövid ütőfegyver",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Dárda"
-   */
+  /** spear weapon skill */
   CAEC_Fallback_Spear: "Dárda",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Szabászat"
-   */
-  CAEC_Override_Tailoring: undefined,
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Szabás-varrás",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Nyomkövetés",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Prémvadászat"
-   *   IGUI_perks_Trapping = "Vadászat"
-   */
-  CAEC_Fallback_Trapping: "Prémvadászat",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Hegesztés"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Hegesztés",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Karok",
   /** lower body clothing, pants, shorts, skirts */
@@ -400,7 +359,7 @@ export const HU: ExternalTranslations = {
   /** hosiery and socks */
   CAEC_Override_Socks: "Zokni",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: "Felsőtest",
+  CAEC_Override_Top: "Felső",
   /** undergarments such as underwear, bras, boxers */
   CAEC_Override_Underwear: "Fehérnemű",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
@@ -420,7 +379,7 @@ export const HU: ExternalTranslations = {
    */
   CAEC_Fallback_Candy: "Cukorka",
   /** canned food items */
-  CAEC_Override_Canned: "Konzervált",
+  CAEC_Override_Canned: "Konzerv",
   /**
    * dairy cheese products
    *
@@ -510,7 +469,7 @@ export const HU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Stock = "Alapanyag"
    */
-  CAEC_Fallback_Stock: "Alapanyag",
+  CAEC_Override_Stock: "Alaplé",
   /**
    * sugar and sweeteners
    *
@@ -551,6 +510,10 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Szerepjáték-kézikönyv",
   /** softcover books */
   CAEC_Fallback_Softcover: "Puhakötés",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Íj",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Dobtár",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Lőfegyver",
   /** pistols and handguns */
@@ -569,7 +532,7 @@ export const HU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Sör"
    */
-  CAEC_Override_Beer: "Üvegbe öntve",
+  CAEC_Override_Beer: "Sör",
   /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Ital",
   /** mixed alcoholic drinks */
@@ -580,7 +543,7 @@ export const HU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kávé"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Kávé",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Festék",
   /** energy drinks or otherwise highly caffeinated soft drinks */
@@ -601,6 +564,7 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Tej"
+   *   ContextMenu_Milk = "Tej"
    */
   CAEC_Fallback_Milk: "Tej",
   /**
@@ -616,7 +580,7 @@ export const HU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Tea"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Tea",
   /**
    * drinking water
    *
@@ -658,7 +622,7 @@ export const HU: ExternalTranslations = {
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Dohányzás",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: "Eszköz",
+  CAEC_Override_Utensil: "Konyhai eszköz",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "Viselhető",
 };

@@ -48,7 +48,11 @@ Core.StaticCategories = {
   ["Base.CanPipe"]     = "Smoking",
 
   ["Base.BlowTorch"] = "ToolMetalworking",
-  ["Base.PropaneTank"] = "MaterialMetalworking"
+  ["Base.PropaneTank"] = "MaterialMetalworking",
+
+  -- not first aid
+  ["Base.Tissue"] = "Household",
+  ["Base.TissueBox"] = "Household"
 }
 
 ---@type table<string, boolean>
@@ -68,10 +72,10 @@ function Core.initializeCategorizers()
   end
 
   Processors.registerCategorizer("Container", 200)
-  Processors.registerCategorizer("Smoking", 400)
-  Processors.registerCategorizer("Cooking", 600)
-  Processors.registerCategorizer("Material", 800)
-  Processors.registerCategorizer("Apparel", 1000)
+  Processors.registerCategorizer("Apparel", 400)
+  Processors.registerCategorizer("Smoking", 600)
+  Processors.registerCategorizer("Cooking", 800)
+  Processors.registerCategorizer("Material", 1000)
   Processors.registerCategorizer("Gardening", 1200)
   Processors.registerCategorizer("Literature", 1400)
   Processors.registerCategorizer("Tool", 1600)
@@ -80,7 +84,8 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("Memento", 2200)
   Processors.registerCategorizer("CategorizeInstance", Core.categorizeInstance, 5000)
   Processors.registerCategorizer("BoxesAndStacks", 6000)
-  Processors.registerCategorizer("CategoryOverride", 7000)
+  Processors.registerCategorizer("GasMask", 9000)
+  Processors.registerCategorizer("CategoryOverride", 9999)
 
   Processors.registerCategorizer("FluidContainer", 200, "instance")
   Processors.registerCategorizer("Food", 1000, "instance")
@@ -96,15 +101,16 @@ function Core.isDynamicItem(instance)
   end
 
   if not globalDataInitialized then
-    Core.updateStart()
+    Core.initializeData()
   end
 
   local name = instance:getScriptItem():getFullName()
 
-  local instanceSpecific = Core.InstanceSpecific[name] == true
-  local tweaked = Core.ItemTweaks[name] ~= nil
+  if Core.InstanceSpecific[name] == true then
+    return true
+  end
 
-  return instanceSpecific or not tweaked
+  return Core.ItemTweaks[name] == nil and Core.StaticCategories[name] == nil
 end
 
 function Core.setData(source)
@@ -116,7 +122,7 @@ function Core.setData(source)
   Core.InstanceSpecific = source.InstanceSpecific or {}
   Core.ItemTweaks = source.ItemTweaks or {}
 
-  Debug.setLevel(Debug.Verbosity or Core.Settings.LogVerbosity)
+  Debug.applySettings(Core.Settings.LogVerbosity)
 
   globalDataInitialized = true
 end
@@ -132,60 +138,58 @@ function Core.initializeData()
   return true
 end
 
-function Core.updateStart()
-  if globalDataInitialized then
-    return false
-  end
-
-  Core.setData(CAEC_Global or {})
-
-  Debug.log("Initialized variables from global data.", "updateStart")
-  return true
-end
-
 function Core.setStaticCategory(itemName, category)
   Core.StaticCategories[itemName] = category
 end
 
----@param trigger string?
-function Core.updateEnd(trigger)
-  Debug.log(string.format("updateEnd (Trigger: %s)", trigger or "N/A"), "updateEnd")
-  local ToSave = {}
-
-  ToSave.Initialized = Core.Initialized
-  ToSave.InstanceSpecific = Core.InstanceSpecific
-  ToSave.ItemTweaks = Core.ItemTweaks
-
+--- Store the state in a global so it survives reloading individual files (dev hot reload).
+function Core.updateEnd()
   Utils.removeTemporaryInstances()
 
-  CAEC_Global = ToSave
+  local saved = CAEC_Global or {}
 
-  local actualErrorCount = getLuaDebuggerErrorCount()
-
-  if actualErrorCount > Core.ErrorCount then
-    local errorItems = Core.ErrorItems
-
-    Events.OnGameStart.Add(function ()
-      local itemList = ""
-
-      for itemName, item in pairs(errorItems) do
-        local mod = item:getModID()
-        itemList = itemList .. string.format(" - %s: %s\n", mod, itemName)
-      end
-
-      Core.ErrorItems = {}
-
-      local suffix = itemList == "" and "Check the logs to see which mods cause this message to show up. "
-        or string.format("The following items trigger an error when created:\n\n%s\n", itemList)
-
-      Debug.log(
-        string.format(
-          "\n--- [CAExtendedCategories]---\nIf you're seeing this error, one or more items failed to be instantiated. This is NOT an issue with my mod (Extended Categories). These errors can safely be ignored, unfortunately there is no way to suppress them.\n\n%sPlease report these issues to the mod authors.\n",
-          suffix
-        ), "ERROR", Debug.Level.Error
-      )
-    end)
+  if saved.Initialized == Core.Initialized and saved.InstanceSpecific == Core.InstanceSpecific
+    and saved.ItemTweaks == Core.ItemTweaks then
+    return
   end
+
+  CAEC_Global = {
+    Initialized = Core.Initialized,
+    InstanceSpecific = Core.InstanceSpecific,
+    ItemTweaks = Core.ItemTweaks
+  }
+end
+
+local errorReportRegistered = false
+
+--- Tell the user which items failed to instantiate during categorization. Only call this once, after categorizing all items.
+function Core.reportInstantiationErrors()
+  if errorReportRegistered or getLuaDebuggerErrorCount() <= Core.ErrorCount then
+    return
+  end
+
+  errorReportRegistered = true
+
+  Events.OnGameStart.Add(function ()
+    local itemList = ""
+
+    for itemName, item in pairs(Core.ErrorItems) do
+      local mod = item:getModID()
+      itemList = itemList .. string.format(" - %s: %s\n", mod, itemName)
+    end
+
+    Core.ErrorItems = {}
+
+    local suffix = itemList == "" and "Check the logs to see which mods cause this message to show up. "
+      or string.format("The following items trigger an error when created:\n\n%s\n", itemList)
+
+    Debug.log(
+      string.format(
+        "\n--- [CAExtendedCategories]---\nIf you're seeing this error, one or more items failed to be instantiated. This is NOT an issue with my mod (Extended Categories). These errors can safely be ignored, unfortunately there is no way to suppress them.\n\n%sPlease report these issues to the mod authors.\n",
+        suffix
+      ), "ERROR", Debug.Level.Error
+    )
+  end)
 end
 
 local allItems = nil

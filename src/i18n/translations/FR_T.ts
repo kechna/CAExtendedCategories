@@ -28,12 +28,22 @@ export const FR: ExternalTranslations = {
    * firearm ammunition
    *
    * found in-game:
-   *   IGUI_ItemCat_Ammo = "Munitions"
+   *   IGUI_ItemCat_Ammo = "Munition"
    */
   CAEC_Fallback_Ammo: "Munitions",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Animal"
+   */
   CAEC_Fallback_Animal: "Animal",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Morceau d'animal"
+   */
   CAEC_Fallback_AnimalPart: "Partie d'animal",
   /**
    * character appearance items such as makeup
@@ -83,7 +93,6 @@ export const FR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Cuisine"
-   *   IGUI_perks_Cooking = "Cuisine"
    */
   CAEC_Fallback_Cooking: "Cuisine",
   /**
@@ -97,19 +106,32 @@ export const FR: ExternalTranslations = {
    * entertainment items
    *
    * found in-game:
-   *   IGUI_ItemCat_Entertainment = "Entraînement"
+   *   IGUI_ItemCat_Entertainment = "Divertissement"
    */
-  CAEC_Fallback_Entertainment: "Entraînement",
-  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_Entertainment: "Divertissement",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Source de feu"
+   */
   CAEC_Fallback_FireSource: "Source de feu",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Premiers secours"
-   *   IGUI_ItemCat_FirstAid = "Premiers soins"
+   *   IGUI_ItemCat_FirstAid = "Premiers secours"
    */
   CAEC_Fallback_FirstAid: "Premiers soins",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pêche"
+   *   ContextMenu_Fishing = "Pêche"
+   *   IGUI_CraftCategory_Fishing = "Pêche"
+   */
+  CAEC_Fallback_Fishing: "Pêche",
   /**
    * food items
    *
@@ -125,6 +147,14 @@ export const FR: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Meuble",
   /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Jardinage"
+   *   ContextMenu_Gardening = "Jardinage"
+   */
+  CAEC_Fallback_Gardening: "Jardinage",
+  /**
    * household items
    *
    * found in-game:
@@ -135,7 +165,7 @@ export const FR: ExternalTranslations = {
    * instruments
    *
    * found in-game:
-   *   IGUI_ItemCat_Instrument = "Instrument"
+   *   IGUI_ItemCat_Instrument = "Instrument de musique"
    */
   CAEC_Fallback_Instrument: "Instrument",
   /**
@@ -156,17 +186,22 @@ export const FR: ExternalTranslations = {
    * books and printed reading material
    *
    * found in-game:
-   *   IGUI_ItemCat_Literature = "Livre"
+   *   IGUI_ItemCat_Literature = "Littérature"
    */
   CAEC_Fallback_Literature: "Livre",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Material = "Matériel"
+   *   IGUI_ItemCat_Material = "Matériaux"
    */
   CAEC_Fallback_Material: "Matériel",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Mémento"
+   */
   CAEC_Fallback_Memento: "Souvenir",
   /**
    * paint items
@@ -175,7 +210,12 @@ export const FR: ExternalTranslations = {
    *   IGUI_ItemCat_Paint = "Peinture"
    */
   CAEC_Fallback_Paint: "Peinture",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Équipement de protection"
+   */
   CAEC_Fallback_ProtectiveGear: "Équipement de protection",
   /**
    * skill books
@@ -199,10 +239,17 @@ export const FR: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Outil",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Piégeage"
+   */
+  CAEC_Fallback_Trapping: "Piégeage",
+  /**
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Maintenance véhicule"
+   *   IGUI_ItemCat_VehicleMaintenance = "Entretien véhicule"
    */
   CAEC_Fallback_VehicleMaintenance: "Maintenance véhicule",
   /**
@@ -212,26 +259,11 @@ export const FR: ExternalTranslations = {
    *   IGUI_ItemCat_Weapon = "Arme"
    */
   CAEC_Fallback_Weapon: "Arme",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Hache"
-   */
+  /** axe weapon skill */
   CAEC_Fallback_Axe: "Hache",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Forge"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Armes contondantes longues"
-   */
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Forge",
+  /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Armes contondantes longues",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Boucherie",
@@ -240,131 +272,59 @@ export const FR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Menuiserie"
-   *   IGUI_perks_Carpentry = "Menuiserie"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Menuiserie",
   /** carving skill */
   CAEC_Fallback_Carving: "Sculpture",
   /**
    * electrical skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Electrical = "Électricité"
+   *   IGUI_CraftCategory_Electrical = "Électrique"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Électrique",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Agriculture"
-   *   IGUI_perks_Farming = "Agriculture"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Pêche"
-   *   IGUI_perks_Fishing = "Pêche"
-   *   ContextMenu_Fishing = "Pêche"
-   *   IGUI_CraftCategory_Fishing = "Pêche"
-   */
-  CAEC_Fallback_Fishing: "Pêche",
+  CAEC_Fallback_Farming: "Agriculture",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Taille de silex",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Recherche"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Jardinage"
-   */
-  CAEC_Fallback_Gardening: "Jardinage",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Cueillette",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Verrerie",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Armes tranchantes longues"
-   */
+  /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Armes tranchantes longues",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Entretien"
-   */
-  CAEC_Override_Maintenance: undefined,
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Entretien",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Maçonnerie",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Mécanique"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Travail des métaux"
-   */
-  CAEC_Override_Metalworking: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mécanique",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Métallurgie",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Poterie",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Armes tranchantes courtes"
-   */
+  /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Armes tranchantes courtes",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Armes contondantes courtes"
-   */
+  /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Armes contondantes courtes",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Lance"
-   */
+  /** spear weapon skill */
   CAEC_Fallback_Spear: "Lance",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Couture"
-   */
-  CAEC_Override_Tailoring: undefined,
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Couture",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Pistage",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Piégeage"
-   *   IGUI_perks_Trapping = "Piégeage"
-   */
-  CAEC_Fallback_Trapping: "Piégeage",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Travail des métaux"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Travail des métaux",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Bras",
   /** lower body clothing, pants, shorts, skirts */
@@ -416,7 +376,7 @@ export const FR: ExternalTranslations = {
    * sweets and candies
    *
    * found in-game:
-   *   ContextMenu_FoodType_Candy = "Sucrerie"
+   *   ContextMenu_FoodType_Candy = "Bonbon"
    */
   CAEC_Fallback_Candy: "Sucrerie",
   /** canned food items */
@@ -434,24 +394,29 @@ export const FR: ExternalTranslations = {
    * fresh fruit, including berries and citrus
    *
    * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Fruit"
+   *   ContextMenu_FoodType_Fruits = "Fruits"
    */
-  CAEC_Override_Fruits: undefined,
+  CAEC_Fallback_Fruits: "Fruits",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
-   *   ContextMenu_FoodType_Herb = "Herbe"
+   *   ContextMenu_FoodType_Herb = "Herbes"
    */
   CAEC_Fallback_Herb: "Herbe",
   /**
    * spicy hot peppers
    *
    * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Piments"
+   *   ContextMenu_FoodType_HotPepper = "Piment"
    */
   CAEC_Fallback_HotPepper: "Piments",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Insecte"
+   */
   CAEC_Fallback_Insect: "Insectes",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Bétail",
@@ -466,7 +431,7 @@ export const FR: ExternalTranslations = {
    * mushrooms/fungi
    *
    * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Champignons"
+   *   ContextMenu_FoodType_Mushroom = "Champignon"
    */
   CAEC_Fallback_Mushroom: "Champignons",
   /**
@@ -475,7 +440,7 @@ export const FR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Nut = "Noix"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Fallback_Nut: "Noix",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Périssable",
   /** food for pets */
@@ -522,9 +487,9 @@ export const FR: ExternalTranslations = {
    * vegetables, including leafy greens
    *
    * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Légume"
+   *   ContextMenu_FoodType_Vegetables = "Légumes"
    */
-  CAEC_Override_Vegetables: "Légumes",
+  CAEC_Fallback_Vegetables: "Légumes",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adulte",
   /** informational brochures */
@@ -551,6 +516,10 @@ export const FR: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manuel de JDR",
   /** softcover books */
   CAEC_Fallback_Softcover: "Couverture souple",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Arc",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Chargeur tambour",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Arme à feu",
   /** pistols and handguns */
@@ -569,7 +538,7 @@ export const FR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Bière"
    */
-  CAEC_Override_Beer: "dans un verre",
+  CAEC_Override_Beer: "Bière",
   /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Boisson",
   /** mixed alcoholic drinks */
@@ -580,7 +549,7 @@ export const FR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Café"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Café",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Teinture",
   /** energy drinks or otherwise highly caffeinated soft drinks */
@@ -601,13 +570,14 @@ export const FR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Lait"
+   *   ContextMenu_Milk = "Traire"
    */
   CAEC_Fallback_Milk: "Lait",
   /**
    * carbonated soft drinks
    *
    * found in-game:
-   *   ContextMenu_FoodType_SoftDrink = "Boisson sans alcool"
+   *   ContextMenu_FoodType_SoftDrink = "Boisson sucrée"
    */
   CAEC_Override_SoftDrink: "Soda",
   /**
@@ -616,12 +586,12 @@ export const FR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Thé"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Thé",
   /**
    * drinking water
    *
    * found in-game:
-   *   ContextMenu_Water = "Arroser"
+   *   ContextMenu_Water = "Eau"
    */
   CAEC_Fallback_Water: "Eau",
   /**

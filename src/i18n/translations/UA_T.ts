@@ -23,17 +23,27 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Аксесуар"
    */
-  CAEC_Override_Accessory: undefined,
+  CAEC_Fallback_Accessory: "Аксесуар",
   /**
    * firearm ammunition
    *
    * found in-game:
    *   IGUI_ItemCat_Ammo = "Боєприпаси"
    */
-  CAEC_Override_Ammo: undefined,
-  /** animals */
+  CAEC_Fallback_Ammo: "Боєприпаси",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Тварина"
+   */
   CAEC_Fallback_Animal: "Тварини",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Частина тварини"
+   */
   CAEC_Fallback_AnimalPart: "Частини тварин",
   /**
    * character appearance items such as makeup
@@ -41,132 +51,157 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Appearance = "Зовнішність"
    */
-  CAEC_Override_Appearance: undefined,
+  CAEC_Fallback_Appearance: "Зовнішність",
   /**
    * camping supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Camping = "Кемпінг"
    */
-  CAEC_Override_Camping: undefined,
+  CAEC_Fallback_Camping: "Кемпінг",
   /**
    * maps of locations
    *
    * found in-game:
    *   IGUI_ItemCat_Cartography = "Картографія"
    */
-  CAEC_Override_Cartography: undefined,
+  CAEC_Fallback_Cartography: "Картографія",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Одяг"
    */
-  CAEC_Override_Clothing: undefined,
+  CAEC_Fallback_Clothing: "Одяг",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "Комунікація"
    */
-  CAEC_Override_Communications: undefined,
+  CAEC_Fallback_Communications: "Комунікація",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
-   *   IGUI_ItemCat_Container = "Контейнер"
-   *   ContextMenu_Container = "Контейнери"
+   *   IGUI_ItemCat_Container = "Вмістилище"
+   *   ContextMenu_Container = "Вмістилища"
    */
-  CAEC_Override_Container: undefined,
+  CAEC_Fallback_Container: "Вмістилище",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Кулінарія"
-   *   IGUI_perks_Cooking = "Кулінарія"
    */
-  CAEC_Override_Cooking: undefined,
+  CAEC_Fallback_Cooking: "Кулінарія",
   /**
    * electronic items
    *
    * found in-game:
    *   IGUI_ItemCat_Electronics = "Електроніка"
    */
-  CAEC_Override_Electronics: undefined,
+  CAEC_Fallback_Electronics: "Електроніка",
   /**
    * entertainment items
    *
    * found in-game:
-   *   IGUI_ItemCat_Entertainment = "Розвага"
+   *   IGUI_ItemCat_Entertainment = "Розваги"
    */
-  CAEC_Override_Entertainment: undefined,
-  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_Entertainment: "Розваги",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Джерело вогню"
+   */
   CAEC_Fallback_FireSource: "Джерело вогню",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Перша допомога"
    *   IGUI_ItemCat_FirstAid = "Перша допомога"
    */
-  CAEC_Override_FirstAid: undefined,
+  CAEC_Fallback_FirstAid: "Перша допомога",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Риболовля"
+   *   ContextMenu_Fishing = "Риболовля"
+   *   IGUI_CraftCategory_Fishing = "Риболовля"
+   */
+  CAEC_Fallback_Fishing: "Риболовля",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "Їжа"
    */
-  CAEC_Override_Food: undefined,
+  CAEC_Fallback_Food: "Їжа",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "Меблі"
    */
-  CAEC_Override_Furniture: undefined,
+  CAEC_Fallback_Furniture: "Меблі",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Садівництво"
+   *   ContextMenu_Gardening = "Садівництво"
+   */
+  CAEC_Fallback_Gardening: "Садівництво",
   /**
    * household items
    *
    * found in-game:
    *   IGUI_ItemCat_Household = "Господарство"
    */
-  CAEC_Override_Household: undefined,
+  CAEC_Fallback_Household: "Господарство",
   /**
    * instruments
    *
    * found in-game:
-   *   IGUI_ItemCat_Instrument = "Інструмент"
+   *   IGUI_ItemCat_Instrument = "Музичний інструмент"
    */
-  CAEC_Override_Instrument: undefined,
+  CAEC_Fallback_Instrument: "Музичний інструмент",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "Сміття"
+   *   IGUI_ItemCat_Junk = "Мотлох"
    */
-  CAEC_Override_Junk: undefined,
+  CAEC_Fallback_Junk: "Мотлох",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
    *   IGUI_ItemCat_LightSource = "Джерело світла"
    */
-  CAEC_Override_LightSource: undefined,
+  CAEC_Fallback_LightSource: "Джерело світла",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Література"
    */
-  CAEC_Override_Literature: undefined,
+  CAEC_Fallback_Literature: "Література",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "Матеріал"
    */
-  CAEC_Override_Material: undefined,
-  /** keepsakes and souvenirs */
+  CAEC_Fallback_Material: "Матеріал",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Пам'ятка"
+   */
   CAEC_Fallback_Memento: "Сувенір",
   /**
    * paint items
@@ -174,65 +209,62 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Paint = "Фарба"
    */
-  CAEC_Override_Paint: undefined,
-  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_Paint: "Фарба",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Захисне спорядження"
+   */
   CAEC_Fallback_ProtectiveGear: "Захисне спорядження",
   /**
    * skill books
    *
    * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Книга навичок"
+   *   IGUI_ItemCat_SkillBook = "Підручник"
    */
-  CAEC_Override_SkillBook: undefined,
+  CAEC_Fallback_SkillBook: "Підручник",
   /**
    * sports items
    *
    * found in-game:
    *   IGUI_ItemCat_Sports = "Спорт"
    */
-  CAEC_Override_Sports: undefined,
+  CAEC_Fallback_Sports: "Спорт",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
-   *   IGUI_ItemCat_Tool = "Інструмент"
+   *   IGUI_ItemCat_Tool = "Знаряддя"
    */
-  CAEC_Override_Tool: undefined,
+  CAEC_Fallback_Tool: "Знаряддя",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Пастки"
+   */
+  CAEC_Fallback_Trapping: "Пастки",
   /**
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Автосервіс"
+   *   IGUI_ItemCat_VehicleMaintenance = "Автоприладдя"
    */
-  CAEC_Override_VehicleMaintenance: undefined,
+  CAEC_Fallback_VehicleMaintenance: "Автоприладдя",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "Зброя"
    */
-  CAEC_Override_Weapon: undefined,
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Сокири"
-   */
-  CAEC_Override_Axe: undefined,
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Коваль"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Довг. дробяще"
-   */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Fallback_Weapon: "Зброя",
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: "Сокири",
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Ковальство",
+  /** long blunt weapon skill */
+  CAEC_Fallback_Blunt: "Довге дробильне",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Забій",
   /**
@@ -240,9 +272,8 @@ export const UA: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Будівництво"
-   *   IGUI_perks_Carpentry = "Будівництво"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Будівництво",
   /** carving skill */
   CAEC_Fallback_Carving: "Різьблення",
   /**
@@ -251,120 +282,49 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Електроніка"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Електроніка",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Фермерство"
-   *   IGUI_perks_Farming = "Фермерство"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Риболовля"
-   *   IGUI_perks_Fishing = "Рибальство"
-   *   ContextMenu_Fishing = "Рибальство"
-   *   IGUI_CraftCategory_Fishing = "Рибальство"
-   */
-  CAEC_Override_Fishing: undefined,
+  CAEC_Fallback_Farming: "Фермерство",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Обробка кременю",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Збиральництво"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Садівництво"
-   */
-  CAEC_Override_Gardening: undefined,
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Збиральництво",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Скловаріння",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Довг. ріжуче"
-   */
-  CAEC_Override_LongBlade: undefined,
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Міцність"
-   */
-  CAEC_Override_Maintenance: undefined,
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: "Довге клинкове",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Обслуговування",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Мурування",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Автомеханіка"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Газозварка"
-   */
-  CAEC_Override_Metalworking: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Механіка",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Металообробка",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Гончарство",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Коротк. ріжуче"
-   */
-  CAEC_Override_SmallBlade: undefined,
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Коротк. дробяще"
-   */
-  CAEC_Override_SmallBlunt: undefined,
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Списи"
-   */
-  CAEC_Override_Spear: undefined,
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Шиття"
-   */
-  CAEC_Override_Tailoring: undefined,
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: "Коротке клинкове",
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: "Коротке дробильне",
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: "Списи",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Кравецтво",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Вистежування",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Пастка"
-   *   IGUI_perks_Trapping = "Звіроловство"
-   */
-  CAEC_Override_Trapping: undefined,
   /**
    * welding skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Welding = "Газозварка"
+   *   IGUI_CraftCategory_Welding = "Зварювання"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Зварювання",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Передпліччя",
   /** lower body clothing, pants, shorts, skirts */
@@ -383,7 +343,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Head = "Голова"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Fallback_Head: "Голова",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
   CAEC_Override_Jewelry: "Прикраси",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
@@ -394,7 +354,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Neck = "Шия"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Fallback_Neck: "Шия",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Верхній одяг",
   /** hosiery and socks */
@@ -411,14 +371,14 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Хліб"
    */
-  CAEC_Override_Bread: undefined,
+  CAEC_Fallback_Bread: "Хліб",
   /**
    * sweets and candies
    *
    * found in-game:
-   *   ContextMenu_FoodType_Candy = "Цукерки"
+   *   ContextMenu_FoodType_Candy = "Цукерка"
    */
-  CAEC_Override_Candy: undefined,
+  CAEC_Fallback_Candy: "Цукерка",
   /** canned food items */
   CAEC_Override_Canned: "Консерви",
   /**
@@ -427,7 +387,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Сир"
    */
-  CAEC_Override_Cheese: undefined,
+  CAEC_Fallback_Cheese: "Сир",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Готові страви",
   /**
@@ -436,22 +396,27 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "Фрукти"
    */
-  CAEC_Override_Fruits: undefined,
+  CAEC_Fallback_Fruits: "Фрукти",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
-   *   ContextMenu_FoodType_Herb = "Трава"
+   *   ContextMenu_FoodType_Herb = "Трави"
    */
-  CAEC_Override_Herb: undefined,
+  CAEC_Fallback_Herb: "Трави",
   /**
    * spicy hot peppers
    *
    * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Гострий перець"
+   *   ContextMenu_FoodType_HotPepper = "Гострі перці"
    */
-  CAEC_Override_HotPepper: undefined,
-  /** edible insects */
+  CAEC_Fallback_HotPepper: "Гострі перці",
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Комаха"
+   */
   CAEC_Fallback_Insect: "Комахи",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Корм для худоби",
@@ -461,25 +426,25 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Meat = "М'ясо"
    */
-  CAEC_Override_Meat: undefined,
+  CAEC_Fallback_Meat: "М'ясо",
   /**
    * mushrooms/fungi
    *
    * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Гриби"
+   *   ContextMenu_FoodType_Mushroom = "Гриб"
    */
-  CAEC_Override_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "Гриб",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
    *   ContextMenu_FoodType_Nut = "Горіхи"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Fallback_Nut: "Горіхи",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Швидкопсувне",
   /** food for pets */
-  CAEC_Fallback_PetFood: "Улюбленці",
+  CAEC_Fallback_PetFood: "Домашні тварини",
   /** single serving portion of food */
   CAEC_Override_Portion: "Порція",
   /** preserved food, such as jarred food */
@@ -490,14 +455,14 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Seafood = "Морепродукти"
    */
-  CAEC_Override_Seafood: undefined,
+  CAEC_Fallback_Seafood: "Морепродукти",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "Насіння"
    */
-  CAEC_Override_Seed: undefined,
+  CAEC_Fallback_Seed: "Насіння",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Перекуси",
   /** spices and seasonings, salt, pepper, etc. */
@@ -508,23 +473,23 @@ export const UA: ExternalTranslations = {
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
-   *   ContextMenu_FoodType_Stock = "Магазинне"
+   *   ContextMenu_FoodType_Stock = "Бульйон"
    */
-  CAEC_Override_Stock: "Бульйон",
+  CAEC_Fallback_Stock: "Бульйон",
   /**
    * sugar and sweeteners
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Цукор"
    */
-  CAEC_Override_Sugar: undefined,
+  CAEC_Fallback_Sugar: "Цукор",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "Овочі"
    */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Fallback_Vegetables: "Овочі",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Для дорослих",
   /** informational brochures */
@@ -540,9 +505,9 @@ export const UA: ExternalTranslations = {
   /** hardcover books */
   CAEC_Fallback_Hardcover: "Тверда обкладинка",
   /** literature magazines */
-  CAEC_Fallback_Magazine: undefined,
+  CAEC_Fallback_Magazine: "Журнал",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "Газета",
   /** picture books */
   CAEC_Fallback_PictureBook: "Книжка з малюнками",
   /** recipes, readable items that teach you something */
@@ -551,6 +516,10 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Посібник RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "М’яка обкладинка",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Лук",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Барабанний магазин",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Вогнепальна зброя",
   /** pistols and handguns */
@@ -569,7 +538,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Пиво"
    */
-  CAEC_Override_Beer: undefined,
+  CAEC_Fallback_Beer: "Пиво",
   /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Напої",
   /** mixed alcoholic drinks */
@@ -580,7 +549,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Кава"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Кава",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Барвник",
   /** energy drinks or otherwise highly caffeinated soft drinks */
@@ -593,7 +562,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Juice = "Сік"
    */
-  CAEC_Override_Juice: undefined,
+  CAEC_Fallback_Juice: "Сік",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Рідина",
   /**
@@ -601,13 +570,14 @@ export const UA: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Молоко"
+   *   ContextMenu_Milk = "Доїти"
    */
-  CAEC_Override_Milk: undefined,
+  CAEC_Fallback_Milk: "Молоко",
   /**
    * carbonated soft drinks
    *
    * found in-game:
-   *   ContextMenu_FoodType_SoftDrink = "Напої"
+   *   ContextMenu_FoodType_SoftDrink = "Безалкогольний напій"
    */
   CAEC_Override_SoftDrink: "Безалкогольні напої",
   /**
@@ -616,7 +586,7 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Чай"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Чай",
   /**
    * drinking water
    *
@@ -630,13 +600,13 @@ export const UA: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Вино"
    */
-  CAEC_Override_Wine: undefined,
+  CAEC_Fallback_Wine: "Вино",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Коробка",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
   CAEC_Override_Bundled: "Пучок",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: "Картон",
+  CAEC_Override_Carton: "Картонна коробка",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Компостоване",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -646,7 +616,7 @@ export const UA: ExternalTranslations = {
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Столові прибори",
   /** ring or bundle of keys */
-  CAEC_Override_KeyRing: undefined,
+  CAEC_Override_KeyRing: "Зв'язка ключів",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Сковорода",
   /** photos */

@@ -31,9 +31,19 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_ItemCat_Ammo = "Munição"
    */
   CAEC_Fallback_Ammo: "Munição",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Animal"
+   */
   CAEC_Fallback_Animal: "Animal",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Parte Animal"
+   */
   CAEC_Fallback_AnimalPart: "Parte de Animal",
   /**
    * character appearance items such as makeup
@@ -67,15 +77,15 @@ export const PTBR: ExternalTranslations = {
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
-   *   IGUI_ItemCat_Communications = "Comunicação"
+   *   IGUI_ItemCat_Communications = "Comunicações"
    */
   CAEC_Fallback_Communications: "Comunicação",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
-   *   IGUI_ItemCat_Container = "Container"
-   *   ContextMenu_Container = "Recipiente"
+   *   IGUI_ItemCat_Container = "Recipiente"
+   *   ContextMenu_Container = "Recipientes"
    */
   CAEC_Fallback_Container: "Container",
   /**
@@ -83,7 +93,6 @@ export const PTBR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Culinária"
-   *   IGUI_perks_Cooking = "Culinária"
    */
   CAEC_Fallback_Cooking: "Culinária",
   /**
@@ -100,16 +109,29 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_ItemCat_Entertainment = "Entretenimento"
    */
   CAEC_Fallback_Entertainment: "Entretenimento",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Fonte de Fogo"
+   */
   CAEC_Fallback_FireSource: "Fonte de Fogo",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Primeiros Socorros"
    *   IGUI_ItemCat_FirstAid = "Primeiros Socorros"
    */
   CAEC_Fallback_FirstAid: "Primeiros Socorros",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pesca"
+   *   ContextMenu_Fishing = "Pescar"
+   *   IGUI_CraftCategory_Fishing = "Pesca"
+   */
+  CAEC_Fallback_Fishing: "Pescaria",
   /**
    * food items
    *
@@ -121,9 +143,17 @@ export const PTBR: ExternalTranslations = {
    * furniture items
    *
    * found in-game:
-   *   IGUI_ItemCat_Furniture = "Mobília"
+   *   IGUI_ItemCat_Furniture = "Móveis"
    */
   CAEC_Fallback_Furniture: "Mobília",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Jardinagem"
+   *   ContextMenu_Gardening = "Jardinagem"
+   */
+  CAEC_Fallback_Gardening: "Agricultura",
   /**
    * household items
    *
@@ -142,14 +172,14 @@ export const PTBR: ExternalTranslations = {
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "Miscelânea"
+   *   IGUI_ItemCat_Junk = "Tralha"
    */
   CAEC_Fallback_Junk: "Miscelânea",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
-   *   IGUI_ItemCat_LightSource = "Iluminação"
+   *   IGUI_ItemCat_LightSource = "Fonte de Luz"
    */
   CAEC_Fallback_LightSource: "Iluminação",
   /**
@@ -166,16 +196,26 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_ItemCat_Material = "Material"
    */
   CAEC_Fallback_Material: "Material",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Lembrança"
+   */
   CAEC_Fallback_Memento: "Lembrança",
   /**
    * paint items
    *
    * found in-game:
-   *   IGUI_ItemCat_Paint = "Pintura"
+   *   IGUI_ItemCat_Paint = "Tinta"
    */
   CAEC_Fallback_Paint: "Pintura",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Equipamento de Proteção"
+   */
   CAEC_Fallback_ProtectiveGear: "Equipamento de Proteção",
   /**
    * skill books
@@ -188,7 +228,7 @@ export const PTBR: ExternalTranslations = {
    * sports items
    *
    * found in-game:
-   *   IGUI_ItemCat_Sports = "Esporte"
+   *   IGUI_ItemCat_Sports = "Esportes"
    */
   CAEC_Fallback_Sports: "Esporte",
   /**
@@ -199,10 +239,17 @@ export const PTBR: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Ferramenta",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Armadilhas"
+   */
+  CAEC_Fallback_Trapping: "Caça",
+  /**
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Mecânica"
+   *   IGUI_ItemCat_VehicleMaintenance = "Manutenção de Veículos"
    */
   CAEC_Fallback_VehicleMaintenance: "Mecânica",
   /**
@@ -212,159 +259,72 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_ItemCat_Weapon = "Arma"
    */
   CAEC_Fallback_Weapon: "Arma",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Machados"
-   */
+  /** axe weapon skill */
   CAEC_Fallback_Axe: "Machados",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Forja"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Contundentes Longos"
-   */
+  /** blacksmithing skill (machine translated) */
+  CAEC_Fallback_Blacksmith: "Ferraria",
+  /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contundentes Longos",
-  /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  /** butchering skill (machine translated) */
+  CAEC_Fallback_Butchering: "Abate",
   /**
    * carpentry skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Carpintaria"
-   *   IGUI_perks_Carpentry = "Carpintaria"
    */
-  CAEC_Override_Carpentry: undefined,
-  /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carpentry: "Carpintaria",
+  /** carving skill (machine translated) */
+  CAEC_Fallback_Carving: "Entalhe",
   /**
    * electrical skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Elétrica"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elétrica",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Agricultura"
-   *   IGUI_perks_Farming = "Agricultura"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Pescaria"
-   *   IGUI_perks_Fishing = "Pescaria"
-   *   ContextMenu_Fishing = "Pescar"
-   *   IGUI_CraftCategory_Fishing = "Pescaria"
-   */
-  CAEC_Fallback_Fishing: "Pescaria",
-  /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Coleta"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Agricultura"
-   */
-  CAEC_Fallback_Gardening: "Agricultura",
-  /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Lâminas Longas"
-   */
+  CAEC_Fallback_Farming: "Agricultura",
+  /** knapping skill (machine translated) */
+  CAEC_Fallback_FlintKnapping: "Lascamento",
+  /** foraging skill (machine translated) */
+  CAEC_Fallback_Foraging: "Coleta",
+  /** glassmaking skill (machine translated) */
+  CAEC_Fallback_Glassmaking: "Vidraria",
+  /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lâminas Longas",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Manutenção"
-   */
-  CAEC_Override_Maintenance: undefined,
-  /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Mecânica"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Metalurgia"
-   */
-  CAEC_Override_Metalworking: undefined,
-  /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Lâminas Curtas"
-   */
+  /** maintenance skill for maintaining and repairing tools and weapons (machine translated) */
+  CAEC_Fallback_Maintenance: "Manutenção",
+  /** masonry skill (machine translated) */
+  CAEC_Fallback_Masonry: "Alvenaria",
+  /** mechanics skill, vehicle maintenance (machine translated) */
+  CAEC_Fallback_Mechanics: "Mecânica",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing (machine translated) */
+  CAEC_Fallback_Metalworking: "Metalurgia",
+  /** pottery skill (machine translated) */
+  CAEC_Fallback_Pottery: "Cerâmica",
+  /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Lâminas Curtas",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Contundentes Curtos"
-   */
+  /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Contundentes Curtos",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Lanças"
-   */
+  /** spear weapon skill */
   CAEC_Fallback_Spear: "Lanças",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Costura"
-   */
-  CAEC_Override_Tailoring: undefined,
-  /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Caça"
-   *   IGUI_perks_Trapping = "Caça"
-   */
-  CAEC_Fallback_Trapping: "Caça",
+  /** tailoring skill (machine translated) */
+  CAEC_Fallback_Tailoring: "Costura",
+  /** tracking skill (machine translated) */
+  CAEC_Fallback_Tracking: "Rastreamento",
   /**
    * welding skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Welding = "Metalurgia"
+   *   IGUI_CraftCategory_Welding = "Soldagem"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Soldagem",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Braços",
   /** lower body clothing, pants, shorts, skirts */
@@ -434,24 +394,29 @@ export const PTBR: ExternalTranslations = {
    * fresh fruit, including berries and citrus
    *
    * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Frutas"
+   *   ContextMenu_FoodType_Fruits = "Fruta"
    */
-  CAEC_Override_Fruits: "Fruta",
+  CAEC_Fallback_Fruits: "Fruta",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
-   *   ContextMenu_FoodType_Herb = "Erva"
+   *   ContextMenu_FoodType_Herb = "Ervas"
    */
   CAEC_Fallback_Herb: "Erva",
   /**
    * spicy hot peppers
    *
    * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Pimenta"
+   *   ContextMenu_FoodType_HotPepper = "Pimentas"
    */
   CAEC_Fallback_HotPepper: "Pimenta",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Inseto"
+   */
   CAEC_Fallback_Insect: "Insetos",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Gado",
@@ -522,7 +487,7 @@ export const PTBR: ExternalTranslations = {
    * vegetables, including leafy greens
    *
    * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Legumes"
+   *   ContextMenu_FoodType_Vegetables = "Legume"
    */
   CAEC_Override_Vegetables: "Vegetais",
   /** adult-oriented content (hottiez magazines) */
@@ -551,6 +516,10 @@ export const PTBR: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manual de RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Brochura",
+  /** bows and other ranged weapons that use string tension to launch projectiles (machine translated) */
+  CAEC_Override_Bow: "Arco",
+  /** firearm drums (machine translated) */
+  CAEC_Fallback_Drum: "Tambor",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Arma de fogo",
   /** pistols and handguns */
@@ -580,7 +549,7 @@ export const PTBR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Café"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Café",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Corante",
   /** energy drinks or otherwise highly caffeinated soft drinks */
@@ -601,6 +570,7 @@ export const PTBR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Leite"
+   *   ContextMenu_Milk = "Ordenhar"
    */
   CAEC_Fallback_Milk: "Leite",
   /**
@@ -616,7 +586,7 @@ export const PTBR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Chá"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Chá",
   /**
    * drinking water
    *
@@ -637,24 +607,24 @@ export const PTBR: ExternalTranslations = {
   CAEC_Override_Bundled: "Em Feixe",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Cartucho",
-  /** compostable items such as animal dung, to be put in a composter */
-  CAEC_Override_Compostable: undefined,
+  /** compostable items such as animal dung, to be put in a composter (machine translated) */
+  CAEC_Override_Compostable: "Compostável",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Caseira",
-  /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  /** items such as cups, mugs, glasses (machine translated) */
+  CAEC_Override_Cup: "Copo",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Talheres",
   /** ring or bundle of keys */
   CAEC_Fallback_KeyRing: "Chaveiro",
-  /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  /** items such as pans/pots to cook in (machine translated) */
+  CAEC_Override_Pan: "Panela",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
-  /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
-  /** packet of plantable seeds for gardening/farming */
-  CAEC_Override_SeedPacket: undefined,
+  /** for plush toys such as spiffo, boris the badger and teddy bears (machine translated) */
+  CAEC_Override_Plushie: "Pelúcia",
+  /** packet of plantable seeds for gardening/farming (machine translated) */
+  CAEC_Override_SeedPacket: "Pacote de sementes",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

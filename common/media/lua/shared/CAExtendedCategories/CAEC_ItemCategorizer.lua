@@ -10,7 +10,7 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 ---@field public validate fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): boolean
 ---@field public getVerbosity fun(self: CAEC_ItemCategorizer): number
 ---@field public isDebug fun(self: CAEC_ItemCategorizer): boolean
----@field public log fun(self: CAEC_ItemCategorizer, string: string, level?: number)
+---@field public log fun(self: CAEC_ItemCategorizer, message: string, level?: number)
 ---@field public verbosity number
 local CAEC_ItemCategorizer = ISBaseObject:derive("CAEC_ItemCategorizer")
 
@@ -22,12 +22,13 @@ function CAEC_ItemCategorizer:getVerbosity()
   return self.verbosity or Debug.Level.Error
 end
 
-function CAEC_ItemCategorizer:log(string, level)
-  local verbosity = level or self:getVerbosity()
+function CAEC_ItemCategorizer:log(message, level)
+  level = level or Debug.Level.Debug
 
-  if verbosity < self:getVerbosity() then return end
+  -- the categorizer verbosity only gates debug/info output, warnings and errors are filtered by the global level only
+  if level < Debug.Level.Warning and level < self:getVerbosity() then return end
 
-  Debug.log(string, self.Type, verbosity)
+  Debug.log(message, self.Type, level)
 end
 
 function CAEC_ItemCategorizer:categorize(item, instance)
@@ -53,7 +54,7 @@ function CAEC_ItemCategorizer:execute(item, instance)
     end
 
     local instanceSpecificText = instanceSpecific and " (instance specific)" or ""
-    local name = item:getFullName():gsub("Base.", "")
+    local name = item:getFullName():gsub("^Base%.", "")
 
     self:log(string.format("%-30s => %-20s %s", name, category or "?", instanceSpecificText), verbosity)
   end

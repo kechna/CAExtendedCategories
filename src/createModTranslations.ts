@@ -105,7 +105,7 @@ export const createModTranslations = (async (
 
   Object.entries(ALL_TRANSLATIONS).forEach(([lang, translations]) => {
     Object.entries(translations).forEach(([key, value]) => {
-      if (key.startsWith("CAEC_")) return;
+      if (key.startsWith("CAEC_") || !value) return;
       context.logger.debug(`[${lang}] Adding extra translation key: ${key}`);
       save(lang as Language, key, value, false);
     });

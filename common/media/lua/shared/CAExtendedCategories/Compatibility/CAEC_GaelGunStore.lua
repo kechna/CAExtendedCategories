@@ -4,7 +4,7 @@ local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
 
 if not Utils.modIsActive("GaelGunStore_B42") then return end
 
-CAEC.registerInitHook("Mod:Guns93", function ()
+CAEC.registerInitHook("Mod:GaelGunStore", function ()
   Ammo.registerAmmoGroup("archerynexus:woodshaft_arrow", Ammo.AmmoGroup.BOW)
   Ammo.registerAmmoGroup("ggs:303_bullets", Ammo.AmmoGroup.RIFLE)
   Ammo.registerAmmoGroup("ggs:303_bullets_ap", Ammo.AmmoGroup.RIFLE)

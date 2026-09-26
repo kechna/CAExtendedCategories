@@ -93,7 +93,6 @@ export const EN: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Cooking"
-   *   IGUI_perks_Cooking = "Cooking"
    */
   CAEC_Fallback_Cooking: "Cooking",
   /**
@@ -121,10 +120,18 @@ export const EN: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "First Aid"
    *   IGUI_ItemCat_FirstAid = "First Aid"
    */
   CAEC_Fallback_FirstAid: "First Aid",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Fishing"
+   *   ContextMenu_Fishing = "Fishing"
+   *   IGUI_CraftCategory_Fishing = "Fishing"
+   */
+  CAEC_Fallback_Fishing: "Fishing",
   /**
    * food items
    *
@@ -139,6 +146,14 @@ export const EN: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Furniture"
    */
   CAEC_Fallback_Furniture: "Furniture",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Gardening"
+   *   ContextMenu_Gardening = "Gardening"
+   */
+  CAEC_Fallback_Gardening: "Gardening",
   /**
    * household items
    *
@@ -224,6 +239,13 @@ export const EN: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Tool",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Trapping"
+   */
+  CAEC_Fallback_Trapping: "Trapping",
+  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -237,190 +259,72 @@ export const EN: ExternalTranslations = {
    *   IGUI_ItemCat_Weapon = "Weapon"
    */
   CAEC_Fallback_Weapon: "Weapon",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Axe"
-   */
+  /** axe weapon skill */
   CAEC_Fallback_Axe: "Axe",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Blacksmithing"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Long Blunt"
-   */
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Blacksmithing",
+  /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Long Blunt",
-  /**
-   * butchering skill
-   *
-   * found in-game:
-   *   IGUI_perks_Butchering = "Butchering"
-   */
-  CAEC_Override_Butchering: undefined,
+  /** butchering skill */
+  CAEC_Fallback_Butchering: "Butchering",
   /**
    * carpentry skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Carpentry"
-   *   IGUI_perks_Carpentry = "Carpentry"
    */
-  CAEC_Override_Carpentry: undefined,
-  /**
-   * carving skill
-   *
-   * found in-game:
-   *   IGUI_perks_Carving = "Carving"
-   */
-  CAEC_Override_Carving: undefined,
+  CAEC_Fallback_Carpentry: "Carpentry",
+  /** carving skill */
+  CAEC_Fallback_Carving: "Carving",
   /**
    * electrical skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Electrical"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Electrical",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Agriculture"
-   *   IGUI_perks_Farming = "Agriculture"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Fishing"
-   *   IGUI_perks_Fishing = "Fishing"
-   *   ContextMenu_Fishing = "Fishing"
-   *   IGUI_CraftCategory_Fishing = "Fishing"
-   */
-  CAEC_Fallback_Fishing: "Fishing",
-  /**
-   * knapping skill
-   *
-   * found in-game:
-   *   IGUI_perks_FlintKnapping = "Knapping"
-   */
-  CAEC_Override_FlintKnapping: undefined,
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Foraging"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Gardening"
-   *   ContextMenu_Gardening = "Gardening"
-   */
-  CAEC_Fallback_Gardening: "Gardening",
-  /**
-   * glassmaking skill
-   *
-   * found in-game:
-   *   IGUI_perks_Glassmaking = "Glassmaking"
-   */
-  CAEC_Override_Glassmaking: undefined,
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Long Blade"
-   */
+  CAEC_Fallback_Farming: "Agriculture",
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: "Knapping",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Foraging",
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: "Glassmaking",
+  /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Long Blade",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Maintenance"
-   */
-  CAEC_Override_Maintenance: undefined,
-  /**
-   * masonry skill
-   *
-   * found in-game:
-   *   IGUI_perks_Masonry = "Masonry"
-   */
-  CAEC_Override_Masonry: undefined,
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Mechanics"
-   */
-  CAEC_Override_Mechanics: undefined,
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Maintenance",
+  /** masonry skill */
+  CAEC_Fallback_Masonry: "Masonry",
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mechanics",
   /** metalworking skill (for items that are relevant in both welding and blacksmithing */
   CAEC_Fallback_Metalworking: "Metalworking",
-  /**
-   * pottery skill
-   *
-   * found in-game:
-   *   IGUI_perks_Pottery = "Pottery"
-   */
-  CAEC_Override_Pottery: undefined,
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Short Blade"
-   */
+  /** pottery skill */
+  CAEC_Fallback_Pottery: "Pottery",
+  /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Short Blade",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Short Blunt"
-   */
+  /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Short Blunt",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Spear"
-   */
+  /** spear weapon skill */
   CAEC_Fallback_Spear: "Spear",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Tailoring"
-   */
-  CAEC_Override_Tailoring: undefined,
-  /**
-   * tracking skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tracking = "Tracking"
-   */
-  CAEC_Override_Tracking: undefined,
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Trapping"
-   *   IGUI_perks_Trapping = "Trapping"
-   */
-  CAEC_Fallback_Trapping: "Trapping",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Tailoring",
+  /** tracking skill */
+  CAEC_Fallback_Tracking: "Tracking",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Welding"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Welding",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Arms",
   /** lower body clothing, pants, shorts, skirts */
@@ -612,6 +516,10 @@ export const EN: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "RPG Manual",
   /** softcover books */
   CAEC_Fallback_Softcover: "Softcover",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Bow",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Drum",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Firearm",
   /** pistols and handguns */

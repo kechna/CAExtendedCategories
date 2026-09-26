@@ -8,25 +8,25 @@ function Memento:validate(item, _instance)
   return item:getLootType() == "Memento" or item:hasTag(ItemTag.IS_MEMENTO)
 end
 
-local MementoCategories = table.newarray({
-  "Badger",
-  "Bear",
-  "Beaver",
-  "Bug",
-  "Bunny",
-  "Dog",
-  "Duck",
-  "Eye",
-  "Fox",
-  "Frog",
-  "Goblin",
-  "Hedgehog",
-  "Mole",
-  "Raccoon",
-  "Spider",
-  "Squirrel",
-  "Teddy Bear",
-})
+local MementoCategories = {
+  ["Badger"] = true,
+  ["Bear"] = true,
+  ["Beaver"] = true,
+  ["Bug"] = true,
+  ["Bunny"] = true,
+  ["Dog"] = true,
+  ["Duck"] = true,
+  ["Eye"] = true,
+  ["Fox"] = true,
+  ["Frog"] = true,
+  ["Goblin"] = true,
+  ["Hedgehog"] = true,
+  ["Mole"] = true,
+  ["Raccoon"] = true,
+  ["Spider"] = true,
+  ["Squirrel"] = true,
+  ["Teddy Bear"] = true,
+}
 
 function Memento:categorize(item, instance)
   if item:isItemType(ItemType.CONTAINER) then
@@ -39,15 +39,11 @@ function Memento:categorize(item, instance)
   ---@type string|nil
   local existingCategory = item:getDisplayCategory()
 
-  if existingCategory then
-    for _, cat in ipairs(MementoCategories) do
-      if existingCategory == cat then
-        if item:hasTag(ItemTag.IS_FIRE_TINDER) then
-          category = "MementoPlushie"
-        else
-          category = "Memento"
-        end
-      end
+  if existingCategory and MementoCategories[existingCategory] then
+    if item:hasTag(ItemTag.IS_FIRE_TINDER) then
+      category = "MementoPlushie"
+    else
+      category = "Memento"
     end
   end
 

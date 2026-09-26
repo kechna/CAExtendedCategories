@@ -17,361 +17,618 @@ import type { ExternalTranslations } from "../types";
  * Which translations from the game are searched for differs for each individual key.
  */
 export const PT: ExternalTranslations = {
-  /** accessories such as watches, necklaces, belts, gloves */
-  CAEC_Fallback_Accessory: undefined,
-  /** firearm ammunition */
-  CAEC_Fallback_Ammo: undefined,
-  /** animals */
-  CAEC_Fallback_Animal: undefined,
-  /** animal parts, bones, sinew, hides */
-  CAEC_Fallback_AnimalPart: undefined,
-  /** character appearance items such as makeup */
-  CAEC_Fallback_Appearance: undefined,
-  /** camping supplies */
-  CAEC_Fallback_Camping: undefined,
-  /** maps of locations */
-  CAEC_Fallback_Cartography: undefined,
+  /**
+   * accessories such as watches, necklaces, belts, gloves
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Accessory = "Acessório"
+   */
+  CAEC_Fallback_Accessory: "Acessório",
+  /**
+   * firearm ammunition
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Ammo = "Munição"
+   */
+  CAEC_Fallback_Ammo: "Munição",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Animal"
+   */
+  CAEC_Fallback_Animal: "Animal",
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Parte de animal"
+   */
+  CAEC_Fallback_AnimalPart: "Parte de animal",
+  /**
+   * character appearance items such as makeup
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Appearance = "Aparência"
+   */
+  CAEC_Fallback_Appearance: "Aparência",
+  /**
+   * camping supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Camping = "Acampar"
+   */
+  CAEC_Fallback_Camping: "Acampar",
+  /**
+   * maps of locations
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cartography = "Cartografia"
+   */
+  CAEC_Fallback_Cartography: "Cartografia",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Roupa"
    */
-  CAEC_Override_Clothing: undefined,
-  /** communication devices such as walkie talkies, radios */
-  CAEC_Fallback_Communications: undefined,
+  CAEC_Fallback_Clothing: "Roupa",
+  /**
+   * communication devices such as walkie talkies, radios
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Communications = "Comunicação"
+   */
+  CAEC_Fallback_Communications: "Comunicação",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
    *   IGUI_ItemCat_Container = "Contentor"
+   *   ContextMenu_Container = "Recipientes"
    */
-  CAEC_Override_Container: undefined,
+  CAEC_Fallback_Container: "Contentor",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
-   *   IGUI_perks_Cooking = "Culinária"
+   *   IGUI_ItemCat_Cooking = "Cozinhar"
    */
-  CAEC_Override_Cooking: undefined,
-  /** electronic items */
-  CAEC_Fallback_Electronics: undefined,
-  /** entertainment items */
-  CAEC_Fallback_Entertainment: undefined,
-  /** sources of fire such as matches and lighters */
-  CAEC_Fallback_FireSource: undefined,
-  /** first aid and medical supplies, bandages, painkillers, antiseptics */
-  CAEC_Fallback_FirstAid: undefined,
+  CAEC_Fallback_Cooking: "Cozinhar",
+  /**
+   * electronic items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Electronics = "Eletrónica"
+   */
+  CAEC_Fallback_Electronics: "Eletrónica",
+  /**
+   * entertainment items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Entertainment = "Entretenimento"
+   */
+  CAEC_Fallback_Entertainment: "Entretenimento",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Fonte de Fogo"
+   */
+  CAEC_Fallback_FireSource: "Fonte de Fogo",
+  /**
+   * first aid and medical supplies, bandages, painkillers, antiseptics
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FirstAid = "Primeiros Socorros"
+   */
+  CAEC_Fallback_FirstAid: "Primeiros Socorros",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pesca"
+   *   ContextMenu_Fishing = "Pesca"
+   *   IGUI_CraftCategory_Fishing = "Pesca"
+   */
+  CAEC_Fallback_Fishing: "Pesca",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "Comida"
    */
-  CAEC_Override_Food: undefined,
-  /** furniture items */
-  CAEC_Fallback_Furniture: undefined,
-  /** household items */
-  CAEC_Fallback_Household: undefined,
-  /** instruments */
-  CAEC_Fallback_Instrument: undefined,
-  /** miscellaneous junk items, worthless items */
-  CAEC_Fallback_Junk: undefined,
-  /** items that provide light such as flashlights, lanterns */
-  CAEC_Fallback_LightSource: undefined,
+  CAEC_Fallback_Food: "Comida",
+  /**
+   * furniture items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Furniture = "Mobília"
+   */
+  CAEC_Fallback_Furniture: "Mobília",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Jardinagem"
+   *   ContextMenu_Gardening = "Jardinagem"
+   */
+  CAEC_Fallback_Gardening: "Jardinagem",
+  /**
+   * household items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Household = "Doméstico"
+   */
+  CAEC_Fallback_Household: "Doméstico",
+  /**
+   * instruments
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Instrument = "Instrumento Musical"
+   */
+  CAEC_Fallback_Instrument: "Instrumento Musical",
+  /**
+   * miscellaneous junk items, worthless items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Junk = "Sucata"
+   */
+  CAEC_Fallback_Junk: "Sucata",
+  /**
+   * items that provide light such as flashlights, lanterns
+   *
+   * found in-game:
+   *   IGUI_ItemCat_LightSource = "Fonte de Iluminação"
+   */
+  CAEC_Fallback_LightSource: "Fonte de Iluminação",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Literatura"
    */
-  CAEC_Override_Literature: undefined,
-  /** crafting materials and building supplies */
-  CAEC_Fallback_Material: undefined,
-  /** keepsakes and souvenirs */
-  CAEC_Fallback_Memento: undefined,
-  /** paint items */
-  CAEC_Fallback_Paint: undefined,
-  /** protective equipment such as body armor, helmets, knee pads */
-  CAEC_Fallback_ProtectiveGear: undefined,
-  /** skill books */
-  CAEC_Fallback_SkillBook: undefined,
-  /** sports items */
-  CAEC_Fallback_Sports: undefined,
-  /** tools, such as hammers, wrenches, screwdrivers */
-  CAEC_Fallback_Tool: undefined,
-  /** vehicle maintenance items */
-  CAEC_Fallback_VehicleMaintenance: undefined,
+  CAEC_Fallback_Literature: "Literatura",
+  /**
+   * crafting materials and building supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Material = "Material"
+   */
+  CAEC_Fallback_Material: "Material",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Lembrança"
+   */
+  CAEC_Fallback_Memento: "Lembrança",
+  /**
+   * paint items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Paint = "Tinta"
+   */
+  CAEC_Fallback_Paint: "Tinta",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Equipamento Protetor"
+   */
+  CAEC_Fallback_ProtectiveGear: "Equipamento Protetor",
+  /**
+   * skill books
+   *
+   * found in-game:
+   *   IGUI_ItemCat_SkillBook = "Livro de Habilidades"
+   */
+  CAEC_Fallback_SkillBook: "Livro de Habilidades",
+  /**
+   * sports items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Sports = "Desporto"
+   */
+  CAEC_Fallback_Sports: "Desporto",
+  /**
+   * tools, such as hammers, wrenches, screwdrivers
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Tool = "Ferramenta"
+   */
+  CAEC_Fallback_Tool: "Ferramenta",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Armadilhagem"
+   */
+  CAEC_Fallback_Trapping: "Armadilhagem",
+  /**
+   * vehicle maintenance items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_VehicleMaintenance = "Manutenção de Veículo"
+   */
+  CAEC_Fallback_VehicleMaintenance: "Manutenção de Veículo",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "Arma"
    */
-  CAEC_Override_Weapon: undefined,
+  CAEC_Fallback_Weapon: "Arma",
   /** axe weapon skill */
-  CAEC_Fallback_Axe: undefined,
+  CAEC_Fallback_Axe: "Machado",
   /** blacksmithing skill */
-  CAEC_Fallback_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Armas contundentes"
-   */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Fallback_Blacksmith: "Ferraria",
+  /** long blunt weapon skill */
+  CAEC_Fallback_Blunt: "Contundente Longa",
   /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  CAEC_Fallback_Butchering: "Talho",
   /**
    * carpentry skill
    *
    * found in-game:
-   *   IGUI_perks_Carpentry = "Carpintaria"
+   *   IGUI_CraftCategory_Carpentry = "Carpintaria"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Carpintaria",
   /** carving skill */
-  CAEC_Fallback_Carving: undefined,
-  /** electrical skill */
-  CAEC_Fallback_Electrical: undefined,
+  CAEC_Fallback_Carving: "Talha",
+  /**
+   * electrical skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Electrical = "Eletricidade"
+   */
+  CAEC_Fallback_Electrical: "Eletricidade",
   /**
    * farming/agriculture skill
    *
    * found in-game:
-   *   IGUI_perks_Farming = "Agricultura"
+   *   IGUI_CraftCategory_Farming = "Agricultura"
    */
-  CAEC_Override_Farming: undefined,
+  CAEC_Fallback_Farming: "Agricultura",
+  /** knapping skill */
+  CAEC_Fallback_FlintKnapping: "Lascagem",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Recoleção",
+  /** glassmaking skill */
+  CAEC_Fallback_Glassmaking: "Vidraria",
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: "Lâmina Longa",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Manutenção",
+  /** masonry skill */
+  CAEC_Fallback_Masonry: "Alvenaria",
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mecânica",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Metalurgia",
+  /** pottery skill */
+  CAEC_Fallback_Pottery: "Olaria",
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: "Lâmina Curta",
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: "Contundente Curta",
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: "Lança",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Costura",
+  /** tracking skill */
+  CAEC_Fallback_Tracking: "Rastreio",
   /**
-   * fishing skill and items
+   * welding skill
    *
    * found in-game:
-   *   IGUI_perks_Fishing = "Pesca"
+   *   IGUI_CraftCategory_Welding = "Soldadura"
    */
-  CAEC_Override_Fishing: undefined,
-  /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
-  /** foraging skill */
-  CAEC_Fallback_Foraging: undefined,
-  /** gardening skill and items */
-  CAEC_Fallback_Gardening: undefined,
-  /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
-  /** long blade weapon skill */
-  CAEC_Fallback_LongBlade: undefined,
-  /** maintenance skill for maintaining and repairing tools and weapons */
-  CAEC_Fallback_Maintenance: undefined,
-  /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
-  /** mechanics skill, vehicle maintenance */
-  CAEC_Fallback_Mechanics: undefined,
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
-  CAEC_Fallback_Metalworking: undefined,
-  /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
-  /** short blade weapon skill */
-  CAEC_Fallback_SmallBlade: undefined,
-  /** short blunt weapon skill */
-  CAEC_Fallback_SmallBlunt: undefined,
-  /** spear weapon skill */
-  CAEC_Fallback_Spear: undefined,
-  /** tailoring skill */
-  CAEC_Fallback_Tailoring: undefined,
-  /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
-  /** trapping skill and items */
-  CAEC_Fallback_Trapping: undefined,
-  /** welding skill */
-  CAEC_Fallback_Welding: undefined,
+  CAEC_Fallback_Welding: "Soldadura",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: undefined,
+  CAEC_Override_Arms: "Braços",
   /** lower body clothing, pants, shorts, skirts */
-  CAEC_Override_Bottom: undefined,
+  CAEC_Override_Bottom: "Parte de Baixo",
   /** facewear such as masks, glasses, goggles */
-  CAEC_Override_Face: undefined,
+  CAEC_Override_Face: "Rosto",
   /** shoes, boots, heels, etc. (but not socks) */
-  CAEC_Override_Footwear: undefined,
+  CAEC_Override_Footwear: "Calçado",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: undefined,
+  CAEC_Override_FullBody: "Corpo Inteiro",
   /** for gloves or other accessories worn on the hands */
-  CAEC_Override_Hands: undefined,
+  CAEC_Override_Hands: "Mãos",
   /**
    * for items worn on the head such as hats, helmets (but not masks)
    *
    * found in-game:
    *   IGUI_health_Head = "Cabeça"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Fallback_Head: "Cabeça",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
-  CAEC_Override_Jewelry: undefined,
+  CAEC_Override_Jewelry: "Joalharia",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
-  CAEC_Override_Legs: undefined,
+  CAEC_Override_Legs: "Pernas",
   /**
    * neckwear such as scarves, necklaces
    *
    * found in-game:
    *   IGUI_health_Neck = "Pescoço"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Fallback_Neck: "Pescoço",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
-  CAEC_Override_Outerwear: undefined,
+  CAEC_Override_Outerwear: "Agasalhos",
   /** hosiery and socks */
-  CAEC_Override_Socks: undefined,
+  CAEC_Override_Socks: "Meias",
   /** upper body apparel that is not outerwear, such as shirts, sweaters, tank tops */
-  CAEC_Override_Top: undefined,
+  CAEC_Override_Top: "Parte de Cima",
   /** undergarments such as underwear, bras, boxers */
-  CAEC_Override_Underwear: undefined,
+  CAEC_Override_Underwear: "Roupa Interior",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
-  CAEC_Override_Baking: undefined,
-  /** baked bread products */
-  CAEC_Fallback_Bread: undefined,
-  /** sweets and candies */
-  CAEC_Override_Candy: undefined,
+  CAEC_Override_Baking: "Pastelaria",
+  /**
+   * baked bread products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Bread = "Pão"
+   */
+  CAEC_Fallback_Bread: "Pão",
+  /**
+   * sweets and candies
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Candy = "Guloseimas"
+   */
+  CAEC_Fallback_Candy: "Guloseimas",
   /** canned food items */
-  CAEC_Override_Canned: undefined,
-  /** dairy cheese products */
-  CAEC_Fallback_Cheese: undefined,
+  CAEC_Override_Canned: "Enlatados",
+  /**
+   * dairy cheese products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Cheese = "Queijo"
+   */
+  CAEC_Fallback_Cheese: "Queijo",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: undefined,
-  /** fresh fruit, including berries and citrus */
-  CAEC_Fallback_Fruits: undefined,
-  /** culinary or medicinal plants/herbs */
-  CAEC_Fallback_Herb: undefined,
-  /** spicy hot peppers */
-  CAEC_Fallback_HotPepper: undefined,
-  /** edible insects */
-  CAEC_Fallback_Insect: undefined,
+  CAEC_Override_Dish: "Prato",
+  /**
+   * fresh fruit, including berries and citrus
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Fruits = "Fruta"
+   */
+  CAEC_Fallback_Fruits: "Fruta",
+  /**
+   * culinary or medicinal plants/herbs
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Herb = "Ervas"
+   */
+  CAEC_Fallback_Herb: "Ervas",
+  /**
+   * spicy hot peppers
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_HotPepper = "Malaguetas"
+   */
+  CAEC_Fallback_HotPepper: "Malaguetas",
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Inseto"
+   */
+  CAEC_Fallback_Insect: "Inseto",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: undefined,
-  /** any non-fish meat */
-  CAEC_Fallback_Meat: undefined,
-  /** mushrooms/fungi */
-  CAEC_Fallback_Mushroom: undefined,
-  /** nuts such as walnuts, almonds, peanuts */
-  CAEC_Fallback_Nut: undefined,
+  CAEC_Fallback_Livestock: "Gado",
+  /**
+   * any non-fish meat
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Meat = "Carne"
+   */
+  CAEC_Fallback_Meat: "Carne",
+  /**
+   * mushrooms/fungi
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Mushroom = "Cogumelos"
+   */
+  CAEC_Fallback_Mushroom: "Cogumelos",
+  /**
+   * nuts such as walnuts, almonds, peanuts
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Nut = "Frutos secos"
+   */
+  CAEC_Fallback_Nut: "Frutos secos",
   /** food items that can spoil */
-  CAEC_Override_Perishable: undefined,
+  CAEC_Override_Perishable: "Perecível",
   /** food for pets */
-  CAEC_Fallback_PetFood: undefined,
+  CAEC_Fallback_PetFood: "Animais de Estimação",
   /** single serving portion of food */
-  CAEC_Override_Portion: undefined,
+  CAEC_Override_Portion: "Porção",
   /** preserved food, such as jarred food */
-  CAEC_Override_Preserved: undefined,
-  /** fish and other seafood */
-  CAEC_Fallback_Seafood: undefined,
-  /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
-  CAEC_Fallback_Seed: undefined,
+  CAEC_Override_Preserved: "Conservas",
+  /**
+   * fish and other seafood
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seafood = "Marisco"
+   */
+  CAEC_Fallback_Seafood: "Marisco",
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Sementes"
+   */
+  CAEC_Fallback_Seed: "Sementes",
   /** snack foods (e.g. chips, cookies) */
-  CAEC_Override_Snack: undefined,
+  CAEC_Override_Snack: "Petisco",
   /** spices and seasonings, salt, pepper, etc. */
-  CAEC_Fallback_Spice: undefined,
+  CAEC_Fallback_Spice: "Especiarias",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
-  CAEC_Fallback_Staple: undefined,
-  /** items used to make cooking stock or broth, such as bouillon cubes */
-  CAEC_Fallback_Stock: undefined,
-  /** sugar and sweeteners */
-  CAEC_Fallback_Sugar: undefined,
-  /** vegetables, including leafy greens */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Fallback_Staple: "Alimento Básico",
+  /**
+   * items used to make cooking stock or broth, such as bouillon cubes
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Stock = "Caldo"
+   */
+  CAEC_Fallback_Stock: "Caldo",
+  /**
+   * sugar and sweeteners
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Sugar = "Açúcar"
+   */
+  CAEC_Fallback_Sugar: "Açúcar",
+  /**
+   * vegetables, including leafy greens
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Vegetables = "Legumes"
+   */
+  CAEC_Fallback_Vegetables: "Legumes",
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: undefined,
+  CAEC_Override_Adult: "Adulto",
   /** informational brochures */
-  CAEC_Fallback_Brochure: undefined,
+  CAEC_Fallback_Brochure: "Brochura",
   /** comic books */
-  CAEC_Fallback_Comic: undefined,
+  CAEC_Fallback_Comic: "Banda Desenhada",
   /** consumable reading materials such as crossword and wordsearch magazines */
-  CAEC_Fallback_Consumable: undefined,
+  CAEC_Fallback_Consumable: "Consumível",
   /** decorative or luxury books */
-  CAEC_Fallback_FancyBook: undefined,
+  CAEC_Fallback_FancyBook: "Livro de Luxo",
   /** flyers and handouts */
-  CAEC_Fallback_Flier: undefined,
+  CAEC_Fallback_Flier: "Panfleto",
   /** hardcover books */
-  CAEC_Fallback_Hardcover: undefined,
+  CAEC_Fallback_Hardcover: "Capa Dura",
   /** literature magazines */
-  CAEC_Fallback_Magazine: undefined,
+  CAEC_Fallback_Magazine: "Revista",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "Jornal",
   /** picture books */
-  CAEC_Fallback_PictureBook: undefined,
+  CAEC_Fallback_PictureBook: "Livro Ilustrado",
   /** recipes, readable items that teach you something */
-  CAEC_Fallback_Recipe: undefined,
+  CAEC_Fallback_Recipe: "Receita",
   /** tabletop RPG manuals */
-  CAEC_Fallback_RpgManual: undefined,
+  CAEC_Fallback_RpgManual: "Manual de RPG",
   /** softcover books */
-  CAEC_Fallback_Softcover: undefined,
+  CAEC_Fallback_Softcover: "Capa Mole",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Arco",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Tambor",
   /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: undefined,
+  CAEC_Override_Firearm: "Arma de Fogo",
   /** pistols and handguns */
-  CAEC_Fallback_Handgun: undefined,
+  CAEC_Fallback_Handgun: "Pistola",
   /** firearm magazines */
-  CAEC_Fallback_Mag: undefined,
+  CAEC_Fallback_Mag: "Carregador",
   /** rifles, big firearms */
-  CAEC_Fallback_Rifle: undefined,
+  CAEC_Fallback_Rifle: "Espingarda",
   /** shotguns, rifles that shoot shells */
-  CAEC_Fallback_Shotgun: undefined,
+  CAEC_Fallback_Shotgun: "Caçadeira",
   /** general alcoholic beverages */
-  CAEC_Fallback_Alcohol: undefined,
-  /** alcoholic beer beverages */
-  CAEC_Fallback_Beer: undefined,
+  CAEC_Fallback_Alcohol: "Álcool",
+  /**
+   * alcoholic beer beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Beer = "Cerveja"
+   */
+  CAEC_Fallback_Beer: "Cerveja",
   /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: undefined,
+  CAEC_Override_Beverage: "Bebida",
   /** mixed alcoholic drinks */
-  CAEC_Override_Cocktail: undefined,
-  /** coffee beverage */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Override_Cocktail: "Cocktail",
+  /**
+   * coffee beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Coffee = "Café"
+   */
+  CAEC_Fallback_Coffee: "Café",
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
+  CAEC_Override_Dye: "Corante",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
+  CAEC_Override_EnergyDrink: "Bebida Energética",
   /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
-  /** fruit juice */
-  CAEC_Fallback_Juice: undefined,
+  CAEC_Override_Fuel: "Combustível",
+  /**
+   * fruit juice
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Juice = "Sumo"
+   */
+  CAEC_Fallback_Juice: "Sumo",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: undefined,
-  /** dairy milk */
-  CAEC_Fallback_Milk: undefined,
-  /** carbonated soft drinks */
-  CAEC_Override_SoftDrink: undefined,
-  /** tea beverage */
-  CAEC_Override_Tea: undefined,
+  CAEC_Override_Liquid: "Líquido",
+  /**
+   * dairy milk
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Milk = "Leite"
+   *   ContextMenu_Milk = "Leite"
+   */
+  CAEC_Fallback_Milk: "Leite",
+  /**
+   * carbonated soft drinks
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_SoftDrink = "Refrigerante"
+   */
+  CAEC_Fallback_SoftDrink: "Refrigerante",
+  /**
+   * tea beverage
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Tea = "Chá"
+   */
+  CAEC_Fallback_Tea: "Chá",
   /**
    * drinking water
    *
    * found in-game:
    *   ContextMenu_Water = "Água"
    */
-  CAEC_Override_Water: undefined,
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: undefined,
+  CAEC_Fallback_Water: "Água",
+  /**
+   * alcoholic wine beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Wine = "Vinho"
+   */
+  CAEC_Fallback_Wine: "Vinho",
   /** things in a (small) box, such as boxes of ammo */
-  CAEC_Override_Box: undefined,
+  CAEC_Override_Box: "Caixa",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: undefined,
+  CAEC_Override_Bundled: "Em Molho",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
-  CAEC_Override_Carton: undefined,
+  CAEC_Override_Carton: "Embalagem",
   /** compostable items such as animal dung, to be put in a composter */
-  CAEC_Override_Compostable: undefined,
+  CAEC_Override_Compostable: "Compostável",
   /** handmade, artisan items. used for player-made weapons (not food) */
-  CAEC_Override_Crafted: undefined,
+  CAEC_Override_Crafted: "Artesanal",
   /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
+  CAEC_Override_Cup: "Copo",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  CAEC_Override_Cutlery: "Talheres",
   /** ring or bundle of keys */
-  CAEC_Override_KeyRing: undefined,
+  CAEC_Override_KeyRing: "Porta-chaves",
   /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  CAEC_Override_Pan: "Panela",
   /** photos */
-  CAEC_Fallback_Photo: undefined,
+  CAEC_Fallback_Photo: "Fotografia",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
-  /** loose plantable seeds for gardening/farming */
-  CAEC_Override_Seed: undefined,
+  CAEC_Override_Plushie: "Peluche",
   /** packet of plantable seeds for gardening/farming */
-  CAEC_Override_SeedPacket: undefined,
+  CAEC_Override_SeedPacket: "Pacote de Sementes",
   /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: undefined,
+  CAEC_Override_Smoking: "Tabaco",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  CAEC_Override_Utensil: "Utensílio",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: undefined,
+  CAEC_Override_Wearable: "Vestível",
 };

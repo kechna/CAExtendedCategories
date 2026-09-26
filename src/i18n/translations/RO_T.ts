@@ -17,72 +17,247 @@ import type { ExternalTranslations } from "../types";
  * Which translations from the game are searched for differs for each individual key.
  */
 export const RO: ExternalTranslations = {
-  /** accessories such as watches, necklaces, belts, gloves */
+  /**
+   * accessories such as watches, necklaces, belts, gloves
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Accessory = "Accesoriu"
+   */
   CAEC_Fallback_Accessory: "Accesoriu",
-  /** firearm ammunition */
+  /**
+   * firearm ammunition
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Ammo = "Muniție"
+   */
   CAEC_Fallback_Ammo: "Muniție",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Animal"
+   */
   CAEC_Fallback_Animal: "Animal",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Parte Animală"
+   */
   CAEC_Fallback_AnimalPart: "Parte de animal",
-  /** character appearance items such as makeup */
+  /**
+   * character appearance items such as makeup
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Appearance = "Aspect"
+   */
   CAEC_Fallback_Appearance: "Aspect",
-  /** camping supplies */
+  /**
+   * camping supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Camping = "Camping"
+   */
   CAEC_Fallback_Camping: "Camping",
-  /** maps of locations */
+  /**
+   * maps of locations
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cartography = "Cartografie"
+   */
   CAEC_Fallback_Cartography: "Cartografie",
-  /** clothing such as shirts, pants, dresses */
+  /**
+   * clothing such as shirts, pants, dresses
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Clothing = "Îmbrăcăminte"
+   */
   CAEC_Fallback_Clothing: "Îmbrăcăminte",
-  /** communication devices such as walkie talkies, radios */
+  /**
+   * communication devices such as walkie talkies, radios
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Communications = "Comunicații"
+   */
   CAEC_Fallback_Communications: "Comunicații",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
+   *   IGUI_ItemCat_Container = "Container"
    *   ContextMenu_Container = "Containere"
    */
   CAEC_Fallback_Container: "Containere",
-  /** cooking items such as pots, pans, utensils */
+  /**
+   * cooking items such as pots, pans, utensils
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cooking = "Gătit"
+   */
   CAEC_Fallback_Cooking: "Gătit",
-  /** electronic items */
+  /**
+   * electronic items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Electronics = "Electronice"
+   */
   CAEC_Fallback_Electronics: "Electronice",
-  /** entertainment items */
+  /**
+   * entertainment items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Entertainment = "Divertisment"
+   */
   CAEC_Fallback_Entertainment: "Divertisment",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Sursă de Foc"
+   */
   CAEC_Fallback_FireSource: "Sursă de foc",
-  /** first aid and medical supplies, bandages, painkillers, antiseptics */
+  /**
+   * first aid and medical supplies, bandages, painkillers, antiseptics
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FirstAid = "Primul Ajutor"
+   */
   CAEC_Fallback_FirstAid: "Primul ajutor",
-  /** food items */
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pescuit"
+   *   ContextMenu_Fishing = "Pescuit"
+   *   IGUI_CraftCategory_Fishing = "Pescuit"
+   */
+  CAEC_Fallback_Fishing: "Pescuit",
+  /**
+   * food items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Food = "Mâncare"
+   */
   CAEC_Fallback_Food: "Mâncare",
-  /** furniture items */
+  /**
+   * furniture items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Furniture = "Mobilă"
+   */
   CAEC_Fallback_Furniture: "Mobilier",
-  /** household items */
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Grădinărit"
+   *   ContextMenu_Gardening = "Grădinărit"
+   */
+  CAEC_Fallback_Gardening: "Grădinărit",
+  /**
+   * household items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Household = "Gospodărie"
+   */
   CAEC_Fallback_Household: "Gospodărie",
-  /** instruments */
+  /**
+   * instruments
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Instrument = "Instrument Muzical"
+   */
   CAEC_Fallback_Instrument: "Instrument",
-  /** miscellaneous junk items, worthless items */
+  /**
+   * miscellaneous junk items, worthless items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Junk = "Gunoi"
+   */
   CAEC_Fallback_Junk: "Deșeuri",
-  /** items that provide light such as flashlights, lanterns */
+  /**
+   * items that provide light such as flashlights, lanterns
+   *
+   * found in-game:
+   *   IGUI_ItemCat_LightSource = "Sursă de Lumină"
+   */
   CAEC_Fallback_LightSource: "Sursă de lumină",
-  /** books and printed reading material */
+  /**
+   * books and printed reading material
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Literature = "Literatură"
+   */
   CAEC_Fallback_Literature: "Literatură",
-  /** crafting materials and building supplies */
+  /**
+   * crafting materials and building supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Material = "Material"
+   */
   CAEC_Fallback_Material: "Materiale",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Memento"
+   */
   CAEC_Fallback_Memento: "Suvenir",
-  /** paint items */
+  /**
+   * paint items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Paint = "Vopsea"
+   */
   CAEC_Fallback_Paint: "Vopsea",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Echipament de Protecție"
+   */
   CAEC_Fallback_ProtectiveGear: "Echipament de protecție",
-  /** skill books */
+  /**
+   * skill books
+   *
+   * found in-game:
+   *   IGUI_ItemCat_SkillBook = "Carte pentru Abilități"
+   */
   CAEC_Fallback_SkillBook: "Carte de abilități",
-  /** sports items */
+  /**
+   * sports items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Sports = "Sporturi"
+   */
   CAEC_Fallback_Sports: "Sport",
-  /** tools, such as hammers, wrenches, screwdrivers */
+  /**
+   * tools, such as hammers, wrenches, screwdrivers
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Tool = "Unealtă"
+   */
   CAEC_Fallback_Tool: "Unealtă",
-  /** vehicle maintenance items */
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Capturare"
+   */
+  CAEC_Fallback_Trapping: "Capcane",
+  /**
+   * vehicle maintenance items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_VehicleMaintenance = "Mentenanța Vehiculului"
+   */
   CAEC_Fallback_VehicleMaintenance: "Întreținere vehicule",
-  /** weapons in general */
+  /**
+   * weapons in general
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Weapon = "Armă"
+   */
   CAEC_Fallback_Weapon: "Armă",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Topor",
@@ -92,27 +267,33 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Blunt: "Contondent",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Măcelărie",
-  /** carpentry skill */
+  /**
+   * carpentry skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carpentry = "Tâmplărie"
+   */
   CAEC_Fallback_Carpentry: "Tâmplărie",
   /** carving skill */
   CAEC_Fallback_Carving: "Cioplire",
-  /** electrical skill */
-  CAEC_Fallback_Electrical: "Electricitate",
-  /** farming/agriculture skill */
-  CAEC_Fallback_Farming: "Agricultură",
   /**
-   * fishing skill and items
+   * electrical skill
    *
    * found in-game:
-   *   ContextMenu_Fishing = "Pescuit"
+   *   IGUI_CraftCategory_Electrical = "Electrică"
    */
-  CAEC_Fallback_Fishing: "Pescuit",
+  CAEC_Fallback_Electrical: "Electricitate",
+  /**
+   * farming/agriculture skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Farming = "Agricultură"
+   */
+  CAEC_Fallback_Farming: "Agricultură",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Cioplirea silexului",
   /** foraging skill */
   CAEC_Fallback_Foraging: "Cules",
-  /** gardening skill and items */
-  CAEC_Fallback_Gardening: "Grădinărit",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Sticlărie",
   /** long blade weapon skill */
@@ -137,9 +318,12 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Tailoring: "Croitorie",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Urmărire",
-  /** trapping skill and items */
-  CAEC_Fallback_Trapping: "Capcane",
-  /** welding skill */
+  /**
+   * welding skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Welding = "Sudură"
+   */
   CAEC_Fallback_Welding: "Sudură",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Brațe",
@@ -153,14 +337,24 @@ export const RO: ExternalTranslations = {
   CAEC_Override_FullBody: "Întregul corp",
   /** for gloves or other accessories worn on the hands */
   CAEC_Override_Hands: "Mâini",
-  /** for items worn on the head such as hats, helmets (but not masks) */
-  CAEC_Override_Head: "Cap",
+  /**
+   * for items worn on the head such as hats, helmets (but not masks)
+   *
+   * found in-game:
+   *   IGUI_health_Head = "Cap"
+   */
+  CAEC_Fallback_Head: "Cap",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
   CAEC_Override_Jewelry: "Bijuterii",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
   CAEC_Override_Legs: "Picioare",
-  /** neckwear such as scarves, necklaces */
-  CAEC_Override_Neck: "Gât",
+  /**
+   * neckwear such as scarves, necklaces
+   *
+   * found in-game:
+   *   IGUI_health_Neck = "Gât"
+   */
+  CAEC_Fallback_Neck: "Gât",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Îmbrăcăminte de exterior",
   /** hosiery and socks */
@@ -171,16 +365,31 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Underwear: "Lenjerie",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Coacere",
-  /** baked bread products */
+  /**
+   * baked bread products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Bread = "Pâine"
+   */
   CAEC_Fallback_Bread: "Pâine",
-  /** sweets and candies */
+  /**
+   * sweets and candies
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Candy = "Bomboană"
+   */
   CAEC_Override_Candy: "Dulciuri",
   /** canned food items */
-  CAEC_Override_Canned: "Conservat la cutie",
-  /** dairy cheese products */
+  CAEC_Override_Canned: "La conservă",
+  /**
+   * dairy cheese products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Cheese = "Brânză"
+   */
   CAEC_Fallback_Cheese: "Brânză",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
-  CAEC_Override_Dish: "Fel",
+  CAEC_Override_Dish: "Fel de mâncare",
   /**
    * fresh fruit, including berries and citrus
    *
@@ -188,11 +397,26 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_FoodType_Fruits = "Fructe"
    */
   CAEC_Fallback_Fruits: "Fructe",
-  /** culinary or medicinal plants/herbs */
+  /**
+   * culinary or medicinal plants/herbs
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Herb = "Ierburi"
+   */
   CAEC_Fallback_Herb: "Ierburi",
-  /** spicy hot peppers */
+  /**
+   * spicy hot peppers
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_HotPepper = "Ardei Iuți"
+   */
   CAEC_Fallback_HotPepper: "Ardei iute",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Insectă"
+   */
   CAEC_Fallback_Insect: "Insecte",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Vite",
@@ -203,9 +427,19 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_FoodType_Meat = "Carne"
    */
   CAEC_Fallback_Meat: "Carne",
-  /** mushrooms/fungi */
+  /**
+   * mushrooms/fungi
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Mushroom = "Ciupearcă"
+   */
   CAEC_Fallback_Mushroom: "Ciuperci",
-  /** nuts such as walnuts, almonds, peanuts */
+  /**
+   * nuts such as walnuts, almonds, peanuts
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Nut = "Nucă"
+   */
   CAEC_Fallback_Nut: "Nuci",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Perisabil",
@@ -215,9 +449,19 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Portion: "Porție",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservat",
-  /** fish and other seafood */
+  /**
+   * fish and other seafood
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seafood = "Fructe de Mare"
+   */
   CAEC_Fallback_Seafood: "Fructe de mare",
-  /** loose plantable seeds for gardening/farming */
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Sămânță"
+   */
   CAEC_Fallback_Seed: "Semințe",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Gustare",
@@ -225,12 +469,27 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Spice: "Condimente",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Aliment de bază",
-  /** items used to make cooking stock or broth, such as bouillon cubes */
-  CAEC_Fallback_Stock: "Stoc",
-  /** sugar and sweeteners */
+  /**
+   * items used to make cooking stock or broth, such as bouillon cubes
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Stock = "Bulion"
+   */
+  CAEC_Fallback_Stock: "Bulion",
+  /**
+   * sugar and sweeteners
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Sugar = "Zahăr"
+   */
   CAEC_Fallback_Sugar: "Zahăr",
-  /** vegetables, including leafy greens */
-  CAEC_Override_Vegetables: "Legume",
+  /**
+   * vegetables, including leafy greens
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Vegetables = "Legume"
+   */
+  CAEC_Fallback_Vegetables: "Legume",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adult",
   /** informational brochures */
@@ -257,6 +516,10 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manual de RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Copertă moale",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Arc",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Încărcător tambur",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Armă de foc",
   /** pistols and handguns */
@@ -269,7 +532,12 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Shotgun: "Pușcă de vânătoare",
   /** general alcoholic beverages */
   CAEC_Fallback_Alcohol: "Alcool",
-  /** alcoholic beer beverages */
+  /**
+   * alcoholic beer beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Beer = "Bere"
+   */
   CAEC_Fallback_Beer: "Bere",
   /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Băutură",
@@ -281,20 +549,36 @@ export const RO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Cafea"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Cafea",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Colorant",
   /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: "Energizant",
+  CAEC_Override_EnergyDrink: "Băutură energizantă",
   /** liquid fuels such as gasoline, diesel, kerosene */
   CAEC_Override_Fuel: "Combustibil",
-  /** fruit juice */
+  /**
+   * fruit juice
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Juice = "Suc"
+   */
   CAEC_Fallback_Juice: "Suc",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Lichid",
-  /** dairy milk */
+  /**
+   * dairy milk
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Milk = "Lapte"
+   *   ContextMenu_Milk = "Lapte"
+   */
   CAEC_Fallback_Milk: "Lapte",
-  /** carbonated soft drinks */
+  /**
+   * carbonated soft drinks
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_SoftDrink = "Băutură Răcoritoare"
+   */
   CAEC_Override_SoftDrink: "Băutură carbogazoasă",
   /**
    * tea beverage
@@ -302,7 +586,7 @@ export const RO: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Ceai"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Ceai",
   /**
    * drinking water
    *
@@ -310,8 +594,13 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_Water = "Apă"
    */
   CAEC_Fallback_Water: "Apă",
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: "Vin",
+  /**
+   * alcoholic wine beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Wine = "Vin"
+   */
+  CAEC_Fallback_Wine: "Vin",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Cutie",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
@@ -341,5 +630,5 @@ export const RO: ExternalTranslations = {
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Ustensil",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
-  CAEC_Override_Wearable: "Rucsacuri",
+  CAEC_Override_Wearable: "Purtabil",
 };

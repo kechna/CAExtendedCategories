@@ -17,7 +17,12 @@ import type { ExternalTranslations } from "../types";
  * Which translations from the game are searched for differs for each individual key.
  */
 export const NL: ExternalTranslations = {
-  /** accessories such as watches, necklaces, belts, gloves */
+  /**
+   * accessories such as watches, necklaces, belts, gloves
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Accessory = "Accessoire"
+   */
   CAEC_Fallback_Accessory: "Accessoire",
   /**
    * firearm ammunition
@@ -26,15 +31,40 @@ export const NL: ExternalTranslations = {
    *   IGUI_ItemCat_Ammo = "Munitie"
    */
   CAEC_Fallback_Ammo: "Munitie",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Dier"
+   */
   CAEC_Fallback_Animal: "Dier",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Deel van dier"
+   */
   CAEC_Fallback_AnimalPart: "Dierlijk deel",
-  /** character appearance items such as makeup */
+  /**
+   * character appearance items such as makeup
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Appearance = "Verschijning"
+   */
   CAEC_Fallback_Appearance: "Uiterlijk",
-  /** camping supplies */
+  /**
+   * camping supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Camping = "Kamperen"
+   */
   CAEC_Fallback_Camping: "Camping",
-  /** maps of locations */
+  /**
+   * maps of locations
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cartography = "Cartografie"
+   */
   CAEC_Fallback_Cartography: "Cartografie",
   /**
    * clothing such as shirts, pants, dresses
@@ -43,7 +73,12 @@ export const NL: ExternalTranslations = {
    *   IGUI_ItemCat_Clothing = "Kleding"
    */
   CAEC_Fallback_Clothing: "Kleding",
-  /** communication devices such as walkie talkies, radios */
+  /**
+   * communication devices such as walkie talkies, radios
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Communications = "Communicatie"
+   */
   CAEC_Fallback_Communications: "Communicatie",
   /**
    * items that can hold other items, such as boxes, bags, and crates
@@ -57,22 +92,49 @@ export const NL: ExternalTranslations = {
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
+   *   IGUI_ItemCat_Cooking = "Koken"
    *   IGUI_perks_Cooking = "Koken"
    */
   CAEC_Fallback_Cooking: "Koken",
-  /** electronic items */
+  /**
+   * electronic items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Electronics = "Elektronica"
+   */
   CAEC_Fallback_Electronics: "Elektronica",
-  /** entertainment items */
-  CAEC_Fallback_Entertainment: "Vermaak",
-  /** sources of fire such as matches and lighters */
+  /**
+   * entertainment items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Entertainment = "Entertainment"
+   */
+  CAEC_Fallback_Entertainment: "Entertainment",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Vuurbron"
+   */
   CAEC_Fallback_FireSource: "Vuurbron",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "EHBO"
+   *   IGUI_perks_Doctor = "Eerste hulp"
+   *   IGUI_ItemCat_FirstAid = "EHBO"
    */
   CAEC_Fallback_FirstAid: "Eerste hulp",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Vissen"
+   *   IGUI_perks_Fishing = "Vissen"
+   *   ContextMenu_Fishing = "Vissen"
+   *   IGUI_CraftCategory_Fishing = "Vissen"
+   */
+  CAEC_Fallback_Fishing: "Vissen",
   /**
    * food items
    *
@@ -80,15 +142,48 @@ export const NL: ExternalTranslations = {
    *   IGUI_ItemCat_Food = "Voedsel"
    */
   CAEC_Fallback_Food: "Voedsel",
-  /** furniture items */
+  /**
+   * furniture items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Furniture = "Meubels"
+   */
   CAEC_Fallback_Furniture: "Meubels",
-  /** household items */
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Tuinieren"
+   *   ContextMenu_Gardening = "Tuinieren"
+   */
+  CAEC_Fallback_Gardening: "Tuinieren",
+  /**
+   * household items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Household = "Huishouden"
+   */
   CAEC_Fallback_Household: "Huishouden",
-  /** instruments */
+  /**
+   * instruments
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Instrument = "Muziekinstrument"
+   */
   CAEC_Fallback_Instrument: "Muziekinstrument",
-  /** miscellaneous junk items, worthless items */
+  /**
+   * miscellaneous junk items, worthless items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Junk = "Troep"
+   */
   CAEC_Fallback_Junk: "Rommel",
-  /** items that provide light such as flashlights, lanterns */
+  /**
+   * items that provide light such as flashlights, lanterns
+   *
+   * found in-game:
+   *   IGUI_ItemCat_LightSource = "Lichtbron"
+   */
   CAEC_Fallback_LightSource: "Lichtbron",
   /**
    * books and printed reading material
@@ -97,21 +192,69 @@ export const NL: ExternalTranslations = {
    *   IGUI_ItemCat_Literature = "Literatuur"
    */
   CAEC_Fallback_Literature: "Literatuur",
-  /** crafting materials and building supplies */
+  /**
+   * crafting materials and building supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Material = "Materiaal"
+   */
   CAEC_Fallback_Material: "Materiaal",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Memento"
+   */
   CAEC_Fallback_Memento: "Aandenken",
-  /** paint items */
+  /**
+   * paint items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Paint = "Verf"
+   */
   CAEC_Fallback_Paint: "Verf",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Beschermende uitrusting"
+   */
   CAEC_Fallback_ProtectiveGear: "Bescherming",
-  /** skill books */
+  /**
+   * skill books
+   *
+   * found in-game:
+   *   IGUI_ItemCat_SkillBook = "Vaardigheidsboek"
+   */
   CAEC_Fallback_SkillBook: "Vaardigheidsboek",
-  /** sports items */
+  /**
+   * sports items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Sports = "Sport"
+   */
   CAEC_Fallback_Sports: "Sport",
-  /** tools, such as hammers, wrenches, screwdrivers */
+  /**
+   * tools, such as hammers, wrenches, screwdrivers
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Tool = "Gereedschap"
+   */
   CAEC_Fallback_Tool: "Gereedschap",
-  /** vehicle maintenance items */
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Vallen zetten"
+   *   IGUI_perks_Trapping = "NL.CAEC_Override_Trapping ?? NL.CAEC_Fallback_Trapping"
+   */
+  CAEC_Fallback_Trapping: "Vallen zetten",
+  /**
+   * vehicle maintenance items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_VehicleMaintenance = "Voertuigonderhoud"
+   */
   CAEC_Fallback_VehicleMaintenance: "Voertuigonderhoud",
   /**
    * weapons in general
@@ -133,15 +276,20 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_Blacksmith = "Smeden"
    */
-  CAEC_Override_Blacksmith: undefined,
+  CAEC_Fallback_Blacksmith: "Smeden",
   /**
    * long blunt weapon skill
    *
    * found in-game:
-   *   IGUI_perks_Blunt = "Bot"
+   *   IGUI_perks_Blunt = "Lang Bot"
    */
-  CAEC_Override_Blunt: "Lang Bot",
-  /** butchering skill */
+  CAEC_Fallback_Blunt: "Lang Bot",
+  /**
+   * butchering skill
+   *
+   * found in-game:
+   *   IGUI_perks_Butchering = "Slachten"
+   */
   CAEC_Fallback_Butchering: "Slachten",
   /**
    * carpentry skill
@@ -150,8 +298,13 @@ export const NL: ExternalTranslations = {
    *   IGUI_CraftCategory_Carpentry = "Timmerwerk"
    *   IGUI_perks_Carpentry = "Timmerwerk"
    */
-  CAEC_Override_Carpentry: undefined,
-  /** carving skill */
+  CAEC_Fallback_Carpentry: "Timmerwerk",
+  /**
+   * carving skill
+   *
+   * found in-game:
+   *   IGUI_perks_Carving = "Houtsnijden"
+   */
   CAEC_Fallback_Carving: "Houtsnijden",
   /**
    * electrical skill
@@ -159,7 +312,7 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "Elektrisch"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elektrisch",
   /**
    * farming/agriculture skill
    *
@@ -167,28 +320,27 @@ export const NL: ExternalTranslations = {
    *   IGUI_CraftCategory_Farming = "Landbouw"
    *   IGUI_perks_Farming = "Landbouw"
    */
-  CAEC_Override_Farming: undefined,
+  CAEC_Fallback_Farming: "Landbouw",
   /**
-   * fishing skill and items
+   * knapping skill
    *
    * found in-game:
-   *   IGUI_perks_Fishing = "Vissen"
-   *   ContextMenu_Fishing = "Vissen"
-   *   IGUI_CraftCategory_Fishing = "Vissen"
+   *   IGUI_perks_FlintKnapping = "Vuursteen bewerken"
    */
-  CAEC_Fallback_Fishing: "Vissen",
-  /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Vuursteen bewerken",
   /**
    * foraging skill
    *
    * found in-game:
-   *   IGUI_perks_Foraging = "Voedsel zoeken"
+   *   IGUI_perks_Foraging = "zoeken"
    */
-  CAEC_Override_Foraging: undefined,
-  /** gardening skill and items */
-  CAEC_Fallback_Gardening: "Tuinieren",
-  /** glassmaking skill */
+  CAEC_Fallback_Foraging: "zoeken",
+  /**
+   * glassmaking skill
+   *
+   * found in-game:
+   *   IGUI_perks_Glassmaking = "Glas maken"
+   */
   CAEC_Fallback_Glassmaking: "Glas maken",
   /**
    * long blade weapon skill
@@ -196,31 +348,41 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_LongBlade = "Lang Mes"
    */
-  CAEC_Override_LongBlade: "Lang Mes",
+  CAEC_Fallback_LongBlade: "Lang Mes",
   /**
    * maintenance skill for maintaining and repairing tools and weapons
    *
    * found in-game:
    *   IGUI_perks_Maintenance = "Onderhoud"
    */
-  CAEC_Override_Maintenance: undefined,
-  /** masonry skill */
+  CAEC_Fallback_Maintenance: "Onderhoud",
+  /**
+   * masonry skill
+   *
+   * found in-game:
+   *   IGUI_perks_Masonry = "Metselen"
+   */
   CAEC_Fallback_Masonry: "Metselen",
   /**
    * mechanics skill, vehicle maintenance
    *
    * found in-game:
-   *   IGUI_perks_Mechanics = "Mechanica"
+   *   IGUI_perks_Mechanics = "Voertuigonderhoud"
    */
-  CAEC_Override_Mechanics: undefined,
+  CAEC_Fallback_Mechanics: "Voertuigonderhoud",
   /**
    * metalworking skill (for items that are relevant in both welding and blacksmithing
    *
    * found in-game:
    *   IGUI_perks_Metalworking = "Metaalbewerking"
    */
-  CAEC_Override_Metalworking: undefined,
-  /** pottery skill */
+  CAEC_Fallback_Metalworking: "Metaalbewerking",
+  /**
+   * pottery skill
+   *
+   * found in-game:
+   *   IGUI_perks_Pottery = "Keramiek"
+   */
   CAEC_Fallback_Pottery: "Keramiek",
   /**
    * short blade weapon skill
@@ -228,19 +390,19 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_SmallBlade = "Kort Mes"
    */
-  CAEC_Override_SmallBlade: "Kort Mes",
+  CAEC_Fallback_SmallBlade: "Kort Mes",
   /**
    * short blunt weapon skill
    *
    * found in-game:
-   *   IGUI_perks_SmallBlunt = "Kort Blunt"
+   *   IGUI_perks_SmallBlunt = "Kort Bot"
    */
-  CAEC_Override_SmallBlunt: "Kort Bot",
+  CAEC_Fallback_SmallBlunt: "Kort Bot",
   /**
    * spear weapon skill
    *
    * found in-game:
-   *   IGUI_perks_Spear = "Speer"
+   *   IGUI_perks_Spear = "Speren"
    */
   CAEC_Fallback_Spear: "Speren",
   /**
@@ -249,16 +411,14 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_perks_Tailoring = "Kleermakerswerk"
    */
-  CAEC_Override_Tailoring: undefined,
-  /** tracking skill */
-  CAEC_Fallback_Tracking: "Sporen zoeken",
+  CAEC_Fallback_Tailoring: "Kleermakerswerk",
   /**
-   * trapping skill and items
+   * tracking skill
    *
    * found in-game:
-   *   IGUI_perks_Trapping = "Vallen zetten"
+   *   IGUI_perks_Tracking = "Volgen"
    */
-  CAEC_Fallback_Trapping: "Vallen zetten",
+  CAEC_Fallback_Tracking: "Volgen",
   /**
    * welding skill
    *
@@ -306,13 +466,28 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Underwear: "Ondergoed",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Bakken",
-  /** baked bread products */
+  /**
+   * baked bread products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Bread = "Brood"
+   */
   CAEC_Fallback_Bread: "Brood",
-  /** sweets and candies */
-  CAEC_Override_Candy: "Snoep",
+  /**
+   * sweets and candies
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Candy = "Snoep"
+   */
+  CAEC_Fallback_Candy: "Snoep",
   /** canned food items */
   CAEC_Override_Canned: "Ingeblikt",
-  /** dairy cheese products */
+  /**
+   * dairy cheese products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Cheese = "Kaas"
+   */
   CAEC_Fallback_Cheese: "Kaas",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Maaltijd",
@@ -322,12 +497,27 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "Fruit"
    */
-  CAEC_Override_Fruits: undefined,
-  /** culinary or medicinal plants/herbs */
+  CAEC_Fallback_Fruits: "Fruit",
+  /**
+   * culinary or medicinal plants/herbs
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Herb = "Kruiden"
+   */
   CAEC_Fallback_Herb: "Kruiden",
-  /** spicy hot peppers */
+  /**
+   * spicy hot peppers
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_HotPepper = "Hete pepers"
+   */
   CAEC_Fallback_HotPepper: "Pittige pepers",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Insect"
+   */
   CAEC_Fallback_Insect: "Insecten",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Vee",
@@ -338,9 +528,19 @@ export const NL: ExternalTranslations = {
    *   ContextMenu_FoodType_Meat = "Vlees"
    */
   CAEC_Fallback_Meat: "Vlees",
-  /** mushrooms/fungi */
+  /**
+   * mushrooms/fungi
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Mushroom = "Paddenstoel"
+   */
   CAEC_Fallback_Mushroom: "Paddenstoelen",
-  /** nuts such as walnuts, almonds, peanuts */
+  /**
+   * nuts such as walnuts, almonds, peanuts
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Nut = "Noot"
+   */
   CAEC_Fallback_Nut: "Noten",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Bederfelijk",
@@ -350,9 +550,19 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Portion: "Portie",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Geconserveerd",
-  /** fish and other seafood */
+  /**
+   * fish and other seafood
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seafood = "Zeevruchten"
+   */
   CAEC_Fallback_Seafood: "Zeevruchten",
-  /** loose plantable seeds for gardening/farming */
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Zaad"
+   */
   CAEC_Fallback_Seed: "Zaden",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Snack",
@@ -360,9 +570,19 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Spice: "Kruiden",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Basisvoeding",
-  /** items used to make cooking stock or broth, such as bouillon cubes */
+  /**
+   * items used to make cooking stock or broth, such as bouillon cubes
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Stock = "Bouillon"
+   */
   CAEC_Fallback_Stock: "Bouillon",
-  /** sugar and sweeteners */
+  /**
+   * sugar and sweeteners
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Sugar = "Suiker"
+   */
   CAEC_Fallback_Sugar: "Suiker",
   /**
    * vegetables, including leafy greens
@@ -397,6 +617,10 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "RPG-handleiding",
   /** softcover books */
   CAEC_Fallback_Softcover: "Paperback",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Fallback_Bow: "Paperback",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "undefined",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Vuurwapen",
   /** pistols and handguns */
@@ -409,7 +633,12 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Shotgun: "Jachtgeweer",
   /** general alcoholic beverages */
   CAEC_Fallback_Alcohol: "Alcohol",
-  /** alcoholic beer beverages */
+  /**
+   * alcoholic beer beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Beer = "Bier"
+   */
   CAEC_Fallback_Beer: "Bier",
   /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Drinken",
@@ -428,21 +657,37 @@ export const NL: ExternalTranslations = {
   CAEC_Override_EnergyDrink: "Energy Drink",
   /** liquid fuels such as gasoline, diesel, kerosene */
   CAEC_Override_Fuel: "Brandstof",
-  /** fruit juice */
+  /**
+   * fruit juice
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Juice = "Sap"
+   */
   CAEC_Fallback_Juice: "Sap",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Vloeistof",
-  /** dairy milk */
+  /**
+   * dairy milk
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Milk = "Melk"
+   *   ContextMenu_Milk = "Melk"
+   */
   CAEC_Fallback_Milk: "Melk",
-  /** carbonated soft drinks */
-  CAEC_Override_SoftDrink: "Frisdrank",
+  /**
+   * carbonated soft drinks
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_SoftDrink = "Frisdrank"
+   */
+  CAEC_Fallback_SoftDrink: "Frisdrank",
   /**
    * tea beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Thee"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Thee",
   /**
    * drinking water
    *
@@ -450,8 +695,13 @@ export const NL: ExternalTranslations = {
    *   ContextMenu_Water = "Water"
    */
   CAEC_Fallback_Water: "Water",
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: "Wijn",
+  /**
+   * alcoholic wine beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Wine = "Wijn"
+   */
+  CAEC_Fallback_Wine: "Wijn",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Doos",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */

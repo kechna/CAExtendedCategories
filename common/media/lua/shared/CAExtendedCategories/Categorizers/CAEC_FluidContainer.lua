@@ -14,7 +14,6 @@ function FluidContainer:new()
     ItemTag.GLASS_BOTTLE,
     ItemTag.GLASS_BOTTLE_SMALL,
     ItemTag.SEALED_BEVERAGE_CAN,
-    ItemTag.GLASS_BOTTLE,
     ItemTag.EMPTY_CAN,
     ItemTag.ALCOHOLIC_BEVERAGE,
   }

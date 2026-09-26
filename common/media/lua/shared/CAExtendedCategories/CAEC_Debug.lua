@@ -8,9 +8,13 @@ Debug.Level = {
   Disabled = 5
 }
 
-CAEC_Verbosity = CAEC_Verbosity or SandboxVars.CAExtendedCategories.LogVerbosity or Debug.Level.Info
+local function getSandboxLevel()
+  local settings = SandboxVars and SandboxVars.CAExtendedCategories
 
-Debug.Verbosity = CAEC_Verbosity
+  return settings and settings.LogVerbosity or nil
+end
+
+Debug.Verbosity = CAEC_Verbosity or getSandboxLevel() or Debug.Level.Error
 
 ---@param level number
 ---@return boolean
@@ -21,6 +25,13 @@ end
 function Debug.setLevel(level)
   Debug.Verbosity = level
   CAEC_Verbosity = level
+end
+
+---@param level number?
+function Debug.applySettings(level)
+  if CAEC_Verbosity then return end
+
+  Debug.Verbosity = level or Debug.Level.Error
 end
 
 ---@param message string

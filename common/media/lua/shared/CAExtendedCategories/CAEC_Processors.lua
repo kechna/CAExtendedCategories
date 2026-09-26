@@ -40,8 +40,17 @@ Processors.CategorizersSorted = false
 ---@type table<string, fun(item: Item, instance?: InventoryItem): string?, boolean?>
 Processors.CategorizersByNameCache = {}
 
+-- table.sort is not stable, so break priority ties by name to keep the order deterministic
 local function sortFn(a, b)
+  if a.priority == b.priority then
+    return a.name < b.name
+  end
+
   return a.priority < b.priority
+end
+
+local function noopCategorizer()
+  return nil, false
 end
 
 ---@param categorizer string
@@ -60,6 +69,7 @@ end
 function Processors.registerInitHook(name, fn, priority)
   priority = priority or 500
   table.insert(Processors.InitHooks, { name = name, priority = priority, callback = fn })
+  Processors.InitHooksSorted = false
   Debug.log("Registered init hook: " .. name .. " (priority: " .. priority .. ")", "Processors")
 end
 
@@ -67,6 +77,7 @@ end
 function Processors.registerPreprocessor(name, fn, priority)
   priority = priority or 500
   table.insert(Processors.Preprocessors, { name = name, priority = priority, callback = fn })
+  Processors.PreprocessorsSorted = false
   Debug.log("Registered preprocessor: " .. name .. " (priority: " .. priority .. ")", "Processors")
 end
 
@@ -87,6 +98,9 @@ function Processors.registerCategorizer(name, fn, priority, mode)
     priority = priority,
     callback = fn or bootstrapCategorizer(name)
   })
+
+  Processors.CategorizersSorted = false
+  Processors.CategorizersByNameCache = {}
 
   Debug.log(string.format("Registered categorizer: %s (mode: %s, priority: %d)", name, mode, priority), "Processors")
 end
@@ -117,9 +131,9 @@ function Processors.getCategorizer(name)
   end
 
   Debug.log("Categorizer not found: " .. name, "Processors", Debug.Level.Warning)
-  return (function (...)
-    return nil, false
-  end)
+  Processors.CategorizersByNameCache[name] = noopCategorizer
+
+  return noopCategorizer
 end
 
 ---@param name      string
@@ -132,14 +146,21 @@ function Processors.categorizeWith(name, item, instance)
 
   return categorizer(item, instance)
 end
+
 function Processors.getInitHooks()
-  if not Processors.InitHooksSorted then table.sort(Processors.InitHooks, sortFn) end
+  if not Processors.InitHooksSorted then
+    table.sort(Processors.InitHooks, sortFn)
+    Processors.InitHooksSorted = true
+  end
 
   return Processors.InitHooks
 end
 
 function Processors.getPreprocessors()
-  if not Processors.PreprocessorsSorted then table.sort(Processors.Preprocessors, sortFn) end
+  if not Processors.PreprocessorsSorted then
+    table.sort(Processors.Preprocessors, sortFn)
+    Processors.PreprocessorsSorted = true
+  end
 
   return Processors.Preprocessors
 end
@@ -149,6 +170,7 @@ function Processors.getCategorizers(mode)
   if not Processors.CategorizersSorted then
     table.sort(Processors.ScriptCategorizers, sortFn)
     table.sort(Processors.InstanceCategorizers, sortFn)
+    Processors.CategorizersSorted = true
   end
 
   return mode == "instance" and Processors.InstanceCategorizers or Processors.ScriptCategorizers

@@ -6,12 +6,10 @@ local defaultCallback = ISAddTakeDispenserBottle.complete
 
 function ISAddTakeDispenserBottle:complete()
   local result = defaultCallback(self)
-  local trigger = "ISAddTakeDispenserBottle:complete"
 
+  -- when adding a bottle, it is removed from the inventory, so only taking one needs an update
   if not self.bottle then
-    CAEC.categorizeItemContainer(self.character:getInventory(), trigger)
-  else
-    CAEC.updateInstanceItem(self.bottle, "LiquidContainer", trigger)
+    CAEC.categorizeItemContainer(self.character:getInventory(), "ISAddTakeDispenserBottle:complete")
   end
 
   return result

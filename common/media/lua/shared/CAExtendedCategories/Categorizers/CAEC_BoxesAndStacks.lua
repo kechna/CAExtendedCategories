@@ -53,8 +53,8 @@ local function byRecipe(item)
   if recipe == "unstack_items" then
     suffix = "Bundled";
   elseif recipe:contains("carton")
-      and (Utils.startsWith("Open", recipe)
-        or Utils.startsWith("Unpack", recipe)) then
+      and (Utils.startsWith("open", recipe)
+        or Utils.startsWith("unpack", recipe)) then
     suffix = "Carton";
   elseif Utils.startsWith("takea", recipe) or
       (recipe:contains("box") and (

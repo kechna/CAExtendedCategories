@@ -4,8 +4,8 @@ local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
 
 ---@class CAEC_WeaponCategorizer: CAEC_ItemCategorizer
 ---@field public asMeleeWeapon  fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string | nil
----@field public asRangedWeapon fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string | nil
----@field public asFirearm      fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?): string | nil
+---@field public asRangedWeapon fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?, group: CAEC_AmmoGroup?): string | nil
+---@field public asFirearm      fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?, group: CAEC_AmmoGroup?): string | nil
 local Weapon = CAEC_ItemCategorizer:derive("Weapon")
 
 local WeaponComboCategories = {
@@ -113,17 +113,19 @@ end
 
 ---@param item     Item
 ---@param instance InventoryItem?
+---@param group    CAEC_AmmoGroup? pass it when already known, to avoid resolving it again
 ---@return string | nil
-function Weapon:asFirearm(item, instance)
+function Weapon:asFirearm(item, instance, group)
   ---@type string | nil
   local category = nil
   local baseCategory = "Firearm"
 
-  local group = self:getAmmoGroup(item, instance)
+  group = group or self:getAmmoGroup(item, instance)
+
   if not group then
     self:log("unknown ammo group for " .. item:getFullName())
   elseif group == Ammo.AmmoGroup.BOW then
-    category = self:asRangedWeapon(item, instance)
+    category = self:asRangedWeapon(item, instance, group)
   else
     category = baseCategory .. group
   end
@@ -133,17 +135,19 @@ end
 
 ---@param item     Item
 ---@param instance InventoryItem?
+---@param group    CAEC_AmmoGroup? pass it when already known, to avoid resolving it again
 ---@return string | nil
-function Weapon:asRangedWeapon(item, instance)
+function Weapon:asRangedWeapon(item, instance, group)
   ---@type string | nil
   local category = nil
   local baseCategory = "Weapon"
-  local group = self:getAmmoGroup(item, instance)
+
+  group = group or self:getAmmoGroup(item, instance)
 
   if not group then
     self:log("unknown ammo group for " .. item:getFullName())
   elseif group == Ammo.AmmoGroup.HANDGUN or group == Ammo.AmmoGroup.RIFLE or group == Ammo.AmmoGroup.SHOTGUN then
-    return self:asFirearm(item, instance)
+    return self:asFirearm(item, instance, group)
   else
     category = baseCategory .. group
   end

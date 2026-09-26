@@ -21,7 +21,7 @@ export const RU: ExternalTranslations = {
    * accessories such as watches, necklaces, belts, gloves
    *
    * found in-game:
-   *   IGUI_ItemCat_Accessory = "Аксессуар"
+   *   IGUI_ItemCat_Accessory = "Аксессуары"
    */
   CAEC_Fallback_Accessory: "Аксессуар",
   /**
@@ -31,9 +31,19 @@ export const RU: ExternalTranslations = {
    *   IGUI_ItemCat_Ammo = "Боеприпасы"
    */
   CAEC_Fallback_Ammo: "Боеприпасы",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Животные"
+   */
   CAEC_Fallback_Animal: "Животное",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Части животных"
+   */
   CAEC_Fallback_AnimalPart: "Часть животного",
   /**
    * character appearance items such as makeup
@@ -53,7 +63,7 @@ export const RU: ExternalTranslations = {
    * maps of locations
    *
    * found in-game:
-   *   IGUI_ItemCat_Cartography = "Картография"
+   *   IGUI_ItemCat_Cartography = "Карты"
    */
   CAEC_Fallback_Cartography: "Картография",
   /**
@@ -67,14 +77,14 @@ export const RU: ExternalTranslations = {
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
-   *   IGUI_ItemCat_Communications = "Коммуникация"
+   *   IGUI_ItemCat_Communications = "Средства связи"
    */
   CAEC_Fallback_Communications: "Коммуникация",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
-   *   IGUI_ItemCat_Container = "Контейнер"
+   *   IGUI_ItemCat_Container = "Контейнеры"
    *   ContextMenu_Container = "Контейнеры"
    */
   CAEC_Fallback_Container: "Контейнер",
@@ -83,7 +93,6 @@ export const RU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Кулинария"
-   *   IGUI_perks_Cooking = "Кулинария"
    */
   CAEC_Fallback_Cooking: "Кулинария",
   /**
@@ -97,19 +106,32 @@ export const RU: ExternalTranslations = {
    * entertainment items
    *
    * found in-game:
-   *   IGUI_ItemCat_Entertainment = "Развлечение"
+   *   IGUI_ItemCat_Entertainment = "Развлечения"
    */
   CAEC_Fallback_Entertainment: "Развлечение",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Источники огня"
+   */
   CAEC_Fallback_FireSource: "Источник огня",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Первая помощь"
-   *   IGUI_ItemCat_FirstAid = "Первая помощь"
+   *   IGUI_ItemCat_FirstAid = "Медицина"
    */
   CAEC_Fallback_FirstAid: "Первая помощь",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Рыболовство"
+   *   ContextMenu_Fishing = "Рыбалка"
+   *   IGUI_CraftCategory_Fishing = "Рыболовство"
+   */
+  CAEC_Fallback_Fishing: "Рыболовство",
   /**
    * food items
    *
@@ -125,17 +147,25 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Furniture: "Мебель",
   /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Садоводство"
+   *   ContextMenu_Gardening = "Земледелие"
+   */
+  CAEC_Fallback_Gardening: "Садоводство",
+  /**
    * household items
    *
    * found in-game:
-   *   IGUI_ItemCat_Household = "Хозяйство"
+   *   IGUI_ItemCat_Household = "Бытовые"
    */
   CAEC_Fallback_Household: "Хозяйство",
   /**
    * instruments
    *
    * found in-game:
-   *   IGUI_ItemCat_Instrument = "Инструмент"
+   *   IGUI_ItemCat_Instrument = "Музыкальные инструменты"
    */
   CAEC_Fallback_Instrument: "Инструмент",
   /**
@@ -149,7 +179,7 @@ export const RU: ExternalTranslations = {
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
-   *   IGUI_ItemCat_LightSource = "Освещение"
+   *   IGUI_ItemCat_LightSource = "Источники света"
    */
   CAEC_Fallback_LightSource: "Освещение",
   /**
@@ -163,10 +193,15 @@ export const RU: ExternalTranslations = {
    * crafting materials and building supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Material = "Материал"
+   *   IGUI_ItemCat_Material = "Материалы"
    */
   CAEC_Fallback_Material: "Материал",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Сувениры"
+   */
   CAEC_Fallback_Memento: "Сувенир",
   /**
    * paint items
@@ -175,29 +210,41 @@ export const RU: ExternalTranslations = {
    *   IGUI_ItemCat_Paint = "Краска"
    */
   CAEC_Fallback_Paint: "Краска",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Защита"
+   */
   CAEC_Fallback_ProtectiveGear: "Защитное снаряжение",
   /**
    * skill books
    *
    * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Навыки"
+   *   IGUI_ItemCat_SkillBook = "Обучающая литература"
    */
   CAEC_Fallback_SkillBook: "Навыки",
   /**
    * sports items
    *
    * found in-game:
-   *   IGUI_ItemCat_Sports = "Спорт"
+   *   IGUI_ItemCat_Sports = "Спортивные товары"
    */
   CAEC_Fallback_Sports: "Спорт",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
-   *   IGUI_ItemCat_Tool = "Инструмент"
+   *   IGUI_ItemCat_Tool = "Инструменты"
    */
   CAEC_Fallback_Tool: "Инструмент",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Ловушки"
+   */
+  CAEC_Fallback_Trapping: "Ловушка",
   /**
    * vehicle maintenance items
    *
@@ -212,26 +259,11 @@ export const RU: ExternalTranslations = {
    *   IGUI_ItemCat_Weapon = "Оружие"
    */
   CAEC_Fallback_Weapon: "Оружие",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Топоры"
-   */
+  /** axe weapon skill */
   CAEC_Fallback_Axe: "Топоры",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Кузнец"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Длин. дробящее"
-   */
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Кузнечное дело",
+  /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Длин. дробящее",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Разделка",
@@ -239,134 +271,62 @@ export const RU: ExternalTranslations = {
    * carpentry skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Carpentry = "Строительство"
-   *   IGUI_perks_Carpentry = "Строительство"
+   *   IGUI_CraftCategory_Carpentry = "Плотничество"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Плотничество",
   /** carving skill */
   CAEC_Fallback_Carving: "Резьба",
   /**
    * electrical skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Electrical = "Электроника"
+   *   IGUI_CraftCategory_Electrical = "Электрика"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Электрика",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Фермерство"
-   *   IGUI_perks_Farming = "Фермерство"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Рыболовство"
-   *   IGUI_perks_Fishing = "Рыболовство"
-   *   ContextMenu_Fishing = "Рыбачить"
-   *   IGUI_CraftCategory_Fishing = "Рыболовство"
-   */
-  CAEC_Fallback_Fishing: "Рыболовство",
+  CAEC_Fallback_Farming: "Фермерство",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Обработка кремня",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Собирательство"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Садоводство"
-   */
-  CAEC_Fallback_Gardening: "Садоводство",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Собирательство",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Стеклоделие",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Длин. режущее"
-   */
+  /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Длин. режущее",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Прочность"
-   */
-  CAEC_Override_Maintenance: undefined,
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Обслуживание",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Каменная кладка",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Автомеханика"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Газосварка"
-   */
-  CAEC_Override_Metalworking: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Механика",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Металлообработка",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Гончарное дело",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Коротк. режущее"
-   */
+  /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Коротк. режущее",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Коротк. дробящее"
-   */
+  /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Коротк. дробящее",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Копья"
-   */
+  /** spear weapon skill */
   CAEC_Fallback_Spear: "Копья",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Шитьё"
-   */
-  CAEC_Override_Tailoring: undefined,
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Портняжное дело",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Выслеживание",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Ловушка"
-   *   IGUI_perks_Trapping = "Звероловство"
-   */
-  CAEC_Fallback_Trapping: "Ловушка",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "Газосварка"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Газосварка",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
-  CAEC_Override_Arms: "Руки",
+  CAEC_Override_Arms: "Предплечья",
   /** lower body clothing, pants, shorts, skirts */
   CAEC_Override_Bottom: "Низ",
   /** facewear such as masks, glasses, goggles */
@@ -374,7 +334,7 @@ export const RU: ExternalTranslations = {
   /** shoes, boots, heels, etc. (but not socks) */
   CAEC_Override_Footwear: "Обувь",
   /** full-body items such as jumpsuits, dresses, overalls */
-  CAEC_Override_FullBody: "Полное тело",
+  CAEC_Override_FullBody: "Всё тело",
   /** for gloves or other accessories worn on the hands */
   CAEC_Override_Hands: "Руки",
   /**
@@ -420,7 +380,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Candy: "Конфеты",
   /** canned food items */
-  CAEC_Override_Canned: "Консервированный в банке",
+  CAEC_Override_Canned: "Консервы",
   /**
    * dairy cheese products
    *
@@ -441,7 +401,7 @@ export const RU: ExternalTranslations = {
    * culinary or medicinal plants/herbs
    *
    * found in-game:
-   *   ContextMenu_FoodType_Herb = "Трава"
+   *   ContextMenu_FoodType_Herb = "Травы"
    */
   CAEC_Fallback_Herb: "Трава",
   /**
@@ -451,7 +411,12 @@ export const RU: ExternalTranslations = {
    *   ContextMenu_FoodType_HotPepper = "Острый перец"
    */
   CAEC_Fallback_HotPepper: "Острый перец",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Насекомые"
+   */
   CAEC_Fallback_Insect: "Насекомые",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Скот",
@@ -468,14 +433,14 @@ export const RU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Mushroom = "Грибы"
    */
-  CAEC_Override_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "Грибы",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
    *   ContextMenu_FoodType_Nut = "Орехи"
    */
-  CAEC_Override_Nut: undefined,
+  CAEC_Fallback_Nut: "Орехи",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Скоропортящийся",
   /** food for pets */
@@ -508,9 +473,9 @@ export const RU: ExternalTranslations = {
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
-   *   ContextMenu_FoodType_Stock = "Магазинное"
+   *   ContextMenu_FoodType_Stock = "Бульон"
    */
-  CAEC_Fallback_Stock: "Магазинное",
+  CAEC_Fallback_Stock: "Бульон",
   /**
    * sugar and sweeteners
    *
@@ -526,7 +491,7 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Vegetables: "Овощи",
   /** adult-oriented content (hottiez magazines) */
-  CAEC_Override_Adult: "Взрослый",
+  CAEC_Override_Adult: "Для взрослых",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Брошюра",
   /** comic books */
@@ -551,6 +516,10 @@ export const RU: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Руководство по RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Мягкий переплёт",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Лук",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Барабанный магазин",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Огнестрельное оружие",
   /** pistols and handguns */
@@ -569,7 +538,7 @@ export const RU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Пиво"
    */
-  CAEC_Override_Beer: "Пиво в стакане",
+  CAEC_Override_Beer: "Пиво",
   /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Напиток",
   /** mixed alcoholic drinks */
@@ -580,9 +549,9 @@ export const RU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Кофе"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Кофе",
   /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: "Краска",
+  CAEC_Override_Dye: "Краситель",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Энергетический напиток",
   /** liquid fuels such as gasoline, diesel, kerosene */
@@ -600,14 +569,15 @@ export const RU: ExternalTranslations = {
    * dairy milk
    *
    * found in-game:
-   *   ContextMenu_FoodType_Milk = "Молочный продукт"
+   *   ContextMenu_FoodType_Milk = "Молоко"
+   *   ContextMenu_Milk = "Молоко"
    */
-  CAEC_Override_Milk: "Молоко",
+  CAEC_Fallback_Milk: "Молоко",
   /**
    * carbonated soft drinks
    *
    * found in-game:
-   *   ContextMenu_FoodType_SoftDrink = "Напитки"
+   *   ContextMenu_FoodType_SoftDrink = "Прохладительный напиток"
    */
   CAEC_Override_SoftDrink: "Газировка",
   /**
@@ -616,14 +586,14 @@ export const RU: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Чай"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Чай",
   /**
    * drinking water
    *
    * found in-game:
    *   ContextMenu_Water = "Полить"
    */
-  CAEC_Fallback_Water: "Вода",
+  CAEC_Override_Water: "Вода",
   /**
    * alcoholic wine beverages
    *
@@ -634,7 +604,7 @@ export const RU: ExternalTranslations = {
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Коробка",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
-  CAEC_Override_Bundled: "Связанный",
+  CAEC_Override_Bundled: "В связке",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Картонная коробка",
   /** compostable items such as animal dung, to be put in a composter */

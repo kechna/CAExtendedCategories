@@ -9,7 +9,7 @@ function ISClothingExtraAction:createItemNew(item, newItem)
 
   ---@diagnostic disable-next-line: unnecessary-if
   if newItem:getFluidContainer() and item:getFluidContainer() then
-    CAEC.updateInstanceItem(newItem, "ISClothingExtraAction:createItemNew")
+    CAEC.updateInstanceItem(newItem, "FluidContainer", "ISClothingExtraAction:createItemNew")
   end
 
   return result

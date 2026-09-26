@@ -31,9 +31,19 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Ammo = "Cephane"
    */
   CAEC_Fallback_Ammo: "Mühimmat",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Hayvan"
+   */
   CAEC_Fallback_Animal: "Hayvan",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Hayvan Parçası"
+   */
   CAEC_Fallback_AnimalPart: "Hayvan Parçası",
   /**
    * character appearance items such as makeup
@@ -83,7 +93,6 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Aşçılık"
-   *   IGUI_perks_Cooking = "Aşçılık"
    */
   CAEC_Fallback_Cooking: "Yemek Pişirme",
   /**
@@ -100,16 +109,29 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Entertainment = "Eğlence"
    */
   CAEC_Fallback_Entertainment: "Eğlence",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Ateş Kaynağı"
+   */
   CAEC_Fallback_FireSource: "Ateş Kaynağı",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "İlk Yardım"
    *   IGUI_ItemCat_FirstAid = "İlk Yardım"
    */
   CAEC_Fallback_FirstAid: "Tıbbi Malzeme",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Balıkçılık"
+   *   ContextMenu_Fishing = "Balık Tut"
+   *   IGUI_CraftCategory_Fishing = "Balıkçılık"
+   */
+  CAEC_Fallback_Fishing: "Balıkçılık",
   /**
    * food items
    *
@@ -124,6 +146,14 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Furniture = "Mobilya"
    */
   CAEC_Fallback_Furniture: "Mobilya",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Çiftçilik"
+   *   ContextMenu_Gardening = "Bahçecilik"
+   */
+  CAEC_Fallback_Gardening: "Bahçıvanlık",
   /**
    * household items
    *
@@ -166,7 +196,12 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Material = "Malzeme"
    */
   CAEC_Fallback_Material: "Malzeme",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Hatıra"
+   */
   CAEC_Fallback_Memento: "Hatıra",
   /**
    * paint items
@@ -175,7 +210,12 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Paint = "Boya"
    */
   CAEC_Fallback_Paint: "Boya",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Koruyucu Ekipman"
+   */
   CAEC_Fallback_ProtectiveGear: "Koruyucu Ekipman",
   /**
    * skill books
@@ -199,6 +239,13 @@ export const TR: ExternalTranslations = {
    */
   CAEC_Fallback_Tool: "Alet",
   /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Avcılık"
+   */
+  CAEC_Fallback_Trapping: "Tuzakçılık",
+  /**
    * vehicle maintenance items
    *
    * found in-game:
@@ -212,26 +259,11 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_Weapon = "Silah"
    */
   CAEC_Fallback_Weapon: "Silah",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Balta"
-   */
+  /** axe weapon skill */
   CAEC_Fallback_Axe: "Balta",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Demircilik"
-   */
+  /** blacksmithing skill */
   CAEC_Fallback_Blacksmith: "Demircilik",
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Yakın Dövüş Silahları"
-   */
+  /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Uzun Küt Silah",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Kasaplık",
@@ -240,7 +272,6 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Marangozluk"
-   *   IGUI_perks_Carpentry = "Marangozluk"
    */
   CAEC_Fallback_Carpentry: "Marangozluk",
   /** carving skill */
@@ -257,107 +288,36 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Çiftçilik"
-   *   IGUI_perks_Farming = "Çiftçilik"
    */
   CAEC_Fallback_Farming: "Tarım",
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Balıkçılık"
-   *   IGUI_perks_Fishing = "Balıkçılık"
-   *   ContextMenu_Fishing = "Balık Tut"
-   *   IGUI_CraftCategory_Fishing = "Balıkçılık"
-   */
-  CAEC_Fallback_Fishing: "Balıkçılık",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Yontma",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "Araştırma"
-   */
+  /** foraging skill */
   CAEC_Fallback_Foraging: "Toplayıcılık",
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Çiftçilik"
-   */
-  CAEC_Fallback_Gardening: "Bahçıvanlık",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Camcılık",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Uzun Kesici"
-   */
+  /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Uzun Bıçaklı Silah",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Onarma"
-   */
+  /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Bakım",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Duvarcılık",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Tamircilik"
-   */
+  /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mekanik",
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Metal İşleme"
-   */
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
   CAEC_Fallback_Metalworking: "Metal İşçiliği",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Çömlekçilik",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Kısa Kesici"
-   */
+  /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Kısa Bıçaklı Silah",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Kısa Ezici"
-   */
+  /** short blunt weapon skill */
   CAEC_Fallback_SmallBlunt: "Kısa Küt Silah",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Mızrak"
-   */
+  /** spear weapon skill */
   CAEC_Fallback_Spear: "Mızrak",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Terzilik"
-   */
+  /** tailoring skill */
   CAEC_Fallback_Tailoring: "Terzilik",
   /** tracking skill */
   CAEC_Fallback_Tracking: "İz Sürme",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Avcılık"
-   *   IGUI_perks_Trapping = "Avcılık"
-   */
-  CAEC_Fallback_Trapping: "Tuzakçılık",
   /**
    * welding skill
    *
@@ -394,7 +354,7 @@ export const TR: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Neck = "Boyun"
    */
-  CAEC_Override_Neck: "Boyun",
+  CAEC_Fallback_Neck: "Boyun",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Dış Giyim",
   /** hosiery and socks */
@@ -451,7 +411,12 @@ export const TR: ExternalTranslations = {
    *   ContextMenu_FoodType_HotPepper = "Acı Biber"
    */
   CAEC_Fallback_HotPepper: "Acı Biberler",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Böcek"
+   */
   CAEC_Fallback_Insect: "Böcek",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Hayvan Yemi",
@@ -551,6 +516,10 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "RYO Kılavuzu",
   /** softcover books */
   CAEC_Fallback_Softcover: "Karton Kapaklı Kitap",
+  /** bows and other ranged weapons that use string tension to launch projectiles (machine translated) */
+  CAEC_Override_Bow: "Yay",
+  /** firearm drums (machine translated) */
+  CAEC_Fallback_Drum: "Tambur Şarjör",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Ateşli Silah",
   /** pistols and handguns */
@@ -601,6 +570,7 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Süt"
+   *   ContextMenu_Milk = "Süt"
    */
   CAEC_Fallback_Milk: "Süt",
   /**
@@ -630,7 +600,7 @@ export const TR: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Wine = "Şarap"
    */
-  CAEC_Override_Wine: "Şarap",
+  CAEC_Fallback_Wine: "Şarap",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Kutu",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */

@@ -4,8 +4,22 @@ local Utils = {}
 
 ---@type table<string, InventoryItem>
 local instanceCache = {}
+-- Kahlua has no `next`, so keep count to cheaply detect an empty cache
+local instanceCount = 0
 
 local activatedMods = nil
+
+---@param typeObj AmmoType | ItemType
+---@param id      string
+local function resolveType(typeObj, id)
+  if not (id and typeObj and typeObj.get and ResourceLocation and ResourceLocation.of) then
+    return nil
+  end
+
+  local ok, result = pcall(function () return typeObj.get(ResourceLocation.of(id)) end)
+
+  return ok and result or nil
+end
 
 ---@param search  string
 ---@param subject string
@@ -22,15 +36,17 @@ function Utils.endsWith(search, subject)
 end
 
 ---@param item Item
----@param tags ItemTag[]
+---@param tags ItemTag[] | nil
 ---@return boolean
 function Utils.hasAnyTag(item, tags)
-  if item:getTags():size() == 0 then
+  if not tags or item:getTags():size() == 0 then
     return false
   end
 
-  for _, tag in ipairs(tags) do
-    if item:hasTag(tag) then
+  for i = 1, #tags do
+    local tag = tags[i]
+
+    if tag and item:hasTag(Utils.toTag(tag)) then
       return true
     end
   end
@@ -61,12 +77,17 @@ function Utils.createInstanceIfNeeded(item, instance)
 
   if not instanceCache[fullName] then
     instanceCache[fullName] = temporaryInstance
+    instanceCount = instanceCount + 1
   end
 
   return temporaryInstance
 end
 
 function Utils.removeTemporaryInstances()
+  if instanceCount == 0 then
+    return
+  end
+
   local n = 0
   for _, instance in pairs(instanceCache) do
     if instanceof(instance, "InventoryItem") then
@@ -77,6 +98,7 @@ function Utils.removeTemporaryInstances()
 
   Debug.log(string.format("Removed %d temporary instances", n), "Utils")
   instanceCache = {}
+  instanceCount = 0
 end
 
 ---@param modId string
@@ -89,37 +111,31 @@ end
 
 local tagCache = {}
 
----@param string string
+---@param input string | ItemTag
 ---@return ItemTag
-function Utils.toTag(string)
-  local tag = tagCache[string]
+function Utils.toTag(input)
+  if type(input) ~= "string" then
+    ---@cast input ItemTag
+    return input
+  end
+
+  ---@cast input string
+
+  local tag = tagCache[input]
 
   if tag == nil then
-    tag = ItemTag.get(ResourceLocation.of(string)) or false
-    tagCache[string] = tag
+    ---@cast tag ItemTag | false
+    tag = resolveType(ItemTag, input) or false
+    tagCache[input] = tag
   end
 
   return tag
 end
 
----@param typeObj AmmoType|ItemType
 ---@param id string
-local function resolveType(typeObj, id)
-    if not (id and typeObj and typeObj.get and ResourceLocation and ResourceLocation.of) then
-        return nil
-    end
-
-    local ok, result = pcall(function() return typeObj.get(ResourceLocation.of(id)) end)
-
-    return ok and result or nil
-end
-
----@param id string
----@return AmmoType|nil
+---@return AmmoType | nil
 function Utils.resolveAmmoType(id)
-    return resolveType(AmmoType, id)
+  return resolveType(AmmoType, id)
 end
-
-
 
 return Utils

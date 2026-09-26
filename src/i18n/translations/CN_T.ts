@@ -23,17 +23,27 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "配饰"
    */
-  CAEC_Override_Accessory: "配饰",
+  CAEC_Fallback_Accessory: "配饰",
   /**
    * firearm ammunition
    *
    * found in-game:
    *   IGUI_ItemCat_Ammo = "弹药"
    */
-  CAEC_Override_Ammo: "弹药",
-  /** animals */
-  CAEC_Override_Animal: "动物",
-  /** animal parts, bones, sinew, hides */
+  CAEC_Fallback_Ammo: "弹药",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "动物"
+   */
+  CAEC_Fallback_Animal: "动物",
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "动物部位"
+   */
   CAEC_Override_AnimalPart: "动物材料",
   /**
    * character appearance items such as makeup
@@ -41,14 +51,14 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Appearance = "外观"
    */
-  CAEC_Override_Appearance: "外观",
+  CAEC_Fallback_Appearance: "外观",
   /**
    * camping supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Camping = "露营"
    */
-  CAEC_Override_Camping: "露营",
+  CAEC_Fallback_Camping: "露营",
   /**
    * maps of locations
    *
@@ -62,14 +72,14 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Clothing = "衣服"
    */
-  CAEC_Override_Clothing: "衣服",
+  CAEC_Fallback_Clothing: "衣服",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "通讯"
    */
-  CAEC_Override_Communications: "通讯",
+  CAEC_Fallback_Communications: "通讯",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
@@ -77,53 +87,73 @@ export const CN: ExternalTranslations = {
    *   IGUI_ItemCat_Container = "容器"
    *   ContextMenu_Container = "容器"
    */
-  CAEC_Override_Container: "容器",
+  CAEC_Fallback_Container: "容器",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "烹饪"
-   *   IGUI_perks_Cooking = "烹饪"
    */
-  CAEC_Override_Cooking: "烹饪",
+  CAEC_Fallback_Cooking: "烹饪",
   /**
    * electronic items
    *
    * found in-game:
    *   IGUI_ItemCat_Electronics = "电子器件"
    */
-  CAEC_Override_Electronics: "电子器件",
+  CAEC_Fallback_Electronics: "电子器件",
   /**
    * entertainment items
    *
    * found in-game:
    *   IGUI_ItemCat_Entertainment = "娱乐"
    */
-  CAEC_Override_Entertainment: "娱乐",
-  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_Entertainment: "娱乐",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "火源"
+   */
   CAEC_Override_FireSource: "火种",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "急救"
    *   IGUI_ItemCat_FirstAid = "急救"
    */
-  CAEC_Override_FirstAid: "急救",
+  CAEC_Fallback_FirstAid: "急救",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "钓鱼"
+   *   ContextMenu_Fishing = "钓鱼"
+   *   IGUI_CraftCategory_Fishing = "钓鱼"
+   */
+  CAEC_Fallback_Fishing: "钓鱼",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "食物"
    */
-  CAEC_Override_Food: "食物",
+  CAEC_Fallback_Food: "食物",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "家具"
    */
-  CAEC_Override_Furniture: "家具",
+  CAEC_Fallback_Furniture: "家具",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "园艺"
+   *   ContextMenu_Gardening = "园艺"
+   */
+  CAEC_Fallback_Gardening: "园艺",
   /**
    * household items
    *
@@ -135,47 +165,57 @@ export const CN: ExternalTranslations = {
    * instruments
    *
    * found in-game:
-   *   IGUI_ItemCat_Instrument = "仪器"
+   *   IGUI_ItemCat_Instrument = "乐器"
    */
-  CAEC_Override_Instrument: "乐器",
+  CAEC_Fallback_Instrument: "乐器",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
    *   IGUI_ItemCat_Junk = "废旧物"
    */
-  CAEC_Override_Junk: "废旧物",
+  CAEC_Fallback_Junk: "废旧物",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
    *   IGUI_ItemCat_LightSource = "光源"
    */
-  CAEC_Override_LightSource: "光源",
+  CAEC_Fallback_LightSource: "光源",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "文学"
    */
-  CAEC_Override_Literature: "文学",
+  CAEC_Fallback_Literature: "文学",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "材料"
    */
-  CAEC_Override_Material: "材料",
-  /** keepsakes and souvenirs */
-  CAEC_Override_Memento: "纪念品",
+  CAEC_Fallback_Material: "材料",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "纪念品"
+   */
+  CAEC_Fallback_Memento: "纪念品",
   /**
    * paint items
    *
    * found in-game:
    *   IGUI_ItemCat_Paint = "油漆"
    */
-  CAEC_Override_Paint: "油漆",
-  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_Paint: "油漆",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "防护装备"
+   */
   CAEC_Override_ProtectiveGear: "防护",
   /**
    * skill books
@@ -183,7 +223,7 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "技能书"
    */
-  CAEC_Override_SkillBook: "技能书",
+  CAEC_Fallback_SkillBook: "技能书",
   /**
    * sports items
    *
@@ -197,7 +237,14 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Tool = "工具"
    */
-  CAEC_Override_Tool: "工具",
+  CAEC_Fallback_Tool: "工具",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "诱捕"
+   */
+  CAEC_Fallback_Trapping: "诱捕",
   /**
    * vehicle maintenance items
    *
@@ -211,160 +258,73 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Weapon = "武器"
    */
-  CAEC_Override_Weapon: "武器",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "斧头"
-   */
+  CAEC_Fallback_Weapon: "武器",
+  /** axe weapon skill */
   CAEC_Override_Axe: "斧头",
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "锻造"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "长棍"
-   */
+  /** blacksmithing skill (machine translated) */
+  CAEC_Fallback_Blacksmith: "锻造",
+  /** long blunt weapon skill */
   CAEC_Override_Blunt: "长棍",
-  /** butchering skill */
-  CAEC_Fallback_Butchering: undefined,
+  /** butchering skill (machine translated) */
+  CAEC_Fallback_Butchering: "屠宰",
   /**
    * carpentry skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "木工"
-   *   IGUI_perks_Carpentry = "木工"
    */
-  CAEC_Override_Carpentry: undefined,
-  /** carving skill */
-  CAEC_Fallback_Carving: undefined,
+  CAEC_Fallback_Carpentry: "木工",
+  /** carving skill (machine translated) */
+  CAEC_Fallback_Carving: "雕刻",
   /**
    * electrical skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Electrical = "电工"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "电工",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "农务"
-   *   IGUI_perks_Farming = "耕作"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "钓鱼"
-   *   IGUI_perks_Fishing = "钓鱼"
-   *   ContextMenu_Fishing = "钓鱼"
-   *   IGUI_CraftCategory_Fishing = "钓鱼"
-   */
-  CAEC_Override_Fishing: "钓鱼",
-  /** knapping skill */
-  CAEC_Fallback_FlintKnapping: undefined,
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "搜寻"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "园艺"
-   */
-  CAEC_Override_Gardening: "园艺",
-  /** glassmaking skill */
-  CAEC_Fallback_Glassmaking: undefined,
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "长刀"
-   */
+  CAEC_Fallback_Farming: "农务",
+  /** knapping skill (machine translated) */
+  CAEC_Fallback_FlintKnapping: "打制石器",
+  /** foraging skill (machine translated) */
+  CAEC_Fallback_Foraging: "采集",
+  /** glassmaking skill (machine translated) */
+  CAEC_Fallback_Glassmaking: "玻璃制作",
+  /** long blade weapon skill */
   CAEC_Override_LongBlade: "长刀",
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "维护"
-   */
-  CAEC_Override_Maintenance: undefined,
-  /** masonry skill */
-  CAEC_Fallback_Masonry: undefined,
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "技工"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "金属加工"
-   */
-  CAEC_Override_Metalworking: undefined,
-  /** pottery skill */
-  CAEC_Fallback_Pottery: undefined,
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "短刀"
-   */
+  /** maintenance skill for maintaining and repairing tools and weapons (machine translated) */
+  CAEC_Fallback_Maintenance: "保养",
+  /** masonry skill (machine translated) */
+  CAEC_Fallback_Masonry: "砌石",
+  /** mechanics skill, vehicle maintenance (machine translated) */
+  CAEC_Fallback_Mechanics: "机械",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing (machine translated) */
+  CAEC_Fallback_Metalworking: "金属加工",
+  /** pottery skill (machine translated) */
+  CAEC_Fallback_Pottery: "制陶",
+  /** short blade weapon skill */
   CAEC_Override_SmallBlade: "短刀",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "短棍"
-   */
+  /** short blunt weapon skill */
   CAEC_Override_SmallBlunt: "短棍",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "长矛"
-   */
+  /** spear weapon skill */
   CAEC_Override_Spear: "长矛",
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "缝纫"
-   */
-  CAEC_Override_Tailoring: undefined,
-  /** tracking skill */
-  CAEC_Fallback_Tracking: undefined,
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "诱捕"
-   *   IGUI_perks_Trapping = "诱捕"
-   */
-  CAEC_Override_Trapping: "诱捕",
+  /** tailoring skill (machine translated) */
+  CAEC_Fallback_Tailoring: "裁缝",
+  /** tracking skill (machine translated) */
+  CAEC_Fallback_Tracking: "追踪",
   /**
    * welding skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Welding = "金工"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "金工",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "手臂",
   /** lower body clothing, pants, shorts, skirts */
@@ -411,14 +371,14 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Bread = "面包"
    */
-  CAEC_Override_Bread: "面包",
+  CAEC_Fallback_Bread: "面包",
   /**
    * sweets and candies
    *
    * found in-game:
    *   ContextMenu_FoodType_Candy = "糖果"
    */
-  CAEC_Override_Candy: "糖果",
+  CAEC_Fallback_Candy: "糖果",
   /** canned food items */
   CAEC_Override_Canned: "罐头",
   /**
@@ -427,7 +387,7 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "奶酪"
    */
-  CAEC_Override_Cheese: "奶酪",
+  CAEC_Fallback_Cheese: "奶酪",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "料理",
   /**
@@ -436,7 +396,7 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "水果"
    */
-  CAEC_Override_Fruits: "水果",
+  CAEC_Fallback_Fruits: "水果",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -450,9 +410,14 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_HotPepper = "辣椒"
    */
-  CAEC_Override_HotPepper: "辣椒",
-  /** edible insects */
-  CAEC_Override_Insect: "昆虫",
+  CAEC_Fallback_HotPepper: "辣椒",
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "昆虫"
+   */
+  CAEC_Fallback_Insect: "昆虫",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Override_Livestock: "饲料",
   /**
@@ -461,21 +426,21 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Meat = "肉"
    */
-  CAEC_Override_Meat: "肉",
+  CAEC_Fallback_Meat: "肉",
   /**
    * mushrooms/fungi
    *
    * found in-game:
    *   ContextMenu_FoodType_Mushroom = "蘑菇"
    */
-  CAEC_Override_Mushroom: "蘑菇",
+  CAEC_Fallback_Mushroom: "蘑菇",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
    *   ContextMenu_FoodType_Nut = "坚果"
    */
-  CAEC_Override_Nut: "坚果",
+  CAEC_Fallback_Nut: "坚果",
   /** food items that can spoil */
   CAEC_Override_Perishable: "易腐",
   /** food for pets */
@@ -490,14 +455,14 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Seafood = "海鲜"
    */
-  CAEC_Override_Seafood: "海鲜",
+  CAEC_Fallback_Seafood: "海鲜",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
    *   ContextMenu_FoodType_Seed = "种子"
    */
-  CAEC_Override_Seed: "种子",
+  CAEC_Fallback_Seed: "种子",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "零食",
   /** spices and seasonings, salt, pepper, etc. */
@@ -510,21 +475,21 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Stock = "高汤"
    */
-  CAEC_Override_Stock: "高汤",
+  CAEC_Fallback_Stock: "高汤",
   /**
    * sugar and sweeteners
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "糖"
    */
-  CAEC_Override_Sugar: "糖",
+  CAEC_Fallback_Sugar: "糖",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "蔬菜"
    */
-  CAEC_Override_Vegetables: "蔬菜",
+  CAEC_Fallback_Vegetables: "蔬菜",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "成人",
   /** informational brochures */
@@ -551,6 +516,10 @@ export const CN: ExternalTranslations = {
   CAEC_Override_RpgManual: "RPG手册",
   /** softcover books */
   CAEC_Override_Softcover: "平装书",
+  /** bows and other ranged weapons that use string tension to launch projectiles (machine translated) */
+  CAEC_Override_Bow: "弓",
+  /** firearm drums (machine translated) */
+  CAEC_Fallback_Drum: "弹鼓",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "枪械",
   /** pistols and handguns */
@@ -569,7 +538,7 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "啤酒"
    */
-  CAEC_Override_Beer: "啤酒",
+  CAEC_Fallback_Beer: "啤酒",
   /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "饮品",
   /** mixed alcoholic drinks */
@@ -580,20 +549,20 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "咖啡"
    */
-  CAEC_Override_Coffee: undefined,
-  /** liquids used for dyeing or coloring */
-  CAEC_Override_Dye: undefined,
-  /** energy drinks or otherwise highly caffeinated soft drinks */
-  CAEC_Override_EnergyDrink: undefined,
-  /** liquid fuels such as gasoline, diesel, kerosene */
-  CAEC_Override_Fuel: undefined,
+  CAEC_Fallback_Coffee: "咖啡",
+  /** liquids used for dyeing or coloring (machine translated) */
+  CAEC_Override_Dye: "染料",
+  /** energy drinks or otherwise highly caffeinated soft drinks (machine translated) */
+  CAEC_Override_EnergyDrink: "能量饮料",
+  /** liquid fuels such as gasoline, diesel, kerosene (machine translated) */
+  CAEC_Override_Fuel: "燃料",
   /**
    * fruit juice
    *
    * found in-game:
    *   ContextMenu_FoodType_Juice = "果汁"
    */
-  CAEC_Override_Juice: "果汁",
+  CAEC_Fallback_Juice: "果汁",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "液体",
   /**
@@ -601,8 +570,9 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "牛奶"
+   *   ContextMenu_Milk = "牛奶"
    */
-  CAEC_Override_Milk: "牛奶",
+  CAEC_Fallback_Milk: "牛奶",
   /**
    * carbonated soft drinks
    *
@@ -616,7 +586,7 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "茶"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "茶",
   /**
    * drinking water
    *
@@ -630,35 +600,35 @@ export const CN: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Wine = "葡萄酒"
    */
-  CAEC_Override_Wine: "葡萄酒",
+  CAEC_Fallback_Wine: "葡萄酒",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "盒",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
   CAEC_Override_Bundled: "捆",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "箱",
-  /** compostable items such as animal dung, to be put in a composter */
-  CAEC_Override_Compostable: undefined,
+  /** compostable items such as animal dung, to be put in a composter (machine translated) */
+  CAEC_Override_Compostable: "可堆肥",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "自制",
-  /** items such as cups, mugs, glasses */
-  CAEC_Override_Cup: undefined,
-  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
-  CAEC_Override_Cutlery: undefined,
+  /** items such as cups, mugs, glasses (machine translated) */
+  CAEC_Override_Cup: "杯子",
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with (machine translated) */
+  CAEC_Override_Cutlery: "餐具",
   /** ring or bundle of keys */
   CAEC_Override_KeyRing: "钥匙环",
-  /** items such as pans/pots to cook in */
-  CAEC_Override_Pan: undefined,
+  /** items such as pans/pots to cook in (machine translated) */
+  CAEC_Override_Pan: "锅具",
   /** photos */
   CAEC_Override_Photo: "照片",
-  /** for plush toys such as spiffo, boris the badger and teddy bears */
-  CAEC_Override_Plushie: undefined,
-  /** packet of plantable seeds for gardening/farming */
-  CAEC_Override_SeedPacket: undefined,
+  /** for plush toys such as spiffo, boris the badger and teddy bears (machine translated) */
+  CAEC_Override_Plushie: "毛绒玩具",
+  /** packet of plantable seeds for gardening/farming (machine translated) */
+  CAEC_Override_SeedPacket: "种子包",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "吸烟",
-  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
-  CAEC_Override_Utensil: undefined,
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. (machine translated) */
+  CAEC_Override_Utensil: "厨具",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "可穿戴",
 };

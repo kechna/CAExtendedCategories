@@ -259,9 +259,9 @@ export const TRANSLATIONS = {
   /* ===== firearms ===== */
 
   /* bows and other ranged weapons that use string tension to launch projectiles */
-  CAEC_Override_Bow: "",
+  CAEC_Override_Bow: "Bow",
   /* firearm drums */
-  CAEC_Fallback_Drum: "",
+  CAEC_Fallback_Drum: "Drum",
   /* firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Firearm",
   /* pistols and handguns */

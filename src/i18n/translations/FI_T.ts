@@ -23,145 +23,185 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Accessory = "Lisävaruste"
    */
-  CAEC_Override_Accessory: undefined,
+  CAEC_Fallback_Accessory: "Lisävaruste",
   /**
    * firearm ammunition
    *
    * found in-game:
    *   IGUI_ItemCat_Ammo = "Ammus"
    */
-  CAEC_Override_Ammo: undefined,
-  /** animals */
+  CAEC_Fallback_Ammo: "Ammus",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Eläin"
+   */
   CAEC_Fallback_Animal: "Eläin",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Eläimen ruhonosa"
+   */
   CAEC_Fallback_AnimalPart: "Eläimen osa",
   /**
    * character appearance items such as makeup
    *
    * found in-game:
-   *   IGUI_ItemCat_Appearance = "Ulkomuoto"
+   *   IGUI_ItemCat_Appearance = "Ulkonäkö"
    */
-  CAEC_Override_Appearance: undefined,
+  CAEC_Fallback_Appearance: "Ulkonäkö",
   /**
    * camping supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Camping = "Telttailu"
    */
-  CAEC_Override_Camping: undefined,
+  CAEC_Fallback_Camping: "Telttailu",
   /**
    * maps of locations
    *
    * found in-game:
    *   IGUI_ItemCat_Cartography = "Kartografia"
    */
-  CAEC_Override_Cartography: undefined,
+  CAEC_Fallback_Cartography: "Kartografia",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Vaatetus"
    */
-  CAEC_Override_Clothing: undefined,
+  CAEC_Fallback_Clothing: "Vaatetus",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "Viestintä"
    */
-  CAEC_Override_Communications: undefined,
+  CAEC_Fallback_Communications: "Viestintä",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
    *   IGUI_ItemCat_Container = "Säiliö"
-   *   ContextMenu_Container = "Säiliöt"
+   *   ContextMenu_Container = "Säilöt"
    */
-  CAEC_Override_Container: undefined,
+  CAEC_Fallback_Container: "Säiliö",
   /**
    * cooking items such as pots, pans, utensils
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Ruoanlaitto"
-   *   IGUI_perks_Cooking = "Ruoanlaitto"
    */
-  CAEC_Override_Cooking: undefined,
+  CAEC_Fallback_Cooking: "Ruoanlaitto",
   /**
    * electronic items
    *
    * found in-game:
    *   IGUI_ItemCat_Electronics = "Elektroniikka"
    */
-  CAEC_Override_Electronics: undefined,
-  /** entertainment items */
+  CAEC_Fallback_Electronics: "Elektroniikka",
+  /**
+   * entertainment items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Entertainment = "Viihde"
+   */
   CAEC_Fallback_Entertainment: "Viihde",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Tulen lähde"
+   */
   CAEC_Fallback_FireSource: "Tulilähde",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "Ensiapu"
    *   IGUI_ItemCat_FirstAid = "Ensiapu"
    */
-  CAEC_Override_FirstAid: undefined,
+  CAEC_Fallback_FirstAid: "Ensiapu",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Kalastus"
+   *   ContextMenu_Fishing = "Kalastus"
+   *   IGUI_CraftCategory_Fishing = "Kalastus"
+   */
+  CAEC_Fallback_Fishing: "Kalastus",
   /**
    * food items
    *
    * found in-game:
-   *   IGUI_ItemCat_Food = "Ruokaa"
+   *   IGUI_ItemCat_Food = "Ruoka"
    */
-  CAEC_Override_Food: undefined,
+  CAEC_Fallback_Food: "Ruoka",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "Huonekalut"
    */
-  CAEC_Override_Furniture: undefined,
+  CAEC_Fallback_Furniture: "Huonekalut",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Puutarhanhoito"
+   *   ContextMenu_Gardening = "Puutarhanhoito"
+   */
+  CAEC_Fallback_Gardening: "Puutarhanhoito",
   /**
    * household items
    *
    * found in-game:
-   *   IGUI_ItemCat_Household = "talous"
+   *   IGUI_ItemCat_Household = "Kotitalous"
    */
-  CAEC_Override_Household: undefined,
+  CAEC_Fallback_Household: "Kotitalous",
   /**
    * instruments
    *
    * found in-game:
    *   IGUI_ItemCat_Instrument = "Instrumentti"
    */
-  CAEC_Override_Instrument: undefined,
+  CAEC_Fallback_Instrument: "Instrumentti",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
    *   IGUI_ItemCat_Junk = "Roskaa"
    */
-  CAEC_Override_Junk: undefined,
+  CAEC_Fallback_Junk: "Roskaa",
   /**
    * items that provide light such as flashlights, lanterns
    *
    * found in-game:
    *   IGUI_ItemCat_LightSource = "Valonlähde"
    */
-  CAEC_Override_LightSource: undefined,
+  CAEC_Fallback_LightSource: "Valonlähde",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Kirjallisuus"
    */
-  CAEC_Override_Literature: undefined,
+  CAEC_Fallback_Literature: "Kirjallisuus",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "Materiaali"
    */
-  CAEC_Override_Material: undefined,
-  /** keepsakes and souvenirs */
+  CAEC_Fallback_Material: "Materiaali",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Muistoesine"
+   */
   CAEC_Fallback_Memento: "Muisto",
   /**
    * paint items
@@ -169,8 +209,13 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Paint = "Maali"
    */
-  CAEC_Override_Paint: undefined,
-  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_Paint: "Maali",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Suojavaruste"
+   */
   CAEC_Fallback_ProtectiveGear: "Suojavarusteet",
   /**
    * skill books
@@ -178,56 +223,48 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "Taitokirja"
    */
-  CAEC_Override_SkillBook: undefined,
+  CAEC_Fallback_SkillBook: "Taitokirja",
   /**
    * sports items
    *
    * found in-game:
    *   IGUI_ItemCat_Sports = "Urheilu"
    */
-  CAEC_Override_Sports: undefined,
+  CAEC_Fallback_Sports: "Urheilu",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
    *   IGUI_ItemCat_Tool = "Työkalu"
    */
-  CAEC_Override_Tool: undefined,
+  CAEC_Fallback_Tool: "Työkalu",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Ansoitus"
+   */
+  CAEC_Fallback_Trapping: "Ansoitus",
   /**
    * vehicle maintenance items
    *
    * found in-game:
    *   IGUI_ItemCat_VehicleMaintenance = "Ajoneuvon huolto"
    */
-  CAEC_Override_VehicleMaintenance: undefined,
+  CAEC_Fallback_VehicleMaintenance: "Ajoneuvon huolto",
   /**
    * weapons in general
    *
    * found in-game:
    *   IGUI_ItemCat_Weapon = "Ase"
    */
-  CAEC_Override_Weapon: undefined,
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Kirves"
-   */
-  CAEC_Override_Axe: undefined,
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "seppä"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Pitkä Tylppä"
-   */
-  CAEC_Override_Blunt: undefined,
+  CAEC_Fallback_Weapon: "Ase",
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: "Kirves",
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Sepäntyöt",
+  /** long blunt weapon skill */
+  CAEC_Fallback_Blunt: "Pitkä tylppä ase",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Teurastus",
   /**
@@ -235,131 +272,59 @@ export const FI: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Puusepäntyöt"
-   *   IGUI_perks_Carpentry = "Puusepäntyöt"
    */
-  CAEC_Override_Carpentry: undefined,
+  CAEC_Fallback_Carpentry: "Puusepäntyöt",
   /** carving skill */
   CAEC_Fallback_Carving: "Veistäminen",
   /**
    * electrical skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Electrical = "Sähkö"
+   *   IGUI_CraftCategory_Electrical = "Sähkötyöt"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Sähkötyöt",
   /**
    * farming/agriculture skill
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Maanviljely"
-   *   IGUI_perks_Farming = "Maanviljely"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Kalastus"
-   *   IGUI_perks_Fishing = "Kalastus"
-   *   ContextMenu_Fishing = "Kalastus"
-   *   IGUI_CraftCategory_Fishing = "Kalastus"
-   */
-  CAEC_Override_Fishing: undefined,
+  CAEC_Fallback_Farming: "Maanviljely",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Piikiventyöstö",
-  /**
-   * foraging skill
-   *
-   * found in-game:
-   *   IGUI_perks_Foraging = "rehustaa"
-   */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Puutarhanhoito"
-   */
-  CAEC_Override_Gardening: undefined,
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Keräily",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Lasinvalmistus",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Pitkä Terä"
-   */
-  CAEC_Override_LongBlade: undefined,
-  /**
-   * maintenance skill for maintaining and repairing tools and weapons
-   *
-   * found in-game:
-   *   IGUI_perks_Maintenance = "Huolto"
-   */
-  CAEC_Override_Maintenance: undefined,
+  /** long blade weapon skill */
+  CAEC_Fallback_LongBlade: "Pitkä terä",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Huolto",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Muuraus",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Mekaniikka"
-   */
-  CAEC_Override_Mechanics: undefined,
-  /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
-   *
-   * found in-game:
-   *   IGUI_perks_Metalworking = "Metallintyöstö"
-   */
-  CAEC_Override_Metalworking: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mekaniikka",
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  CAEC_Fallback_Metalworking: "Metallityöt",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Keramiikka",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Lyhyt Terä"
-   */
-  CAEC_Override_SmallBlade: undefined,
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Lyhyt Tylppä"
-   */
-  CAEC_Override_SmallBlunt: undefined,
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Keihäs"
-   */
-  CAEC_Override_Spear: undefined,
-  /**
-   * tailoring skill
-   *
-   * found in-game:
-   *   IGUI_perks_Tailoring = "Räätälöinti"
-   */
-  CAEC_Override_Tailoring: undefined,
+  /** short blade weapon skill */
+  CAEC_Fallback_SmallBlade: "Lyhyt terä",
+  /** short blunt weapon skill */
+  CAEC_Fallback_SmallBlunt: "Lyhyt tylppä ase",
+  /** spear weapon skill */
+  CAEC_Fallback_Spear: "Keihäs",
+  /** tailoring skill */
+  CAEC_Fallback_Tailoring: "Ompelu",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Jäljitys",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Ansaintin"
-   *   IGUI_perks_Trapping = "Ansainti"
-   */
-  CAEC_Override_Trapping: undefined,
   /**
    * welding skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Welding = "Metallintyöstö"
+   *   IGUI_CraftCategory_Welding = "Hitsaaminen"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Hitsaaminen",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Käsivarret",
   /** lower body clothing, pants, shorts, skirts */
@@ -378,7 +343,7 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Head = "Pää"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Fallback_Head: "Pää",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
   CAEC_Override_Jewelry: "Korut",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
@@ -389,7 +354,7 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Neck = "Kaula"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Fallback_Neck: "Kaula",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Päällysvaatteet",
   /** hosiery and socks */
@@ -400,14 +365,29 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Underwear: "Alusvaatteet",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Leivonta",
-  /** baked bread products */
-  CAEC_Fallback_Bread: undefined,
-  /** sweets and candies */
+  /**
+   * baked bread products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Bread = "Leipä"
+   */
+  CAEC_Fallback_Bread: "Leipä",
+  /**
+   * sweets and candies
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Candy = "Karkkia"
+   */
   CAEC_Override_Candy: "Makeiset",
   /** canned food items */
   CAEC_Override_Canned: "Säilykkeet",
-  /** dairy cheese products */
-  CAEC_Fallback_Cheese: undefined,
+  /**
+   * dairy cheese products
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Cheese = "Juusto"
+   */
+  CAEC_Fallback_Cheese: "Juusto",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Valmisruoka",
   /**
@@ -416,12 +396,27 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "Hedelmiä"
    */
-  CAEC_Override_Fruits: undefined,
-  /** culinary or medicinal plants/herbs */
+  CAEC_Fallback_Fruits: "Hedelmiä",
+  /**
+   * culinary or medicinal plants/herbs
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Herb = "Yrttejä"
+   */
   CAEC_Fallback_Herb: "Yrtti",
-  /** spicy hot peppers */
+  /**
+   * spicy hot peppers
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_HotPepper = "Tulisia chilipaprikoita"
+   */
   CAEC_Fallback_HotPepper: "Tulipaprika",
-  /** edible insects */
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Hyönteinen"
+   */
   CAEC_Fallback_Insect: "Hyönteinen",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Karjanrehu",
@@ -431,10 +426,20 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Lihaa"
    */
-  CAEC_Override_Meat: undefined,
-  /** mushrooms/fungi */
+  CAEC_Fallback_Meat: "Lihaa",
+  /**
+   * mushrooms/fungi
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Mushroom = "Sieni"
+   */
   CAEC_Fallback_Mushroom: "Sieni",
-  /** nuts such as walnuts, almonds, peanuts */
+  /**
+   * nuts such as walnuts, almonds, peanuts
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Nut = "Pähkinä"
+   */
   CAEC_Fallback_Nut: "Pähkinät",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Pilaantuva",
@@ -444,9 +449,19 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Portion: "Annos",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Säilötty",
-  /** fish and other seafood */
+  /**
+   * fish and other seafood
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seafood = "Merenelävät"
+   */
   CAEC_Fallback_Seafood: "Merenelävät",
-  /** loose plantable seeds for gardening/farming */
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Siemeniä"
+   */
   CAEC_Fallback_Seed: "Siemen",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Välipala",
@@ -454,17 +469,27 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Spice: "Mauste",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Peruselintarvike",
-  /** items used to make cooking stock or broth, such as bouillon cubes */
+  /**
+   * items used to make cooking stock or broth, such as bouillon cubes
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Stock = "Liemi"
+   */
   CAEC_Fallback_Stock: "Liemi",
-  /** sugar and sweeteners */
-  CAEC_Fallback_Sugar: undefined,
+  /**
+   * sugar and sweeteners
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Sugar = "Sokeri"
+   */
+  CAEC_Fallback_Sugar: "Sokeri",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "Vihanneksia"
    */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Fallback_Vegetables: "Vihanneksia",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Aikuinen",
   /** informational brochures */
@@ -482,7 +507,7 @@ export const FI: ExternalTranslations = {
   /** literature magazines */
   CAEC_Override_Magazine: "Aikakauslehti",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "Sanomalehti",
   /** picture books */
   CAEC_Fallback_PictureBook: "Kuvakirja",
   /** recipes, readable items that teach you something */
@@ -491,6 +516,10 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Roolipelikäsikirja",
   /** softcover books */
   CAEC_Fallback_Softcover: "Pehmeäkantinen",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Jousi",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Rumpulipas",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Ampuma-ase",
   /** pistols and handguns */
@@ -503,7 +532,12 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Shotgun: "Haulikko",
   /** general alcoholic beverages */
   CAEC_Fallback_Alcohol: "Alkoholi",
-  /** alcoholic beer beverages */
+  /**
+   * alcoholic beer beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Beer = "Olut"
+   */
   CAEC_Fallback_Beer: "Olut",
   /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Juoma",
@@ -515,28 +549,44 @@ export const FI: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Kahvi"
    */
-  CAEC_Override_Coffee: undefined,
+  CAEC_Fallback_Coffee: "Kahvi",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Väriaine",
   /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "Energiajuoma",
   /** liquid fuels such as gasoline, diesel, kerosene */
   CAEC_Override_Fuel: "Polttoaine",
-  /** fruit juice */
+  /**
+   * fruit juice
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Juice = "Mehu"
+   */
   CAEC_Fallback_Juice: "Mehu",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Neste",
-  /** dairy milk */
-  CAEC_Fallback_Milk: undefined,
-  /** carbonated soft drinks */
-  CAEC_Override_SoftDrink: "Virvoitusjuoma",
+  /**
+   * dairy milk
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Milk = "Maito"
+   *   ContextMenu_Milk = "Lypsä"
+   */
+  CAEC_Fallback_Milk: "Maito",
+  /**
+   * carbonated soft drinks
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_SoftDrink = "Virvoitusjuoma"
+   */
+  CAEC_Fallback_SoftDrink: "Virvoitusjuoma",
   /**
    * tea beverage
    *
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Tee"
    */
-  CAEC_Override_Tea: undefined,
+  CAEC_Fallback_Tea: "Tee",
   /**
    * drinking water
    *
@@ -544,8 +594,13 @@ export const FI: ExternalTranslations = {
    *   ContextMenu_Water = "Kastele"
    */
   CAEC_Override_Water: "Vesi",
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: undefined,
+  /**
+   * alcoholic wine beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Wine = "Viini"
+   */
+  CAEC_Fallback_Wine: "Viini",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Laatikko",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */
@@ -561,7 +616,7 @@ export const FI: ExternalTranslations = {
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Aterimet",
   /** ring or bundle of keys */
-  CAEC_Override_KeyRing: undefined,
+  CAEC_Override_KeyRing: "Avainnippu",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pannu",
   /** photos */

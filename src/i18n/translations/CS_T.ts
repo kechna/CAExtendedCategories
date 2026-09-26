@@ -21,7 +21,7 @@ export const CS: ExternalTranslations = {
    * accessories such as watches, necklaces, belts, gloves
    *
    * found in-game:
-   *   IGUI_ItemCat_Accessory = "Vzhled"
+   *   IGUI_ItemCat_Accessory = "Doplněk"
    */
   CAEC_Override_Accessory: "Doplňky",
   /**
@@ -30,10 +30,20 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Ammo = "Munice"
    */
-  CAEC_Override_Ammo: undefined,
-  /** animals */
+  CAEC_Fallback_Ammo: "Munice",
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Zvíře"
+   */
   CAEC_Fallback_Animal: "Zvířata",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Část zvířete"
+   */
   CAEC_Fallback_AnimalPart: "Zvířecí části",
   /**
    * character appearance items such as makeup
@@ -41,12 +51,12 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Appearance = "Vzhled"
    */
-  CAEC_Override_Appearance: undefined,
+  CAEC_Fallback_Appearance: "Vzhled",
   /**
    * camping supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Camping = "Stanování"
+   *   IGUI_ItemCat_Camping = "Kempování"
    */
   CAEC_Override_Camping: "Stanování",
   /**
@@ -55,27 +65,27 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Cartography = "Kartografie"
    */
-  CAEC_Override_Cartography: undefined,
+  CAEC_Fallback_Cartography: "Kartografie",
   /**
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
    *   IGUI_ItemCat_Clothing = "Oblečení"
    */
-  CAEC_Override_Clothing: "Oblečení",
+  CAEC_Fallback_Clothing: "Oblečení",
   /**
    * communication devices such as walkie talkies, radios
    *
    * found in-game:
    *   IGUI_ItemCat_Communications = "Komunikace"
    */
-  CAEC_Override_Communications: undefined,
+  CAEC_Fallback_Communications: "Komunikace",
   /**
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
-   *   IGUI_ItemCat_Container = "Úložiště"
-   *   ContextMenu_Container = "Úložiště"
+   *   IGUI_ItemCat_Container = "Kontejner"
+   *   ContextMenu_Container = "Kontejnery"
    */
   CAEC_Override_Container: "Úložiště",
   /**
@@ -83,66 +93,86 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Cooking = "Vaření"
-   *   IGUI_perks_Cooking = "Vaření"
    */
-  CAEC_Override_Cooking: "Vaření",
+  CAEC_Fallback_Cooking: "Vaření",
   /**
    * electronic items
    *
    * found in-game:
    *   IGUI_ItemCat_Electronics = "Elektronika"
    */
-  CAEC_Override_Electronics: undefined,
+  CAEC_Fallback_Electronics: "Elektronika",
   /**
    * entertainment items
    *
    * found in-game:
    *   IGUI_ItemCat_Entertainment = "Zábava"
    */
-  CAEC_Override_Entertainment: "Zábava",
-  /** sources of fire such as matches and lighters */
+  CAEC_Fallback_Entertainment: "Zábava",
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Zdroj ohně"
+   */
   CAEC_Fallback_FireSource: "Zdroj ohně",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_perks_Doctor = "První pomoc"
    *   IGUI_ItemCat_FirstAid = "První pomoc"
    */
-  CAEC_Override_FirstAid: "První pomoc",
+  CAEC_Fallback_FirstAid: "První pomoc",
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Rybaření"
+   *   ContextMenu_Fishing = "Rybaření"
+   *   IGUI_CraftCategory_Fishing = "Rybaření"
+   */
+  CAEC_Fallback_Fishing: "Rybaření",
   /**
    * food items
    *
    * found in-game:
    *   IGUI_ItemCat_Food = "Jídlo"
    */
-  CAEC_Override_Food: "Jídlo",
+  CAEC_Fallback_Food: "Jídlo",
   /**
    * furniture items
    *
    * found in-game:
    *   IGUI_ItemCat_Furniture = "Nábytek"
    */
-  CAEC_Override_Furniture: "Nábytek",
+  CAEC_Fallback_Furniture: "Nábytek",
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Zahradničení"
+   *   ContextMenu_Gardening = "Zahradničení"
+   */
+  CAEC_Fallback_Gardening: "Zahradničení",
   /**
    * household items
    *
    * found in-game:
    *   IGUI_ItemCat_Household = "Domácnost"
    */
-  CAEC_Override_Household: "Domácnost",
+  CAEC_Fallback_Household: "Domácnost",
   /**
    * instruments
    *
    * found in-game:
    *   IGUI_ItemCat_Instrument = "Hudební nástroj"
    */
-  CAEC_Override_Instrument: "Hudební nástroj",
+  CAEC_Fallback_Instrument: "Hudební nástroj",
   /**
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "Veteš"
+   *   IGUI_ItemCat_Junk = "Šrot"
    */
   CAEC_Override_Junk: "Veteš",
   /**
@@ -151,22 +181,27 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_LightSource = "Zdroj světla"
    */
-  CAEC_Override_LightSource: "Zdroj světla",
+  CAEC_Fallback_LightSource: "Zdroj světla",
   /**
    * books and printed reading material
    *
    * found in-game:
    *   IGUI_ItemCat_Literature = "Literatura"
    */
-  CAEC_Override_Literature: undefined,
+  CAEC_Fallback_Literature: "Literatura",
   /**
    * crafting materials and building supplies
    *
    * found in-game:
    *   IGUI_ItemCat_Material = "Materiál"
    */
-  CAEC_Override_Material: "Materiál",
-  /** keepsakes and souvenirs */
+  CAEC_Fallback_Material: "Materiál",
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Památka"
+   */
   CAEC_Fallback_Memento: "Památka",
   /**
    * paint items
@@ -174,8 +209,13 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Paint = "Barva"
    */
-  CAEC_Override_Paint: undefined,
-  /** protective equipment such as body armor, helmets, knee pads */
+  CAEC_Fallback_Paint: "Barva",
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Ochranné vybavení"
+   */
   CAEC_Fallback_ProtectiveGear: "Ochranné vybavení",
   /**
    * skill books
@@ -183,26 +223,33 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_SkillBook = "Kniha dovedností"
    */
-  CAEC_Override_SkillBook: "Kniha dovedností",
+  CAEC_Fallback_SkillBook: "Kniha dovedností",
   /**
    * sports items
    *
    * found in-game:
    *   IGUI_ItemCat_Sports = "Sport"
    */
-  CAEC_Override_Sports: undefined,
+  CAEC_Fallback_Sports: "Sport",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
-   *   IGUI_ItemCat_Tool = "Nástroj"
+   *   IGUI_ItemCat_Tool = "Nářadí"
    */
   CAEC_Override_Tool: "Nástroj",
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Pasti"
+   */
+  CAEC_Fallback_Trapping: "Pasti",
   /**
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Údržba vozidel"
+   *   IGUI_ItemCat_VehicleMaintenance = "Údržba vozidla"
    */
   CAEC_Override_VehicleMaintenance: "Údržba vozidel",
   /**
@@ -211,27 +258,12 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Weapon = "Zbraň"
    */
-  CAEC_Override_Weapon: "Zbraň",
-  /**
-   * axe weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Axe = "Sekera"
-   */
-  CAEC_Override_Axe: undefined,
-  /**
-   * blacksmithing skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blacksmith = "Kovářství"
-   */
-  CAEC_Override_Blacksmith: undefined,
-  /**
-   * long blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Blunt = "Dlouhá tupá zbr."
-   */
+  CAEC_Fallback_Weapon: "Zbraň",
+  /** axe weapon skill */
+  CAEC_Fallback_Axe: "Sekera",
+  /** blacksmithing skill */
+  CAEC_Fallback_Blacksmith: "Kovářství",
+  /** long blunt weapon skill */
   CAEC_Override_Blunt: "Tupá zbraň",
   /** butchering skill */
   CAEC_Fallback_Butchering: "Řeznictví",
@@ -240,131 +272,89 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Carpentry = "Tesařství"
-   *   IGUI_perks_Carpentry = "Tesařství"
    */
-  CAEC_Override_Carpentry: undefined,
-  /** carving skill */
+  CAEC_Fallback_Carpentry: "Tesařství",
+  /**
+   * carving skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Carving = "Řezbářství"
+   */
   CAEC_Fallback_Carving: "Vyřezávání",
   /**
    * electrical skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Electrical = "Elektrikářství"
+   *   IGUI_CraftCategory_Electrical = "Elektrotechnika"
    */
-  CAEC_Override_Electrical: undefined,
+  CAEC_Fallback_Electrical: "Elektrotechnika",
   /**
    * farming/agriculture skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Farming = "Farmaření"
-   *   IGUI_perks_Farming = "Farmaření"
+   *   IGUI_CraftCategory_Farming = "Zemědělství"
    */
-  CAEC_Override_Farming: undefined,
-  /**
-   * fishing skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Fishing = "Rybaření"
-   *   IGUI_perks_Fishing = "Rybaření"
-   *   ContextMenu_Fishing = "Rybaření"
-   *   IGUI_CraftCategory_Fishing = "Rybaření"
-   */
-  CAEC_Override_Fishing: "Rybaření",
+  CAEC_Fallback_Farming: "Zemědělství",
   /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Pazourkářství",
+  /** foraging skill */
+  CAEC_Fallback_Foraging: "Sběr",
   /**
-   * foraging skill
+   * glassmaking skill
    *
    * found in-game:
-   *   IGUI_perks_Foraging = "Sběr zásob"
+   *   IGUI_CraftCategory_Glassmaking = "Sklářství"
    */
-  CAEC_Override_Foraging: undefined,
-  /**
-   * gardening skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Gardening = "Zahradničení"
-   */
-  CAEC_Override_Gardening: "Zahradničení",
-  /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Sklenářství",
-  /**
-   * long blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_LongBlade = "Dlouhá čepel"
-   */
+  /** long blade weapon skill */
   CAEC_Override_LongBlade: "Dlouhá čepel",
+  /** maintenance skill for maintaining and repairing tools and weapons */
+  CAEC_Fallback_Maintenance: "Údržba",
   /**
-   * maintenance skill for maintaining and repairing tools and weapons
+   * masonry skill
    *
    * found in-game:
-   *   IGUI_perks_Maintenance = "Údržba"
+   *   IGUI_CraftCategory_Masonry = "Zednictví"
    */
-  CAEC_Override_Maintenance: undefined,
-  /** masonry skill */
   CAEC_Fallback_Masonry: "Zednictví",
-  /**
-   * mechanics skill, vehicle maintenance
-   *
-   * found in-game:
-   *   IGUI_perks_Mechanics = "Mechanika"
-   */
-  CAEC_Override_Mechanics: undefined,
+  /** mechanics skill, vehicle maintenance */
+  CAEC_Fallback_Mechanics: "Mechanika",
   /**
    * metalworking skill (for items that are relevant in both welding and blacksmithing
    *
    * found in-game:
-   *   IGUI_perks_Metalworking = "Obrábění kovů"
+   *   IGUI_CraftCategory_Metalworking = "Kovovýroba"
    */
-  CAEC_Override_Metalworking: undefined,
-  /** pottery skill */
+  CAEC_Fallback_Metalworking: "Kovovýroba",
+  /**
+   * pottery skill
+   *
+   * found in-game:
+   *   IGUI_CraftCategory_Pottery = "Hrnčířství"
+   */
   CAEC_Fallback_Pottery: "Hrnčířství",
-  /**
-   * short blade weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlade = "Krátká čepel"
-   */
+  /** short blade weapon skill */
   CAEC_Override_SmallBlade: "Krátká čepel",
-  /**
-   * short blunt weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_SmallBlunt = "Krátká tupá zbr."
-   */
+  /** short blunt weapon skill */
   CAEC_Override_SmallBlunt: "Krátká tupá zbraň",
-  /**
-   * spear weapon skill
-   *
-   * found in-game:
-   *   IGUI_perks_Spear = "Oštěp"
-   */
+  /** spear weapon skill */
   CAEC_Override_Spear: "Oštěp",
   /**
    * tailoring skill
    *
    * found in-game:
-   *   IGUI_perks_Tailoring = "Krejčovství"
+   *   IGUI_CraftCategory_Tailoring = "Krejčovství"
    */
-  CAEC_Override_Tailoring: undefined,
+  CAEC_Fallback_Tailoring: "Krejčovství",
   /** tracking skill */
   CAEC_Fallback_Tracking: "Stopování",
-  /**
-   * trapping skill and items
-   *
-   * found in-game:
-   *   IGUI_ItemCat_Trapping = "Pasti"
-   *   IGUI_perks_Trapping = "Odchyt zvěře"
-   */
-  CAEC_Override_Trapping: "Pasti",
   /**
    * welding skill
    *
    * found in-game:
-   *   IGUI_CraftCategory_Welding = "Obrábění kovů"
+   *   IGUI_CraftCategory_Welding = "Svařování"
    */
-  CAEC_Override_Welding: undefined,
+  CAEC_Fallback_Welding: "Svařování",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Paže",
   /** lower body clothing, pants, shorts, skirts */
@@ -383,7 +373,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Head = "Hlava"
    */
-  CAEC_Override_Head: undefined,
+  CAEC_Fallback_Head: "Hlava",
   /** jewelry items that can be scrapped for metal, such as rings, necklaces, earrings */
   CAEC_Override_Jewelry: "Šperky",
   /** for lower body accessories/protective gear, such as knee pads, leg guards */
@@ -394,7 +384,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   IGUI_health_Neck = "Krk"
    */
-  CAEC_Override_Neck: undefined,
+  CAEC_Fallback_Neck: "Krk",
   /** upper body apparel that is worn on the outer layer, such as jackets, coats, ponchos */
   CAEC_Override_Outerwear: "Svrchní oblečení",
   /** hosiery and socks */
@@ -411,14 +401,14 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Bread = "Chléb"
    */
-  CAEC_Override_Bread: "Chléb",
+  CAEC_Fallback_Bread: "Chléb",
   /**
    * sweets and candies
    *
    * found in-game:
-   *   ContextMenu_FoodType_Candy = "Bonbón"
+   *   ContextMenu_FoodType_Candy = "Cukrovinky"
    */
-  CAEC_Override_Candy: "Bonbón",
+  CAEC_Override_Candy: "Sladkosti",
   /** canned food items */
   CAEC_Override_Canned: "Konzervy",
   /**
@@ -427,7 +417,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Cheese = "Sýr"
    */
-  CAEC_Override_Cheese: "Sýr",
+  CAEC_Fallback_Cheese: "Sýr",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Hotová jídla",
   /**
@@ -436,22 +426,27 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Fruits = "Ovoce"
    */
-  CAEC_Override_Fruits: undefined,
+  CAEC_Fallback_Fruits: "Ovoce",
   /**
    * culinary or medicinal plants/herbs
    *
    * found in-game:
-   *   ContextMenu_FoodType_Herb = "Bylina"
+   *   ContextMenu_FoodType_Herb = "Bylinky"
    */
-  CAEC_Override_Herb: undefined,
+  CAEC_Fallback_Herb: "Bylinky",
   /**
    * spicy hot peppers
    *
    * found in-game:
    *   ContextMenu_FoodType_HotPepper = "Pálivé papriky"
    */
-  CAEC_Override_HotPepper: "Pálivé papriky",
-  /** edible insects */
+  CAEC_Fallback_HotPepper: "Pálivé papriky",
+  /**
+   * edible insects
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Insect = "Hmyz"
+   */
   CAEC_Fallback_Insect: "Hmyz",
   /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
   CAEC_Fallback_Livestock: "Hospodářská krmiva",
@@ -461,21 +456,21 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Maso"
    */
-  CAEC_Override_Meat: undefined,
+  CAEC_Fallback_Meat: "Maso",
   /**
    * mushrooms/fungi
    *
    * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Houba"
+   *   ContextMenu_FoodType_Mushroom = "Houby"
    */
-  CAEC_Override_Mushroom: undefined,
+  CAEC_Fallback_Mushroom: "Houby",
   /**
    * nuts such as walnuts, almonds, peanuts
    *
    * found in-game:
-   *   ContextMenu_FoodType_Nut = "Nut"
+   *   ContextMenu_FoodType_Nut = "Ořechy"
    */
-  CAEC_Override_Nut: "Ořechy",
+  CAEC_Fallback_Nut: "Ořechy",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Kazící se",
   /** food for pets */
@@ -488,14 +483,14 @@ export const CS: ExternalTranslations = {
    * fish and other seafood
    *
    * found in-game:
-   *   ContextMenu_FoodType_Seafood = "Plody moře"
+   *   ContextMenu_FoodType_Seafood = "Mořské plody"
    */
   CAEC_Override_Seafood: "Plody moře",
   /**
    * loose plantable seeds for gardening/farming
    *
    * found in-game:
-   *   ContextMenu_FoodType_Seed = "Semínko"
+   *   ContextMenu_FoodType_Seed = "Semena"
    */
   CAEC_Override_Seed: "Semínko",
   /** snack foods (e.g. chips, cookies) */
@@ -508,23 +503,23 @@ export const CS: ExternalTranslations = {
    * items used to make cooking stock or broth, such as bouillon cubes
    *
    * found in-game:
-   *   ContextMenu_FoodType_Stock = "Stock"
+   *   ContextMenu_FoodType_Stock = "Vývar"
    */
-  CAEC_Override_Stock: "Vývar",
+  CAEC_Fallback_Stock: "Vývar",
   /**
    * sugar and sweeteners
    *
    * found in-game:
    *   ContextMenu_FoodType_Sugar = "Cukr"
    */
-  CAEC_Override_Sugar: undefined,
+  CAEC_Fallback_Sugar: "Cukr",
   /**
    * vegetables, including leafy greens
    *
    * found in-game:
    *   ContextMenu_FoodType_Vegetables = "Zelenina"
    */
-  CAEC_Override_Vegetables: undefined,
+  CAEC_Fallback_Vegetables: "Zelenina",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Pro dospělé",
   /** informational brochures */
@@ -542,7 +537,7 @@ export const CS: ExternalTranslations = {
   /** literature magazines */
   CAEC_Override_Magazine: "Časopis",
   /** newspapers */
-  CAEC_Fallback_Newspaper: undefined,
+  CAEC_Fallback_Newspaper: "Noviny",
   /** picture books */
   CAEC_Fallback_PictureBook: "Obrázková kniha",
   /** recipes, readable items that teach you something */
@@ -551,6 +546,10 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Příručka RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Brožovaná",
+  /** bows and other ranged weapons that use string tension to launch projectiles */
+  CAEC_Override_Bow: "Luk",
+  /** firearm drums */
+  CAEC_Fallback_Drum: "Bubnový zásobník",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Střelné zbraně",
   /** pistols and handguns */
@@ -569,7 +568,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Pivo"
    */
-  CAEC_Override_Beer: "Pivo",
+  CAEC_Fallback_Beer: "Pivo",
   /** top-level category for drinkable liquids */
   CAEC_Override_Beverage: "Nápoj",
   /** mixed alcoholic drinks */
@@ -580,7 +579,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Coffee = "Káva"
    */
-  CAEC_Override_Coffee: "Káva",
+  CAEC_Fallback_Coffee: "Káva",
   /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "Barvivo",
   /** energy drinks or otherwise highly caffeinated soft drinks */
@@ -593,7 +592,7 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Juice = "Džus"
    */
-  CAEC_Override_Juice: "Džus",
+  CAEC_Fallback_Juice: "Džus",
   /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
   CAEC_Override_Liquid: "Tekutina",
   /**
@@ -601,13 +600,14 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   ContextMenu_FoodType_Milk = "Mléko"
+   *   ContextMenu_Milk = "Mléko"
    */
-  CAEC_Override_Milk: "Mléko",
+  CAEC_Fallback_Milk: "Mléko",
   /**
    * carbonated soft drinks
    *
    * found in-game:
-   *   ContextMenu_FoodType_SoftDrink = "Jemný nápoj"
+   *   ContextMenu_FoodType_SoftDrink = "Nealkoholický nápoj"
    */
   CAEC_Override_SoftDrink: "Limonáda",
   /**
@@ -616,16 +616,21 @@ export const CS: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Tea = "Čaj"
    */
-  CAEC_Override_Tea: "Čaj",
+  CAEC_Fallback_Tea: "Čaj",
   /**
    * drinking water
    *
    * found in-game:
-   *   ContextMenu_Water = "Voda"
+   *   ContextMenu_Water = "Zalít"
    */
-  CAEC_Override_Water: undefined,
-  /** alcoholic wine beverages */
-  CAEC_Override_Wine: "Víno",
+  CAEC_Override_Water: "Voda",
+  /**
+   * alcoholic wine beverages
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Wine = "Víno"
+   */
+  CAEC_Fallback_Wine: "Víno",
   /** things in a (small) box, such as boxes of ammo */
   CAEC_Override_Box: "Krabice",
   /** things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope */

@@ -7,7 +7,7 @@ if not Utils.modIsActive("firearmmod") then return end
 CAEC.registerInitHook("Mod:Firearms", function ()
   Ammo.registerAmmoGroup("firearms:bullets_22", Ammo.AmmoGroup.HANDGUN)
   Ammo.registerAmmoGroup("firearms:bullets_10mm", Ammo.AmmoGroup.HANDGUN)
-  Ammo.registerAmmoGroup("firearms:bullets_762x51", Ammo.AmmoGroup.HANDGUN)
+  Ammo.registerAmmoGroup("firearms:bullets_762x51", Ammo.AmmoGroup.RIFLE)
   Ammo.registerAmmoGroup("firearms:bullets_762x39", Ammo.AmmoGroup.RIFLE)
   Ammo.registerAmmoGroup("firearms:bullets_30_06", Ammo.AmmoGroup.RIFLE)
   Ammo.registerAmmoGroup("firearms:bullets_44_40", Ammo.AmmoGroup.HANDGUN)
