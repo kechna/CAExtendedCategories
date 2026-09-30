@@ -84,16 +84,19 @@ end
 ---@overload fun(name: string, fn: (fun(item: Item, instance?: InventoryItem): string?, bool), priority?: number, mode?: "script" | "instance")
 ---@overload fun(name: string, priority?: number, mode?: "script" | "instance")
 function Processors.registerCategorizer(name, fn, priority, mode)
-  mode = mode or "script"
-
   if not fn or type(fn) == "number" then
+    mode = priority
     priority = fn
     fn = nil
   end
 
+  mode = mode or "script"
+
   priority = priority or 500
 
-  table.insert(mode == "instance" and Processors.InstanceCategorizers or Processors.ScriptCategorizers, {
+  local list = (mode == "instance") and Processors.InstanceCategorizers or Processors.ScriptCategorizers
+
+  table.insert(list, {
     name = name,
     priority = priority,
     callback = fn or bootstrapCategorizer(name)
@@ -102,7 +105,9 @@ function Processors.registerCategorizer(name, fn, priority, mode)
   Processors.CategorizersSorted = false
   Processors.CategorizersByNameCache = {}
 
-  Debug.log(string.format("Registered categorizer: %s (mode: %s, priority: %d)", name, mode, priority), "Processors")
+  Debug.log(
+    string.format("Registered %s categorizer #%-2d: %s (priority: %d)", mode, #list, name, priority), "Processors"
+  )
 end
 
 ---@param name string
@@ -173,7 +178,7 @@ function Processors.getCategorizers(mode)
     Processors.CategorizersSorted = true
   end
 
-  return mode == "instance" and Processors.InstanceCategorizers or Processors.ScriptCategorizers
+  return (mode == "instance") and Processors.InstanceCategorizers or Processors.ScriptCategorizers
 end
 
 CAEC_Processors = Processors

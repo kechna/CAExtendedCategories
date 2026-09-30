@@ -637,6 +637,17 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Bundled: "Svazek",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Budík"
+   */
+  CAEC_Fallback_AlarmClock: "Budík",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Dálkový ovladač",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Vysílačka",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostovatelné",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -657,6 +668,8 @@ export const CS: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Sáček se semeny",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Kouření",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Cetka",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Kuchyňské náčiní",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

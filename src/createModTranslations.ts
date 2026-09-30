@@ -13,6 +13,7 @@ import { useTranslations } from "./i18n/useTranslations.ts";
 import { ALL_TRANSLATIONS } from "./i18n/translations";
 import { TOOL_ADDON } from "./categories.ts";
 import { MOD_INFO_TRANSLATIONS } from "./modInfo.ts";
+import { MOD_OPTIONS_TRANSLATIONS } from "./modOptions.ts";
 import type { sandboxOptions } from "../sandboxOptions.ts";
 
 export const createModTranslations = (async (
@@ -71,6 +72,7 @@ export const createModTranslations = (async (
   );
 
   SUPPORTED_LANGUAGES.forEach((language) => {
+    addOr(PzCategory.Household, PzCategory.Literature, language);
     addOr(PzCategory.Literature, PzCategory.Junk, language);
     addOr(PzCategory.Material, PzCategory.Junk, language);
     addOr(PzCategory.Memento, PzCategory.Container, language);
@@ -111,6 +113,12 @@ export const createModTranslations = (async (
     });
   });
 
+  Object.entries(MOD_OPTIONS_TRANSLATIONS).forEach(([lang, translations]) => {
+    Object.entries(translations).forEach(([key, value]) => {
+      created[lang as Language][`IGUI_CAEC_Options_${key}`] = value;
+    });
+  });
+
   return {
     [Translations.MOD]: MOD_INFO_TRANSLATIONS,
     [Translations.IGUI]: created,
@@ -124,6 +132,9 @@ export const createModTranslations = (async (
         LogVerbosity_option2: "Info",
         LogVerbosity_option3: "Warning",
         LogVerbosity_option4: "Error",
+        ItemCategoryOverrides: "Item category overrides",
+        ItemCategoryOverrides_tooltip:
+          "Force specific items into a category. Separate entries with commas, using the full item name and the category ID, e.g. Base.Zipties=MaterialMaintenance, Base.Notebook=Literature__Junk",
 
         // DistinctAmmoTypes: "Categorize ammo by caliber [WIP]",
         //     DistinctAmmoTypes_tooltip:

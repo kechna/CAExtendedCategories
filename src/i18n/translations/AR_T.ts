@@ -601,6 +601,17 @@ export const AR: ExternalTranslations = {
   CAEC_Override_Bundled: "Atado",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Cartón",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Reloj despertador"
+   */
+  CAEC_Fallback_AlarmClock: "Reloj despertador",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Control remoto",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Walkie-talkie",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostable",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -621,6 +632,8 @@ export const AR: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Sobre de semillas",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Chuchería",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Utensilio de cocina",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

@@ -1,7 +1,7 @@
 local CAEC = require("CAExtendedCategories/CAEC")
 
-Events.OnInitWorld.Add(function ()
-  CAEC.initialize("shared:OnInitWorld")
+Events.OnLoadMapZones.Add(function ()
+  CAEC.initialize("shared:OnLoadMapZones")
 end)
 
 -- OnContainerUpdate often fires several times in a row for the same container, so queue the containers and
@@ -53,3 +53,30 @@ Events.OnContainerUpdate.Add(function (containerItem)
     Events.OnTick.Add(processPendingContainers)
   end
 end)
+
+--ItemTweaker = ItemTweaker or {}
+
+--Events.OnGameBoot.Add(function ()
+--  local realGetDebug = getDebug
+--  local realPrint = print
+--
+--  local stfu = function ()
+--    getDebug = function () return false end
+--    print = function () end
+--  end
+--
+--  local unstfu = function ()
+--    getDebug = realGetDebug
+--    print = realPrint
+--  end
+--
+--  if ItemTweaker.tweakItems then
+--    local oldFn = ItemTweaker.tweakItems
+--
+--    ItemTweaker.tweakItems = function (...)
+--      stfu()
+--      oldFn(...)
+--      unstfu()
+--    end
+--  end
+--end)

@@ -197,8 +197,8 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Preserved: "Preserba",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Pagkaing-dagat",
-  /** seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
-  CAEC_Fallback_Seed: "Buto",
+  /** loose plantable seeds for gardening/farming */
+  CAEC_Override_Seed: "Binhi",
   /** snack foods (e.g. chips, cookies) */
   CAEC_Override_Snack: "Merienda",
   /** spices and seasonings, salt, pepper, etc. */
@@ -287,6 +287,12 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Bundled: "Nakabigkis",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /** alarm clocks and similar devices */
+  CAEC_Override_AlarmClock: "Alarm Clock",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Remote",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Walkie-Talkie",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Pang-kompost",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -303,12 +309,12 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Photo: "Litrato",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Stuffed Toy",
-  /** loose plantable seeds for gardening/farming */
-  CAEC_Override_Seed: "Binhi",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pakete ng Buto",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Paninigarilyo",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Palamuti",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Kagamitan sa Kusina",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

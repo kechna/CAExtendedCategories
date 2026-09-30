@@ -9,6 +9,10 @@ local CAEC = {}
 
 CAEC_Global = CAEC_Global or {}
 
+---called with the category whenever an item instance gets one assigned (set by the client, e.g. for category colors)
+---@type fun(category: string) | nil
+CAEC.onInstanceCategory = nil
+
 ---@param trigger string?
 function CAEC.initialize(trigger)
   trigger = trigger or "CAEC.Initialize"
@@ -77,9 +81,8 @@ end
 ---@return string | nil, boolean
 function CAEC.categorizeItem(item, instance)
   local itemName = item:getFullName()
-
-  ---@type string | nil
-  local category = Core.ItemTweaks[itemName] or Core.StaticCategories[itemName]
+    ---@type string | nil
+  local category = Core.ItemTweaks[itemName]
 
   if NONE == category then
     return nil, false
@@ -123,24 +126,17 @@ function CAEC.updateInstanceItems(items, trigger)
 
   local total = items:size()
 
+  local doAfter = table.newarray()
+
   for i = 0, total - 1 do
     local instance = items:get(i)
     local item = instance:getScriptItem()
     local itemName = item:getFullName()
 
     ---@type string | nil
-    local category = Core.ItemTweaks[itemName] or Core.StaticCategories[itemName]
+    local category = Core.ItemTweaks[itemName]
     ---@type boolean
     local instanceSpecific = Core.InstanceSpecific[itemName] or false
-
-    if debug then
-      Debug.log(
-        string.format(
-          "Processing instance: %s (item: %s) - instanceSpecific: %s, staticCategory: %s", instance:getName(), itemName,
-          tostring(instanceSpecific), tostring(category)
-        ), "updateInstanceItems"
-      )
-    end
 
     if nil == category or instanceSpecific then
       category = CAEC.categorizeItem(item, instance)
@@ -151,6 +147,10 @@ function CAEC.updateInstanceItems(items, trigger)
         end
 
         instance:setDisplayCategory(category)
+
+        if CAEC.onInstanceCategory then
+          CAEC.onInstanceCategory(category)
+        end
       end
     end
   end
@@ -177,6 +177,10 @@ function CAEC.updateInstanceItem(instance, categorizer, trigger)
 
   if category and category ~= NONE then
     instance:setDisplayCategory(category)
+
+    if CAEC.onInstanceCategory then
+      CAEC.onInstanceCategory(category)
+    end
   end
 end
 

@@ -607,6 +607,17 @@ export const CH: ExternalTranslations = {
   CAEC_Override_Bundled: "捆",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "箱",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "鐘錶"
+   */
+  CAEC_Fallback_AlarmClock: "鐘錶",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "遙控器",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "對講機",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "可堆肥",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -627,6 +638,8 @@ export const CH: ExternalTranslations = {
   CAEC_Override_SeedPacket: "種子包",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "菸品",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "小飾品",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "廚具",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

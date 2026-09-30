@@ -2,7 +2,7 @@ local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer"
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 
----@class CAEC_FluidContainer : CAEC_ItemCategorizer
+---@class CAEC_FluidContainer: CAEC_ItemCategorizer
 ---@field searchTags ItemTag[]
 local FluidContainer = CAEC_ItemCategorizer:derive("FluidContainer")
 
@@ -11,11 +11,8 @@ function FluidContainer:new()
   local o = CAEC_ItemCategorizer.new(self)
 
   o.searchTags = {
-    ItemTag.GLASS_BOTTLE,
-    ItemTag.GLASS_BOTTLE_SMALL,
-    ItemTag.SEALED_BEVERAGE_CAN,
-    ItemTag.EMPTY_CAN,
-    ItemTag.ALCOHOLIC_BEVERAGE,
+    ItemTag.GLASS_BOTTLE, ItemTag.GLASS_BOTTLE_SMALL, ItemTag.SEALED_BEVERAGE_CAN, ItemTag.EMPTY_CAN,
+    ItemTag.ALCOHOLIC_BEVERAGE
   }
 
   return o
@@ -42,7 +39,7 @@ function FluidContainer:categorize(item, instance)
     return nil, true
   end
 
-  ---@type string|nil
+  ---@type string | nil
   local category = nil
 
   local container = instance:getFluidContainer()
@@ -51,15 +48,9 @@ function FluidContainer:categorize(item, instance)
   if container:isEmpty() then
     category = "ContainerLiquid"
 
-    if containerName == "pot"
-        or containerName == "pan"
-        or containerName == "saucepan"
-    then
+    if containerName == "pot" or containerName == "pan" or containerName == "saucepan" then
       category = "CookingPan"
-    elseif containerName == "cup"
-        or containerName:contains("mug")
-        or containerName:contains("glass")
-    then
+    elseif containerName == "cup" or containerName:contains("mug") or containerName:contains("glass") then
       category = "CookingCup"
     end
 
@@ -70,19 +61,22 @@ function FluidContainer:categorize(item, instance)
   local fluidType = fluid:getFluidType()
   local fluidTypeString = fluid:getFluidTypeString():lower()
 
-  if fluid:isCategory(FluidCategory.Dyes) then
+  if fluidTypeString == "cookingoil" then
+    category = "Cooking__Liquid"
+  elseif fluidTypeString == "cleaningliquid" or fluidTypeString == "bleach" then
+    category = "Household__Liquid"
+  elseif fluid:isCategory(FluidCategory.Dyes) then
     category = "LiquidDye"
   elseif fluid:isCategory(FluidCategory.HairDyes) then
-    category = "AppearanceOrLiquid"
+    category = "Appearance__Liquid"
   elseif fluid:isCategory(FluidCategory.Fuel) then
     category = "LiquidFuel"
   elseif fluid:isCategory(FluidCategory.Medical) then
-    category = "FirstAidOrLiquid"
-  elseif fluidTypeString == "cookingoil" then
-    category = "CookingOrLiquid"
-  elseif fluidTypeString == "cleaningliquid"
-    or fluidTypeString == "bleach" then
-    category = "HouseholdOrLiquid"
+    category = "FirstAid__Liquid"
+  elseif fluid:isCategory(FluidCategory.Poisons)
+    or fluid:isCategory(FluidCategory.Industrial) then
+    -- perfume, cologne = poison, not sure what industrial is
+    category = "Liquid"
   end
 
   if category then
@@ -91,26 +85,17 @@ function FluidContainer:categorize(item, instance)
 
   if fluid:isCategory(FluidCategory.Water) then
     category = "BeverageWater"
-  elseif fluidType:equals(FluidType.CowMilk)
-      or fluidType:equals(FluidType.SheepMilk)
-      or fluidType:equals(FluidType.AnimalMilk)
-      or fluidTypeString:contains("milk")
-  then
+  elseif fluidType:equals(FluidType.CowMilk) or fluidType:equals(FluidType.SheepMilk)
+    or fluidType:equals(FluidType.AnimalMilk) or fluidTypeString:contains("milk") then
     category = "BeverageMilk"
   elseif fluidType:equals(FluidType.Coffee) then
     category = "BeverageCoffee"
-  elseif fluidType:equals(FluidType.Tea)
-      or item:hasTag(ItemTag.HERBAL_TEA) then
+  elseif fluidType:equals(FluidType.Tea) or item:hasTag(ItemTag.HERBAL_TEA) then
     category = "BeverageTea"
-  elseif fluidType:equals(FluidType.SodaPop)
-      or fluidTypeString:contains("soda")
-      or fluidTypeString:contains("cola")
-      or fluidTypeString:contains("gingerale")
-  then
+  elseif fluidType:equals(FluidType.SodaPop) or fluidTypeString:contains("soda")
+    or fluidTypeString:contains("cola") or fluidTypeString:contains("gingerale") then
     category = "BeverageSoftDrink"
-  elseif fluidType:equals(FluidType.SpiffoJuice)
-      or fluidTypeString:contains("juice")
-  then
+  elseif fluidType:equals(FluidType.SpiffoJuice) or fluidTypeString:contains("juice") then
     category = "BeverageJuice"
   elseif fluidType:equals(FluidType.Beer) then
     category = "BeverageBeer"
@@ -118,15 +103,15 @@ function FluidContainer:categorize(item, instance)
     category = "BeverageWine"
   elseif fluid:isCategory(FluidCategory.Alcoholic) then
     category = "BeverageAlcohol"
-  elseif fluidTypeString:contains( --[[Sapph's Cooking]] "energydrink") then
+  elseif fluidTypeString:contains( --[[Sapph's Cooking]]
+    "energydrink"
+  ) then
     category = "BeverageEnergyDrink"
   else
     category = "Beverage"
   end
 
-  if category
-      and container:isMixture()
-      and container:isCategory(FluidCategory.Alcoholic) then
+  if category and container:isMixture() and container:isCategory(FluidCategory.Alcoholic) then
     category = "BeverageCocktail"
   end
 

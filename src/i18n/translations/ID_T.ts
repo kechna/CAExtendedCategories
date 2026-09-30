@@ -602,6 +602,17 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Bundled: "Ikatan",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Jam Alarm"
+   */
+  CAEC_Fallback_AlarmClock: "Jam Alarm",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Remot",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Walkie-talkie",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompos",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -622,6 +633,8 @@ export const ID: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Paket Benih",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rokok",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Pernak-pernik",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Peralatan Dapur",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

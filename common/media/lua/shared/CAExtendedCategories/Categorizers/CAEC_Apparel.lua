@@ -343,7 +343,7 @@ function Apparel:categorize(item, instance)
         :gsub("Clothing", initialCategory)
         :gsub("Accessory", initialCategory)
     elseif item:hasTag(ItemTag.SPRAYER) then
-      category = category .. "OrGardening"
+      category = category .. "__Gardening"
     end
   end
 

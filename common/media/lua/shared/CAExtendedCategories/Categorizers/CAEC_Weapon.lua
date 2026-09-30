@@ -18,7 +18,6 @@ local WeaponComboCategories = {
   Instrument = true,
   Junk = true,
   Material = true,
-  Sports = true,
   VehicleMaintenance = true,
 
   Tool = true,
@@ -84,7 +83,7 @@ function Weapon:asMeleeWeapon(item, _instance)
       local trimmed = original:gsub("Weapon", "")
 
       if trimmed ~= "" and WeaponComboCategories[trimmed] then
-        category = trimmed .. "Or" .. category
+        category = trimmed .. "__" .. category
       end
     end
   end

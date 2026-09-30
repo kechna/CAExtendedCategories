@@ -246,7 +246,7 @@ export const NL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Trapping = "Vallen zetten"
-   *   IGUI_perks_Trapping = "NL.CAEC_Override_Trapping ?? NL.CAEC_Fallback_Trapping"
+   *   IGUI_perks_Trapping = "Vallen zetten"
    */
   CAEC_Fallback_Trapping: "Vallen zetten",
   /**
@@ -708,6 +708,17 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Bundled: "Gebundeld",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Kartonnen doos",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Wekker"
+   */
+  CAEC_Fallback_AlarmClock: "Wekker",
+  /** remote controls and similar devices (machine translated) */
+  CAEC_Override_Remote: "Afstandsbediening",
+  /** walkie talkies and similar communication devices (machine translated) */
+  CAEC_Override_Walkie: "Walkietalkie",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Composteerbaar",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -728,6 +739,8 @@ export const NL: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Zadenpakket",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Roken",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms (machine translated) */
+  CAEC_Override_Trinket: "Snuisterij",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Keukengerei",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

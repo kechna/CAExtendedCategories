@@ -113,7 +113,7 @@ export const useTranslations = async (context: FullModContext, languages: readon
   };
 
   const addOr = (keyA: string, keyB: string, language: Language, searchKeys: string[] = []): void => {
-    const key = `${keyA}Or${keyB}`;
+    const key = `${keyA}__${keyB}`;
     const allKeys = [...searchKeys, "IGUI_ItemCat_%s"];
     const [a] = t(allKeys, keyA, language);
     const [b] = t(allKeys, keyB, language);

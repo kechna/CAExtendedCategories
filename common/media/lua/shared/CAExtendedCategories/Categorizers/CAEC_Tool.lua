@@ -10,15 +10,15 @@ local CategoryOverrides = {
   ["Base.LargeHook"] = "Material",
 
   -- currently(?) unused but categorized as tool
-  ["Base.CrudeBenchVise"] = "ToolOrJunk",
-  ["Base.CrudeBenchViseParts"] = "ToolOrJunk",
-  ["Base.Funnel"] = "ToolOrJunk",
-  ["Base.Loupe"] = "ToolOrJunk",
-  ["Base.MeasuringTape"] = "ToolOrJunk",
+  ["Base.CrudeBenchVise"] = "Tool__Junk",
+  ["Base.CrudeBenchViseParts"] = "Tool__Junk",
+  ["Base.Funnel"] = "Tool__Junk",
+  ["Base.Loupe"] = "Tool__Junk",
+  ["Base.MeasuringTape"] = "Tool__Junk",
 
   -- not even smeltable
-  ["Base.HeavyChain"] = "MaterialOrJunk",
-  ["Base.HeavyChain_Hook"] = "MaterialOrJunk",
+  ["Base.HeavyChain"] = "Material__Junk",
+  ["Base.HeavyChain_Hook"] = "Material__Junk",
 }
 
 --- @type {tag: ItemTag, category: string}[]

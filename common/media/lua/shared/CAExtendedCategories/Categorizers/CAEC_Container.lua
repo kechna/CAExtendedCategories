@@ -36,7 +36,7 @@ function Container:categorize(item, _instance)
       category = "ContainerWearable"
     end
   elseif item:hasTag(ItemTag.IS_MEMENTO) then
-    category = "MementoOrContainer"
+    category = "Memento__Container"
   elseif item:hasTag(ItemTag.AMMO_CASE) then
     category = "ContainerAmmo"
   end

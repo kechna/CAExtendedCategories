@@ -11,7 +11,7 @@ end
 
 ---@param player IsoPlayer
 function CAEC_Client.categorizeNearbyInventories(player)
-  local containers = ISInventoryPaneContextMenu.getContainers(player);
+  local containers = ISInventoryPaneContextMenu.getContainers(player)
 
   if not containers then
     return

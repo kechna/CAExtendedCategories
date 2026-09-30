@@ -607,6 +607,17 @@ export const TR: ExternalTranslations = {
   CAEC_Override_Bundled: "Paketlenmiş",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Alarmlı Saat"
+   */
+  CAEC_Fallback_AlarmClock: "Alarmlı Saat",
+  /** remote controls and similar devices (machine translated) */
+  CAEC_Override_Remote: "Kumanda",
+  /** walkie talkies and similar communication devices (machine translated) */
+  CAEC_Override_Walkie: "Telsiz",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostlanabilir",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -627,6 +638,8 @@ export const TR: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Tohum Paketi",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tütün",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms (machine translated) */
+  CAEC_Override_Trinket: "Süs Eşyası",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Mutfak Gereci",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

@@ -22,14 +22,14 @@ function Literature:categorize(item, instance)
   if instanceof(instance, "Literature") then
     ---@cast instance Literature
     if instance:canBeWrite() then
-      return "LiteratureOrJunk"
+      return "Literature__Junk"
     elseif instance:getLearnedRecipes() ~= nil then
       return "LiteratureRecipe"
     end
   end
 
   if item:hasTag(ItemTag.UNINTERESTING) then
-    category = "LiteratureOrJunk"
+    category = "Literature__Junk"
   elseif item:hasTag(ItemTag.CONSUME_ON_READ) then
     category = "LiteratureConsumable"
   elseif item:hasTag(ItemTag.NEWSPAPER) then
@@ -54,7 +54,7 @@ function Literature:categorize(item, instance)
   elseif item:getReadType() == "Photo" then
     category = "LiteraturePhoto"
   else
-    category = "LiteratureOrJunk"
+    category = "Literature__Junk"
   end
 
   return category

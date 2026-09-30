@@ -315,6 +315,15 @@ export const TRANSLATIONS = {
   /* things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Carton",
 
+  /* ===== Electronics ===== */
+
+  /* alarm clocks and similar devices */
+  CAEC_Override_AlarmClock: "Alarm Clock",
+  /* remote controls and similar devices */
+  CAEC_Override_Remote: "Remote",
+  /* walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Walkie-Talkie",
+
   /* ===== misc ===== */
 
   /* compostable items such as animal dung, to be put in a composter */
@@ -339,6 +348,8 @@ export const TRANSLATIONS = {
   CAEC_Override_SeedPacket: "Seed Packet",
   /* smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
+  /* small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Trinket",
   /* kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Utensil",
   /* used for containers that can be worn on the body, such as backpacks and satchels */

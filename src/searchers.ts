@@ -5,14 +5,15 @@ import { TOOL_ADDON } from "./categories.ts";
 
 const foodTypes = getFoodTypes();
 
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponBow                                     │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoHandgunDrum                               │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponExplosive                               │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoShotgunDrum                               │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: MaterialAmmoRifleBox                          │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: ToolMetalworking                              │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: MaterialAmmoBox                               │
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: VFXDistributionBox                            │
+// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponBow
+//     │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoHandgunDrum
+//           │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponExplosive
+//                 │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoShotgunDrum
+//                       │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION:
+// MaterialAmmoRifleBox                          │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING
+// TRANSLATION: ToolMetalworking                              │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!!
+// MISSING TRANSLATION: MaterialAmmoBox                               │ LOG  : Lua          f:0> [CAEC:UpdateEnd]
+//   !!! MISSING TRANSLATION: VFXDistributionBox                            │
 
 const SKILLS = ["Butchering", "Carpentry", "Electrical", "Maintenance", "Pottery", "Tailoring", "Metalworking"];
 const AMMO_TYPES = ["Rifle", "Handgun", "Shotgun", "Toy", "Bow", "Explosive"];
@@ -254,7 +255,21 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Memento,
-    categories: ["Plushie"],
+    categories: ["Plushie", "Toy", "Picture", "Trinket"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s", "ItemName_Base.%s"],
+  },
+
+  {
+    prefix: PzCategory.Entertainment,
+    categories: ["CD", "VHS", "Cassette"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s", "ItemName_Base.%s"],
+  },
+
+  {
+    prefix: PzCategory.Electronics,
+    // todo change
+    categories: ["Radio", "Walkie", "AlarmClock"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s", "ItemName_Base.%s"],
   },
 
   {

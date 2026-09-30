@@ -13,8 +13,7 @@ local BASE_CATEGORY = "Food"
 local Food = CAEC_ItemCategorizer:derive(BASE_CATEGORY)
 
 Food.NonFoodTags = table.newarray(
-  ItemTag.ANIMAL_HEAD, ItemTag.FEATHER, ItemTag.IS_COMPOSTABLE, ItemTag.ANIMAL_BRAIN, ItemTag.SMOKABLE,
-  ItemTag.SEALED_BEVERAGE_CAN, ItemTag.ALCOHOLIC_BEVERAGE
+  ItemTag.ANIMAL_HEAD, ItemTag.FEATHER, ItemTag.IS_COMPOSTABLE, ItemTag.ANIMAL_BRAIN, ItemTag.SMOKABLE,ItemTag.SEALED_BEVERAGE_CAN, ItemTag.ALCOHOLIC_BEVERAGE, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO
 )
 
 -- tags that will map to specific food types
@@ -135,9 +134,15 @@ end
 ---@param source   string what the food type is registered for, used in the warning
 ---@return boolean
 local function validateFoodType(foodType, source)
-  if not foodType or not FoodType[foodType] then
-    Debug.log(string.format("Unrecognized food type '%s' for: %s", tostring(foodType), tostring(source)), "Food",
-      Debug.Level.Warning)
+  if not foodType then
+    return false
+  end
+
+  if not FoodType[foodType] then
+    Debug.log(
+      string.format("Unrecognized food type '%s' for: %s", tostring(foodType), tostring(source)), "Food",
+      Debug.Level.Warning
+    )
     return false
   end
 
@@ -205,7 +210,9 @@ function Food:getFoodType(item, instance)
 
   if eatType and ("2handbowl" == eatType or "bowl" == eatType or "plate" == eatType or "2hand" == eatType) then
     foodType = FoodType.Portion
-  elseif eatType == "pot" or (eatType ~= "candrink" and not item:hasTag(ItemTag.PRESERVED_FOOD) and item:hasTag(ItemTag.HAS_METAL) and item:isIsCookable()) then
+  elseif eatType == "pot"
+    or (eatType ~= "candrink" and not item:hasTag(ItemTag.PRESERVED_FOOD)
+      and item:hasTag(ItemTag.HAS_METAL) and item:isIsCookable()) then
     foodType = FoodType.Dish
   else
     for i = 1, #priorityFoodTypes do
@@ -238,8 +245,8 @@ function Food:getFoodType(item, instance)
   elseif foodType == FoodType.NoExplicit and item:getName():lower():contains("choco") then
     -- Some chocolate items are tagged as condiments
     foodType = FoodType.Candy
-    --elseif
-      -- lipids ^ , unhappiness ^ thirst ^
+    -- elseif
+    -- lipids ^ , unhappiness ^ thirst ^
   end
 
   ---@type CAEC_FoodType | nil
@@ -380,7 +387,7 @@ function Food:categorize(item, instance)
     local calories = instance:getCalories()
 
     if calories > 0 then
-      category = category .. "OrFirstAid"
+      category = category .. "__FirstAid"
     else
       -- is first aid, no nutritional value, skip
       category = nil

@@ -1,4 +1,5 @@
 import { PzCategory, type USED_CATEGORIES } from "./zomboid/categories.ts";
+import { PzCategory, type USED_CATEGORIES } from "./zomboid/categories.ts";
 
 const A = "override";
 const Z = "fallback";
@@ -6,6 +7,7 @@ const Z = "fallback";
 const APPAREL = "apparel";
 const CATEGORIES = "vanilla categories";
 const COMBINED = "combined";
+const ELECTRONICS = "Electronics";
 const FIREARMS = "firearms";
 const FOOD = "food";
 const LIQUIDS = "liquids";
@@ -175,12 +177,17 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [COMBINED, "Bundled", "things bundled or stacked together, e.g. firewood bundle, bundle of rags, rope", A],
   [COMBINED, "Carton", "things in a bigger box, such as cartons of ammo (which contain boxes of ammo)", A],
 
+  [ELECTRONICS, "Walkie", "walkie talkies and similar communication devices", A],
+  [ELECTRONICS, "AlarmClock", "alarm clocks and similar devices", A],
+  [ELECTRONICS, "Remote", "remote controls and similar devices", A],
+
   [MISC, "Crafted", "handmade, artisan items. used for player-made weapons (not food)", A],
   [MISC, "KeyRing", "ring or bundle of keys", A],
   [MISC, "Photo", "photos", Z],
   [MISC, "Smoking", "smoking items such as cigarettes, cigars, pipes", A],
   [MISC, "Wearable", "used for containers that can be worn on the body, such as backpacks and satchels", A],
   [MISC, "Plushie", "for plush toys such as spiffo, boris the badger and teddy bears", A],
+  [MISC, "Trinket", "small decorative items, usually mementos, such as figurines, keychains, charms", A],
 
   [MISC, "Seed", "loose plantable seeds for gardening/farming", A],
   [MISC, "SeedPacket", "packet of plantable seeds for gardening/farming", A],

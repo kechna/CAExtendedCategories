@@ -538,7 +538,7 @@ export const DE: ExternalTranslations = {
    * found in-game:
    *   ContextMenu_FoodType_Beer = "Bier"
    */
-  CAEC_Override_Beer: "Bier",
+  CAEC_Fallback_Beer: "Bier",
   /** top-level category for drinkable liquids */
   CAEC_Fallback_Beverage: "Getränk",
   /** mixed alcoholic drinks */
@@ -607,6 +607,17 @@ export const DE: ExternalTranslations = {
   CAEC_Override_Bundled: "Gebündelt",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Karton",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Wecker"
+   */
+  CAEC_Fallback_AlarmClock: "Wecker",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Fernbedienung",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Funkgerät",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostierbar",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -627,6 +638,8 @@ export const DE: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Samentütchen",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rauchen",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Nippes",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Küchenutensil",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

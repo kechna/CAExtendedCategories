@@ -607,6 +607,17 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Bundled: "Legat",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Carton",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Ceas Deșteptător"
+   */
+  CAEC_Fallback_AlarmClock: "Ceas Deșteptător",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Telecomandă",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Stație radio",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostabil",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -627,6 +638,8 @@ export const RO: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Plic de semințe",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumat",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Bibelou",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Ustensil",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

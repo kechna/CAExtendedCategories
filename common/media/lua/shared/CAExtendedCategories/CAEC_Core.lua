@@ -9,6 +9,13 @@ local Core = {}
 ---@type boolean
 Core.Initialized = false
 
+---@class CAEC_SandboxSettings
+---@field LogVerbosity?          number
+---@field ItemCategoryOverrides? string
+
+---@type CAEC_SandboxSettings
+Core.Settings = {}
+
 ---@type boolean
 local globalDataInitialized = false
 
@@ -16,44 +23,6 @@ Core.ErrorCount = 0
 
 ---@type table<string, Item>
 Core.ErrorItems = {}
-
--- Static mapping for items that need specific categories
----@type table<string, string>
-Core.StaticCategories = {
-  ["Base.BeerPack"]    = "BeverageBox",
-  ["Base.BeerCanPack"] = "BeverageBox",
-
-  ["Base.Garbagebag_box"] = "ContainerBox",
-
-  ["Base.Yeast"]         = "FoodBaking",
-  ["Base.BakingSoda"]    = "FoodBaking",
-  ["Base.Peppermint"]    = "FoodCandy",
-  ["Base.Honey"]         = "FoodNoExplicit",
-  ["Base.BunsHotdog"]    = "FoodPerishableBread",
-  ["Base.BunsHamburger"] = "FoodPerishableBread",
-  ["Base.Pepper"]        = "FoodSpice",
-
-  ["Base.HottieZ"]          = "LiteratureAdult",
-  ["Base.HottieZ_New"]      = "LiteratureAdult",
-  ["Base.Brochure"]         = "LiteratureBrochure",
-  ["Base.ComicBook"]        = "LiteratureComic",
-  ["Base.ComicBook_Retail"] = "LiteratureComic",
-  ["Base.Flier"]            = "LiteratureFlier",
-  ["Base.RPGmanual"]        = "LiteratureRpgManual",
-
-  ["Base.TwigsBundle"] = "MaterialBundled",
-  ["Base.Zipties"]     = "MaterialMaintenance",
-
-  ["Base.SmokingPipe"] = "Smoking",
-  ["Base.CanPipe"]     = "Smoking",
-
-  ["Base.BlowTorch"] = "ToolMetalworking",
-  ["Base.PropaneTank"] = "MaterialMetalworking",
-
-  -- not first aid
-  ["Base.Tissue"] = "Household",
-  ["Base.TissueBox"] = "Household"
-}
 
 ---@type table<string, boolean>
 Core.InstanceSpecific = {}
@@ -71,24 +40,35 @@ function Core.initializeCategorizers()
     return
   end
 
+  -- regular categorizers
+  Processors.registerCategorizer("Static", 1)
   Processors.registerCategorizer("Container", 200)
   Processors.registerCategorizer("Apparel", 400)
-  Processors.registerCategorizer("Smoking", 600)
   Processors.registerCategorizer("Cooking", 800)
+  Processors.registerCategorizer("Electronics", 900)
   Processors.registerCategorizer("Material", 1000)
   Processors.registerCategorizer("Gardening", 1200)
+  Processors.registerCategorizer("Writing", 1300)
   Processors.registerCategorizer("Literature", 1400)
   Processors.registerCategorizer("Tool", 1600)
   Processors.registerCategorizer("Weapon", 1800)
   Processors.registerCategorizer("Ammo", 2000)
   Processors.registerCategorizer("Memento", 2200)
-  Processors.registerCategorizer("CategorizeInstance", Core.categorizeInstance, 5000)
-  Processors.registerCategorizer("BoxesAndStacks", 6000)
-  Processors.registerCategorizer("GasMask", 9000)
+  Processors.registerCategorizer("Entertainment", 2600)
+  Processors.registerCategorizer("Smoking", 2800)
+
+  -- Processors.registerCategorizer("CategorizeInstance", Core.categorizeInstance, 5000)
+  Processors.registerCategorizer("FluidContainer", 5000, "script")
+  Processors.registerCategorizer("Food", 5200, "script")
+
+  Processors.registerCategorizer("Household", 6000)
+  Processors.registerCategorizer("FireSource", 6200)
+  Processors.registerCategorizer("GasMask", 6400)
+  Processors.registerCategorizer("BoxesAndStacks", 8000)
   Processors.registerCategorizer("CategoryOverride", 9999)
 
-  Processors.registerCategorizer("FluidContainer", 200, "instance")
-  Processors.registerCategorizer("Food", 1000, "instance")
+  Processors.registerCategorizer("FluidContainer", 1000, "instance")
+  Processors.registerCategorizer("Food", 2000, "instance")
 
   Core.Initialized = true
 end
@@ -100,9 +80,7 @@ function Core.isDynamicItem(instance)
     return true
   end
 
-  if not globalDataInitialized then
-    Core.initializeData()
-  end
+  Core.initializeData()
 
   local name = instance:getScriptItem():getFullName()
 
@@ -110,14 +88,20 @@ function Core.isDynamicItem(instance)
     return true
   end
 
-  return Core.ItemTweaks[name] == nil and Core.StaticCategories[name] == nil
+  return Core.ItemTweaks[name] == nil
 end
 
 function Core.setData(source)
   source = source or {}
 
+  Debug.log("Core.setData")
+  -- print all keys and values in SandboxVars.CAExtendedCategories
+  for k, v in pairs(SandboxVars.CAExtendedCategories or {}) do
+    Debug.log(string.format("SandboxVars.CAExtendedCategories[%s] = %s", k, tostring(v)), "Core", Debug.Level.Debug)
+  end
+
   Core.ErrorCount = getLuaDebuggerErrorCount()
-  Core.Settings = source.Settings or SandboxVars.CAExtendedCategories or {}
+  Core.Settings = source.Settings or SandboxVars.CAExtendedCategories or Core.Settings
   Core.Initialized = source.Initialized or false
   Core.InstanceSpecific = source.InstanceSpecific or {}
   Core.ItemTweaks = source.ItemTweaks or {}
@@ -134,15 +118,10 @@ function Core.initializeData()
 
   Core.setData(CAEC_Global or {})
 
-  Debug.log("Initialized variables from global data.", "updateStart")
+  Debug.log("Initialized variables from global data.", "initializeData")
   return true
 end
 
-function Core.setStaticCategory(itemName, category)
-  Core.StaticCategories[itemName] = category
-end
-
---- Store the state in a global so it survives reloading individual files (dev hot reload).
 function Core.updateEnd()
   Utils.removeTemporaryInstances()
 

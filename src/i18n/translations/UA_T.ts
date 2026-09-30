@@ -607,6 +607,17 @@ export const UA: ExternalTranslations = {
   CAEC_Override_Bundled: "Пучок",
   /** things in a bigger box, such as cartons of ammo (which contain boxes of ammo) */
   CAEC_Override_Carton: "Картонна коробка",
+  /**
+   * alarm clocks and similar devices
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AlarmClock = "Будильник"
+   */
+  CAEC_Fallback_AlarmClock: "Будильник",
+  /** remote controls and similar devices */
+  CAEC_Override_Remote: "Пульт",
+  /** walkie talkies and similar communication devices */
+  CAEC_Override_Walkie: "Рація",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Компостоване",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -627,6 +638,8 @@ export const UA: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Пакет насіння",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Куріння",
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
+  CAEC_Override_Trinket: "Дрібничка",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Кухонне приладдя",
   /** used for containers that can be worn on the body, such as backpacks and satchels */

@@ -104,7 +104,7 @@ function Weapon:asMeleeWeapon(item, instance)
   local name = item:getName():lower()
 
   if name:contains("bayo") then
-    category = "WeaponPartOr" .. category
+    category = "WeaponPart__" .. category
   end
 
   return category

@@ -2,28 +2,28 @@ local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer"
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 
---- @class CAEC_BoxesAndStacksCategorizer: CAEC_ItemCategorizer
+---@class CAEC_BoxesAndStacksCategorizer: CAEC_ItemCategorizer
 local BoxesAndStacks = CAEC_ItemCategorizer:derive("BoxesAndStacks")
 
-function BoxesAndStacks:validate(_item, _instance)
-  return true
-end
+-- BoxesAndStacks.contents = {}
+-- BoxesAndStacks.skipped = table.newarray()
+--
+-- function BoxesAndStacks.registerContents(box, contents)
+--  BoxesAndStacks.contents[box] = contents
+-- end
 
---- @param item Item
---- @param instance InventoryItem
---- @return string|nil, string|nil
+---@param item     Item
+---@param instance InventoryItem
+---@return string | nil, string | nil
 local function byName(item, instance)
   local iconTexture = instance:getIcon()
   local icon = iconTexture and iconTexture:getName() or nil
 
-  if icon
-      and not icon:contains("Parcel")
-      and not icon:contains("Carton")
-  then
+  if icon and not icon:contains("Parcel") and not icon:contains("Carton") then
     return nil, nil
   end
 
-  ---@type string|nil
+  ---@type string | nil
   local suffix = nil
   local category = (icon and icon:contains("Food")) and "Food" or nil
   local name = item:getName():lower()
@@ -37,10 +37,10 @@ local function byName(item, instance)
   return suffix, category
 end
 
---- @param  item Item
---- @return string|nil
+---@param item Item
+---@return string | nil
 local function byRecipe(item)
-  ---@type string|nil
+  ---@type string | nil
   local recipe = item:getDoubleClickRecipe()
 
   if not recipe then
@@ -51,29 +51,23 @@ local function byRecipe(item)
   local suffix = nil
 
   if recipe == "unstack_items" then
-    suffix = "Bundled";
-  elseif recipe:contains("carton")
-      and (Utils.startsWith("open", recipe)
-        or Utils.startsWith("unpack", recipe)) then
-    suffix = "Carton";
-  elseif Utils.startsWith("takea", recipe) or
-      (recipe:contains("box") and (
-        Utils.startsWith("unpack", recipe)
-        or Utils.startsWith("open", recipe))
-      )
-  then
-    suffix = "Box";
+    suffix = "Bundled"
+  elseif recipe:contains("carton") and (Utils.startsWith("open", recipe) or Utils.startsWith("unpack", recipe)) then
+    suffix = "Carton"
+  elseif Utils.startsWith("takea", recipe)
+    or (recipe:contains("box") and (Utils.startsWith("unpack", recipe) or Utils.startsWith("open", recipe))) then
+    suffix = "Box"
   end
 
   return suffix
 end
 
---- @param existingCategory string|nil
---- @param item Item
---- @param instance InventoryItem
---- @return string|nil
+---@param existingCategory string | nil
+---@param item             Item
+---@param instance         InventoryItem
+---@return string | nil
 function BoxesAndStacks.addToCategory(existingCategory, item, instance)
-  ---@type string|nil
+  ---@type string | nil
   local category = nil
   local suffix = byRecipe(item)
 
@@ -85,7 +79,6 @@ function BoxesAndStacks.addToCategory(existingCategory, item, instance)
     end
   end
 
-
   if suffix and existingCategory and not Utils.endsWith(suffix, existingCategory) then
     category = existingCategory .. suffix
   end
@@ -94,6 +87,22 @@ function BoxesAndStacks.addToCategory(existingCategory, item, instance)
 end
 function BoxesAndStacks:categorize(item, instance)
   local existingCategory = item:getDisplayCategory()
+
+  -- todo
+  --- --@type string | nil
+  -- local containingItem = self.contents[item:getFullName()]
+  --
+  -- if containingItem then
+  --  existingCategory = Core.ItemTweaks[containingItem]
+  --
+  --  if not existingCategory then
+  --    table.insert(BoxesAndStacks.skipped, item)
+  --    Debug.log("Skipping " .. item:getFullName()
+  --        .. " because its contents " .. containingItem
+  --        .. " is not categorized yet.", "BoxesAndStacks")
+  --    return nil
+  --  end
+  -- end
 
   return self.addToCategory(existingCategory, item, instance)
 end
