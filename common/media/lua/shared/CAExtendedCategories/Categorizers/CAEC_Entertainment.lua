@@ -10,9 +10,15 @@ function Entertainment:validate(item, _instance)
 end
 
 function Entertainment:categorize(item, _instance)
+  local mediaCategory = item:getRecordedMediaCat()
+
+  if not mediaCategory then
+    return nil
+  end
+
   ---@type string | nil
   local category = "Entertainment"
-  local type = item:getRecordedMediaCat():lower()
+  local type = mediaCategory:lower()
 
   if type:contains("vhs") then
     category = category .. "VHS"
