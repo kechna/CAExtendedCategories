@@ -274,8 +274,8 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Tool,
-    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
     categories: TOOL_ADDON,
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
   },
 
   {

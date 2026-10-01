@@ -20,4 +20,7 @@ export const TOOL_ADDON = [
   "Tracking",
   "Trapping",
   "Welding",
+
+  "Box",
+  "Carton",
 ] as const;

@@ -96,6 +96,8 @@ export const createModTranslations = (async (
     addOr("WeaponPart", "WeaponSmallBlade", language);
     addOr("WeaponPart", "WeaponLongBlade", language);
 
+    addOr("ElectronicsAlarmClock", "AccessoryArms", language);
+
     [...WEAPON_ADDON, ...TOOL_ADDON.map((i) => "Tool" + i)]
       .filter((category) => !category.includes(PzCategory.Weapon))
       .forEach((category) => {

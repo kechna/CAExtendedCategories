@@ -42,10 +42,10 @@ function Core.initializeCategorizers()
 
   -- regular categorizers
   Processors.registerCategorizer("Static", 1)
-  Processors.registerCategorizer("Container", 200)
+  Processors.registerCategorizer("Electronics", 200)
   Processors.registerCategorizer("Apparel", 400)
+  Processors.registerCategorizer("Container", 600)
   Processors.registerCategorizer("Cooking", 800)
-  Processors.registerCategorizer("Electronics", 900)
   Processors.registerCategorizer("Material", 1000)
   Processors.registerCategorizer("Gardening", 1200)
   Processors.registerCategorizer("Writing", 1300)
@@ -93,12 +93,6 @@ end
 
 function Core.setData(source)
   source = source or {}
-
-  Debug.log("Core.setData")
-  -- print all keys and values in SandboxVars.CAExtendedCategories
-  for k, v in pairs(SandboxVars.CAExtendedCategories or {}) do
-    Debug.log(string.format("SandboxVars.CAExtendedCategories[%s] = %s", k, tostring(v)), "Core", Debug.Level.Debug)
-  end
 
   Core.ErrorCount = getLuaDebuggerErrorCount()
   Core.Settings = source.Settings or SandboxVars.CAExtendedCategories or Core.Settings

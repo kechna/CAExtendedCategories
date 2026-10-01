@@ -7,7 +7,8 @@ type ModOptionsKey =
   | "categoryColorsTintStrength"
   | "categoryColorsHueVariation"
   | "categoryColorsValueVariation"
-  | "categoryColorsLevelFalloff";
+  | "categoryColorsLevelFalloff"
+  | "betterContainersDisabled";
 
 type ModOptionsTranslations = Record<Language, Record<ModOptionsKey, string>>;
 
@@ -21,6 +22,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variación de tono de subcategorías (%)",
     categoryColorsValueVariation: "Variación de brillo de subcategorías (%)",
     categoryColorsLevelFalloff: "Variación por nivel más profundo (%)",
+    betterContainersDisabled: "Gestionado por Categorías extendidas, que reemplaza todas las categorías de objetos.",
   },
   [Language.CA]: {
     Title: "Categories ampliades",
@@ -31,6 +33,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variació de to de les subcategories (%)",
     categoryColorsValueVariation: "Variació de brillantor de les subcategories (%)",
     categoryColorsLevelFalloff: "Variació per nivell més profund (%)",
+    betterContainersDisabled: "Gestionat per Categories ampliades, que substitueix totes les categories d'objectes.",
   },
   [Language.CH]: {
     Title: "擴展分類",
@@ -40,6 +43,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "子分類色相變化 (%)",
     categoryColorsValueVariation: "子分類亮度變化 (%)",
     categoryColorsLevelFalloff: "每深一層的變化 (%)",
+    betterContainersDisabled: "由擴展分類管理，它會取代所有物品分類。",
   },
   [Language.CN]: {
     Title: "扩展分类",
@@ -49,6 +53,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "子分类色相变化 (%)",
     categoryColorsValueVariation: "子分类亮度变化 (%)",
     categoryColorsLevelFalloff: "每深一级的变化 (%)",
+    betterContainersDisabled: "由扩展分类管理，它会替换所有物品分类。",
   },
   [Language.CS]: {
     Title: "Rozšířené kategorie",
@@ -59,6 +64,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Odchylka odstínu podkategorií (%)",
     categoryColorsValueVariation: "Odchylka jasu podkategorií (%)",
     categoryColorsLevelFalloff: "Odchylka na každou hlubší úroveň (%)",
+    betterContainersDisabled: "Spravováno modem Rozšířené kategorie, který nahrazuje všechny kategorie předmětů.",
   },
   [Language.DA]: {
     Title: "Udvidede kategorier",
@@ -69,6 +75,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Farvetonevariation for underkategorier (%)",
     categoryColorsValueVariation: "Lysstyrkevariation for underkategorier (%)",
     categoryColorsLevelFalloff: "Variation per dybere niveau (%)",
+    betterContainersDisabled: "Styres af Udvidede kategorier, som erstatter alle genstandskategorier.",
   },
   [Language.DE]: {
     Title: "Erweiterte Kategorien",
@@ -79,6 +86,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Farbtonabweichung der Unterkategorien (%)",
     categoryColorsValueVariation: "Helligkeitsabweichung der Unterkategorien (%)",
     categoryColorsLevelFalloff: "Abweichung pro tieferer Ebene (%)",
+    betterContainersDisabled: "Wird von Erweiterte Kategorien verwaltet, das alle Gegenstandskategorien ersetzt.",
   },
   [Language.EN]: {
     Title: "Extended Categories",
@@ -89,6 +97,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Subcategory hue variation (%)",
     categoryColorsValueVariation: "Subcategory brightness variation (%)",
     categoryColorsLevelFalloff: "Variation per deeper level (%)",
+    betterContainersDisabled: "Managed by Extended Categories, which replaces all item categories.",
   },
   [Language.ES]: {
     Title: "Categorías ampliadas",
@@ -99,6 +108,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variación de tono de subcategorías (%)",
     categoryColorsValueVariation: "Variación de brillo de subcategorías (%)",
     categoryColorsLevelFalloff: "Variación por nivel más profundo (%)",
+    betterContainersDisabled: "Gestionado por Categorías ampliadas, que reemplaza todas las categorías de objetos.",
   },
   [Language.FI]: {
     Title: "Laajennetut kategoriat",
@@ -109,6 +119,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Alakategorioiden sävyvaihtelu (%)",
     categoryColorsValueVariation: "Alakategorioiden kirkkausvaihtelu (%)",
     categoryColorsLevelFalloff: "Vaihtelu jokaisella syvemmällä tasolla (%)",
+    betterContainersDisabled: "Laajennetut kategoriat hallitsee tätä, ja se korvaa kaikki tavaroiden kategoriat.",
   },
   [Language.FR]: {
     Title: "Catégories étendues",
@@ -119,6 +130,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variation de teinte des sous-catégories (%)",
     categoryColorsValueVariation: "Variation de luminosité des sous-catégories (%)",
     categoryColorsLevelFalloff: "Variation par niveau plus profond (%)",
+    betterContainersDisabled: "Géré par Catégories étendues, qui remplace toutes les catégories d'objets.",
   },
   [Language.HU]: {
     Title: "Bővített kategóriák",
@@ -129,6 +141,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Alkategóriák árnyalateltérése (%)",
     categoryColorsValueVariation: "Alkategóriák fényerőeltérése (%)",
     categoryColorsLevelFalloff: "Eltérés mélyebb szintenként (%)",
+    betterContainersDisabled: "A Bővített kategóriák kezeli, amely az összes tárgykategóriát lecseréli.",
   },
   [Language.ID]: {
     Title: "Kategori Tambahan",
@@ -139,6 +152,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variasi rona subkategori (%)",
     categoryColorsValueVariation: "Variasi kecerahan subkategori (%)",
     categoryColorsLevelFalloff: "Variasi per tingkat lebih dalam (%)",
+    betterContainersDisabled: "Dikelola oleh Kategori Tambahan, yang menggantikan semua kategori barang.",
   },
   [Language.IT]: {
     Title: "Categorie estese",
@@ -149,6 +163,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variazione di tonalità delle sottocategorie (%)",
     categoryColorsValueVariation: "Variazione di luminosità delle sottocategorie (%)",
     categoryColorsLevelFalloff: "Variazione per livello più profondo (%)",
+    betterContainersDisabled: "Gestito da Categorie estese, che sostituisce tutte le categorie degli oggetti.",
   },
   [Language.JP]: {
     Title: "拡張カテゴリー",
@@ -159,6 +174,8 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "サブカテゴリーの色相の変化 (%)",
     categoryColorsValueVariation: "サブカテゴリーの明るさの変化 (%)",
     categoryColorsLevelFalloff: "階層が深くなるごとの変化 (%)",
+    betterContainersDisabled:
+      "拡張カテゴリーによって管理されています。拡張カテゴリーはすべてのアイテムカテゴリーを置き換えます。",
   },
   [Language.KO]: {
     Title: "확장 카테고리",
@@ -169,6 +186,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "하위 카테고리 색조 변화 (%)",
     categoryColorsValueVariation: "하위 카테고리 밝기 변화 (%)",
     categoryColorsLevelFalloff: "하위 단계별 변화 (%)",
+    betterContainersDisabled: "확장 카테고리가 관리합니다. 확장 카테고리는 모든 아이템 카테고리를 대체합니다.",
   },
   [Language.NL]: {
     Title: "Uitgebreide categorieën",
@@ -179,6 +197,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Tintvariatie van subcategorieën (%)",
     categoryColorsValueVariation: "Helderheidsvariatie van subcategorieën (%)",
     categoryColorsLevelFalloff: "Variatie per dieper niveau (%)",
+    betterContainersDisabled: "Beheerd door Uitgebreide categorieën, dat alle itemcategorieën vervangt.",
   },
   [Language.NO]: {
     Title: "Utvidede kategorier",
@@ -189,6 +208,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Fargetonevariasjon for underkategorier (%)",
     categoryColorsValueVariation: "Lysstyrkevariasjon for underkategorier (%)",
     categoryColorsLevelFalloff: "Variasjon per dypere nivå (%)",
+    betterContainersDisabled: "Styres av Utvidede kategorier, som erstatter alle gjenstandskategorier.",
   },
   [Language.PH]: {
     Title: "Pinalawak na mga Kategorya",
@@ -199,6 +219,8 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Pagkakaiba ng hue ng subkategorya (%)",
     categoryColorsValueVariation: "Pagkakaiba ng liwanag ng subkategorya (%)",
     categoryColorsLevelFalloff: "Pagkakaiba bawat mas malalim na antas (%)",
+    betterContainersDisabled:
+      "Pinamamahalaan ng Pinalawak na mga Kategorya, na pumapalit sa lahat ng kategorya ng item.",
   },
   [Language.PL]: {
     Title: "Rozszerzone kategorie",
@@ -209,6 +231,8 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Zmienność odcienia podkategorii (%)",
     categoryColorsValueVariation: "Zmienność jasności podkategorii (%)",
     categoryColorsLevelFalloff: "Zmienność na każdy głębszy poziom (%)",
+    betterContainersDisabled:
+      "Zarządzane przez Rozszerzone kategorie, które zastępują wszystkie kategorie przedmiotów.",
   },
   [Language.PT]: {
     Title: "Categorias alargadas",
@@ -219,6 +243,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variação de tom das subcategorias (%)",
     categoryColorsValueVariation: "Variação de brilho das subcategorias (%)",
     categoryColorsLevelFalloff: "Variação por nível mais profundo (%)",
+    betterContainersDisabled: "Gerido por Categorias alargadas, que substitui todas as categorias dos objetos.",
   },
   [Language.PTBR]: {
     Title: "Categorias estendidas",
@@ -229,6 +254,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variação de tom das subcategorias (%)",
     categoryColorsValueVariation: "Variação de brilho das subcategorias (%)",
     categoryColorsLevelFalloff: "Variação por nível mais profundo (%)",
+    betterContainersDisabled: "Gerenciado por Categorias estendidas, que substitui todas as categorias de itens.",
   },
   [Language.RO]: {
     Title: "Categorii extinse",
@@ -239,6 +265,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Variația nuanței subcategoriilor (%)",
     categoryColorsValueVariation: "Variația luminozității subcategoriilor (%)",
     categoryColorsLevelFalloff: "Variație pe fiecare nivel mai adânc (%)",
+    betterContainersDisabled: "Gestionat de Categorii extinse, care înlocuiește toate categoriile de obiecte.",
   },
   [Language.RU]: {
     Title: "Расширенные категории",
@@ -249,6 +276,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Разброс оттенка подкатегорий (%)",
     categoryColorsValueVariation: "Разброс яркости подкатегорий (%)",
     categoryColorsLevelFalloff: "Разброс на каждом следующем уровне (%)",
+    betterContainersDisabled: "Управляется модом «Расширенные категории», который заменяет все категории предметов.",
   },
   [Language.TH]: {
     Title: "หมวดหมู่ขยาย",
@@ -259,6 +287,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "ความต่างของเฉดสีหมวดหมู่ย่อย (%)",
     categoryColorsValueVariation: "ความต่างของความสว่างหมวดหมู่ย่อย (%)",
     categoryColorsLevelFalloff: "ความต่างต่อระดับที่ลึกขึ้น (%)",
+    betterContainersDisabled: "จัดการโดยหมวดหมู่ขยาย ซึ่งแทนที่หมวดหมู่ไอเท็มทั้งหมด",
   },
   [Language.TR]: {
     Title: "Genişletilmiş Kategoriler",
@@ -269,6 +298,7 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Alt kategori ton farkı (%)",
     categoryColorsValueVariation: "Alt kategori parlaklık farkı (%)",
     categoryColorsLevelFalloff: "Her alt seviyedeki fark (%)",
+    betterContainersDisabled: "Tüm eşya kategorilerini değiştiren Genişletilmiş Kategoriler tarafından yönetilir.",
   },
   [Language.UA]: {
     Title: "Розширені категорії",
@@ -279,5 +309,6 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     categoryColorsHueVariation: "Розкид відтінку підкатегорій (%)",
     categoryColorsValueVariation: "Розкид яскравості підкатегорій (%)",
     categoryColorsLevelFalloff: "Розкид на кожному наступному рівні (%)",
+    betterContainersDisabled: "Керується модом «Розширені категорії», який замінює всі категорії предметів.",
   },
 };
