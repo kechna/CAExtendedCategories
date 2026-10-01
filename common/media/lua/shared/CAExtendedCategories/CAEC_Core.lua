@@ -19,10 +19,16 @@ Core.Settings = {}
 ---@type boolean
 local globalDataInitialized = false
 
+---@type integer
 Core.ErrorCount = 0
 
----@type table<string, Item>
-Core.ErrorItems = {}
+---@class CAEC_ErrorItem
+---@field name   string
+---@field item   Item
+---@field reason string
+
+---@type CAEC_ErrorItem[]
+Core.ErrorItems = table.newarray()
 
 ---@type table<string, boolean>
 Core.InstanceSpecific = {}
@@ -135,7 +141,6 @@ end
 
 local errorReportRegistered = false
 
---- Tell the user which items failed to instantiate during categorization. Only call this once, after categorizing all items.
 function Core.reportInstantiationErrors()
   if errorReportRegistered or getLuaDebuggerErrorCount() <= Core.ErrorCount then
     return
@@ -146,9 +151,11 @@ function Core.reportInstantiationErrors()
   Events.OnGameStart.Add(function ()
     local itemList = ""
 
-    for itemName, item in pairs(Core.ErrorItems) do
-      local mod = item:getModID()
-      itemList = itemList .. string.format(" - %s: %s\n", mod, itemName)
+    for i = 1, #Core.ErrorItems do
+      local errorItem = Core.ErrorItems[i]
+      local mod = errorItem.item:getModID()
+
+      itemList = itemList .. string.format(" - %s: %-20s Reason: %s\n", tostring(mod), tostring(errorItem.name), tostring(errorItem.reason))
     end
 
     Core.ErrorItems = {}

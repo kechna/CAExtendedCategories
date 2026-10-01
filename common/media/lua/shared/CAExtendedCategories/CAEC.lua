@@ -9,7 +9,7 @@ local CAEC = {}
 
 CAEC_Global = CAEC_Global or {}
 
----called with the category whenever an item instance gets one assigned (set by the client, e.g. for category colors)
+--- called with the category whenever an item instance gets one assigned (set by the client, e.g. for category colors)
 ---@type fun(category: string) | nil
 CAEC.onInstanceCategory = nil
 
@@ -27,10 +27,11 @@ function CAEC.initialize(trigger)
   end
 
   Core.initializeCategorizers()
+  Core.ErrorCount = getLuaDebuggerErrorCount()
 
   Core.preprocessAllItems()
-
   CAEC.categorizeAllItems(trigger)
+
   CAEC.updateEnd(trigger)
 
   Core.reportInstantiationErrors()
@@ -81,7 +82,7 @@ end
 ---@return string | nil, boolean
 function CAEC.categorizeItem(item, instance)
   local itemName = item:getFullName()
-    ---@type string | nil
+  ---@type string | nil
   local category = Core.ItemTweaks[itemName]
 
   if NONE == category then
@@ -93,10 +94,12 @@ function CAEC.categorizeItem(item, instance)
 
   if not category then
     local categorizers = Processors.getCategorizers(knownInstanceSpecific and "instance" or "script")
-    local resolved = Utils.createInstanceIfNeeded(item, instance)
+    local resolved, reason = Utils.createInstanceIfNeeded(item, instance)
 
     if not resolved then
-      Core.ErrorItems[itemName] = item
+      print(itemName, tostring(reason))
+      ---@cast reason string
+      table.insert(Core.ErrorItems, { name = itemName, item = item, reason = reason })
       return nil, false
     end
 

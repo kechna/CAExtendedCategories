@@ -54,24 +54,40 @@ function Utils.hasAnyTag(item, tags)
   return false
 end
 
----@overload fun(item: Item, inventoryItem?): InventoryItem | nil
----@overload fun(item: Item, InventoryItem): InventoryItem
+---@overload fun(item: Item, inventoryItem?): nil, string
+---@overload fun(item: Item, inventoryItem?): InventoryItem, nil
+---@overload fun(item: Item, InventoryItem): InventoryItem, nil
 function Utils.createInstanceIfNeeded(item, instance)
   if instance then
-    return instance
+    return instance, nil
   end
 
   local fullName = item:getFullName()
   local temporaryInstance = instanceCache[fullName]
 
   if not temporaryInstance then
-    local result = instanceItem(item)
+    local errorCount = getLuaDebuggerErrorCount()
+    local ok, result = pcall(instanceItem, item)
 
-    if not result then
-      Debug.log(string.format("Failed to create instance for item: %s", fullName), "Utils", Debug.Level.Error)
-      return nil
+    if ok and getLuaDebuggerErrorCount() > errorCount then
+      if instanceof(result, "InventoryItem") then
+        result:Remove()
+      end
+
+      ok = false
+      result = string.format("OnCreate %s raised an error", tostring(item:getLuaCreate()))
     end
 
+    if not ok then
+      ---@cast result string
+      Debug.log(
+        string.format("Failed to create instance for item: %s. Reason: %s", fullName, result), "Utils",
+        Debug.Level.Error
+      )
+      return nil, result
+    end
+
+    --- @cast result InventoryItem
     temporaryInstance = result
   end
 
@@ -80,7 +96,7 @@ function Utils.createInstanceIfNeeded(item, instance)
     instanceCount = instanceCount + 1
   end
 
-  return temporaryInstance
+  return temporaryInstance, nil
 end
 
 function Utils.removeTemporaryInstances()
