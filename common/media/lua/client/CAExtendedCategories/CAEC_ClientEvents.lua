@@ -1,14 +1,20 @@
-local Debug = require("CAExtendedCategories/CAEC_Debug")
+require "ISUI/ISInventoryPane"
+
 local CAEC = require("CAExtendedCategories/CAEC")
 local CAEC_Client = require("CAExtendedCategories/CAEC_Client")
 
-Events.OnGameStart.Add(function ()
-  Debug.log("client:OnGameStart", "CAEC_ClientEvents")
+ISInventoryPane._caecRefreshContainer = ISInventoryPane._caecRefreshContainer or ISInventoryPane.refreshContainer
 
-  local player = getPlayer()
+local realRefreshContainer = ISInventoryPane._caecRefreshContainer
 
-  CAEC_Client.categorizePlayerInventory(player)
-  CAEC_Client.categorizeNearbyInventories(player)
+function ISInventoryPane:refreshContainer(...)
+  ---@type ItemContainer | nil
+  local inventory = self.inventory
 
-  CAEC.updateEnd()
-end)
+  if inventory then
+    CAEC.categorizeItemContainer(inventory, "ISInventoryPane:refreshContainer", false, CAEC_Client.getBusyItems())
+    CAEC.updateEnd()
+  end
+
+  return realRefreshContainer(self, ...)
+end

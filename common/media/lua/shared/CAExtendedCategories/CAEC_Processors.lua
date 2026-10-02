@@ -13,6 +13,7 @@ local Processors = CAEC_Processors
 
 ---@type CAEC_HookRef[]
 Processors.InitHooks = {}
+
 ---@type boolean
 Processors.InitHooksSorted = false
 

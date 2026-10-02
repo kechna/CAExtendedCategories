@@ -1,8 +1,6 @@
+---@diagnostic disable: unnecessary-if, inject-field
 local CAEC = require("CAExtendedCategories/CAEC")
-
-Events.OnLoadMapZones.Add(function ()
-  CAEC.initialize("shared:OnLoadMapZones")
-end)
+local Utils = require("CAExtendedCategories/CAEC_Utils")
 
 -- OnContainerUpdate often fires several times in a row for the same container, so queue the containers and
 -- categorize each of them once on the next tick.
@@ -19,7 +17,7 @@ local function processPendingContainers()
   hasPending = false
 
   for container in pairs(containers) do
-    CAEC.categorizeItemContainer(container, "onContainerUpdate")
+    CAEC.categorizeItemContainer(container, "onContainerUpdate", true)
   end
 
   CAEC.updateEnd()
@@ -30,7 +28,8 @@ local function processPendingContainers()
   end
 end
 
-Events.OnContainerUpdate.Add(function (containerItem)
+---@param containerItem InventoryItem | ItemContainer
+function onContainerUpdate(containerItem)
   if not containerItem then return end
 
   ---@type ItemContainer | nil
@@ -52,31 +51,12 @@ Events.OnContainerUpdate.Add(function (containerItem)
     hasPending = true
     Events.OnTick.Add(processPendingContainers)
   end
-end)
+end
 
---ItemTweaker = ItemTweaker or {}
+Utils.safeRegisterHook("OnContainerUpdate", onContainerUpdate)
 
---Events.OnGameBoot.Add(function ()
---  local realGetDebug = getDebug
---  local realPrint = print
---
---  local stfu = function ()
---    getDebug = function () return false end
---    print = function () end
---  end
---
---  local unstfu = function ()
---    getDebug = realGetDebug
---    print = realPrint
---  end
---
---  if ItemTweaker.tweakItems then
---    local oldFn = ItemTweaker.tweakItems
---
---    ItemTweaker.tweakItems = function (...)
---      stfu()
---      oldFn(...)
---      unstfu()
---    end
---  end
---end)
+local onLoadMapZones = function ()
+  CAEC.initialize("shared:OnLoadMapZones")
+end
+
+Utils.safeRegisterHook("OnLoadMapZones", onLoadMapZones)

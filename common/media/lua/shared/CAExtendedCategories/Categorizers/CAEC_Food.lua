@@ -119,7 +119,7 @@ Food.FoodType = FoodType
 ---@param instance Food?
 ---@return boolean
 function Food:validate(item, instance)
-  if instance and instance:hasComponent(ComponentType.FluidContainer) then
+  if instance and Utils.getFluidContainer(instance) then
     return false
   end
 

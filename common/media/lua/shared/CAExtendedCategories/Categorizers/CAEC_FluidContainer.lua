@@ -6,32 +6,25 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 ---@field searchTags ItemTag[]
 local FluidContainer = CAEC_ItemCategorizer:derive("FluidContainer")
 
-function FluidContainer:new()
-  ---@type CAEC_FluidContainer
-  local o = CAEC_ItemCategorizer.new(self)
-
-  o.searchTags = {
-    ItemTag.GLASS_BOTTLE, ItemTag.GLASS_BOTTLE_SMALL, ItemTag.SEALED_BEVERAGE_CAN, ItemTag.EMPTY_CAN,
-    ItemTag.ALCOHOLIC_BEVERAGE
-  }
-
-  return o
-end
+FluidContainer.tags = table.newarray(
+  ItemTag.GLASS_BOTTLE, ItemTag.GLASS_BOTTLE_SMALL, ItemTag.SEALED_BEVERAGE_CAN, ItemTag.EMPTY_CAN,
+  ItemTag.ALCOHOLIC_BEVERAGE
+)
 
 function FluidContainer:validate(item, instance)
-  if instance ~= nil then
-    return instance:hasComponent(ComponentType.FluidContainer)
-  end
-
   if not item:isItemType(ItemType.NORMAL) then
     return false
+  end
+
+  if instance ~= nil then
+    return Utils.getFluidContainer(instance) ~= nil
   end
 
   if item:getPourType() ~= "" then
     return true
   end
 
-  return Utils.hasAnyTag(item, self.searchTags)
+  return Utils.hasAnyTag(item, self.tags)
 end
 
 function FluidContainer:categorize(item, instance)
@@ -42,7 +35,8 @@ function FluidContainer:categorize(item, instance)
   ---@type string | nil
   local category = nil
 
-  local container = instance:getFluidContainer()
+  local container = Utils.getFluidContainer(instance)
+  ---@cast container FluidContainer
   local containerName = container:getContainerName():lower()
 
   if container:isEmpty() then
@@ -73,8 +67,7 @@ function FluidContainer:categorize(item, instance)
     category = "LiquidFuel"
   elseif fluid:isCategory(FluidCategory.Medical) then
     category = "FirstAid__Liquid"
-  elseif fluid:isCategory(FluidCategory.Poisons)
-    or fluid:isCategory(FluidCategory.Industrial) then
+  elseif fluid:isCategory(FluidCategory.Poisons) or fluid:isCategory(FluidCategory.Industrial) then
     -- perfume, cologne = poison, not sure what industrial is
     category = "Liquid"
   end

@@ -50,7 +50,7 @@ function Cooking:categorize(item, instance)
 
   if not category then
     local resolved = Utils.createInstanceIfNeeded(item, instance)
-    local container = resolved:getFluidContainer()
+    local container = Utils.getFluidContainer(resolved)
 
     if (item:getPourType() == "Mug"
       or (not container and resolved:canStoreWater())

@@ -82,7 +82,7 @@ end
 ---@param instance InventoryItem
 ---@return boolean
 function Core.isDynamicItem(instance)
-  if instance:hasComponent(ComponentType.FluidContainer) then
+  if Utils.getFluidContainer(instance) then
     return true
   end
 
@@ -155,7 +155,10 @@ function Core.reportInstantiationErrors()
       local errorItem = Core.ErrorItems[i]
       local mod = errorItem.item:getModID()
 
-      itemList = itemList .. string.format(" - %s: %-20s Reason: %s\n", tostring(mod), tostring(errorItem.name), tostring(errorItem.reason))
+      itemList = itemList
+        .. string.format(
+          " - %s: %-20s Reason: %s\n", tostring(mod), tostring(errorItem.name), tostring(errorItem.reason)
+        )
     end
 
     Core.ErrorItems = {}
@@ -231,6 +234,80 @@ end
 ---@return string | nil, boolean
 function Core.categorizeInstance(item, instance)
   return Core.categorize(Processors.getCategorizers("instance"), item, instance)
+end
+
+--- in-game hours before an already categorized instance is checked again (e.g. food aging)
+local RECHECK_HOURS = 1
+
+local MAX_CACHED = 2000
+
+---@type table<number, number>
+local lastCategorized = {}
+
+---@type table<number, string | false>
+local lastFingerprint = {}
+
+local cachedCount = 0
+
+---@param instance InventoryItem
+---@return string | false
+local function getFingerprint(instance)
+  local fluidContainer = Utils.getFluidContainer(instance)
+
+  if not fluidContainer then
+    return false
+  end
+
+  local fluid = fluidContainer:getPrimaryFluid()
+
+  return tostring(fluidContainer:getAmount()) .. (fluid and fluid:getFluidTypeString() or "")
+end
+
+---@param id          number
+---@param now         number
+---@param fingerprint string | false
+local function markCategorized(id, now, fingerprint)
+  if not lastCategorized[id] then
+    if cachedCount >= MAX_CACHED then
+      lastCategorized = {}
+      lastFingerprint = {}
+      cachedCount = 0
+    end
+
+    cachedCount = cachedCount + 1
+  end
+
+  lastCategorized[id] = now
+  lastFingerprint[id] = fingerprint
+end
+
+---@param instance InventoryItem
+---@param now      number
+---@param force    boolean | nil
+---@param busy     table<number, boolean> | nil
+---@return boolean
+function Core.shouldUpdateInstance(instance, now, force, busy)
+  local id = instance:getID()
+
+  -- ignore timed action updates between start and end state
+  if not force and ((busy and busy[id]) or instance:getJobDelta() > 0) then
+    return false
+  end
+
+  local last = lastCategorized[id]
+  local fingerprint = getFingerprint(instance)
+
+  if force or not last or now - last >= RECHECK_HOURS or fingerprint ~= lastFingerprint[id] then
+    markCategorized(id, now, fingerprint)
+    return true
+  end
+
+  return false
+end
+
+---@param instance InventoryItem
+function Core.markInstanceUpdated(instance)
+  markCategorized(instance:getID(), getGameTime():getWorldAgeHours(), getFingerprint(instance))
 end
 
 return Core

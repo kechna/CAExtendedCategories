@@ -87,7 +87,7 @@ function Utils.createInstanceIfNeeded(item, instance)
       return nil, result
     end
 
-    --- @cast result InventoryItem
+    ---@cast result InventoryItem
     temporaryInstance = result
   end
 
@@ -97,6 +97,13 @@ function Utils.createInstanceIfNeeded(item, instance)
   end
 
   return temporaryInstance, nil
+end
+
+--- items on the floor have their FluidContainer component moved to the IsoWorldInventoryObject
+---@param instance InventoryItem
+---@return FluidContainer | nil
+function Utils.getFluidContainer(instance)
+  return instance:getFluidContainerFromSelfOrWorldItem()
 end
 
 function Utils.removeTemporaryInstances()
@@ -152,6 +159,17 @@ end
 ---@return AmmoType | nil
 function Utils.resolveAmmoType(id)
   return resolveType(AmmoType, id)
+end
+
+local Hooks = {}
+
+function Utils.safeRegisterHook(event, hook)
+  if Hooks[event] then
+    Events[event].Remove(Hooks[event])
+  end
+
+  Hooks[event] = hook
+  Events[event].Add(Hooks[event])
 end
 
 return Utils

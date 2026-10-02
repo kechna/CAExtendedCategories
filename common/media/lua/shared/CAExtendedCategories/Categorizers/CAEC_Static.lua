@@ -69,7 +69,7 @@ function Static:categorize(item, _instance)
   return (Static.ItemsMap[item:getFullName()] or nil), false
 end
 
----Parse the user's overrides from the sandbox options. Format: "Base.MyItem=Tool,Base.SomeOtherItem=Literature__Junk"
+-- parse the user's overrides from the sandbox options. Format: "Base.MyItem=Tool,Base.SomeOtherItem=Literature__Junk"
 ---@param input string | nil
 ---@return table<string, string>
 function Static.parseOverrides(input)
@@ -80,12 +80,10 @@ function Static.parseOverrides(input)
     return overrides
   end
 
-  Debug.log(string.format("Parsing user overrides: %s", input), "Static", Debug.Level.Debug)
-
   for entry in input:gmatch("[^,;\n]+") do
     entry = trim(entry)
 
-    Debug.log(string.format("Parsing override entry: %s", entry), "Static", Debug.Level.Debug)
+    Debug.log(string.format("Parsing user override: %s", entry), "Static", Debug.Level.Debug)
 
     if entry ~= "" then
       local itemName, category = entry:match("^(.-)=(.*)$")
@@ -93,9 +91,9 @@ function Static.parseOverrides(input)
       category = category and trim(category)
 
       if not itemName or itemName == "" or not category or category == "" then
-        Debug.log(string.format("Invalid override \"%s\", expected \"Module.Item=Category\"", entry), "Static", Debug.Level.Warning)
+        Debug.log(string.format("Invalid override \"%s\", expected \"Module.Item=Category\"", entry), "Static", Debug.Level.Error)
       elseif not itemName:find(".", 1, true) then
-        Debug.log(string.format("Invalid override \"%s\": use the full item name, e.g. \"Base.%s\"", entry, itemName), "Static", Debug.Level.Warning)
+        Debug.log(string.format("Invalid override \"%s\": use the full item name, e.g. \"Base.%s\"", entry, itemName), "Static", Debug.Level.Error)
       else
         overrides[itemName] = category
       end

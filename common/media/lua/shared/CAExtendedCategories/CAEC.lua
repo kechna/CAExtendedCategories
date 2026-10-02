@@ -31,8 +31,7 @@ function CAEC.initialize(trigger)
 
   Core.preprocessAllItems()
   CAEC.categorizeAllItems(trigger)
-
-  CAEC.updateEnd(trigger)
+  CAEC.updateEnd()
 
   Core.reportInstantiationErrors()
 end
@@ -45,11 +44,7 @@ end
 CAEC.setStaticCategory = Core.setStaticCategory
 
 ---@param trigger string?
-function CAEC.updateEnd(trigger)
-  if Debug.isLevel(Debug.Level.Debug) then
-    Debug.log(string.format("updateEnd (Trigger: %s)", trigger or "N/A"), "updateEnd")
-  end
-
+function CAEC.updateEnd()
   Core.updateEnd()
 end
 
@@ -116,46 +111,54 @@ function CAEC.categorizeItem(item, instance)
   return category, instanceSpecific
 end
 
----@param items   ArrayList<InventoryItem>
----@param trigger string | nil
-function CAEC.updateInstanceItems(items, trigger)
-  CAEC.updateStart()
+---@param instance InventoryItem
+---@return boolean
+local function updateInstance(instance)
+  local item = instance:getScriptItem()
+  local itemName = item:getFullName()
 
-  local debug = Debug.isLevel(Debug.Level.Debug)
+  ---@type string | nil
+  local category = Core.ItemTweaks[itemName]
+  ---@type boolean
+  local instanceSpecific = Core.InstanceSpecific[itemName] or false
 
-  if debug then
-    Debug.log("trigger: " .. (trigger or "N/A"), "updateInstanceItems")
+  if nil == category or instanceSpecific then
+    category = CAEC.categorizeItem(item, instance)
+
+    if category and category ~= NONE then
+      instance:setDisplayCategory(category)
+
+      if CAEC.onInstanceCategory then
+        CAEC.onInstanceCategory(category)
+      end
+      return true
+    end
   end
 
-  local total = items:size()
+  return false
+end
 
-  local doAfter = table.newarray()
+---@param items   ArrayList<InventoryItem>
+---@param trigger string | nil
+---@param force   boolean | nil                re-categorize instances even if they were categorized recently
+---@param busy    table<number, boolean> | nil IDs of items a timed action is working on, which are skipped
+function CAEC.updateInstanceItems(items, trigger, force, busy)
+  CAEC.updateStart()
+
+  local now = getGameTime():getWorldAgeHours()
+  local total = items:size()
+  local updated = 0
 
   for i = 0, total - 1 do
     local instance = items:get(i)
-    local item = instance:getScriptItem()
-    local itemName = item:getFullName()
 
-    ---@type string | nil
-    local category = Core.ItemTweaks[itemName]
-    ---@type boolean
-    local instanceSpecific = Core.InstanceSpecific[itemName] or false
-
-    if nil == category or instanceSpecific then
-      category = CAEC.categorizeItem(item, instance)
-
-      if category and category ~= NONE then
-        if debug then
-          Debug.log(string.format("Setting category for %s -> %s", instance:getName(), category), "updateInstanceItems")
-        end
-
-        instance:setDisplayCategory(category)
-
-        if CAEC.onInstanceCategory then
-          CAEC.onInstanceCategory(category)
-        end
-      end
+    if Core.shouldUpdateInstance(instance, now, force, busy) and updateInstance(instance) then
+      updated = updated + 1
     end
+  end
+
+  if updated > 0 and Debug.isLevel(Debug.Level.Debug) then
+    Debug.log(string.format("Updated %d/%d (trigger: %s)", updated, total, trigger or "N/A"), "updateInstanceItems")
   end
 end
 
@@ -176,6 +179,8 @@ function CAEC.updateInstanceItem(instance, categorizer, trigger)
   end
 
   ---@cast instance InventoryItem
+  Core.markInstanceUpdated(instance)
+
   local category = categorizer(instance:getScriptItem(), instance)
 
   if category and category ~= NONE then
@@ -189,14 +194,16 @@ end
 
 ---@param inventory ItemContainer
 ---@param trigger   string
-function CAEC.categorizeItemContainer(inventory, trigger)
+---@param force     boolean | nil                re-categorize instances even if they were categorized recently
+---@param busy      table<number, boolean> | nil IDs of items a timed action is working on, which are skipped
+function CAEC.categorizeItemContainer(inventory, trigger, force, busy)
   local items = inventory:getAllEvalRecurse(Core.isDynamicItem)
 
   if items:isEmpty() then
     return
   end
 
-  CAEC.updateInstanceItems(items, trigger)
+  CAEC.updateInstanceItems(items, trigger, force, busy)
   items:clear()
 end
 
