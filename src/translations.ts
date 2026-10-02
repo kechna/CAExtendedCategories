@@ -1,5 +1,4 @@
 import { PzCategory, type USED_CATEGORIES } from "./zomboid/categories.ts";
-import { PzCategory, type USED_CATEGORIES } from "./zomboid/categories.ts";
 
 const A = "override";
 const Z = "fallback";
@@ -182,6 +181,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [ELECTRONICS, "Remote", "remote controls and similar devices", A],
 
   [MISC, "Crafted", "handmade, artisan items. used for player-made weapons (not food)", A],
+  [MISC, "Part", "parts for crafting or repairing items, such as vehicle parts or weapon parts", Z],
   [MISC, "KeyRing", "ring or bundle of keys", A],
   [MISC, "Photo", "photos", Z],
   [MISC, "Smoking", "smoking items such as cigarettes, cigars, pipes", A],
@@ -197,4 +197,6 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [MISC, "Pan", "items such as pans/pots to cook in", A],
   [MISC, "Cutlery", "cutlery such as knives, forks, spoons or chopsticks to eat a meal with", A],
   [MISC, "Utensil", "kitchen utensils such as spatulas, ladles, tongs, whisks, etc.", A],
+
+  [MISC, "Bicycle", "bicycles! for the fantastic bicycle mod", A],
 ] as const;

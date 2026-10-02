@@ -618,6 +618,8 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Remote: "Kaukosäädin",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Radiopuhelin",
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "Polkupyörä",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostoitava",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -630,6 +632,13 @@ export const FI: ExternalTranslations = {
   CAEC_Override_KeyRing: "Avainnippu",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pannu",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "Osa"
+   */
+  CAEC_Fallback_Part: "Osa",
   /** photos */
   CAEC_Fallback_Photo: "Valokuva",
   /** for plush toys such as spiffo, boris the badger and teddy bears */

@@ -261,11 +261,11 @@ export const PTBR: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Arma",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Machados",
-  /** blacksmithing skill (machine translated) */
+  /** blacksmithing skill */
   CAEC_Fallback_Blacksmith: "Ferraria",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contundentes Longos",
-  /** butchering skill (machine translated) */
+  /** butchering skill */
   CAEC_Fallback_Butchering: "Abate",
   /**
    * carpentry skill
@@ -274,7 +274,7 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_CraftCategory_Carpentry = "Carpintaria"
    */
   CAEC_Fallback_Carpentry: "Carpintaria",
-  /** carving skill (machine translated) */
+  /** carving skill */
   CAEC_Fallback_Carving: "Entalhe",
   /**
    * electrical skill
@@ -290,23 +290,23 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_CraftCategory_Farming = "Agricultura"
    */
   CAEC_Fallback_Farming: "Agricultura",
-  /** knapping skill (machine translated) */
+  /** knapping skill */
   CAEC_Fallback_FlintKnapping: "Lascamento",
-  /** foraging skill (machine translated) */
+  /** foraging skill */
   CAEC_Fallback_Foraging: "Coleta",
-  /** glassmaking skill (machine translated) */
+  /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Vidraria",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lâminas Longas",
-  /** maintenance skill for maintaining and repairing tools and weapons (machine translated) */
+  /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Manutenção",
-  /** masonry skill (machine translated) */
+  /** masonry skill */
   CAEC_Fallback_Masonry: "Alvenaria",
-  /** mechanics skill, vehicle maintenance (machine translated) */
+  /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mecânica",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing (machine translated) */
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
   CAEC_Fallback_Metalworking: "Metalurgia",
-  /** pottery skill (machine translated) */
+  /** pottery skill */
   CAEC_Fallback_Pottery: "Cerâmica",
   /** short blade weapon skill */
   CAEC_Fallback_SmallBlade: "Lâminas Curtas",
@@ -314,9 +314,9 @@ export const PTBR: ExternalTranslations = {
   CAEC_Fallback_SmallBlunt: "Contundentes Curtos",
   /** spear weapon skill */
   CAEC_Fallback_Spear: "Lanças",
-  /** tailoring skill (machine translated) */
+  /** tailoring skill */
   CAEC_Fallback_Tailoring: "Costura",
-  /** tracking skill (machine translated) */
+  /** tracking skill */
   CAEC_Fallback_Tracking: "Rastreamento",
   /**
    * welding skill
@@ -516,9 +516,9 @@ export const PTBR: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manual de RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Brochura",
-  /** bows and other ranged weapons that use string tension to launch projectiles (machine translated) */
+  /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Arco",
-  /** firearm drums (machine translated) */
+  /** firearm drums */
   CAEC_Fallback_Drum: "Tambor",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Arma de fogo",
@@ -614,31 +614,40 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Despertador"
    */
   CAEC_Fallback_AlarmClock: "Despertador",
-  /** remote controls and similar devices (machine translated) */
+  /** remote controls and similar devices */
   CAEC_Override_Remote: "Controle remoto",
-  /** walkie talkies and similar communication devices (machine translated) */
+  /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Walkie-talkie",
-  /** compostable items such as animal dung, to be put in a composter (machine translated) */
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "Bicicleta",
+  /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostável",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Caseira",
-  /** items such as cups, mugs, glasses (machine translated) */
+  /** items such as cups, mugs, glasses */
   CAEC_Override_Cup: "Copo",
   /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "Talheres",
   /** ring or bundle of keys */
   CAEC_Fallback_KeyRing: "Chaveiro",
-  /** items such as pans/pots to cook in (machine translated) */
+  /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Panela",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "Parte"
+   */
+  CAEC_Fallback_Part: "Parte",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
-  /** for plush toys such as spiffo, boris the badger and teddy bears (machine translated) */
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Pelúcia",
-  /** packet of plantable seeds for gardening/farming (machine translated) */
+  /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pacote de sementes",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
-  /** small decorative items, usually mementos, such as figurines, keychains, charms (machine translated) */
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Bugiganga",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Utensílio",

@@ -516,9 +516,9 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "RYO Kılavuzu",
   /** softcover books */
   CAEC_Fallback_Softcover: "Karton Kapaklı Kitap",
-  /** bows and other ranged weapons that use string tension to launch projectiles (machine translated) */
+  /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Yay",
-  /** firearm drums (machine translated) */
+  /** firearm drums */
   CAEC_Fallback_Drum: "Tambur Şarjör",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Ateşli Silah",
@@ -614,10 +614,12 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Alarmlı Saat"
    */
   CAEC_Fallback_AlarmClock: "Alarmlı Saat",
-  /** remote controls and similar devices (machine translated) */
+  /** remote controls and similar devices */
   CAEC_Override_Remote: "Kumanda",
-  /** walkie talkies and similar communication devices (machine translated) */
+  /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Telsiz",
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "Bisiklet",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostlanabilir",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -630,6 +632,13 @@ export const TR: ExternalTranslations = {
   CAEC_Override_KeyRing: "Anahtarlık",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Tava",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "Bölüm"
+   */
+  CAEC_Fallback_Part: "Bölüm",
   /** photos */
   CAEC_Fallback_Photo: "Fotoğraf",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
@@ -638,7 +647,7 @@ export const TR: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Tohum Paketi",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tütün",
-  /** small decorative items, usually mementos, such as figurines, keychains, charms (machine translated) */
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Süs Eşyası",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Mutfak Gereci",

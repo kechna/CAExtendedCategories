@@ -715,10 +715,12 @@ export const NL: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Wekker"
    */
   CAEC_Fallback_AlarmClock: "Wekker",
-  /** remote controls and similar devices (machine translated) */
+  /** remote controls and similar devices */
   CAEC_Override_Remote: "Afstandsbediening",
-  /** walkie talkies and similar communication devices (machine translated) */
+  /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Walkietalkie",
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "Fiets",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Composteerbaar",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -731,6 +733,13 @@ export const NL: ExternalTranslations = {
   CAEC_Override_KeyRing: "Sleutelbos",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pan",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "Onderdeel"
+   */
+  CAEC_Fallback_Part: "Onderdeel",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
@@ -739,7 +748,7 @@ export const NL: ExternalTranslations = {
   CAEC_Override_SeedPacket: "Zadenpakket",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Roken",
-  /** small decorative items, usually mementos, such as figurines, keychains, charms (machine translated) */
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Snuisterij",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "Keukengerei",

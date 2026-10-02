@@ -261,11 +261,11 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Weapon: "武器",
   /** axe weapon skill */
   CAEC_Override_Axe: "斧头",
-  /** blacksmithing skill (machine translated) */
+  /** blacksmithing skill */
   CAEC_Fallback_Blacksmith: "锻造",
   /** long blunt weapon skill */
   CAEC_Override_Blunt: "长棍",
-  /** butchering skill (machine translated) */
+  /** butchering skill */
   CAEC_Fallback_Butchering: "屠宰",
   /**
    * carpentry skill
@@ -274,7 +274,7 @@ export const CN: ExternalTranslations = {
    *   IGUI_CraftCategory_Carpentry = "木工"
    */
   CAEC_Fallback_Carpentry: "木工",
-  /** carving skill (machine translated) */
+  /** carving skill */
   CAEC_Fallback_Carving: "雕刻",
   /**
    * electrical skill
@@ -290,23 +290,23 @@ export const CN: ExternalTranslations = {
    *   IGUI_CraftCategory_Farming = "农务"
    */
   CAEC_Fallback_Farming: "农务",
-  /** knapping skill (machine translated) */
+  /** knapping skill */
   CAEC_Fallback_FlintKnapping: "打制石器",
-  /** foraging skill (machine translated) */
+  /** foraging skill */
   CAEC_Fallback_Foraging: "采集",
-  /** glassmaking skill (machine translated) */
+  /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "玻璃制作",
   /** long blade weapon skill */
   CAEC_Override_LongBlade: "长刀",
-  /** maintenance skill for maintaining and repairing tools and weapons (machine translated) */
+  /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "保养",
-  /** masonry skill (machine translated) */
+  /** masonry skill */
   CAEC_Fallback_Masonry: "砌石",
-  /** mechanics skill, vehicle maintenance (machine translated) */
+  /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "机械",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing (machine translated) */
+  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
   CAEC_Fallback_Metalworking: "金属加工",
-  /** pottery skill (machine translated) */
+  /** pottery skill */
   CAEC_Fallback_Pottery: "制陶",
   /** short blade weapon skill */
   CAEC_Override_SmallBlade: "短刀",
@@ -314,9 +314,9 @@ export const CN: ExternalTranslations = {
   CAEC_Override_SmallBlunt: "短棍",
   /** spear weapon skill */
   CAEC_Override_Spear: "长矛",
-  /** tailoring skill (machine translated) */
+  /** tailoring skill */
   CAEC_Fallback_Tailoring: "裁缝",
-  /** tracking skill (machine translated) */
+  /** tracking skill */
   CAEC_Fallback_Tracking: "追踪",
   /**
    * welding skill
@@ -516,9 +516,9 @@ export const CN: ExternalTranslations = {
   CAEC_Override_RpgManual: "RPG手册",
   /** softcover books */
   CAEC_Override_Softcover: "平装书",
-  /** bows and other ranged weapons that use string tension to launch projectiles (machine translated) */
+  /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "弓",
-  /** firearm drums (machine translated) */
+  /** firearm drums */
   CAEC_Fallback_Drum: "弹鼓",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "枪械",
@@ -550,11 +550,11 @@ export const CN: ExternalTranslations = {
    *   ContextMenu_FoodType_Coffee = "咖啡"
    */
   CAEC_Fallback_Coffee: "咖啡",
-  /** liquids used for dyeing or coloring (machine translated) */
+  /** liquids used for dyeing or coloring */
   CAEC_Override_Dye: "染料",
-  /** energy drinks or otherwise highly caffeinated soft drinks (machine translated) */
+  /** energy drinks or otherwise highly caffeinated soft drinks */
   CAEC_Override_EnergyDrink: "能量饮料",
-  /** liquid fuels such as gasoline, diesel, kerosene (machine translated) */
+  /** liquid fuels such as gasoline, diesel, kerosene */
   CAEC_Override_Fuel: "燃料",
   /**
    * fruit juice
@@ -614,33 +614,42 @@ export const CN: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "钟表"
    */
   CAEC_Fallback_AlarmClock: "钟表",
-  /** remote controls and similar devices (machine translated) */
+  /** remote controls and similar devices */
   CAEC_Override_Remote: "遥控器",
-  /** walkie talkies and similar communication devices (machine translated) */
+  /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "对讲机",
-  /** compostable items such as animal dung, to be put in a composter (machine translated) */
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "自行车",
+  /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "可堆肥",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "自制",
-  /** items such as cups, mugs, glasses (machine translated) */
+  /** items such as cups, mugs, glasses */
   CAEC_Override_Cup: "杯子",
-  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with (machine translated) */
+  /** cutlery such as knives, forks, spoons or chopsticks to eat a meal with */
   CAEC_Override_Cutlery: "餐具",
   /** ring or bundle of keys */
   CAEC_Override_KeyRing: "钥匙环",
-  /** items such as pans/pots to cook in (machine translated) */
+  /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "锅具",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "部位"
+   */
+  CAEC_Fallback_Part: "部位",
   /** photos */
   CAEC_Override_Photo: "照片",
-  /** for plush toys such as spiffo, boris the badger and teddy bears (machine translated) */
+  /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "毛绒玩具",
-  /** packet of plantable seeds for gardening/farming (machine translated) */
+  /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "种子包",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "吸烟",
-  /** small decorative items, usually mementos, such as figurines, keychains, charms (machine translated) */
+  /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "小饰品",
-  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. (machine translated) */
+  /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */
   CAEC_Override_Utensil: "厨具",
   /** used for containers that can be worn on the body, such as backpacks and satchels */
   CAEC_Override_Wearable: "可穿戴",

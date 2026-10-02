@@ -618,6 +618,8 @@ export const CH: ExternalTranslations = {
   CAEC_Override_Remote: "遙控器",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "對講機",
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "自行車",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "可堆肥",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -630,6 +632,13 @@ export const CH: ExternalTranslations = {
   CAEC_Override_KeyRing: "鑰匙圈",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "鍋具",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "部位"
+   */
+  CAEC_Fallback_Part: "部位",
   /** photos */
   CAEC_Fallback_Photo: "照片",
   /** for plush toys such as spiffo, boris the badger and teddy bears */

@@ -5,16 +5,6 @@ import { TOOL_ADDON } from "./categories.ts";
 
 const foodTypes = getFoodTypes();
 
-// LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponBow
-//     │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoHandgunDrum
-//           │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: WeaponExplosive
-//                 │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION: AmmoShotgunDrum
-//                       │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING TRANSLATION:
-// MaterialAmmoRifleBox                          │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!! MISSING
-// TRANSLATION: ToolMetalworking                              │ LOG  : Lua          f:0> [CAEC:UpdateEnd]         !!!
-// MISSING TRANSLATION: MaterialAmmoBox                               │ LOG  : Lua          f:0> [CAEC:UpdateEnd]
-//   !!! MISSING TRANSLATION: VFXDistributionBox                            │
-
 const SKILLS = ["Butchering", "Carpentry", "Electrical", "Maintenance", "Pottery", "Tailoring", "Metalworking"];
 const AMMO_TYPES = ["Rifle", "Handgun", "Shotgun", "Toy", "Bow", "Explosive"];
 const AMMO_BOX_TYPES = ["Box", "Carton", "Mag"];
@@ -37,6 +27,8 @@ export const searchers: Searcher[] = [
   { categories: ["KeyRing"], searchKeys: ["ItemName_Base.%s"] },
   { categories: ["Smoking"] },
   { categories: ["Mechanics"], searchKeys: ["IGUI_perks_%s"] },
+
+  { categories: ["Part"], searchKeys: ["IGUI_health_%s"] },
 
   {
     categories: USED_CATEGORIES,
@@ -275,6 +267,12 @@ export const searchers: Searcher[] = [
   {
     prefix: PzCategory.Tool,
     categories: TOOL_ADDON,
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
+  },
+
+  {
+    prefix: "Bicycle",
+    categories: ["Part"],
     searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
   },
 

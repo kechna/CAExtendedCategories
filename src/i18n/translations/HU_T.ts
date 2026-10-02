@@ -612,6 +612,8 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Remote: "Távirányító",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Adóvevő",
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "Kerékpár",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Komposztálható",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -624,6 +626,13 @@ export const HU: ExternalTranslations = {
   CAEC_Override_KeyRing: "Kulcscsomó",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Serpenyő",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "Testrész"
+   */
+  CAEC_Fallback_Part: "Testrész",
   /** photos */
   CAEC_Fallback_Photo: "Fénykép",
   /** for plush toys such as spiffo, boris the badger and teddy bears */

@@ -648,6 +648,8 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Remote: "Dálkový ovladač",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Vysílačka",
+  /** bicycles! for the fantastic bicycle mod */
+  CAEC_Override_Bicycle: "Kolo",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostovatelné",
   /** handmade, artisan items. used for player-made weapons (not food) */
@@ -660,6 +662,13 @@ export const CS: ExternalTranslations = {
   CAEC_Override_KeyRing: "Klíčenka",
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Pánev",
+  /**
+   * parts for crafting or repairing items, such as vehicle parts or weapon parts
+   *
+   * found in-game:
+   *   IGUI_health_Part = "Část"
+   */
+  CAEC_Fallback_Part: "Část",
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
