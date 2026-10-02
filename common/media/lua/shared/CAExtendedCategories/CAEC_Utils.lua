@@ -4,7 +4,6 @@ local Utils = {}
 
 ---@type table<string, InventoryItem>
 local instanceCache = {}
--- Kahlua has no `next`, so keep count to cheaply detect an empty cache
 local instanceCount = 0
 
 local activatedMods = nil

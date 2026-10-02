@@ -63,7 +63,6 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("Entertainment", 2600)
   Processors.registerCategorizer("Smoking", 2800)
 
-  -- Processors.registerCategorizer("CategorizeInstance", Core.categorizeInstance, 5000)
   Processors.registerCategorizer("FluidContainer", 5000, "script")
   Processors.registerCategorizer("Food", 5200, "script")
 

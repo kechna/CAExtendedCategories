@@ -107,6 +107,10 @@ export const createModTranslations = (async (
       });
   });
 
+
+  // 264 compound
+  // 554 - 264 = 290 categories
+
   Object.entries(ALL_TRANSLATIONS).forEach(([lang, translations]) => {
     Object.entries(translations).forEach(([key, value]) => {
       if (key.startsWith("CAEC_") || !value) return;
@@ -137,12 +141,6 @@ export const createModTranslations = (async (
         ItemCategoryOverrides: "Item category overrides",
         ItemCategoryOverrides_tooltip:
           "Force specific items into a category. Separate entries with commas, using the full item name and the category ID, e.g. Base.Zipties=MaterialMaintenance, Base.Notebook=Literature__Junk",
-
-        // DistinctAmmoTypes: "Categorize ammo by caliber [WIP]",
-        //     DistinctAmmoTypes_tooltip:
-        //       'If enabled, ammo will be categorized by caliber rather than just as \"Ammo\". This is disabled by default and intended for use with mods that add new guns or ammo types.',
-        //     BottomHelpText: "The game must be reloaded for these settings to be applied.",
-        //     BottomHelpText_tooltip: "This does nothing!",
       },
     }),
   };

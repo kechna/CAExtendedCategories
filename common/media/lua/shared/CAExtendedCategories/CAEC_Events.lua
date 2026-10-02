@@ -2,9 +2,6 @@
 local CAEC = require("CAExtendedCategories/CAEC")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 
--- OnContainerUpdate often fires several times in a row for the same container, so queue the containers and
--- categorize each of them once on the next tick.
-
 ---@type table<ItemContainer, boolean>
 local pendingContainers = {}
 local hasPending = false
@@ -22,7 +19,6 @@ local function processPendingContainers()
 
   CAEC.updateEnd()
 
-  -- the inventory UI was already marked dirty by the event itself, make sure it redraws with the new categories
   if ISInventoryPage then
     ISInventoryPage.renderDirty = true
   end

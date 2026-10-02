@@ -240,7 +240,6 @@ function CategoryColors.register(key)
   knownKeys[key] = true
   addColor(key)
 
-  -- forget cached misses, the new text may be one of them
   tintByDrawnText = {}
 end
 
@@ -280,7 +279,6 @@ local function initialize()
   end
 end
 
--- re-scan script items on the next draw. registered keys are kept, their colors never change.
 function CategoryColors.invalidate()
   initialized = false
 end
@@ -319,7 +317,6 @@ local function getTint(pane, str, x, r, g, b)
     return nil
   end
 
-  -- leave the red "being dragged" state alone
   if r == 0.7 and g == 0 and b == 0 then
     return nil
   end

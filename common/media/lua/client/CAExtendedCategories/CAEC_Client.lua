@@ -6,7 +6,6 @@ local CAEC_Client = {}
 ---@param busy  table<number, boolean>
 local function addBusyItem(value, busy)
   if type(value) == "table" then
-    -- ISFluidContainer wrapper, as used by e.g. ISFluidTransferAction and ISFluidEmptyAction
     if value.Type == "ISFluidContainer" and value.getOwner then
       value = value:getOwner()
     else
@@ -20,7 +19,6 @@ local function addBusyItem(value, busy)
   end
 end
 
---- IDs of the items the local players' current timed actions work on
 ---@return table<number, boolean>
 function CAEC_Client.getBusyItems()
   local busy = {}

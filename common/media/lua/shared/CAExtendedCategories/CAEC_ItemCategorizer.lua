@@ -34,7 +34,6 @@ end
 function CAEC_ItemCategorizer:log(message, level)
   level = level or Debug.Level.Debug
 
-  -- the categorizer verbosity only gates debug/info output, warnings and errors are filtered by the global level only
   if level < Debug.Level.Warning and level < self:getVerbosity() then return end
 
   Debug.log(message, self.Type, level)

@@ -9,7 +9,6 @@ local CAEC = {}
 
 CAEC_Global = CAEC_Global or {}
 
---- called with the category whenever an item instance gets one assigned (set by the client, e.g. for category colors)
 ---@type fun(category: string) | nil
 CAEC.onInstanceCategory = nil
 
@@ -36,12 +35,10 @@ function CAEC.initialize(trigger)
   Core.reportInstantiationErrors()
 end
 
----@return boolean initialized whether the data was initialized by this call
+---@return boolean initialized
 function CAEC.updateStart()
   return Core.initializeData()
 end
-
-CAEC.setStaticCategory = Core.setStaticCategory
 
 ---@param trigger string?
 function CAEC.updateEnd()
@@ -103,7 +100,6 @@ function CAEC.categorizeItem(item, instance)
     if instanceSpecific then
       Core.InstanceSpecific[itemName] = true
     elseif not knownInstanceSpecific then
-      -- only cache script-level results. An instance of a dynamic item must never decide the category for all of them.
       Core.ItemTweaks[itemName] = category or NONE
     end
   end
@@ -140,8 +136,8 @@ end
 
 ---@param items   ArrayList<InventoryItem>
 ---@param trigger string | nil
----@param force   boolean | nil                re-categorize instances even if they were categorized recently
----@param busy    table<number, boolean> | nil IDs of items a timed action is working on, which are skipped
+---@param force   boolean | nil
+---@param busy    table<number, boolean> | nil
 function CAEC.updateInstanceItems(items, trigger, force, busy)
   CAEC.updateStart()
 
@@ -194,8 +190,8 @@ end
 
 ---@param inventory ItemContainer
 ---@param trigger   string
----@param force     boolean | nil                re-categorize instances even if they were categorized recently
----@param busy      table<number, boolean> | nil IDs of items a timed action is working on, which are skipped
+---@param force     boolean | nil
+---@param busy      table<number, boolean> | nil
 function CAEC.categorizeItemContainer(inventory, trigger, force, busy)
   local items = inventory:getAllEvalRecurse(Core.isDynamicItem)
 
