@@ -50,29 +50,22 @@ function Weapon:asMeleeWeapon(item, _instance)
 
   ---@type string | nil
   local category = nil
+  local baseCategory = "Weapon"
 
   if categories:contains(WeaponCategory.AXE) then
-    category = "WeaponAxe"
+    category = baseCategory .. "Axe"
   elseif categories:contains(WeaponCategory.BLUNT) then
-    category = "WeaponBlunt"
+    category = baseCategory .. "Blunt"
   elseif categories:contains(WeaponCategory.SMALL_BLUNT) then
-    category = "WeaponSmallBlunt"
+    category = baseCategory .. "SmallBlunt"
   elseif categories:contains(WeaponCategory.LONG_BLADE) then
-    category = "WeaponLongBlade"
+    category = baseCategory .. "LongBlade"
   elseif categories:contains(WeaponCategory.SMALL_BLADE) then
-    category = "WeaponSmallBlade"
+    category = baseCategory .. "SmallBlade"
   elseif categories:contains(WeaponCategory.SPEAR) then
-    category = "WeaponSpear"
+    category = baseCategory .. "Spear"
   elseif categories:contains(WeaponCategory.IMPROVISED) then
-    category = "WeaponCrafted"
-    -- else
-    --  local it = categories:iterator()
-    --  self:log("Unknown melee weapon category for " .. item:getName())
-    --
-    --  while it:hasNext() do
-    --    local cat = it:next()
-    --    self:log(" - " .. tostring(cat))
-    --  end
+    category = baseCategory .. "Crafted"
   end
 
   if category then
@@ -80,7 +73,7 @@ function Weapon:asMeleeWeapon(item, _instance)
     local original = item:getDisplayCategory()
 
     if original then
-      local trimmed = original:gsub("Weapon", "")
+      local trimmed = original:gsub(baseCategory, "")
 
       if trimmed ~= "" and WeaponComboCategories[trimmed] then
         category = trimmed .. "__" .. category
