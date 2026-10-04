@@ -78,18 +78,16 @@ Ammo.AmmoItemGroupsMap = {
 
 function Ammo.registerAmmoGroup(ammoType, group)
   local ammoTypeString = tostring(ammoType)
-
-  Debug.log(string.format("  + AmmoType %-16s -> %s", ammoTypeString, group), "Ammo")
-
   local resolved = Utils.resolveAmmoType(ammoType)
 
   Ammo.AmmoGroupsMap[ammoTypeString] = group
 
   if resolved then
-    Debug.log(string.format("    + Item %-16s -> %s", tostring(resolved:getItemKey()), group), "Ammo")
     Ammo.AmmoItemGroupsMap[resolved:getItemKey()] = group
   else
-    Debug.log(string.format("    - AmmoType %s could not be resolved to an item", ammoTypeString), "Ammo")
+    Debug.log(
+      string.format("    - AmmoType %s could not be resolved to an item", ammoTypeString), "Ammo", Debug.Level.Warning
+    )
   end
 end
 
@@ -100,7 +98,6 @@ function Ammo.getAmmoGroup(ammoType)
 end
 
 function Ammo.registerItemAmmoGroup(itemType, group)
-  Debug.log(string.format("  + Item %-16s -> %s", tostring(itemType), group), "Ammo")
   Ammo.AmmoItemGroupsMap[itemType] = group
 end
 
@@ -118,7 +115,7 @@ function Ammo:byAmmoType(ammoType)
   local group = Ammo.getAmmoGroup(ammoType)
 
   if not group then
-    self:log(string.format("Unknown ammo type: %s", tostring(ammoType)))
+    self:log(string.format("Unknown ammo type: %s", tostring(ammoType)), Debug.Level.Warning)
   end
 
   return group
@@ -147,7 +144,9 @@ function Ammo:categorize(item, _instance)
     if group then
       baseCategory = baseCategory .. group
     else
-      self:log(string.format("Unknown ammo type for item: %s, ammoType: %s", itemName, tostring(ammoType)))
+      self:log(
+        string.format("Unknown ammo type for item: %s, ammoType: %s", itemName, tostring(ammoType)), Debug.Level.Warning
+      )
     end
   elseif lowerName:contains("slug") then
     baseCategory = baseCategory .. self.AmmoGroup.SHOTGUN
