@@ -246,6 +246,10 @@ local lastCategorized = {}
 ---@type table<number, string | false>
 local lastFingerprint = {}
 
+--- display category is not saved or synced, recreated objects (MP sync, chunk reload) fall back to the script's
+---@type table<number, string>
+local lastCategory = {}
+
 local cachedCount = 0
 
 ---@param instance InventoryItem
@@ -265,11 +269,13 @@ end
 ---@param id          number
 ---@param now         number
 ---@param fingerprint string | false
-local function markCategorized(id, now, fingerprint)
+---@param category    string | nil
+local function markCategorized(id, now, fingerprint, category)
   if not lastCategorized[id] then
     if cachedCount >= MAX_CACHED then
       lastCategorized = {}
       lastFingerprint = {}
+      lastCategory = {}
       cachedCount = 0
     end
 
@@ -278,6 +284,7 @@ local function markCategorized(id, now, fingerprint)
 
   lastCategorized[id] = now
   lastFingerprint[id] = fingerprint
+  lastCategory[id] = category
 end
 
 ---@param instance InventoryItem
@@ -294,19 +301,21 @@ function Core.shouldUpdateInstance(instance, now, force, busy)
   end
 
   local last = lastCategorized[id]
-  local fingerprint = getFingerprint(instance)
 
-  if force or not last or now - last >= RECHECK_HOURS or fingerprint ~= lastFingerprint[id] then
-    markCategorized(id, now, fingerprint)
+  if force or not last or now - last >= RECHECK_HOURS or getFingerprint(instance) ~= lastFingerprint[id] then
     return true
   end
 
-  return false
+  local category = lastCategory[id]
+
+  return category ~= nil and instance:getDisplayCategory() ~= category
 end
 
 ---@param instance InventoryItem
 function Core.markInstanceUpdated(instance)
-  markCategorized(instance:getID(), getGameTime():getWorldAgeHours(), getFingerprint(instance))
+  markCategorized(
+    instance:getID(), getGameTime():getWorldAgeHours(), getFingerprint(instance), instance:getDisplayCategory()
+  )
 end
 
 return Core

@@ -148,8 +148,12 @@ function CAEC.updateInstanceItems(items, trigger, force, busy)
   for i = 0, total - 1 do
     local instance = items:get(i)
 
-    if Core.shouldUpdateInstance(instance, now, force, busy) and updateInstance(instance) then
-      updated = updated + 1
+    if Core.shouldUpdateInstance(instance, now, force, busy) then
+      if updateInstance(instance) then
+        updated = updated + 1
+      end
+
+      Core.markInstanceUpdated(instance)
     end
   end
 
@@ -175,8 +179,6 @@ function CAEC.updateInstanceItem(instance, categorizer, trigger)
   end
 
   ---@cast instance InventoryItem
-  Core.markInstanceUpdated(instance)
-
   local category = categorizer(instance:getScriptItem(), instance)
 
   if category and category ~= NONE then
@@ -186,6 +188,8 @@ function CAEC.updateInstanceItem(instance, categorizer, trigger)
       CAEC.onInstanceCategory(category)
     end
   end
+
+  Core.markInstanceUpdated(instance)
 end
 
 ---@param inventory ItemContainer
