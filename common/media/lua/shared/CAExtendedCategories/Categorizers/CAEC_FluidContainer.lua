@@ -67,7 +67,8 @@ function FluidContainer:categorize(item, instance)
     category = "LiquidFuel"
   elseif fluid:isCategory(FluidCategory.Medical) then
     category = "FirstAid__Liquid"
-  elseif fluid:isCategory(FluidCategory.Poisons) or fluid:isCategory(FluidCategory.Industrial) then
+  elseif fluid:isCategory(FluidCategory.Poisons)
+    or fluid:isCategory(FluidCategory.Industrial) then
     -- perfume, cologne = poison, not sure what industrial is
     category = "Liquid"
   end
@@ -78,15 +79,19 @@ function FluidContainer:categorize(item, instance)
 
   if fluid:isCategory(FluidCategory.Water) then
     category = "BeverageWater"
-  elseif fluidType:equals(FluidType.CowMilk) or fluidType:equals(FluidType.SheepMilk)
-    or fluidType:equals(FluidType.AnimalMilk) or fluidTypeString:contains("milk") then
+  elseif fluidType:equals(FluidType.CowMilk)
+    or fluidType:equals(FluidType.SheepMilk)
+    or fluidType:equals(FluidType.AnimalMilk)
+    or fluidTypeString:contains("milk") then
     category = "BeverageMilk"
   elseif fluidType:equals(FluidType.Coffee) then
     category = "BeverageCoffee"
   elseif fluidType:equals(FluidType.Tea) or item:hasTag(ItemTag.HERBAL_TEA) then
     category = "BeverageTea"
-  elseif fluidType:equals(FluidType.SodaPop) or fluidTypeString:contains("soda")
-    or fluidTypeString:contains("cola") or fluidTypeString:contains("gingerale") then
+  elseif fluidType:equals(FluidType.SodaPop)
+    or fluidTypeString:contains("soda")
+    or fluidTypeString:contains("cola")
+    or fluidTypeString:contains("gingerale") then
     category = "BeverageSoftDrink"
   elseif fluidType:equals(FluidType.SpiffoJuice) or fluidTypeString:contains("juice") then
     category = "BeverageJuice"
@@ -96,9 +101,7 @@ function FluidContainer:categorize(item, instance)
     category = "BeverageWine"
   elseif fluid:isCategory(FluidCategory.Alcoholic) then
     category = "BeverageAlcohol"
-  elseif fluidTypeString:contains( --[[Sapph's Cooking]]
-    "energydrink"
-  ) then
+  elseif fluidTypeString:contains("energydrink") then
     category = "BeverageEnergyDrink"
   else
     category = "Beverage"
