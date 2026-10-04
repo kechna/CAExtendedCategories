@@ -154,7 +154,7 @@ function Utils.toTag(input)
   return tag
 end
 
----@param id string
+---@param id string|AmmoType
 ---@return AmmoType | nil
 function Utils.resolveAmmoType(id)
   return resolveType(AmmoType, id)
