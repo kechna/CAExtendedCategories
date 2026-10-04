@@ -231,24 +231,27 @@ local ApparelCategories = {
 ---@field Category                   CAEC_ApparelCategory
 ---@field apparelCategories          table<CAEC_ApparelCategory, ItemBodyLocation[]>
 ---@field categoryByBodyLocation     table<string, CAEC_ApparelCategory>
----@field public setGroup            fun(self: CAEC_ApparelCategorizer, bodyLocation: string | ItemBodyLocation, group: CAEC_ApparelCategory)
+---@field BodyLocationsMap           table<string, CAEC_ApparelCategory>
+---@field registerBodyLocation       fun(bodyLocation: string | ItemBodyLocation, category: CAEC_ApparelCategory)
 ---@field public resolveBodyLocation fun(self: CAEC_ApparelCategorizer, bodyLocation: string | ItemBodyLocation): ItemBodyLocation?
 local Apparel = CAEC_ItemCategorizer:derive("Apparel")
 
-local GasMaskFilterTags = table.newarray(ItemTag.GASMASK_FILTER, ItemTag.RESPIRATOR_FILTER, "base:ragfilter")
+Apparel.Category = ApparelCategory
+
+-- body locations registered by compatibility modules, applied on top of the built-in categories in initialise
+---@type table<string, CAEC_ApparelCategory>
+Apparel.BodyLocationsMap = {}
 
 function Apparel:new()
   ---@type CAEC_ApparelCategorizer
   local o = CAEC_ItemCategorizer.new(self)
 
-  o.Category = ApparelCategory
   o.bodyLocationGroup = BodyLocations.getGroup("Human")
   o.apparelCategories = ApparelCategories
 
   return o
 end
 
--- Compatibility modules wrap this to call setGroup first, so the lookup includes their body locations.
 function Apparel:initialise()
   local debug = self:isDebug()
 
@@ -274,6 +277,17 @@ function Apparel:initialise()
       end
     end
   end
+
+  for bodyLocation, category in pairs(Apparel.BodyLocationsMap) do
+    local resolved = self:resolveBodyLocation(bodyLocation)
+
+    if resolved then
+      self:log(string.format("  + BodyLocation %-24s -> %s", tostring(resolved), category))
+      self.categoryByBodyLocation[tostring(resolved)] = category
+    else
+      self:log("Body location not found: " .. bodyLocation, Debug.Level.Warning)
+    end
+  end
 end
 
 function Apparel:validate(item, _instance)
@@ -286,19 +300,8 @@ end
 
 ---@param bodyLocation string | ItemBodyLocation
 ---@param category     CAEC_ApparelCategory
-function Apparel:setGroup(bodyLocation, category)
-  local resolved = self:resolveBodyLocation(bodyLocation)
-
-  if not resolved then
-    self:log("Body location not found: " .. tostring(bodyLocation), Debug.Level.Warning)
-    return
-  end
-
-  if not self.apparelCategories[category] then
-    self.apparelCategories[category] = {}
-  end
-
-  table.insert(self.apparelCategories[category], resolved)
+function Apparel.registerBodyLocation(bodyLocation, category)
+  Apparel.BodyLocationsMap[tostring(bodyLocation)] = category
 end
 
 ---@param input ItemBodyLocation | string

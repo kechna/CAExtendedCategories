@@ -3,10 +3,13 @@ local CAEC = require("CAExtendedCategories/CAEC")
 
 local Food = require("CAExtendedCategories/Categorizers/CAEC_Food")
 local Fluid = require("CAExtendedCategories/Categorizers/CAEC_FluidContainer")
+local Apparel = require("CAExtendedCategories/Categorizers/CAEC_Apparel")
 
 if not Utils.modIsActive("SapphCooking_B42") then return end
 
 CAEC.registerInitHook("Mod:SapphCooking", function ()
+  Apparel.registerBodyLocation("sapphcooking:chefapron", Apparel.Category.ACCESSORY_TOP)
+
   Food.registerFoodType("Cachaca", Food.FoodType._SKIP_)
   -- curry powder
   Food.registerFoodType("Curry", Food.FoodType.Spice)
