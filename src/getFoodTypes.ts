@@ -4,12 +4,24 @@ import { BaseFoodType } from "./zomboid/foodTypes.ts";
 const TO_DELETE = [
   /** Replaced by Beans */
   BaseFoodType.Bean,
-  /** Replaced by Fruits */
+  /** Replaced by Produce */
   BaseFoodType.Berry,
   BaseFoodType.Citrus,
-  /** Replaced by Vegetables */
-  BaseFoodType.Vegetable,
+  BaseFoodType.Fruits,
   BaseFoodType.Greens,
+  BaseFoodType.HotPepper,
+  BaseFoodType.Mushroom,
+  BaseFoodType.Vegetable,
+  BaseFoodType.Vegetables,
+  /** Replaced by Dairy */
+  BaseFoodType.Cheese,
+  BaseFoodType.Egg,
+  /** Replaced by Beverage */
+  BaseFoodType.Coffee,
+  BaseFoodType.Tea,
+  /** Replaced by Snack */
+  BaseFoodType.Nut,
+  BaseFoodType.Seed,
   /** Replaced by PetFood */
   BaseFoodType.DogFood,
   BaseFoodType.CatFood,
@@ -21,7 +33,8 @@ const TO_DELETE = [
   BaseFoodType.Poulty,
   BaseFoodType.Sausage,
   BaseFoodType.Venison,
-  /** Replaced by Livestock */
+  BaseFoodType.Insect,
+  /** Handled by Gardening */
   BaseFoodType.AnimalFeed,
   /** Replaced by Staple */
   BaseFoodType.Bean,
@@ -32,6 +45,7 @@ const TO_DELETE = [
   BaseFoodType.Roe,
   /** Replaced by Baking */
   BaseFoodType.Oil,
+  BaseFoodType.Sugar,
   BaseFoodType.Thickener,
   /** Replaced by Candy */
   BaseFoodType.Chocolate,
@@ -43,6 +57,7 @@ const TO_DELETE = [
   BaseFoodType.Spread,
   /** Replaced by Spice */
   BaseFoodType.Pepper,
+  BaseFoodType.Stock,
   /** Replaced by Herb */
   BaseFoodType.Herbal,
   /** not handled as food */

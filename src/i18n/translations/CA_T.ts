@@ -351,22 +351,10 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_Candy: "Llepolia",
   /** canned food items */
   CAEC_Override_Canned: "En llauna",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Formatge"
-   */
-  CAEC_Fallback_Cheese: "Formatge",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Lactis",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Plat",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Fruita"
-   */
-  CAEC_Fallback_Fruits: "Fruita",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -375,42 +363,12 @@ export const CA: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Herba",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Vitets"
-   */
-  CAEC_Fallback_HotPepper: "Vitets",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Insecte"
-   */
-  CAEC_Fallback_Insect: "Insecte",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Bestiar",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Carn"
    */
   CAEC_Fallback_Meat: "Carn",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Bolet"
-   */
-  CAEC_Fallback_Mushroom: "Bolet",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Fruita seca"
-   */
-  CAEC_Fallback_Nut: "Fruita seca",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Perible",
   /** food for pets */
@@ -419,6 +377,8 @@ export const CA: ExternalTranslations = {
   CAEC_Override_Portion: "Porció",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "En conserva",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Fruita i verdura",
   /**
    * fish and other seafood
    *
@@ -439,27 +399,6 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_Spice: "Espècia",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Aliment bàsic",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Brou"
-   */
-  CAEC_Fallback_Stock: "Brou",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Sucre"
-   */
-  CAEC_Fallback_Sugar: "Sucre",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Vegetal"
-   */
-  CAEC_Fallback_Vegetables: "Vegetal",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adults",
   /** informational brochures */
@@ -615,6 +554,8 @@ export const CA: ExternalTranslations = {
   CAEC_Override_Plushie: "Peluix",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Sobre de llavors",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Menjar d'animals",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

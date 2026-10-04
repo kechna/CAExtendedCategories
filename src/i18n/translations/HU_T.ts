@@ -380,22 +380,10 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Candy: "Cukorka",
   /** canned food items */
   CAEC_Override_Canned: "Konzerv",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Sajt"
-   */
-  CAEC_Fallback_Cheese: "Sajt",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Tejtermékek",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Étel",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Gyümölcs"
-   */
-  CAEC_Fallback_Fruits: "Gyümölcs",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -404,37 +392,12 @@ export const HU: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Gyógynövények",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Csípős Paprika"
-   */
-  CAEC_Fallback_HotPepper: "Csípős Paprika",
-  /** edible insects */
-  CAEC_Fallback_Insect: "Rovarok",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Haszonállatok",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Hús"
    */
   CAEC_Fallback_Meat: "Hús",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Gomba"
-   */
-  CAEC_Fallback_Mushroom: "Gomba",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Dió"
-   */
-  CAEC_Fallback_Nut: "Diófélék",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Romlandó",
   /** food for pets */
@@ -443,6 +406,8 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Portion: "Adag",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Tartósított",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Zöldség-gyümölcs",
   /**
    * fish and other seafood
    *
@@ -463,27 +428,6 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Spice: "Fűszerek",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Alapélelmiszer",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Alapanyag"
-   */
-  CAEC_Override_Stock: "Alaplé",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Cukor"
-   */
-  CAEC_Fallback_Sugar: "Cukor",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Zöldség"
-   */
-  CAEC_Override_Vegetables: "Zöldségek",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Felnőtt",
   /** informational brochures */
@@ -639,6 +583,8 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Plushie: "Plüss",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Magcsomag",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Állateledel",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Dohányzás",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

@@ -482,22 +482,10 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Candy: "Snoep",
   /** canned food items */
   CAEC_Override_Canned: "Ingeblikt",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Kaas"
-   */
-  CAEC_Fallback_Cheese: "Kaas",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Zuivel",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Maaltijd",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Fruit"
-   */
-  CAEC_Fallback_Fruits: "Fruit",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -506,42 +494,12 @@ export const NL: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Kruiden",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Hete pepers"
-   */
-  CAEC_Fallback_HotPepper: "Pittige pepers",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Insect"
-   */
-  CAEC_Fallback_Insect: "Insecten",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Vee",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Vlees"
    */
   CAEC_Fallback_Meat: "Vlees",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Paddenstoel"
-   */
-  CAEC_Fallback_Mushroom: "Paddenstoelen",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Noot"
-   */
-  CAEC_Fallback_Nut: "Noten",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Bederfelijk",
   /** food for pets */
@@ -550,6 +508,8 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Portion: "Portie",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Geconserveerd",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Groente en fruit",
   /**
    * fish and other seafood
    *
@@ -570,27 +530,6 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Spice: "Kruiden",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Basisvoeding",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Bouillon"
-   */
-  CAEC_Fallback_Stock: "Bouillon",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Suiker"
-   */
-  CAEC_Fallback_Sugar: "Suiker",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Groente"
-   */
-  CAEC_Override_Vegetables: "Groenten",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Volwassen",
   /** informational brochures */
@@ -746,6 +685,8 @@ export const NL: ExternalTranslations = {
   CAEC_Override_Plushie: "Knuffel",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Zadenpakket",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Diervoeder",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Roken",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

@@ -381,22 +381,10 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Candy: "Dulciuri",
   /** canned food items */
   CAEC_Override_Canned: "La conservă",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Brânză"
-   */
-  CAEC_Fallback_Cheese: "Brânză",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Lactate",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Fel de mâncare",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Fructe"
-   */
-  CAEC_Fallback_Fruits: "Fructe",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const RO: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Ierburi",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Ardei Iuți"
-   */
-  CAEC_Fallback_HotPepper: "Ardei iute",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Insectă"
-   */
-  CAEC_Fallback_Insect: "Insecte",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Vite",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Carne"
    */
   CAEC_Fallback_Meat: "Carne",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Ciupearcă"
-   */
-  CAEC_Fallback_Mushroom: "Ciuperci",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Nucă"
-   */
-  CAEC_Fallback_Nut: "Nuci",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Perisabil",
   /** food for pets */
@@ -449,6 +407,8 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Portion: "Porție",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservat",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Fructe și legume",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Spice: "Condimente",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Aliment de bază",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Bulion"
-   */
-  CAEC_Fallback_Stock: "Bulion",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Zahăr"
-   */
-  CAEC_Fallback_Sugar: "Zahăr",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Legume"
-   */
-  CAEC_Fallback_Vegetables: "Legume",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adult",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Plushie: "Jucărie de pluș",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Plic de semințe",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Hrană pentru Animale",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumat",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

@@ -411,22 +411,10 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Candy: "Sladkosti",
   /** canned food items */
   CAEC_Override_Canned: "Konzervy",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Sýr"
-   */
-  CAEC_Fallback_Cheese: "Sýr",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Mléčné výrobky",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Hotová jídla",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Ovoce"
-   */
-  CAEC_Fallback_Fruits: "Ovoce",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -435,42 +423,12 @@ export const CS: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Bylinky",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Pálivé papriky"
-   */
-  CAEC_Fallback_HotPepper: "Pálivé papriky",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Hmyz"
-   */
-  CAEC_Fallback_Insect: "Hmyz",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Hospodářská krmiva",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Maso"
    */
   CAEC_Fallback_Meat: "Maso",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Houby"
-   */
-  CAEC_Fallback_Mushroom: "Houby",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Ořechy"
-   */
-  CAEC_Fallback_Nut: "Ořechy",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Kazící se",
   /** food for pets */
@@ -479,6 +437,8 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Portion: "Porce",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Konzervované",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Ovoce a zelenina",
   /**
    * fish and other seafood
    *
@@ -499,27 +459,6 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Spice: "Koření",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Základní potraviny",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Vývar"
-   */
-  CAEC_Fallback_Stock: "Vývar",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Cukr"
-   */
-  CAEC_Fallback_Sugar: "Cukr",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Zelenina"
-   */
-  CAEC_Fallback_Vegetables: "Zelenina",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Pro dospělé",
   /** informational brochures */
@@ -675,6 +614,8 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Plushie: "Plyšák",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Sáček se semeny",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Krmivo pro zvířata",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Kouření",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

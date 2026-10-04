@@ -381,22 +381,10 @@ export const FR: ExternalTranslations = {
   CAEC_Fallback_Candy: "Sucrerie",
   /** canned food items */
   CAEC_Override_Canned: "En conserve",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Fromage"
-   */
-  CAEC_Fallback_Cheese: "Fromage",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Produits laitiers",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Plat",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Fruits"
-   */
-  CAEC_Fallback_Fruits: "Fruits",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const FR: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Herbe",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Piment"
-   */
-  CAEC_Fallback_HotPepper: "Piments",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Insecte"
-   */
-  CAEC_Fallback_Insect: "Insectes",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Bétail",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Viande"
    */
   CAEC_Fallback_Meat: "Viande",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Champignon"
-   */
-  CAEC_Fallback_Mushroom: "Champignons",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Noix"
-   */
-  CAEC_Fallback_Nut: "Noix",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Périssable",
   /** food for pets */
@@ -449,6 +407,8 @@ export const FR: ExternalTranslations = {
   CAEC_Override_Portion: "Portion",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservé",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Fruits et légumes",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const FR: ExternalTranslations = {
   CAEC_Fallback_Spice: "Épices",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Aliment de base",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Bouillon"
-   */
-  CAEC_Fallback_Stock: "Bouillon",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Sucre"
-   */
-  CAEC_Fallback_Sugar: "Sucre",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Légumes"
-   */
-  CAEC_Fallback_Vegetables: "Légumes",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adulte",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const FR: ExternalTranslations = {
   CAEC_Override_Plushie: "Peluche",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Sachet de graines",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Nourriture pour animaux",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumer",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

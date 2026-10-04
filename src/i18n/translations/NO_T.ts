@@ -380,22 +380,10 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Candy: "Godteri",
   /** canned food items */
   CAEC_Override_Canned: "Hermetikk",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Ost"
-   */
-  CAEC_Fallback_Cheese: "Ost",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Meieriprodukter",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Ferdigretter",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Frukt"
-   */
-  CAEC_Fallback_Fruits: "Frukt",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -404,37 +392,12 @@ export const NO: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Urter",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Sterk chili"
-   */
-  CAEC_Fallback_HotPepper: "Sterk chili",
-  /** edible insects */
-  CAEC_Fallback_Insect: "Insekter",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Husdyrfôr",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Kjøtt"
    */
   CAEC_Fallback_Meat: "Kjøtt",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Sopp"
-   */
-  CAEC_Fallback_Mushroom: "Sopp",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Nøtt"
-   */
-  CAEC_Fallback_Nut: "Nøtt",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Lett bedervelig",
   /** food for pets */
@@ -443,6 +406,8 @@ export const NO: ExternalTranslations = {
   CAEC_Override_Portion: "Porsjon",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Konservert",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Frukt og grønt",
   /**
    * fish and other seafood
    *
@@ -463,27 +428,6 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Spice: "Krydder",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Basisvarer",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Kraft"
-   */
-  CAEC_Fallback_Stock: "Kraft",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Sukker"
-   */
-  CAEC_Fallback_Sugar: "Sukker",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Grønnsaker"
-   */
-  CAEC_Fallback_Vegetables: "Grønnsaker",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Voksen",
   /** informational brochures */
@@ -639,6 +583,8 @@ export const NO: ExternalTranslations = {
   CAEC_Override_Plushie: "Kosedyr",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Frøpose",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Dyrefôr",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Røyking",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

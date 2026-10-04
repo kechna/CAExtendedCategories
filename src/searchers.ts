@@ -278,7 +278,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Gardening,
-    categories: ["Seed", "SeedPacket", "Compostable"],
+    categories: ["Seed", "SeedPacket", "Compostable", "AnimalFeed"],
     searchKeys: ["Farming_%s", "ContextMenu_FoodType_%s"],
   },
 ];

@@ -381,22 +381,10 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Candy: "Permen",
   /** canned food items */
   CAEC_Override_Canned: "Kalengan",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Keju"
-   */
-  CAEC_Fallback_Cheese: "Keju",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Produk Susu",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Hidangan",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Buah"
-   */
-  CAEC_Fallback_Fruits: "Buah",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const ID: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Tumbuhan Rempah",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Cabai"
-   */
-  CAEC_Fallback_HotPepper: "Cabai",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Serangga"
-   */
-  CAEC_Fallback_Insect: "Serangga",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Ternak",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Daging"
    */
   CAEC_Fallback_Meat: "Daging",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Jamur"
-   */
-  CAEC_Fallback_Mushroom: "Jamur",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Kacang-kacangan"
-   */
-  CAEC_Fallback_Nut: "Kacang-kacangan",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Mudah Basi",
   /** food for pets */
@@ -449,6 +407,8 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Portion: "Porsi",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Awetan",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Sayur dan Buah",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Spice: "Bumbu",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Makanan Pokok",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Kaldu"
-   */
-  CAEC_Fallback_Stock: "Kaldu",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Gula"
-   */
-  CAEC_Fallback_Sugar: "Gula",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Sayuran"
-   */
-  CAEC_Fallback_Vegetables: "Sayuran",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Dewasa",
   /** informational brochures */
@@ -640,6 +579,8 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Plushie: "Boneka",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Paket Benih",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Pakan Hewan",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rokok",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

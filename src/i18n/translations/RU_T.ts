@@ -381,22 +381,10 @@ export const RU: ExternalTranslations = {
   CAEC_Fallback_Candy: "Конфеты",
   /** canned food items */
   CAEC_Override_Canned: "Консервы",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Сыр"
-   */
-  CAEC_Fallback_Cheese: "Сыр",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Молочные продукты",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Блюдо",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Фрукты"
-   */
-  CAEC_Fallback_Fruits: "Фрукты",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const RU: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Трава",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Острый перец"
-   */
-  CAEC_Fallback_HotPepper: "Острый перец",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Насекомые"
-   */
-  CAEC_Fallback_Insect: "Насекомые",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Скот",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Мясо"
    */
   CAEC_Fallback_Meat: "Мясо",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Грибы"
-   */
-  CAEC_Fallback_Mushroom: "Грибы",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Орехи"
-   */
-  CAEC_Fallback_Nut: "Орехи",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Скоропортящийся",
   /** food for pets */
@@ -449,6 +407,8 @@ export const RU: ExternalTranslations = {
   CAEC_Override_Portion: "Порция",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Консервированный",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Фрукты и овощи",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const RU: ExternalTranslations = {
   CAEC_Fallback_Spice: "Специи",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Основные продукты",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Бульон"
-   */
-  CAEC_Fallback_Stock: "Бульон",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Сахар"
-   */
-  CAEC_Fallback_Sugar: "Сахар",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Овощи"
-   */
-  CAEC_Fallback_Vegetables: "Овощи",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Для взрослых",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const RU: ExternalTranslations = {
   CAEC_Override_Plushie: "Плюшевая игрушка",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Пакетик семян",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Корм для животных",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Курение",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

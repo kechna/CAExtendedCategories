@@ -381,22 +381,10 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Candy: "Słodycze",
   /** canned food items */
   CAEC_Override_Canned: "Konserwa",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Ser"
-   */
-  CAEC_Fallback_Cheese: "Ser",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Nabiał",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Danie",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "z owocami"
-   */
-  CAEC_Override_Fruits: "Owoce",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const PL: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Zioła",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Ostre papryczki"
-   */
-  CAEC_Fallback_HotPepper: "Ostre papryczki",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Owad"
-   */
-  CAEC_Fallback_Insect: "Robaki",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Pasza",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "z mięsem"
    */
   CAEC_Override_Meat: "Mięso",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Grzyb"
-   */
-  CAEC_Fallback_Mushroom: "Grzyby",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Orzech"
-   */
-  CAEC_Fallback_Nut: "Orzechy",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Psujące się",
   /** food for pets */
@@ -449,6 +407,8 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Portion: "Porcja",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Zakonserwowane",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Owoce i warzywa",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const PL: ExternalTranslations = {
   CAEC_Fallback_Spice: "Przyprawa",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Podstawa",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Bulion"
-   */
-  CAEC_Fallback_Stock: "Bulion",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Cukier"
-   */
-  CAEC_Fallback_Sugar: "Cukier",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "z warzywami"
-   */
-  CAEC_Override_Vegetables: "Warzywa",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Dla dorosłych",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Plushie: "Pluszak",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Opakowanie nasion",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Pasza dla zwierząt",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Palenie",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

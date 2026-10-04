@@ -182,26 +182,14 @@ export const TRANSLATIONS = {
   CAEC_Override_Candy: "Candy",
   /* canned food items */
   CAEC_Override_Canned: "Canned",
-  /* dairy cheese products */
-  CAEC_Fallback_Cheese: "Cheese",
+  /* dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Dairy",
   /* prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Dish",
-  /* fresh fruit, including berries and citrus */
-  CAEC_Fallback_Fruits: "Fruits",
   /* culinary or medicinal plants/herbs */
   CAEC_Fallback_Herb: "Herbs",
-  /* spicy hot peppers */
-  CAEC_Fallback_HotPepper: "Hot Peppers",
-  /* edible insects */
-  CAEC_Fallback_Insect: "Insect",
-  /* feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Livestock",
   /* any non-fish meat */
   CAEC_Fallback_Meat: "Meat",
-  /* mushrooms/fungi */
-  CAEC_Fallback_Mushroom: "Mushroom",
-  /* nuts such as walnuts, almonds, peanuts */
-  CAEC_Fallback_Nut: "Nuts",
   /* food items that can spoil */
   CAEC_Override_Perishable: "Perishable",
   /* food for pets */
@@ -210,22 +198,16 @@ export const TRANSLATIONS = {
   CAEC_Override_Portion: "Portion",
   /* preserved food, such as jarred food */
   CAEC_Override_Preserved: "Preserved",
+  /* fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Produce",
   /* fish and other seafood */
   CAEC_Fallback_Seafood: "Seafood",
-  /* seeds for consumption, e.g. sunflower seeds, pumpkin seeds */
-  CAEC_Fallback_Seed: "Seed",
-  /* snack foods (e.g. chips, cookies) */
+  /* snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Snack",
-  /* spices and seasonings, salt, pepper, etc. */
+  /* spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Spice",
   /* basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Staple",
-  /* items used to make cooking stock or broth, such as bouillon cubes */
-  CAEC_Fallback_Stock: "Stock",
-  /* sugar and sweeteners */
-  CAEC_Fallback_Sugar: "Sugar",
-  /* vegetables, including leafy greens */
-  CAEC_Override_Vegetables: "Vegetables",
 
   /* ===== literature ===== */
 
@@ -326,6 +308,8 @@ export const TRANSLATIONS = {
 
   /* ===== misc ===== */
 
+  /* feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Animal Feed",
   /* bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicycle",
   /* compostable items such as animal dung, to be put in a composter */

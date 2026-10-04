@@ -381,22 +381,10 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Candy: "Guloseimas",
   /** canned food items */
   CAEC_Override_Canned: "Enlatados",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Queijo"
-   */
-  CAEC_Fallback_Cheese: "Queijo",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Laticínios",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Prato",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Fruta"
-   */
-  CAEC_Fallback_Fruits: "Fruta",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const PT: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Ervas",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Malaguetas"
-   */
-  CAEC_Fallback_HotPepper: "Malaguetas",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Inseto"
-   */
-  CAEC_Fallback_Insect: "Inseto",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Gado",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Carne"
    */
   CAEC_Fallback_Meat: "Carne",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Cogumelos"
-   */
-  CAEC_Fallback_Mushroom: "Cogumelos",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Frutos secos"
-   */
-  CAEC_Fallback_Nut: "Frutos secos",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Perecível",
   /** food for pets */
@@ -449,6 +407,8 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Portion: "Porção",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservas",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Frutas e legumes",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Spice: "Especiarias",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Alimento Básico",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Caldo"
-   */
-  CAEC_Fallback_Stock: "Caldo",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Açúcar"
-   */
-  CAEC_Fallback_Sugar: "Açúcar",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Legumes"
-   */
-  CAEC_Fallback_Vegetables: "Legumes",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adulto",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const PT: ExternalTranslations = {
   CAEC_Override_Plushie: "Peluche",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pacote de Sementes",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Ração para Animais",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tabaco",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

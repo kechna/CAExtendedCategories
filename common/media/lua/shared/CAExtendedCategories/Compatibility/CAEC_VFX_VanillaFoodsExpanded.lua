@@ -4,6 +4,7 @@ local CAEC = require("CAExtendedCategories/CAEC")
 
 local Food = require("CAExtendedCategories/Categorizers/CAEC_Food")
 local Fluid = require("CAExtendedCategories/Categorizers/CAEC_FluidContainer")
+local Static = require("CAExtendedCategories/Categorizers/CAEC_Static")
 
 if not Utils.modIsActive("VanillaFoodsExpanded") then return end
 
@@ -13,7 +14,7 @@ CAEC.registerInitHook("Mod:VanillaFoodsExpanded", function ()
   Food.registerFoodTypeTag("VFX:Frosting", Food.FoodType.NoExplicit)
   Food.registerFoodTypeTag("VFX:AnyFlour", Food.FoodType.Baking)
   Food.registerFoodTypeTag("VFX:BeerBottle", Food.FoodType._SKIP_)
-  Food.registerFoodTypeTag("VFX:BouillionCube", Food.FoodType.Stock)
+  Food.registerFoodTypeTag("VFX:BouillionCube", Food.FoodType.Spice)
   Food.registerFoodTypeTag("VFX:Cereal", Food.FoodType.Snack)
   Food.registerFoodTypeTag("VFX:DivideBowls", Food.FoodType.Dish)
   Food.registerFoodTypeTag("VFX:DivideCanBowls", Food.FoodType.Dish)
@@ -33,17 +34,41 @@ CAEC.registerInitHook("Mod:VanillaFoodsExpanded", function ()
   Food.registerFoodTypeTag("VFX:Rice", Food.FoodType.Staple)
   Food.registerFoodTypeTag("VFX:Sausage", Food.FoodType.Meat)
   Food.registerFoodTypeTag("VFX:SourdoughStarter", Food.FoodType.Baking)
-  Food.registerFoodTypeTag("VFX:StarterBlue", Food.FoodType.Cheese)
-  Food.registerFoodTypeTag("VFX:StarterFrench", Food.FoodType.Cheese)
-  Food.registerFoodTypeTag("VFX:StarterMesophilic", Food.FoodType.Cheese)
-  Food.registerFoodTypeTag("VFX:StarterParmesan", Food.FoodType.Cheese)
-  Food.registerFoodTypeTag("VFX:StarterSwiss", Food.FoodType.Cheese)
+  Food.registerFoodTypeTag("VFX:StarterBlue", Food.FoodType.Dairy)
+  Food.registerFoodTypeTag("VFX:StarterFrench", Food.FoodType.Dairy)
+  Food.registerFoodTypeTag("VFX:StarterMesophilic", Food.FoodType.Dairy)
+  Food.registerFoodTypeTag("VFX:StarterParmesan", Food.FoodType.Dairy)
+  Food.registerFoodTypeTag("VFX:StarterSwiss", Food.FoodType.Dairy)
   Food.registerFoodTypeTag("VFX:StarterThermophilic", Food.FoodType.Snack)
   Food.registerFoodTypeTag("VFX:Toast", Food.FoodType.Snack)
   Food.registerFoodTypeTag("VFX:TraditionalFlour", Food.FoodType.Baking)
   Food.registerFoodTypeTag("VFX:VinegarStarter", Food.FoodType._SKIP_)
   -- Food.registerFoodTypeTag("VFX:Whey", nil)
   Food.registerFoodTypeTag("VFX:Yeast", Food.FoodType.Baking)
+
+  -- beverages that aren't Food items, so the food categorizer doesn't see them
+  for _, itemType in ipairs({
+    "VFX.DrinkMixCherry",
+    "VFX.DrinkMixFruitPunch",
+    "VFX.DrinkMixGrape",
+    "VFX.DrinkMixLemonade",
+    "VFX.DrinkMixPinkLemonade",
+    "VFX.DrinkMixSweetTea",
+    "VFX.BlackTeaBox",
+    "VFX.BreakfastTeaBox",
+    "VFX.ChamomileTeaBox",
+    "VFX.EarlGrayTeaBox",
+    "VFX.GingerTeaBox",
+    "VFX.GreenTeaBox",
+    "VFX.LemonTeaBox",
+    "VFX.PeppermintTeaBox",
+    "VFX.BananaProteinPowder",
+    "VFX.ChocolateProteinPowder",
+    "VFX.StrawberryProteinPowder",
+    "VFX.VanillaProteinPowder",
+  }) do
+    Static.registerCategory(itemType, "FoodBeverage")
+  end
 
   ------
   -- fluids

@@ -381,22 +381,10 @@ export const CH: ExternalTranslations = {
   CAEC_Fallback_Candy: "糖果",
   /** canned food items */
   CAEC_Override_Canned: "罐頭",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "起司"
-   */
-  CAEC_Fallback_Cheese: "起司",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "乳製品",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "料理",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "水果"
-   */
-  CAEC_Fallback_Fruits: "水果",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const CH: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "香草",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "辣椒"
-   */
-  CAEC_Fallback_HotPepper: "辣椒",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "昆蟲"
-   */
-  CAEC_Fallback_Insect: "昆蟲",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "飼料",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "肉類"
    */
   CAEC_Fallback_Meat: "肉類",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "菇類"
-   */
-  CAEC_Fallback_Mushroom: "菇類",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "堅果"
-   */
-  CAEC_Fallback_Nut: "堅果",
   /** food items that can spoil */
   CAEC_Override_Perishable: "易腐",
   /** food for pets */
@@ -449,6 +407,8 @@ export const CH: ExternalTranslations = {
   CAEC_Override_Portion: "份裝",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "保存食品",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "生鮮蔬果",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const CH: ExternalTranslations = {
   CAEC_Fallback_Spice: "調味料",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "主食",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "高湯"
-   */
-  CAEC_Fallback_Stock: "高湯",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "糖"
-   */
-  CAEC_Fallback_Sugar: "糖",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "蔬菜"
-   */
-  CAEC_Fallback_Vegetables: "蔬菜",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "成人",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const CH: ExternalTranslations = {
   CAEC_Override_Plushie: "絨毛玩偶",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "種子包",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "動物飼料",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "菸品",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

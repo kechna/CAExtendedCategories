@@ -381,22 +381,10 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Candy: "사탕",
   /** canned food items */
   CAEC_Override_Canned: "통조림",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "치즈"
-   */
-  CAEC_Fallback_Cheese: "치즈",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "유제품",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "요리",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "과일"
-   */
-  CAEC_Fallback_Fruits: "과일",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const KO: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "약초",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "고추"
-   */
-  CAEC_Fallback_HotPepper: "고추",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "살펴보기"
-   */
-  CAEC_Override_Insect: "곤충",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "가축",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "고기"
    */
   CAEC_Fallback_Meat: "고기",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "버섯"
-   */
-  CAEC_Fallback_Mushroom: "버섯",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "견과류"
-   */
-  CAEC_Fallback_Nut: "견과류",
   /** food items that can spoil */
   CAEC_Override_Perishable: "부패성",
   /** food for pets */
@@ -449,6 +407,8 @@ export const KO: ExternalTranslations = {
   CAEC_Override_Portion: "1인분",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "저장 식품",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "청과",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Spice: "향신료",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "주식",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "스톡"
-   */
-  CAEC_Fallback_Stock: "스톡",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "설탕"
-   */
-  CAEC_Fallback_Sugar: "설탕",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "채소"
-   */
-  CAEC_Fallback_Vegetables: "채소",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "성인",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const KO: ExternalTranslations = {
   CAEC_Override_Plushie: "봉제 인형",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "씨앗 봉투",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "동물 사료",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "흡연",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

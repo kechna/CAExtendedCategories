@@ -381,22 +381,10 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Candy: "Makeiset",
   /** canned food items */
   CAEC_Override_Canned: "Säilykkeet",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Juusto"
-   */
-  CAEC_Fallback_Cheese: "Juusto",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Maitotuotteet",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Valmisruoka",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Hedelmiä"
-   */
-  CAEC_Fallback_Fruits: "Hedelmiä",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const FI: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Yrtti",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Tulisia chilipaprikoita"
-   */
-  CAEC_Fallback_HotPepper: "Tulipaprika",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Hyönteinen"
-   */
-  CAEC_Fallback_Insect: "Hyönteinen",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Karjanrehu",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Lihaa"
    */
   CAEC_Fallback_Meat: "Lihaa",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Sieni"
-   */
-  CAEC_Fallback_Mushroom: "Sieni",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Pähkinä"
-   */
-  CAEC_Fallback_Nut: "Pähkinät",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Pilaantuva",
   /** food for pets */
@@ -449,6 +407,8 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Portion: "Annos",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Säilötty",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Hedelmät ja vihannekset",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Spice: "Mauste",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Peruselintarvike",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Liemi"
-   */
-  CAEC_Fallback_Stock: "Liemi",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Sokeri"
-   */
-  CAEC_Fallback_Sugar: "Sokeri",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Vihanneksia"
-   */
-  CAEC_Fallback_Vegetables: "Vihanneksia",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Aikuinen",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Plushie: "Pehmolelu",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Siemenpussi",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Rehu",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tupakointi",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

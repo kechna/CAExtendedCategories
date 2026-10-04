@@ -167,26 +167,14 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Candy: "Kendi",
   /** canned food items */
   CAEC_Override_Canned: "De-lata",
-  /** dairy cheese products */
-  CAEC_Fallback_Cheese: "Keso",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Produktong Gatas",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Ulam",
-  /** fresh fruit, including berries and citrus */
-  CAEC_Fallback_Fruits: "Prutas",
   /** culinary or medicinal plants/herbs */
   CAEC_Fallback_Herb: "Halamang-gamot",
-  /** spicy hot peppers */
-  CAEC_Fallback_HotPepper: "Siling Labuyo",
-  /** edible insects */
-  CAEC_Fallback_Insect: "Insekto",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Pakain sa Hayop",
   /** any non-fish meat */
   CAEC_Fallback_Meat: "Karne",
-  /** mushrooms/fungi */
-  CAEC_Fallback_Mushroom: "Kabute",
-  /** nuts such as walnuts, almonds, peanuts */
-  CAEC_Fallback_Nut: "Mani",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Madaling Masira",
   /** food for pets */
@@ -195,6 +183,8 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Portion: "Bahagi",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Preserba",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Prutas at Gulay",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Pagkaing-dagat",
   /** loose plantable seeds for gardening/farming */
@@ -205,12 +195,6 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Spice: "Pampalasa",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Pangunahing Pagkain",
-  /** items used to make cooking stock or broth, such as bouillon cubes */
-  CAEC_Fallback_Stock: "Sabaw",
-  /** sugar and sweeteners */
-  CAEC_Fallback_Sugar: "Asukal",
-  /** vegetables, including leafy greens */
-  CAEC_Override_Vegetables: "Gulay",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Pang-adulto",
   /** informational brochures */
@@ -315,6 +299,8 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Plushie: "Stuffed Toy",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pakete ng Buto",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Pagkain ng Hayop",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Paninigarilyo",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

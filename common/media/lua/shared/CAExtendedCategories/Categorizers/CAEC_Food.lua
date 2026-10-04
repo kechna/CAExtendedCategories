@@ -13,7 +13,8 @@ local BASE_CATEGORY = "Food"
 local Food = CAEC_ItemCategorizer:derive(BASE_CATEGORY)
 
 Food.NonFoodTags = table.newarray(
-  ItemTag.ANIMAL_HEAD, ItemTag.FEATHER, ItemTag.IS_COMPOSTABLE, ItemTag.ANIMAL_BRAIN, ItemTag.SMOKABLE,ItemTag.SEALED_BEVERAGE_CAN, ItemTag.ALCOHOLIC_BEVERAGE, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO
+  ItemTag.ANIMAL_HEAD, ItemTag.FEATHER, ItemTag.IS_COMPOSTABLE, ItemTag.ANIMAL_BRAIN, ItemTag.SMOKABLE,
+  ItemTag.SEALED_BEVERAGE_CAN, ItemTag.ALCOHOLIC_BEVERAGE, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO
 )
 
 -- tags that will map to specific food types
@@ -25,54 +26,45 @@ Food.TagMaps = {
   [FoodType.Seafood] = table.newarray(ItemTag.FISH_MEAT, ItemTag.UNCUT_FISH),
   [FoodType.Spice] = table.newarray(ItemTag.SALT),
   [FoodType.Staple] = table.newarray(ItemTag.PASTA),
-  [FoodType.Cheese] = table.newarray(ItemTag.CHEESE),
-  [FoodType.Seed] = table.newarray(ItemTag.IS_SEED),
+  [FoodType.Dairy] = table.newarray(ItemTag.CHEESE),
+  [FoodType.Snack] = table.newarray(ItemTag.IS_SEED),
+  [FoodType.Beverage] = nil,
   [FoodType.Bread] = nil,
   [FoodType.Candy] = nil,
   [FoodType.Canned] = nil,
-  [FoodType.Coffee] = nil,
-  [FoodType.Egg] = nil,
-  [FoodType.Fruits] = nil,
-  [FoodType.HotPepper] = nil,
-  [FoodType.Insect] = nil,
-  [FoodType.Livestock] = nil,
+  [FoodType.Frozen] = nil,
   [FoodType.Meat] = nil,
-  [FoodType.Mushroom] = nil,
   [FoodType.NoExplicit] = nil,
-  [FoodType.Nut] = nil,
   [FoodType.PetFood] = nil,
   [FoodType.Portion] = nil,
   [FoodType.Preserved] = nil,
-  [FoodType.Snack] = nil,
-  [FoodType.Stock] = nil,
-  [FoodType.Sugar] = nil,
-  [FoodType.Tea] = nil,
-  [FoodType.Vegetables] = nil
+  [FoodType.Produce] = nil
 }
 
 Food.FoodTypeMap = {
   BakingFat = FoodType.Baking,
   Oil = FoodType.Baking,
+  Sugar = FoodType.Baking,
   Thickener = FoodType.Baking,
+
+  Coffee = FoodType.Beverage,
+  Tea = FoodType.Beverage,
 
   Chocolate = FoodType.Candy,
 
-  Berry = FoodType.Fruits,
-  Citrus = FoodType.Fruits,
-  Fruits = FoodType.Fruits,
+  Cheese = FoodType.Dairy,
+  Egg = FoodType.Dairy,
 
   Herbal = FoodType.Herb,
-
-  AnimalFeed = FoodType.Livestock,
 
   Bacon = FoodType.Meat,
   Beef = FoodType.Meat,
   Game = FoodType.Meat,
+  Insect = FoodType.Meat,
   Meats = FoodType.Meat,
   Poultry = FoodType.Meat,
   Sausage = FoodType.Meat,
   Venison = FoodType.Meat,
-  Poulty = FoodType.Meat,
 
   -- "NoExplicit" = Condiment
   Cocoa = FoodType.NoExplicit,
@@ -84,17 +76,30 @@ Food.FoodTypeMap = {
   CatFood = FoodType.PetFood,
   DogFood = FoodType.PetFood,
 
+  Berry = FoodType.Produce,
+  Citrus = FoodType.Produce,
+  Fruits = FoodType.Produce,
+  Greens = FoodType.Produce,
+  HotPepper = FoodType.Produce,
+  Mushroom = FoodType.Produce,
+  Vegetable = FoodType.Produce,
+  Vegetables = FoodType.Produce,
+
   Fish = FoodType.Seafood,
   Roe = FoodType.Seafood,
 
+  Nut = FoodType.Snack,
+  Seed = FoodType.Snack,
+
   Pepper = FoodType.Spice,
+  Stock = FoodType.Spice,
 
   Bean = FoodType.Staple,
   Pasta = FoodType.Staple,
   Rice = FoodType.Staple,
 
-  Greens = FoodType.Vegetables,
-  Vegetable = FoodType.Vegetables,
+  -- animal feed is handled by the Gardening categorizer
+  AnimalFeed = FoodType._SKIP_,
 
   -- Any drink items not caught by the tags check should be skipped so FluidContainer can handle them
   Beer = FoodType._SKIP_,
@@ -105,12 +110,18 @@ Food.FoodTypeMap = {
   SoftDrink = FoodType._SKIP_,
   Wine = FoodType._SKIP_,
 
-  -- Vanilla Foods Expanded (VFX)
-  Beans = FoodType.Staple
+  -- generic modded names that may or may not exist in multiple mods
+  Beans = FoodType.Staple,  -- vfx
+  Drink = FoodType._SKIP_,  -- vfx
+  Fruit = FoodType.Produce, -- vfx
+  Salt = FoodType.Spice     -- sapph
 }
 
 -- static item -> food type map
-Food.ItemFoodTypeMap = {}
+Food.ItemFoodTypeMap = {
+  -- is condiment by default
+  ["Base.Squash"] = FoodType.Produce
+}
 
 -- expose FoodType table for mods
 Food.FoodType = FoodType
@@ -180,7 +191,7 @@ local instanceSpecificFoodTypes = table.newarray(FoodType.Dish, FoodType.Portion
 
 -- food types checked first, in priority order (Dish is checked separately before these)
 local priorityFoodTypes = table.newarray(
-  FoodType.Dish, FoodType.Seafood, FoodType.Cheese, FoodType.Spice, FoodType.Baking, FoodType.Herb
+  FoodType.Dish, FoodType.Seafood, FoodType.Dairy, FoodType.Spice, FoodType.Baking, FoodType.Herb
 )
 
 -- food types to skip in the fallback tag search
@@ -265,12 +276,8 @@ function Food:getFoodType(item, instance)
     -- resolve condiments/spices and stock
     if FoodType.NoExplicit == resolved and (eatType ~= "glugfood" and eatType ~= "candrink")
       or (item:hasTag(ItemTag.DRIED_FOOD) and resolved ~= FoodType.Herb) then
-      -- bouillon cubes
-      if item:hasTag(ItemTag.DRIED_FOOD) and item:hasTag(ItemTag.HERBAL_TEA) then
-        resolved = FoodType.Stock
-      else
-        resolved = FoodType.Spice
-      end
+      -- includes bouillon cubes
+      resolved = FoodType.Spice
     elseif not resolved and item:hasTag(ItemTag.MINOR_INGREDIENT) then
       resolved = FoodType.NoExplicit
     end
@@ -280,14 +287,8 @@ function Food:getFoodType(item, instance)
     resolved = FoodType.Meat
   end
 
-  if not resolved then
-    local edible = item:isCantEat() == false
-
-    if edible then
-      resolved = self:guessFoodOrSnack(item, instance)
-    elseif item:isFarmingLoot() then
-      resolved = FoodType.Livestock
-    end
+  if not resolved and not item:isCantEat() then
+    resolved = self:guessFoodOrSnack(item, instance)
   end
 
   return resolved, false

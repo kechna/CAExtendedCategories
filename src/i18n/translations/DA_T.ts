@@ -381,22 +381,10 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Candy: "Slik",
   /** canned food items */
   CAEC_Override_Canned: "Konserves",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Ost"
-   */
-  CAEC_Fallback_Cheese: "Ost",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Mejeriprodukter",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Færdigretter",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Frugt"
-   */
-  CAEC_Fallback_Fruits: "Frugt",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const DA: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Urter",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Chili Peber"
-   */
-  CAEC_Fallback_HotPepper: "Chili",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Insekt"
-   */
-  CAEC_Fallback_Insect: "Insekter",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Husdyrfoder",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Kød"
    */
   CAEC_Fallback_Meat: "Kød",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Svamp"
-   */
-  CAEC_Fallback_Mushroom: "Svampe",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Nød"
-   */
-  CAEC_Fallback_Nut: "Nødder",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Letfordærveligt",
   /** food for pets */
@@ -449,6 +407,8 @@ export const DA: ExternalTranslations = {
   CAEC_Override_Portion: "Portion",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Konserveret",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Frugt og grønt",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const DA: ExternalTranslations = {
   CAEC_Fallback_Spice: "Krydderier",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Basisvarer",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Boulion"
-   */
-  CAEC_Fallback_Stock: "Bouillon",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Sukker"
-   */
-  CAEC_Fallback_Sugar: "Sukker",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Grøntsag"
-   */
-  CAEC_Override_Vegetables: "Grøntsager",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Voksen",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const DA: ExternalTranslations = {
   CAEC_Override_Plushie: "Bamse",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Frøpose",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Dyrefoder",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rygning",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

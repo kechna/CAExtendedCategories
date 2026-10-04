@@ -381,22 +381,10 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Candy: "Caramella",
   /** canned food items */
   CAEC_Override_Canned: "In scatola",
-  /**
-   * dairy cheese products
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Cheese = "Formaggio"
-   */
-  CAEC_Fallback_Cheese: "Formaggio",
+  /** dairy products such as cheese and eggs */
+  CAEC_Fallback_Dairy: "Latticini",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Piatti pronti",
-  /**
-   * fresh fruit, including berries and citrus
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Fruits = "Frutta"
-   */
-  CAEC_Fallback_Fruits: "Frutta",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -405,42 +393,12 @@ export const IT: ExternalTranslations = {
    */
   CAEC_Fallback_Herb: "Erbe",
   /**
-   * spicy hot peppers
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_HotPepper = "Peperoncini piccanti"
-   */
-  CAEC_Fallback_HotPepper: "Peperoncini piccanti",
-  /**
-   * edible insects
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Insect = "Insetto"
-   */
-  CAEC_Fallback_Insect: "Insetti",
-  /** feed for farm animals or cattle, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_Livestock: "Mangime",
-  /**
    * any non-fish meat
    *
    * found in-game:
    *   ContextMenu_FoodType_Meat = "Carne"
    */
   CAEC_Fallback_Meat: "Carne",
-  /**
-   * mushrooms/fungi
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Mushroom = "Funghi"
-   */
-  CAEC_Fallback_Mushroom: "Funghi",
-  /**
-   * nuts such as walnuts, almonds, peanuts
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Nut = "Dado"
-   */
-  CAEC_Override_Nut: "Frutta secca",
   /** food items that can spoil */
   CAEC_Override_Perishable: "Deperibile",
   /** food for pets */
@@ -449,6 +407,8 @@ export const IT: ExternalTranslations = {
   CAEC_Override_Portion: "Porzione",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservato",
+  /** fresh fruits, vegetables, mushrooms and hot peppers */
+  CAEC_Fallback_Produce: "Frutta e verdura",
   /**
    * fish and other seafood
    *
@@ -469,27 +429,6 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Spice: "Spezie",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Alimenti di base",
-  /**
-   * items used to make cooking stock or broth, such as bouillon cubes
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Stock = "Brodo"
-   */
-  CAEC_Fallback_Stock: "Brodo",
-  /**
-   * sugar and sweeteners
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Sugar = "Zucchero"
-   */
-  CAEC_Fallback_Sugar: "Zucchero",
-  /**
-   * vegetables, including leafy greens
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Vegetables = "Ortaggio"
-   */
-  CAEC_Fallback_Vegetables: "Ortaggio",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adulti",
   /** informational brochures */
@@ -645,6 +584,8 @@ export const IT: ExternalTranslations = {
   CAEC_Override_Plushie: "Peluche",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Bustina di semi",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Mangime",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumo",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
