@@ -20,9 +20,9 @@ local TRUNCATE_SUFFIX = "..."
 CategoryColors.DEFAULTS = {
   enabled = true,
   tintStrength = 0.7,
-  hueVariation = 0.08,
-  valueVariation = 0.16,
-  levelFalloff = 0.5,
+  hueVariation = 0.18,
+  valueVariation = 0.28,
+  levelFalloff = 0.85,
 }
 
 local enabled = CategoryColors.DEFAULTS.enabled
