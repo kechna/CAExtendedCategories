@@ -164,6 +164,10 @@ export const BOXABLE_CATEGORIES = [
   PzCategory.Material,
   PzCategory.Memento,
   PzCategory.SkillBook,
+  PzCategory.FireSource,
+  PzCategory.Household,
+  PzCategory.Appearance,
+  "CookingWeapon", // don't like this
   "Beverage",
 ];
 
