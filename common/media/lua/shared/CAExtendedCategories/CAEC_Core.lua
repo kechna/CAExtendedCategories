@@ -1,6 +1,7 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 local Processors = require("CAExtendedCategories/CAEC_Processors")
+local BoxesAndStacks = require("CAExtendedCategories/Categorizers/CAEC_BoxesAndStacks")
 
 CAEC_Global = CAEC_Global or {}
 
@@ -48,6 +49,8 @@ function Core.initializeCategorizers()
 
   -- regular categorizers
   Processors.registerCategorizer("Static", 1)
+  -- boxes with known contents (from unpack recipes) are categorized by their contents
+  Processors.registerCategorizer("BoxesAndStacks", 2)
   Processors.registerCategorizer("Electronics", 200)
   Processors.registerCategorizer("Apparel", 400)
   Processors.registerCategorizer("Container", 600)
@@ -69,7 +72,7 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("Household", 6000)
   Processors.registerCategorizer("FireSource", 6200)
   Processors.registerCategorizer("GasMask", 6400)
-  Processors.registerCategorizer("BoxesAndStacks", 8000)
+  Processors.registerCategorizer("BoxesAndStacksFallback", BoxesAndStacks.categorizeByHeuristic, 8000)
   Processors.registerCategorizer("CategoryOverride", 9999)
 
   Processors.registerCategorizer("FluidContainer", 1000, "instance")

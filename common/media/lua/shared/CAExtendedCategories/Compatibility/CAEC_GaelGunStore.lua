@@ -198,11 +198,7 @@ function Ammo:categorize(item, instance)
   local recipe = item:getDoubleClickRecipe()
 
   if name:contains("casing") or name:contains("tip") or (recipe and recipe:contains("casing")) then
-    if category and Utils.startsWith(category, "Ammo") then
-      return "Material" .. category:sub(5)
-    else
-      return "Material" .. (category or "Ammo")
-    end
+    return Ammo.toMaterial(category)
   end
 
   return category

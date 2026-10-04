@@ -355,6 +355,8 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Lactis",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Plat",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Congelat",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -429,6 +431,8 @@ export const CA: ExternalTranslations = {
   CAEC_Override_Bow: "Arc",
   /** firearm drums */
   CAEC_Fallback_Drum: "Tambor",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Explosiu",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Arma de foc",
   /** pistols and handguns */
@@ -482,6 +486,8 @@ export const CA: ExternalTranslations = {
    *   ContextMenu_Milk = "Munyir"
    */
   CAEC_Fallback_Milk: "Llet",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Verí",
   /**
    * carbonated soft drinks
    *
@@ -523,10 +529,18 @@ export const CA: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Despertador"
    */
   CAEC_Fallback_AlarmClock: "Despertador",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Ràdio",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Comandament",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Walkie-talkie",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Casset",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicicleta",
   /** compostable items such as animal dung, to be put in a composter */
@@ -550,6 +564,8 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_Part: "Zona",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Quadre",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Peluix",
   /** packet of plantable seeds for gardening/farming */
@@ -558,6 +574,8 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Menjar d'animals",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Joguina",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Bibelot",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

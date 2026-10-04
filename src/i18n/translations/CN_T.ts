@@ -385,6 +385,8 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Dairy: "乳制品",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "料理",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "冷冻",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Bow: "弓",
   /** firearm drums */
   CAEC_Fallback_Drum: "弹鼓",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "爆炸物",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "枪械",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const CN: ExternalTranslations = {
    *   ContextMenu_Milk = "牛奶"
    */
   CAEC_Fallback_Milk: "牛奶",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "毒物",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const CN: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "钟表"
    */
   CAEC_Fallback_AlarmClock: "钟表",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "收音机",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "遥控器",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "对讲机",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "磁带",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "自行车",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Part: "部位",
   /** photos */
   CAEC_Override_Photo: "照片",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "图片",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "毛绒玩具",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "动物饲料",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "吸烟",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "玩具",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "小饰品",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

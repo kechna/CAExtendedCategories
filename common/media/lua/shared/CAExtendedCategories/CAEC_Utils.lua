@@ -20,6 +20,41 @@ local function resolveType(typeObj, id)
   return ok and result or nil
 end
 
+---@param category string
+---@return boolean
+local function isKnownCategory(category)
+  return getTextOrNull("IGUI_ItemCat_" .. category) ~= nil
+end
+
+--- Adds the suffix while keeping categories at most 3 segments long. Only categories of up to 3 segments are translated,
+--- so when base .. suffix isn't one, segments are dropped from the end of the base until it is, e.g.
+--- FoodPerishableCanned + Box -> FoodPerishableBox and MaterialAmmoRifle + Box -> MaterialAmmoBox.
+---@param base   string
+---@param suffix string
+---@return string
+function Utils.withSuffix(base, suffix)
+  local full = base .. suffix
+
+  if isKnownCategory(full) then
+    return full
+  end
+
+  -- segments start with a capital letter, try cutting before each one, longest first
+  for i = base:len(), 2, -1 do
+    local char = base:sub(i, i)
+
+    if char ~= char:lower() then
+      local candidate = base:sub(1, i - 1) .. suffix
+
+      if isKnownCategory(candidate) then
+        return candidate
+      end
+    end
+  end
+
+  return full
+end
+
 ---@param search  string
 ---@param subject string
 ---@return boolean

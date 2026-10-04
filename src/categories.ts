@@ -10,7 +10,6 @@ export const TOOL_ADDON = [
   "Foraging",
   "Gardening",
   "Glassmaking",
-  "Knapping",
   "Maintenance",
   "Masonry",
   "Mechanics",

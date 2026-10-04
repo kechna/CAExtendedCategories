@@ -169,4 +169,28 @@ function Ammo:categorize(item, _instance)
   return category
 end
 
+--- Turns an ammo category into the material category for its casings, e.g. AmmoShotgun -> MaterialAmmoShotgun. Boxes
+--- keep their suffix but stay at most 3 segments: AmmoShotgunBox -> MaterialAmmoBox.
+---@param category string | nil
+---@return string
+function Ammo.toMaterial(category)
+  if not category then
+    return "MaterialAmmo"
+  end
+
+  if not Utils.startsWith("Ammo", category) then
+    return "Material" .. category
+  end
+
+  local base = "Material" .. category
+
+  for _, suffix in ipairs({ "Box", "Carton" }) do
+    if Utils.endsWith(suffix, base) then
+      return Utils.withSuffix(base:sub(1, -suffix:len() - 1), suffix)
+    end
+  end
+
+  return base
+end
+
 return Ammo

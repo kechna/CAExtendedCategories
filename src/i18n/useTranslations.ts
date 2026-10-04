@@ -47,7 +47,7 @@ export const useTranslations = async (context: FullModContext, languages: readon
 
   // const allExistingKeys = new Set(Object.keys(allTranslations));
 
-  const doSave = (language: Language, key: string, fullKey: string, value: string, override = false): void => {
+  const doSave = (language: Language, fullKey: string, value: string): void => {
     if (!value) {
       return;
     }
@@ -73,9 +73,9 @@ export const useTranslations = async (context: FullModContext, languages: readon
     createdTranslations[language][fullKey] = value;
   };
 
-  const save = (language: Language, key: string, value: string, override = false): void => {
+  const save = (language: Language, key: string, value: string): void => {
     [`IGUI_ItemCat_${key}`, ...(KEYS_MAP[key] ?? [])].forEach((k) => {
-      doSave(language, key, k.replace("%s", key), value, override);
+      doSave(language, k.replace("%s", key), value);
     });
   };
 

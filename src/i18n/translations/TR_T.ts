@@ -385,6 +385,8 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Süt Ürünleri",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Yemek",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Dondurulmuş",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const TR: ExternalTranslations = {
   CAEC_Override_Bow: "Yay",
   /** firearm drums */
   CAEC_Fallback_Drum: "Tambur Şarjör",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Patlayıcı",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Ateşli Silah",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const TR: ExternalTranslations = {
    *   ContextMenu_Milk = "Süt"
    */
   CAEC_Fallback_Milk: "Süt",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Zehir",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const TR: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Alarmlı Saat"
    */
   CAEC_Fallback_AlarmClock: "Alarmlı Saat",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Radyo",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Kumanda",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Telsiz",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Kaset",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bisiklet",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Part: "Bölüm",
   /** photos */
   CAEC_Fallback_Photo: "Fotoğraf",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Resim",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Peluş",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Hayvan Yemi",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tütün",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Oyuncak",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Süs Eşyası",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

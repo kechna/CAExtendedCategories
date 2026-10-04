@@ -385,6 +385,8 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_Dairy: "乳製品",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "料理",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "冷凍食品",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const JP: ExternalTranslations = {
   CAEC_Override_Bow: "弓",
   /** firearm drums */
   CAEC_Fallback_Drum: "ドラムマガジン",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "爆発物",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "銃器",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const JP: ExternalTranslations = {
    *   ContextMenu_Milk = "牛乳"
    */
   CAEC_Fallback_Milk: "牛乳",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "毒物",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const JP: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "目覚まし時計"
    */
   CAEC_Fallback_AlarmClock: "目覚まし時計",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "ラジオ",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "リモコン",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "トランシーバー",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "カセット",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "自転車",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_Part: "部位",
   /** photos */
   CAEC_Fallback_Photo: "写真",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "絵",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "ぬいぐるみ",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "動物の飼料",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "喫煙具",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "おもちゃ",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "小物",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

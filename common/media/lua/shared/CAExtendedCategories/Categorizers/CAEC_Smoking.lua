@@ -7,9 +7,7 @@ local Smoking = CAEC_ItemCategorizer.createTagCategorizer("Smoking", tags)
 local baseValidate = Smoking.validate
 
 function Smoking.validate(self, item, instance)
-  local isSmoking = baseValidate(self, item, instance) or item:getDoubleClickRecipe() == "UnpackCigaretteCarton"
-
-  if isSmoking then
+  if baseValidate(self, item, instance) then
     return true
   end
 

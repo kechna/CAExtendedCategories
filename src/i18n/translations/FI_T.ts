@@ -385,6 +385,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Maitotuotteet",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Valmisruoka",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Pakaste",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Bow: "Jousi",
   /** firearm drums */
   CAEC_Fallback_Drum: "Rumpulipas",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Räjähde",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Ampuma-ase",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const FI: ExternalTranslations = {
    *   ContextMenu_Milk = "Lypsä"
    */
   CAEC_Fallback_Milk: "Maito",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Myrkky",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const FI: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Herätyskello"
    */
   CAEC_Fallback_AlarmClock: "Herätyskello",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Radio",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Kaukosäädin",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Radiopuhelin",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Kasetti",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Polkupyörä",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Part: "Osa",
   /** photos */
   CAEC_Fallback_Photo: "Valokuva",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Kuva",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Pehmolelu",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Rehu",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Tupakointi",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Lelu",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Pikkuesine",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

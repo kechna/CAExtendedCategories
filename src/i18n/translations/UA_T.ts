@@ -385,6 +385,8 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Молочні продукти",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Готові страви",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Заморожене",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const UA: ExternalTranslations = {
   CAEC_Override_Bow: "Лук",
   /** firearm drums */
   CAEC_Fallback_Drum: "Барабанний магазин",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Вибухівка",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Вогнепальна зброя",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const UA: ExternalTranslations = {
    *   ContextMenu_Milk = "Доїти"
    */
   CAEC_Fallback_Milk: "Молоко",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Отрута",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const UA: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Будильник"
    */
   CAEC_Fallback_AlarmClock: "Будильник",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Радіо",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Пульт",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Рація",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Касета",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Велосипед",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Part: "Частина тіла / захист",
   /** photos */
   CAEC_Fallback_Photo: "Фото",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Картина",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Плюшева іграшка",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Корм для тварин",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Куріння",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Іграшка",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Дрібничка",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

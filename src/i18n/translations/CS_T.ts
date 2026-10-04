@@ -415,6 +415,8 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Mléčné výrobky",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Hotová jídla",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Mražené",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -489,6 +491,8 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Bow: "Luk",
   /** firearm drums */
   CAEC_Fallback_Drum: "Bubnový zásobník",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Výbušnina",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Střelné zbraně",
   /** pistols and handguns */
@@ -542,6 +546,8 @@ export const CS: ExternalTranslations = {
    *   ContextMenu_Milk = "Mléko"
    */
   CAEC_Fallback_Milk: "Mléko",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Jed",
   /**
    * carbonated soft drinks
    *
@@ -583,10 +589,18 @@ export const CS: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Budík"
    */
   CAEC_Fallback_AlarmClock: "Budík",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Rádio",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Dálkový ovladač",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Vysílačka",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Kazeta",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Kolo",
   /** compostable items such as animal dung, to be put in a composter */
@@ -610,6 +624,8 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Part: "Část",
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Obrázek",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plyšák",
   /** packet of plantable seeds for gardening/farming */
@@ -618,6 +634,8 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Krmivo pro zvířata",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Kouření",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Hračka",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Cetka",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

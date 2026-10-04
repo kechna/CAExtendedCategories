@@ -385,6 +385,8 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Latticini",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Piatti pronti",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Surgelati",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const IT: ExternalTranslations = {
   CAEC_Override_Bow: "Arco",
   /** firearm drums */
   CAEC_Fallback_Drum: "Caricatore a tamburo",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Esplosivo",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Arma da fuoco",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const IT: ExternalTranslations = {
    *   ContextMenu_Milk = "Latte"
    */
   CAEC_Fallback_Milk: "Latte",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Veleno",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const IT: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Sveglia"
    */
   CAEC_Fallback_AlarmClock: "Sveglia",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Radio",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Telecomando",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Walkie-talkie",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Cassetta",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicicletta",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Part: "Parte",
   /** photos */
   CAEC_Fallback_Photo: "Foto",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Quadro",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Peluche",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Mangime",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumo",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Giocattolo",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Ninnolo",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

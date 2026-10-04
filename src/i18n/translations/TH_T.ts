@@ -385,6 +385,8 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Dairy: "ผลิตภัณฑ์นม",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "อาหารจานหลัก",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "อาหารแช่แข็ง",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const TH: ExternalTranslations = {
   CAEC_Override_Bow: "ธนู",
   /** firearm drums */
   CAEC_Fallback_Drum: "แม็กกาซีนกลอง",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "วัตถุระเบิด",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "อาวุธปืน",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const TH: ExternalTranslations = {
    *   ContextMenu_Milk = "รีดนม"
    */
   CAEC_Fallback_Milk: "นม",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "ยาพิษ",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const TH: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "นาฬิกาปลุก"
    */
   CAEC_Fallback_AlarmClock: "นาฬิกาปลุก",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "วิทยุ",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "รีโมท",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "วิทยุสื่อสาร",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "เทปคาสเซ็ต",
+  /** music CDs */
+  CAEC_Override_CD: "ซีดี",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "วีเอชเอส",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "จักรยาน",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Part: "อวัยวะ",
   /** photos */
   CAEC_Fallback_Photo: "รูปถ่าย",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "รูปภาพ",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "ตุ๊กตาผ้า",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "อาหารสัตว์",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "การสูบบุหรี่",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "ของเล่น",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "ของกระจุกกระจิก",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

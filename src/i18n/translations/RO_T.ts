@@ -385,6 +385,8 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Lactate",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Fel de mâncare",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Congelate",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -459,6 +461,8 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Bow: "Arc",
   /** firearm drums */
   CAEC_Fallback_Drum: "Încărcător tambur",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Exploziv",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Armă de foc",
   /** pistols and handguns */
@@ -512,6 +516,8 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_Milk = "Lapte"
    */
   CAEC_Fallback_Milk: "Lapte",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Otravă",
   /**
    * carbonated soft drinks
    *
@@ -553,10 +559,18 @@ export const RO: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Ceas Deșteptător"
    */
   CAEC_Fallback_AlarmClock: "Ceas Deșteptător",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Radio",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Telecomandă",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Stație radio",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Casetă",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicicletă",
   /** compostable items such as animal dung, to be put in a composter */
@@ -580,6 +594,8 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Part: "Parte",
   /** photos */
   CAEC_Fallback_Photo: "Fotografie",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Tablou",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Jucărie de pluș",
   /** packet of plantable seeds for gardening/farming */
@@ -588,6 +604,8 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Hrană pentru Animale",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumat",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Jucărie",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Bibelou",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

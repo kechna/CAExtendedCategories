@@ -21,6 +21,14 @@ const WEAPON_CATEGORIES = [
   "Explosive",
 ];
 
+const FOOD_KEYS = ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"];
+
+/**
+ * Each searcher produces `<prefix><category>` keys, translated as "<prefix label> - <category label>".
+ *
+ * Order matters: a compound prefix (e.g. "FoodPerishableCanned") is only translated if an earlier searcher already
+ * produced it. Otherwise the raw prefix ends up in the label and a warning is logged.
+ */
 export const searchers: Searcher[] = [
   { categories: ["Beverage"], searchKeys: [] },
   { categories: ["FirstAid"], searchKeys: ["IGUI_perks_Doctor"] },
@@ -96,14 +104,20 @@ export const searchers: Searcher[] = [
   {
     prefix: PzCategory.Food,
     categories: [...foodTypes, "Box", "Carton", "Perishable"],
-    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"],
+    searchKeys: FOOD_KEYS,
   },
 
   {
     prefix: "FoodPerishable",
     categories: [...foodTypes, "Box", "Carton"],
-    searchKeys: ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"],
+    searchKeys: FOOD_KEYS,
   },
+
+  ...foodTypes.map((foodType) => ({
+    prefix: `Food${foodType}`,
+    categories: ["Box", "Carton"],
+    searchKeys: FOOD_KEYS,
+  })),
 
   {
     prefix: "Beverage",
@@ -165,12 +179,6 @@ export const searchers: Searcher[] = [
     categories: [...AMMO_TYPES, "Box", "Carton"],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
-
-  ...AMMO_TYPES.map((ammoType) => ({
-    prefix: "Material" + PzCategory.Ammo + ammoType,
-    categories: AMMO_BOX_TYPES,
-    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
-  })),
 
   ...BOXABLE_CATEGORIES.map((category) => ({
     prefix: category,

@@ -171,6 +171,8 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Produktong Gatas",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Ulam",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Nagyelo",
   /** culinary or medicinal plants/herbs */
   CAEC_Fallback_Herb: "Halamang-gamot",
   /** any non-fish meat */
@@ -225,6 +227,8 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Bow: "Pana",
   /** firearm drums */
   CAEC_Fallback_Drum: "Drum",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Pampasabog",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Baril",
   /** pistols and handguns */
@@ -257,6 +261,8 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Liquid: "Likido",
   /** dairy milk */
   CAEC_Fallback_Milk: "Gatas",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Lason",
   /** carbonated soft drinks */
   CAEC_Override_SoftDrink: "Softdrinks",
   /** tea beverage */
@@ -273,10 +279,18 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Carton: "Karton",
   /** alarm clocks and similar devices */
   CAEC_Override_AlarmClock: "Alarm Clock",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Radyo",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Remote",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Walkie-Talkie",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Kaset",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bisikleta",
   /** compostable items such as animal dung, to be put in a composter */
@@ -295,6 +309,8 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Part: undefined,
   /** photos */
   CAEC_Fallback_Photo: "Litrato",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Larawan",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Stuffed Toy",
   /** packet of plantable seeds for gardening/farming */
@@ -303,6 +319,8 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Pagkain ng Hayop",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Paninigarilyo",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Laruan",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Palamuti",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

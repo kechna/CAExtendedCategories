@@ -384,6 +384,8 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Dairy: "Tejtermékek",
   /** prepared dishes, ready-to-eat meals made from multiple ingredients */
   CAEC_Override_Dish: "Étel",
+  /** frozen food, such as ice cream */
+  CAEC_Override_Frozen: "Fagyasztott",
   /**
    * culinary or medicinal plants/herbs
    *
@@ -458,6 +460,8 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Bow: "Íj",
   /** firearm drums */
   CAEC_Fallback_Drum: "Dobtár",
+  /** explosives such as pipe bombs and molotovs, and the ammo for them */
+  CAEC_Override_Explosive: "Robbanószer",
   /** firearm category, pistols, rifles, shotguns, etc. */
   CAEC_Override_Firearm: "Lőfegyver",
   /** pistols and handguns */
@@ -511,6 +515,8 @@ export const HU: ExternalTranslations = {
    *   ContextMenu_Milk = "Tej"
    */
   CAEC_Fallback_Milk: "Tej",
+  /** poisonous liquids, such as bleach */
+  CAEC_Override_Poison: "Méreg",
   /**
    * carbonated soft drinks
    *
@@ -552,10 +558,18 @@ export const HU: ExternalTranslations = {
    *   IGUI_ItemCat_AlarmClock = "Ébresztőóra"
    */
   CAEC_Fallback_AlarmClock: "Ébresztőóra",
+  /** radios and similar devices that receive broadcasts */
+  CAEC_Override_Radio: "Rádió",
   /** remote controls and similar devices */
   CAEC_Override_Remote: "Távirányító",
   /** walkie talkies and similar communication devices */
   CAEC_Override_Walkie: "Adóvevő",
+  /** audio cassette tapes */
+  CAEC_Override_Cassette: "Kazetta",
+  /** music CDs */
+  CAEC_Override_CD: "CD",
+  /** VHS video tapes */
+  CAEC_Override_VHS: "VHS",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Kerékpár",
   /** compostable items such as animal dung, to be put in a composter */
@@ -579,6 +593,8 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Part: "Testrész",
   /** photos */
   CAEC_Fallback_Photo: "Fénykép",
+  /** pictures and framed photos kept as mementos */
+  CAEC_Override_Picture: "Kép",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plüss",
   /** packet of plantable seeds for gardening/farming */
@@ -587,6 +603,8 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_AnimalFeed: "Állateledel",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Dohányzás",
+  /** toys, such as toy cars and action figures, and toy guns and their ammo */
+  CAEC_Override_Toy: "Játék",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
   CAEC_Override_Trinket: "Csecsebecse",
   /** kitchen utensils such as spatulas, ladles, tongs, whisks, etc. */

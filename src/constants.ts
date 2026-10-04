@@ -17,6 +17,10 @@ export enum CustomFoodType {
   Staple = "Staple",
 }
 
+// Searchers must not generate longer category names. CAEC_BoxesAndStacks.lua drops segments to stay within this, e.g.
+// MaterialAmmoRifle + Box becomes MaterialAmmoBox
+export const MAX_CATEGORY_SEGMENTS = 3;
+
 export const MELEE_WEAPON_CATEGORIES = ["Axe", "Blunt", "LongBlade", "SmallBlunt", "Spear", "SmallBlade", "Crafted"];
 
 export const SUPPORTED_LANGUAGES = Object.values(Language);

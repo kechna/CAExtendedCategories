@@ -129,7 +129,7 @@ function Ammo:categorize(item, instance)
   local spentCase = Gun93Registries.guns93.SpentCase
 
   if (spentBrass and item:hasTag(spentBrass)) or (spentCase and item:hasTag(spentCase)) then
-    return "Material" .. (category or "Ammo")
+    return Ammo.toMaterial(category)
   end
 
   return category

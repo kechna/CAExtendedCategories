@@ -7,6 +7,7 @@ const APPAREL = "apparel";
 const CATEGORIES = "vanilla categories";
 const COMBINED = "combined";
 const ELECTRONICS = "Electronics";
+const ENTERTAINMENT = "entertainment";
 const FIREARMS = "firearms";
 const FOOD = "food";
 const LIQUIDS = "liquids";
@@ -112,6 +113,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [FOOD, "Canned", "canned food items", A],
   [FOOD, "Dairy", "dairy products such as cheese and eggs", Z],
   [FOOD, "Dish", "prepared dishes, ready-to-eat meals made from multiple ingredients", A],
+  [FOOD, "Frozen", "frozen food, such as ice cream", A],
   [FOOD, "Herb", "culinary or medicinal plants/herbs", Z],
   [FOOD, "Meat", "any non-fish meat", Z],
   [FOOD, "Perishable", "food items that can spoil", A],
@@ -146,6 +148,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [FIREARMS, "Mag", "firearm magazines", Z],
   [FIREARMS, "Drum", "firearm drums", Z],
   [FIREARMS, "Bow", "bows and other ranged weapons that use string tension to launch projectiles", A],
+  [FIREARMS, "Explosive", "explosives such as pipe bombs and molotovs, and the ammo for them", A],
 
   [LIQUIDS, "Beverage", "top-level category for drinkable liquids", A],
   [LIQUIDS, "Liquid", "top-level category for non-drinkable liquids, and used in 'Container - Liquid'", A],
@@ -157,6 +160,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [LIQUIDS, "EnergyDrink", "energy drinks or otherwise highly caffeinated soft drinks", A],
   [LIQUIDS, "Fuel", "liquid fuels such as gasoline, diesel, kerosene", A],
   [LIQUIDS, "Juice", "fruit juice", Z],
+  [LIQUIDS, "Poison", "poisonous liquids, such as bleach", A],
   [LIQUIDS, "Milk", "dairy milk", Z],
   [LIQUIDS, "SoftDrink", "carbonated soft drinks", A],
   [LIQUIDS, "Tea", "tea beverage", A],
@@ -170,6 +174,11 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [ELECTRONICS, "Walkie", "walkie talkies and similar communication devices", A],
   [ELECTRONICS, "AlarmClock", "alarm clocks and similar devices", A],
   [ELECTRONICS, "Remote", "remote controls and similar devices", A],
+  [ELECTRONICS, "Radio", "radios and similar devices that receive broadcasts", A],
+
+  [ENTERTAINMENT, "CD", "music CDs", A],
+  [ENTERTAINMENT, "Cassette", "audio cassette tapes", A],
+  [ENTERTAINMENT, "VHS", "VHS video tapes", A],
 
   [MISC, "Crafted", "handmade, artisan items. used for player-made weapons (not food)", A],
   [MISC, "Part", "parts for crafting or repairing items, such as vehicle parts or weapon parts", Z],
@@ -179,6 +188,8 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [MISC, "Wearable", "used for containers that can be worn on the body, such as backpacks and satchels", A],
   [MISC, "Plushie", "for plush toys such as spiffo, boris the badger and teddy bears", A],
   [MISC, "Trinket", "small decorative items, usually mementos, such as figurines, keychains, charms", A],
+  [MISC, "Toy", "toys, such as toy cars and action figures, and toy guns and their ammo", A],
+  [MISC, "Picture", "pictures and framed photos kept as mementos", A],
 
   [MISC, "Seed", "loose plantable seeds for gardening/farming", A],
   [MISC, "SeedPacket", "packet of plantable seeds for gardening/farming", A],
