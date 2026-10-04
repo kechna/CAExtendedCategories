@@ -64,7 +64,8 @@ function Fluid.registerFluidType(fluidType, category)
 end
 
 function Fluid:validate(item, instance)
-  if not item:isItemType(ItemType.NORMAL) then
+  if not item:isItemType(ItemType.NORMAL)
+     and not item:isItemType(ItemType.FOOD) then
     return false
   end
 
