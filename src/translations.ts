@@ -140,6 +140,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [LITERATURE, "Recipe", "recipes, readable items that teach you something", Z],
   [LITERATURE, "RpgManual", "tabletop RPG manuals", Z],
   [LITERATURE, "Softcover", "softcover books", Z],
+  [LITERATURE, "Writing", "notebooks, journals and other items you can write in", A],
 
   [FIREARMS, "Firearm", "firearm category, pistols, rifles, shotguns, etc.", A],
   [FIREARMS, "Handgun", "pistols and handguns", Z],
@@ -200,6 +201,9 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [MISC, "Pan", "items such as pans/pots to cook in", A],
   [MISC, "Cutlery", "cutlery such as knives, forks, spoons or chopsticks to eat a meal with", A],
   [MISC, "Utensil", "kitchen utensils such as spatulas, ladles, tongs, whisks, etc.", A],
+
+  [MISC, "Cleaning", "for items to clean yourself or your base", A],
+  [MISC, "Construction", "construction and renovation supplies such as paint, plaster and wallpaper", A],
 
   [MISC, "Bicycle", "bicycles! for the fantastic bicycle mod", A],
 ] as const;

@@ -39,7 +39,8 @@ local ApparelCategory = {
   PROTECTIVE_GEAR_ARMS = "ProtectiveGearArms",
   PROTECTIVE_GEAR_HANDS = "ProtectiveGearHands",
   PROTECTIVE_GEAR_HEAD = "ProtectiveGearHead",
-  PROTECTIVE_GEAR_FACE = "ProtectiveGearFace"
+  PROTECTIVE_GEAR_FACE = "ProtectiveGearFace",
+  PROTECTIVE_GEAR_FOOTWEAR = "ProtectiveGearFootwear"
 }
 
 ---@type table<CAEC_ApparelCategory, ItemBodyLocation[]>
@@ -219,6 +220,7 @@ local ApparelCategories = {
 
   [ApparelCategory.PROTECTIVE_GEAR] = {},
   [ApparelCategory.PROTECTIVE_GEAR_HANDS] = {},
+  [ApparelCategory.PROTECTIVE_GEAR_FOOTWEAR] = {},
   [ApparelCategory.PROTECTIVE_GEAR_ARMS] = {},
   [ApparelCategory.PROTECTIVE_GEAR_LEGS] = {},
   [ApparelCategory.PROTECTIVE_GEAR_TOP] = {},
@@ -238,9 +240,18 @@ local Apparel = CAEC_ItemCategorizer:derive("Apparel")
 
 Apparel.Category = ApparelCategory
 
+-- if item did not already have ProtectiveGear category it must have at least one defense over this threshold to be categorized as ProtectiveGear
+Apparel.protectiveGearDefenseCutoff = 50.0
+
 -- body locations registered by compatibility modules, applied on top of the built-in categories in initialise
 ---@type table<string, CAEC_ApparelCategory>
 Apparel.BodyLocationsMap = {}
+
+Apparel.compoundCategories = { --
+  Tool = true,
+  FirstAid = true,
+  Memento = true
+}
 
 function Apparel:new()
   ---@type CAEC_ApparelCategorizer
@@ -291,11 +302,9 @@ function Apparel:initialise()
 end
 
 function Apparel:validate(item, _instance)
-  return not item:isItemType(ItemType.CONTAINER)
-      and item:getBodyLocation() ~= nil
-      and not item:isBodyLocation(ItemBodyLocation.WOUND)
-      and not item:isBodyLocation(ItemBodyLocation.ZED_DMG)
-      and not item:isBodyLocation(ItemBodyLocation.BANDAGE)
+  return not item:isItemType(ItemType.CONTAINER) and item:getBodyLocation() ~= nil
+    and not item:isBodyLocation(ItemBodyLocation.WOUND) and not item:isBodyLocation(ItemBodyLocation.ZED_DMG)
+    and not item:isBodyLocation(ItemBodyLocation.BANDAGE)
 end
 
 ---@param bodyLocation string | ItemBodyLocation
@@ -324,6 +333,8 @@ function Apparel:resolveBodyLocation(input)
   error("Invalid input: " .. tostring(input), 2)
 end
 
+---@param item     Item
+---@param instance InventoryItem
 function Apparel:categorize(item, instance)
   ---@type string | nil
   local category = nil
@@ -331,22 +342,32 @@ function Apparel:categorize(item, instance)
   if Utils.hasAnyTag(item, JewelryTags) then
     category = self.Category.ACCESSORY_JEWELRY
   else
+    ---@type string | nil
     category = self.categoryByBodyLocation[tostring(item:getBodyLocation())]
   end
 
   if category then
+    -- local resolved = self:resolveCategory(item, item, instance)
+    -- local initialCategory = resolved or item:getDisplayCategory()
+
+    ---@type string | nil
     local initialCategory = item:getDisplayCategory()
+    local highestDefense = 0.0
 
-    -- if item:hasTag(ItemTag.FIREARM_LOOT) then
-    --  self:log("Firearm loot, holster? " .. item:getName())
-    -- end
+    if instanceof(instance, "Clothing") then
+      ---@cast instance Clothing
+      highestDefense = math.max(instance:getScratchDefense(), instance:getBulletDefense(), instance:getBiteDefense())
+    end
 
-    if "ProtectiveGear" == initialCategory then
-      category = category
-        :gsub("Clothing", initialCategory)
-        :gsub("Accessory", initialCategory)
+    local prefix = Apparel.compoundCategories[initialCategory] and initialCategory .. "__" or ""
+
+    if "ProtectiveGear" == initialCategory or highestDefense >= Apparel.protectiveGearDefenseCutoff then
+      category = prefix
+        .. category
+          :gsub("Clothing", "ProtectiveGear")
+          :gsub("Accessory", "ProtectiveGear")
     elseif item:hasTag(ItemTag.SPRAYER) then
-      category = category .. "__Gardening"
+      category = "Gardening__" .. category
     end
   end
 

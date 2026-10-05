@@ -32,12 +32,14 @@ export type TranslationNames =
   | "Carving"
   | "Cassette"
   | "CD"
+  | "Cleaning"
   | "Clothing"
   | "Cocktail"
   | "Coffee"
   | "Comic"
   | "Communications"
   | "Compostable"
+  | "Construction"
   | "Consumable"
   | "Container"
   | "Cooking"
@@ -153,7 +155,8 @@ export type TranslationNames =
   | "Weapon"
   | "Wearable"
   | "Welding"
-  | "Wine";
+  | "Wine"
+  | "Writing";
 export type TranslationKeys = `CAEC_Fallback_${TranslationNames}` | `CAEC_Override_${TranslationNames}`;
 
 export type ExternalTranslations = Record<TranslationKeys, string | undefined>;

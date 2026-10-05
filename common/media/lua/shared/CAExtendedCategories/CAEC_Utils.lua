@@ -91,6 +91,9 @@ end
 ---@overload fun(item: Item, inventoryItem?): nil, string
 ---@overload fun(item: Item, inventoryItem?): InventoryItem, nil
 ---@overload fun(item: Item, InventoryItem): InventoryItem, nil
+---@param item Item
+---@param instance InventoryItem?
+---@return InventoryItem?, string?
 function Utils.createInstanceIfNeeded(item, instance)
   if instance then
     return instance, nil

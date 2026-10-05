@@ -8,7 +8,9 @@ local GardeningTags = table.newarray(
   ItemTag.IS_COMPOSTABLE,
   ItemTag.IS_SEED,
   ItemTag.CUT_PLANT,
-  ItemTag.FARMING_LOOT
+  ItemTag.FARMING_LOOT,
+  ItemTag.CLEAR_ASHES,
+  ItemTag.TAKE_DUNG
 )
 
 ---@param item     Item

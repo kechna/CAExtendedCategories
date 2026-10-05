@@ -81,7 +81,9 @@ function CAEC.categorizeItem(item, instance)
     return nil, false
   end
 
+  ---@type boolean
   local knownInstanceSpecific = Core.InstanceSpecific[itemName] or false
+  ---@type boolean
   local instanceSpecific = knownInstanceSpecific
 
   if not category then
@@ -89,7 +91,6 @@ function CAEC.categorizeItem(item, instance)
     local resolved, reason = Utils.createInstanceIfNeeded(item, instance)
 
     if not resolved then
-      print(itemName, tostring(reason))
       ---@cast reason string
       table.insert(Core.ErrorItems, { name = itemName, item = item, reason = reason })
       return nil, false

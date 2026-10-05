@@ -418,16 +418,9 @@ export const UA: ExternalTranslations = {
    *   ContextMenu_FoodType_Seafood = "Морепродукти"
    */
   CAEC_Fallback_Seafood: "Морепродукти",
-  /**
-   * loose plantable seeds for gardening/farming
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Seed = "Насіння"
-   */
-  CAEC_Fallback_Seed: "Насіння",
-  /** snack foods (e.g. chips, cookies) */
+  /** snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Перекуси",
-  /** spices and seasonings, salt, pepper, etc. */
+  /** spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Спеції",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Базові продукти",
@@ -457,6 +450,8 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Посібник RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "М’яка обкладинка",
+  /** notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Для записів",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Лук",
   /** firearm drums */
@@ -571,10 +566,21 @@ export const UA: ExternalTranslations = {
   CAEC_Override_CD: "CD",
   /** VHS video tapes */
   CAEC_Override_VHS: "VHS",
+  /**
+   * feed for farm animals, like cows, pigs, chickens, etc.
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_AnimalFeed = "Корм для тварин"
+   */
+  CAEC_Fallback_AnimalFeed: "Корм для тварин",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Велосипед",
+  /** for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Прибирання",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Компостоване",
+  /** construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Будівництво",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ручна робота",
   /** items such as cups, mugs, glasses */
@@ -598,10 +604,15 @@ export const UA: ExternalTranslations = {
   CAEC_Override_Picture: "Картина",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Плюшева іграшка",
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Насіння"
+   */
+  CAEC_Fallback_Seed: "Насіння",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Пакет насіння",
-  /** feed for farm animals, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_AnimalFeed: "Корм для тварин",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Куріння",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */

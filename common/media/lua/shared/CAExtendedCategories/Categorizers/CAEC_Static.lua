@@ -43,7 +43,14 @@ Static.ItemsMap = {
   ["Base.TissueBox"] = "Household",
 
   ["Base.Doily"] = "Junk",
-  ["Base.Clipboard"] = "Junk"
+  ["Base.Clipboard"] = "Junk",
+
+  ["Base.Toothbrush"] = "Appearance",
+  ["Base.Toothpaste"] = "Appearance",
+
+  ["Base.Comb"] = "Appearance",
+  ["Base.Razor"] = "Appearance",
+  ["Base.Hairgel"] = "Appearance"
 }
 
 function Static:initialise()
@@ -91,9 +98,15 @@ function Static.parseOverrides(input)
       category = category and trim(category)
 
       if not itemName or itemName == "" or not category or category == "" then
-        Debug.log(string.format("Invalid override \"%s\", expected \"Module.Item=Category\"", entry), "Static", Debug.Level.Error)
+        Debug.log(
+          string.format("Invalid override \"%s\", expected \"Module.Item=Category\"", entry), "Static",
+          Debug.Level.Error
+        )
       elseif not itemName:find(".", 1, true) then
-        Debug.log(string.format("Invalid override \"%s\": use the full item name, e.g. \"Base.%s\"", entry, itemName), "Static", Debug.Level.Error)
+        Debug.log(
+          string.format("Invalid override \"%s\": use the full item name, e.g. \"Base.%s\"", entry, itemName), "Static",
+          Debug.Level.Error
+        )
       else
         overrides[itemName] = category
       end

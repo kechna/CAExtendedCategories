@@ -418,16 +418,9 @@ export const ID: ExternalTranslations = {
    *   ContextMenu_FoodType_Seafood = "Makanan Laut"
    */
   CAEC_Fallback_Seafood: "Makanan Laut",
-  /**
-   * loose plantable seeds for gardening/farming
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Seed = "Benih"
-   */
-  CAEC_Fallback_Seed: "Benih",
-  /** snack foods (e.g. chips, cookies) */
+  /** snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Camilan",
-  /** spices and seasonings, salt, pepper, etc. */
+  /** spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Bumbu",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Makanan Pokok",
@@ -457,6 +450,8 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manual RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Sampul Lunak",
+  /** notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Menulis",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Busur",
   /** firearm drums */
@@ -566,10 +561,21 @@ export const ID: ExternalTranslations = {
   CAEC_Override_CD: "CD",
   /** VHS video tapes */
   CAEC_Override_VHS: "VHS",
+  /**
+   * feed for farm animals, like cows, pigs, chickens, etc.
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_AnimalFeed = "Pakan Hewan"
+   */
+  CAEC_Fallback_AnimalFeed: "Pakan Hewan",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Sepeda",
+  /** for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Kebersihan",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompos",
+  /** construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Konstruksi",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Buatan Tangan",
   /** items such as cups, mugs, glasses */
@@ -593,10 +599,15 @@ export const ID: ExternalTranslations = {
   CAEC_Override_Picture: "Gambar",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Boneka",
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Benih"
+   */
+  CAEC_Fallback_Seed: "Benih",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Paket Benih",
-  /** feed for farm animals, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_AnimalFeed: "Pakan Hewan",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Rokok",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */

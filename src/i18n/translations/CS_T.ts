@@ -448,16 +448,9 @@ export const CS: ExternalTranslations = {
    *   ContextMenu_FoodType_Seafood = "Mořské plody"
    */
   CAEC_Override_Seafood: "Plody moře",
-  /**
-   * loose plantable seeds for gardening/farming
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Seed = "Semena"
-   */
-  CAEC_Override_Seed: "Semínko",
-  /** snack foods (e.g. chips, cookies) */
+  /** snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Svačiny",
-  /** spices and seasonings, salt, pepper, etc. */
+  /** spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Koření",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Základní potraviny",
@@ -487,6 +480,8 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Příručka RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Brožovaná",
+  /** notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Psaní",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Luk",
   /** firearm drums */
@@ -601,10 +596,21 @@ export const CS: ExternalTranslations = {
   CAEC_Override_CD: "CD",
   /** VHS video tapes */
   CAEC_Override_VHS: "VHS",
+  /**
+   * feed for farm animals, like cows, pigs, chickens, etc.
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_AnimalFeed = "Krmivo pro zvířata"
+   */
+  CAEC_Fallback_AnimalFeed: "Krmivo pro zvířata",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Kolo",
+  /** for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Úklid",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostovatelné",
+  /** construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Stavba",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ručně vyrobené",
   /** items such as cups, mugs, glasses */
@@ -628,10 +634,15 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Picture: "Obrázek",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plyšák",
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Semena"
+   */
+  CAEC_Override_Seed: "Semínko",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Sáček se semeny",
-  /** feed for farm animals, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_AnimalFeed: "Krmivo pro zvířata",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Kouření",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */

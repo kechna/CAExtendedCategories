@@ -189,11 +189,9 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Produce: "Prutas at Gulay",
   /** fish and other seafood */
   CAEC_Fallback_Seafood: "Pagkaing-dagat",
-  /** loose plantable seeds for gardening/farming */
-  CAEC_Override_Seed: "Binhi",
-  /** snack foods (e.g. chips, cookies) */
+  /** snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Merienda",
-  /** spices and seasonings, salt, pepper, etc. */
+  /** spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Pampalasa",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Pangunahing Pagkain",
@@ -223,6 +221,8 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manwal ng RPG",
   /** softcover books */
   CAEC_Fallback_Softcover: "Softcover",
+  /** notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Pagsusulat",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Pana",
   /** firearm drums */
@@ -291,10 +291,16 @@ export const PH: ExternalTranslations = {
   CAEC_Override_CD: "CD",
   /** VHS video tapes */
   CAEC_Override_VHS: "VHS",
+  /** feed for farm animals, like cows, pigs, chickens, etc. */
+  CAEC_Fallback_AnimalFeed: "Pagkain ng Hayop",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bisikleta",
+  /** for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Paglilinis",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Pang-kompost",
+  /** construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Konstruksyon",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Gawang-kamay",
   /** items such as cups, mugs, glasses */
@@ -313,10 +319,10 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Picture: "Larawan",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Stuffed Toy",
+  /** loose plantable seeds for gardening/farming */
+  CAEC_Override_Seed: "Binhi",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pakete ng Buto",
-  /** feed for farm animals, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_AnimalFeed: "Pagkain ng Hayop",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Paninigarilyo",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */

@@ -2,16 +2,10 @@ local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer"
 local BoxContents = require("CAExtendedCategories/CAEC_BoxContents")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 
--- Categorizes boxes, cartons, packs and bundles by the category of the item they contain. Contents come from the game's
--- unpack recipes (see CAEC_BoxContents) and are categorized on demand
 ---@class CAEC_BoxesAndStacksCategorizer: CAEC_ItemCategorizer
 local BoxesAndStacks = CAEC_ItemCategorizer:derive("BoxesAndStacks")
 
 local SUFFIXES = table.newarray("Box", "Carton", "Bundled")
-
---- boxes whose contents are being resolved, to break cycles in modded recipes
----@type table<string, boolean>
-local resolving = {}
 
 local sm = getScriptManager()
 
@@ -129,7 +123,6 @@ local function getSuffix(box, boxInstance, contents, category)
   return "Box"
 end
 
---- Splits "FoodHerbBox__FirstAid" into "FoodHerb" and "__FirstAid".
 ---@param category string
 ---@return string base, string marker
 local function splitCategory(category)
@@ -149,9 +142,11 @@ local function splitCategory(category)
   return base, marker
 end
 
+---@param self     CAEC_BoxesAndStacksCategorizer
+---@param box      Item
 ---@param contents string
 ---@return string | nil
-local function categorizeContents(contents)
+local function categorizeContents(self, box, contents)
   sm = sm or getScriptManager()
 
   local item = sm:getItem(contents)
@@ -160,11 +155,8 @@ local function categorizeContents(contents)
     return nil
   end
 
-  -- required here, CAEC requires the categorizers
-  local CAEC = require("CAExtendedCategories/CAEC")
-  local category = CAEC.categorizeItem(item)
-
-  return category
+  -- the guard also breaks cycles in modded recipes (box A contains box B contains box A)
+  return self:resolveCategory(box, item)
 end
 
 function BoxesAndStacks:initialise()
@@ -176,23 +168,10 @@ function BoxesAndStacks:validate(item, _instance)
 end
 
 function BoxesAndStacks:categorize(item, instance)
-  local name = item:getFullName()
-
-  if resolving[name] then
-    return nil
-  end
-
-  local contents = BoxContents.get(name)
+  local contents = BoxContents.get(item:getFullName())
   ---@cast contents string
 
-  resolving[name] = true
-  local ok, contentsCategory = pcall(categorizeContents, contents)
-  resolving[name] = nil
-
-  if not ok then
-    self:log(string.format("Failed to categorize %s, contents of %s: %s", contents, name, tostring(contentsCategory)))
-    return nil
-  end
+  local contentsCategory = categorizeContents(self, item, contents)
 
   if not contentsCategory then
     return nil

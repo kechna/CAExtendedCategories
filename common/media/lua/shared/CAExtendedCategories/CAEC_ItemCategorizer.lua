@@ -7,12 +7,14 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 ---@field public verbosity            number
 ---@field public derive               fun(self: CAEC_ItemCategorizer, className: string): CAEC_ItemCategorizer
 ---@field public new                  fun(self: CAEC_ItemCategorizer): CAEC_ItemCategorizer
----@field public execute              fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil?, boolean?)
----@field public categorize           fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil?, boolean?)
+---@field public execute              fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil, boolean?)
+---@field public categorize           fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil, boolean?)
 ---@field public validate             fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): boolean
 ---@field public getVerbosity         fun(self: CAEC_ItemCategorizer): number
 ---@field public isDebug              fun(self: CAEC_ItemCategorizer): boolean
 ---@field public log                  fun(self: CAEC_ItemCategorizer, message: string, level?: number)
+---@field public isResolving          fun(self: CAEC_ItemCategorizer, item: Item): boolean
+---@field public resolveCategory      fun(self: CAEC_ItemCategorizer, owner: Item, target: Item, instance?: InventoryItem): string | nil
 ---@field public createTagCategorizer fun(name: string, tags: ItemTag[], category?: string): CAEC_TagCategorizer
 
 -- specialized subtype for simple tag-based categorization
@@ -21,17 +23,21 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 ---@field public registerTag fun(tag: ItemTag | string)
 
 ---@type CAEC_ItemCategorizer
-local CAEC_ItemCategorizer = ISBaseObject:derive("CAEC_ItemCategorizer")
+local ItemCategorizer = ISBaseObject:derive("CAEC_ItemCategorizer")
 
-function CAEC_ItemCategorizer:isDebug()
+--- items each categorizer is resolving a category for, to break cycles
+---@type table<string, table<string, boolean>>
+local resolving = {}
+
+function ItemCategorizer:isDebug()
   return Debug.isLevel(Debug.Level.Debug)
 end
 
-function CAEC_ItemCategorizer:getVerbosity()
+function ItemCategorizer:getVerbosity()
   return self.verbosity or Debug.Level.Error
 end
 
-function CAEC_ItemCategorizer:log(message, level)
+function ItemCategorizer:log(message, level)
   level = level or Debug.Level.Debug
 
   if level < Debug.Level.Warning and level < self:getVerbosity() then return end
@@ -39,15 +45,53 @@ function CAEC_ItemCategorizer:log(message, level)
   Debug.log(message, self.Type, level)
 end
 
-function CAEC_ItemCategorizer:categorize(_item, _instance)
+function ItemCategorizer:categorize(_item, _instance)
   return nil, false
 end
 
-function CAEC_ItemCategorizer:validate(_item, _instance)
+function ItemCategorizer:validate(_item, _instance)
   return true
 end
 
-function CAEC_ItemCategorizer:execute(item, instance)
+function ItemCategorizer:isResolving(item)
+  local active = resolving[self.Type]
+
+  return active ~= nil and active[item:getFullName()] == true
+end
+
+--- Categorizes `target` through the full (cached) pipeline on behalf of `owner`.
+--- While this runs, this categorizer skips `owner`, so the lookup can't recurse into itself.
+---@param owner     Item           item this categorizer is categorizing (guard key)
+---@param target    Item           item whose category is wanted (may be `owner` itself)
+---@param instance? InventoryItem
+---@return string | nil
+function ItemCategorizer:resolveCategory(owner, target, instance)
+  local CAEC = require("CAExtendedCategories/CAEC")
+  local name = owner:getFullName()
+  local active = resolving[self.Type] or {}
+
+  resolving[self.Type] = active
+
+  active[name] = true
+  local ok, category = pcall(CAEC.categorizeItem, target, instance)
+  active[name] = nil
+
+  if not ok then
+    self:log(
+      string.format("Failed to resolve category of %s for %s: %s", target:getFullName(), name, tostring(category)),
+      Debug.Level.Warning
+    )
+    return nil
+  end
+
+  return category
+end
+
+function ItemCategorizer:execute(item, instance)
+  if self:isResolving(item) then
+    return nil, false
+  end
+
   if not self:validate(item, instance) then
     return nil, false
   end
@@ -74,7 +118,7 @@ end
 ---@generic T: CAEC_ItemCategorizer
 ---@param self T
 ---@return T
-function CAEC_ItemCategorizer.new(self)
+function ItemCategorizer.new(self)
   ---@type CAEC_ItemCategorizer
   local o = ISBaseObject.new(self)
 
@@ -83,9 +127,9 @@ function CAEC_ItemCategorizer.new(self)
   return o
 end
 
-CAEC_ItemCategorizer.createTagCategorizer = function (name, tags, category)
+ItemCategorizer.createTagCategorizer = function (name, tags, category)
   ---@type CAEC_TagCategorizer
-  local categorizer = CAEC_ItemCategorizer:derive(name)
+  local categorizer = ItemCategorizer:derive(name)
 
   categorizer.tags = tags
 
@@ -104,4 +148,4 @@ CAEC_ItemCategorizer.createTagCategorizer = function (name, tags, category)
   return categorizer
 end
 
-return CAEC_ItemCategorizer
+return ItemCategorizer

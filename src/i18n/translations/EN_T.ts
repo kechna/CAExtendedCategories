@@ -418,16 +418,9 @@ export const EN: ExternalTranslations = {
    *   ContextMenu_FoodType_Seafood = "Seafood"
    */
   CAEC_Fallback_Seafood: "Seafood",
-  /**
-   * loose plantable seeds for gardening/farming
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Seed = "Seed"
-   */
-  CAEC_Fallback_Seed: "Seed",
-  /** snack foods (e.g. chips, cookies) */
+  /** snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Snack",
-  /** spices and seasonings, salt, pepper, etc. */
+  /** spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Spice",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Staple",
@@ -457,6 +450,8 @@ export const EN: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "RPG Manual",
   /** softcover books */
   CAEC_Fallback_Softcover: "Softcover",
+  /** notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Writing",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Bow",
   /** firearm drums */
@@ -571,10 +566,21 @@ export const EN: ExternalTranslations = {
   CAEC_Override_CD: "CD",
   /** VHS video tapes */
   CAEC_Override_VHS: "VHS",
+  /**
+   * feed for farm animals, like cows, pigs, chickens, etc.
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_AnimalFeed = "Animal Feed"
+   */
+  CAEC_Fallback_AnimalFeed: "Animal Feed",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicycle",
+  /** for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Cleaning",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostable",
+  /** construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Construction",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Crafted",
   /** items such as cups, mugs, glasses */
@@ -598,10 +604,15 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Picture: "Picture",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Plushie",
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Seed"
+   */
+  CAEC_Fallback_Seed: "Seed",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Seed Packet",
-  /** feed for farm animals, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_AnimalFeed: "Animal Feed",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Smoking",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */

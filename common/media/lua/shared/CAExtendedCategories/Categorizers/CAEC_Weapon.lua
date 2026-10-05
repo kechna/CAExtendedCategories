@@ -11,10 +11,12 @@ local Weapon = CAEC_ItemCategorizer:derive("Weapon")
 local WeaponComboCategories = {
   AnimalPart = true,
   Cooking = true,
+  CookingUtensil = true,
   FirstAid = true,
   Fishing = true,
   Gardening = true,
   Household = true,
+  HouseholdCleaning = true,
   Instrument = true,
   Junk = true,
   Material = true,
@@ -37,10 +39,10 @@ function Weapon:validate(item, _instance)
   return item:isItemType(ItemType.WEAPON) and not item:hasTag(ItemTag.NO_MAINTENANCE_XP)
 end
 
----@param item      Item
----@param _instance InventoryItem?
+---@param item     Item
+---@param instance InventoryItem?
 ---@return string | nil
-function Weapon:asMeleeWeapon(item, _instance)
+function Weapon:asMeleeWeapon(item, instance)
   ---@type Set<WeaponCategory>
   local categories = item:getWeaponCategories()
 
@@ -68,20 +70,25 @@ function Weapon:asMeleeWeapon(item, _instance)
     category = baseCategory .. "Crafted"
   end
 
-  if category then
-    ---@type string | nil
-    local original = item:getDisplayCategory()
+  if not category then
+    return nil
+  end
 
-    if original then
-      local trimmed = original:gsub(baseCategory, "")
+  -- what the rest of the chain makes of this item (Weapon skips itself there), else the script's own category
+  ---@type string | nil
+  local resolved = self:resolveCategory(item, item, instance)
+  local original = resolved or item:getDisplayCategory()
 
-      if trimmed ~= "" and WeaponComboCategories[trimmed] then
-        category = trimmed .. "__" .. category
-      end
+  if original then
+    local trimmed = original:gsub(baseCategory, "")
+
+    if trimmed ~= "" and WeaponComboCategories[trimmed] then
+      return trimmed .. "__" .. category
     end
   end
 
-  return category
+  -- not combinable, so a more specific category (e.g. CookingPan for frying pans) wins
+  return resolved or category
 end
 
 function Weapon:getAmmoGroup(item, instance)

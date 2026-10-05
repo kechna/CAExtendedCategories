@@ -21,6 +21,23 @@ const WEAPON_CATEGORIES = [
   "Explosive",
 ];
 
+export const PROTECTIVE_GEAR_CATEGORIES = [
+  "Accessory",
+  "Arms",
+  "Bottom",
+  "Face",
+  "Footwear",
+  "FullBody",
+  "Hands",
+  "Head",
+  "Legs",
+  "Neck",
+  "Outerwear",
+  "Socks",
+  "Top",
+  "Underwear",
+];
+
 const FOOD_KEYS = ["ContextMenu_FoodType_%s", "IGUI_ItemCat_%s", "ItemName_Base.%s"];
 
 /**
@@ -34,6 +51,7 @@ export const searchers: Searcher[] = [
   { categories: ["FirstAid"], searchKeys: ["IGUI_perks_Doctor"] },
   { categories: ["KeyRing"], searchKeys: ["ItemName_Base.%s"] },
   { categories: ["Smoking"] },
+  { categories: ["Construction"] },
   { categories: ["Mechanics"], searchKeys: ["IGUI_perks_%s"] },
 
   { categories: ["Part"], searchKeys: ["IGUI_health_%s"] },
@@ -76,22 +94,7 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.ProtectiveGear,
-    categories: [
-      "Accessory",
-      "Arms",
-      "Bottom",
-      "Face",
-      "Footwear",
-      "FullBody",
-      "Hands",
-      "Head",
-      "Legs",
-      "Neck",
-      "Outerwear",
-      "Socks",
-      "Top",
-      "Underwear",
-    ],
+    categories: PROTECTIVE_GEAR_CATEGORIES,
     searchKeys: [
       "UI_ClothingType_%s",
       "IGUI_health_%s",
@@ -233,6 +236,7 @@ export const searchers: Searcher[] = [
       "Recipe",
       "RpgManual",
       "Softcover",
+      "Writing",
     ],
     searchKeys: ["IGUI_ItemCat_%s", "ItemName_Base.%s", "DisplayName%s"],
   },
@@ -279,8 +283,8 @@ export const searchers: Searcher[] = [
   },
 
   {
-    prefix: "Bicycle",
-    categories: ["Part"],
+    prefix: PzCategory.Household,
+    categories: ["Cleaning"],
     searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
   },
 
@@ -288,5 +292,11 @@ export const searchers: Searcher[] = [
     prefix: PzCategory.Gardening,
     categories: ["Seed", "SeedPacket", "Compostable", "AnimalFeed"],
     searchKeys: ["Farming_%s", "ContextMenu_FoodType_%s"],
+  },
+
+  {
+    prefix: "Bicycle",
+    categories: ["Part"],
+    searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s"],
   },
 ];

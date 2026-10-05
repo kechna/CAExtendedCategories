@@ -239,6 +239,8 @@ export const TRANSLATIONS = {
   CAEC_Fallback_RpgManual: "RPG Manual",
   /* softcover books */
   CAEC_Fallback_Softcover: "Softcover",
+  /* notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Writing",
 
   /* ===== firearms ===== */
 
@@ -329,8 +331,12 @@ export const TRANSLATIONS = {
   CAEC_Fallback_AnimalFeed: "Animal Feed",
   /* bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicycle",
+  /* for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Cleaning",
   /* compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostable",
+  /* construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Construction",
   /* handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Crafted",
   /* items such as cups, mugs, glasses */

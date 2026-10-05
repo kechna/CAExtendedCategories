@@ -51,16 +51,19 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("Static", 1)
   -- boxes with known contents (from unpack recipes) are categorized by their contents
   Processors.registerCategorizer("BoxesAndStacks", 2)
-  Processors.registerCategorizer("Electronics", 200)
-  Processors.registerCategorizer("Apparel", 400)
+  -- weapons resolve their base category through the rest of the chain and combine it with their own
+  Processors.registerCategorizer("Weapon", 100)
+  Processors.registerCategorizer("Electronics", 400)
   Processors.registerCategorizer("Container", 600)
   Processors.registerCategorizer("Cooking", 800)
+  Processors.registerCategorizer("Construction", 900)
   Processors.registerCategorizer("Material", 1000)
   Processors.registerCategorizer("Gardening", 1200)
   Processors.registerCategorizer("Writing", 1300)
   Processors.registerCategorizer("Literature", 1400)
   Processors.registerCategorizer("Tool", 1600)
-  Processors.registerCategorizer("Weapon", 1800)
+  Processors.registerCategorizer("Household", 1700)
+  Processors.registerCategorizer("Apparel", 1800)
   Processors.registerCategorizer("Ammo", 2000)
   Processors.registerCategorizer("Memento", 2200)
   Processors.registerCategorizer("Entertainment", 2600)
@@ -69,7 +72,6 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("FluidContainer", 5000, "script")
   Processors.registerCategorizer("Food", 5200, "script")
 
-  Processors.registerCategorizer("Household", 6000)
   Processors.registerCategorizer("FireSource", 6200)
   Processors.registerCategorizer("GasMask", 6400)
   Processors.registerCategorizer("BoxesAndStacksFallback", BoxesAndStacks.categorizeByHeuristic, 8000)
@@ -220,7 +222,6 @@ function Core.categorize(categorizers, item, instance)
 
   for i = 1, #categorizers do
     local categorizer = categorizers[i]
-
     category, instanceSpecific = categorizer.callback(item, instance)
 
     if category then

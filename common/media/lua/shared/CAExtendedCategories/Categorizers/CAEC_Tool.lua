@@ -1,5 +1,4 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
-local Processors = require("CAExtendedCategories/CAEC_Processors")
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 
 local CategoryOverrides = {
@@ -124,12 +123,6 @@ function Tool:categorize(item, instance)
         break
       end
     end
-  end
-
-  if category and not item:hasTag(ItemTag.NO_MAINTENANCE_XP) then
-    item:DoParam("DisplayCategory", category)
-
-    return Processors.categorizeWith("Weapon", item, instance) or category
   end
 
   local existing = item:getDisplayCategory()

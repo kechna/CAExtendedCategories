@@ -388,16 +388,9 @@ export const CA: ExternalTranslations = {
    *   ContextMenu_FoodType_Seafood = "Marisc"
    */
   CAEC_Fallback_Seafood: "Marisc",
-  /**
-   * loose plantable seeds for gardening/farming
-   *
-   * found in-game:
-   *   ContextMenu_FoodType_Seed = "Llavor"
-   */
-  CAEC_Fallback_Seed: "Llavor",
-  /** snack foods (e.g. chips, cookies) */
+  /** snack foods (e.g. chips, cookies, nuts, seeds) */
   CAEC_Override_Snack: "Aperitiu",
-  /** spices and seasonings, salt, pepper, etc. */
+  /** spices and seasonings, salt, pepper, bouillon cubes, etc. */
   CAEC_Fallback_Spice: "Espècia",
   /** basic staple foods such as pasta, rice, beans, often used as the base of meals */
   CAEC_Fallback_Staple: "Aliment bàsic",
@@ -427,6 +420,8 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_RpgManual: "Manual de rol",
   /** softcover books */
   CAEC_Fallback_Softcover: "Tapa tova",
+  /** notebooks, journals and other items you can write in */
+  CAEC_Override_Writing: "Escriptura",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Arc",
   /** firearm drums */
@@ -541,10 +536,21 @@ export const CA: ExternalTranslations = {
   CAEC_Override_CD: "CD",
   /** VHS video tapes */
   CAEC_Override_VHS: "VHS",
+  /**
+   * feed for farm animals, like cows, pigs, chickens, etc.
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_AnimalFeed = "Menjar d'animals"
+   */
+  CAEC_Fallback_AnimalFeed: "Menjar d'animals",
   /** bicycles! for the fantastic bicycle mod */
   CAEC_Override_Bicycle: "Bicicleta",
+  /** for items to clean yourself or your base */
+  CAEC_Override_Cleaning: "Neteja",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostable",
+  /** construction and renovation supplies such as paint, plaster and wallpaper */
+  CAEC_Override_Construction: "Construcció",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artesanal",
   /** items such as cups, mugs, glasses */
@@ -568,10 +574,15 @@ export const CA: ExternalTranslations = {
   CAEC_Override_Picture: "Quadre",
   /** for plush toys such as spiffo, boris the badger and teddy bears */
   CAEC_Override_Plushie: "Peluix",
+  /**
+   * loose plantable seeds for gardening/farming
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_Seed = "Llavor"
+   */
+  CAEC_Fallback_Seed: "Llavor",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Sobre de llavors",
-  /** feed for farm animals, like cows, pigs, chickens, etc. */
-  CAEC_Fallback_AnimalFeed: "Menjar d'animals",
   /** smoking items such as cigarettes, cigars, pipes */
   CAEC_Override_Smoking: "Fumar",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */

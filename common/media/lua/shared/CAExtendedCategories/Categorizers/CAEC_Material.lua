@@ -1,5 +1,4 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
-local Processors = require("CAExtendedCategories/CAEC_Processors")
 
 ---@type { tag: ItemTag, category: string } []
 local TagsMap = table.newarray({
@@ -100,13 +99,6 @@ function Material:categorize(item, instance)
         category = "MaterialPottery"
       end
     end
-  end
-
-  if category and not item:hasTag(ItemTag.NO_MAINTENANCE_XP) then
-    item:DoParam("DisplayCategory", category)
-    local withWeapon = Processors.categorizeWith("Weapon", item, instance)
-
-    return withWeapon or category
   end
 
   return category
