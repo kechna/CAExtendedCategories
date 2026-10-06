@@ -56,7 +56,7 @@ function CAEC.categorizeAllItems(trigger)
     local category, instanceSpecific = CAEC.categorizeItem(item)
 
     if category then
-      item:DoParam("DisplayCategory", category)
+      item:DoParam("DisplayCategory", Core.applyCategoryMode(category))
 
       if instanceSpecific then
         categorizedInstance = categorizedInstance + 1
@@ -123,6 +123,7 @@ local function updateInstance(instance)
     category = CAEC.categorizeItem(item, instance)
 
     if category and category ~= NONE then
+      category = Core.applyCategoryMode(category)
       instance:setDisplayCategory(category)
 
       if CAEC.onInstanceCategory then
@@ -183,6 +184,7 @@ function CAEC.updateInstanceItem(instance, categorizer, trigger)
   local category = categorizer(instance:getScriptItem(), instance)
 
   if category and category ~= NONE then
+    category = Core.applyCategoryMode(category)
     instance:setDisplayCategory(category)
 
     if CAEC.onInstanceCategory then

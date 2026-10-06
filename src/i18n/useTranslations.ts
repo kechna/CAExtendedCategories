@@ -3,6 +3,7 @@ import { getGameTranslations } from "./getGameTranslations.ts";
 import { mergeAllTranslations } from "./mergeAllTranslations.ts";
 import { translate } from "./translate.ts";
 import chalk from "chalk";
+import { memoize } from "lodash-unified";
 
 export type TranslationDef = { translation: string; searchKey: string };
 
@@ -36,7 +37,7 @@ const KEYS_MAP: Record<string, string[]> = Object.freeze({
   Welding: [CRAFT_CAT, PERK],
 });
 
-export const useTranslations = async (context: FullModContext, languages: readonly Language[]) => {
+export const useTranslations = memoize(async (context: FullModContext, languages: readonly Language[]) => {
   const existingTranslations = await getGameTranslations();
   const allTranslations = mergeAllTranslations(context, existingTranslations);
   const reported = new Set<string>();
@@ -127,9 +128,9 @@ export const useTranslations = async (context: FullModContext, languages: readon
     created: createdTranslations,
     existing: existingTranslations,
     all: allTranslations,
-
+    reported,
     addOr,
     save,
     t,
   };
-};
+});

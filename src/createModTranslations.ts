@@ -159,6 +159,12 @@ export const createModTranslations = (async (
         LogVerbosity_option2: "Info",
         LogVerbosity_option3: "Warning",
         LogVerbosity_option4: "Error",
+        CategoryDetail: "Category detail",
+        CategoryDetail_tooltip:
+          "How many categories to use. Hoarder keeps everything separate, Balanced merges categories you'd store together, Lite merges them into broad groups. Requires a restart.",
+        CategoryDetail_option1: "Hoarder",
+        CategoryDetail_option2: "Balanced",
+        CategoryDetail_option3: "Lite",
         ItemCategoryOverrides: "Item category overrides",
         ItemCategoryOverrides_tooltip:
           "Force specific items into a category. Separate entries with commas, using the full item name and the category ID, e.g. Base.Zipties=MaterialMaintenance, Base.Notebook=Literature__Junk",

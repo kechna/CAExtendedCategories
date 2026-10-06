@@ -14,7 +14,6 @@ Construction.constructionTags = table.newarray(
   ItemTag.WALLPAPER_PASTE
 )
 
--- untagged items, plaster buckets have a "base:plasterbucket" tag but there's no ItemTag for it
 ---@type table<string, boolean>
 Construction.ItemsMap = {
   ["Base.PlasterPowder"] = true,

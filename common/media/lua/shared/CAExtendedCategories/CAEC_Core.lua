@@ -2,6 +2,7 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 local Processors = require("CAExtendedCategories/CAEC_Processors")
 local BoxesAndStacks = require("CAExtendedCategories/Categorizers/CAEC_BoxesAndStacks")
+local CategoryModes = require("CAExtendedCategories/Data/CAEC_CategoryModes")
 
 CAEC_Global = CAEC_Global or {}
 
@@ -12,6 +13,7 @@ Core.Initialized = false
 
 ---@class CAEC_SandboxSettings
 ---@field LogVerbosity?          number
+---@field CategoryDetail?        number
 ---@field ItemCategoryOverrides? string
 
 ---@type CAEC_SandboxSettings
@@ -83,6 +85,36 @@ function Core.initializeCategorizers()
   Core.Initialized = true
 end
 
+--- full-detail key => key for the active CategoryDetail, built once per settings change
+---@type table<string, string> | nil
+local activeCategoryMap = nil
+
+---@return table<string, string>
+local function buildCategoryMap()
+  local detail = Core.Settings.CategoryDetail or 1
+  local map = {}
+
+  if detail > 1 then
+    -- each entry holds the Balanced and Lite key, in CategoryDetail order
+    for key, entry in pairs(CategoryModes) do
+      map[key] = entry[detail - 1]
+    end
+  end
+
+  return map
+end
+
+--- Categorizers and the ItemTweaks cache always work with full-detail (Hoarder) keys, because resolveCategory reuses
+--- them to build box and weapon combo categories. The detail mode only changes the category that ends up on the item.
+--- Note: categorizers reading item:getDisplayCategory() on a second pass will see the replaced key.
+---@param category string
+---@return string
+function Core.applyCategoryMode(category)
+  activeCategoryMap = activeCategoryMap or buildCategoryMap()
+
+  return activeCategoryMap[category] or category
+end
+
 ---@param instance InventoryItem
 ---@return boolean
 function Core.isDynamicItem(instance)
@@ -106,6 +138,7 @@ function Core.setData(source)
 
   Core.ErrorCount = getLuaDebuggerErrorCount()
   Core.Settings = source.Settings or SandboxVars.CAExtendedCategories or Core.Settings
+  activeCategoryMap = nil
   Core.Initialized = source.Initialized or false
   Core.InstanceSpecific = source.InstanceSpecific or {}
   Core.ItemTweaks = source.ItemTweaks or {}
