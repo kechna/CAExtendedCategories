@@ -13,7 +13,7 @@ import { useTranslations } from "./i18n/useTranslations.ts";
 import { ALL_TRANSLATIONS } from "./i18n/translations";
 import { TOOL_ADDON } from "./categories.ts";
 import { MOD_INFO_TRANSLATIONS } from "./modInfo.ts";
-import { MOD_OPTIONS_TRANSLATIONS } from "./modOptions.ts";
+import { CATEGORY_DETAIL_TRANSLATIONS, MOD_OPTIONS_TRANSLATIONS } from "./modOptions.ts";
 import type { sandboxOptions } from "../sandboxOptions.ts";
 
 export const createModTranslations = (async (
@@ -101,6 +101,7 @@ export const createModTranslations = (async (
 
     addOr("WeaponPart", "WeaponSmallBlade", language);
     addOr("WeaponPart", "WeaponLongBlade", language);
+    addOr("WeaponPart", PzCategory.Weapon, language);
 
     addOr("ElectronicsAlarmClock", "AccessoryArms", language);
 
@@ -121,6 +122,9 @@ export const createModTranslations = (async (
     [...WEAPON_ADDON, ...TOOL_ADDON.map((i) => "Tool" + i), "CookingUtensil"]
       .filter((category) => !category.includes(PzCategory.Weapon))
       .forEach((category) => {
+        // Lite category detail drops the weapon skill
+        addOr(category, PzCategory.Weapon, language);
+
         MELEE_WEAPON_CATEGORIES.forEach((skill) => {
           addOr(category, `${PzCategory.Weapon}${skill}`, language);
         });
@@ -141,7 +145,7 @@ export const createModTranslations = (async (
   });
 
   Object.entries(MOD_OPTIONS_TRANSLATIONS).forEach(([lang, translations]) => {
-    Object.entries(translations).forEach(([key, value]) => {
+    Object.entries({ ...CATEGORY_DETAIL_TRANSLATIONS, ...translations }).forEach(([key, value]) => {
       created[lang as Language][`IGUI_CAEC_Options_${key}`] = value;
     });
   });
@@ -159,12 +163,6 @@ export const createModTranslations = (async (
         LogVerbosity_option2: "Info",
         LogVerbosity_option3: "Warning",
         LogVerbosity_option4: "Error",
-        CategoryDetail: "Category detail",
-        CategoryDetail_tooltip:
-          "How many categories to use. Hoarder keeps everything separate, Balanced merges categories you'd store together, Lite merges them into broad groups. Requires a restart.",
-        CategoryDetail_option1: "Hoarder",
-        CategoryDetail_option2: "Balanced",
-        CategoryDetail_option3: "Lite",
         ItemCategoryOverrides: "Item category overrides",
         ItemCategoryOverrides_tooltip:
           "Force specific items into a category. Separate entries with commas, using the full item name and the category ID, e.g. Base.Zipties=MaterialMaintenance, Base.Notebook=Literature__Junk",

@@ -2,20 +2,40 @@ import type { Searcher } from "./types.ts";
 import { PzCategory, BOXABLE_CATEGORIES, USED_CATEGORIES } from "./zomboid/categories.ts";
 import { getFoodTypes } from "./getFoodTypes.ts";
 import { TOOL_ADDON } from "./categories.ts";
+import { MeleeSkill, Skill } from "./translations.ts";
 
 const foodTypes = getFoodTypes();
 
-const SKILLS = ["Butchering", "Carpentry", "Electrical", "Maintenance", "Pottery", "Tailoring", "Metalworking"];
+const MATERIAL_GROUPS = [
+  Skill.Butchering,
+  Skill.Carpentry,
+  Skill.Electrical,
+  Skill.Fishing,
+  Skill.Husbandry,
+  Skill.Maintenance,
+  Skill.Metalworking,
+  Skill.Blacksmith,
+  Skill.Pottery,
+  Skill.Tailoring,
+
+  Skill.Farming,
+  "Construction",
+  // "Raw",
+  "Wood",
+  "Stone",
+  "Metal",
+];
+
 const AMMO_TYPES = ["Rifle", "Handgun", "Shotgun", "Toy", "Bow", "Explosive"];
 const AMMO_BOX_TYPES = ["Box", "Carton", "Mag"];
 
 const WEAPON_CATEGORIES = [
-  "Axe",
-  "Blunt",
-  "SmallBlunt",
-  "LongBlade",
-  "SmallBlade",
-  "Spear",
+  MeleeSkill.Axe,
+  MeleeSkill.Blunt,
+  MeleeSkill.SmallBlunt,
+  MeleeSkill.LongBlade,
+  MeleeSkill.SmallBlade,
+  MeleeSkill.Spear,
   "Crafted",
   "Bow",
   "Explosive",
@@ -63,7 +83,15 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Material,
-    categories: ["Bundled", PzCategory.FireSource, PzCategory.Tool, PzCategory.Weapon, PzCategory.Ammo],
+    categories: [
+      "Bundled",
+      PzCategory.FireSource,
+      PzCategory.Tool,
+      PzCategory.Weapon,
+      PzCategory.Ammo,
+      ...MATERIAL_GROUPS,
+      "Construction",
+    ],
     searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 
@@ -191,11 +219,11 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Material,
-    categories: SKILLS,
+    categories: MATERIAL_GROUPS,
     searchKeys: ["IGUI_CraftCategory_%s", "IGUI_perks_%s", "IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 
-  ...SKILLS.map((category) => ({
+  ...MATERIAL_GROUPS.map((category) => ({
     prefix: PzCategory.Material + category,
     categories: ["Box", "Carton", "Bundled"],
     searchKeys: ["IGUI_ItemCat_%s"],
@@ -223,9 +251,11 @@ export const searchers: Searcher[] = [
     prefix: "Literature",
     categories: [
       "Adult",
+      "Book",
       "Brochure",
       "Comic",
       "Consumable",
+      "Entertainment",
       "FancyBook",
       "Flier",
       "Hardcover",

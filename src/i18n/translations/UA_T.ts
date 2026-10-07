@@ -261,7 +261,7 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Зброя",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Сокири",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Ковальство",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Довге дробильне",
@@ -304,7 +304,7 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Мурування",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Механіка",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Металообробка",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Гончарство",

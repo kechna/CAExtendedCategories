@@ -312,3 +312,34 @@ export const MOD_OPTIONS_TRANSLATIONS: ModOptionsTranslations = {
     betterContainersDisabled: "Керується модом «Розширені категорії», який замінює всі категорії предметів.",
   },
 };
+
+type CategoryDetailKey =
+  | "categoryDetailTitle"
+  | "categoryDetailWip"
+  | "categoryDetailRejoin"
+  | "categoryDetail"
+  | "categoryDetailHoarder"
+  | "categoryDetailBalanced"
+  | "categoryDetailLite"
+  | "categoryDetailModes";
+
+/**
+ * English only while category detail is a work in progress, every language uses these until the texts are final.
+ * Descriptions are rich text: `<RGB:r,g,b>` colors the text after it, `<LINE>` starts a new line.
+ */
+export const CATEGORY_DETAIL_TRANSLATIONS: Record<CategoryDetailKey, string> = {
+  categoryDetailTitle: "Category detail",
+  categoryDetailWip:
+    "<CENTRE> <SIZE:medium> <RGB:1,0.6,0.3> Work in progress! <LINE> <SIZE:medium><RGB:0.8,0.8,0.8> Balanced and Lite are new, the categories they merge may still change between updates. Feedback is very welcome.",
+  categoryDetailRejoin:
+    "<SIZE:medium> <RGB:1,0.4,0.4> Requires rejoining <LINE> <SIZE:medium><RGB:0.8,0.8,0.8> A new choice is used after you return to the main menu and load or join the game again, in singleplayer and multiplayer.",
+  categoryDetail: "Intensity level",
+  categoryDetailHoarder: "Hoarder (default)",
+  categoryDetailBalanced: "Balanced",
+  categoryDetailLite: "Lite",
+  categoryDetailModes: [
+    "<SIZE:medium> <RGB:1,0.6,0.6> Hoarder <LINE> <SIZE:small><RGB:0.8,0.8,0.8> Every category is kept separate.",
+    "<SIZE:medium> <RGB:0.3,0.8,1> Balanced <LINE> <SIZE:small><RGB:0.8,0.8,0.8> Merges a few small categories you'd likely store together, like seafood with meat and socks with underwear.",
+    '<SIZE:medium> <RGB:0,1,0.4> Lite <LINE> <SIZE:small><RGB:0.8,0.8,0.8> Merges some broader groups, like books, magazines and newspapers into entertainment. Simplifies all melee weapons into just "Weapon". Still far more detailed than vanilla.',
+  ].join(" <LINE> "),
+};

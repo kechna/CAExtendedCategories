@@ -260,7 +260,7 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Fegyver",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Balta",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Kovácsolás",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Ütőfegyver",
@@ -303,7 +303,7 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Kőművesség",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Szerelés",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Fémmegmunkálás",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Fazekasság",

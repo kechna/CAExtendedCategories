@@ -4,7 +4,8 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 --- @class CAEC_GardeningCategorizer: CAEC_ItemCategorizer
 local Gardening = CAEC_ItemCategorizer:derive("Gardening")
 
-local GardeningTags = table.newarray(
+---@type (ItemTag | string)[]
+Gardening.Tags = table.newarray(
   ItemTag.IS_COMPOSTABLE,
   ItemTag.IS_SEED,
   ItemTag.CUT_PLANT,
@@ -12,6 +13,11 @@ local GardeningTags = table.newarray(
   ItemTag.CLEAR_ASHES,
   ItemTag.TAKE_DUNG
 )
+
+---@param tag ItemTag | string
+function Gardening.registerTag(tag)
+  table.insert(Gardening.Tags, tag)
+end
 
 ---@param item     Item
 ---@param instance InventoryItem?
@@ -33,7 +39,7 @@ function Gardening:validate(item, instance)
 
   return (
     (existingCategory and existingCategory:contains("Gardening"))
-    or Utils.hasAnyTag(item, GardeningTags)
+    or Utils.hasAnyTag(item, self.Tags)
     or isAnimalFeed(item, instance)
   ) and not item:isItemType(ItemType.MOVEABLE)
 end

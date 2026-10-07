@@ -261,7 +261,7 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Ase",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Kirves",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Sepäntyöt",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Pitkä tylppä ase",
@@ -304,7 +304,7 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Muuraus",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mekaniikka",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metallityöt",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Keramiikka",

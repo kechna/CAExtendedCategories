@@ -261,7 +261,7 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Silah",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Balta",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Demircilik",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Uzun Küt Silah",
@@ -304,7 +304,7 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Duvarcılık",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mekanik",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metal İşçiliği",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Çömlekçilik",

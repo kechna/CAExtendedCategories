@@ -261,7 +261,7 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Weapon: "อาวุธ",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "ขวาน",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "งานตีเหล็ก",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "อาวุธทื่อยาว",
@@ -304,7 +304,7 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Masonry: "งานก่ออิฐ",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "ช่างยนต์",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "งานโลหะ",
   /** pottery skill */
   CAEC_Fallback_Pottery: "เครื่องปั้นดินเผา",

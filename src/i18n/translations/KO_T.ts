@@ -261,7 +261,7 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Weapon: "무기",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "도끼",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "대장일",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "긴 둔기",
@@ -304,7 +304,7 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Masonry: "석공",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "기계공학",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "금속 가공",
   /** pottery skill */
   CAEC_Fallback_Pottery: "도예",

@@ -4,12 +4,19 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 --- @class CAEC_ContainerCategorizer: CAEC_ItemCategorizer
 local Container = CAEC_ItemCategorizer:derive("Container")
 
-local ItemTagsAmmo = table.newarray({
+-- wearable containers with these tags are categorized as ammo containers
+---@type (ItemTag | string)[]
+Container.AmmoTags = table.newarray({
   ItemTag.AMMO_CASE,
   ItemTag.RELOAD_FAST_BULLETS,
   ItemTag.RELOAD_FAST_MAGAZINES,
   ItemTag.RELOAD_FAST_SHELLS
 })
+
+---@param tag ItemTag | string
+function Container.registerAmmoTag(tag)
+  table.insert(Container.AmmoTags, tag)
+end
 
 function Container:validate(item, _instance)
   return item:isItemType(ItemType.CONTAINER)
@@ -30,7 +37,7 @@ function Container:categorize(item, _instance)
   if item:getBodyLocation() ~= nil
       or (bloodClothingType and bloodClothingType:contains(BloodClothingType.Bag))
   then
-    if Utils.hasAnyTag(item, ItemTagsAmmo) then
+    if Utils.hasAnyTag(item, self.AmmoTags) then
       category = "ContainerWearableAmmo"
     else
       category = "ContainerWearable"

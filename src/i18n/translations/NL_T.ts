@@ -271,7 +271,7 @@ export const NL: ExternalTranslations = {
    */
   CAEC_Fallback_Axe: "Bijl",
   /**
-   * blacksmithing skill
+   * blacksmith skill
    *
    * found in-game:
    *   IGUI_perks_Blacksmith = "Smeden"
@@ -371,7 +371,7 @@ export const NL: ExternalTranslations = {
    */
   CAEC_Fallback_Mechanics: "Voertuigonderhoud",
   /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   * metalworking skill (for items that are relevant in both welding and blacksmith
    *
    * found in-game:
    *   IGUI_perks_Metalworking = "Metaalbewerking"

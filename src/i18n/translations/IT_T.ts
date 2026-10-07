@@ -261,7 +261,7 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Arma",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Ascia",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Forgiatura",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contundente lungo",
@@ -304,7 +304,7 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Muratura",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Meccanica",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Lavorazione dei metalli",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Ceramica",

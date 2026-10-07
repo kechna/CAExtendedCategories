@@ -231,7 +231,7 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Arma",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Destral",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Ferreria",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contundent llarg",
@@ -274,7 +274,7 @@ export const CA: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Paleta",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mecànica",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metal·lúrgia",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Terrisseria",

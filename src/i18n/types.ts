@@ -79,6 +79,7 @@ export type TranslationNames =
   | "Head"
   | "Herb"
   | "Household"
+  | "Husbandry"
   | "Instrument"
   | "Jewelry"
   | "Juice"

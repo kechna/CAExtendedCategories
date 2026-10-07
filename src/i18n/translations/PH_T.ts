@@ -87,7 +87,7 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Armas",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Palakol",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Pagpapanday",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Mahabang Pamalo",
@@ -115,7 +115,7 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Pagmamason",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mekaniko",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Paggawa ng Metal",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Paggawa ng Palayok",

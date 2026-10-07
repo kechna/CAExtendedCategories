@@ -261,7 +261,7 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Senjata",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Kapak",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Pandai Besi",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Tumpul Panjang",
@@ -304,7 +304,7 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Batu Bata",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mekanik",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Pengerjaan Logam",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Tembikar",

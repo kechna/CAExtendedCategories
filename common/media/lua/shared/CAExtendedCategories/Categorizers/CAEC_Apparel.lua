@@ -2,6 +2,7 @@ local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer"
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 
+---@type (ItemTag | string)[]
 local JewelryTags = table.newarray(
   ItemTag.AMETHYST_JEWELLERY, ItemTag.DIAMOND_JEWELLERY, ItemTag.EMERALD_JEWELLERY, ItemTag.RUBY_JEWELLERY,
   ItemTag.SAPPHIRE_JEWELLERY, ItemTag.TWO_DIAMOND_JEWELLERY, ItemTag.TWO_EMERALD_JEWELLERY, ItemTag.TWO_RUBY_JEWELLERY,
@@ -234,11 +235,15 @@ local ApparelCategories = {
 ---@field apparelCategories          table<CAEC_ApparelCategory, ItemBodyLocation[]>
 ---@field categoryByBodyLocation     table<string, CAEC_ApparelCategory>
 ---@field BodyLocationsMap           table<string, CAEC_ApparelCategory>
+---@field JewelryTags                (ItemTag | string)[]
 ---@field registerBodyLocation       fun(bodyLocation: string | ItemBodyLocation, category: CAEC_ApparelCategory)
+---@field registerJewelryTag         fun(tag: ItemTag | string)
 ---@field public resolveBodyLocation fun(self: CAEC_ApparelCategorizer, bodyLocation: string | ItemBodyLocation): ItemBodyLocation?
 local Apparel = CAEC_ItemCategorizer:derive("Apparel")
 
 Apparel.Category = ApparelCategory
+
+Apparel.JewelryTags = JewelryTags
 
 -- if item did not already have ProtectiveGear category it must have at least one defense over this threshold to be categorized as ProtectiveGear
 Apparel.protectiveGearDefenseCutoff = 50.0
@@ -313,6 +318,11 @@ function Apparel.registerBodyLocation(bodyLocation, category)
   Apparel.BodyLocationsMap[tostring(bodyLocation)] = category
 end
 
+---@param tag ItemTag | string
+function Apparel.registerJewelryTag(tag)
+  table.insert(Apparel.JewelryTags, tag)
+end
+
 ---@param input ItemBodyLocation | string
 ---@return ItemBodyLocation?
 function Apparel:resolveBodyLocation(input)
@@ -339,7 +349,7 @@ function Apparel:categorize(item, instance)
   ---@type string | nil
   local category = nil
 
-  if Utils.hasAnyTag(item, JewelryTags) then
+  if Utils.hasAnyTag(item, self.JewelryTags) then
     category = self.Category.ACCESSORY_JEWELRY
   else
     ---@type string | nil

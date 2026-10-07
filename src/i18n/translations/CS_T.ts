@@ -261,7 +261,7 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Zbraň",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Sekera",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Kovářství",
   /** long blunt weapon skill */
   CAEC_Override_Blunt: "Tupá zbraň",
@@ -320,7 +320,7 @@ export const CS: ExternalTranslations = {
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mechanika",
   /**
-   * metalworking skill (for items that are relevant in both welding and blacksmithing
+   * metalworking skill (for items that are relevant in both welding and blacksmith
    *
    * found in-game:
    *   IGUI_CraftCategory_Metalworking = "Kovovýroba"

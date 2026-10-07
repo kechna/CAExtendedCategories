@@ -261,7 +261,7 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Armă",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Topor",
-  /** blacksmithing skill */
+  /** blacksmith skill */
   CAEC_Fallback_Blacksmith: "Fierărie",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contondent",
@@ -304,7 +304,7 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Masonry: "Zidărie",
   /** mechanics skill, vehicle maintenance */
   CAEC_Fallback_Mechanics: "Mecanică",
-  /** metalworking skill (for items that are relevant in both welding and blacksmithing */
+  /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Prelucrarea metalelor",
   /** pottery skill */
   CAEC_Fallback_Pottery: "Olărit",

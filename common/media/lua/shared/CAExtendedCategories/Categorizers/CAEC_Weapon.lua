@@ -8,7 +8,9 @@ local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
 ---@field public asFirearm      fun(self: CAEC_WeaponCategorizer, item: Item, instance: InventoryItem?, group: CAEC_AmmoGroup?): string | nil
 local Weapon = CAEC_ItemCategorizer:derive("Weapon")
 
-local WeaponComboCategories = {
+-- existing categories that get combined with the weapon category instead of being replaced
+---@type table<string, boolean>
+Weapon.ComboCategories = {
   AnimalPart = true,
   Cooking = true,
   CookingUtensil = true,
@@ -35,6 +37,12 @@ local WeaponComboCategories = {
   ToolTailoring = true,
   ToolWelding = true
 }
+
+---@param category string
+function Weapon.registerComboCategory(category)
+  Weapon.ComboCategories[category] = true
+end
+
 function Weapon:validate(item, _instance)
   return item:isItemType(ItemType.WEAPON) and not item:hasTag(ItemTag.NO_MAINTENANCE_XP)
 end
@@ -82,7 +90,7 @@ function Weapon:asMeleeWeapon(item, instance)
   if original then
     local trimmed = original:gsub(baseCategory, "")
 
-    if trimmed ~= "" and WeaponComboCategories[trimmed] then
+    if trimmed ~= "" and self.ComboCategories[trimmed] then
       return trimmed .. "__" .. category
     end
   end

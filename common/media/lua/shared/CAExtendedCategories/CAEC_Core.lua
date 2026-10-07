@@ -13,7 +13,6 @@ Core.Initialized = false
 
 ---@class CAEC_SandboxSettings
 ---@field LogVerbosity?          number
----@field CategoryDetail?        number
 ---@field ItemCategoryOverrides? string
 
 ---@type CAEC_SandboxSettings
@@ -85,19 +84,34 @@ function Core.initializeCategorizers()
   Core.Initialized = true
 end
 
---- full-detail key => key for the active CategoryDetail, built once per settings change
+--- 1 = Hoarder, 2 = Balanced, 3 = Lite. Set from the client mod options, the server keeps Hoarder.
+---@type integer
+local categoryDetail = 1
+
+--- full-detail key => key for the active category detail, built once per change
 ---@type table<string, string> | nil
 local activeCategoryMap = nil
 
+--- Ignored once the items are categorized: instances can't be reliably recategorized later, so a change only applies
+--- after rejoining from the main menu, which reloads Lua.
+---@param detail integer
+function Core.setCategoryDetail(detail)
+  if Core.Initialized then
+    return
+  end
+
+  categoryDetail = detail
+  activeCategoryMap = nil
+end
+
 ---@return table<string, string>
 local function buildCategoryMap()
-  local detail = Core.Settings.CategoryDetail or 1
   local map = {}
 
-  if detail > 1 then
-    -- each entry holds the Balanced and Lite key, in CategoryDetail order
+  if categoryDetail > 1 then
+    -- each entry holds the Balanced and Lite key, Lite is nil when it's the same as Balanced
     for key, entry in pairs(CategoryModes) do
-      map[key] = entry[detail - 1]
+      map[key] = entry[categoryDetail - 1] or entry[1]
     end
   end
 
