@@ -241,10 +241,6 @@ function Material:categorize(item, instance)
 		end
 	end
 
-	if not category then
-		Debug.report("Material categorizer could not categorize item: " .. item:getFullName(), item, instance)
-	end
-
 	return category
 end
 
