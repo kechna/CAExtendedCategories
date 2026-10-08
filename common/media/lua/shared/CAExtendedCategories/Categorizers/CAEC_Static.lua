@@ -33,8 +33,11 @@ Static.ItemsMap = {
   ["Base.TwigsBundle"] = "MaterialBundled",
   ["Base.Zipties"]     = "MaterialMaintenance",
 
-  ["Base.SmokingPipe"] = "Smoking",
-  ["Base.CanPipe"]     = "Smoking",
+  ["Base.SmokingPipe"]     = "Smoking",
+  ["Base.CanPipe"]         = "Smoking",
+  -- todo fix this because this shouldnt happen
+  ["Base.CigaretteCarton"] = "Smoking",
+
 
   ["Base.BlowTorch"] = "ToolMetalworking",
   ["Base.PropaneTank"] = "MaterialMetalworking",
@@ -42,15 +45,19 @@ Static.ItemsMap = {
   --- not first aid
   ["Base.TissueBox"] = "Household",
 
-  ["Base.Doily"] = "Junk",
-  ["Base.Clipboard"] = "Junk",
-
   ["Base.Toothbrush"] = "Appearance",
   ["Base.Toothpaste"] = "Appearance",
-
   ["Base.Comb"] = "Appearance",
   ["Base.Razor"] = "Appearance",
-  ["Base.Hairgel"] = "Appearance"
+  ["Base.Hairgel"] = "Appearance",
+
+  ["Base.Bowl"] = "ContainerCooking",
+  ["Base.ClayBowl"] = "ContainerCooking",
+
+  ["Base.Doily"] = "Junk",
+  ["Base.Clipboard"] = "Junk",
+  -- useless item, categorized as "Animal"
+  ["Base.Leash"] = "Junk"
 }
 
 function Static:initialise()

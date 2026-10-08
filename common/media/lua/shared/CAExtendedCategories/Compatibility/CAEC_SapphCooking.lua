@@ -121,4 +121,23 @@ CAEC.registerInitHook("Mod:SapphCooking", function ()
 
   -- CookingOil is handled by the categorizer, SapphCachaca and SapphSake fall back to their alcoholic fluid category
   -- Fluid.registerFluidType("FryBatter", nil)
+
+  -- missing a category entirely
+  Static.registerCategory("SapphCooking.BagofSeaweed", "FoodSeafood")
+  Static.registerCategory("SapphCooking.BagofToothpicks", "CookingUtensilBox")
+  Static.registerCategory("SapphCooking.BagofWoodenSkewers", "CookingUtensilBox")
+  Static.registerCategory("SapphCooking.BakingMolds", "CookingPan")
+  Static.registerCategory("SapphCooking.ClothFilter", "CookingUtensil")
+  Static.registerCategory("SapphCooking.CoffeeFilter", "CookingUtensil")
+  Static.registerCategory("SapphCooking.CoffeeGrinder", "CookingUtensil")
+  Static.registerCategory("SapphCooking.DirtyClothFilter", "CookingUtensil")
+  Static.registerCategory("SapphCooking.IceTray", "CookingUtensil")
+  Static.registerCategory("SapphCooking.MRE_FlamelessRationHeater", "Cooking")
+  Static.registerCategory("SapphCooking.Meatgrinder", "CookingUtensil")
+  Static.registerCategory("SapphCooking.PipingBags", "CookingUtensil")
+  Static.registerCategory("SapphCooking.PlasticFilterHolder", "CookingUtensil")
+  Static.registerCategory("SapphCooking.StackBowl2", "ContainerCooking")
+  Static.registerCategory("SapphCooking.StackBowl3", "ContainerCooking")
+  Static.registerCategory("SapphCooking.TakeoutBox", "ContainerCooking")
+  Static.registerCategory("SapphCooking.UsedCoffeeFilter", "Junk")
 end)

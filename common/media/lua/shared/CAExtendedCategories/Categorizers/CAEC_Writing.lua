@@ -9,8 +9,6 @@ Writing.tags = table.newarray(
 )
 
 function Writing:validate(item, _instance)
-  local displayCategory = item:getDisplayCategory()
-
   return Utils.hasAnyTag(item, Writing.tags)
 end
 function Writing:categorize(item, instance)

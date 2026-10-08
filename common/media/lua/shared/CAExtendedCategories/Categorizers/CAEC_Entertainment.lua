@@ -1,10 +1,11 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
+local Utils = require("CAExtendedCategories/CAEC_Utils")
 
 ---@class CAEC_EntertainmentCategorizer: CAEC_ItemCategorizer
 local Entertainment = CAEC_ItemCategorizer:derive("Entertainment")
 
 function Entertainment:validate(item, _instance)
-  local existingCategory = item:getDisplayCategory()
+  local existingCategory = Utils.getOriginalCategory(item)
 
   return ((existingCategory and existingCategory:contains("Entertainment")))
 end

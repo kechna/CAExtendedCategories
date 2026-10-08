@@ -1,4 +1,5 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
+local Utils = require("CAExtendedCategories/CAEC_Utils")
 
 ---@class CAEC_CategoryOverrideCategorizer: CAEC_ItemCategorizer
 ---@field public CategoryMap table<string, string>
@@ -35,7 +36,7 @@ function CategoryOverride:validate(_item, _instance)
 end
 
 function CategoryOverride:categorize(item, _instance)
-  local category = item:getDisplayCategory()
+  local category = Utils.getOriginalCategory(item)
 
   if not category then
     return nil

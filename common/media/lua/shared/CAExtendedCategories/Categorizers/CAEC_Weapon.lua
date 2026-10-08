@@ -85,7 +85,7 @@ function Weapon:asMeleeWeapon(item, instance)
   -- what the rest of the chain makes of this item (Weapon skips itself there), else the script's own category
   ---@type string | nil
   local resolved = self:resolveCategory(item, item, instance)
-  local original = resolved or item:getDisplayCategory()
+  local original = resolved or Utils.getOriginalCategory(item)
 
   if original then
     local trimmed = original:gsub(baseCategory, "")
@@ -163,7 +163,7 @@ function Weapon:asRangedWeapon(item, instance, group)
 end
 
 function Weapon:categorize(item, instance)
-  local category = item:getDisplayCategory()
+  local category = Utils.getOriginalCategory(item)
 
   if category == "BrokenWeapon" then
     return category

@@ -1,11 +1,12 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
+local Utils = require("CAExtendedCategories/CAEC_Utils")
 
 ---@class CAEC_Literature: CAEC_ItemCategorizer
 local Literature = CAEC_ItemCategorizer:derive("Literature")
 
 function Literature:validate(item, _instance)
-  local displayCategory = item:getDisplayCategory()
+  local displayCategory = Utils.getOriginalCategory(item)
 
   return displayCategory ~= "Gardening"
       -- exclude mementos like photos, letters, etc.

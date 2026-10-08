@@ -3,6 +3,7 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 local CAEC = require("CAExtendedCategories/CAEC")
 
 local Food = require("CAExtendedCategories/Categorizers/CAEC_Food")
+local Container = require("CAExtendedCategories/Categorizers/CAEC_Container")
 local Fluid = require("CAExtendedCategories/Categorizers/CAEC_FluidContainer")
 local Static = require("CAExtendedCategories/Categorizers/CAEC_Static")
 
@@ -69,6 +70,9 @@ CAEC.registerInitHook("Mod:VanillaFoodsExpanded", function ()
   }) do
     Static.registerCategory(itemType, "FoodBeverage")
   end
+
+  Static.registerCategory("FoodStorageContainerEmpty", "ContainerCooking")
+  Static.registerCategory("MetalFoodStorageContainerEmpty", "ContainerCooking")
 
   ------
   -- fluids

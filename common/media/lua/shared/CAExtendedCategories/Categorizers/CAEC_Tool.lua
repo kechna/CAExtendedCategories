@@ -174,7 +174,7 @@ function Tool.registerMechanicsIgnoreTag(tag)
 end
 
 function Tool:validate(item, instance)
-	local category = item:getDisplayCategory()
+	local category = Utils.getOriginalCategory(item)
 
 	return (
 		category
@@ -208,7 +208,7 @@ function Tool:categorize(item, instance)
 		end
 	end
 
-	local existing = item:getDisplayCategory()
+	local existing = Utils.getOriginalCategory(item)
 
 	if not category and existing and existing:contains("VehicleMaintenance") then
 		category = "Tool" .. ToolType.Mechanics

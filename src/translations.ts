@@ -104,7 +104,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [SKILLS, Skill.Carving, "carving skill", Z],
   [SKILLS, Skill.Electrical, "electrical skill", Z],
   [SKILLS, Skill.Farming, "farming/agriculture skill", Z],
-  [SKILLS, Skill.Husbandry, "animal husbandry skill", Z],
+  [SKILLS, Skill.Husbandry, "animal husbandry/care skill", Z],
   [SKILLS, Skill.Fishing, "fishing skill and items", Z],
   [SKILLS, Skill.FlintKnapping, "knapping skill", Z],
   [SKILLS, Skill.Foraging, "foraging skill", Z],

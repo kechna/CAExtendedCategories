@@ -361,7 +361,7 @@ function Apparel:categorize(item, instance)
     -- local initialCategory = resolved or item:getDisplayCategory()
 
     ---@type string | nil
-    local initialCategory = item:getDisplayCategory()
+    local initialCategory = Utils.getOriginalCategory(item)
     local highestDefense = 0.0
 
     if instanceof(instance, "Clothing") then

@@ -69,6 +69,7 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("Memento", 2200)
   Processors.registerCategorizer("Entertainment", 2600)
   Processors.registerCategorizer("Smoking", 2800)
+  Processors.registerCategorizer("AnimalPart", 3000)
 
   Processors.registerCategorizer("FluidContainer", 5000, "script")
   Processors.registerCategorizer("Food", 5200, "script")
@@ -245,6 +246,9 @@ function Core.preprocessAllItems()
   local changes = 0
 
   Core.processAllItems(function (item)
+    -- record every original category before anything is categorized, not every item is read by a categorizer
+    Utils.getOriginalCategory(item)
+
     for i = 1, #preprocessors do
       local preprocessor = preprocessors[i]
       local result = preprocessor.callback(item)

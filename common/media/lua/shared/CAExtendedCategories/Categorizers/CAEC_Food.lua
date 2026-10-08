@@ -13,8 +13,16 @@ local BASE_CATEGORY = "Food"
 local Food = CAEC_ItemCategorizer:derive(BASE_CATEGORY)
 
 Food.NonFoodTags = table.newarray(
-  ItemTag.ANIMAL_HEAD, ItemTag.FEATHER, ItemTag.IS_COMPOSTABLE, ItemTag.ANIMAL_BRAIN, ItemTag.SMOKABLE,
-  ItemTag.SEALED_BEVERAGE_CAN, ItemTag.ALCOHOLIC_BEVERAGE, ItemTag.CHEWING_TOBACCO, ItemTag.TOBACCO
+  --
+  ItemTag.ANIMAL_HEAD,
+  ItemTag.FEATHER,
+  ItemTag.IS_COMPOSTABLE,
+  ItemTag.ANIMAL_BRAIN,
+  ItemTag.SMOKABLE,
+  ItemTag.SEALED_BEVERAGE_CAN,
+  ItemTag.ALCOHOLIC_BEVERAGE,
+  ItemTag.CHEWING_TOBACCO,
+  ItemTag.TOBACCO
 )
 
 -- tags that will map to specific food types

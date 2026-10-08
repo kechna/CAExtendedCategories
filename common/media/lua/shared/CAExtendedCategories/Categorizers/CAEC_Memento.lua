@@ -1,5 +1,6 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
+local Utils = require("CAExtendedCategories/CAEC_Utils")
 
 ---@class CAEC_MementoCategorizer: CAEC_ItemCategorizer
 ---@field MementoCategories table<string, boolean>      A table of valid memento categories
@@ -32,8 +33,47 @@ Memento.MementoCategories = {
 
 Memento.RubberCategories = { ["Duck"] = true, ["Spider"] = true }
 
+--- lowercase parts of an icon or world model name that mark a plushie, for items without a known display category
+---@type string[]
+Memento.PlushieModels = table.newarray("plush", "teddybear", "toybear")
+
 function Memento.registerCategory(category)
   Memento.MementoCategories[category] = true
+end
+
+---@param item Item
+---@return boolean
+local function hasPlushieModel(item)
+  local icon = item:getIcon()
+  local model = item:getWorldStaticModel()
+  local names = ((icon or "") .. " " .. (model or "")):lower()
+
+  for i = 1, #Memento.PlushieModels do
+    if names:contains(Memento.PlushieModels[i]) then
+      return true
+    end
+  end
+
+  return false
+end
+
+--- Plushies burn, which is what sets them apart from the other animal mementos (bug specimens, rubber ducks).
+---@param item     Item
+---@param category string | nil
+---@return boolean
+local function isPlushie(item, category)
+  if not item:hasTag(ItemTag.IS_FIRE_TINDER) or not item:isItemType(ItemType.NORMAL) then
+    return false
+  end
+
+  return (category ~= nil and Memento.MementoCategories[category] == true) or hasPlushieModel(item)
+end
+
+---@param item     Item
+---@param category string | nil
+---@return boolean
+local function isRubberToy(item, category)
+  return (category ~= nil and Memento.RubberCategories[category] == true) or item:getName():contains("Rubber")
 end
 
 function Memento:categorize(item, _instance)
@@ -41,25 +81,29 @@ function Memento:categorize(item, _instance)
     return "Memento__Container"
   end
 
-  ---@type string | nil
-  local category = "Memento"
+  local category = Utils.getOriginalCategory(item)
 
-  ---@type string | nil
-  local existingCategory = item:getDisplayCategory()
-
-  if existingCategory and Memento.MementoCategories[existingCategory] then
-    if item:hasTag(ItemTag.IS_FIRE_TINDER) then
-      category = category .. "Plushie"
-    elseif Memento.RubberCategories[existingCategory] then
-      category = category .. "Toy"
-    end
-  elseif item:hasTag(ItemTag.PICTURE) then
-    category = category .. "Picture"
-  elseif item:hasTag(ItemTag.FITS_WALLET) then
-    category = category .. "Trinket"
+  if isPlushie(item, category) then
+    return "MementoPlushie"
   end
 
-  return category
+  if isRubberToy(item, category) then
+    return "MementoToy"
+  end
+
+  if category and Memento.MementoCategories[category] then
+    return "Memento"
+  end
+
+  if item:hasTag(ItemTag.PICTURE) then
+    return "MementoPicture"
+  end
+
+  if item:hasTag(ItemTag.FITS_WALLET) then
+    return "MementoTrinket"
+  end
+
+  return "Memento"
 end
 
 return Memento

@@ -1,8 +1,11 @@
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
+local Container = require("CAExtendedCategories/Categorizers/CAEC_Container")
+
+local NAME = "Cooking"
 
 ---@class CAEC_CookingCategorizer: CAEC_ItemCategorizer
-local Cooking = CAEC_ItemCategorizer:derive("Cooking")
+local Cooking = CAEC_ItemCategorizer:derive(NAME)
 
 ---@type (ItemTag | string)[]
 Cooking.CutleryTags = table.newarray(
@@ -34,7 +37,7 @@ function Cooking.registerUtensilTag(tag)
 end
 
 function Cooking:validate(item, _instance)
-  local category = item:getDisplayCategory()
+  local category = Utils.getOriginalCategory(item)
 
   if not category then
     return item:getLootType() == "Cookware"

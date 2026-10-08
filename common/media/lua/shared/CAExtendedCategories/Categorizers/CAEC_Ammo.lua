@@ -156,7 +156,8 @@ function Ammo:categorize(item, _instance)
 
   if item:hasTag(ItemTag.AMMO) then
     category = baseCategory
-  elseif lowerName:contains("box") then
+  elseif lowerName:contains("box")
+    or lowerName:contains("pack") then
     category = baseCategory .. "Box"
   elseif lowerName:contains("carton") then
     category = baseCategory .. "Carton"

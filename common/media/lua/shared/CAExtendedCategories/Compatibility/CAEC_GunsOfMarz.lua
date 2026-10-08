@@ -45,7 +45,7 @@ function Ammo:validate(item, instance)
 
   if item:getModID() ~= MOD_ID then return false end
 
-  local displayCategory = item:getDisplayCategory()
+  local displayCategory = Utils.getOriginalCategory(item)
 
   return displayCategory == "WeaponMagazine" or displayCategory == "Casings"
 end
@@ -57,7 +57,7 @@ function Ammo:categorize(item, instance)
     return originalAmmoCategorize(self, item, instance)
   end
 
-  local displayCategory = item:getDisplayCategory()
+  local displayCategory = Utils.getOriginalCategory(item)
   local name = item:getName()
 
   -- magazines: use the caliber instead of the rifle/pistol magazine tags, so SMG and shotgun mags end up in the right group

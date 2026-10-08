@@ -91,7 +91,7 @@ end
 ---@param instance InventoryItem?
 ---@return string | nil, boolean | nil
 function BoxesAndStacks.categorizeByHeuristic(item, instance)
-  return BoxesAndStacks.addToCategory(item:getDisplayCategory(), item, instance), nil
+  return BoxesAndStacks.addToCategory(Utils.getOriginalCategory(item), item, instance), nil
 end
 
 ---@param box         Item

@@ -164,6 +164,27 @@ function Utils.removeTemporaryInstances()
 	instanceCount = 0
 end
 
+--- script item full name => display category before CAEC replaced it, false when it had none. Global so it survives
+--- reloads, which re-run the categorizers on script items that already have a CAEC category.
+---@type table<string, string | false>
+CAEC_OriginalCategories = CAEC_OriginalCategories or {}
+
+--- The script item's display category from before CAEC categorized it. Categorizers must use this instead of
+--- `item:getDisplayCategory()`, which returns the CAEC category once the item has been categorized.
+---@param item Item
+---@return string | nil
+function Utils.getOriginalCategory(item)
+	local name = item:getFullName()
+	local category = CAEC_OriginalCategories[name]
+
+	if category == nil then
+		category = item:getDisplayCategory() or false
+		CAEC_OriginalCategories[name] = category
+	end
+
+	return category or nil
+end
+
 ---@param modId string
 ---@return boolean
 function Utils.modIsActive(modId)

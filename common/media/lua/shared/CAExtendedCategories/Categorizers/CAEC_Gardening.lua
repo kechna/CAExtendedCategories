@@ -4,7 +4,7 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 --- @class CAEC_GardeningCategorizer: CAEC_ItemCategorizer
 local Gardening = CAEC_ItemCategorizer:derive("Gardening")
 
----@type (ItemTag | string)[]
+---@type ItemTag[] | string[]
 Gardening.Tags = table.newarray(
   ItemTag.IS_COMPOSTABLE,
   ItemTag.IS_SEED,
@@ -35,12 +35,12 @@ local function isAnimalFeed(item, instance)
 end
 
 function Gardening:validate(item, instance)
-  local existingCategory = item:getDisplayCategory()
+  local existingCategory = Utils.getOriginalCategory(item)
 
   return (
     (existingCategory and existingCategory:contains("Gardening"))
-    or Utils.hasAnyTag(item, self.Tags)
-    or isAnimalFeed(item, instance)
+      or Utils.hasAnyTag(item, self.Tags)
+      or isAnimalFeed(item, instance)
   ) and not item:isItemType(ItemType.MOVEABLE)
 end
 
@@ -57,7 +57,7 @@ function Gardening:categorize(item, instance)
   elseif item:hasTag(ItemTag.IS_COMPOSTABLE) then
     category = "GardeningCompostable"
   elseif isAnimalFeed(item, instance) then
-    category = "GardeningAnimalFeed"
+    category = "HusbandryFood"
   elseif not isFood then
     local recipe = item:getDoubleClickRecipe()
 

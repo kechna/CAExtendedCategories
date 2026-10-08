@@ -26,6 +26,15 @@ const MATERIAL_GROUPS = [
   "Metal",
 ];
 
+/** container subtypes, keep in sync with `Container.ItemTypes` and `Container.TagTypes` in `CAEC_Container.lua` */
+const CONTAINER_TYPES = [
+  PzCategory.Ammo,
+  PzCategory.Cooking,
+  PzCategory.VehicleMaintenance,
+  "Farming",
+  PzCategory.Household,
+];
+
 const AMMO_TYPES = ["Rifle", "Handgun", "Shotgun", "Toy", "Bow", "Explosive"];
 const AMMO_BOX_TYPES = ["Box", "Carton", "Mag"];
 
@@ -121,6 +130,12 @@ export const searchers: Searcher[] = [
   },
 
   {
+    prefix: "Husbandry",
+    categories: ["Food"],
+    searchKeys: ["IGUI_health_%s", "IGUI_ItemCat_%s"],
+  },
+
+  {
     prefix: PzCategory.ProtectiveGear,
     categories: PROTECTIVE_GEAR_CATEGORIES,
     searchKeys: [
@@ -135,6 +150,12 @@ export const searchers: Searcher[] = [
   {
     prefix: PzCategory.Food,
     categories: [...foodTypes, "Box", "Carton", "Perishable"],
+    searchKeys: FOOD_KEYS,
+  },
+
+  {
+    prefix: PzCategory.AnimalPart,
+    categories: ["Perishable"],
     searchKeys: FOOD_KEYS,
   },
 
@@ -237,13 +258,13 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Container,
-    categories: ["Liquid", "Wearable", PzCategory.Ammo, "Box"],
+    categories: ["Liquid", "Wearable", "Box", ...CONTAINER_TYPES],
     searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s"],
   },
 
   {
     prefix: PzCategory.Container + "Wearable",
-    categories: [PzCategory.Ammo],
+    categories: CONTAINER_TYPES,
     searchKeys: ["IGUI_ItemCat_%s"],
   },
 
@@ -284,7 +305,14 @@ export const searchers: Searcher[] = [
 
   {
     prefix: PzCategory.Cooking,
-    categories: ["Cutlery", "Utensil", "Cup", "Pan"],
+    categories: ["Cutlery", "Utensil", "Cup", "Pan", "Bundled", "Container"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s", "ItemName_Base.%s"],
+  },
+
+  {
+    prefix: PzCategory.Cooking + "Utensil",
+    categories: ["Bundled", "Box"],
+    searchKeys: ["IGUI_ItemCat_%s", "ContextMenu_%s", "ItemName_Base.%s"],
   },
 
   {

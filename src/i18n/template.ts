@@ -114,7 +114,7 @@ export const TRANSLATIONS = {
   CAEC_Fallback_Gardening: "Gardening",
   /* glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glassmaking",
-  /* animal husbandry skill */
+  /* animal husbandry/care skill */
   CAEC_Fallback_Husbandry: "Animal Care",
   /* long blade weapon skill */
   CAEC_Fallback_LongBlade: "Long Blade",

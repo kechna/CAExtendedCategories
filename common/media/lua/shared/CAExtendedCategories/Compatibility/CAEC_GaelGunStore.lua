@@ -1,8 +1,11 @@
 local CAEC = require("CAExtendedCategories/CAEC")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
+local Static = require("CAExtendedCategories/Categorizers/CAEC_Static")
 
-if not Utils.modIsActive("GaelGunStore_B42") then return end
+local MOD_ID = "GaelGunStore_B42"
+
+if not Utils.modIsActive(MOD_ID) then return end
 
 CAEC.registerInitHook("Mod:GaelGunStore", function ()
   Ammo.registerAmmoGroup("archerynexus:woodshaft_arrow", Ammo.AmmoGroup.BOW)
@@ -183,6 +186,11 @@ CAEC.registerInitHook("Mod:GaelGunStore", function ()
 
   -- FN P90 uses 5.7x28mm but 5.7x28 is classified as HANDGUN
   Ammo.registerItemAmmoGroup("Base.P90Clip", Ammo.AmmoGroup.HANDGUN)
+
+  Static.registerCategory("Base.BulletPressTool", "ToolFirearm")
+  Static.registerCategory("Base.GunCleaningTools", "ToolFirearm")
+  Static.registerCategory("Base.GunToolsKit", "ToolFirearm")
+  Static.registerCategory("Base.GunAttParts", "ToolFirearm")
 end)
 
 local originalAmmoCategorize = Ammo.categorize
@@ -190,7 +198,7 @@ local originalAmmoCategorize = Ammo.categorize
 function Ammo:categorize(item, instance)
   local category = originalAmmoCategorize(self, item, instance)
 
-  if item:getModID() ~= "GaelGunStore_B42" then
+  if item:getModID() ~= MOD_ID then
     return category
   end
 
