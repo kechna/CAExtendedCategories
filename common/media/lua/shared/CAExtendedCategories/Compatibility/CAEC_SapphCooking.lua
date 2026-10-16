@@ -3,13 +3,13 @@ local CAEC = require("CAExtendedCategories/CAEC")
 
 local Food = require("CAExtendedCategories/Categorizers/CAEC_Food")
 local Fluid = require("CAExtendedCategories/Categorizers/CAEC_FluidContainer")
-local Apparel = require("CAExtendedCategories/Categorizers/CAEC_Apparel")
 local Static = require("CAExtendedCategories/Categorizers/CAEC_Static")
 
 if not Utils.modIsActive("SapphCooking_B42") then return end
 
 CAEC.registerInitHook("Mod:SapphCooking", function ()
-  Apparel.registerBodyLocation("sapphcooking:chefapron", Apparel.Category.ACCESSORY_TOP)
+  -- no body location for the chef aprons: they're all containers, so the Container categorizer handles them
+  -- (ContainerWearable), and the location isn't in the Human group anyway
 
   Food.registerFoodType("Cachaca", Food.FoodType._SKIP_)
   -- curry powder
@@ -101,26 +101,26 @@ CAEC.registerInitHook("Mod:SapphCooking", function ()
   Static.registerCategory("SapphCooking.CoffeeBeansBag", "FoodBeverage")
 
   -- fluids
-  Fluid.registerFluidType("BrewedCoffee", Fluid.FluidType.Coffee)
-  Fluid.registerFluidType("LatteCoffee", Fluid.FluidType.Coffee)
-  Fluid.registerFluidType("CappuccinoCoffee", Fluid.FluidType.Coffee)
-  Fluid.registerFluidType("AmericanoCoffee", Fluid.FluidType.Coffee)
-  Fluid.registerFluidType("FrappeCoffee", Fluid.FluidType.Coffee)
-  Fluid.registerFluidType("IrishCoffee", Fluid.FluidType.Coffee)
-  Fluid.registerFluidType("MochaCoffee", Fluid.FluidType.Coffee)
+  Fluid.registerFluid("BeverageCoffee", "BrewedCoffee")
+  Fluid.registerFluid("BeverageCoffee", "LatteCoffee")
+  Fluid.registerFluid("BeverageCoffee", "CappuccinoCoffee")
+  Fluid.registerFluid("BeverageCoffee", "AmericanoCoffee")
+  Fluid.registerFluid("BeverageCoffee", "FrappeCoffee")
+  Fluid.registerFluid("BeverageCoffee", "IrishCoffee")
+  Fluid.registerFluid("BeverageCoffee", "MochaCoffee")
 
-  Fluid.registerFluidType("JuicePineapple", Fluid.FluidType.Juice)
-  Fluid.registerFluidType("JuiceStrawberry", Fluid.FluidType.Juice)
-  Fluid.registerFluidType("JuiceWatermelon", Fluid.FluidType.Juice)
-  Fluid.registerFluidType("JuicePeach", Fluid.FluidType.Juice)
+  Fluid.registerFluid("BeverageJuice", "JuicePineapple")
+  Fluid.registerFluid("BeverageJuice", "JuiceStrawberry")
+  Fluid.registerFluid("BeverageJuice", "JuiceWatermelon")
+  Fluid.registerFluid("BeverageJuice", "JuicePeach")
 
-  Fluid.registerFluidType("MilkStrawberry", Fluid.FluidType.Milk)
-  Fluid.registerFluidType("ProteinShake", Fluid.FluidType.Milk)
+  Fluid.registerFluid("BeverageMilk", "MilkStrawberry")
+  Fluid.registerFluid("BeverageMilk", "ProteinShake")
 
-  Fluid.registerFluidType("EnergyDrink", Fluid.FluidType.EnergyDrink)
+  Fluid.registerFluid("BeverageEnergyDrink", "EnergyDrink")
 
   -- CookingOil is handled by the categorizer, SapphCachaca and SapphSake fall back to their alcoholic fluid category
-  -- Fluid.registerFluidType("FryBatter", nil)
+  -- Fluid.registerFluid("<category>", "FryBatter")
 
   -- missing a category entirely
   Static.registerCategory("SapphCooking.BagofSeaweed", "FoodSeafood")
