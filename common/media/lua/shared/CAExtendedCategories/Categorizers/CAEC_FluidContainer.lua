@@ -7,65 +7,92 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 local Fluid = CAEC_ItemCategorizer:derive("FluidContainer")
 
 Fluid.tags = table.newarray(
-  ItemTag.GLASS_BOTTLE, ItemTag.GLASS_BOTTLE_SMALL, ItemTag.SEALED_BEVERAGE_CAN, ItemTag.EMPTY_CAN,
+  ItemTag.GLASS_BOTTLE,
+  ItemTag.GLASS_BOTTLE_SMALL,
+  ItemTag.SEALED_BEVERAGE_CAN,
+  ItemTag.EMPTY_CAN,
   ItemTag.ALCOHOLIC_BEVERAGE
 )
 
----@enum CAEC_FluidType
-Fluid.FluidType = {
-  Beer = "Beer",
-  Coffee = "Coffee",
-  Juice = "Juice",
-  Milk = "Milk",
-  Soda = "Soda",
-  Tea = "Tea",
-  Wine = "Wine",
-  -- not in vanilla
-  EnergyDrink = "EnergyDrink"
+--- lowercase fluid name -> category. Modded fluids are FluidType.Modded, so matching is done on
+--- `Fluid:getFluidTypeString()` instead of the FluidType enum. Checked before any other rule.
+---@type table<string, string?>
+Fluid.FluidTypes = {
+  -- beverages
+  ["animalmilk"] = "BeverageMilk",
+  ["beer"] = "BeverageBeer",
+  ["coffee"] = "BeverageCoffee",
+  ["cowmilk"] = "BeverageMilk",
+  ["energydrink"] = "BeverageEnergyDrink",
+  ["sheepmilk"] = "BeverageMilk",
+  ["sodapop"] = "BeverageSoftDrink",
+  ["spiffojuice"] = "BeverageJuice",
+  ["tea"] = "BeverageTea",
+  ["wine"] = "BeverageWine",
+
+  -- non-beverages
+  ["bleach"] = "Household__Liquid",
+  ["cleaningliquid"] = "Household__Liquid",
+  ["cookingoil"] = "Cooking__Liquid",
+  ["simplesyrup"] = "FoodNoExplicit",
 }
 
----@param ... string
----@return table<string, boolean>
-local fluidSet = function (...)
-  local set = {}
-
-  for _, name in ipairs({ ... }) do
-    set[name:lower()] = true
-  end
-
-  return set
-end
-
---- Lowercase fluid names per category. Modded fluids all share FluidType.Modded, so matching is done on
---- Fluid:getFluidTypeString() instead of the FluidType enum.
----@type table<CAEC_FluidType, table<string, boolean>>
-Fluid.FluidTypeMap = {
-  [Fluid.FluidType.Beer] = fluidSet("Beer"),
-  [Fluid.FluidType.Coffee] = fluidSet("Coffee"),
-  [Fluid.FluidType.Juice] = fluidSet("SpiffoJuice"),
-  [Fluid.FluidType.Milk] = fluidSet("AnimalMilk", "CowMilk", "SheepMilk"),
-  [Fluid.FluidType.Soda] = fluidSet("SodaPop"),
-  [Fluid.FluidType.Tea] = fluidSet("Tea"),
-  [Fluid.FluidType.Wine] = fluidSet("Wine"),
-  [Fluid.FluidType.EnergyDrink] = fluidSet("EnergyDrink")
-}
-
+---@param category  string Category for containers holding this fluid, e.g. "BeverageSoftDrink"
 ---@param fluidType string Fluid name as defined in the fluid script, e.g. "VFX_HomemadeBeer"
----@param category  CAEC_FluidType
-function Fluid.registerFluidType(fluidType, category)
-  if type(fluidType) ~= "string" or not Fluid.FluidTypeMap[category] then
+function Fluid.registerFluid(category, fluidType)
+  if type(category) ~= "string" or type(fluidType) ~= "string" then
     Debug.log(
-      string.format("Failed to register fluid type %s for category %s", tostring(fluidType), tostring(category)), "Fluid"
+      string.format("Failed to register fluid type %s for category %s", tostring(fluidType), tostring(category)),
+      "Fluid",
+      Debug.Level.Warning
     )
     return
   end
 
-  Fluid.FluidTypeMap[category][fluidType:lower()] = true
+  Fluid.FluidTypes[fluidType:lower()] = category
+end
+
+---@param fluidType string
+---@return string | nil
+function Fluid.getCategory(fluidType)
+  return Fluid.FluidTypes[fluidType:lower()]
+end
+
+-- some mods give their liquor an `alcohol` property but leave out the Alcoholic category, so check both
+
+---@param fluid Fluid
+---@return boolean
+local function isAlcoholicFluid(fluid)
+  if fluid:isCategory(FluidCategory.Alcoholic) then return true end
+
+  local properties = fluid:getProperties()
+
+  return properties ~= nil and properties:getAlcohol() > 0
+end
+
+---@param container FluidContainer
+---@return boolean
+local function isAlcoholicContainer(container)
+  if container:isCategory(FluidCategory.Alcoholic) then return true end
+
+  local properties = container:getProperties()
+
+  return properties ~= nil and properties:getAlcohol() > 0
+end
+
+---@param category  string
+---@param container FluidContainer
+---@return string
+local function withCocktail(category, container)
+  if container:isMixture() and isAlcoholicContainer(container) then
+    return "BeverageCocktail"
+  end
+
+  return category
 end
 
 function Fluid:validate(item, instance)
-  if not item:isItemType(ItemType.NORMAL)
-     and not item:isItemType(ItemType.FOOD) then
+  if not item:isItemType(ItemType.NORMAL) and not item:isItemType(ItemType.FOOD) then
     return false
   end
 
@@ -107,11 +134,17 @@ function Fluid:categorize(item, instance)
   local fluid = container:getPrimaryFluid()
   local fluidTypeString = fluid:getFluidTypeString():lower()
 
-  if fluidTypeString == "cookingoil" then
-    category = "Cooking__Liquid"
-  elseif fluidTypeString == "cleaningliquid" or fluidTypeString == "bleach" then
-    category = "Household__Liquid"
-  elseif fluid:isCategory(FluidCategory.Dyes) then
+  category = self.FluidTypes[fluidTypeString]
+
+  if category then
+    if Utils.startsWith("Beverage", category) then
+      return withCocktail(category, container), true
+    end
+
+    return category, true
+  end
+
+  if fluid:isCategory(FluidCategory.Dyes) then
     category = "LiquidDye"
   elseif fluid:isCategory(FluidCategory.HairDyes) then
     category = "Appearance__Liquid"
@@ -130,34 +163,27 @@ function Fluid:categorize(item, instance)
 
   if fluid:isCategory(FluidCategory.Water) then
     category = "BeverageWater"
-  elseif fluidTypeString:contains("milk") or self.FluidTypeMap.Milk[fluidTypeString] then
+  elseif fluidTypeString:contains("milk") then
     category = "BeverageMilk"
-  elseif self.FluidTypeMap.Coffee[fluidTypeString] then
-    category = "BeverageCoffee"
-  elseif item:hasTag(ItemTag.HERBAL_TEA) or self.FluidTypeMap.Tea[fluidTypeString] then
+  elseif item:hasTag(ItemTag.HERBAL_TEA) then
     category = "BeverageTea"
-  elseif fluidTypeString:contains("soda") or fluidTypeString:contains("cola")
-    or fluidTypeString:contains("gingerale") or self.FluidTypeMap.Soda[fluidTypeString] then
+  elseif
+    fluidTypeString:contains("soda")
+    or fluidTypeString:contains("cola")
+    or fluidTypeString:contains("gingerale")
+  then
     category = "BeverageSoftDrink"
-  elseif fluidTypeString:contains("juice") or self.FluidTypeMap.Juice[fluidTypeString] then
+  elseif fluidTypeString:contains("juice") then
     category = "BeverageJuice"
-  elseif fluidTypeString:contains("energydrink") or self.FluidTypeMap.EnergyDrink[fluidTypeString] then
+  elseif fluidTypeString:contains("energydrink") then
     category = "BeverageEnergyDrink"
-  elseif self.FluidTypeMap.Beer[fluidTypeString] then
-    category = "BeverageBeer"
-  elseif self.FluidTypeMap.Wine[fluidTypeString] then
-    category = "BeverageWine"
-  elseif fluid:isCategory(FluidCategory.Alcoholic) then
+  elseif isAlcoholicFluid(fluid) then
     category = "BeverageAlcohol"
   else
     category = "Beverage"
   end
 
-  if category and container:isMixture() and container:isCategory(FluidCategory.Alcoholic) then
-    category = "BeverageCocktail"
-  end
-
-  return category, true
+  return withCocktail(category, container), true
 end
 
 return Fluid
