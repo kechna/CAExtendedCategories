@@ -24,7 +24,10 @@ CategoryOverride.CategoryMap = {
   Tail = "Accessory",
   VehicleMaintenance = "Mechanics",
   Water = "BeverageWater",
-  WaterContainer = "ContainerLiquid"
+  WaterContainer = "ContainerLiquid",
+  -- Lifestyle
+  Curio = "Memento",
+  Bag = "Container",
 }
 
 function CategoryOverride.registerCategory(category, overrideCategory)

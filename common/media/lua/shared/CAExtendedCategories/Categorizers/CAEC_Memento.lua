@@ -57,16 +57,20 @@ local function hasPlushieModel(item)
   return false
 end
 
---- Plushies burn, which is what sets them apart from the other animal mementos (bug specimens, rubber ducks).
 ---@param item     Item
 ---@param category string | nil
 ---@return boolean
 local function isPlushie(item, category)
-  if not item:hasTag(ItemTag.IS_FIRE_TINDER) or not item:isItemType(ItemType.NORMAL) then
+  if not item:isItemType(ItemType.NORMAL) then
     return false
   end
 
-  return (category ~= nil and Memento.MementoCategories[category] == true) or hasPlushieModel(item)
+  -- modded plushies such as from authentic z don't have the proper tags
+  if hasPlushieModel(item) then
+    return true
+  end
+
+  return item:hasTag(ItemTag.IS_FIRE_TINDER) and (category ~= nil and Memento.MementoCategories[category] == true)
 end
 
 ---@param item     Item
