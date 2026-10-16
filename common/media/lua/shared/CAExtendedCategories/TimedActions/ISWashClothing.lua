@@ -2,7 +2,9 @@ require "TimedActions/ISWashClothing"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISWashClothing.complete
+ISWashClothing._caecComplete = ISWashClothing._caecComplete or ISWashClothing.complete
+
+local defaultCallback = ISWashClothing._caecComplete
 
 function ISWashClothing:complete()
   local result = defaultCallback(self)

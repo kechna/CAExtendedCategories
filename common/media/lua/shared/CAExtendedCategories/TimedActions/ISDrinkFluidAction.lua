@@ -2,7 +2,9 @@ require "TimedActions/ISDrinkFluidAction"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISDrinkFluidAction.complete
+ISDrinkFluidAction._caecComplete = ISDrinkFluidAction._caecComplete or ISDrinkFluidAction.complete
+
+local defaultCallback = ISDrinkFluidAction._caecComplete
 
 function ISDrinkFluidAction:complete()
   local result = defaultCallback(self)

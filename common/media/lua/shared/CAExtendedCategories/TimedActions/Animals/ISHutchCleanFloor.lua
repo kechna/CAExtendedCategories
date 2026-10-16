@@ -2,7 +2,9 @@ require "TimedActions/Animals/ISHutchCleanFloor"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISHutchCleanFloor.complete
+ISHutchCleanFloor._caecComplete = ISHutchCleanFloor._caecComplete or ISHutchCleanFloor.complete
+
+local defaultCallback = ISHutchCleanFloor._caecComplete
 
 function ISHutchCleanFloor:complete()
   local result = defaultCallback(self)

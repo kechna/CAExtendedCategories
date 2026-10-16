@@ -2,7 +2,9 @@ require "Fluids/ISFluidTransferAction"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISFluidTransferAction.complete
+ISFluidTransferAction._caecComplete = ISFluidTransferAction._caecComplete or ISFluidTransferAction.complete
+
+local defaultCallback = ISFluidTransferAction._caecComplete
 
 function ISFluidTransferAction:complete()
   local result = defaultCallback(self)

@@ -2,7 +2,9 @@ require "Fluids/ISFluidEmptyAction"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISFluidEmptyAction.complete
+ISFluidEmptyAction._caecComplete = ISFluidEmptyAction._caecComplete or ISFluidEmptyAction.complete
+
+local defaultCallback = ISFluidEmptyAction._caecComplete
 
 function ISFluidEmptyAction:complete()
   local result = defaultCallback(self)

@@ -2,7 +2,9 @@ require "TimedActions/Animals/ISMilkAnimal"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISMilkAnimal.complete
+ISMilkAnimal._caecComplete = ISMilkAnimal._caecComplete or ISMilkAnimal.complete
+
+local defaultCallback = ISMilkAnimal._caecComplete
 
 function ISMilkAnimal:complete()
   local result = defaultCallback(self)

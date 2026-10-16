@@ -2,7 +2,10 @@ require "TimedActions/ISClothingExtraAction"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISClothingExtraAction.createItemNew
+ISClothingExtraAction._caecCreateItemNew = ISClothingExtraAction._caecCreateItemNew
+  or ISClothingExtraAction.createItemNew
+
+local defaultCallback = ISClothingExtraAction._caecCreateItemNew
 
 function ISClothingExtraAction:createItemNew(item, newItem)
   local result = defaultCallback(self, item, newItem)

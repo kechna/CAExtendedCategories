@@ -2,7 +2,9 @@ require "TimedActions/ISAddItemInRecipe"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISAddItemInRecipe.complete
+ISAddItemInRecipe._caecComplete = ISAddItemInRecipe._caecComplete or ISAddItemInRecipe.complete
+
+local defaultCallback = ISAddItemInRecipe._caecComplete
 
 function ISAddItemInRecipe:complete()
   local result = defaultCallback(self)

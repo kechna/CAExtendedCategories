@@ -2,7 +2,9 @@ require "TimedActions/Animals/ISFeedAnimalFromHand"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISFeedAnimalFromHand.complete
+ISFeedAnimalFromHand._caecComplete = ISFeedAnimalFromHand._caecComplete or ISFeedAnimalFromHand.complete
+
+local defaultCallback = ISFeedAnimalFromHand._caecComplete
 
 function ISFeedAnimalFromHand:complete()
   local result = defaultCallback(self)

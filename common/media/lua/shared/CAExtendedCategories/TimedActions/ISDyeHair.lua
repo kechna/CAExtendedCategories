@@ -2,7 +2,9 @@ require "TimedActions/ISDyeHair"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISDyeHair.complete
+ISDyeHair._caecComplete = ISDyeHair._caecComplete or ISDyeHair.complete
+
+local defaultCallback = ISDyeHair._caecComplete
 
 function ISDyeHair:complete()
   local result = defaultCallback(self)

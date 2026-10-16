@@ -2,7 +2,9 @@ require "TimedActions/Animals/ISGiveWaterToAnimal"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISGiveWaterToAnimal.complete
+ISGiveWaterToAnimal._caecComplete = ISGiveWaterToAnimal._caecComplete or ISGiveWaterToAnimal.complete
+
+local defaultCallback = ISGiveWaterToAnimal._caecComplete
 
 function ISGiveWaterToAnimal:complete()
   local result = defaultCallback(self)

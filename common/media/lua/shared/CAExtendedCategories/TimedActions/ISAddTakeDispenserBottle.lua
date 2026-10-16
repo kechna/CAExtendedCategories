@@ -2,7 +2,9 @@ require "TimedActions/ISAddTakeDispenserBottle"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISAddTakeDispenserBottle.complete
+ISAddTakeDispenserBottle._caecComplete = ISAddTakeDispenserBottle._caecComplete or ISAddTakeDispenserBottle.complete
+
+local defaultCallback = ISAddTakeDispenserBottle._caecComplete
 
 function ISAddTakeDispenserBottle:complete()
   local result = defaultCallback(self)

@@ -2,7 +2,9 @@ require "TimedActions/Animals/ISGatherBloodFromAnimal"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISGatherBloodFromAnimal.complete
+ISGatherBloodFromAnimal._caecComplete = ISGatherBloodFromAnimal._caecComplete or ISGatherBloodFromAnimal.complete
+
+local defaultCallback = ISGatherBloodFromAnimal._caecComplete
 
 function ISGatherBloodFromAnimal:complete()
   local result = defaultCallback(self)

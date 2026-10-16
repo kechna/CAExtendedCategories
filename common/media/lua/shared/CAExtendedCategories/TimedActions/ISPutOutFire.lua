@@ -2,7 +2,9 @@ require "TimedActions/ISPutOutFire"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISPutOutFire.complete
+ISPutOutFire._caecComplete = ISPutOutFire._caecComplete or ISPutOutFire.complete
+
+local defaultCallback = ISPutOutFire._caecComplete
 
 function ISPutOutFire:complete()
   local result = defaultCallback(self)

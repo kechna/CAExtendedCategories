@@ -2,7 +2,9 @@ require "TimedActions/ISTakeFuel"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISTakeFuel.complete
+ISTakeFuel._caecComplete = ISTakeFuel._caecComplete or ISTakeFuel.complete
+
+local defaultCallback = ISTakeFuel._caecComplete
 
 function ISTakeFuel:complete()
   local result = defaultCallback(self)

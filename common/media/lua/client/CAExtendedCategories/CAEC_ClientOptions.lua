@@ -118,6 +118,17 @@ function CAEC_ClientOptions.initialize()
 	applyOptions(options)
 end
 
+function CAEC_ClientOptions.reapply()
+	local options = PZAPI and PZAPI.ModOptions and PZAPI.ModOptions:getOptions(MOD_OPTIONS_ID)
+
+	if not options then
+		return
+	end
+
+	options.apply = applyOptions
+	applyOptions(options)
+end
+
 Events.OnGameBoot.Add(CAEC_ClientOptions.initialize)
 
 return CAEC_ClientOptions

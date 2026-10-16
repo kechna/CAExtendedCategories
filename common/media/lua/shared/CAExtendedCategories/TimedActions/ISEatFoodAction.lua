@@ -2,7 +2,9 @@ require "TimedActions/ISEatFoodAction"
 
 local CAEC = require("CAExtendedCategories/CAEC")
 
-local defaultCallback = ISEatFoodAction.complete
+ISEatFoodAction._caecComplete = ISEatFoodAction._caecComplete or ISEatFoodAction.complete
+
+local defaultCallback = ISEatFoodAction._caecComplete
 
 function ISEatFoodAction:complete()
   local result = defaultCallback(self)
