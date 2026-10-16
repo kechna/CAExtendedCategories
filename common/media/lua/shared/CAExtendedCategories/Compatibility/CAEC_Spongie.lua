@@ -7,7 +7,7 @@ if not Utils.modIsActive("SpnOpenClothBase") then return end
 CAEC.registerInitHook("Mod:Spongie", function ()
   local Category = Apparel.Category
 
-  Apparel.registerBodyLocation("SpnOpenCloth:JACKET_OPEN", Category.CLOTHING_OUTERWEAR)
-  Apparel.registerBodyLocation("SpnOpenCloth:JACKET_ROLL", Category.CLOTHING_OUTERWEAR)
-  Apparel.registerBodyLocation("SpnOpenCloth:JACKET_OPENROLL", Category.CLOTHING_OUTERWEAR)
+  Apparel.registerBodyLocation("spnopencloth:jacket_open", Category.CLOTHING_OUTERWEAR)
+  Apparel.registerBodyLocation("spnopencloth:jacket_roll", Category.CLOTHING_OUTERWEAR)
+  Apparel.registerBodyLocation("spnopencloth:jacket_openroll", Category.CLOTHING_OUTERWEAR)
 end)

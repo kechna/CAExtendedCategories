@@ -382,7 +382,7 @@ function Apparel:categorize(item, instance)
   end
 
   if not category and Debug.isLevel(Debug.Level.Warning) then
-    self:log("Unregistered body location: " .. item:getBodyLocation():toString(), Debug.Level.Warning)
+    self:log("Unregistered body location: " .. tostring(item:getBodyLocation()), Debug.Level.Warning)
   end
 
   return category
