@@ -1,0 +1,14 @@
+[ ALERT_CONFIG ]
+link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfiles/?appid=108600,
+[ ------ ]
+
+[ v1.10.0 - 10/16/26 ]
+- add colorful world
+- apply explosives category to items
+- improve fluid categorization
+- add pomp's items compatibility
+- improve fluids for vfx
+- improve fluids for sapph cooking
+- improve plushie detection
+- fix body location issues with spongie and authentic Z
+[ ------ ]
