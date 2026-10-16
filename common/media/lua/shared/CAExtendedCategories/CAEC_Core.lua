@@ -52,6 +52,8 @@ function Core.initializeCategorizers()
   Processors.registerCategorizer("Static", 1)
   -- boxes with known contents (from unpack recipes) are categorized by their contents
   Processors.registerCategorizer("BoxesAndStacks", 2)
+  -- throwable explosives, before Weapon so mods that move them out of "Explosives" don't matter
+  Processors.registerCategorizer("Explosives", 50)
   -- weapons resolve their base category through the rest of the chain and combine it with their own
   Processors.registerCategorizer("Weapon", 100)
   Processors.registerCategorizer("Electronics", 400)
