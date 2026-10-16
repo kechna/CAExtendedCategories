@@ -1,7 +1,6 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
 local Processors = require("CAExtendedCategories/CAEC_Processors")
-local BoxesAndStacks = require("CAExtendedCategories/Categorizers/CAEC_BoxesAndStacks")
 local CategoryModes = require("CAExtendedCategories/Data/CAEC_CategoryModes")
 
 CAEC_Global = CAEC_Global or {}
@@ -78,6 +77,8 @@ function Core.initializeCategorizers()
 
   Processors.registerCategorizer("FireSource", 6200)
   Processors.registerCategorizer("GasMask", 6400)
+  -- required here rather than at the top, it depends on CAEC which depends on this file
+  local BoxesAndStacks = require("CAExtendedCategories/Categorizers/CAEC_BoxesAndStacks")
   Processors.registerCategorizer("BoxesAndStacksFallback", BoxesAndStacks.categorizeByHeuristic, 8000)
   Processors.registerCategorizer("CategoryOverride", 9999)
 
