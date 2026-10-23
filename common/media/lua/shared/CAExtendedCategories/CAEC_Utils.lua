@@ -2,6 +2,16 @@ local Debug = require("CAExtendedCategories/CAEC_Debug")
 
 local Utils = {}
 
+--- tables of vanilla OnCreate functions, which set what some items are (e.g. the recipes a schematic teaches).
+--- OnCreate errors are always logged, even inside pcall, so functions from anywhere else are skipped on temporary
+--- instances.
+local VANILLA_ON_CREATE = {
+	Fishing = true,
+	ItemCodeOnCreate = true,
+	RecipeCodeOnCreate = true,
+	SpecialLootSpawns = true,
+}
+
 ---@type table<string, InventoryItem>
 local instanceCache = {}
 local instanceCount = 0
@@ -105,8 +115,20 @@ function Utils.createInstanceIfNeeded(item, instance)
 	local temporaryInstance = instanceCache[fullName]
 
 	if not temporaryInstance then
+		-- the instance reads OnCreate from the script, so it's switched off while the temporary instance is made
+		local luaCreate = item:getLuaCreate()
+		local skipLuaCreate = luaCreate and not VANILLA_ON_CREATE[luaCreate:match("^[^.]+")]
+
+		if skipLuaCreate then
+			item:setLuaCreate(nil)
+		end
+
 		local errorCount = getLuaDebuggerErrorCount()
 		local ok, result = pcall(instanceItem, item)
+
+		if skipLuaCreate then
+			item:setLuaCreate(luaCreate)
+		end
 
 		if ok and getLuaDebuggerErrorCount() > errorCount then
 			if instanceof(result, "InventoryItem") then
