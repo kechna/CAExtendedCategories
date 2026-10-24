@@ -64,7 +64,7 @@ function Literature:categorize(item, instance)
   elseif item:hasTag(ItemTag.MAGAZINE) then
     category = baseCategory .. "Magazine"
   elseif item:getSkillTrained() ~= "" then
-    category = "SkillBook"
+    category = baseCategory .. "SkillBook"
   elseif item:getReadType() == "Photo" then
     category = baseCategory .. "Photo"
   else
