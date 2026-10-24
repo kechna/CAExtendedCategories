@@ -15,9 +15,10 @@ local manual = {}
 
 local built = false
 
---- timed actions of recipes that open bags and packages rather than boxes
+--- timed actions of recipes that open bags and packages rather than boxes, or tear items up (sheets, pillows)
 ---@type table<string, boolean>
 local IGNORED_ACTIONS = {
+  RipClothing = true,
   UnPackSmallBag = true,
 }
 
@@ -164,11 +165,14 @@ local function processRecipe(recipe)
 
   if mapper then
     local results = mapper:getResultItems()
+    local patterns = 0
 
     for i = 0, results:size() - 1 do
       local result = results:get(i)
       local contents = result:getFullName()
       local boxes = mapper:getPatternForResult(result)
+
+      patterns = patterns + boxes:size()
 
       for j = 0, boxes:size() - 1 do
         if add(boxes:get(j), contents, recipe) then
@@ -177,7 +181,10 @@ local function processRecipe(recipe)
       end
     end
 
-    return added
+    -- recipes with a single result get a mapper without patterns too, those are handled below
+    if patterns > 0 then
+      return added
+    end
   end
 
   local results = output:getPossibleResultItems()

@@ -179,7 +179,7 @@ function Material.registerTag(tag, category)
 end
 
 function Material:validate(item, _instance)
-	return item:getLootType() == "Material"
+	return Utils.getOriginalLootType(item) == "Material"
 end
 
 function Material:categorize(item, instance)

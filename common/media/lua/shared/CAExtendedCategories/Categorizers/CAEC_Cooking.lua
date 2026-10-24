@@ -40,10 +40,10 @@ function Cooking:validate(item, _instance)
   local category = Utils.getOriginalCategory(item)
 
   if not category then
-    return item:getLootType() == "Cookware"
+    return Utils.getOriginalLootType(item) == "Cookware"
   end
 
-  return category:contains("Cooking") or item:getLootType() == "Cookware"
+  return category:contains("Cooking") or Utils.getOriginalLootType(item) == "Cookware"
 end
 
 function Cooking:categorize(item, instance)

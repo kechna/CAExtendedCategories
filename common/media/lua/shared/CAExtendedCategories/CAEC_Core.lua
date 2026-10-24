@@ -251,6 +251,7 @@ function Core.preprocessAllItems()
   Core.processAllItems(function (item)
     -- record every original category before anything is categorized, not every item is read by a categorizer
     Utils.getOriginalCategory(item)
+    Utils.getOriginalLootType(item)
 
     for i = 1, #preprocessors do
       local preprocessor = preprocessors[i]

@@ -8,7 +8,7 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Memento = CAEC_ItemCategorizer:derive("Memento")
 
 function Memento:validate(item, _instance)
-  return item:getLootType() == "Memento" or item:hasTag(ItemTag.IS_MEMENTO)
+  return Utils.getOriginalLootType(item) == "Memento" or item:hasTag(ItemTag.IS_MEMENTO)
 end
 
 Memento.MementoCategories = {

@@ -169,6 +169,7 @@ export const BOXABLE_CATEGORIES = [
   PzCategory.Appearance,
   "CookingWeapon", // don't like this
   "Beverage",
+  "Smoking",
 ];
 
 export const TOY_CATEGORIES = [

@@ -207,6 +207,49 @@ function Utils.getOriginalCategory(item)
 	return category or nil
 end
 
+---@class CAEC_OriginalLoot
+---@field type    string
+---@field farming boolean
+
+---@type table<string, CAEC_OriginalLoot>
+CAEC_OriginalLoot = CAEC_OriginalLoot or {}
+
+---@param item Item
+---@return CAEC_OriginalLoot
+local function getOriginalLoot(item)
+	local name = item:getFullName()
+	local loot = CAEC_OriginalLoot[name]
+
+	if loot then
+		return loot
+	end
+
+	local original = Utils.getOriginalCategory(item)
+	local current = item:getDisplayCategory()
+	local swap = original and current and current ~= original
+
+	if swap then item:DoParam("DisplayCategory", original) end
+
+	loot = { type = item:getLootType(), farming = item:isFarmingLoot() }
+
+	if swap then item:DoParam("DisplayCategory", current) end
+
+	CAEC_OriginalLoot[name] = loot
+
+	return loot
+end
+
+---@return string
+function Utils.getOriginalLootType(item)
+	return getOriginalLoot(item).type
+end
+
+---@param item Item
+---@return boolean
+function Utils.isOriginalFarmingLoot(item)
+	return getOriginalLoot(item).farming
+end
+
 ---@param modId string
 ---@return boolean
 function Utils.modIsActive(modId)

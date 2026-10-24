@@ -171,7 +171,7 @@ function Weapon:categorize(item, instance)
 
   if item:hasTag(ItemTag.FIREARM) then
     return self:asFirearm(item, instance)
-  elseif item:getLootType() == "RangedWeapon" then
+  elseif Utils.getOriginalLootType(item) == "RangedWeapon" then
     return self:asRangedWeapon(item, instance)
   end
 

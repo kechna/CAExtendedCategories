@@ -31,7 +31,7 @@ local function isAnimalFeed(item, instance)
     return true
   end
 
-  return item:isCantEat() and item:isFarmingLoot()
+  return item:isCantEat() and Utils.isOriginalFarmingLoot(item)
 end
 
 function Gardening:validate(item, instance)

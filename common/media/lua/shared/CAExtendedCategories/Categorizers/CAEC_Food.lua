@@ -30,7 +30,7 @@ Food.NonFoodTags = table.newarray(
 Food.TagMaps = {
   [FoodType.Baking] = table.newarray(ItemTag.BAKING_FAT, ItemTag.OIL, ItemTag.FLOUR),
   [FoodType.Dish] = table.newarray(ItemTag.CAN_BE_DIVIDED_IN_BOWLS),
-  [FoodType.Herb] = table.newarray(ItemTag.COMFREY, ItemTag.COMMON_MALLOW, ItemTag.WILD_GARLIC),
+  [FoodType.Herb] = table.newarray(ItemTag.COMFREY, ItemTag.PLANTAIN, ItemTag.COMMON_MALLOW, ItemTag.WILD_GARLIC),
   [FoodType.Seafood] = table.newarray(ItemTag.FISH_MEAT, ItemTag.UNCUT_FISH),
   [FoodType.Spice] = table.newarray(ItemTag.SALT),
   [FoodType.Staple] = table.newarray(ItemTag.PASTA),
@@ -289,7 +289,7 @@ function Food:getFoodType(item, instance)
     elseif not resolved and item:hasTag(ItemTag.MINOR_INGREDIENT) then
       resolved = FoodType.NoExplicit
     end
-  elseif item:hasTag(ItemTag.HAS_METAL) and instance:getLootType() == "CannedFood" then
+  elseif item:hasTag(ItemTag.HAS_METAL) and Utils.getOriginalLootType(item) == "CannedFood" then
     resolved = FoodType.Canned
   elseif item:hasTag(ItemTag.VERMIN) or instance:getCustomEatSound() == "EatingDeadAnimal" then
     resolved = FoodType.Meat
@@ -392,10 +392,10 @@ function Food:categorize(item, instance)
     end
   end
 
-  if item:isMedicalLoot() then
-    local calories = instance:getCalories()
-
-    if calories > 0 then
+  -- not item:isMedicalLoot(), that reads the display category CAEC replaces
+  if Utils.getOriginalCategory(item) == "FirstAid" then
+    -- medicinal herbs have no calories but rot or have a food type, so keep them with food
+    if foodType or instance:canAge() or instance:getCalories() > 0 then
       category = category .. "__FirstAid"
     else
       -- is first aid, no nutritional value, skip

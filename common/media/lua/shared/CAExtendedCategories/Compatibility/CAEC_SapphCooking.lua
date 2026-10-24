@@ -100,6 +100,13 @@ CAEC.registerInitHook("Mod:SapphCooking", function ()
   Static.registerCategory("SapphCooking.CoffeeBeans", "FoodBeverage")
   Static.registerCategory("SapphCooking.CoffeeBeansBag", "FoodBeverage")
 
+  -- drinks that are Food items without a fluid container, so neither the food nor the fluid categorizer takes them
+  Static.registerCategory("SapphCooking.BottleofJuice", "BeverageJuice")
+  Static.registerCategory("SapphCooking.Blender_Juice", "BeverageJuice")
+  Static.registerCategory("SapphCooking.BeefBroth", "FoodNoExplicit")
+  Static.registerCategory("SapphCooking.ChickenBroth", "FoodNoExplicit")
+  Static.registerCategory("SapphCooking.VegetableBroth", "FoodNoExplicit")
+
   -- fluids
   Fluid.registerFluid("BeverageCoffee", "BrewedCoffee")
   Fluid.registerFluid("BeverageCoffee", "LatteCoffee")

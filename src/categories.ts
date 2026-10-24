@@ -3,6 +3,7 @@ export const TOOL_ADDON = [
   "Butchering",
   "Carpentry",
   "Carving",
+  "Construction",
   "Electrical",
   "Farming",
   "Fishing",

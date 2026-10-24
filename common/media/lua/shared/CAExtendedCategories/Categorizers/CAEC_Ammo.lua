@@ -108,7 +108,7 @@ function Ammo.getAmmoGroupForItem(itemName)
 end
 
 function Ammo:validate(item, _instance)
-  return item:getLootType() == "Ammo"
+  return Utils.getOriginalLootType(item) == "Ammo"
 end
 
 function Ammo:byAmmoType(ammoType)

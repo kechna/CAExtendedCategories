@@ -21,6 +21,8 @@ Static.ItemsMap = {
   ["Base.BunsHotdog"]    = "FoodPerishableBread",
   ["Base.BunsHamburger"] = "FoodPerishableBread",
   ["Base.Pepper"]        = "FoodSpice",
+  -- tagged as dried food, which would make it a spice
+  ["Base.SesameOil"]     = "FoodNoExplicit",
 
   ["Base.HottieZ"]          = "LiteratureAdult",
   ["Base.HottieZ_New"]      = "LiteratureAdult",
@@ -35,9 +37,6 @@ Static.ItemsMap = {
 
   ["Base.SmokingPipe"]     = "Smoking",
   ["Base.CanPipe"]         = "Smoking",
-  -- todo fix this because this shouldnt happen
-  ["Base.CigaretteCarton"] = "Smoking",
-
 
   ["Base.BlowTorch"] = "ToolMetalworking",
   ["Base.PropaneTank"] = "MaterialMetalworking",
