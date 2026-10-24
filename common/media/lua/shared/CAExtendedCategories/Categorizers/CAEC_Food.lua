@@ -282,8 +282,8 @@ function Food:getFoodType(item, instance)
 
   if instance:isSpice() then
     -- resolve condiments/spices and stock
-    if FoodType.NoExplicit == resolved and (eatType ~= "glugfood" and eatType ~= "candrink")
-      or (item:hasTag(ItemTag.DRIED_FOOD) and resolved ~= FoodType.Herb) then
+    -- condiments are spices to the game too, so only dried ones count as spice
+    if item:hasTag(ItemTag.DRIED_FOOD) and resolved ~= FoodType.Herb then
       -- includes bouillon cubes
       resolved = FoodType.Spice
     elseif not resolved and item:hasTag(ItemTag.MINOR_INGREDIENT) then

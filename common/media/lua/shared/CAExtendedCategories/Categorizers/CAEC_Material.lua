@@ -45,6 +45,13 @@ Material.ItemsMap = {
 	["Base.Doorknob"] = Type.Construction,
 	["Base.PlasterPowder"] = Type.Construction,
 	["Base.ConcretePowder"] = Type.Construction,
+	["Base.Nails"] = Type.Construction,
+
+	-- untagged, only used in blacksmithing recipes
+	["Base.CopperSheet"] = Type.Blacksmith,
+	["Base.SmallCopperSheet"] = Type.Blacksmith,
+
+	["Base.StoneMaceHead"] = Type.Weapon,
 
 	["Base.Buckle"] = Type.Tailoring,
 	["Base.PackFrame"] = Type.Tailoring,
@@ -208,8 +215,18 @@ function Material:categorize(item, instance)
 		---@type string | nil
 		local model = item:getWorldStaticModel()
 
-		if
+		local lowerName = name:lower()
+		local isMold = lowerName:contains("mold")
+
+		-- unfired clay molds are pottery, wooden ones are patterns to shape clay with
+		if isMold and lowerName:contains("unfired") then
+			category = baseCategory .. Type.Pottery
+		elseif isMold and lowerName:contains("wooden") then
+			category = baseCategory .. Type.Wood
+		elseif
 			name:contains("Ingot")
+			or lowerName:contains("anvil")
+			or lowerName:contains("barmold")
 			or (sprite and sprite:contains("crafting_ore_"))
 			or (model and model:contains("Crucible"))
 		then
@@ -221,6 +238,9 @@ function Material:categorize(item, instance)
 			category = baseCategory .. Type.Metalworking
 		elseif item:hasTag(ItemTag.IS_FIRE_FUEL) then
 			category = baseCategory .. Type.Wood
+		elseif name:contains("Stone") then
+			-- stonemasonry materials without the stone tag (large stones, blocks, wheels)
+			category = baseCategory .. Type.Stone
 		elseif model then
 			if model:contains("RolledHide") or model:contains("FabricRoll") then
 				category = baseCategory .. Type.Tailoring
