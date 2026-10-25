@@ -28,3 +28,7 @@ link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfil
 - categorize unfired clay molds as material - pottery and wooden molds as material - wood
 - skip modded OnCreate functions on temporary item instances
 [ ------ ]
+
+[ v1.11.1 - 10/25/26 ]
+- categorize equippable bags and InventoryContainer instances as containers
+[ ------ ]
