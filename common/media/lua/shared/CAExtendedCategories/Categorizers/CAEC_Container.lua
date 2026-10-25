@@ -76,11 +76,14 @@ function Container.getType(item)
   return nil
 end
 
-function Container:validate(item, _instance)
-  return item:isItemType(ItemType.CONTAINER) and not item:hasTag(ItemTag.HOLLOW_BOOK)
+function Container:validate(item, instance)
+  return (instanceof(instance, "InventoryContainer") or item:isItemType(ItemType.CONTAINER))
+    and not item:hasTag(ItemTag.HOLLOW_BOOK)
 end
 
-function Container:categorize(item, _instance)
+function Container:categorize(item, instance)
+---@cast instance InventoryContainer
+
   if item:hasTag(ItemTag.KEY_RING) then
     return "KeyRing"
   end
@@ -90,6 +93,7 @@ function Container:categorize(item, _instance)
 
   ---@diagnostic disable-next-line: unnecessary-if
   if item:getBodyLocation() ~= nil
+    or instance:canBeEquipped()
     or item:hasTag(ItemTag.DUFFEL_BAG)
     or (bloodClothingType and bloodClothingType:contains(BloodClothingType.Bag))
     then
