@@ -12,3 +12,19 @@ link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfil
 - improve plushie detection
 - fix body location issues with spongie and authentic Z
 [ ------ ]
+
+[ v1.11.0 - 10/25/26 ]
+- change skill book to literature - skill book for improved inventory sorting
+- make rice lay flat and stackable
+- make more molds stackable
+- make large smooth flat stone stackable
+- make long sticks stackable
+- make that damn library's item stackable
+- make ammo maker brass sheets stackable
+- categorize condiments like barbecue sauce, relishes and syrups as condiments instead of spices
+- categorize large stones, flat stones, stone blocks and stone wheels as material - stone
+- categorize nails as material - construction
+- categorize copper sheets, untreated anvils and fired bar and anvil molds as material - blacksmith
+- categorize unfired clay molds as material - pottery and wooden molds as material - wood
+- skip modded OnCreate functions on temporary item instances
+[ ------ ]
