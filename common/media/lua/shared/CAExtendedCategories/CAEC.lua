@@ -13,7 +13,8 @@ CAEC_Global = CAEC_Global or {}
 CAEC.onInstanceCategory = nil
 
 ---@param trigger string?
-function CAEC.initialize(trigger)
+---@param lazy?   boolean Skip categorizing every item; items are categorized when their container refreshes.
+function CAEC.initialize(trigger, lazy)
   trigger = trigger or "CAEC.Initialize"
   CAEC.updateStart()
 
@@ -29,7 +30,11 @@ function CAEC.initialize(trigger)
   Core.ErrorCount = getLuaDebuggerErrorCount()
 
   Core.preprocessAllItems()
-  CAEC.categorizeAllItems(trigger)
+
+  if not lazy then
+    CAEC.categorizeAllItems(trigger)
+  end
+
   CAEC.updateEnd()
 
   Core.reportInstantiationErrors()
