@@ -4,10 +4,22 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 
 ---@type (ItemTag | string)[]
 local JewelryTags = table.newarray(
-  ItemTag.AMETHYST_JEWELLERY, ItemTag.DIAMOND_JEWELLERY, ItemTag.EMERALD_JEWELLERY, ItemTag.RUBY_JEWELLERY,
-  ItemTag.SAPPHIRE_JEWELLERY, ItemTag.TWO_DIAMOND_JEWELLERY, ItemTag.TWO_EMERALD_JEWELLERY, ItemTag.TWO_RUBY_JEWELLERY,
-  ItemTag.TWO_SAPPHIRE_JEWELLERY, ItemTag.TINY_GOLD_SCRAP, ItemTag.TINY_SILVER_SCRAP, ItemTag.SMALL_GOLD_SCRAP,
-  ItemTag.SMALL_SILVER_SCRAP, ItemTag.SMALLER_GOLD_SCRAP, ItemTag.SMALLER_SILVER_SCRAP, ItemTag.SMALLEST_GOLD_SCRAP,
+  ItemTag.AMETHYST_JEWELLERY,
+  ItemTag.DIAMOND_JEWELLERY,
+  ItemTag.EMERALD_JEWELLERY,
+  ItemTag.RUBY_JEWELLERY,
+  ItemTag.SAPPHIRE_JEWELLERY,
+  ItemTag.TWO_DIAMOND_JEWELLERY,
+  ItemTag.TWO_EMERALD_JEWELLERY,
+  ItemTag.TWO_RUBY_JEWELLERY,
+  ItemTag.TWO_SAPPHIRE_JEWELLERY,
+  ItemTag.TINY_GOLD_SCRAP,
+  ItemTag.TINY_SILVER_SCRAP,
+  ItemTag.SMALL_GOLD_SCRAP,
+  ItemTag.SMALL_SILVER_SCRAP,
+  ItemTag.SMALLER_GOLD_SCRAP,
+  ItemTag.SMALLER_SILVER_SCRAP,
+  ItemTag.SMALLEST_GOLD_SCRAP,
   ItemTag.SMALLEST_SILVER_SCRAP
 )
 
@@ -41,7 +53,7 @@ local ApparelCategory = {
   PROTECTIVE_GEAR_HANDS = "ProtectiveGearHands",
   PROTECTIVE_GEAR_HEAD = "ProtectiveGearHead",
   PROTECTIVE_GEAR_FACE = "ProtectiveGearFace",
-  PROTECTIVE_GEAR_FOOTWEAR = "ProtectiveGearFootwear"
+  PROTECTIVE_GEAR_FOOTWEAR = "ProtectiveGearFootwear",
 }
 
 ---@type table<CAEC_ApparelCategory, ItemBodyLocation[]>
@@ -59,7 +71,7 @@ local ApparelCategories = {
     ItemBodyLocation.PANTS_EXTRA,
     -- hazmat suit
     ItemBodyLocation.FULL_SUIT_HEAD,
-    ItemBodyLocation.FULL_SUIT_HEAD_SCBA
+    ItemBodyLocation.FULL_SUIT_HEAD_SCBA,
   },
 
   [ApparelCategory.CLOTHING_OUTERWEAR] = {
@@ -73,7 +85,7 @@ local ApparelCategories = {
     ItemBodyLocation.JACKET_HAT,
     ItemBodyLocation.JACKET_HAT_BULKY,
     ItemBodyLocation.TORSO_EXTRA_VEST,
-    ItemBodyLocation.VEST_TEXTURE
+    ItemBodyLocation.VEST_TEXTURE,
   },
 
   [ApparelCategory.CLOTHING_TOP] = {
@@ -84,7 +96,7 @@ local ApparelCategories = {
     ItemBodyLocation.JERSEY,
     ItemBodyLocation.SWEATER,
     ItemBodyLocation.SWEATER_HAT,
-    ItemBodyLocation.CUIRASS
+    ItemBodyLocation.CUIRASS,
   },
 
   [ApparelCategory.CLOTHING_BOTTOM] = {
@@ -95,26 +107,26 @@ local ApparelCategories = {
     ItemBodyLocation.SHORT_PANTS,
     ItemBodyLocation.SKIRT,
     ItemBodyLocation.LEGS1,
-    ItemBodyLocation.LEGS5
+    ItemBodyLocation.LEGS5,
   },
 
   [ApparelCategory.CLOTHING_FOOTWEAR] = {
-    ItemBodyLocation.SHOES
+    ItemBodyLocation.SHOES,
   },
 
   [ApparelCategory.CLOTHING_SOCKS] = {
-    ItemBodyLocation.SOCKS
+    ItemBodyLocation.SOCKS,
   },
 
   [ApparelCategory.CLOTHING_HANDS] = {
     ItemBodyLocation.HANDS,
     ItemBodyLocation.HANDS_LEFT,
-    ItemBodyLocation.HANDS_RIGHT
+    ItemBodyLocation.HANDS_RIGHT,
   },
 
   [ApparelCategory.CLOTHING_HEAD] = {
     ItemBodyLocation.HAT,
-    ItemBodyLocation.FULL_HAT
+    ItemBodyLocation.FULL_HAT,
   },
 
   [ApparelCategory.CLOTHING_UNDERWEAR] = {
@@ -125,7 +137,7 @@ local ApparelCategories = {
     ItemBodyLocation.UNDERWEAR_EXTRA2,
     ItemBodyLocation.CODPIECE,
     -- long johns
-    ItemBodyLocation.TORSO1LEGS1
+    ItemBodyLocation.TORSO1LEGS1,
   },
 
   [ApparelCategory.ACCESSORY] = {
@@ -133,7 +145,7 @@ local ApparelCategories = {
     ItemBodyLocation.SCBANOTANK,
     ItemBodyLocation.BELT,
     -- holster
-    ItemBodyLocation.BELT_EXTRA
+    ItemBodyLocation.BELT_EXTRA,
   },
 
   [ApparelCategory.ACCESSORY_NECK] = {
@@ -144,7 +156,7 @@ local ApparelCategories = {
     -- neck protector
     ItemBodyLocation.GORGET,
     -- tie
-    ItemBodyLocation.NECK_TEXTURE
+    ItemBodyLocation.NECK_TEXTURE,
   },
 
   [ApparelCategory.ACCESSORY_ARMS] = {
@@ -159,14 +171,14 @@ local ApparelCategories = {
     ItemBodyLocation.SHOULDERPAD_LEFT,
     ItemBodyLocation.SHOULDERPAD_RIGHT,
     ItemBodyLocation.SPORT_SHOULDERPAD,
-    ItemBodyLocation.SPORT_SHOULDERPAD_ON_TOP
+    ItemBodyLocation.SPORT_SHOULDERPAD_ON_TOP,
   },
 
   [ApparelCategory.ACCESSORY_HANDS] = {
     ItemBodyLocation.LEFT_RING_FINGER,
     ItemBodyLocation.LEFT_MIDDLE_FINGER,
     ItemBodyLocation.RIGHT_MIDDLE_FINGER,
-    ItemBodyLocation.RIGHT_RING_FINGER
+    ItemBodyLocation.RIGHT_RING_FINGER,
   },
 
   [ApparelCategory.ACCESSORY_LEGS] = {
@@ -180,7 +192,7 @@ local ApparelCategories = {
     ItemBodyLocation.GAITER_LEFT,
     ItemBodyLocation.GAITER_RIGHT,
     ItemBodyLocation.KNEE_LEFT,
-    ItemBodyLocation.KNEE_RIGHT
+    ItemBodyLocation.KNEE_RIGHT,
   },
 
   [ApparelCategory.ACCESSORY_TOP] = {
@@ -193,12 +205,12 @@ local ApparelCategories = {
     ItemBodyLocation.TORSO_EXTRA,
     ItemBodyLocation.TORSO_EXTRA_VEST_BULLET,
     ItemBodyLocation.FANNY_PACK_BACK,
-    ItemBodyLocation.FANNY_PACK_FRONT
+    ItemBodyLocation.FANNY_PACK_FRONT,
   },
 
   [ApparelCategory.ACCESSORY_HEAD] = {
     ItemBodyLocation.EARS,
-    ItemBodyLocation.EAR_TOP
+    ItemBodyLocation.EAR_TOP,
   },
 
   [ApparelCategory.ACCESSORY_FACE] = {
@@ -213,7 +225,7 @@ local ApparelCategories = {
     ItemBodyLocation.MAKE_UP_EYES_SHADOW,
     ItemBodyLocation.MAKE_UP_FULL_FACE,
     ItemBodyLocation.MAKE_UP_LIPS,
-    ItemBodyLocation.SCBA
+    ItemBodyLocation.SCBA,
   },
 
   -- (usually) not done by body location, but by item tags
@@ -226,7 +238,7 @@ local ApparelCategories = {
   [ApparelCategory.PROTECTIVE_GEAR_LEGS] = {},
   [ApparelCategory.PROTECTIVE_GEAR_TOP] = {},
   [ApparelCategory.PROTECTIVE_GEAR_HEAD] = {},
-  [ApparelCategory.PROTECTIVE_GEAR_FACE] = {}
+  [ApparelCategory.PROTECTIVE_GEAR_FACE] = {},
 }
 
 ---@class CAEC_ApparelCategorizer: CAEC_ItemCategorizer
@@ -255,7 +267,7 @@ Apparel.BodyLocationsMap = {}
 Apparel.compoundCategories = { --
   Tool = true,
   FirstAid = true,
-  Memento = true
+  Memento = true,
 }
 
 function Apparel:new()
@@ -307,8 +319,10 @@ function Apparel:initialise()
 end
 
 function Apparel:validate(item, _instance)
-  return not item:isItemType(ItemType.CONTAINER) and item:getBodyLocation() ~= nil
-    and not item:isBodyLocation(ItemBodyLocation.WOUND) and not item:isBodyLocation(ItemBodyLocation.ZED_DMG)
+  return not item:isItemType(ItemType.CONTAINER)
+    and item:getBodyLocation() ~= nil
+    and not item:isBodyLocation(ItemBodyLocation.WOUND)
+    and not item:isBodyLocation(ItemBodyLocation.ZED_DMG)
     and not item:isBodyLocation(ItemBodyLocation.BANDAGE)
 end
 
@@ -372,10 +386,7 @@ function Apparel:categorize(item, instance)
     local prefix = Apparel.compoundCategories[initialCategory] and initialCategory .. "__" or ""
 
     if "ProtectiveGear" == initialCategory or highestDefense >= Apparel.protectiveGearDefenseCutoff then
-      category = prefix
-        .. category
-          :gsub("Clothing", "ProtectiveGear")
-          :gsub("Accessory", "ProtectiveGear")
+      category = prefix .. category:gsub("Clothing", "ProtectiveGear"):gsub("Accessory", "ProtectiveGear")
     elseif item:hasTag(ItemTag.SPRAYER) then
       category = "Gardening__" .. category
     end
