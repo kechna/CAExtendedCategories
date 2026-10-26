@@ -128,8 +128,8 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Fiske"
-   *   ContextMenu_Fishing = "Fisking"
    *   IGUI_CraftCategory_Fishing = "Fiske"
+   *   ContextMenu_Fishing = "Fisking"
    */
   CAEC_Fallback_Fishing: "Fiske",
   /**
@@ -260,7 +260,12 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Våpen",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Øks",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Smiing"
+   */
   CAEC_Fallback_Blacksmith: "Smiing",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Langt stumpt våpen",
@@ -287,6 +292,7 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Landbruk"
+   *   ContextMenu_Farming = "Jorddyrking"
    */
   CAEC_Fallback_Farming: "Landbruk",
   /** knapping skill */
@@ -295,13 +301,25 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Sanking",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Glassblåsing",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Dyrehold"
+   */
+  CAEC_Fallback_Husbandry: "Dyrehold",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Langt blad",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Vedlikehold",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Murerarbeid",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Mekanikk"
+   */
   CAEC_Fallback_Mechanics: "Mekanikk",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metallarbeid",
@@ -457,8 +475,14 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Drum: "Trommelmagasin",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Sprengstoff",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Skytevåpen",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Skytevåpen"
+   *   IGUI_ItemCat_Firearm = "Skytevåpen"
+   */
+  CAEC_Fallback_Firearm: "Skytevåpen",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistol",
   /** firearm magazines */
@@ -476,8 +500,13 @@ export const NO: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Øl"
    */
   CAEC_Fallback_Beer: "Øl",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Drikkevarer",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Drikkevarer"
+   */
+  CAEC_Fallback_Beverage: "Drikkevarer",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /**
@@ -500,8 +529,13 @@ export const NO: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Jus"
    */
   CAEC_Fallback_Juice: "Jus",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Væske",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Væske"
+   */
+  CAEC_Fallback_Liquid: "Væske",
   /**
    * dairy milk
    *
@@ -572,14 +606,24 @@ export const NO: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Dyrefôr"
    */
   CAEC_Fallback_AnimalFeed: "Dyrefôr",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Sykkel",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Sykkel"
+   */
+  CAEC_Fallback_Bicycle: "Sykkel",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Rengjøring",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Komposterbar",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Bygging",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Bygging"
+   */
+  CAEC_Fallback_Construction: "Bygging",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Håndlaget",
   /** items such as cups, mugs, glasses */
@@ -595,6 +639,7 @@ export const NO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Del"
+   *   IGUI_ItemCat_Part = "Del"
    */
   CAEC_Fallback_Part: "Del",
   /** photos */
@@ -612,8 +657,13 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Seed: "Frø",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Frøpose",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Røyking",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Røyking"
+   */
+  CAEC_Fallback_Smoking: "Røyking",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Leketøy",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

@@ -128,8 +128,8 @@ export const PT: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Pesca"
-   *   ContextMenu_Fishing = "Pesca"
    *   IGUI_CraftCategory_Fishing = "Pesca"
+   *   ContextMenu_Fishing = "Pesca"
    */
   CAEC_Fallback_Fishing: "Pesca",
   /**
@@ -261,7 +261,12 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Arma",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Machado",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Metalurgia"
+   */
   CAEC_Fallback_Blacksmith: "Ferraria",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contundente Longa",
@@ -288,6 +293,7 @@ export const PT: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Agricultura"
+   *   ContextMenu_Farming = "Agricultura"
    */
   CAEC_Fallback_Farming: "Agricultura",
   /** knapping skill */
@@ -296,13 +302,25 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Recoleção",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Vidraria",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Criação de Animais"
+   */
+  CAEC_Fallback_Husbandry: "Criação de Animais",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lâmina Longa",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Manutenção",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Alvenaria",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Mecânica"
+   */
   CAEC_Fallback_Mechanics: "Mecânica",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metalurgia",
@@ -458,8 +476,14 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Drum: "Tambor",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Explosivo",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Arma de Fogo",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Arma de Fogo"
+   *   IGUI_ItemCat_Firearm = "Arma de Fogo"
+   */
+  CAEC_Fallback_Firearm: "Arma de Fogo",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistola",
   /** firearm magazines */
@@ -477,8 +501,13 @@ export const PT: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Cerveja"
    */
   CAEC_Fallback_Beer: "Cerveja",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Bebida",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Bebida"
+   */
+  CAEC_Fallback_Beverage: "Bebida",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /**
@@ -501,8 +530,13 @@ export const PT: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Sumo"
    */
   CAEC_Fallback_Juice: "Sumo",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Líquido",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Líquido"
+   */
+  CAEC_Fallback_Liquid: "Líquido",
   /**
    * dairy milk
    *
@@ -573,14 +607,24 @@ export const PT: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Ração para Animais"
    */
   CAEC_Fallback_AnimalFeed: "Ração para Animais",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Bicicleta",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Bicicleta"
+   */
+  CAEC_Fallback_Bicycle: "Bicicleta",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Limpeza",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostável",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Construção",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Construção"
+   */
+  CAEC_Fallback_Construction: "Construção",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artesanal",
   /** items such as cups, mugs, glasses */
@@ -596,8 +640,9 @@ export const PT: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Região"
+   *   IGUI_ItemCat_Part = "Região"
    */
-  CAEC_Fallback_Part: "Região",
+  CAEC_Fallback_Part: "Peça",
   /** photos */
   CAEC_Fallback_Photo: "Fotografia",
   /** pictures and framed photos kept as mementos */
@@ -613,8 +658,13 @@ export const PT: ExternalTranslations = {
   CAEC_Fallback_Seed: "Sementes",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pacote de Sementes",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Tabaco",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Tabaco"
+   */
+  CAEC_Fallback_Smoking: "Tabaco",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Brinquedo",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

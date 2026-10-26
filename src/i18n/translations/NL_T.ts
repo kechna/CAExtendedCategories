@@ -122,7 +122,7 @@ export const NL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_perks_Doctor = "Eerste hulp"
-   *   IGUI_ItemCat_FirstAid = "EHBO"
+   *   IGUI_ItemCat_FirstAid = "Eerste hulp"
    */
   CAEC_Fallback_FirstAid: "Eerste hulp",
   /**
@@ -131,8 +131,8 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Vissen"
    *   IGUI_perks_Fishing = "Vissen"
-   *   ContextMenu_Fishing = "Vissen"
    *   IGUI_CraftCategory_Fishing = "Vissen"
+   *   ContextMenu_Fishing = "Vissen"
    */
   CAEC_Fallback_Fishing: "Vissen",
   /**
@@ -275,6 +275,7 @@ export const NL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_perks_Blacksmith = "Smeden"
+   *   ContextMenu_Blacksmith = "Smeden"
    */
   CAEC_Fallback_Blacksmith: "Smeden",
   /**
@@ -319,6 +320,7 @@ export const NL: ExternalTranslations = {
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Landbouw"
    *   IGUI_perks_Farming = "Landbouw"
+   *   ContextMenu_Farming = "Landbouw"
    */
   CAEC_Fallback_Farming: "Landbouw",
   /**
@@ -342,6 +344,13 @@ export const NL: ExternalTranslations = {
    *   IGUI_perks_Glassmaking = "Glas maken"
    */
   CAEC_Fallback_Glassmaking: "Glas maken",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Dierverzorging"
+   */
+  CAEC_Fallback_Husbandry: "Dierverzorging",
   /**
    * long blade weapon skill
    *
@@ -368,6 +377,7 @@ export const NL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_perks_Mechanics = "Voertuigonderhoud"
+   *   IGUI_ItemCat_Mechanics = "Voertuigonderhoud"
    */
   CAEC_Fallback_Mechanics: "Voertuigonderhoud",
   /**
@@ -554,13 +564,19 @@ export const NL: ExternalTranslations = {
   /** notebooks, journals and other items you can write in */
   CAEC_Override_Writing: "Schrijven",
   /** bows and other ranged weapons that use string tension to launch projectiles */
-  CAEC_Fallback_Bow: "Paperback",
+  CAEC_Fallback_Bow: "Boog",
   /** firearm drums */
-  CAEC_Fallback_Drum: "undefined",
+  CAEC_Fallback_Drum: "Trommel",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Explosief",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Vuurwapen",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Vuurwapen"
+   *   IGUI_ItemCat_Firearm = "Vuurwapen"
+   */
+  CAEC_Fallback_Firearm: "Vuurwapen",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistool",
   /** firearm magazines */
@@ -578,8 +594,13 @@ export const NL: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Bier"
    */
   CAEC_Fallback_Beer: "Bier",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Drinken",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Drinken"
+   */
+  CAEC_Fallback_Beverage: "Drinken",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /**
@@ -602,8 +623,13 @@ export const NL: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Sap"
    */
   CAEC_Fallback_Juice: "Sap",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Vloeistof",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Vloeistof"
+   */
+  CAEC_Fallback_Liquid: "Vloeistof",
   /**
    * dairy milk
    *
@@ -674,14 +700,24 @@ export const NL: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Diervoeder"
    */
   CAEC_Fallback_AnimalFeed: "Diervoeder",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Fiets",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Fiets"
+   */
+  CAEC_Fallback_Bicycle: "Fiets",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Schoonmaken",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Composteerbaar",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Bouw",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Bouw"
+   */
+  CAEC_Fallback_Construction: "Bouw",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Handgemaakt",
   /** items such as cups, mugs, glasses */
@@ -697,6 +733,7 @@ export const NL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Onderdeel"
+   *   IGUI_ItemCat_Part = "Onderdeel"
    */
   CAEC_Fallback_Part: "Onderdeel",
   /** photos */
@@ -714,8 +751,13 @@ export const NL: ExternalTranslations = {
   CAEC_Fallback_Seed: "Zaden",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Zadenpakket",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Roken",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Roken"
+   */
+  CAEC_Fallback_Smoking: "Roken",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Speelgoed",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

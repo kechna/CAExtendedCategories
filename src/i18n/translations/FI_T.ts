@@ -128,8 +128,8 @@ export const FI: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Kalastus"
-   *   ContextMenu_Fishing = "Kalastus"
    *   IGUI_CraftCategory_Fishing = "Kalastus"
+   *   ContextMenu_Fishing = "Kalastus"
    */
   CAEC_Fallback_Fishing: "Kalastus",
   /**
@@ -261,7 +261,12 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Ase",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Kirves",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Sepäntyö"
+   */
   CAEC_Fallback_Blacksmith: "Sepäntyöt",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Pitkä tylppä ase",
@@ -288,6 +293,7 @@ export const FI: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Maanviljely"
+   *   ContextMenu_Farming = "Maanviljely"
    */
   CAEC_Fallback_Farming: "Maanviljely",
   /** knapping skill */
@@ -296,13 +302,25 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Keräily",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Lasinvalmistus",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Eläinhoito"
+   */
+  CAEC_Fallback_Husbandry: "Eläinhoito",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Pitkä terä",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Huolto",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Muuraus",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Mekaniikka"
+   */
   CAEC_Fallback_Mechanics: "Mekaniikka",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metallityöt",
@@ -458,7 +476,13 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Drum: "Rumpulipas",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Räjähde",
-  /** firearm category, pistols, rifles, shotguns, etc. */
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Tuliase"
+   *   IGUI_ItemCat_Firearm = "Ampuma-ase"
+   */
   CAEC_Override_Firearm: "Ampuma-ase",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistooli",
@@ -477,8 +501,13 @@ export const FI: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Olut"
    */
   CAEC_Fallback_Beer: "Olut",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Juoma",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Juoma"
+   */
+  CAEC_Fallback_Beverage: "Juoma",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /**
@@ -501,8 +530,13 @@ export const FI: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Mehu"
    */
   CAEC_Fallback_Juice: "Mehu",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Neste",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Neste"
+   */
+  CAEC_Fallback_Liquid: "Neste",
   /**
    * dairy milk
    *
@@ -573,14 +607,24 @@ export const FI: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Rehu"
    */
   CAEC_Fallback_AnimalFeed: "Rehu",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Polkupyörä",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Polkupyörä"
+   */
+  CAEC_Fallback_Bicycle: "Polkupyörä",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Siivous",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostoitava",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Rakentaminen",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Rakentaminen"
+   */
+  CAEC_Fallback_Construction: "Rakentaminen",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Käsintehty",
   /** items such as cups, mugs, glasses */
@@ -596,6 +640,7 @@ export const FI: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Osa"
+   *   IGUI_ItemCat_Part = "Osa"
    */
   CAEC_Fallback_Part: "Osa",
   /** photos */
@@ -613,8 +658,13 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Seed: "Siemen",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Siemenpussi",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Tupakointi",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Tupakointi"
+   */
+  CAEC_Fallback_Smoking: "Tupakointi",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Lelu",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

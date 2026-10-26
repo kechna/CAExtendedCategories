@@ -21,9 +21,9 @@ export const CS: ExternalTranslations = {
    * accessories such as watches, necklaces, belts, gloves
    *
    * found in-game:
-   *   IGUI_ItemCat_Accessory = "Doplněk"
+   *   IGUI_ItemCat_Accessory = "Doplňky"
    */
-  CAEC_Override_Accessory: "Doplňky",
+  CAEC_Fallback_Accessory: "Doplňky",
   /**
    * firearm ammunition
    *
@@ -56,9 +56,9 @@ export const CS: ExternalTranslations = {
    * camping supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Camping = "Kempování"
+   *   IGUI_ItemCat_Camping = "Stanování"
    */
-  CAEC_Override_Camping: "Stanování",
+  CAEC_Fallback_Camping: "Stanování",
   /**
    * maps of locations
    *
@@ -84,10 +84,10 @@ export const CS: ExternalTranslations = {
    * items that can hold other items, such as boxes, bags, and crates
    *
    * found in-game:
-   *   IGUI_ItemCat_Container = "Kontejner"
+   *   IGUI_ItemCat_Container = "Úložiště"
    *   ContextMenu_Container = "Kontejnery"
    */
-  CAEC_Override_Container: "Úložiště",
+  CAEC_Fallback_Container: "Úložiště",
   /**
    * cooking items such as pots, pans, utensils
    *
@@ -128,8 +128,8 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Rybaření"
-   *   ContextMenu_Fishing = "Rybaření"
    *   IGUI_CraftCategory_Fishing = "Rybaření"
+   *   ContextMenu_Fishing = "Rybaření"
    */
   CAEC_Fallback_Fishing: "Rybaření",
   /**
@@ -172,9 +172,9 @@ export const CS: ExternalTranslations = {
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "Šrot"
+   *   IGUI_ItemCat_Junk = "Veteš"
    */
-  CAEC_Override_Junk: "Veteš",
+  CAEC_Fallback_Junk: "Veteš",
   /**
    * items that provide light such as flashlights, lanterns
    *
@@ -235,9 +235,9 @@ export const CS: ExternalTranslations = {
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
-   *   IGUI_ItemCat_Tool = "Nářadí"
+   *   IGUI_ItemCat_Tool = "Nástroj"
    */
-  CAEC_Override_Tool: "Nástroj",
+  CAEC_Fallback_Tool: "Nástroj",
   /**
    * trapping skill and items
    *
@@ -249,9 +249,9 @@ export const CS: ExternalTranslations = {
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Údržba vozidla"
+   *   IGUI_ItemCat_VehicleMaintenance = "Údržba vozidel"
    */
-  CAEC_Override_VehicleMaintenance: "Údržba vozidel",
+  CAEC_Fallback_VehicleMaintenance: "Údržba vozidel",
   /**
    * weapons in general
    *
@@ -261,7 +261,12 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Zbraň",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Sekera",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Kovářství"
+   */
   CAEC_Fallback_Blacksmith: "Kovářství",
   /** long blunt weapon skill */
   CAEC_Override_Blunt: "Tupá zbraň",
@@ -293,6 +298,7 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Zemědělství"
+   *   ContextMenu_Farming = "Zemědělství"
    */
   CAEC_Fallback_Farming: "Zemědělství",
   /** knapping skill */
@@ -306,6 +312,13 @@ export const CS: ExternalTranslations = {
    *   IGUI_CraftCategory_Glassmaking = "Sklářství"
    */
   CAEC_Fallback_Glassmaking: "Sklenářství",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Péče o zvířata"
+   */
+  CAEC_Fallback_Husbandry: "Péče o zvířata",
   /** long blade weapon skill */
   CAEC_Override_LongBlade: "Dlouhá čepel",
   /** maintenance skill for maintaining and repairing tools and weapons */
@@ -317,7 +330,12 @@ export const CS: ExternalTranslations = {
    *   IGUI_CraftCategory_Masonry = "Zednictví"
    */
   CAEC_Fallback_Masonry: "Zednictví",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Mechanika"
+   */
   CAEC_Fallback_Mechanics: "Mechanika",
   /**
    * metalworking skill (for items that are relevant in both welding and blacksmith
@@ -488,8 +506,14 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Drum: "Bubnový zásobník",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Výbušnina",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Střelné zbraně",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Střelné zbraně"
+   *   IGUI_ItemCat_Firearm = "Střelné zbraně"
+   */
+  CAEC_Fallback_Firearm: "Střelné zbraně",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistole",
   /** firearm magazines */
@@ -507,8 +531,13 @@ export const CS: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Pivo"
    */
   CAEC_Fallback_Beer: "Pivo",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Nápoj",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Nápoj"
+   */
+  CAEC_Fallback_Beverage: "Nápoj",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktejl",
   /**
@@ -531,8 +560,13 @@ export const CS: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Džus"
    */
   CAEC_Fallback_Juice: "Džus",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Tekutina",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Tekutina"
+   */
+  CAEC_Fallback_Liquid: "Tekutina",
   /**
    * dairy milk
    *
@@ -603,14 +637,24 @@ export const CS: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Krmivo pro zvířata"
    */
   CAEC_Fallback_AnimalFeed: "Krmivo pro zvířata",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Kolo",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Kolo"
+   */
+  CAEC_Fallback_Bicycle: "Kolo",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Úklid",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostovatelné",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Stavba",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Stavba"
+   */
+  CAEC_Fallback_Construction: "Stavba",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ručně vyrobené",
   /** items such as cups, mugs, glasses */
@@ -626,6 +670,7 @@ export const CS: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Část"
+   *   IGUI_ItemCat_Part = "Část"
    */
   CAEC_Fallback_Part: "Část",
   /** photos */
@@ -643,8 +688,13 @@ export const CS: ExternalTranslations = {
   CAEC_Override_Seed: "Semínko",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Sáček se semeny",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Kouření",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Kouření"
+   */
+  CAEC_Fallback_Smoking: "Kouření",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Hračka",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

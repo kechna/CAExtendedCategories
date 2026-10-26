@@ -128,8 +128,9 @@ export const KO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "낚시 관련"
+   *   IGUI_perks_Fishing = "낚시 관련"
+   *   IGUI_CraftCategory_Fishing = "낚시 관련"
    *   ContextMenu_Fishing = "낚시하기"
-   *   IGUI_CraftCategory_Fishing = "낚시"
    */
   CAEC_Fallback_Fishing: "낚시 관련",
   /**
@@ -261,7 +262,12 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Weapon: "무기",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "도끼",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "제련"
+   */
   CAEC_Fallback_Blacksmith: "대장일",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "긴 둔기",
@@ -288,6 +294,7 @@ export const KO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "농사"
+   *   ContextMenu_Farming = "밭 관리"
    */
   CAEC_Fallback_Farming: "농사",
   /** knapping skill */
@@ -296,13 +303,26 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Foraging: "채집",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "유리 공예",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "사육"
+   */
+  CAEC_Fallback_Husbandry: "사육",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "긴 칼날",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "정비",
   /** masonry skill */
   CAEC_Fallback_Masonry: "석공",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "기계공학"
+   *   IGUI_ItemCat_Mechanics = "기계공학"
+   */
   CAEC_Fallback_Mechanics: "기계공학",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "금속 가공",
@@ -458,8 +478,14 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Drum: "드럼 탄창",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "폭발물",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "총기",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "총기"
+   *   IGUI_ItemCat_Firearm = "총기"
+   */
+  CAEC_Fallback_Firearm: "총기",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "권총",
   /** firearm magazines */
@@ -477,8 +503,13 @@ export const KO: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "맥주"
    */
   CAEC_Fallback_Beer: "맥주",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "음료",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "음료"
+   */
+  CAEC_Fallback_Beverage: "음료",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "칵테일",
   /**
@@ -501,8 +532,13 @@ export const KO: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "주스"
    */
   CAEC_Fallback_Juice: "주스",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "액체",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "액체"
+   */
+  CAEC_Fallback_Liquid: "액체",
   /**
    * dairy milk
    *
@@ -573,14 +609,24 @@ export const KO: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "동물 사료"
    */
   CAEC_Fallback_AnimalFeed: "동물 사료",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "자전거",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "자전거"
+   */
+  CAEC_Fallback_Bicycle: "자전거",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "청소",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "퇴비용",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "건축",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "건축"
+   */
+  CAEC_Fallback_Construction: "건축",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "수제",
   /** items such as cups, mugs, glasses */
@@ -596,6 +642,7 @@ export const KO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "부위"
+   *   IGUI_ItemCat_Part = "부위"
    */
   CAEC_Fallback_Part: "부위",
   /** photos */
@@ -613,8 +660,13 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Seed: "씨앗",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "씨앗 봉투",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "흡연",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "흡연"
+   */
+  CAEC_Fallback_Smoking: "흡연",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "장난감",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

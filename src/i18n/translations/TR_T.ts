@@ -120,7 +120,7 @@ export const TR: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "İlk Yardım"
+   *   IGUI_ItemCat_FirstAid = "Tıbbi Malzeme"
    */
   CAEC_Fallback_FirstAid: "Tıbbi Malzeme",
   /**
@@ -128,8 +128,8 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Balıkçılık"
-   *   ContextMenu_Fishing = "Balık Tut"
    *   IGUI_CraftCategory_Fishing = "Balıkçılık"
+   *   ContextMenu_Fishing = "Balık Tut"
    */
   CAEC_Fallback_Fishing: "Balıkçılık",
   /**
@@ -150,7 +150,7 @@ export const TR: ExternalTranslations = {
    * gardening skill and items
    *
    * found in-game:
-   *   IGUI_ItemCat_Gardening = "Çiftçilik"
+   *   IGUI_ItemCat_Gardening = "Bahçıvanlık"
    *   ContextMenu_Gardening = "Bahçecilik"
    */
   CAEC_Fallback_Gardening: "Bahçıvanlık",
@@ -261,7 +261,12 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Silah",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Balta",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Demircilik"
+   */
   CAEC_Fallback_Blacksmith: "Demircilik",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Uzun Küt Silah",
@@ -288,6 +293,7 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Çiftçilik"
+   *   ContextMenu_Farming = "Tarım"
    */
   CAEC_Fallback_Farming: "Tarım",
   /** knapping skill */
@@ -296,13 +302,26 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Toplayıcılık",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Camcılık",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Hayvan Bakımı"
+   */
+  CAEC_Fallback_Husbandry: "Hayvan Bakımı",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Uzun Bıçaklı Silah",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Bakım",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Duvarcılık",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mekanik"
+   *   IGUI_ItemCat_Mechanics = "Mekanik"
+   */
   CAEC_Fallback_Mechanics: "Mekanik",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metal İşçiliği",
@@ -451,14 +470,20 @@ export const TR: ExternalTranslations = {
   /** softcover books */
   CAEC_Fallback_Softcover: "Karton Kapaklı Kitap",
   /** notebooks, journals and other items you can write in */
-  CAEC_Override_Writing: undefined,
+  CAEC_Override_Writing: "Yazı",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "Yay",
   /** firearm drums */
   CAEC_Fallback_Drum: "Tambur Şarjör",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Patlayıcı",
-  /** firearm category, pistols, rifles, shotguns, etc. */
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Ateşli Silahlar"
+   *   IGUI_ItemCat_Firearm = "Ateşli Silah"
+   */
   CAEC_Override_Firearm: "Ateşli Silah",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Tabanca",
@@ -477,8 +502,13 @@ export const TR: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Bira"
    */
   CAEC_Fallback_Beer: "Bira",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Meşrubat",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Meşrubat"
+   */
+  CAEC_Fallback_Beverage: "Meşrubat",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Kokteyl",
   /**
@@ -501,8 +531,13 @@ export const TR: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Meyve suyu"
    */
   CAEC_Fallback_Juice: "Meyve Suyu",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Sıvı",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Sıvı"
+   */
+  CAEC_Fallback_Liquid: "Sıvı",
   /**
    * dairy milk
    *
@@ -573,14 +608,19 @@ export const TR: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Hayvan Yemi"
    */
   CAEC_Fallback_AnimalFeed: "Hayvan Yemi",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Bisiklet",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Bisiklet"
+   */
+  CAEC_Fallback_Bicycle: "Bisiklet",
   /** for items to clean yourself or your base */
-  CAEC_Override_Cleaning: undefined,
+  CAEC_Override_Cleaning: "Temizlik",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostlanabilir",
   /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: undefined,
+  CAEC_Override_Construction: "İnşaat",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "El Yapımı",
   /** items such as cups, mugs, glasses */
@@ -596,6 +636,7 @@ export const TR: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Bölüm"
+   *   IGUI_ItemCat_Part = "Bölüm"
    */
   CAEC_Fallback_Part: "Bölüm",
   /** photos */
@@ -613,8 +654,13 @@ export const TR: ExternalTranslations = {
   CAEC_Override_Seed: "Ekilebilir Tohum",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Tohum Paketi",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Tütün",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Tütün"
+   */
+  CAEC_Fallback_Smoking: "Tütün",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Oyuncak",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

@@ -128,8 +128,8 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Memancing"
-   *   ContextMenu_Fishing = "Memancing"
    *   IGUI_CraftCategory_Fishing = "Memancing"
+   *   ContextMenu_Fishing = "Memancing"
    */
   CAEC_Fallback_Fishing: "Memancing",
   /**
@@ -261,7 +261,12 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Senjata",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Kapak",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Pandai Besi"
+   */
   CAEC_Fallback_Blacksmith: "Pandai Besi",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Tumpul Panjang",
@@ -288,6 +293,7 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Agrikultur"
+   *   ContextMenu_Farming = "Bertani"
    */
   CAEC_Fallback_Farming: "Agrikultur",
   /** knapping skill */
@@ -296,13 +302,25 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Mencari Bahan",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Pembuatan Kaca",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Peternakan"
+   */
+  CAEC_Fallback_Husbandry: "Peternakan",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Bilah Panjang",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Perawatan",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Batu Bata",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Mekanik"
+   */
   CAEC_Fallback_Mechanics: "Mekanik",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Pengerjaan Logam",
@@ -458,8 +476,14 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Drum: "Drum",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Bahan Peledak",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Senjata Api",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Senjata Api"
+   *   IGUI_ItemCat_Firearm = "Senjata Api"
+   */
+  CAEC_Fallback_Firearm: "Senjata Api",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistol",
   /** firearm magazines */
@@ -477,8 +501,13 @@ export const ID: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Bir"
    */
   CAEC_Fallback_Beer: "Bir",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Minuman",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Minuman"
+   */
+  CAEC_Fallback_Beverage: "Minuman",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktail",
   /**
@@ -501,8 +530,13 @@ export const ID: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Jus"
    */
   CAEC_Fallback_Juice: "Jus",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Cairan",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Cairan"
+   */
+  CAEC_Fallback_Liquid: "Cairan",
   /**
    * dairy milk
    *
@@ -568,14 +602,24 @@ export const ID: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Pakan Hewan"
    */
   CAEC_Fallback_AnimalFeed: "Pakan Hewan",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Sepeda",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Sepeda"
+   */
+  CAEC_Fallback_Bicycle: "Sepeda",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Kebersihan",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompos",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Konstruksi",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Konstruksi"
+   */
+  CAEC_Fallback_Construction: "Konstruksi",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Buatan Tangan",
   /** items such as cups, mugs, glasses */
@@ -591,6 +635,7 @@ export const ID: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Bagian"
+   *   IGUI_ItemCat_Part = "Bagian"
    */
   CAEC_Fallback_Part: "Bagian",
   /** photos */
@@ -608,8 +653,13 @@ export const ID: ExternalTranslations = {
   CAEC_Fallback_Seed: "Benih",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Paket Benih",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Rokok",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Rokok"
+   */
+  CAEC_Fallback_Smoking: "Rokok",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Mainan",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

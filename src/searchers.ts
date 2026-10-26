@@ -288,6 +288,7 @@ export const searchers: Searcher[] = [
       "RpgManual",
       "Softcover",
       "Writing",
+      "SkillBook",
     ],
     searchKeys: ["IGUI_ItemCat_%s", "ItemName_Base.%s", "DisplayName%s"],
   },

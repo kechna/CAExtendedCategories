@@ -128,8 +128,8 @@ export const JP: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "釣り"
-   *   ContextMenu_Fishing = "釣りをする"
    *   IGUI_CraftCategory_Fishing = "釣り"
+   *   ContextMenu_Fishing = "釣りをする"
    */
   CAEC_Fallback_Fishing: "釣り",
   /**
@@ -261,7 +261,12 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_Weapon: "武器",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "斧",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "鍛冶"
+   */
   CAEC_Fallback_Blacksmith: "鍛冶",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "長鈍器",
@@ -288,6 +293,7 @@ export const JP: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "耕作"
+   *   ContextMenu_Farming = "耕作"
    */
   CAEC_Fallback_Farming: "耕作",
   /** knapping skill */
@@ -296,13 +302,26 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_Foraging: "採集",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "ガラス細工",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "動物福祉"
+   */
+  CAEC_Fallback_Husbandry: "動物福祉",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "長刃",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "整備",
   /** masonry skill */
   CAEC_Fallback_Masonry: "石工",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "機械工学"
+   *   IGUI_ItemCat_Mechanics = "機械工学"
+   */
   CAEC_Fallback_Mechanics: "機械工学",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "金属加工",
@@ -458,7 +477,13 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_Drum: "ドラムマガジン",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "爆発物",
-  /** firearm category, pistols, rifles, shotguns, etc. */
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "銃"
+   *   IGUI_ItemCat_Firearm = "銃器"
+   */
   CAEC_Override_Firearm: "銃器",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "拳銃",
@@ -477,8 +502,13 @@ export const JP: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "ビール"
    */
   CAEC_Fallback_Beer: "ビール",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "飲料",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "飲料"
+   */
+  CAEC_Fallback_Beverage: "飲料",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "カクテル",
   /**
@@ -501,8 +531,13 @@ export const JP: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "ジュース"
    */
   CAEC_Fallback_Juice: "ジュース",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "液体",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "液体"
+   */
+  CAEC_Fallback_Liquid: "液体",
   /**
    * dairy milk
    *
@@ -573,14 +608,24 @@ export const JP: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "動物の飼料"
    */
   CAEC_Fallback_AnimalFeed: "動物の飼料",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "自転車",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "自転車"
+   */
+  CAEC_Fallback_Bicycle: "自転車",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "掃除",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "堆肥化可能",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "建築",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "建築"
+   */
+  CAEC_Fallback_Construction: "建築",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "手作り",
   /** items such as cups, mugs, glasses */
@@ -596,6 +641,7 @@ export const JP: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "部位"
+   *   IGUI_ItemCat_Part = "部位"
    */
   CAEC_Fallback_Part: "部位",
   /** photos */
@@ -613,8 +659,13 @@ export const JP: ExternalTranslations = {
   CAEC_Fallback_Seed: "種",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "種の袋",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "喫煙具",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "喫煙具"
+   */
+  CAEC_Fallback_Smoking: "喫煙具",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "おもちゃ",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

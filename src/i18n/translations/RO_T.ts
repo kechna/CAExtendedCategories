@@ -120,7 +120,7 @@ export const RO: ExternalTranslations = {
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
    * found in-game:
-   *   IGUI_ItemCat_FirstAid = "Primul Ajutor"
+   *   IGUI_ItemCat_FirstAid = "Primul ajutor"
    */
   CAEC_Fallback_FirstAid: "Primul ajutor",
   /**
@@ -128,8 +128,8 @@ export const RO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Pescuit"
-   *   ContextMenu_Fishing = "Pescuit"
    *   IGUI_CraftCategory_Fishing = "Pescuit"
+   *   ContextMenu_Fishing = "Pescuit"
    */
   CAEC_Fallback_Fishing: "Pescuit",
   /**
@@ -261,7 +261,12 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Armă",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Topor",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Fierărie"
+   */
   CAEC_Fallback_Blacksmith: "Fierărie",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Contondent",
@@ -288,6 +293,7 @@ export const RO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Agricultură"
+   *   ContextMenu_Farming = "Agricultură"
    */
   CAEC_Fallback_Farming: "Agricultură",
   /** knapping skill */
@@ -296,13 +302,25 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Cules",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Sticlărie",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Îngrijirea Animalelor"
+   */
+  CAEC_Fallback_Husbandry: "Îngrijirea Animalelor",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Lamă lungă",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Întreținere",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Zidărie",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Mecanică"
+   */
   CAEC_Fallback_Mechanics: "Mecanică",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Prelucrarea metalelor",
@@ -458,7 +476,13 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Drum: "Încărcător tambur",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Exploziv",
-  /** firearm category, pistols, rifles, shotguns, etc. */
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Armă de Foc"
+   *   IGUI_ItemCat_Firearm = "Armă de foc"
+   */
   CAEC_Override_Firearm: "Armă de foc",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistol",
@@ -477,8 +501,13 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Bere"
    */
   CAEC_Fallback_Beer: "Bere",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Băutură",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Băutură"
+   */
+  CAEC_Fallback_Beverage: "Băutură",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /**
@@ -501,8 +530,13 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Suc"
    */
   CAEC_Fallback_Juice: "Suc",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Lichid",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Lichid"
+   */
+  CAEC_Fallback_Liquid: "Lichid",
   /**
    * dairy milk
    *
@@ -573,14 +607,24 @@ export const RO: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Hrană pentru Animale"
    */
   CAEC_Fallback_AnimalFeed: "Hrană pentru Animale",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Bicicletă",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Bicicletă"
+   */
+  CAEC_Fallback_Bicycle: "Bicicletă",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Curățenie",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Compostabil",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Construcții",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Construcții"
+   */
+  CAEC_Fallback_Construction: "Construcții",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Artizanal",
   /** items such as cups, mugs, glasses */
@@ -596,6 +640,7 @@ export const RO: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Parte"
+   *   IGUI_ItemCat_Part = "Parte"
    */
   CAEC_Fallback_Part: "Parte",
   /** photos */
@@ -613,8 +658,13 @@ export const RO: ExternalTranslations = {
   CAEC_Fallback_Seed: "Semințe",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Plic de semințe",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Fumat",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Fumat"
+   */
+  CAEC_Fallback_Smoking: "Fumat",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Jucărie",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

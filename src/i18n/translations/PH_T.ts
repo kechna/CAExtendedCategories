@@ -17,73 +17,245 @@ import type { ExternalTranslations } from "../types";
  * Which translations from the game are searched for differs for each individual key.
  */
 export const PH: ExternalTranslations = {
-  /** accessories such as watches, necklaces, belts, gloves */
+  /**
+   * accessories such as watches, necklaces, belts, gloves
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Accessory = "Aksesorya"
+   */
   CAEC_Fallback_Accessory: "Aksesorya",
-  /** firearm ammunition */
+  /**
+   * firearm ammunition
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Ammo = "Bala"
+   */
   CAEC_Fallback_Ammo: "Bala",
-  /** animals */
+  /**
+   * animals
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Animal = "Hayop"
+   */
   CAEC_Fallback_Animal: "Hayop",
-  /** animal parts, bones, sinew, hides */
+  /**
+   * animal parts, bones, sinew, hides
+   *
+   * found in-game:
+   *   IGUI_ItemCat_AnimalPart = "Bahagi ng Hayop"
+   */
   CAEC_Fallback_AnimalPart: "Bahagi ng Hayop",
-  /** character appearance items such as makeup */
+  /**
+   * character appearance items such as makeup
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Appearance = "Hitsura"
+   */
   CAEC_Fallback_Appearance: "Hitsura",
-  /** camping supplies */
+  /**
+   * camping supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Camping = "Kamping"
+   */
   CAEC_Fallback_Camping: "Kamping",
-  /** maps of locations */
+  /**
+   * maps of locations
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cartography = "Kartograpiya"
+   */
   CAEC_Fallback_Cartography: "Kartograpiya",
-  /** clothing such as shirts, pants, dresses */
+  /**
+   * clothing such as shirts, pants, dresses
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Clothing = "Damit"
+   */
   CAEC_Fallback_Clothing: "Damit",
-  /** communication devices such as walkie talkies, radios */
+  /**
+   * communication devices such as walkie talkies, radios
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Communications = "Komunikasyon"
+   */
   CAEC_Fallback_Communications: "Komunikasyon",
-  /** items that can hold other items, such as boxes, bags, and crates */
+  /**
+   * items that can hold other items, such as boxes, bags, and crates
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Container = "Lalagyan"
+   */
   CAEC_Fallback_Container: "Lalagyan",
-  /** cooking items such as pots, pans, utensils */
+  /**
+   * cooking items such as pots, pans, utensils
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Cooking = "Pagluluto"
+   */
   CAEC_Fallback_Cooking: "Pagluluto",
-  /** electronic items */
+  /**
+   * electronic items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Electronics = "Elektroniks"
+   */
   CAEC_Fallback_Electronics: "Elektroniks",
-  /** entertainment items */
+  /**
+   * entertainment items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Entertainment = "Libangan"
+   */
   CAEC_Fallback_Entertainment: "Libangan",
-  /** sources of fire such as matches and lighters */
+  /**
+   * sources of fire such as matches and lighters
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FireSource = "Pinagmumulan ng Apoy"
+   */
   CAEC_Fallback_FireSource: "Pinagmumulan ng Apoy",
-  /** first aid and medical supplies, bandages, painkillers, antiseptics */
+  /**
+   * first aid and medical supplies, bandages, painkillers, antiseptics
+   *
+   * found in-game:
+   *   IGUI_ItemCat_FirstAid = "Pangunang Lunas"
+   */
   CAEC_Fallback_FirstAid: "Pangunang Lunas",
-  /** fishing skill and items */
+  /**
+   * fishing skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Fishing = "Pangingisda"
+   *   IGUI_perks_Fishing = "Pangingisda"
+   *   IGUI_CraftCategory_Fishing = "Pangingisda"
+   */
   CAEC_Fallback_Fishing: "Pangingisda",
-  /** food items */
+  /**
+   * food items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Food = "Pagkain"
+   */
   CAEC_Fallback_Food: "Pagkain",
-  /** furniture items */
+  /**
+   * furniture items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Furniture = "Muwebles"
+   */
   CAEC_Fallback_Furniture: "Muwebles",
-  /** gardening skill and items */
+  /**
+   * gardening skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Gardening = "Paghahalaman"
+   */
   CAEC_Fallback_Gardening: "Paghahalaman",
-  /** household items */
+  /**
+   * household items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Household = "Pambahay"
+   */
   CAEC_Fallback_Household: "Pambahay",
-  /** instruments */
+  /**
+   * instruments
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Instrument = "Instrumentong Pangmusika"
+   */
   CAEC_Fallback_Instrument: "Instrumentong Pangmusika",
-  /** miscellaneous junk items, worthless items */
+  /**
+   * miscellaneous junk items, worthless items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Junk = "Basura"
+   */
   CAEC_Fallback_Junk: "Basura",
-  /** items that provide light such as flashlights, lanterns */
+  /**
+   * items that provide light such as flashlights, lanterns
+   *
+   * found in-game:
+   *   IGUI_ItemCat_LightSource = "Pinagmumulan ng Liwanag"
+   */
   CAEC_Fallback_LightSource: "Pinagmumulan ng Liwanag",
-  /** books and printed reading material */
+  /**
+   * books and printed reading material
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Literature = "Babasahin"
+   */
   CAEC_Fallback_Literature: "Babasahin",
-  /** crafting materials and building supplies */
+  /**
+   * crafting materials and building supplies
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Material = "Materyales"
+   */
   CAEC_Fallback_Material: "Materyales",
-  /** keepsakes and souvenirs */
+  /**
+   * keepsakes and souvenirs
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Memento = "Alaala"
+   */
   CAEC_Fallback_Memento: "Alaala",
-  /** paint items */
+  /**
+   * paint items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Paint = "Pintura"
+   */
   CAEC_Fallback_Paint: "Pintura",
-  /** protective equipment such as body armor, helmets, knee pads */
+  /**
+   * protective equipment such as body armor, helmets, knee pads
+   *
+   * found in-game:
+   *   IGUI_ItemCat_ProtectiveGear = "Pamprotektang Gamit"
+   */
   CAEC_Fallback_ProtectiveGear: "Pamprotektang Gamit",
-  /** skill books */
+  /**
+   * skill books
+   *
+   * found in-game:
+   *   IGUI_ItemCat_SkillBook = "Aklat ng Kasanayan"
+   */
   CAEC_Fallback_SkillBook: "Aklat ng Kasanayan",
-  /** sports items */
+  /**
+   * sports items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Sports = "Palakasan"
+   */
   CAEC_Fallback_Sports: "Palakasan",
-  /** tools, such as hammers, wrenches, screwdrivers */
+  /**
+   * tools, such as hammers, wrenches, screwdrivers
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Tool = "Kasangkapan"
+   */
   CAEC_Fallback_Tool: "Kasangkapan",
-  /** trapping skill and items */
+  /**
+   * trapping skill and items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Trapping = "Pag-bitag"
+   */
   CAEC_Fallback_Trapping: "Pag-bitag",
-  /** vehicle maintenance items */
+  /**
+   * vehicle maintenance items
+   *
+   * found in-game:
+   *   IGUI_ItemCat_VehicleMaintenance = "Pagmementena ng Sasakyan"
+   */
   CAEC_Fallback_VehicleMaintenance: "Pagmementena ng Sasakyan",
-  /** weapons in general */
+  /**
+   * weapons in general
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Weapon = "Armas"
+   */
   CAEC_Fallback_Weapon: "Armas",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Palakol",
@@ -107,13 +279,21 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Paghahanap sa Kalikasan",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Paggawa ng Salamin",
+  /** animal husbandry/care skill */
+  CAEC_Fallback_Husbandry: "Pag-aalaga ng Hayop",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Mahabang Talim",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Pagmementena",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Pagmamason",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Mekaniko"
+   *   IGUI_ItemCat_Mechanics = "Mekaniko"
+   */
   CAEC_Fallback_Mechanics: "Mekaniko",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Paggawa ng Metal",
@@ -229,8 +409,13 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Drum: "Drum",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Pampasabog",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Baril",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Firearm = "Baril"
+   */
+  CAEC_Fallback_Firearm: "Baril",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistola",
   /** firearm magazines */
@@ -243,8 +428,13 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Alcohol: "Alak",
   /** alcoholic beer beverages */
   CAEC_Fallback_Beer: "Serbesa",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Inumin",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Inumin"
+   */
+  CAEC_Fallback_Beverage: "Inumin",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Cocktail",
   /** coffee beverage */
@@ -257,8 +447,13 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Fuel: "Gasolina",
   /** fruit juice */
   CAEC_Fallback_Juice: "Juice",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Likido",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Likido"
+   */
+  CAEC_Fallback_Liquid: "Likido",
   /** dairy milk */
   CAEC_Fallback_Milk: "Gatas",
   /** poisonous liquids, such as bleach */
@@ -293,14 +488,24 @@ export const PH: ExternalTranslations = {
   CAEC_Override_VHS: "VHS",
   /** feed for farm animals, like cows, pigs, chickens, etc. */
   CAEC_Fallback_AnimalFeed: "Pagkain ng Hayop",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Bisikleta",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Bisikleta"
+   */
+  CAEC_Fallback_Bicycle: "Bisikleta",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Paglilinis",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Pang-kompost",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Konstruksyon",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Konstruksyon"
+   */
+  CAEC_Fallback_Construction: "Konstruksyon",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Gawang-kamay",
   /** items such as cups, mugs, glasses */
@@ -312,7 +517,7 @@ export const PH: ExternalTranslations = {
   /** items such as pans/pots to cook in */
   CAEC_Override_Pan: "Kawali",
   /** parts for crafting or repairing items, such as vehicle parts or weapon parts */
-  CAEC_Fallback_Part: undefined,
+  CAEC_Fallback_Part: "Piyesa",
   /** photos */
   CAEC_Fallback_Photo: "Litrato",
   /** pictures and framed photos kept as mementos */
@@ -323,8 +528,13 @@ export const PH: ExternalTranslations = {
   CAEC_Override_Seed: "Binhi",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Pakete ng Buto",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Paninigarilyo",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Paninigarilyo"
+   */
+  CAEC_Fallback_Smoking: "Paninigarilyo",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Laruan",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

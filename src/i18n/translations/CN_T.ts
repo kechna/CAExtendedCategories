@@ -42,9 +42,9 @@ export const CN: ExternalTranslations = {
    * animal parts, bones, sinew, hides
    *
    * found in-game:
-   *   IGUI_ItemCat_AnimalPart = "动物部位"
+   *   IGUI_ItemCat_AnimalPart = "动物材料"
    */
-  CAEC_Override_AnimalPart: "动物材料",
+  CAEC_Fallback_AnimalPart: "动物材料",
   /**
    * character appearance items such as makeup
    *
@@ -63,9 +63,9 @@ export const CN: ExternalTranslations = {
    * maps of locations
    *
    * found in-game:
-   *   IGUI_ItemCat_Cartography = "制图"
+   *   IGUI_ItemCat_Cartography = "地图"
    */
-  CAEC_Override_Cartography: "地图",
+  CAEC_Fallback_Cartography: "地图",
   /**
    * clothing such as shirts, pants, dresses
    *
@@ -113,9 +113,9 @@ export const CN: ExternalTranslations = {
    * sources of fire such as matches and lighters
    *
    * found in-game:
-   *   IGUI_ItemCat_FireSource = "火源"
+   *   IGUI_ItemCat_FireSource = "火种"
    */
-  CAEC_Override_FireSource: "火种",
+  CAEC_Fallback_FireSource: "火种",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -128,8 +128,8 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "钓鱼"
-   *   ContextMenu_Fishing = "钓鱼"
    *   IGUI_CraftCategory_Fishing = "钓鱼"
+   *   ContextMenu_Fishing = "钓鱼"
    */
   CAEC_Fallback_Fishing: "钓鱼",
   /**
@@ -158,9 +158,9 @@ export const CN: ExternalTranslations = {
    * household items
    *
    * found in-game:
-   *   IGUI_ItemCat_Household = "家庭"
+   *   IGUI_ItemCat_Household = "家用"
    */
-  CAEC_Override_Household: "家用",
+  CAEC_Fallback_Household: "家用",
   /**
    * instruments
    *
@@ -214,9 +214,9 @@ export const CN: ExternalTranslations = {
    * protective equipment such as body armor, helmets, knee pads
    *
    * found in-game:
-   *   IGUI_ItemCat_ProtectiveGear = "防护装备"
+   *   IGUI_ItemCat_ProtectiveGear = "防护"
    */
-  CAEC_Override_ProtectiveGear: "防护",
+  CAEC_Fallback_ProtectiveGear: "防护",
   /**
    * skill books
    *
@@ -228,9 +228,9 @@ export const CN: ExternalTranslations = {
    * sports items
    *
    * found in-game:
-   *   IGUI_ItemCat_Sports = "运动"
+   *   IGUI_ItemCat_Sports = "运动器械"
    */
-  CAEC_Override_Sports: "运动器械",
+  CAEC_Fallback_Sports: "运动器械",
   /**
    * tools, such as hammers, wrenches, screwdrivers
    *
@@ -249,9 +249,9 @@ export const CN: ExternalTranslations = {
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "车辆维护"
+   *   IGUI_ItemCat_VehicleMaintenance = "汽修"
    */
-  CAEC_Override_VehicleMaintenance: "汽修",
+  CAEC_Fallback_VehicleMaintenance: "汽修",
   /**
    * weapons in general
    *
@@ -261,7 +261,12 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Weapon: "武器",
   /** axe weapon skill */
   CAEC_Override_Axe: "斧头",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "锻造"
+   */
   CAEC_Fallback_Blacksmith: "锻造",
   /** long blunt weapon skill */
   CAEC_Override_Blunt: "长棍",
@@ -288,6 +293,7 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "农务"
+   *   ContextMenu_Farming = "农业"
    */
   CAEC_Fallback_Farming: "农务",
   /** knapping skill */
@@ -296,13 +302,26 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Foraging: "采集",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "玻璃制作",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "畜牧"
+   */
+  CAEC_Fallback_Husbandry: "畜牧",
   /** long blade weapon skill */
   CAEC_Override_LongBlade: "长刀",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "保养",
   /** masonry skill */
   CAEC_Fallback_Masonry: "砌石",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "机械"
+   *   IGUI_ItemCat_Mechanics = "机械"
+   */
   CAEC_Fallback_Mechanics: "机械",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "金属加工",
@@ -451,15 +470,21 @@ export const CN: ExternalTranslations = {
   /** softcover books */
   CAEC_Override_Softcover: "平装书",
   /** notebooks, journals and other items you can write in */
-  CAEC_Override_Writing: undefined,
+  CAEC_Override_Writing: "书写",
   /** bows and other ranged weapons that use string tension to launch projectiles */
   CAEC_Override_Bow: "弓",
   /** firearm drums */
   CAEC_Fallback_Drum: "弹鼓",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "爆炸物",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "枪械",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "枪械"
+   *   IGUI_ItemCat_Firearm = "枪械"
+   */
+  CAEC_Fallback_Firearm: "枪械",
   /** pistols and handguns */
   CAEC_Override_Handgun: "手枪",
   /** firearm magazines */
@@ -477,8 +502,13 @@ export const CN: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "啤酒"
    */
   CAEC_Fallback_Beer: "啤酒",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "饮品",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "饮品"
+   */
+  CAEC_Fallback_Beverage: "饮品",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "鸡尾酒",
   /**
@@ -501,8 +531,13 @@ export const CN: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "果汁"
    */
   CAEC_Fallback_Juice: "果汁",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "液体",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "液体"
+   */
+  CAEC_Fallback_Liquid: "液体",
   /**
    * dairy milk
    *
@@ -573,14 +608,19 @@ export const CN: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "动物饲料"
    */
   CAEC_Fallback_AnimalFeed: "动物饲料",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "自行车",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "自行车"
+   */
+  CAEC_Fallback_Bicycle: "自行车",
   /** for items to clean yourself or your base */
-  CAEC_Override_Cleaning: undefined,
+  CAEC_Override_Cleaning: "清洁",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "可堆肥",
   /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: undefined,
+  CAEC_Override_Construction: "建筑",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "自制",
   /** items such as cups, mugs, glasses */
@@ -596,6 +636,7 @@ export const CN: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "部位"
+   *   IGUI_ItemCat_Part = "部位"
    */
   CAEC_Fallback_Part: "部位",
   /** photos */
@@ -613,8 +654,13 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Seed: "种子",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "种子包",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "吸烟",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "吸烟"
+   */
+  CAEC_Fallback_Smoking: "吸烟",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "玩具",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

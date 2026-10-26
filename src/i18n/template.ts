@@ -14,7 +14,6 @@
  * Which translations from the game are searched for differs for each individual key.
  */
 export const TRANSLATIONS = {
-
   /* ===== vanilla categories ===== */
 
   /* accessories such as watches, necklaces, belts, gloves */

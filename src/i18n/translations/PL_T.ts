@@ -70,9 +70,9 @@ export const PL: ExternalTranslations = {
    * clothing such as shirts, pants, dresses
    *
    * found in-game:
-   *   IGUI_ItemCat_Clothing = "Ubrania"
+   *   IGUI_ItemCat_Clothing = "Odzież"
    */
-  CAEC_Override_Clothing: "Odzież",
+  CAEC_Fallback_Clothing: "Odzież",
   /**
    * communication devices such as walkie talkies, radios
    *
@@ -128,17 +128,17 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Wędkarstwo"
-   *   ContextMenu_Fishing = "Łów ryby"
    *   IGUI_CraftCategory_Fishing = "Wędkarstwo"
+   *   ContextMenu_Fishing = "Łów ryby"
    */
   CAEC_Fallback_Fishing: "Wędkarstwo",
   /**
    * food items
    *
    * found in-game:
-   *   IGUI_ItemCat_Food = "Żywność"
+   *   IGUI_ItemCat_Food = "Jedzenie"
    */
-  CAEC_Override_Food: "Jedzenie",
+  CAEC_Fallback_Food: "Jedzenie",
   /**
    * furniture items
    *
@@ -172,9 +172,9 @@ export const PL: ExternalTranslations = {
    * miscellaneous junk items, worthless items
    *
    * found in-game:
-   *   IGUI_ItemCat_Junk = "Rupiecie"
+   *   IGUI_ItemCat_Junk = "Śmieci"
    */
-  CAEC_Override_Junk: "Śmieci",
+  CAEC_Fallback_Junk: "Śmieci",
   /**
    * items that provide light such as flashlights, lanterns
    *
@@ -193,9 +193,9 @@ export const PL: ExternalTranslations = {
    * crafting materials and building supplies
    *
    * found in-game:
-   *   IGUI_ItemCat_Material = "Materiały"
+   *   IGUI_ItemCat_Material = "Materiał"
    */
-  CAEC_Override_Material: "Materiał",
+  CAEC_Fallback_Material: "Materiał",
   /**
    * keepsakes and souvenirs
    *
@@ -221,9 +221,9 @@ export const PL: ExternalTranslations = {
    * skill books
    *
    * found in-game:
-   *   IGUI_ItemCat_SkillBook = "Podręczniki"
+   *   IGUI_ItemCat_SkillBook = "Poradnik"
    */
-  CAEC_Override_SkillBook: "Poradnik",
+  CAEC_Fallback_SkillBook: "Poradnik",
   /**
    * sports items
    *
@@ -235,9 +235,9 @@ export const PL: ExternalTranslations = {
    * tools, such as hammers, wrenches, screwdrivers
    *
    * found in-game:
-   *   IGUI_ItemCat_Tool = "Narzędzia"
+   *   IGUI_ItemCat_Tool = "Narzędzie"
    */
-  CAEC_Override_Tool: "Narzędzie",
+  CAEC_Fallback_Tool: "Narzędzie",
   /**
    * trapping skill and items
    *
@@ -249,9 +249,9 @@ export const PL: ExternalTranslations = {
    * vehicle maintenance items
    *
    * found in-game:
-   *   IGUI_ItemCat_VehicleMaintenance = "Naprawa pojazdów"
+   *   IGUI_ItemCat_VehicleMaintenance = "Obsługa pojazdów"
    */
-  CAEC_Override_VehicleMaintenance: "Obsługa pojazdów",
+  CAEC_Fallback_VehicleMaintenance: "Obsługa pojazdów",
   /**
    * weapons in general
    *
@@ -261,7 +261,12 @@ export const PL: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Broń",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Siekiera",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Kowalstwo"
+   */
   CAEC_Fallback_Blacksmith: "Kowalstwo",
   /** long blunt weapon skill */
   CAEC_Override_Blunt: "Długie obuchy",
@@ -288,6 +293,7 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Uprawa roślin"
+   *   ContextMenu_Farming = "Uprawa roślin"
    */
   CAEC_Fallback_Farming: "Uprawa roślin",
   /** knapping skill */
@@ -296,14 +302,26 @@ export const PL: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Zbieractwo",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Szkło",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Opieka nad zwierzętami"
+   */
+  CAEC_Fallback_Husbandry: "Opieka nad zwierzętami",
   /** long blade weapon skill */
   CAEC_Override_LongBlade: "Długie ostrze",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Konserwacja",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Murarka",
-  /** mechanics skill, vehicle maintenance */
-  CAEC_Override_Mechanics: "Naprawa pojazdów",
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Naprawa pojazdów"
+   */
+  CAEC_Fallback_Mechanics: "Naprawa pojazdów",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Metalurgia",
   /** pottery skill */
@@ -458,8 +476,14 @@ export const PL: ExternalTranslations = {
   CAEC_Fallback_Drum: "Magazynek bębnowy",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Materiały wybuchowe",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Broń palna",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Broń palna"
+   *   IGUI_ItemCat_Firearm = "Broń palna"
+   */
+  CAEC_Fallback_Firearm: "Broń palna",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pistolet",
   /** firearm magazines */
@@ -477,8 +501,13 @@ export const PL: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Piwo"
    */
   CAEC_Fallback_Beer: "Piwo",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Napój",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Napój"
+   */
+  CAEC_Fallback_Beverage: "Napój",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktajl",
   /**
@@ -501,8 +530,13 @@ export const PL: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Sok"
    */
   CAEC_Fallback_Juice: "Sok",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Ciecz",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Ciecz"
+   */
+  CAEC_Fallback_Liquid: "Ciecz",
   /**
    * dairy milk
    *
@@ -573,14 +607,24 @@ export const PL: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Pasza dla zwierząt"
    */
   CAEC_Fallback_AnimalFeed: "Pasza dla zwierząt",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Rower",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Rower"
+   */
+  CAEC_Fallback_Bicycle: "Rower",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Sprzątanie",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Kompostowalne",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Budowa",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Budowa"
+   */
+  CAEC_Fallback_Construction: "Budowa",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Wytworzone",
   /** items such as cups, mugs, glasses */
@@ -596,6 +640,7 @@ export const PL: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Część ciała"
+   *   IGUI_ItemCat_Part = "Część ciała"
    */
   CAEC_Fallback_Part: "Część ciała",
   /** photos */
@@ -613,8 +658,13 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Seed: "Nasiona",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Opakowanie nasion",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Palenie",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Palenie"
+   */
+  CAEC_Fallback_Smoking: "Palenie",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Zabawka",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

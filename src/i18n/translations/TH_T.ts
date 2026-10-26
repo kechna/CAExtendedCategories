@@ -113,9 +113,9 @@ export const TH: ExternalTranslations = {
    * sources of fire such as matches and lighters
    *
    * found in-game:
-   *   IGUI_ItemCat_FireSource = "เชื้อเพลิง"
+   *   IGUI_ItemCat_FireSource = "แหล่งไฟ"
    */
-  CAEC_Override_FireSource: "แหล่งไฟ",
+  CAEC_Fallback_FireSource: "แหล่งไฟ",
   /**
    * first aid and medical supplies, bandages, painkillers, antiseptics
    *
@@ -128,8 +128,8 @@ export const TH: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "การจับปลา"
-   *   ContextMenu_Fishing = "จับปลา"
    *   IGUI_CraftCategory_Fishing = "การจับปลา"
+   *   ContextMenu_Fishing = "จับปลา"
    */
   CAEC_Fallback_Fishing: "การจับปลา",
   /**
@@ -261,7 +261,12 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Weapon: "อาวุธ",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "ขวาน",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "งานตีเหล็ก"
+   */
   CAEC_Fallback_Blacksmith: "งานตีเหล็ก",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "อาวุธทื่อยาว",
@@ -288,6 +293,7 @@ export const TH: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "การเพาะปลูก"
+   *   ContextMenu_Farming = "เพาะปลูก"
    */
   CAEC_Fallback_Farming: "การเพาะปลูก",
   /** knapping skill */
@@ -296,13 +302,26 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Foraging: "การหาของป่า",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "การทำแก้ว",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "การเลี้ยงสัตว์"
+   */
+  CAEC_Fallback_Husbandry: "การเลี้ยงสัตว์",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "ใบมีดยาว",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "การบำรุงรักษา",
   /** masonry skill */
   CAEC_Fallback_Masonry: "งานก่ออิฐ",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "ช่างยนต์"
+   *   IGUI_ItemCat_Mechanics = "ช่างยนต์"
+   */
   CAEC_Fallback_Mechanics: "ช่างยนต์",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "งานโลหะ",
@@ -458,7 +477,13 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Drum: "แม็กกาซีนกลอง",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "วัตถุระเบิด",
-  /** firearm category, pistols, rifles, shotguns, etc. */
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "󠀴อาวุธปืน"
+   *   IGUI_ItemCat_Firearm = "อาวุธปืน"
+   */
   CAEC_Override_Firearm: "อาวุธปืน",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "ปืนพก",
@@ -477,8 +502,13 @@ export const TH: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "เบียร์"
    */
   CAEC_Fallback_Beer: "เบียร์",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "เครื่องดื่ม",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "เครื่องดื่ม"
+   */
+  CAEC_Fallback_Beverage: "เครื่องดื่ม",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "ค็อกเทล",
   /**
@@ -501,8 +531,13 @@ export const TH: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "น้ำผลไม้"
    */
   CAEC_Fallback_Juice: "น้ำผลไม้",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "ของเหลว",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "ของเหลว"
+   */
+  CAEC_Fallback_Liquid: "ของเหลว",
   /**
    * dairy milk
    *
@@ -573,14 +608,24 @@ export const TH: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "อาหารสัตว์"
    */
   CAEC_Fallback_AnimalFeed: "อาหารสัตว์",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "จักรยาน",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "จักรยาน"
+   */
+  CAEC_Fallback_Bicycle: "จักรยาน",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "ทำความสะอาด",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "ทำปุ๋ยหมักได้",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "ก่อสร้าง",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "ก่อสร้าง"
+   */
+  CAEC_Fallback_Construction: "ก่อสร้าง",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "ทำมือ",
   /** items such as cups, mugs, glasses */
@@ -596,6 +641,7 @@ export const TH: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "อวัยวะ"
+   *   IGUI_ItemCat_Part = "อวัยวะ"
    */
   CAEC_Fallback_Part: "อวัยวะ",
   /** photos */
@@ -613,8 +659,13 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Seed: "เมล็ดพืช",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "ซองเมล็ดพันธุ์",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "การสูบบุหรี่",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "การสูบบุหรี่"
+   */
+  CAEC_Fallback_Smoking: "การสูบบุหรี่",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "ของเล่น",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

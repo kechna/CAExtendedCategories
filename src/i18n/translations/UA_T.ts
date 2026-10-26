@@ -128,8 +128,8 @@ export const UA: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Риболовля"
-   *   ContextMenu_Fishing = "Риболовля"
    *   IGUI_CraftCategory_Fishing = "Риболовля"
+   *   ContextMenu_Fishing = "Риболовля"
    */
   CAEC_Fallback_Fishing: "Риболовля",
   /**
@@ -261,7 +261,12 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Зброя",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Сокири",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Ковальство"
+   */
   CAEC_Fallback_Blacksmith: "Ковальство",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Довге дробильне",
@@ -288,6 +293,7 @@ export const UA: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Фермерство"
+   *   ContextMenu_Farming = "Фермерство"
    */
   CAEC_Fallback_Farming: "Фермерство",
   /** knapping skill */
@@ -296,13 +302,26 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Збиральництво",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Скловаріння",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Догляд за тваринами"
+   */
+  CAEC_Fallback_Husbandry: "Догляд за тваринами",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Довге клинкове",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Обслуговування",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Мурування",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_perks_Mechanics = "Механіка"
+   *   IGUI_ItemCat_Mechanics = "Механіка"
+   */
   CAEC_Fallback_Mechanics: "Механіка",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Металообробка",
@@ -458,8 +477,14 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Drum: "Барабанний магазин",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Вибухівка",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Вогнепальна зброя",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Вогнепальна зброя"
+   *   IGUI_ItemCat_Firearm = "Вогнепальна зброя"
+   */
+  CAEC_Fallback_Firearm: "Вогнепальна зброя",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Пістолет",
   /** firearm magazines */
@@ -477,8 +502,13 @@ export const UA: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Пиво"
    */
   CAEC_Fallback_Beer: "Пиво",
-  /** top-level category for drinkable liquids */
-  CAEC_Override_Beverage: "Напої",
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Напої"
+   */
+  CAEC_Fallback_Beverage: "Напої",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Коктейль",
   /**
@@ -501,8 +531,13 @@ export const UA: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Сік"
    */
   CAEC_Fallback_Juice: "Сік",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Рідина",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Рідина"
+   */
+  CAEC_Fallback_Liquid: "Рідина",
   /**
    * dairy milk
    *
@@ -573,14 +608,24 @@ export const UA: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Корм для тварин"
    */
   CAEC_Fallback_AnimalFeed: "Корм для тварин",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Велосипед",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Велосипед"
+   */
+  CAEC_Fallback_Bicycle: "Велосипед",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Прибирання",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Компостоване",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Будівництво",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Будівництво"
+   */
+  CAEC_Fallback_Construction: "Будівництво",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Ручна робота",
   /** items such as cups, mugs, glasses */
@@ -596,6 +641,7 @@ export const UA: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Частина тіла / захист"
+   *   IGUI_ItemCat_Part = "Частина тіла / захист"
    */
   CAEC_Fallback_Part: "Частина тіла / захист",
   /** photos */
@@ -613,8 +659,13 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Seed: "Насіння",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Пакет насіння",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Куріння",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Куріння"
+   */
+  CAEC_Fallback_Smoking: "Куріння",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Іграшка",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */

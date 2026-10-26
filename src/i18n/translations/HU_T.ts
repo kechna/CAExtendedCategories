@@ -128,8 +128,8 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_ItemCat_Fishing = "Horgászás"
+   *   IGUI_CraftCategory_Fishing = "Horgászás"
    *   ContextMenu_Fishing = "Horgászás"
-   *   IGUI_CraftCategory_Fishing = "Horgászat"
    */
   CAEC_Fallback_Fishing: "Horgászás",
   /**
@@ -260,7 +260,12 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Weapon: "Fegyver",
   /** axe weapon skill */
   CAEC_Fallback_Axe: "Balta",
-  /** blacksmith skill */
+  /**
+   * blacksmith skill
+   *
+   * found in-game:
+   *   ContextMenu_Blacksmith = "Kovácsolás"
+   */
   CAEC_Fallback_Blacksmith: "Kovácsolás",
   /** long blunt weapon skill */
   CAEC_Fallback_Blunt: "Ütőfegyver",
@@ -287,6 +292,7 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_CraftCategory_Farming = "Gazdálkodás"
+   *   ContextMenu_Farming = "Gazdálkodás"
    */
   CAEC_Fallback_Farming: "Gazdálkodás",
   /** knapping skill */
@@ -295,13 +301,25 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Foraging: "Gyűjtögetés",
   /** glassmaking skill */
   CAEC_Fallback_Glassmaking: "Üvegkészítés",
+  /**
+   * animal husbandry/care skill
+   *
+   * found in-game:
+   *   IGUI_perks_Husbandry = "Állattartás"
+   */
+  CAEC_Fallback_Husbandry: "Állattartás",
   /** long blade weapon skill */
   CAEC_Fallback_LongBlade: "Hosszú szúrófegyver",
   /** maintenance skill for maintaining and repairing tools and weapons */
   CAEC_Fallback_Maintenance: "Karbantartás",
   /** masonry skill */
   CAEC_Fallback_Masonry: "Kőművesség",
-  /** mechanics skill, vehicle maintenance */
+  /**
+   * mechanics skill, vehicle maintenance
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Mechanics = "Szerelés"
+   */
   CAEC_Fallback_Mechanics: "Szerelés",
   /** metalworking skill (for items that are relevant in both welding and blacksmith */
   CAEC_Fallback_Metalworking: "Fémmegmunkálás",
@@ -457,8 +475,14 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Drum: "Dobtár",
   /** explosives such as pipe bombs and molotovs, and the ammo for them */
   CAEC_Override_Explosive: "Robbanószer",
-  /** firearm category, pistols, rifles, shotguns, etc. */
-  CAEC_Override_Firearm: "Lőfegyver",
+  /**
+   * firearm category, pistols, rifles, shotguns, etc.
+   *
+   * found in-game:
+   *   IGUI_perks_Firearm = "Lőfegyver"
+   *   IGUI_ItemCat_Firearm = "Lőfegyver"
+   */
+  CAEC_Fallback_Firearm: "Lőfegyver",
   /** pistols and handguns */
   CAEC_Fallback_Handgun: "Pisztoly",
   /** firearm magazines */
@@ -476,7 +500,12 @@ export const HU: ExternalTranslations = {
    *   ContextMenu_FoodType_Beer = "Sör"
    */
   CAEC_Fallback_Beer: "Sör",
-  /** top-level category for drinkable liquids */
+  /**
+   * top-level category for drinkable liquids
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Beverage = "Ital"
+   */
   CAEC_Fallback_Beverage: "Ital",
   /** mixed alcoholic drinks */
   CAEC_Override_Cocktail: "Koktél",
@@ -500,8 +529,13 @@ export const HU: ExternalTranslations = {
    *   ContextMenu_FoodType_Juice = "Gyümölcslé"
    */
   CAEC_Fallback_Juice: "Gyümölcslé",
-  /** top-level category for non-drinkable liquids, and used in 'Container - Liquid' */
-  CAEC_Override_Liquid: "Folyadék",
+  /**
+   * top-level category for non-drinkable liquids, and used in 'Container - Liquid'
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Liquid = "Folyadék"
+   */
+  CAEC_Fallback_Liquid: "Folyadék",
   /**
    * dairy milk
    *
@@ -572,14 +606,24 @@ export const HU: ExternalTranslations = {
    *   ContextMenu_FoodType_AnimalFeed = "Állateledel"
    */
   CAEC_Fallback_AnimalFeed: "Állateledel",
-  /** bicycles! for the fantastic bicycle mod */
-  CAEC_Override_Bicycle: "Kerékpár",
+  /**
+   * bicycles! for the fantastic bicycle mod
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Bicycle = "Kerékpár"
+   */
+  CAEC_Fallback_Bicycle: "Kerékpár",
   /** for items to clean yourself or your base */
   CAEC_Override_Cleaning: "Takarítás",
   /** compostable items such as animal dung, to be put in a composter */
   CAEC_Override_Compostable: "Komposztálható",
-  /** construction and renovation supplies such as paint, plaster and wallpaper */
-  CAEC_Override_Construction: "Építkezés",
+  /**
+   * construction and renovation supplies such as paint, plaster and wallpaper
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Construction = "Építkezés"
+   */
+  CAEC_Fallback_Construction: "Építkezés",
   /** handmade, artisan items. used for player-made weapons (not food) */
   CAEC_Override_Crafted: "Kézműves",
   /** items such as cups, mugs, glasses */
@@ -595,6 +639,7 @@ export const HU: ExternalTranslations = {
    *
    * found in-game:
    *   IGUI_health_Part = "Testrész"
+   *   IGUI_ItemCat_Part = "Testrész"
    */
   CAEC_Fallback_Part: "Testrész",
   /** photos */
@@ -612,8 +657,13 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Seed: "Mag",
   /** packet of plantable seeds for gardening/farming */
   CAEC_Override_SeedPacket: "Magcsomag",
-  /** smoking items such as cigarettes, cigars, pipes */
-  CAEC_Override_Smoking: "Dohányzás",
+  /**
+   * smoking items such as cigarettes, cigars, pipes
+   *
+   * found in-game:
+   *   IGUI_ItemCat_Smoking = "Dohányzás"
+   */
+  CAEC_Fallback_Smoking: "Dohányzás",
   /** toys, such as toy cars and action figures, and toy guns and their ammo */
   CAEC_Override_Toy: "Játék",
   /** small decorative items, usually mementos, such as figurines, keychains, charms */
