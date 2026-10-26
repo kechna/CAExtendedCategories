@@ -32,3 +32,9 @@ link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfil
 [ v1.11.1 - 10/25/26 ]
 - categorize equippable bags and InventoryContainer instances as containers
 [ ------ ]
+
+[ v1.11.2 - 10/26/26 ]
+- add missing translations for animal care, writing, cleaning, construction and parts in several languages
+- fix wrong Dutch translations for bows and drums, and Spanish and Portuguese translations for parts
+- use the game's own translation for skill books when available
+[ ------ ]
