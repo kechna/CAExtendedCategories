@@ -343,6 +343,12 @@ export const FI: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Hitsaaminen"
    */
   CAEC_Fallback_Welding: "Hitsaaminen",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metalli",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Kivi",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Puu",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Käsivarret",
   /** lower body clothing, pants, shorts, skirts */
@@ -444,6 +450,8 @@ export const FI: ExternalTranslations = {
   CAEC_Fallback_Staple: "Peruselintarvike",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Aikuinen",
+  /** regular books */
+  CAEC_Fallback_Book: "Kirja",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Esite",
   /** comic books */

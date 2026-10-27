@@ -343,6 +343,12 @@ export const PTBR: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Soldagem"
    */
   CAEC_Fallback_Welding: "Soldagem",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metal",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Pedra",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Madeira",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Braços",
   /** lower body clothing, pants, shorts, skirts */
@@ -444,6 +450,8 @@ export const PTBR: ExternalTranslations = {
   CAEC_Fallback_Staple: "Alimento básico",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adulto",
+  /** regular books */
+  CAEC_Fallback_Book: "Livro",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Folheto",
   /** comic books */

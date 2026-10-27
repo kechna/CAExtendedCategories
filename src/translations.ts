@@ -12,6 +12,7 @@ const FIREARMS = "firearms";
 const FOOD = "food";
 const LIQUIDS = "liquids";
 const LITERATURE = "literature";
+const MATERIALS = "materials";
 const MISC = "misc";
 const SKILLS = "skills";
 
@@ -121,6 +122,10 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   [SKILLS, Skill.Welding, "welding skill", Z],
   [SKILLS, Skill.Metalworking, "metalworking skill (for items that are relevant in both welding and blacksmith", Z],
 
+  [MATERIALS, "Metal", "raw metal materials such as sheet metal, scrap metal, pipes and wire", A],
+  [MATERIALS, "Stone", "raw stone materials such as stones, rocks and limestone", A],
+  [MATERIALS, "Wood", "raw wood materials such as planks, logs and branches", A],
+
   // [APPAREL, "Bag", "containers that can be on the body, such as backpacks and satchels", A],
   [APPAREL, "Arms", "items worn on the arms (but not hands), like watches, shoulder pads or arm guards", A],
   [APPAREL, "Bottom", "lower body clothing, pants, shorts, skirts", A],
@@ -162,6 +167,7 @@ export const TRANSLATIONS_ARR: readonly entry[] = [
   // [FOOD,  "Thickener", "food thickening agents, e.g. cornstarch, flour", Z,],
 
   [LITERATURE, "Adult", "adult-oriented content (hottiez magazines)", A],
+  [LITERATURE, "Book", "regular books", Z],
   [LITERATURE, "Brochure", "informational brochures", Z],
   [LITERATURE, "Comic", "comic books", Z],
   [LITERATURE, "Consumable", "consumable reading materials such as crossword and wordsearch magazines", Z],

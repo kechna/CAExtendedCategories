@@ -344,6 +344,12 @@ export const TH: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "งานเชื่อม"
    */
   CAEC_Fallback_Welding: "งานเชื่อม",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "โลหะ",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "หิน",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "ไม้",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "แขน",
   /** lower body clothing, pants, shorts, skirts */
@@ -445,6 +451,8 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Staple: "อาหารหลัก",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "ผู้ใหญ่",
+  /** regular books */
+  CAEC_Fallback_Book: "หนังสือ",
   /** informational brochures */
   CAEC_Fallback_Brochure: "โบรชัวร์",
   /** comic books */

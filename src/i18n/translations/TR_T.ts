@@ -344,6 +344,12 @@ export const TR: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Metal İşleme"
    */
   CAEC_Fallback_Welding: "Kaynakçılık",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metal",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Taş",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Ahşap",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Kollar",
   /** lower body clothing, pants, shorts, skirts */
@@ -445,6 +451,8 @@ export const TR: ExternalTranslations = {
   CAEC_Fallback_Staple: "Kuru Gıda",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Yetişkin",
+  /** regular books */
+  CAEC_Fallback_Book: "Kitap",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Broşür",
   /** comic books */

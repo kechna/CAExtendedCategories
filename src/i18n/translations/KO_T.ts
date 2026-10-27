@@ -345,6 +345,12 @@ export const KO: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "용접"
    */
   CAEC_Fallback_Welding: "용접",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "금속",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "석재",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "목재",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "팔",
   /** lower body clothing, pants, shorts, skirts */
@@ -446,6 +452,8 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Staple: "주식",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "성인",
+  /** regular books */
+  CAEC_Fallback_Book: "책",
   /** informational brochures */
   CAEC_Fallback_Brochure: "안내 책자",
   /** comic books */

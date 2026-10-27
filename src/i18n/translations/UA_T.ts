@@ -344,6 +344,12 @@ export const UA: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Зварювання"
    */
   CAEC_Fallback_Welding: "Зварювання",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Метал",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Камінь",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Деревина",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Передпліччя",
   /** lower body clothing, pants, shorts, skirts */
@@ -445,6 +451,8 @@ export const UA: ExternalTranslations = {
   CAEC_Fallback_Staple: "Базові продукти",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Для дорослих",
+  /** regular books */
+  CAEC_Fallback_Book: "Книга",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Брошура",
   /** comic books */

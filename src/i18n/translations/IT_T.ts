@@ -343,6 +343,12 @@ export const IT: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Saldatura"
    */
   CAEC_Fallback_Welding: "Saldatura",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metallo",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Pietra",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Legno",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Braccia",
   /** lower body clothing, pants, shorts, skirts */
@@ -444,6 +450,8 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Staple: "Alimenti di base",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adulti",
+  /** regular books */
+  CAEC_Fallback_Book: "Libro",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Opuscolo",
   /** comic books */

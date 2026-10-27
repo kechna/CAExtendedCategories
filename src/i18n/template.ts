@@ -14,6 +14,7 @@
  * Which translations from the game are searched for differs for each individual key.
  */
 export const TRANSLATIONS = {
+
   /* ===== vanilla categories ===== */
 
   /* accessories such as watches, necklaces, belts, gloves */
@@ -142,6 +143,15 @@ export const TRANSLATIONS = {
   /* welding skill */
   CAEC_Fallback_Welding: "Welding",
 
+  /* ===== materials ===== */
+
+  /* raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metal",
+  /* raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Stone",
+  /* raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Wood",
+
   /* ===== apparel ===== */
 
   /* items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
@@ -216,6 +226,8 @@ export const TRANSLATIONS = {
 
   /* adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adult",
+  /* regular books */
+  CAEC_Fallback_Book: "Book",
   /* informational brochures */
   CAEC_Fallback_Brochure: "Brochure",
   /* comic books */

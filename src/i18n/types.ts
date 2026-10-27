@@ -16,6 +16,7 @@ export type TranslationNames =
   | "Bicycle"
   | "Blacksmith"
   | "Blunt"
+  | "Book"
   | "Bottom"
   | "Bow"
   | "Box"
@@ -98,6 +99,7 @@ export type TranslationNames =
   | "Meat"
   | "Mechanics"
   | "Memento"
+  | "Metal"
   | "Metalworking"
   | "Milk"
   | "Neck"
@@ -139,6 +141,7 @@ export type TranslationNames =
   | "Spice"
   | "Sports"
   | "Staple"
+  | "Stone"
   | "Tailoring"
   | "Tea"
   | "Tool"
@@ -157,6 +160,7 @@ export type TranslationNames =
   | "Wearable"
   | "Welding"
   | "Wine"
+  | "Wood"
   | "Writing";
 export type TranslationKeys = `CAEC_Fallback_${TranslationNames}` | `CAEC_Override_${TranslationNames}`;
 

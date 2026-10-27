@@ -311,6 +311,12 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Tracking: "Pagsubaybay ng Bakas",
   /** welding skill */
   CAEC_Fallback_Welding: "Pagwewelding",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metal",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Bato",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Kahoy",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Braso",
   /** lower body clothing, pants, shorts, skirts */
@@ -377,6 +383,8 @@ export const PH: ExternalTranslations = {
   CAEC_Fallback_Staple: "Pangunahing Pagkain",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Pang-adulto",
+  /** regular books */
+  CAEC_Fallback_Book: "Aklat",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Polyeto",
   /** comic books */

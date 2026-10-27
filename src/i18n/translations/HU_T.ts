@@ -342,6 +342,12 @@ export const HU: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Hegesztés"
    */
   CAEC_Fallback_Welding: "Hegesztés",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Fém",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Kő",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Fa",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Karok",
   /** lower body clothing, pants, shorts, skirts */
@@ -443,6 +449,8 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Staple: "Alapélelmiszer",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Felnőtt",
+  /** regular books */
+  CAEC_Fallback_Book: "Könyv",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Brosúra",
   /** comic books */

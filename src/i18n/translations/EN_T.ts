@@ -343,6 +343,12 @@ export const EN: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Welding"
    */
   CAEC_Fallback_Welding: "Welding",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Metal",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Stone",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Wood",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Arms",
   /** lower body clothing, pants, shorts, skirts */
@@ -444,6 +450,8 @@ export const EN: ExternalTranslations = {
   CAEC_Fallback_Staple: "Staple",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Adult",
+  /** regular books */
+  CAEC_Fallback_Book: "Book",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Brochure",
   /** comic books */

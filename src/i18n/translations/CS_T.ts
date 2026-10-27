@@ -373,6 +373,12 @@ export const CS: ExternalTranslations = {
    *   IGUI_CraftCategory_Welding = "Svařování"
    */
   CAEC_Fallback_Welding: "Svařování",
+  /** raw metal materials such as sheet metal, scrap metal, pipes and wire */
+  CAEC_Override_Metal: "Kov",
+  /** raw stone materials such as stones, rocks and limestone */
+  CAEC_Override_Stone: "Kámen",
+  /** raw wood materials such as planks, logs and branches */
+  CAEC_Override_Wood: "Dřevo",
   /** items worn on the arms (but not hands), like watches, shoulder pads or arm guards */
   CAEC_Override_Arms: "Paže",
   /** lower body clothing, pants, shorts, skirts */
@@ -474,6 +480,8 @@ export const CS: ExternalTranslations = {
   CAEC_Fallback_Staple: "Základní potraviny",
   /** adult-oriented content (hottiez magazines) */
   CAEC_Override_Adult: "Pro dospělé",
+  /** regular books */
+  CAEC_Fallback_Book: "Kniha",
   /** informational brochures */
   CAEC_Fallback_Brochure: "Brožura",
   /** comic books */
