@@ -38,3 +38,8 @@ link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfil
 - fix wrong Dutch translations for bows and drums, and Spanish and Portuguese translations for parts
 - use the game's own translation for skill books when available
 [ ------ ]
+
+[ v1.11.3 - 10/27/26 ]
+- add missing compound translations for Stone, Wood, Metal and Book
+- add placeholder actiongroups and AnimSets folders to avoid warnings on servers
+[ ------ ]
