@@ -43,3 +43,17 @@ link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfil
 - add missing compound translations for Stone, Wood, Metal and Book
 - add placeholder actiongroups and AnimSets folders to avoid warnings on servers
 [ ------ ]
+
+[ v1.12.0 - 10/28/26 ]
+- add meal category for burgers, tacos, sandwiches and other savory meals
+- add food - preparation category for inedible food that still needs cooking or fermenting
+- add fishing bait category
+- categorize hot drinks, tea bags, milkshakes and pickle juice as beverages
+- categorize mixes, batters, pancake mix and pie dough as baking
+- categorize canned food from mods by its open-can recipe
+- categorize inedible crops like wheat sheaves as farming materials
+- categorize sealed packages by what's inside
+- change honey, sesame oil and vinegar to condiments and heavy cream to dairy
+- fix old vfx batters showing as perishable
+- make tire piece generic material
+[ ------ ]
