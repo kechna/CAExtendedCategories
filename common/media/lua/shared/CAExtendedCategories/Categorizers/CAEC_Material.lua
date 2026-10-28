@@ -60,6 +60,8 @@ Material.ItemsMap = {
 	["Base.Drawer"] = Type.Carpentry,
 
 	["Base.BarbedWire"] = Type.Weapon,
+
+	["Base.TirePiece"] = Type.Other,
 }
 
 ---@type table<CAEC_MaterialCategorizer.MaterialType, ItemTag[]>
@@ -120,7 +122,6 @@ Material.TagsMap = {
 		ItemTag.LEATHER_FUR_WET_MEDIUM,
 		ItemTag.LEATHER_FUR_WET_SMALL
 	),
-
 	[Type.Carpentry] = table.newarray(
 		ItemTag.CARPENTRY_CHISEL,
 		ItemTag.CRUDE_SAW,
@@ -193,8 +194,10 @@ function Material:categorize(item, instance)
 	---@type string | nil
 	local static = self.ItemsMap[item:getFullName()]
 
+  print(static)
+
 	local baseCategory = "Material"
-	local category = static and (baseCategory .. static) or nil
+	local category = static and (baseCategory .. static):gsub("Other$", "") or nil
 
 	if not category then
 		for i = 1, #TagPriorityOrder do
@@ -236,11 +239,11 @@ function Material:categorize(item, instance)
 			and (name:contains("Bar") or name:contains("Sheet") or name:contains("Scrap") or name:contains("Fragment"))
 		then
 			category = baseCategory .. Type.Metalworking
-		elseif item:hasTag(ItemTag.IS_FIRE_FUEL) then
-			category = baseCategory .. Type.Wood
 		elseif name:contains("Stone") then
-			-- stonemasonry materials without the stone tag (large stones, blocks, wheels)
+			-- stone masonry materials without the stone tag (large stones, blocks, wheels)
 			category = baseCategory .. Type.Stone
+    elseif item:hasTag(ItemTag.IS_FIRE_FUEL) then
+			category = baseCategory .. Type.Wood
 		elseif model then
 			if model:contains("RolledHide") or model:contains("FabricRoll") then
 				category = baseCategory .. Type.Tailoring
