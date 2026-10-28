@@ -287,7 +287,10 @@ function Utils.resolveAmmoType(id)
 	return resolveType(AmmoType, id)
 end
 
-local Hooks = {}
+-- global so a hot reload removes the handlers of the previous load, which still use the old categorizers
+CAEC_EventHooks = CAEC_EventHooks or {}
+
+local Hooks = CAEC_EventHooks
 
 function Utils.safeRegisterHook(event, hook)
 	if Hooks[event] then

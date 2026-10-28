@@ -405,9 +405,16 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Candy: "Makeiset",
   /** canned food items */
   CAEC_Override_Canned: "Säilykkeet",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Mauste"
+   */
+  CAEC_Fallback_Condiment: "Mauste",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Maitotuotteet",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Valmisruoka",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Pakaste",
@@ -429,8 +436,10 @@ export const FI: ExternalTranslations = {
   CAEC_Override_Perishable: "Pilaantuva",
   /** food for pets */
   CAEC_Fallback_PetFood: "Lemmikit",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Annos",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Ateria",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Valmistus",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Säilötty",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

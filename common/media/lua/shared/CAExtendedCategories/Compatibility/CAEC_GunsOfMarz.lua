@@ -5,6 +5,9 @@ local MOD_ID = "GunsOfMarz"
 
 if not Utils.modIsActive(MOD_ID) then return end
 
+Ammo._originalValidate = Ammo._originalValidate or Ammo.validate
+Ammo._originalCategorize = Ammo._originalCategorize or Ammo.categorize
+
 -- the ammo types are registered in CAEC_SWMG.lua
 
 ---@type table<string, CAEC_AmmoGroup>
@@ -37,11 +40,9 @@ local CaliberGroups = {
 ---@type table<string, string>
 local KindSuffixes = { Box = "Box", Carton = "Carton", Crate = "Carton" }
 
-local originalAmmoValidate = Ammo.validate
-
 --- GoM magazines and casings don't have the Ammo loot type
 function Ammo:validate(item, instance)
-  if originalAmmoValidate(self, item, instance) then return true end
+  if Ammo:_originalValidate(item, instance) then return true end
 
   if item:getModID() ~= MOD_ID then return false end
 
@@ -50,11 +51,9 @@ function Ammo:validate(item, instance)
   return displayCategory == "WeaponMagazine" or displayCategory == "Casings"
 end
 
-local originalAmmoCategorize = Ammo.categorize
-
 function Ammo:categorize(item, instance)
   if item:getModID() ~= MOD_ID then
-    return originalAmmoCategorize(self, item, instance)
+    return Ammo:_originalCategorize(item, instance)
   end
 
   local displayCategory = Utils.getOriginalCategory(item)
@@ -65,7 +64,7 @@ function Ammo:categorize(item, instance)
     local group = Ammo.getAmmoGroup(item:getAmmoType())
 
     if not group then
-      return originalAmmoCategorize(self, item, instance)
+      return Ammo:_originalCategorize(item, instance)
     end
 
     if name:lower():contains("drum") and group ~= Ammo.AmmoGroup.EXPLOSIVE then
@@ -79,7 +78,7 @@ function Ammo:categorize(item, instance)
   local group = caliber and CaliberGroups[caliber]
 
   if not group then
-    return originalAmmoCategorize(self, item, instance)
+    return Ammo:_originalCategorize(item, instance)
   end
 
   -- spent casings and shotgun hulls

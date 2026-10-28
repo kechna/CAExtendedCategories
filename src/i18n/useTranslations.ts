@@ -37,6 +37,11 @@ const KEYS_MAP: Record<string, string[]> = Object.freeze({
   Welding: [CRAFT_CAT, PERK],
 });
 
+// our key differs from the game's, so game translations are searched under the game's name
+const GAME_KEY_ALIASES: Record<string, string> = Object.freeze({
+  Condiment: "NoExplicit",
+});
+
 export const useTranslations = memoize(async (context: FullModContext, languages: readonly Language[]) => {
   const existingTranslations = await getGameTranslations();
   const allTranslations = mergeAllTranslations(context, existingTranslations);
@@ -84,8 +89,10 @@ export const useTranslations = memoize(async (context: FullModContext, languages
     const found: TranslationDef[] = [];
     const allSearchKeys = ["CAEC_Override_%s", ...searchKeys, "CAEC_Fallback_%s"];
 
+    const gameKey = GAME_KEY_ALIASES[key] ?? key;
+
     for (const searchKey of [...new Set(allSearchKeys)]) {
-      const k = searchKey.replace("%s", key);
+      const k = searchKey.replace("%s", searchKey.startsWith("CAEC_") ? key : gameKey);
       const translation = createdTranslations[language][k] ?? translate(allTranslations, k, language);
 
       if (translation) {

@@ -405,9 +405,16 @@ export const ES: ExternalTranslations = {
   CAEC_Fallback_Candy: "Caramelos",
   /** canned food items */
   CAEC_Override_Canned: "Enlatado",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Condimento"
+   */
+  CAEC_Fallback_Condiment: "Condimento",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Lácteos",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Plato",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Congelado",
@@ -429,8 +436,10 @@ export const ES: ExternalTranslations = {
   CAEC_Override_Perishable: "Perecedero",
   /** food for pets */
   CAEC_Fallback_PetFood: "Mascotas",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Porción",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Comida",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Preparación",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservado",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

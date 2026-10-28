@@ -68,7 +68,7 @@ export const createModTranslations = (async (
           context.logger.warn(`${fullKey}: "${text}" has more than ${MAX_CATEGORY_SEGMENTS} segments`);
         }
 
-        save(lang, fullKey, text);
+        save(lang, fullKey, missing.length && context.isDev ? fullKey : text);
       });
     });
   });
@@ -98,6 +98,11 @@ export const createModTranslations = (async (
     addOr("FoodPerishableHerb", PzCategory.FirstAid, language);
     addOr("FoodSpice", PzCategory.FirstAid, language);
     addOr("FoodPerishableSpice", PzCategory.FirstAid, language);
+
+    // edible bait, Balanced mode merges seafood into meat
+    ["FoodSeafood", "FoodPerishableSeafood", "FoodMeat", "FoodPerishableMeat"].forEach((category) => {
+      addOr(category, "FishingBait", language);
+    });
 
     addOr("WeaponPart", "WeaponSmallBlade", language);
     addOr("WeaponPart", "WeaponLongBlade", language);

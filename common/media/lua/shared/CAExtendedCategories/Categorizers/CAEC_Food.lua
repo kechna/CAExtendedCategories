@@ -1,10 +1,20 @@
 local Utils = require("CAExtendedCategories/CAEC_Utils")
 local Debug = require("CAExtendedCategories/CAEC_Debug")
+local Recipes = require("CAExtendedCategories/CAEC_Recipes")
+local BoxContents = require("CAExtendedCategories/CAEC_BoxContents")
 local FoodType = require("CAExtendedCategories/Data/CAEC_FoodType")
 local BoxesAndStacks = require("CAExtendedCategories/Categorizers/CAEC_BoxesAndStacks")
 local CAEC_ItemCategorizer = require("CAExtendedCategories/CAEC_ItemCategorizer")
 
 local BASE_CATEGORY = "Food"
+local BAIT_CATEGORY = "FishingBait"
+local FARMING_CATEGORY = "MaterialFarming"
+local CHUM_RECIPE = "AddBaitToChum"
+-- also matches mod variants such as "HotDrinkTea"
+local HOT_DRINK_RECIPE = "HotDrink"
+local DRINK_MENU = "Drink"
+-- the game's food type for items without one, mostly condiments
+local NO_EXPLICIT = "NoExplicit"
 
 ---@class CAEC_FoodCategorizer: CAEC_ItemCategorizer
 ---@field public categorize       fun(self: CAEC_ItemCategorizer, item: Item, instance: Food): (string | nil?, boolean?)
@@ -40,16 +50,18 @@ Food.TagMaps = {
   [FoodType.Bread] = nil,
   [FoodType.Candy] = nil,
   [FoodType.Canned] = nil,
-  [FoodType.Frozen] = nil,
+  [FoodType.Condiment] = nil,
+  [FoodType.Frozen] = table.newarray(ItemTag.GOOD_FROZEN),
   [FoodType.Meat] = nil,
-  [FoodType.NoExplicit] = nil,
   [FoodType.PetFood] = nil,
-  [FoodType.Portion] = nil,
+  [FoodType.Meal] = nil,
   [FoodType.Preserved] = nil,
   [FoodType.Produce] = nil
 }
 
 Food.FoodTypeMap = {
+  NoExplicit = nil,
+
   BakingFat = FoodType.Baking,
   Oil = FoodType.Baking,
   Sugar = FoodType.Baking,
@@ -74,12 +86,11 @@ Food.FoodTypeMap = {
   Sausage = FoodType.Meat,
   Venison = FoodType.Meat,
 
-  -- "NoExplicit" = Condiment
-  Cocoa = FoodType.NoExplicit,
-  Dressing = FoodType.NoExplicit,
-  Garnish = FoodType.NoExplicit,
-  Sauce = FoodType.NoExplicit,
-  Spread = FoodType.NoExplicit,
+  Cocoa = FoodType.Condiment,
+  Dressing = FoodType.Condiment,
+  Garnish = FoodType.Condiment,
+  Sauce = FoodType.Condiment,
+  Spread = FoodType.Condiment,
 
   CatFood = FoodType.PetFood,
   DogFood = FoodType.PetFood,
@@ -120,19 +131,41 @@ Food.FoodTypeMap = {
 
   -- generic modded names that may or may not exist in multiple mods
   Beans = FoodType.Staple,  -- vfx
-  Drink = FoodType._SKIP_,  -- vfx
+  Drink = FoodType.Beverage, -- vfx pickle juice
   Fruit = FoodType.Produce, -- vfx
   Salt = FoodType.Spice     -- sapph
 }
 
 -- static item -> food type map
 Food.ItemFoodTypeMap = {
-  -- is condiment by default
-  ["Base.Squash"] = FoodType.Produce
+  ["Base.ChickenFried"] = FoodType.Meat,
+  ["Base.PancakeMix"] = FoodType.Baking,
+  ["Base.Pumpkin"] = FoodType.Produce,
+  ["Base.PumpkinSliced"] = FoodType.Produce,
+  ["Base.PumpkinSmashed"] = FoodType.Produce,
+  ["Base.Squash"] = FoodType.Produce,
 }
 
 -- expose FoodType table for mods
 Food.FoodType = FoodType
+
+---@param item   Item
+---@param prefix string
+---@return boolean
+local function usesEvolvedRecipe(item, prefix)
+  local recipes = item:getEvolvedRecipe()
+
+  if not recipes then return false end
+
+  for i = 0, recipes:size() - 1 do
+    -- entries are "<recipe>:<amount>"
+    if recipes:get(i):sub(1, #prefix) == prefix then
+      return true
+    end
+  end
+
+  return false
+end
 
 ---@param item     Item
 ---@param instance Food?
@@ -142,8 +175,18 @@ function Food:validate(item, instance)
     return false
   end
 
-  if not instanceof(instance, "Food") or not item:isItemType(ItemType.FOOD) then
+  -- mixes, tea bags and packs the game lists as food without being food items
+  if not item:isItemType(ItemType.FOOD) then
+    return Utils.getOriginalCategory(item) == BASE_CATEGORY
+  end
+
+  if not instanceof(instance, "Food") then
     return false
+  end
+
+  -- hot drinks are tagged alcoholic because liquor can be added to them
+  if instance:getCustomMenuOption() == DRINK_MENU then
+    return true
   end
 
   return not Utils.hasAnyTag(item, Food.NonFoodTags)
@@ -195,7 +238,7 @@ function Food.registerFoodTypeTag(tag, foodType)
   end
 end
 
-local instanceSpecificFoodTypes = table.newarray(FoodType.Dish, FoodType.Portion)
+local instanceSpecificFoodTypes = table.newarray(FoodType.Dish, FoodType.Meal)
 
 -- food types checked first, in priority order (Dish is checked separately before these)
 local priorityFoodTypes = table.newarray(
@@ -207,6 +250,115 @@ local alreadyCheckedFoodTypes = {}
 
 for i = 1, #priorityFoodTypes do
   alreadyCheckedFoodTypes[priorityFoodTypes[i]] = true
+end
+
+alreadyCheckedFoodTypes[FoodType.Frozen] = true
+
+local SERVING_EAT_TYPES = { ["2handbowl"] = true, bowl = true, plate = true, ["2hand"] = true }
+
+---@param item Item
+---@return Item | nil
+local function getLeftover(item)
+  local name = item:getReplaceOnUse()
+
+  if not name then return nil end
+
+  local scriptManager = getScriptManager()
+
+  return scriptManager:FindItem(name) or scriptManager:FindItem(item:getModuleName() .. "." .. name)
+end
+
+-- what's left after eating tells the two apart: food in a pot or pan is a Dish to divide, food left in a bowl, plate
+-- or mug is a Meal
+---@param item     Item
+---@param instance Food
+---@param eatType  string | nil
+---@return CAEC_FoodType | nil
+local function getServingFoodType(item, instance, eatType)
+  if eatType == "pot" then
+    return FoodType.Dish
+  end
+
+  local isServed = eatType and SERVING_EAT_TYPES[eatType] and not instance:isSpice()
+
+  if not item:getReplaceOnUse() then
+    -- plated meals that leave nothing behind, whole cakes and pies get sliced in baking recipes instead
+    if isServed and eatType == "plate" and not Recipes.isUsedInBaking(item) then
+      return FoodType.Meal
+    end
+
+    return nil
+  end
+
+  local leftover = getLeftover(item)
+
+  -- some mods leave behind dishware that doesn't exist (SapphCooking's PlateFancy)
+  if not leftover then
+    return isServed and FoodType.Meal or nil
+  end
+
+  -- tin cans and buckets are metal too, but not cookware
+  if leftover:hasTag(ItemTag.HAS_METAL) then
+    return Utils.getOriginalLootType(leftover) == "Cookware" and FoodType.Dish or nil
+  end
+
+  -- a bowl of sauce is a condiment, not a portion
+  if not instance:isSpice() and (leftover:hasTag(ItemTag.BOWL) or isServed) then
+    return FoodType.Meal
+  end
+
+  return nil
+end
+
+local resolving = {}
+
+-- the food type of what an item unpacks or cooks into, for food without a type of its own
+---@param self     CAEC_FoodCategorizer
+---@param item     Item
+---@param target   string | nil
+---@return CAEC_FoodType | nil
+local function getFoodTypeOf(self, item, target)
+  local name = item:getFullName()
+
+  if not target or resolving[name] then return nil end
+
+  local targetItem = getScriptManager():FindItem(target)
+  local targetInstance = targetItem and Utils.createInstanceIfNeeded(targetItem)
+
+  if not targetInstance or not instanceof(targetInstance, "Food") then return nil end
+
+  ---@cast targetInstance Food
+  resolving[name] = true
+  local ok, foodType = pcall(self.getFoodType, self, targetItem, targetInstance)
+  resolving[name] = nil
+
+  if not ok or foodType == FoodType._SKIP_ or foodType == FoodType.Dish or foodType == FoodType.Meal then
+    return nil
+  end
+
+  return foodType
+end
+
+---@param instance Food
+---@return string | nil
+local function getCookedInto(instance)
+  local cooked = instance:getReplaceOnCooked()
+
+  return cooked and cooked:size() > 0 and cooked:get(0) or nil
+end
+
+-- evolved recipe bases also include tortillas and taco shells, only a filling base is a meal on its own
+local MEAL_BASE_HUNGER = 0.2
+
+---@param item     Item
+---@param instance Food
+---@return boolean
+local function isMeal(item, instance)
+  if item:isCantEat() then return false end
+
+  local role = Recipes.getMealRole(item)
+
+  return role == "result" or (role == "base" and -instance:getBaseHunger() >= MEAL_BASE_HUNGER)
 end
 
 function Food:getFoodType(item, instance)
@@ -221,19 +373,34 @@ function Food:getFoodType(item, instance)
     return mapped, false
   end
 
+  local gameFoodType = instance:getFoodType()
+  -- validate already turned fluid containers away, so whatever has the drink menu here is drunk from the item itself
+  local isDrink = instance:getCustomMenuOption() == DRINK_MENU and not instance:isSpice() and not item:isCantEat()
+
+  -- before the eat type checks, batters are eaten from bowls
+  if (not gameFoodType or gameFoodType == NO_EXPLICIT) and Recipes.isBakingIngredient(item) then
+    return FoodType.Baking, false
+  end
+
   if eatType then eatType = eatType:lower() end
 
   if eatType == "bottle" or item:getPourType() == "Mug" then
+    -- hot drinks are food, not a fluid in a mug, broths are drunk too but are spices to the game
+    if isDrink then
+      return FoodType.Beverage, false
+    end
+
     return FoodType._SKIP_, true
   end
 
-  if eatType and ("2handbowl" == eatType or "bowl" == eatType or "plate" == eatType or "2hand" == eatType) then
-    foodType = FoodType.Portion
-  elseif eatType == "pot"
-    or (eatType ~= "candrink" and not item:hasTag(ItemTag.PRESERVED_FOOD)
-      and item:hasTag(ItemTag.HAS_METAL) and item:isIsCookable()) then
-    foodType = FoodType.Dish
-  else
+  if Utils.hasAnyTag(item, tagMaps[FoodType.Frozen]) then
+    return FoodType.Frozen, false
+  end
+
+  -- a hot drink in a metal mug is no dish
+  foodType = not isDrink and getServingFoodType(item, instance, eatType) or nil
+
+  if not foodType then
     for i = 1, #priorityFoodTypes do
       ---@type CAEC_FoodType
       local key = priorityFoodTypes[i]
@@ -247,7 +414,7 @@ function Food:getFoodType(item, instance)
   end
 
   ---@cast foodType CAEC_FoodType or nil
-  foodType = foodType or instance:getFoodType()
+  foodType = foodType or gameFoodType
 
   if not foodType then
     if item:hasTag(ItemTag.PRESERVED_FOOD) then
@@ -261,8 +428,8 @@ function Food:getFoodType(item, instance)
         end
       end
     end
-  elseif foodType == FoodType.NoExplicit and item:getName():lower():contains("choco") then
-    -- Some chocolate items are tagged as condiments
+  elseif foodType == NO_EXPLICIT and item:getName():lower():contains("choco") then
+    -- catch chocolate items
     foodType = FoodType.Candy
     -- elseif
     -- lipids ^ , unhappiness ^ thirst ^
@@ -271,32 +438,65 @@ function Food:getFoodType(item, instance)
   ---@type CAEC_FoodType | nil
   local resolved = Food.FoodTypeMap[foodType] or foodType
 
+  -- milk and juice are skipped for FluidContainer, but opened cans of them aren't fluid containers
+  if resolved == FoodType._SKIP_ and isDrink then
+    resolved = FoodType.Beverage
+  end
+
   if resolved == FoodType._SKIP_ then
     return resolved, false
   elseif resolved and nil == FoodType[resolved] then
-    self:log(
-      "Unrecognized food type '" .. tostring(resolved) .. "' for item: " .. item:getFullName(), Debug.Level.Warning
-    )
+    if resolved ~= "NoExplicit" then
+      self:log(
+        "Unrecognized food type '" .. tostring(resolved) .. "' for item: " .. item:getFullName(),
+        Debug.Level.Warning
+      )
+    end
+
     resolved = nil
   end
 
-  if instance:isSpice() then
+  if instance:isSpice() and resolved ~= FoodType.Herb then
     -- resolve condiments/spices and stock
     -- condiments are spices to the game too, so only dried ones count as spice
-    if item:hasTag(ItemTag.DRIED_FOOD) and resolved ~= FoodType.Herb then
+    if item:hasTag(ItemTag.DRIED_FOOD) then
       -- includes bouillon cubes
       resolved = FoodType.Spice
-    elseif not resolved and item:hasTag(ItemTag.MINOR_INGREDIENT) then
-      resolved = FoodType.NoExplicit
+    elseif not resolved then
+      resolved = FoodType.Condiment
     end
-  elseif item:hasTag(ItemTag.HAS_METAL) and Utils.getOriginalLootType(item) == "CannedFood" then
+  elseif not instance:canAge() and not isDrink
+    and (Recipes.isCannedFood(item)
+      or (item:hasTag(ItemTag.HAS_METAL) and Utils.getOriginalLootType(item) == "CannedFood")) then
     resolved = FoodType.Canned
   elseif item:hasTag(ItemTag.VERMIN) or instance:getCustomEatSound() == "EatingDeadAnimal" then
     resolved = FoodType.Meat
   end
 
-  if not resolved and not item:isCantEat() then
+  if not resolved then
+    resolved = getFoodTypeOf(self, item, BoxContents.getFoodContents(item:getFullName()))
+  end
+
+  if not resolved then
+    resolved = getFoodTypeOf(self, item, getCookedInto(instance))
+
+    -- dough that bakes into bread
+    if resolved == FoodType.Bread then
+      resolved = FoodType.Baking
+    end
+  end
+
+  if not resolved and item:isCantEat() then
+    resolved = getFoodTypeOf(self, item, Recipes.getOpenedInto(item))
+  elseif not resolved and isDrink then
+    -- condiments and pots of stew have the drink menu too, so only as a last resort
+    resolved = FoodType.Beverage
+  elseif not resolved then
     resolved = self:guessFoodOrSnack(item, instance)
+  end
+
+  if (not resolved or resolved == FoodType.Snack) and isMeal(item, instance) then
+    resolved = FoodType.Meal
   end
 
   return resolved, false
@@ -312,44 +512,19 @@ function Food:guessFoodOrSnack(item, instance)
   local unhappiness = instance:getUnhappyChangeUnmodified()
 
   if unhappiness > 0 then
-    -- self:log("probably not meant for eating: " .. item:getFullName() .. " (unhappiness: " .. tostring(unhappiness) .. ")", Debug.Level.Info)
     return nil
   end
 
   local thirst = round(instance:getThirstChange() / weight, 1)
 
   if thirst > 1 then
-    -- self:log("probably not meant for eating: " .. item:getFullName() .. " (thirst: " .. tostring(thirst) .. ")", Debug.Level.Info)
     return nil
   end
 
   local calories = round(instance:getCalories() / weight, 1)
-  -- local carbs = round(instance:getCarbohydrates() / weight, 1)
-  -- local lipids = round(instance:getLipids() / weight, 1)
   local proteins = round(instance:getProteins() / weight, 1)
-  -- local hunger = round(instance:getHungerChange() / weight, 1)
-
-  -- print(string.format(
-  --  "guessFoodOrSnack: %s (calories: %s, hunger: %s, thirst: %s, unhappiness: %s)",
-  --  item:getFullName(),
-  --  tostring(calories),
-  --  tostring(hunger),
-  --  tostring(thirst),
-  --  tostring(unhappiness)
-  -- ))
 
   if calories >= 300 and unhappiness <= 0 then
-    -- self:log(string.format(
-    --  "  %s -- caloric density: %s (carbs: %s, lipids: %s, proteins: %s, unhappiness: %s)",
-    --  item:getName(),
-    --  tostring(round(calories, 2)),
-    --  tostring(round(weight, 2)),
-    --  tostring(round(carbs, 2)),
-    --  tostring(round(lipids, 2)),
-    --  tostring(round(proteins, 2)),
-    --  tostring(round(unhappiness, 2))
-    -- ))
-
     if proteins > 0.0 then
       return FoodType.Snack
     else
@@ -360,12 +535,54 @@ function Food:guessFoodOrSnack(item, instance)
   return nil
 end
 
+
+---@param self CAEC_FoodCategorizer
+---@param item Item
+---@return string | nil
+local function categorizeNonFood(self, item)
+  if usesEvolvedRecipe(item, HOT_DRINK_RECIPE) then
+    return BASE_CATEGORY .. FoodType.Beverage
+  end
+
+  if Recipes.isMadeIntoCookable(item) then
+    return BASE_CATEGORY .. FoodType.Baking
+  end
+
+  local target = Recipes.getUnpackedInto(item)
+  local targetItem = target and getScriptManager():FindItem(target)
+
+  return targetItem and self:resolveCategory(item, targetItem) or nil
+end
+
 function Food:categorize(item, instance)
+  if not instanceof(instance, "Food") then
+    return categorizeNonFood(self, item), false
+  end
+
   local foodType, instanceSpecific = self:getFoodType(item, instance)
 
   if FoodType._SKIP_ == foodType then
-    -- self:log("skipping: " .. item:getFullName(), Debug.Level.Info)
     return nil, true
+  end
+
+  -- dedicated bait (tadpoles, leeches, fish guts) has no food type of its own
+  local isBait = not foodType and (instance:isFishingLure() or usesEvolvedRecipe(item, CHUM_RECIPE))
+
+  if isBait then
+    if item:isCantEat() then
+      return BAIT_CATEGORY, false
+    end
+
+    foodType = FoodType.Seafood
+  end
+
+  if item:isCantEat() then
+    -- crops like wheat sheaves and grain get processed, not cooked, the game calls the grain a seed (snack)
+    if (not foodType or foodType == FoodType.Snack) and Recipes.isFarmingInput(item) then
+      return FARMING_CATEGORY, false
+    end
+
+    foodType = foodType or FoodType.Preparation
   end
 
   ---@type string | nil
@@ -390,6 +607,10 @@ function Food:categorize(item, instance)
     if boxed then
       category = boxed
     end
+  end
+
+  if isBait then
+    category = category .. "__" .. BAIT_CATEGORY
   end
 
   -- not item:isMedicalLoot(), that reads the display category CAEC replaces

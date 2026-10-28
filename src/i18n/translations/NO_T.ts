@@ -404,9 +404,16 @@ export const NO: ExternalTranslations = {
   CAEC_Fallback_Candy: "Godteri",
   /** canned food items */
   CAEC_Override_Canned: "Hermetikk",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Tilbehør"
+   */
+  CAEC_Fallback_Condiment: "Tilbehør",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Meieriprodukter",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Ferdigretter",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Frossen",
@@ -428,8 +435,10 @@ export const NO: ExternalTranslations = {
   CAEC_Override_Perishable: "Lett bedervelig",
   /** food for pets */
   CAEC_Fallback_PetFood: "Kjæledyr",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Porsjon",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Måltid",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Tilberedning",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Konservert",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

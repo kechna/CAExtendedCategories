@@ -406,9 +406,16 @@ export const TH: ExternalTranslations = {
   CAEC_Fallback_Candy: "ลูกกวาด",
   /** canned food items */
   CAEC_Override_Canned: "กระป๋อง",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "เครื่องปรุง"
+   */
+  CAEC_Fallback_Condiment: "เครื่องปรุง",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "ผลิตภัณฑ์นม",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "อาหารจานหลัก",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "อาหารแช่แข็ง",
@@ -430,8 +437,10 @@ export const TH: ExternalTranslations = {
   CAEC_Override_Perishable: "เน่าเสียง่าย",
   /** food for pets */
   CAEC_Fallback_PetFood: "สัตว์เลี้ยง",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "หนึ่งที่",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "มื้ออาหาร",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "การเตรียม",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "ถนอมอาหาร",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

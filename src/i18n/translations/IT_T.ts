@@ -405,9 +405,16 @@ export const IT: ExternalTranslations = {
   CAEC_Fallback_Candy: "Caramella",
   /** canned food items */
   CAEC_Override_Canned: "In scatola",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Condimento"
+   */
+  CAEC_Fallback_Condiment: "Condimento",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Latticini",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Piatti pronti",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Surgelati",
@@ -429,8 +436,10 @@ export const IT: ExternalTranslations = {
   CAEC_Override_Perishable: "Deperibile",
   /** food for pets */
   CAEC_Fallback_PetFood: "Animali domestici",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Porzione",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Pasto",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Preparazione",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservato",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

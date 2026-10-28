@@ -17,12 +17,12 @@ Static.ItemsMap = {
   ["Base.Yeast"]         = "FoodBaking",
   ["Base.BakingSoda"]    = "FoodBaking",
   ["Base.Peppermint"]    = "FoodCandy",
-  ["Base.Honey"]         = "FoodNoExplicit",
+  ["Base.Honey"]         = "FoodCondiment",
   ["Base.BunsHotdog"]    = "FoodPerishableBread",
   ["Base.BunsHamburger"] = "FoodPerishableBread",
   ["Base.Pepper"]        = "FoodSpice",
   -- tagged as dried food, which would make it a spice
-  ["Base.SesameOil"]     = "FoodNoExplicit",
+  ["Base.SesameOil"]     = "FoodCondiment",
 
   ["Base.HottieZ"]          = "LiteratureAdult",
   ["Base.HottieZ_New"]      = "LiteratureAdult",

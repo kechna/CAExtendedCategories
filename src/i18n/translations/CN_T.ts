@@ -406,9 +406,16 @@ export const CN: ExternalTranslations = {
   CAEC_Fallback_Candy: "糖果",
   /** canned food items */
   CAEC_Override_Canned: "罐头",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "调味品"
+   */
+  CAEC_Fallback_Condiment: "调味品",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "乳制品",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "料理",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "冷冻",
@@ -430,8 +437,10 @@ export const CN: ExternalTranslations = {
   CAEC_Override_Perishable: "易腐",
   /** food for pets */
   CAEC_Override_PetFood: "宠物粮",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "分装",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "餐点",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "备料",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "包装食品",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

@@ -406,9 +406,16 @@ export const TR: ExternalTranslations = {
   CAEC_Override_Candy: "Şekerleme",
   /** canned food items */
   CAEC_Override_Canned: "Konserve",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Çeşni"
+   */
+  CAEC_Fallback_Condiment: "Çeşni",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Süt Ürünleri",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Yemek",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Dondurulmuş",
@@ -430,8 +437,10 @@ export const TR: ExternalTranslations = {
   CAEC_Override_Perishable: "Bozulabilir",
   /** food for pets */
   CAEC_Fallback_PetFood: "Evcil Hayvan Yemi",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Porsiyon",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Öğün",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Hazırlık",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Kavanozlanmış",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

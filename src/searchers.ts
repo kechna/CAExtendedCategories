@@ -130,6 +130,11 @@ export const searchers: Searcher[] = [
   },
 
   {
+    prefix: PzCategory.Fishing,
+    categories: ["Bait"],
+  },
+
+  {
     prefix: "Husbandry",
     categories: ["Food"],
     searchKeys: ["IGUI_health_%s", "IGUI_ItemCat_%s"],

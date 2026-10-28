@@ -28,9 +28,9 @@ const modeMatchers: { search: RegExp; balanced?: string; lite?: string }[] = [
   // food
   { search: /(?<=^Food(?:Perishable)?)Seafood/, balanced: "Meat" },
   { search: /(?<=^Food(?:Perishable)?)Candy/, balanced: "Snack" },
-  { search: /(?<=^Food(?:Perishable)?)NoExplicit/, balanced: "Spice" },
+  { search: /(?<=^Food(?:Perishable)?)Condiment/, balanced: "Spice" },
   { search: /(?<=^Food(?:Perishable)?)Preserved/, lite: "Canned" },
-  { search: /(?<=^Food(?:Perishable)?)Portion/, lite: "Dish" },
+  { search: /(?<=^Food(?:Perishable)?)Meal/, lite: "Dish" },
   { search: /(?<=^Food(?:Perishable)?)Baking/, lite: "Staple" },
 
   // beverages

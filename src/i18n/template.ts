@@ -185,6 +185,8 @@ export const TRANSLATIONS = {
 
   /* ===== food ===== */
 
+  /* fishing bait, such as tadpoles, leeches and fish guts */
+  CAEC_Override_Bait: "Bait",
   /* items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Baking",
   /* baked bread products */
@@ -193,22 +195,26 @@ export const TRANSLATIONS = {
   CAEC_Override_Candy: "Candy",
   /* canned food items */
   CAEC_Override_Canned: "Canned",
+  /* condiments such as sauces, dressings, spreads and toppings */
+  CAEC_Fallback_Condiment: "Condiment",
   /* dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Dairy",
-  /* prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /* prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Dish",
   /* frozen food, such as ice cream */
   CAEC_Override_Frozen: "Frozen",
   /* culinary or medicinal plants/herbs */
   CAEC_Fallback_Herb: "Herbs",
+  /* one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Meal",
   /* any non-fish meat */
   CAEC_Fallback_Meat: "Meat",
   /* food items that can spoil */
   CAEC_Override_Perishable: "Perishable",
   /* food for pets */
   CAEC_Fallback_PetFood: "Pets",
-  /* single serving portion of food */
-  CAEC_Override_Portion: "Portion",
+  /* inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Preparation",
   /* preserved food, such as jarred food */
   CAEC_Override_Preserved: "Preserved",
   /* fresh fruits, vegetables, mushrooms and hot peppers */

@@ -407,9 +407,16 @@ export const KO: ExternalTranslations = {
   CAEC_Fallback_Candy: "사탕",
   /** canned food items */
   CAEC_Override_Canned: "통조림",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "조미료"
+   */
+  CAEC_Fallback_Condiment: "조미료",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "유제품",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "요리",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "냉동식품",
@@ -431,8 +438,10 @@ export const KO: ExternalTranslations = {
   CAEC_Override_Perishable: "부패성",
   /** food for pets */
   CAEC_Fallback_PetFood: "반려동물",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "1인분",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "식사",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "준비 중",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "저장 식품",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

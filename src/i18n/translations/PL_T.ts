@@ -405,9 +405,16 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Candy: "Słodycze",
   /** canned food items */
   CAEC_Override_Canned: "Konserwa",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Przyprawa"
+   */
+  CAEC_Fallback_Condiment: "Przyprawa",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Nabiał",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Danie",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Mrożonki",
@@ -429,8 +436,10 @@ export const PL: ExternalTranslations = {
   CAEC_Override_Perishable: "Psujące się",
   /** food for pets */
   CAEC_Fallback_PetFood: "Karma",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Porcja",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Posiłek",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Przygotowanie",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Zakonserwowane",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

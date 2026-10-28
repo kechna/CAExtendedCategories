@@ -1,11 +1,13 @@
 local CAEC = require("CAExtendedCategories/CAEC")
 local Utils = require("CAExtendedCategories/CAEC_Utils")
-local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
 local Static = require("CAExtendedCategories/Categorizers/CAEC_Static")
+local Ammo = require("CAExtendedCategories/Categorizers/CAEC_Ammo")
 
 local MOD_ID = "GaelGunStore_B42"
 
 if not Utils.modIsActive(MOD_ID) then return end
+
+Ammo._originalCategorize = Ammo._originalCategorize or Ammo.categorize
 
 CAEC.registerInitHook("Mod:GaelGunStore", function ()
   Ammo.registerAmmoGroup("archerynexus:woodshaft_arrow", Ammo.AmmoGroup.BOW)
@@ -193,10 +195,8 @@ CAEC.registerInitHook("Mod:GaelGunStore", function ()
   Static.registerCategory("Base.GunAttParts", "ToolFirearm")
 end)
 
-local originalAmmoCategorize = Ammo.categorize
-
 function Ammo:categorize(item, instance)
-  local category = originalAmmoCategorize(self, item, instance)
+  local category = Ammo:_originalCategorize(item, instance)
 
   if item:getModID() ~= MOD_ID then
     return category

@@ -9,7 +9,9 @@ local Utils = require("CAExtendedCategories/CAEC_Utils")
 ---@field public new                  fun(self: CAEC_ItemCategorizer): CAEC_ItemCategorizer
 ---@field public execute              fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil, boolean?)
 ---@field public categorize           fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil, boolean?)
+---@field public _originalCategorize  fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): (string | nil, boolean?)
 ---@field public validate             fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): boolean
+---@field public _originalValidate    fun(self: CAEC_ItemCategorizer, item: Item, instance: InventoryItem): boolean
 ---@field public getVerbosity         fun(self: CAEC_ItemCategorizer): number
 ---@field public isDebug              fun(self: CAEC_ItemCategorizer): boolean
 ---@field public log                  fun(self: CAEC_ItemCategorizer, message: string, level?: number)

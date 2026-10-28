@@ -68,6 +68,8 @@ const TO_DELETE = [
   BaseFoodType.Milk,
   BaseFoodType.SoftDrink,
   BaseFoodType.Wine,
+
+  BaseFoodType.NoExplicit,
 ] as const;
 
 export const getFoodTypes = (): string[] => {

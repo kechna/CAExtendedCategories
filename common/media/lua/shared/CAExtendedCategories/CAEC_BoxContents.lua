@@ -9,6 +9,10 @@ local BoxContents = {}
 ---@type table<string, string>
 BoxContents.Map = {}
 
+--- food that unpacks into other food without being a box (e.g. frozen food bags) => contents full name
+---@type table<string, string>
+BoxContents.FoodMap = {}
+
 --- box full name => true when registered manually, these win over recipe derived mappings
 ---@type table<string, boolean>
 local manual = {}
@@ -33,6 +37,12 @@ end
 ---@return string | nil
 function BoxContents.get(box)
   return BoxContents.Map[box]
+end
+
+---@param item string
+---@return string | nil
+function BoxContents.getFoodContents(item)
+  return BoxContents.FoodMap[item]
 end
 
 ---@param item string
@@ -66,7 +76,15 @@ end
 local function add(item, contents, recipe)
   local box = item:getFullName()
 
-  if box == contents or manual[box] or not isContainerItem(item) then
+  if box == contents or manual[box] then
+    return false
+  end
+
+  if not isContainerItem(item) then
+    if item:isItemType(ItemType.FOOD) and not BoxContents.FoodMap[box] then
+      BoxContents.FoodMap[box] = contents
+    end
+
     return false
   end
 

@@ -389,6 +389,8 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Underwear: "Underwear",
   /** items used in baking, e.g. lard, butter, oil, flour, yeast */
   CAEC_Override_Baking: "Baking",
+  /** fishing bait, such as tadpoles, leeches and fish guts */
+  CAEC_Override_Bait: "Bait",
   /**
    * baked bread products
    *
@@ -405,9 +407,16 @@ export const EN: ExternalTranslations = {
   CAEC_Fallback_Candy: "Candy",
   /** canned food items */
   CAEC_Override_Canned: "Canned",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Condiment"
+   */
+  CAEC_Fallback_Condiment: "Condiment",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Dairy",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Dish",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Frozen",
@@ -429,8 +438,10 @@ export const EN: ExternalTranslations = {
   CAEC_Override_Perishable: "Perishable",
   /** food for pets */
   CAEC_Fallback_PetFood: "Pets",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Portion",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Meal",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Preparation",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Preserved",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

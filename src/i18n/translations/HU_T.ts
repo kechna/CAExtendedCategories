@@ -404,9 +404,16 @@ export const HU: ExternalTranslations = {
   CAEC_Fallback_Candy: "Cukorka",
   /** canned food items */
   CAEC_Override_Canned: "Konzerv",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Fűszer"
+   */
+  CAEC_Fallback_Condiment: "Fűszer",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Tejtermékek",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Étel",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Fagyasztott",
@@ -428,8 +435,10 @@ export const HU: ExternalTranslations = {
   CAEC_Override_Perishable: "Romlandó",
   /** food for pets */
   CAEC_Fallback_PetFood: "Háziállatok",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Adag",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Fogás",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Előkészítés",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Tartósított",
   /** fresh fruits, vegetables, mushrooms and hot peppers */

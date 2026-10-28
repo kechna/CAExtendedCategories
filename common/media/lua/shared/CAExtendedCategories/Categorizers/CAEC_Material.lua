@@ -194,8 +194,6 @@ function Material:categorize(item, instance)
 	---@type string | nil
 	local static = self.ItemsMap[item:getFullName()]
 
-  print(static)
-
 	local baseCategory = "Material"
 	local category = static and (baseCategory .. static):gsub("Other$", "") or nil
 

@@ -34,7 +34,7 @@ Fluid.FluidTypes = {
   ["bleach"] = "Household__Liquid",
   ["cleaningliquid"] = "Household__Liquid",
   ["cookingoil"] = "Cooking__Liquid",
-  ["simplesyrup"] = "FoodNoExplicit",
+  ["simplesyrup"] = "FoodBeverage",
 }
 
 ---@param category  string Category for containers holding this fluid, e.g. "BeverageSoftDrink"

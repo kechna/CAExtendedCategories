@@ -405,9 +405,16 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Candy: "Dulciuri",
   /** canned food items */
   CAEC_Override_Canned: "La conservă",
+  /**
+   * condiments such as sauces, dressings, spreads and toppings
+   *
+   * found in-game:
+   *   ContextMenu_FoodType_NoExplicit = "Condiment"
+   */
+  CAEC_Fallback_Condiment: "Condiment",
   /** dairy products such as cheese and eggs */
   CAEC_Fallback_Dairy: "Lactate",
-  /** prepared dishes, ready-to-eat meals made from multiple ingredients */
+  /** prepared food in a pot, pan or tray, to be split into servings */
   CAEC_Override_Dish: "Fel de mâncare",
   /** frozen food, such as ice cream */
   CAEC_Override_Frozen: "Congelate",
@@ -429,8 +436,10 @@ export const RO: ExternalTranslations = {
   CAEC_Override_Perishable: "Perisabil",
   /** food for pets */
   CAEC_Fallback_PetFood: "Animale de companie",
-  /** single serving portion of food */
-  CAEC_Override_Portion: "Porție",
+  /** one serving of prepared food, ready to eat */
+  CAEC_Override_Meal: "Masă",
+  /** inedible food that still needs cooking, fermenting or finishing */
+  CAEC_Override_Preparation: "Preparare",
   /** preserved food, such as jarred food */
   CAEC_Override_Preserved: "Conservat",
   /** fresh fruits, vegetables, mushrooms and hot peppers */
