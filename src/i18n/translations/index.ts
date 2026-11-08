@@ -77,6 +77,8 @@ export const ALL_TRANSLATIONS: Record<
   [Language.DE]: DE,
   /** By me - machine translated */
   [Language.ES]: ES,
+  [Language.ES_MX]: ES,
+  [Language.ES_CL]: ES,
   /** By me - machine translated */
   [Language.FR]: FR,
   /** By me - machine translated */
