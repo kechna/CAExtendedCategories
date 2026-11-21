@@ -54,10 +54,11 @@ const modeMatchers: { search: RegExp; balanced?: string; lite?: string }[] = [
   { search: /(?<=Memento)Plushie/, balanced: "Toy" },
   { search: /(?<=Household)Cleaning/, lite: "" },
   { search: /(?<=Tool)Farming/, lite: "Gardening" },
-  { search: /^Entertainment(?:CD|VHS|Cassette)$/, lite: "Entertainment" },
+  { search: /(?<=Entertainment)(?:CD|VHS|Cassette)/, lite: "" },
+
+  { search: /ProtectiveGear/, lite: "Clothing" },
 
   // body locations: Lite keeps the broad slots
-  // { search: /^(Accessory)(?:Arms|Face|Hands|Head|Legs|Neck|Top)$/, lite: "$1" },
   { search: /(?<=Accessory|Clothing|ProtectiveGear)(?:Face|Neck)/, lite: "Head" },
   { search: /(?<=Accessory|Clothing|ProtectiveGear)Socks/, lite: "Underwear" },
   { search: /(?<=Accessory|Clothing|ProtectiveGear)(?:Arms|Outerwear)/, lite: "Top" },
