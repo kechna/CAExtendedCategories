@@ -61,3 +61,7 @@ link1 = Workshop = https://steamcommunity.com/id/chekka-anchroviec/myworkshopfil
 [ v1.13.0 - 11/08/26 ]
 - copy ES translations to ES_MX and ES_CA
 [ ------ ]
+
+[ v1.14.0 - 11/21/26 ]
+- group protective gear with clothing in lite mode
+[ ------ ]
